@@ -5,7 +5,7 @@
         "subtitle": "Sharing your web and native mobile application code",
         "description": "This course is for those that need to be able to have as much code reuse as possible between their Angular applications for the web and their native mobile apps written with NativeScript and Angular. You will learn how to leverage NPM scripts, naming conventions, and a smart application folder structure for maximum reusability between your code bases and use the monorepo approach to do it. Even if you aren't sharing web and NativeScript code, this course shows some best practices in architecting your solution when it comes to Angular with NativeScript.\n\nIn this intermediate level course, Paul Halliday quickly explains some of the concepts behind code sharing and then dives right into a sample project, which he builds from scratch.\n\n\n",
         "url": "nativescript-with-angular-web-application-conversion",
-        "categories": [
+        "flavors": [
             "ng"
         ],
         "level": 2,
@@ -174,7 +174,7 @@
         "subtitle": "Start using @ngrx in your NativeScript with Angular apps",
         "description": "In this course, we build a simplified cryptocurrency price viewer powered by @ngrx/store and @ngrx/effects. This allows us to use the power of RxJS based state management in our NativeScript with Angular applications and allows us to better reason about our projects.",
         "url": "nativescript-with-@ngrx",
-        "categories": [
+        "flavors": [
             "ng"
         ],
         "level": 2,
@@ -355,7 +355,7 @@
         "subtitle": "",
         "description": "In this course, Nathan shows how to use the official NativeScript plugin seed to create a custom view component plugin for iOS and Android.​ He systematically shows how to expose a native API to JavaScript on the iOS side, then he shows how to build up the same API in Android, exposing a common plugin API to be consumed by the NativeScript application. \n Along the way, he shows how to determine the quality of available source CocoaPods and Gradle projects, as well as how to deal with some hurdles that you may face while building your own plugins. \n This short course will teach you a lot of intermediate to advanced techniques in a short amount of time, so put your attention hats on and hold on.",
         "url": "nativescript-plugins-creating-custom-view-components",
-        "categories": [
+        "flavors": [
             "core",
             "ng"
         ],
@@ -482,7 +482,7 @@
         "subtitle": "A free course to get you started with NativeScript and Angular",
         "description": "Welcome to the NativeScript Getting Started Guide. In this course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This course is the video version of the Groceries tutorial found on nativescript.org.",
         "url": "nativescript-with-angular-getting-started-guide",
-        "categories": [
+        "flavors": [
             "ng"
         ],
         "level": 1,
@@ -765,7 +765,7 @@
         "subtitle": "A free course to get you started with NativeScript Core using TypeScript",
         "description": "Welcome to the NativeScript Getting Started Guide. In this tutorial you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This course is based on the NativeScript Core Groceries Tutorial found in the documentation section of nativescript.org, and you'll use just JavaScript and CSS in this course.\n\n\n",
         "url": "nativescript-core-getting-started-guide",
-        "categories": [
+        "flavors": [
             "core"
         ],
         "level": 1,
@@ -1043,7 +1043,7 @@
         "subtitle": "The complete course for developing NativeScript with Angular mobile applications for iOS and Android.",
         "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications.\n\n\n",
         "url": "nativescript-with-angular-pro",
-        "categories": [
+        "flavors": [
             "ng"
         ],
         "level": 3,
@@ -2004,7 +2004,7 @@
         "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android.",
         "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.\n\n\n",
         "url": "nativescript-core-pro",
-        "categories": [
+        "flavors": [
             "core"
         ],
         "level": 3,
@@ -2529,7 +2529,7 @@
         "subtitle": "Making your NativeScript Applications Bulletproof",
         "description": "In this course, we will learn how to deal with security in your NativeScript applications. We will look at both Core as well as Angular versions of the framework.\n\n\n",
         "url": "securing-nativescript-applications",
-        "categories": [
+        "flavors": [
             "core",
             "ng"
         ],
@@ -2572,7 +2572,7 @@
         "subtitle": "Everything about CSS in NativeScript Core",
         "description": "In this course, we will learn in depth styling techniques with NativeScript Core. We'll learn how to use global NativeScript styling constructs as well as how to best approach separation of styles into composable rules. We'll also look at using platform specific styling and using style preprocessors like LESS and SASS. Finally we will see how to defined CSS animations in NativeScript.\n\n\n",
         "url": "styling-nativescript-core-applications",
-        "categories": [
+        "flavors": [
             "core"
         ],
         "level": 2,
@@ -2614,7 +2614,7 @@
         "subtitle": "Everything about CSS in NativeScript with Angular",
         "description": "In this course, we will learn in depth styling techniques with NativeScript and Angular. We'll learn how to define styles for Angular components in NativeScript, as well as how to use global NativeScript styling constructs. We'll also look at using platform specific styling and using style preprocessors like LESS and SASS.\n\n\n",
         "url": "styling-nativescript-with-angular-applications",
-        "categories": [
+        "flavors": [
             "ng"
         ],
         "level": 2,

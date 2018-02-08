@@ -49,6 +49,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             console.log('DATA: ');
             console.log(result);
 
+            //const flavoredCourses = result.data.allCoursesJson.edges;
+            createFlavorPages(createPage);
+
             const posts = result.data.allMarkdownRemark.edges;
 
             createTagPages(createPage, posts);
@@ -66,6 +69,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             resolve();
         });
     });
+};
+
+const createFlavorPages = (createPage) => {
+    const flavorTemplate = path.resolve(`src/templates/flavor.tsx`);
+
+    /*
+    createPage({
+        path: `/core`,
+        component: flavorTemplate,
+        context: {
+            flavor: 'core'
+        }
+    });
+
+    createPage({
+        path: `/angular`,
+        component: flavorTemplate,
+        context: {
+            flavor: 'ng'
+        }
+    });
+*/
 };
 
 const createTagPages = (createPage, edges) => {
@@ -104,6 +129,6 @@ const createTagPages = (createPage, edges) => {
                     post,
                     tag: tagName
                 }
-            })
+            });
         });
 };

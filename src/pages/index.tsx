@@ -27,6 +27,12 @@ export default class extends React.Component<IndexPageProps, {}> {
                 <h1>
                     Thi sis the home page of my site
                 </h1>
+
+                <p>
+                    <Link to='/core'>Core</Link>
+                    <Link to='/angular'>Angular</Link>
+                </p>
+
                 <Link to='/posts'>posts</Link>
             </div>
         );

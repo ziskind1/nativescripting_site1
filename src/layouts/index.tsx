@@ -45,8 +45,8 @@ const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({ children, dat
         {children()}
     </div>;
 
-export const query = graphql`
-  query LayoutQuery {
+export const indexLayoutQuery = graphql`
+  query IndexLayoutQuery {
     site {
       siteMetadata {
         siteName
