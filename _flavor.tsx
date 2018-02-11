@@ -1,4 +1,5 @@
-import * as React from 'react';
+/*
+mport * as React from 'react';
 import Link from 'gatsby-link';
 
 import NsLink from '../components/NsLink';
@@ -7,6 +8,8 @@ import NsLink from '../components/NsLink';
 const FlavorTemplate: React.StatelessComponent<{ data: any }> = ({ data }) => {
     //console.log('flavor template data: ');
     // console.log(data);
+
+    const flavor = data.allCoursesJson.flavor;
 
     const courses = data.allCoursesJson.edges.map((edge: any) => {
         const node = edge.node;
@@ -23,7 +26,7 @@ const FlavorTemplate: React.StatelessComponent<{ data: any }> = ({ data }) => {
 
     return (
         <div>
-            <h1>Flavor template</h1>
+            <h1>Flavor</h1>
             {coursesHtml}
         </div>
     );
@@ -35,6 +38,7 @@ export const query = graphql`
       limit: 1000
       filter: { flavors: { in: [$flavor] } } 
     ) {
+        flavor: $flavor
       totalCount
       edges {
         node {
@@ -47,3 +51,4 @@ export const query = graphql`
 `
 
 export default FlavorTemplate;
+*/

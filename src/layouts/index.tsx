@@ -41,7 +41,8 @@ const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({ children, dat
         </Link>
         <Link to={`/about/`}>
             About
-    </Link>
+        </Link>
+        <Link to='/posts/'>posts</Link>
         {children()}
     </div>;
 

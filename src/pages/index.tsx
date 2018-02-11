@@ -1,27 +1,64 @@
 import * as React from "react";
 import Link from "gatsby-link";
+import FlavoredCourseList, { FlavoredCourseListProps } from "../components/FlavoredCourseList";
 
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
     data: {
-        allMarkdownRemark: {
+        allCoursesJson: {
             totalCount: number;
             edges: {
                 node: any;
-                id: any;
             }[]
         };
     };
 }
 
-export default class extends React.Component<IndexPageProps, {}> {
+interface IndexPageState {
+    courses: any[];
+    filteredCourses: any[];
+}
+
+export default class extends React.Component<IndexPageProps, IndexPageState> {
+
+
     constructor(props: IndexPageProps) {
         super(props);
+
+        const courses = this.props.data.allCoursesJson.edges.map((edge: any) => {
+            const node = edge.node;
+            return { id: node.id, title: node.title, flavors: node.flavors, url: node.url };
+        });
+
+        this.state = {
+            courses: courses,
+            filteredCourses: courses
+        };
     }
+
+    private filterByFlavorCore() {
+        const filteredCourses = this.state.courses.filter(c =>
+            c.flavors.indexOf('core') >= 0);
+        this.setState({ filteredCourses: filteredCourses });
+    }
+
+    private filterByFlavorNg() {
+        const filteredCourses = this.state.courses.filter(c =>
+            c.flavors.indexOf('ng') >= 0);
+        this.setState({ filteredCourses: filteredCourses });
+    }
+
     public render() {
+        console.log('RENDER SHIT');
         console.log(this.props.data);
+
+        const props: FlavoredCourseListProps = {
+            flavor: 'ng',
+            courses: this.state.filteredCourses
+        };
+
         return (
             <div>
                 <h1>
@@ -29,35 +66,37 @@ export default class extends React.Component<IndexPageProps, {}> {
                 </h1>
 
                 <p>
-                    <Link to='/core'>Core</Link>
-                    <Link to='/angular'>Angular</Link>
+                    <button onClick={() => this.filterByFlavorCore()}>Core</button>
+                    <button onClick={() => this.filterByFlavorNg()}>Angular</button>
                 </p>
 
-                <Link to='/posts'>posts</Link>
+                <FlavoredCourseList {...props}></FlavoredCourseList>
+
             </div>
         );
     }
 }
 
-/*
-export const query = graphql`
-  query IndexPageQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+
+export const indexPageQuery = graphql`
+query IndexPageQuery{
+    allCoursesJson {
       totalCount
       edges {
         node {
           id
-          frontmatter {
+          title
+          flavors
+          url
+          authors {
+            name
+            picture
+            bio
             title
-            date(formatString: "DD MMMM, YYYY")
           }
-          fields {
-            slug
-          }
-          excerpt
         }
       }
     }
   }
 `;
-*/
+

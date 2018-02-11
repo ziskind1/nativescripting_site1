@@ -24,6 +24,24 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     return new Promise((resolve, reject) => {
         graphql(`
         {
+            allCoursesJson {
+                totalCount
+                edges {
+                  node {
+                    id
+                    title
+                    flavors
+                    url
+                    authors {
+                      name
+                      picture
+                      bio
+                      title
+                    }
+                  }
+                }
+              }
+
             allMarkdownRemark(
                 sort: { order: DESC, fields: [frontmatter___date] }
                 limit: 1000
@@ -50,7 +68,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             console.log(result);
 
             //const flavoredCourses = result.data.allCoursesJson.edges;
-            createFlavorPages(createPage);
+            //createFlavorPages(createPage);
+
+            const courses = result.data.allCoursesJson.edges;
+            createCoursePages(createPage, courses);
 
             const posts = result.data.allMarkdownRemark.edges;
 
@@ -66,15 +87,34 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     },
                 });
             });
-            resolve();
+            resolve('done');
         });
     });
 };
 
+const createCoursePages = (createPage, courses) => {
+    const courseTemplate = path.resolve(`src/templates/course.tsx`);
+
+    console.log('COURSES');
+    console.log(courses);
+
+    courses.forEach(o => {
+        const course = o.node;
+        console.log("URL");
+        console.log(course);
+        createPage({
+            path: `/course/${course.url}`,
+            component: courseTemplate,
+            context: {
+                courseUrl: course.url
+            }
+        });
+    });
+
+};
+
 const createFlavorPages = (createPage) => {
     const flavorTemplate = path.resolve(`src/templates/flavor.tsx`);
-
-    /*
     createPage({
         path: `/core`,
         component: flavorTemplate,
@@ -90,7 +130,6 @@ const createFlavorPages = (createPage) => {
             flavor: 'ng'
         }
     });
-*/
 };
 
 const createTagPages = (createPage, edges) => {
