@@ -1,13 +1,35 @@
 module.exports = {
     siteMetadata: {
         siteName: `Using Typescript Example!`,
-        foo: 'bar'
+        siteUrl: `https://nativescripting.com`
     },
     plugins: [
         // Add typescript stack into webpack
         `gatsby-plugin-typescript`,
-        `gatsby-transformer-remark`,
         `gatsby-transformer-json`,
+
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                output: `/sitemap.xml`,
+                query: `
+                {
+                  site {
+                    siteMetadata {
+                      siteUrl
+                    }
+                  }
+        
+                  allSitePage {
+                    edges {
+                      node {
+                        path
+                      }
+                    }
+                  }
+              }`
+            }
+        },
 
         // Expose `/data` to graphQL layer
         {
@@ -17,22 +39,24 @@ module.exports = {
                 path: `${__dirname}/data`
             }
         },
-        /*
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: 'gatsby-transformer-remark',
             options: {
-                name: `data`,
-                path: `${__dirname}/src/data/`,
-            },
-        }, 
-      
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `posts`,
-                path: `${__dirname}/src/posts/`,
-            },
-        }, 
-         */
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            linkImagesToOriginal: false
+                        }
+                    },
+                    `gatsby-remark-prismjs`,
+                ]
+            }
+        },
+
+
+        // Parse all images files
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
     ],
 }

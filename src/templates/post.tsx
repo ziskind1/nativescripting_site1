@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "prismjs/themes/prism-okaidia.css";
+
 
 const PostTemplate: React.StatelessComponent<{ data: any }> = ({ data }) => {
   const post = data.markdownRemark;

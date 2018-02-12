@@ -5,6 +5,17 @@ date: "2017-08-10"
 tags: ["pandas"]
 ---
 
+
+![hipster guy](./images/alex_ziskind.png)
+
+```javascript
+
+function poop() {
+    const mooka = 5;
+}
+
+```
+
 Pandas are really sweet.
 
 Here's a video of a panda eating sweet stuff.

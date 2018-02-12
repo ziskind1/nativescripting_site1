@@ -4210,3 +4210,11 @@ right: -130px;
 
 /* NEW TABS END */
 
+/* Code blocks (Fix a strange bug with prismjs) */
+pre {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+  background: #272822;
+}
