@@ -1,5 +1,6 @@
 [
     {
+        "id": "paul_halliday",
         "name": "Paul Halliday",
         "picture": "paul_halliday.png",
         "bio": "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
@@ -9,6 +10,7 @@
         ]
     },
     {
+        "id": "nathan_walker",
         "name": "Nathan Walker",
         "picture": "nathan_walker.png",
         "bio": "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
@@ -18,6 +20,7 @@
         ]
     },
     {
+        "id": "alex_ziskind",
         "name": "Alex Ziskind",
         "picture": "alex_ziskind.png",
         "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",

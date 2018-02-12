@@ -32,12 +32,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     title
                     flavors
                     url
-                    authors {
-                      name
-                      picture
-                      bio
-                      title
-                    }
+                    authors
                   }
                 }
               }

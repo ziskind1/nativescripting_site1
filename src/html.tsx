@@ -3,6 +3,9 @@
 
 import * as React from "react";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 // Load production style
 let styles: string;
 if (process.env.NODE_ENV === `production`) {
@@ -33,7 +36,7 @@ module.exports = React.createClass<HtmlProps, void>({
             <html lang="en">
                 <head>
                     {this.props.headComponents}
-                    <title>My website</title>
+                    <title>NativeScripting</title>
                     <meta charSet="utf-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta
@@ -43,11 +46,21 @@ module.exports = React.createClass<HtmlProps, void>({
                     {css}
                 </head>
                 <body>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <Header />
+                        </div>
+                    </div>
+
+
                     <div
                         id="___gatsby"
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
                     {this.props.postBodyComponents}
+
+                    <Footer />
+
                 </body>
             </html>
         );

@@ -3,6 +3,9 @@ import Link from "gatsby-link";
 import { ReactNode } from "react";
 
 
+import '../css/style.css';
+
+
 interface IndexLayoutProps {
     children?: any,
     data: {

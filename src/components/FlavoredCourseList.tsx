@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
+import { CourseFlavorType, Course } from '../domain/models';
 
 
 export interface FlavoredCourseListProps {
     children?: React.ReactNode;
-    flavor: string;
-    courses: any[];
+    flavor: CourseFlavorType;
+    courses: Course[];
 }
 
 
@@ -16,12 +17,12 @@ class FlavoredCourseList extends React.Component<FlavoredCourseListProps, {}> {
     }
 
     public render() {
-        const coursesHtml = this.props.courses.map((course: any, i: number) => {
+        const coursesHtml = this.props.courses.map((course: Course, idx: number) => {
 
             const courseUrl = `/course/${course.url}`;
 
             return (
-                <div key={i}>
+                <div key={idx}>
                     <Link to={courseUrl}>{course.title}</Link>
                 </div>
             );

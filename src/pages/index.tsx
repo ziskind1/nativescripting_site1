@@ -1,74 +1,77 @@
 import * as React from "react";
 import Link from "gatsby-link";
-import FlavoredCourseList, { FlavoredCourseListProps } from "../components/FlavoredCourseList";
 
+import {
+    AuthorsJsonConnection,
+    CoursesJsonConnection,
+    CoursesJsonEdge
+} from "../domain/graphql-types";
+
+import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/converters';
+import { Course, CourseFlavorType } from "../domain/models";
+
+import FlavoredCourseList, { FlavoredCourseListProps } from "../components/FlavoredCourseList";
+import Hero from '../components/Hero';
+import { FlavorSelector } from "../components/FlavorSelector";
+import { CourseCardList } from "../components/CourseCardList";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
     data: {
-        allCoursesJson: {
-            totalCount: number;
-            edges: {
-                node: any;
-            }[]
-        };
-    };
+        authorsConnection: AuthorsJsonConnection,
+        coursesConnection: CoursesJsonConnection
+    }
 }
 
 interface IndexPageState {
-    courses: any[];
-    filteredCourses: any[];
+    slectedFlavor?: CourseFlavorType;
+    courses: Course[];
 }
 
 export default class extends React.Component<IndexPageProps, IndexPageState> {
 
-
     constructor(props: IndexPageProps) {
         super(props);
 
-        const courses = this.props.data.allCoursesJson.edges.map((edge: any) => {
-            const node = edge.node;
-            return { id: node.id, title: node.title, flavors: node.flavors, url: node.url };
-        });
+        const authors =
+            this.props.data.authorsConnection.edges.map(authorFromAuthorsJsonEdge);
+
+        const courses =
+            this.props.data.coursesConnection.edges.map(c => courseFromCoursesJsonEdge(c, authors));
 
         this.state = {
-            courses: courses,
-            filteredCourses: courses
+            courses: courses
         };
     }
 
-    private filterByFlavorCore() {
-        const filteredCourses = this.state.courses.filter(c =>
-            c.flavors.indexOf('core') >= 0);
-        this.setState({ filteredCourses: filteredCourses });
+
+    private filterByFlavor(flavor: CourseFlavorType) {
+        this.setState({ slectedFlavor: flavor });
     }
 
-    private filterByFlavorNg() {
-        const filteredCourses = this.state.courses.filter(c =>
-            c.flavors.indexOf('ng') >= 0);
-        this.setState({ filteredCourses: filteredCourses });
+    private getFilteredCourses(): Course[] {
+        if (this.state.slectedFlavor === undefined) {
+            return this.state.courses;
+        } else {
+            return this.state.courses.filter(c => c.flavors.includes(this.state.slectedFlavor));
+        }
     }
 
     public render() {
-        console.log('RENDER SHIT');
-        console.log(this.props.data);
 
         const props: FlavoredCourseListProps = {
-            flavor: 'ng',
-            courses: this.state.filteredCourses
+            flavor: this.state.slectedFlavor,
+            courses: this.getFilteredCourses()
         };
 
         return (
             <div>
-                <h1>
-                    Thi sis the home page of my site
-                </h1>
+                <Hero />
 
-                <p>
-                    <button onClick={() => this.filterByFlavorCore()}>Core</button>
-                    <button onClick={() => this.filterByFlavorNg()}>Angular</button>
-                </p>
+                <FlavorSelector onSelectFlavor={(f) => this.filterByFlavor(f)} />
+
+                <CourseCardList courses={props.courses} />
 
                 <FlavoredCourseList {...props}></FlavoredCourseList>
 
@@ -80,7 +83,22 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
 export const indexPageQuery = graphql`
 query IndexPageQuery{
-    allCoursesJson {
+
+    #get authors
+    authorsConnection: allAuthorsJson(filter: {types: { in: "course" } }) {
+        totalCount
+        edges {
+          node {
+            id
+            title
+            name
+            picture
+          }
+        }
+      }
+
+    #get courses
+    coursesConnection: allCoursesJson {
       totalCount
       edges {
         node {
@@ -88,11 +106,17 @@ query IndexPageQuery{
           title
           flavors
           url
-          authors {
+          label
+          authors
+          level
+          products {
+            id
             name
-            picture
-            bio
-            title
+            description
+            licensesMin
+            licensesMax
+            pricereg
+            pricesale
           }
         }
       }

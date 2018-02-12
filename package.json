@@ -5,7 +5,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "deploy": "gatsby build --prefix-paths",
+    "serve": "gatsby serve",
+    "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
   },
   "dependencies": {
     "@types/node": "^8.0.7",
@@ -23,6 +25,7 @@
     "typography-theme-kirkham": "^0.16.3"
   },
   "devDependencies": {
+    "graphql-code-generator": "^0.8.14",
     "typescript": "^2.7.1"
   }
 }

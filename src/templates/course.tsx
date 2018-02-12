@@ -6,18 +6,18 @@ import NsLink from '../components/NsLink';
 
 const CourseTemplate: React.StatelessComponent<{ data: any }> = ({ data }) => {
 
-    console.log(data);
+  console.log(data);
 
-    const title = data.coursesJson.title;
+  const title = data.coursesJson.title;
 
-    return (
-        <div>
-            <h1>Course</h1>
+  return (
+    <div>
+      <h1>Course</h1>
 
-            <h4>{title}</h4>
+      <h4>{title}</h4>
 
-        </div>
-    );
+    </div>
+  );
 };
 
 
@@ -31,14 +31,9 @@ query CoursePageQuery($courseUrl: String) {
       url
       flavors
       level
-      tag
+      label
       launchdate
-      authors {
-        name
-        picture
-        bio
-        title
-      }
+      authors
       products {
         id
       }
