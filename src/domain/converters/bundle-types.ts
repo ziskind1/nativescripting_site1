@@ -4,14 +4,17 @@ import { productFromProduct_3 } from './product-types';
 import { chapterFromChapter_2 } from './chapter-types';
 import { Course, asCourseLevel, asCourseFlavorType, Bundle } from '../models';
 
-export function bundleFromBundlesJsonEdge(edge: BundlesJsonEdge, courses: Course[]): Bundle {
+export function bundleFromBundlesJsonEdge(edge: BundlesJsonEdge, allCourses: Course[]): Bundle {
     const n = edge.node;
+
+    const courses = n.courseIds.map(id => allCourses.find(c => c.id === id));
+
     return {
         id: n.id,
         title: n.title,
         url: n.url,
         bundleLevel: n.bundleLevel,
-        courseIds: n.courseIds,
+        courses: courses,
         promoremaining: n.promoremaining,
         promototal: n.promototal,
         subtitle: n.subtitle,

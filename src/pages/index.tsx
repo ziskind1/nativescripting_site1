@@ -11,14 +11,14 @@ import {
 import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/converters';
 import { Course, CourseFlavorType } from "../domain/models";
 
-import Hero from '../components/Hero';
+import Hero from '../components/home/Hero/Hero';
 import { FlavorSelector } from "../components/FlavorSelector";
-import { CourseCardList } from "../components/CourseCardList";
 import FlavorDescription from "../components/FlavorDescription";
 import HomeSpecialsSection from "../components/home/HomeSpecialsSection";
 import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
 import ActionButton from "../components/ActionButton/ActionButton";
 import BundleSection from "../components/home/BundleSection/BundleSection";
+import CoursesSection from "../components/home/CoursesSection/CoursesSection";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -67,7 +67,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
     public render() {
 
-        const courses = this.getFilteredCourses();
+        const filteredCourses = this.getFilteredCourses();
 
         const bundles =
             this.props.data.bundlesConnection.edges.map(b => bundleFromBundlesJsonEdge(b, this.state.courses));
@@ -81,13 +81,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
             <div>
                 <Hero />
 
-                <ActionButton text={'hi'} />
-
-                <FlavorSelector onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
-
-                <FlavorDescription flavor={this.state.slectedFlavor} />
-
-                <CourseCardList courses={courses} />
+                <CoursesSection courses={filteredCourses} selectedFlavor={this.state.slectedFlavor} onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
 
                 <div style={clearStyle} ></div>
 
@@ -159,6 +153,7 @@ query IndexPageQuery{
             url
             promototal
             promoremaining
+            courseIds
             products {
               id
               name

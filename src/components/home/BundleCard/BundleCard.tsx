@@ -20,8 +20,6 @@ class BundleCard extends React.Component<BundleCardProps, {}> {
 
         const bundle = this.props.bundle;
 
-        const courses: Course[] = [];
-
         let bundleType: ActionBtnType = null;
         switch (bundle.bundleLevel) {
             case 1:
@@ -37,12 +35,12 @@ class BundleCard extends React.Component<BundleCardProps, {}> {
                 <div className="bundle-header">
                     <h3 className="bundle-header-title">{bundle.title}</h3>
                     <p className="bundle-header-subtitle">
-                        5 courses
+                        {bundle.courses.length} courses
                     </p>
                 </div>
 
                 <div className="bundle-courses">
-                    <BundleCourseList courses={courses} />
+                    <BundleCourseList courses={bundle.courses} />
                 </div>
 
                 <div className="bundle-bottom">

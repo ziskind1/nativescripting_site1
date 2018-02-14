@@ -1,4 +1,6 @@
+import { Course } from './course.model';
 import { Product } from './product.model';
+
 
 export interface Bundle {
     id: string;
@@ -10,5 +12,5 @@ export interface Bundle {
     promoremaining: number;
     bundleLevel: number;
     products: Product[];
-    courseIds: string[];
+    courses: Course[];
 }

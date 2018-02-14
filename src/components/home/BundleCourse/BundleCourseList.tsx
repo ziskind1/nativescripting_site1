@@ -3,6 +3,8 @@ import { Course } from "../../../domain/models";
 import LevelIcon from "../../LevelIcon/LevelIcon";
 import BundleCourse from './BundleCourse';
 
+import './BundleCourseList.css';
+
 export interface BundleCourseListProps {
     courses: Course[];
 }
@@ -11,12 +13,12 @@ const BundleCourseList: React.StatelessComponent<BundleCourseListProps> = (props
 
     const html = props.courses.map((course, idx) => {
         return (
-            <BundleCourse course={course} />
+            <BundleCourse key={idx} course={course} />
         );
     });
 
     return (
-        <div className="">
+        <div className="bundle-course-list">
             {html}
         </div>
     );

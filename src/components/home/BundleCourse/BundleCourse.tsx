@@ -10,11 +10,13 @@ export interface BundleCourseProps {
 }
 
 const BundleCourse: React.StatelessComponent<BundleCourseProps> = (props: BundleCourseProps) => {
+    const course = props.course;
+
     return (
         <div className="bundle-course">
             <div className="bundle-course-info">
-                <span className="authors">Paul Halliday</span>
-                <span className="title">NativeScript with Angular Web Application Conversion</span> <span className="tag course-tag course-tag-new" data-bind="text: tag, css: { 'course-tag-new': tag === 'NEW' }">NEW</span>
+
+                <span className="title">{course.title}</span> <span className="tag course-tag course-tag-new" data-bind="text: tag, css: { 'course-tag-new': tag === 'NEW' }">NEW</span>
             </div>
             <LevelIcon level={props.course.level} />
         </div>

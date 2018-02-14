@@ -1,9 +1,12 @@
 .bundle-course {
-    padding: 6px 4px;
+    padding: 8px 6px;
     background-color: #0949b2;
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin: 5px;
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
 }
 
 .bundle-course-info {
@@ -17,7 +20,7 @@
 
 .bundle-course .authors {
     font-family: OpenSansLight;
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
     line-height: 18px;
     color: #fff;
