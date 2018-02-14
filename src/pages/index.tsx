@@ -4,7 +4,8 @@ import Link from "gatsby-link";
 import {
     AuthorsJsonConnection,
     CoursesJsonConnection,
-    CoursesJsonEdge
+    CoursesJsonEdge,
+    BundlesJsonConnection
 } from "../domain/graphql-types";
 
 import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/converters';
@@ -14,13 +15,18 @@ import Hero from '../components/Hero';
 import { FlavorSelector } from "../components/FlavorSelector";
 import { CourseCardList } from "../components/CourseCardList";
 import FlavorDescription from "../components/FlavorDescription";
+import HomeSpecialsSection from "../components/home/HomeSpecialsSection";
+import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
+import ActionButton from "../components/ActionButton/ActionButton";
+import BundleSection from "../components/home/BundleSection/BundleSection";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
     data: {
         authorsConnection: AuthorsJsonConnection,
-        coursesConnection: CoursesJsonConnection
+        coursesConnection: CoursesJsonConnection,
+        bundlesConnection: BundlesJsonConnection
     }
 }
 
@@ -39,6 +45,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         const courses =
             this.props.data.coursesConnection.edges.map(c => courseFromCoursesJsonEdge(c, authors));
+
 
         this.state = {
             courses: courses
@@ -62,15 +69,33 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         const courses = this.getFilteredCourses();
 
+        const bundles =
+            this.props.data.bundlesConnection.edges.map(b => bundleFromBundlesJsonEdge(b, this.state.courses));
+
+        const clearStyle = {
+            clear: 'both'
+        };
+
+
         return (
             <div>
                 <Hero />
+
+                <ActionButton text={'hi'} />
 
                 <FlavorSelector onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
 
                 <FlavorDescription flavor={this.state.slectedFlavor} />
 
                 <CourseCardList courses={courses} />
+
+                <div style={clearStyle} ></div>
+
+                <BundleSection bundles={bundles} />
+
+                <div style={clearStyle} ></div>
+
+                <HomeSpecialsSection bundles={bundles} />
 
             </div>
         );
@@ -122,6 +147,30 @@ query IndexPageQuery{
         }
       }
     }
+
+    #get bundles
+    bundlesConnection: allBundlesJson {
+        edges {
+          node {
+            id
+            title
+            subtitle
+            description
+            url
+            promototal
+            promoremaining
+            products {
+              id
+              name
+              description
+              pricesale
+              pricereg
+              licensesMin
+              licensesMax
+            }
+          }
+        }
+      }
   }
 `;
 

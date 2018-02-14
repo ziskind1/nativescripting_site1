@@ -18,6 +18,16 @@
     background-color: #11F5FF;
 }
 
+.btn-action.orange:before {
+    background-color: #f4b535;
+}
+.btn-action.orange:after  {
+    background-color: #eca920;
+}
+.btn-action.orange a {
+    background-color: #f0ae26;
+}
+
 
 .btn-action {
     position: relative;

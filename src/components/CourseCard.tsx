@@ -1,5 +1,7 @@
 import * as React from "react";
 import { CourseFlavorType, Course } from "../domain/models";
+import ActionButton from "./ActionButton/ActionButton";
+import LevelIcon from "./LevelIcon/LevelIcon";
 
 
 interface CourseCardProps {
@@ -18,16 +20,6 @@ function getCourseIcons(course: Course): string[] {
     return ret;
 };
 
-function getLevelIcon(course: Course): string {
-    switch (course.level.levelId) {
-        case 1:
-            return '/img/level_icon1.svg';
-        case 2:
-            return '/img/level_icon2.svg';
-        case 3:
-            return '/img/level_icon3.svg';
-    }
-}
 
 export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: CourseCardProps) => {
 
@@ -37,14 +29,9 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
 
     const freeLabel = props.course.products.some(p => p.pricesale === 0) ? <p className="card-price-info">FREE COURSE</p> : null;
 
-    const actionBtnHtml = props.course.products.some(p => p.pricesale === 0) ?
-        <a href={'/course/' + props.course.url}>
-            <span>free course</span>
-        </a>
-        :
-        <a href={'/course/' + props.course.url}>
-            <span>learn more</span>
-        </a>;
+    const actionBtnText = props.course.products.some(p => p.pricesale === 0) ?
+        'free course' : 'learn more';
+    const actionBtnType = props.course.label === 'PRESALE' ? 'secondary' : 'primary';
 
     const courseIcons = getCourseIcons(props.course);
     const courseIconsHtml = courseIcons.map((icon, idx) => {
@@ -76,18 +63,19 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
         listStyle: 'none'
     };
 
-    const levelIcon = getLevelIcon(props.course);
 
     const courseLabelClassName = props.course.label === 'NEW' ? 'course-tag course-tag-new' : 'course-tag';
     const courseTitleClassName = props.course.label === 'PRESALE' ? 'pre-text' : '';
-    const courseActionWrapperClassName = props.course.label === 'PRESALE' ? 'bottom pre-bottom' : 'bottom';
+
 
     return (
         <div data-bind="attr: { 'data-zko-hook' : categories }" className="col-md-4 col-sm-6 col-xs-12">
             <div className="row">
                 <div className="learn-card main-card">
                     <div className="top-block">
-                        <img className="top-left-image" src={levelIcon} title="Course level" />
+
+                        <LevelIcon level={props.course.level} />
+
                         <p className="new">
                             <span className={courseLabelClassName}>{props.course.label}</span>
                         </p>
@@ -109,9 +97,8 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
                         <p className="error">Please select the number of users</p>
                     </div>
 
-                    <div className={courseActionWrapperClassName}>
-                        {actionBtnHtml}
-                    </div>
+                    <ActionButton text={actionBtnText} type={actionBtnType} url={'/course/' + props.course.url} />
+
                 </div>
             </div>
         </div>

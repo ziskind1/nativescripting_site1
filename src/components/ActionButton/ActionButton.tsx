@@ -2,7 +2,7 @@ import * as React from "react";
 
 import './styles.css';
 
-export type ActionBtnType = 'primary' | 'secondary';
+export type ActionBtnType = 'primary' | 'secondary' | 'tertiary';
 
 
 export interface ActionButtonProps {
@@ -11,9 +11,21 @@ export interface ActionButtonProps {
     type?: ActionBtnType;
 }
 
-const ActionButton: React.StatelessComponent<ActionButtonProps> = (props: ActionButtonProps) => {
+function getBtnClassName(type: ActionBtnType) {
+    switch (type) {
+        case 'primary':
+            return 'btn-action green';
+        case 'secondary':
+            return 'btn-action blue'
+        case 'tertiary':
+            return 'btn-action orange'
+        default:
+            return 'btn-action green';
+    }
+}
 
-    const className = props.type === 'secondary' ? 'btn-action blue' : 'btn-action green';
+const ActionButton: React.StatelessComponent<ActionButtonProps> = (props: ActionButtonProps) => {
+    const className = getBtnClassName(props.type);
 
     return (
         <div className={className}>
