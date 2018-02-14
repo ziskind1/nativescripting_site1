@@ -9,7 +9,10 @@ export interface Author {
     name: string;
     picture: string;
     bio: string;
+    biolong: string;
     title: string;
+    twitter: string;
+    github: string;
     types: AuthorType[];
 }
 
@@ -18,7 +21,10 @@ export function toAuthor(
     name: string,
     picture: string,
     bio: string,
+    biolong: string,
     title: string,
+    twitter: string,
+    github: string,
     types: AuthorType[],
 ): Author {
     return {
@@ -26,7 +32,10 @@ export function toAuthor(
         name,
         picture,
         bio,
+        biolong,
         title,
+        twitter,
+        github,
         types,
     }
 }

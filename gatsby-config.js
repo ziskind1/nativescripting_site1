@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteName: `Using Typescript Example!`,
+        siteName: `NativeScripting`,
         siteUrl: `https://nativescripting.com`
     },
     plugins: [

@@ -1,22 +1,21 @@
-import * as React from "react";
+import * as React from 'react';
+import Link from 'gatsby-link';
 
-
-export function MainMenuMobile() {
+export function getMenu(className: string) {
     return (
-        <div className="mobile-header">
-            <a data-z-url-fix href="/training">Training</a>
-            <a data-z-url-fix href="/about">About</a>
-            <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" className="sign">Login</a>
+        <div className={className}>
+            <Link to={'/training'}>Training</Link>
+            <Link to='/posts'>Posts</Link>
+            <Link to={'/about'}>About</Link>
+            <a href={'https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1'} className="sign">Login</a>
         </div>
     );
 }
 
+export function MainMenuMobile() {
+    return getMenu('mobile-header');
+}
+
 export function MainMenu() {
-    return (
-        <div className="header-page">
-            <a data-z-url-fix href="/training">Training</a>
-            <a data-z-url-fix href="/about">About</a>
-            <a href="https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1" className="sign">Login</a>
-        </div>
-    );
+    return getMenu('header-page');
 }

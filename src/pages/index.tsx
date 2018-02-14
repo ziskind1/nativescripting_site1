@@ -10,7 +10,6 @@ import {
 import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/converters';
 import { Course, CourseFlavorType } from "../domain/models";
 
-import FlavoredCourseList, { FlavoredCourseListProps } from "../components/FlavoredCourseList";
 import Hero from '../components/Hero';
 import { FlavorSelector } from "../components/FlavorSelector";
 import { CourseCardList } from "../components/CourseCardList";
@@ -60,20 +59,15 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
     public render() {
 
-        const props: FlavoredCourseListProps = {
-            flavor: this.state.slectedFlavor,
-            courses: this.getFilteredCourses()
-        };
+        const courses = this.getFilteredCourses();
 
         return (
             <div>
                 <Hero />
 
-                <FlavorSelector onSelectFlavor={(f) => this.filterByFlavor(f)} />
+                <FlavorSelector onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
 
-                <CourseCardList courses={props.courses} />
-
-                <FlavoredCourseList {...props}></FlavoredCourseList>
+                <CourseCardList courses={courses} />
 
             </div>
         );
@@ -93,6 +87,10 @@ query IndexPageQuery{
             title
             name
             picture
+            bio
+            biolong
+            twitter
+            github
           }
         }
       }

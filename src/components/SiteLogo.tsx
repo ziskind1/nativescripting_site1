@@ -4,10 +4,14 @@ import { withPrefix } from 'gatsby-link';
 
 const logoSrc = withPrefix('/img/logo_full.svg');
 
-function SiteLogo() {
+interface SiteLogoProps {
+    siteName: string;
+}
+
+function SiteLogo(props: SiteLogoProps) {
     return (
         <a href="/">
-            <img src={logoSrc} alt="Logo" />
+            <img src={logoSrc} alt={props.siteName} />
         </a>
     );
 }

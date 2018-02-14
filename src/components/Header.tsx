@@ -4,8 +4,11 @@ import SiteLogo from './SiteLogo';
 import Burger from "./Burger";
 import { MainMenuMobile, MainMenu } from "./MainMenu";
 
+interface HeaderProps {
+    siteName: string;
+}
 
-function Header() {
+function Header(props: HeaderProps) {
     return (
         <div className="header">
 
@@ -14,7 +17,7 @@ function Header() {
             <div className="container">
                 <div className="col-md-12">
                     <div className="row">
-                        <SiteLogo />
+                        <SiteLogo siteName={props.siteName} />
                         <MainMenu />
                         <Burger />
                     </div>

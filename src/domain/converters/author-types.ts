@@ -10,7 +10,10 @@ export function authorFromAuthorsJsonEdge(edge: AuthorsJsonEdge): Author {
         name: n.name,
         title: n.title,
         bio: n.bio,
+        biolong: n.biolong,
         picture: n.picture,
+        twitter: n.twitter,
+        github: n.github,
         types: defaultArray(n.types).map(asAuthorType)
     };
 }

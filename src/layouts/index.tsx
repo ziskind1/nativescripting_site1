@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 
 
 import '../css/style.css';
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
 interface IndexLayoutProps {
@@ -37,17 +39,18 @@ export default class extends React.Component<IndexLayoutProps, {}> {
 
 const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({ children, data }) =>
     <div>
-        <Link to={`/`}>
-            <h3>
-                {data.site.siteMetadata.siteName}
-            </h3>
-        </Link>
-        <Link to={`/about/`}>
-            About
-        </Link>
-        <Link to='/posts/'>posts</Link>
+        <div className="container-fluid">
+            <div className="row">
+                <Header siteName={data.site.siteMetadata.siteName} />
+            </div>
+        </div>
+
         {children()}
-    </div>;
+
+        <Footer />
+    </div>
+
+    ;
 
 export const indexLayoutQuery = graphql`
   query IndexLayoutQuery {

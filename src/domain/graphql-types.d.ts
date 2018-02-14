@@ -539,8 +539,8 @@ export interface File extends Node {
   id: string; /* The id of this node. */
   parent?: Node | null; /* The parent of this node. */
   children?: Node[] | null; /* The children of this node. */
-  childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
   childrenBundlesJson?: BundlesJson[] | null; /* The children of this node of type bundlesJson */
+  childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
   childMarkdownRemark?: MarkdownRemark | null; /* The child of this node of type markdownRemark */
   childrenCoursesJson?: CoursesJson[] | null; /* The children of this node of type coursesJson */
   childImageSharp?: ImageSharp | null; /* The child of this node of type imageSharp */
@@ -584,7 +584,10 @@ export interface AuthorsJson extends Node {
   name?: string | null; 
   picture?: string | null; 
   bio?: string | null; 
+  biolong?: string | null; 
   title?: string | null; 
+  twitter?: string | null; 
+  github?: string | null; 
   types?: string[] | null; 
   internal?: internal_17 | null; 
 }
@@ -623,9 +626,9 @@ export interface frontmatter_9 {
   path?: string | null; 
   date?: string | null; 
   tags?: string[] | null; 
-  image?: File | null; 
   _PARENT?: string | null; 
   parent?: string | null; 
+  image?: File | null; 
 }
 
 export interface MarkdownHeading {
@@ -3240,7 +3243,10 @@ export interface filterAuthorsJson {
   name?: authorsJsonConnectionNameQueryString_2 | null; 
   picture?: authorsJsonConnectionPictureQueryString_2 | null; 
   bio?: authorsJsonConnectionBioQueryString_2 | null; 
+  biolong?: authorsJsonConnectionBiolongQueryString_2 | null; 
   title?: authorsJsonConnectionTitleQueryString_2 | null; 
+  twitter?: authorsJsonConnectionTwitterQueryString_2 | null; 
+  github?: authorsJsonConnectionGithubQueryString_2 | null; 
   types?: authorsJsonConnectionTypesQueryList_2 | null; 
   internal?: authorsJsonConnectionInternalInputObject_2 | null; 
 }
@@ -3273,7 +3279,28 @@ export interface authorsJsonConnectionBioQueryString_2 {
   glob?: string | null; 
 }
 
+export interface authorsJsonConnectionBiolongQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
 export interface authorsJsonConnectionTitleQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface authorsJsonConnectionTwitterQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface authorsJsonConnectionGithubQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -3380,9 +3407,9 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null; 
   date?: markdownRemarkConnectionFrontmatterDateQueryString_2 | null; 
   tags?: markdownRemarkConnectionFrontmatterTagsQueryList_2 | null; 
-  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null; 
   _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null; 
   parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null; 
+  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null; 
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -3414,13 +3441,6 @@ export interface markdownRemarkConnectionFrontmatterTagsQueryList_2 {
   in?: string[] | null; 
 }
 
-export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
 export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
   eq?: string | null; 
   ne?: string | null; 
@@ -3429,6 +3449,13 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
 }
 
 export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -5818,7 +5845,28 @@ export interface authorsJsonBioQueryString_2 {
   glob?: string | null; 
 }
 
+export interface authorsJsonBiolongQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
 export interface authorsJsonTitleQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface authorsJsonTwitterQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface authorsJsonGithubQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -5907,9 +5955,9 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   path?: markdownRemarkFrontmatterPathQueryString_2 | null; 
   date?: markdownRemarkFrontmatterDateQueryString_2 | null; 
   tags?: markdownRemarkFrontmatterTagsQueryList_2 | null; 
-  image?: markdownRemarkFrontmatterImageQueryString_2 | null; 
   _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null; 
   parent?: markdownRemarkFrontmatterParentQueryString_4 | null; 
+  image?: markdownRemarkFrontmatterImageQueryString_2 | null; 
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -5941,13 +5989,6 @@ export interface markdownRemarkFrontmatterTagsQueryList_2 {
   in?: string[] | null; 
 }
 
-export interface markdownRemarkFrontmatterImageQueryString_2 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
 export interface markdownRemarkFrontmatterParentQueryString_3 {
   eq?: string | null; 
   ne?: string | null; 
@@ -5956,6 +5997,13 @@ export interface markdownRemarkFrontmatterParentQueryString_3 {
 }
 
 export interface markdownRemarkFrontmatterParentQueryString_4 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkFrontmatterImageQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -6237,7 +6285,10 @@ export interface AuthorsJsonRootQueryTypeArgs {
   name?: authorsJsonNameQueryString_2 | null; 
   picture?: authorsJsonPictureQueryString_2 | null; 
   bio?: authorsJsonBioQueryString_2 | null; 
+  biolong?: authorsJsonBiolongQueryString_2 | null; 
   title?: authorsJsonTitleQueryString_2 | null; 
+  twitter?: authorsJsonTwitterQueryString_2 | null; 
+  github?: authorsJsonGithubQueryString_2 | null; 
   types?: authorsJsonTypesQueryList_2 | null; 
   internal?: authorsJsonInternalInputObject_2 | null; 
 }
@@ -6650,26 +6701,26 @@ export type imageSharpDistinctEnum = "id" | "parent" | "internal___contentDigest
 export type imageSharpGroupEnum = "id" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type AuthorsJsonConnectionSortByFieldsEnum = "id" | "name" | "picture" | "bio" | "title" | "types" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type AuthorsJsonConnectionSortByFieldsEnum = "id" | "name" | "picture" | "bio" | "biolong" | "title" | "twitter" | "github" | "types" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
 export type authorsJsonConnectionSortOrderValues = "ASC" | "DESC";
 
 
-export type authorsJsonDistinctEnum = "id" | "name" | "picture" | "bio" | "title" | "types" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type authorsJsonDistinctEnum = "id" | "name" | "picture" | "bio" | "biolong" | "title" | "twitter" | "github" | "types" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type authorsJsonGroupEnum = "id" | "name" | "picture" | "bio" | "title" | "types" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type authorsJsonGroupEnum = "id" | "name" | "picture" | "bio" | "biolong" | "title" | "twitter" | "github" | "types" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type MarkdownRemarkConnectionSortByFieldsEnum = "id" | "children" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath" | "html" | "headings" | "timeToRead" | "tableOfContents" | "wordCount___paragraphs" | "wordCount___sentences" | "wordCount___words";
+export type MarkdownRemarkConnectionSortByFieldsEnum = "id" | "children" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath" | "html" | "headings" | "timeToRead" | "tableOfContents" | "wordCount___paragraphs" | "wordCount___sentences" | "wordCount___words";
 
 
 export type markdownRemarkConnectionSortOrderValues = "ASC" | "DESC";
 
 
-export type markdownRemarkDistinctEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath";
+export type markdownRemarkDistinctEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath";
 
 
-export type markdownRemarkGroupEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath";
+export type markdownRemarkGroupEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath";
 
