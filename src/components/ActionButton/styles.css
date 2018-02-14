@@ -1,0 +1,82 @@
+.btn-action.green:before {
+    background-color: #05EFBE;
+}
+.btn-action.green:after  {
+    background-color: #05E1B3;
+}
+.btn-action.green a {
+    background-color: #12FFCD;
+}
+
+.btn-action.blue:before {
+    background-color: #00E6F0;
+}
+.btn-action.blue:after  {
+    background-color: #00DAE4;
+}
+.btn-action.blue a {
+    background-color: #11F5FF;
+}
+
+
+.btn-action {
+    position: relative;
+    overflow: hidden;
+    height: 56px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-action:before {
+    content: '';
+    transition: 0.5s;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -34px;
+    right: -25px;
+}
+.btn-action:hover:before {
+    right: -60px;
+}
+.btn-action:after {
+    transition: 0.5s;
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -34px;
+    right: -100px;
+}
+.btn-action:hover:after {
+    right: -130px;
+}
+.btn-action a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+
+    font-family: "MonoRegular";
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    color: #19396D;
+    text-transform: uppercase;
+    line-height: 56px;
+    text-decoration: none;
+}
+.btn-action a span {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
