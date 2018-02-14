@@ -13,6 +13,7 @@ import { Course, CourseFlavorType } from "../domain/models";
 import Hero from '../components/Hero';
 import { FlavorSelector } from "../components/FlavorSelector";
 import { CourseCardList } from "../components/CourseCardList";
+import FlavorDescription from "../components/FlavorDescription";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -66,6 +67,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
                 <Hero />
 
                 <FlavorSelector onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
+
+                <FlavorDescription flavor={this.state.slectedFlavor} />
 
                 <CourseCardList courses={courses} />
 
