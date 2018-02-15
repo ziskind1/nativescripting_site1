@@ -1,3 +1,8 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .section {
     padding-top: 160px;
     position: relative;

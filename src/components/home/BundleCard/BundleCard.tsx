@@ -57,6 +57,8 @@ export default class BundleCard extends React.Component<BundleCardProps, BundleC
                 break;
         }
 
+        const savingsPercent = Math.round((1 - this.state.selectedProduct.pricesale / this.state.selectedProduct.pricereg) * 100);
+
         return (
             <div className={`bundle-container ${bundleType}`}>
 
@@ -83,12 +85,11 @@ export default class BundleCard extends React.Component<BundleCardProps, BundleC
                     </div>
                     <div className="bundle-price">
                         <p>
-                            <span>$</span>199
+                            <span>$</span>{this.state.selectedProduct.pricesale}
                         </p>
-                        <span className="package__price-full">$258</span>
+                        <span className="package__price-full">${this.state.selectedProduct.pricereg}</span>
                         <span className="package__price-save">
-                            Save
-                            23%
+                            Save {savingsPercent}%
                         </span>
                     </div>
                 </div>

@@ -52,7 +52,7 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
         return products.map((p, idx) => {
 
             //const prodClassName = p.id === selectedProduct.id ? 'license selected' : 'license';
-            const licenseClassName = p.id === selectedProduct.id ? 'active' : null;
+            const licenseClassName = p.id === selectedProduct.id ? 'active' : '';
 
             return (
                 <li key={idx}>
@@ -108,14 +108,14 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
 
         return (
             <div className={`license-selector ${activeClassName}`}>
-                <div onClick={() => this.licenseSelectorClick()}>
+                <div className="license-selected-container" onClick={() => this.licenseSelectorClick()}>
                     {this.state.selectedProduct.description}
                     <img className="selector-img" src="/img/arrow.png" />
                 </div>
 
 
-                <div className="package__license-list-overlay" onClick={() => this.hideLicenseOptions()}></div>
-                <ul className="package__license-list">
+                <div className="license-options-list-overlay" onClick={() => this.hideLicenseOptions()}></div>
+                <ul className="license-options-list">
                     {licensesHtml}
                 </ul>
 

@@ -91,8 +91,9 @@
 
 .bundle-bottom {
     position: relative;
-    height: 200px;
+    height: 160px;
     background-color: #073D95;
+    padding: 10px;
 }
 
 .bundle-license {
@@ -106,24 +107,26 @@
 .bundle-price {
     text-align: center;
     padding: 0 11px;
+    margin-top: 10px;
+    font-family: "MonoRegular";
 }
 
 .bundle-price p {
-    font-size: 44px;
+    font-size: 28px;
     margin: 0 10px 0 0;
     letter-spacing: -.8px;
-    color: #1bbb7c;
+    color: #12ffcd;
 }
 .bundle-price p span {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     position: relative;
-    top: -14px;
+    top: -8px;
     margin-right: 5px;
 }
 
 .package__price-full {
-    color: #b3b9bf;
+    color: #557ab7;
     text-decoration: line-through;
     display: inline-block;
     margin: 0 8px 0 0;
@@ -131,16 +134,17 @@
 }
 
 .package__price-save {
+    font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
     position: relative;
     display: inline-block;
     padding: 4px 8px 2px;
     font-size: 12px;
-    background: #f4c150;
-    border-radius: 4px;
+    background: #B517EC;
+    border-radius: 0px;
     text-transform: uppercase;
     margin: 0 0 24px 5px;
-    color: #fff;
-    font-weight: 500;
+    color: #FFFFFF;
+    font-weight: bold;
     top: -4px;
     letter-spacing: .6px;
 }
@@ -153,10 +157,10 @@
     height: 0;
     width: 0;
     position: absolute;
-    border-radius: 2px;
+    border-radius: 0px;
     pointer-events: none;
     border-color: transparent;
-    border-right-color: #f4c150;
+    border-right-color: #B517EC;
     border-width: 5px;
     margin-top: -5px;
 }
