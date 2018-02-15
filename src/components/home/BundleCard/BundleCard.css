@@ -85,6 +85,19 @@
     color: #f0ae26;
 }
 
+.bundle-bottom {
+    position: relative;
+    height: 200px;
+}
+
+.bundle-license {
+    position: relative;
+}
+
+.license-options {
+    position: absolute;
+}
+
 
 @media (max-width: 768px) {
     .bundle-container {

@@ -4,11 +4,11 @@ import './styles.css';
 
 export type ActionBtnType = 'primary' | 'secondary' | 'tertiary';
 
-
 export interface ActionButtonProps {
     text: string;
     url?: string;
     type?: ActionBtnType;
+    newWindow?: boolean;
 }
 
 function getBtnClassName(type: ActionBtnType) {
@@ -27,9 +27,11 @@ function getBtnClassName(type: ActionBtnType) {
 const ActionButton: React.StatelessComponent<ActionButtonProps> = (props: ActionButtonProps) => {
     const className = getBtnClassName(props.type);
 
+    const anchorTarget = props.newWindow ? '_blank' : null;
+
     return (
         <div className={className}>
-            <a href={props.url}>
+            <a href={props.url} target={anchorTarget}>
                 <span>{props.text}</span>
             </a>
         </div>

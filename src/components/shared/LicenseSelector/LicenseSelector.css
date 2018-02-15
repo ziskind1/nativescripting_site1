@@ -1,0 +1,15 @@
+.license-options {
+    display: none;
+}
+
+.license-options.active {
+    display: block;
+}
+
+.license {
+    background-color: white;
+}
+
+.license.selected {
+    background-color: gray;
+}
