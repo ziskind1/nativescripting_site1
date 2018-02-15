@@ -9,8 +9,9 @@
 }
 .hero-content,
 .hero-content .container,
-.hero-content .container .text-padding {
+.hero-content .text-padding {
     z-index: 10;
+    position: relative;
 }
 .hero-overlay {
     position: absolute;

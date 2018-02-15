@@ -4,8 +4,10 @@ import { ReactNode } from "react";
 
 
 import '../css/style.css';
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import '../css/styles.css';
+
+import Footer from "../components/shared/Footer";
+import Header from "../components/shared/Header/Header";
 
 
 interface IndexLayoutProps {
@@ -19,31 +21,11 @@ interface IndexLayoutProps {
         };
     };
 }
-/*
 
-export default class extends React.Component<IndexLayoutProps, {}> {
-    constructor(props: IndexLayoutProps, context: any) {
-        super(props, context);
-        
-    }
-    public render() {
-        return (
-            <div>
-                <h1>Hello Typescript world!</h1>
-                <p>This site is named <strong>{this.props.data.site.siteMetadata.foo}</strong></p>
-            </div>
-        );
-    }
-}
-*/
 
 const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({ children, data }) =>
     <div>
-        <div className="container-fluid">
-            <div className="row">
-                <Header siteName={data.site.siteMetadata.siteName} />
-            </div>
-        </div>
+        <Header siteName={data.site.siteMetadata.siteName} />
 
         {children()}
 

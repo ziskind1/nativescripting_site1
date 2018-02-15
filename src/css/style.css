@@ -1117,19 +1117,22 @@ a:hover, a:focus, a:active {
   text-decoration: none; }
 
 .header {
-  float: left;
+ 
   width: 100%;
   background-color: #032E74;
   height: 80px;
-  line-height: 80px; }
+  line-height: 80px; 
+}
   .header img {
     float: left;
     height: 60.3px;
     position: relative;
     top: 11px;
-    margin-left: 16px; }
+    margin-left: 16px; 
+  }
   .header .detail-logo {
-    margin-left: 0px !important; }
+    margin-left: 0px !important; 
+  }
   .header .header-text {
     margin: 0px 0px 0px 15px;
     float: left;

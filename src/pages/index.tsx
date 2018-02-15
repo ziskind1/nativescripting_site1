@@ -81,6 +81,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
             <div>
                 <Hero />
 
+                <main role="main">
+
+                </main>
+
                 <CoursesSection courses={filteredCourses} selectedFlavor={this.state.slectedFlavor} onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
 
                 <div style={clearStyle} ></div>
