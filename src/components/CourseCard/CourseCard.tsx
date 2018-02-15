@@ -14,10 +14,10 @@ interface CourseCardProps {
 function getCourseIconHtml(course: Course): JSX.Element[] {
     var ret = [];
     if (course.flavors.includes('Core')) {
-        ret.push(<img src="/img/nativescript_white.svg" />);
+        ret.push(<img key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />);
     }
     if (course.flavors.includes('Angular')) {
-        ret.push(<img src="/img/nativescript_angular.svg" />);
+        ret.push(<img key={'nativescript_angular.svg'} src="/img/nativescript_angular.svg" />);
     }
     return ret;
 };

@@ -4,9 +4,87 @@
     -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.1);
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
     padding: 0;
-    margin: 0px 5px 10px 5px;
+    margin: 0px 5px 50px 5px;
     width: 332px;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
 }
+
+.bundle-container.primary {
+    border-color: #12ffcd;
+}
+
+.bundle-container.secondary {
+    border-color: #11f5ff;
+}
+
+.bundle-container.tertiary {
+    border-color: #f0ae26;
+}
+
+
+.bundle-card-promo-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.bundle-card-promo-count {
+    width: 220px;
+    height: 40px;
+    color: #09224a;
+    line-height: 40px;
+    font-family: OpenSansRegular;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bundle-container.primary
+.bundle-card-promo-count {
+    background-color: #12ffcd;
+}
+
+.bundle-container.secondary
+.bundle-card-promo-count {
+    background-color: #11f5ff;
+}
+
+.bundle-container.tertiary
+.bundle-card-promo-count {
+    background-color: #f0ae26;
+}
+
+
+.bundle-header-title {
+    font-family: MonoRegular;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 37px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+
+.bundle-container.primary
+.bundle-header-title {
+    color: #12ffcd;
+}
+
+.bundle-container.secondary
+.bundle-header-title {
+    color: #11f5ff;
+}
+
+.bundle-container.tertiary
+.bundle-header-title {
+    color: #f0ae26;
+}
+
 
 @media (max-width: 768px) {
     .bundle-container {

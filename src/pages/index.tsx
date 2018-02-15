@@ -87,10 +87,6 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
                 <BundleSection bundles={bundles} />
 
-                <div style={clearStyle} ></div>
-
-                <HomeSpecialsSection bundles={bundles} />
-
             </div>
         );
     }
@@ -154,6 +150,7 @@ query IndexPageQuery{
             promototal
             promoremaining
             courseIds
+            bundleLevel
             products {
               id
               name

@@ -16,7 +16,7 @@ const BundleCourse: React.StatelessComponent<BundleCourseProps> = (props: Bundle
         <div className="bundle-course">
             <div className="bundle-course-info">
 
-                <span className="title">{course.title}</span> <span className="tag course-tag course-tag-new" data-bind="text: tag, css: { 'course-tag-new': tag === 'NEW' }">NEW</span>
+                <span className="title">{course.title}</span>
             </div>
             <LevelIcon level={props.course.level} />
         </div>

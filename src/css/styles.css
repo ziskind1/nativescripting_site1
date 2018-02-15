@@ -12,6 +12,7 @@
 }
 
 .heading {
+    font-family: "MonoRegular";
     text-align: center;
     max-width: 860px;
     margin: 0 auto 80px;

@@ -13,21 +13,21 @@ export interface BundleSectionProps {
 const BundleSection: React.StatelessComponent<BundleSectionProps> = (props: BundleSectionProps) => {
 
     return (
-        <div className="bundle-section">
-            <div className="container">
-                <div className="row">
-                    <div className="bundle-section-header">
-                        <h2 className="bundle-section-header-title">Complete Bundles</h2>
-                        <p className="bundle-section-header-subtitle">
-                            Everything you need to master NativeScript
-                        </p>
-                    </div>
+        <section className="section">
+            <div className="wrapper">
 
-                    <BundleCardList bundles={props.bundles} />
-
+                <div className="heading">
+                    <h2 className="heading__title">Complete Bundles</h2>
+                    <p className="heading__text">
+                        Everything you need to master NativeScript
+                                </p>
                 </div>
+
+                <BundleCardList bundles={props.bundles} />
+
+
             </div>
-        </div>
+        </section>
     );
 };
 

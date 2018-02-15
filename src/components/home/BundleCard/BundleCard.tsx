@@ -24,16 +24,26 @@ class BundleCard extends React.Component<BundleCardProps, {}> {
         switch (bundle.bundleLevel) {
             case 1:
                 bundleType = 'primary';
+                break;
             case 2:
                 bundleType = 'secondary';
+                break;
             case 3:
                 bundleType = 'tertiary';
+                break;
         }
 
         return (
-            <div className="bundle-container">
+            <div className={`bundle-container ${bundleType}`}>
+
+                <div className="bundle-card-promo-container">
+                    <div className="bundle-card-promo-count">
+                        <span>{bundle.promoremaining}</span>/<span>{bundle.promototal}</span>&nbsp;left at this price
+                    </div>
+                </div>
+
                 <div className="bundle-header">
-                    <h3 className="bundle-header-title">{bundle.title}</h3>
+                    <h3 className={`bundle-header-title`}>{bundle.title}</h3>
                     <p className="bundle-header-subtitle">
                         {bundle.courses.length} courses
                     </p>

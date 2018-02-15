@@ -22,20 +22,17 @@ const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (props: Co
 
             <div className="wrapper">
 
-                <div className="courses-section-header">
-                    <h2 className="courses-section-header-title">Available Courses</h2>
-                    <p className="courses-section-header-subtitle">
+                <div className="heading">
+                    <h2 className="heading__title">Available Courses</h2>
+                    <p className="heading__text">
                         Everything you need to master NativeScript
-                        </p>
-
-                    <FlavorSelector onSelectFlavor={props.onSelectFlavor} />
-
-                    <FlavorDescription flavor={props.selectedFlavor} />
-
+                    </p>
                 </div>
 
-                <CourseCardList courses={props.courses} />
+                <FlavorSelector onSelectFlavor={props.onSelectFlavor} />
+                <FlavorDescription flavor={props.selectedFlavor} />
 
+                <CourseCardList courses={props.courses} />
 
             </div>
 
