@@ -1,0 +1,12 @@
+.course-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+    .course-card-list {
+      display: block;
+    }
+}

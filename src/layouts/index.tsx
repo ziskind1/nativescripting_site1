@@ -27,7 +27,9 @@ const IndexLayout: React.StatelessComponent<IndexLayoutProps> = ({ children, dat
     <div>
         <Header siteName={data.site.siteMetadata.siteName} />
 
-        {children()}
+        <main role="main">
+            {children()}
+        </main>
 
         <Footer />
     </div>
