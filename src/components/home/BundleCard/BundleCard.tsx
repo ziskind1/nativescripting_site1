@@ -81,6 +81,16 @@ export default class BundleCard extends React.Component<BundleCardProps, BundleC
                     <div className="bundle-license">
                         <LicenseSelector products={bundle.products} onLicenseSelect={(p) => this.licenseSelect(p)} />
                     </div>
+                    <div className="bundle-price">
+                        <p>
+                            <span>$</span>199
+                        </p>
+                        <span className="package__price-full">$258</span>
+                        <span className="package__price-save">
+                            Save
+                            23%
+                        </span>
+                    </div>
                 </div>
 
                 <ActionButton

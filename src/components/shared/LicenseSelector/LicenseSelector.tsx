@@ -25,7 +25,8 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
         };
     }
 
-    private getLicenseOptionsHtml(
+    /*
+    private getLicenseOptionsHtml_(
         products: Product[],
         selectedProduct: Product,
         selectLicense: (product: Product) => Promise<void>
@@ -38,6 +39,27 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
                 <div key={idx} className={prodClassName} onClick={() => selectLicense(p)}>
                     <span>{p.description}</span>
                 </div>
+            );
+        });
+    }
+    */
+
+    private getLicenseOptionsHtml(
+        products: Product[],
+        selectedProduct: Product,
+        selectLicense: (product: Product) => Promise<void>
+    ): JSX.Element[] {
+        return products.map((p, idx) => {
+
+            //const prodClassName = p.id === selectedProduct.id ? 'license selected' : 'license';
+            const licenseClassName = p.id === selectedProduct.id ? 'active' : null;
+
+            return (
+                <li key={idx}>
+                    <a className={licenseClassName} onClick={(e) => { e.preventDefault(); selectLicense(p); }}>
+                        {p.description}
+                    </a>
+                </li>
             );
         });
     }
@@ -76,21 +98,28 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
             (p) => {
                 return this.selectLicense(p)
                     .then(() => {
-                        setTimeout(() => {
-                            this.hideLicenseOptions();
-                        }, 1000);
+                        this.hideLicenseOptions();
                     });
             }
         );
 
         const optionsClassName = this.state.licensesShowing ? 'license-options active' : 'license-options';
+        const activeClassName = this.state.licensesShowing ? 'active' : null;
 
         return (
-            <div className="license-selector">
-                <div onClick={() => this.licenseSelectorClick()}>{this.state.selectedProduct.description}</div>
-                <div className={optionsClassName}>
-                    {licensesHtml}
+            <div className={`license-selector ${activeClassName}`}>
+                <div onClick={() => this.licenseSelectorClick()}>
+                    {this.state.selectedProduct.description}
+                    <img className="selector-img" src="/img/arrow.png" />
                 </div>
+
+
+                <div className="package__license-list-overlay" onClick={() => this.hideLicenseOptions()}></div>
+                <ul className="package__license-list">
+                    {licensesHtml}
+                </ul>
+
+
             </div>
         );
     }

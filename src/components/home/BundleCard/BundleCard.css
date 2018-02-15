@@ -1,5 +1,5 @@
 .bundle-container {
-    background: #073D95;
+    background-color: #043078;
     text-align: center;
     -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.1);
     box-shadow: 0 4px 8px rgba(0,0,0,.1);
@@ -85,9 +85,14 @@
     color: #f0ae26;
 }
 
+.bundle-courses {
+    margin-bottom: 20px;
+}
+
 .bundle-bottom {
     position: relative;
     height: 200px;
+    background-color: #073D95;
 }
 
 .bundle-license {
@@ -98,6 +103,63 @@
     position: absolute;
 }
 
+.bundle-price {
+    text-align: center;
+    padding: 0 11px;
+}
+
+.bundle-price p {
+    font-size: 44px;
+    margin: 0 10px 0 0;
+    letter-spacing: -.8px;
+    color: #1bbb7c;
+}
+.bundle-price p span {
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    top: -14px;
+    margin-right: 5px;
+}
+
+.package__price-full {
+    color: #b3b9bf;
+    text-decoration: line-through;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    font-size: 18px;
+}
+
+.package__price-save {
+    position: relative;
+    display: inline-block;
+    padding: 4px 8px 2px;
+    font-size: 12px;
+    background: #f4c150;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin: 0 0 24px 5px;
+    color: #fff;
+    font-weight: 500;
+    top: -4px;
+    letter-spacing: .6px;
+}
+
+.package__price-save:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-radius: 2px;
+    pointer-events: none;
+    border-color: transparent;
+    border-right-color: #f4c150;
+    border-width: 5px;
+    margin-top: -5px;
+}
 
 @media (max-width: 768px) {
     .bundle-container {
