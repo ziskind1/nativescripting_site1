@@ -1,8 +1,9 @@
 import * as React from "react";
 
-import './styles.css';
+import './ActionButton.css';
 
 export type ActionBtnType = 'primary' | 'secondary' | 'tertiary';
+
 
 export interface ActionButtonProps {
     text: string;
