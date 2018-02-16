@@ -1,11 +1,14 @@
 import * as React from "react";
+import { scrollToElementById } from "../../../utils/scrolling";
 import ActionButton from "../../ActionButton/ActionButton";
 
 import './Hero.css';
 
 
+
 function Hero() {
 
+    const goToSpecials = () => scrollToElementById('specials');
 
     return (
         <div className="hero">
@@ -17,7 +20,7 @@ function Hero() {
                     </p>
 
                     <p className="bundle-notice">
-                        Get ultra-discounted <a href="#specials">course bundles</a> for a limited time.
+                        Get ultra-discounted <a onClick={() => goToSpecials()}>course bundles</a> for a limited time.
                     </p>
                 </div>
             </div>
