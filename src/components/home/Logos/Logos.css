@@ -35,15 +35,8 @@ ul li {
     max-width: 220px;
 }
 
-.icons__item:first-child {
-    margin-right: 0;
-}
-
 img {
     border: 0;
-}
-
-img {
     max-width: 100%;
 }
 

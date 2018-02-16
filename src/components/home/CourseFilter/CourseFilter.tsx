@@ -1,6 +1,7 @@
 import * as React from "react";
 //import { CourseFlavorType } from "../../../domain/models";
 
+import './CourseFilter.css';
 
 export type CourseFilterType = 'All' | 'Free' | 'Core' | 'Angular';
 
@@ -32,11 +33,11 @@ export class CourseFilter extends React.Component<CourseFilterProps, CourseFilte
     ): JSX.Element[] {
         return allOptions.map((o, idx) => {
 
-            const licenseClassName = o === selectedFilterType ? 'active noselect' : 'noselect';
+            const optionClassName = o === selectedFilterType ? 'active noselect' : 'noselect';
 
             return (
                 <li key={idx}>
-                    <a className={licenseClassName} onClick={(e) => { e.preventDefault(); selectFilterOption(o); }}>
+                    <a className={optionClassName} onClick={(e) => { e.preventDefault(); selectFilterOption(o); }}>
                         {o}
                     </a>
                 </li>
@@ -47,7 +48,6 @@ export class CourseFilter extends React.Component<CourseFilterProps, CourseFilte
     private selectFilterOption<T>(option: CourseFilterType): Promise<T> {
         return new Promise<T>((resolve, reject) =>
             this.setState({ selectedFilterType: option }, () => {
-                //this.props.onLicenseSelect(product);
                 this.props.onSelectFilterType(option);
                 resolve();
             }));
@@ -63,9 +63,11 @@ export class CourseFilter extends React.Component<CourseFilterProps, CourseFilte
         );
 
         return (
-            <ul>
-                {optionsHtml}
-            </ul>
+            <div className="course-filter-wrapper">
+                <ul>
+                    {optionsHtml}
+                </ul>
+            </div>
         );
     }
 }
@@ -78,10 +80,10 @@ const FlavorSelectorDesktop = (props: CourseFilterProps) => {
                     <div className="col-md-12">
                         <div className="select-cat" data-ko-keep data-bind="click: toggleCatSelectorActive, css: { 'select-cat-active': catSelectorActive }">
 
-                            <a onClick={() => props.onSelectFlavor('Core')}>
+                            <a onClick={() => props.onSelectFilterType('Core')}>
                                 <span>Core</span>
                             </a>
-                            <a onClick={() => props.onSelectFlavor('Angular')}>
+                            <a onClick={() => props.onSelectFilterType('Angular')}>
                                 <span>Angular</span>
                             </a>
 
@@ -98,12 +100,12 @@ const FlavorSelectorMobile = (props: CourseFilterProps) => {
     return (
         <div className="top-tabs-wrapper hidden-xs">
             <div className="top-tabs">
-                <a onClick={() => props.onSelectFlavor('Core')} className="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }, click: function() { selectCategoryDirect('core') }">
+                <a onClick={() => props.onSelectFilterType('Core')} className="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'core' }, click: function() { selectCategoryDirect('core') }">
                     <img src="/img/nativescript_white.svg" />
                     <span>NativeScript Core</span>
                 </a>
 
-                <a onClick={() => props.onSelectFlavor('Angular')} className="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }, click: function() { selectCategoryDirect('ng') }">
+                <a onClick={() => props.onSelectFilterType('Angular')} className="top-tab" data-ko-keep data-bind="css: { selected: catPicker.selectedCategory().catId === 'ng' }, click: function() { selectCategoryDirect('ng') }">
                     <img src="/img/nativescript_angular.svg" />
                     <span>NativeScript with Angular</span>
                 </a>
@@ -112,7 +114,7 @@ const FlavorSelectorMobile = (props: CourseFilterProps) => {
     );
 };
 
-export const FlavorSelector: React.StatelessComponent<FlavorSelectorProps> = (props: FlavorSelectorProps) => {
+export const FlavorSelector: React.StatelessComponent<CourseFilterProps> = (props: CourseFilterProps) => {
 
     return (
         <div>
