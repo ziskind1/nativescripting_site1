@@ -1,3 +1,4 @@
+/*green set */
 .btn-action.green:before {
     background-color: #05EFBE;
 }
@@ -8,6 +9,23 @@
     background-color: #12FFCD;
 }
 
+.btn-action.green.clear:before {
+    background-color: transparent;
+}
+.btn-action.green.clear:after  {
+    background-color: transparent;
+}
+.btn-action.green.clear a {
+    background-color: transparent;
+    border: 2px solid #12FFCD;
+    color: #12FFCD;
+}
+.btn-action.green.clear a:hover {
+    background-color: rgba(20, 255, 204, 0.1);
+    transition: 0.5s;
+}
+
+/*blue set */
 .btn-action.blue:before {
     background-color: #00E6F0;
 }
@@ -18,6 +36,24 @@
     background-color: #11F5FF;
 }
 
+.btn-action.blue.clear:before {
+    background-color: transparent;
+}
+.btn-action.blue.clear:after  {
+    background-color: transparent;
+}
+.btn-action.blue.clear a {
+    background-color: transparent;
+    border: 2px solid #11F5FF;
+    color: #11F5FF;
+}
+.btn-action.blue.clear a:hover {
+    background-color: rgba(17, 245, 255, 0.1);
+    transition: 0.5s;
+}
+
+
+/*orange set */
 .btn-action.orange:before {
     background-color: #f4b535;
 }
@@ -27,6 +63,23 @@
 .btn-action.orange a {
     background-color: #f0ae26;
 }
+
+.btn-action.orange.clear:before {
+    background-color: transparent;
+}
+.btn-action.orange.clear:after  {
+    background-color: transparent;
+}
+.btn-action.orange.clear a {
+    background-color: transparent;
+    border: 2px solid #f0ae26;
+    color: #f0ae26;
+}
+.btn-action.orange.clear a:hover {
+    background-color: rgba(240, 174, 38, 0.1);
+    transition: 0.5s;
+}
+
 
 
 .btn-action {

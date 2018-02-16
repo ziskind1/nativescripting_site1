@@ -1,23 +1,96 @@
 .sub-hero {
-
     position: relative;
     margin: 0;
     padding: 40px 60px 40px 60px;
 }
 
 .sub-hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
+
 }
 
 .sub-hero-content p {
     font-size: 16px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
 }
 
+.sub-hero-content p span.green {
+    color: #12FFCD;
+}
+
+.sub-hero-content p span.blue {
+    color: #11F5FF;
+}
+
+.sub-hero-content p.sub-detail {
+    font-size: 14px;
+    color: #fac760;
+    display: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
 .action-btn-wrapper {
     width: 320px;
+    margin: 20px;
+}
+
+.btn-action a span.action-text-full {
+    display: inline;
+}
+.btn-action a span.action-text-medium {
+    display: none;
+}
+.btn-action a span.action-text-small {
+    display: none;
+}
+
+@media (max-width: 870px) {
+    .btn-action a span.action-text-full {
+        display: none;
+    }
+    .btn-action a span.action-text-medium {
+        display: inline;
+    }
+    .btn-action a span.action-text-small {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .btn-action a span.action-text-full {
+        display: none;
+    }
+    .btn-action a span.action-text-medium {
+        display: none;
+    }
+    .btn-action a span.action-text-small {
+        display: inline;
+    }
+}
+
+@media (max-width: 600px) {
+    .sub-hero {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .sub-hero-content p {
+        font-size: 14px;
+    }
+    .action-buttons {
+        padding: 10px 0 10px 0;
+    }
+    .action-btn-wrapper {
+        width: 320px;
+        margin: 10px;
+    }
+
+    .sub-hero
+    .btn-action a span {
+        font-size: 14px;
+    }
 }

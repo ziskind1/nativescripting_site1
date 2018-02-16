@@ -23,6 +23,10 @@ function Logos() {
                     <li className="icons__item"><img src="/img/logos/vue.svg" alt="Vue" title="Vue" className="icons__image" /></li>
                     <li className="icons__item"><img src="/img/logos/webpack.svg" alt="Webpack" title="Webpack" className="icons__image" /></li>
                 </ul>
+
+                <div className="logos-desc">
+                    (Some of the technologies you'll learn about in these courses)
+                </div>
             </div>
         </section>
     );

@@ -10,23 +10,26 @@ export interface ActionButtonProps {
     url?: string;
     type?: ActionBtnType;
     newWindow?: boolean;
+    clear?: boolean;
 }
 
-function getBtnClassName(type: ActionBtnType) {
+function getBtnClassName(type: ActionBtnType, clear: boolean) {
+    const classClear = clear ? 'clear' : '';
+
     switch (type) {
         case 'primary':
-            return 'btn-action green';
+            return `btn-action green ${classClear}`;
         case 'secondary':
-            return 'btn-action blue'
+            return `btn-action blue ${classClear}`
         case 'tertiary':
-            return 'btn-action orange'
+            return `btn-action orange ${classClear}`
         default:
-            return 'btn-action green';
+            return `btn-action green ${classClear}`;
     }
 }
 
 const ActionButton: React.StatelessComponent<ActionButtonProps> = (props: ActionButtonProps) => {
-    const className = getBtnClassName(props.type);
+    const className = getBtnClassName(props.type, props.clear);
 
     const anchorTarget = props.newWindow ? '_blank' : null;
 
