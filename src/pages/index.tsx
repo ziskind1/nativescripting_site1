@@ -37,7 +37,6 @@ interface IndexPageProps {
 interface IndexPageState {
     courses: Course[];
     selectedFilterType: CourseFilterType;
-    selectedFlavor?: CourseFlavorType;
 }
 
 export default class extends React.Component<IndexPageProps, IndexPageState> {
@@ -56,11 +55,6 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
             courses: courses,
             selectedFilterType: 'All'
         };
-    }
-
-
-    private filterByFlavor(flavor: CourseFlavorType) {
-        this.setState({ selectedFlavor: flavor });
     }
 
     private filterByFilterType(filterType: CourseFilterType) {
@@ -106,8 +100,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
                 <CoursesSection
                     courses={filteredCourses}
-                    selectedFlavor={this.state.selectedFlavor}
-                    onSelectFlavor={(flavor) => this.filterByFlavor(flavor)}
+                    selectedFilterType={this.state.selectedFilterType}
                     onSelectFilterType={(filterType) => this.filterByFilterType(filterType)}
                 />
 

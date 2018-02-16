@@ -1,0 +1,15 @@
+.course-filter-description-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px 0 50px;
+}
+
+.course-filter-description-wrapper h4 {
+    font-family: OpenSansLight;
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 20px;
+}
