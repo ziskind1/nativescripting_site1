@@ -115,7 +115,7 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
                         </span>
                     </div>
                     <div>
-                        <img className="selector-img" src="/img/arrow.png" />
+                        <img className="selector-img noselect" src="/img/arrow.png" />
                     </div>
                 </div>
 

@@ -10,7 +10,7 @@ function Benefits() {
                 <div className="heading">
                     <h2 className="heading__title">
                         What you get
-                </h2>
+                    </h2>
                 </div>
 
                 <div className="benefits__block benefits__block--flex">

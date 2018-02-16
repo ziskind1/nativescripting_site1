@@ -91,16 +91,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
     }
 
     public render() {
-
         const filteredCourses = this.getFilteredCourses(this.state.selectedFilterType);
 
         const bundles =
             this.props.data.bundlesConnection.edges.map(b => bundleFromBundlesJsonEdge(b, this.state.courses));
-
-        const clearStyle = {
-            clear: 'both'
-        };
-
 
         return (
             <div>
@@ -116,8 +110,6 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
                     onSelectFlavor={(flavor) => this.filterByFlavor(flavor)}
                     onSelectFilterType={(filterType) => this.filterByFilterType(filterType)}
                 />
-
-                <div style={clearStyle} ></div>
 
                 <BundleSection bundles={bundles} />
 
