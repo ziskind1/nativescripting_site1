@@ -26,7 +26,7 @@ const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (props: Co
                     <h2 className="heading__title">Available Courses</h2>
                 </div>
 
-                <CourseFilter onSelectFilterType={props.onSelectFilterType} />
+                <CourseFilter selectedFilterType={props.selectedFilterType} onSelectFilterType={props.onSelectFilterType} />
 
                 <CourseFilterDescription selectedFilterType={props.selectedFilterType} />
 

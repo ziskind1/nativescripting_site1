@@ -4,7 +4,12 @@ import ActionButton from "../../ActionButton/ActionButton";
 import './SubHeroSection.css';
 
 
-function SubHeroSection() {
+interface SubHeroSectionProps {
+    onFreeCoursesClick: () => void;
+    onPremiumCoursesClick: () => void;
+}
+
+function SubHeroSection(props: SubHeroSectionProps) {
 
     const actionFreeTextFull = 'Start with our free courses';
     const actionGoDeepTextFull = 'Go deep with premium courses';
@@ -27,7 +32,7 @@ function SubHeroSection() {
                     <div className="action-buttons">
                         <div className="action-btn-wrapper">
                             <div className="btn-action green">
-                                <a>
+                                <a onClick={() => props.onFreeCoursesClick()}>
                                     <span className="action-text-full">{actionFreeTextFull}</span>
                                     <span className="action-text-medium">{actionFreeTextMedium}</span>
                                     <span className="action-text-small">{actionFreeTextSmall}</span>
@@ -37,7 +42,7 @@ function SubHeroSection() {
 
                         <div className="action-btn-wrapper">
                             <div className="btn-action blue clear">
-                                <a>
+                                <a onClick={() => props.onPremiumCoursesClick()}>
                                     <span className="action-text-full">{actionGoDeepTextFull}</span>
                                     <span className="action-text-medium">{actionGoDeepTextMedium}</span>
                                     <span className="action-text-small">{actionGoDeepTextSmall}</span>

@@ -23,6 +23,7 @@ import { CourseFilterType } from "../components/home/CourseFilter/CourseFilter";
 import SubHeroSection from "../components/home/SubHeroSection/SubHeroSection";
 import Benefits from "../components/home/Benefits/Benefits";
 import Logos from "../components/home/Logos/Logos";
+import { scrollToElementById } from "../utils/scrolling";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -55,6 +56,22 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
             courses: courses,
             selectedFilterType: 'All'
         };
+    }
+
+    private freeCoursesSelected() {
+        this.setState({ selectedFilterType: 'Free' }, () => {
+            this.scrollToElementById('courses');
+        });
+    }
+
+    private premiumCoursesSelected() {
+        this.setState({ selectedFilterType: 'All' }, () => {
+            this.scrollToElementById('courses');
+        });
+    }
+
+    private scrollToElementById(id: string) {
+        scrollToElementById(id);
     }
 
     private filterByFilterType(filterType: CourseFilterType) {
@@ -93,11 +110,15 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         return (
             <div>
                 <Hero />
-                <SubHeroSection />
+                <SubHeroSection
+                    onFreeCoursesClick={() => this.freeCoursesSelected()}
+                    onPremiumCoursesClick={() => this.premiumCoursesSelected()}
+                />
 
                 <Logos />
                 <Benefits />
 
+                <a id="courses" name="courses"></a>
                 <CoursesSection
                     courses={filteredCourses}
                     selectedFilterType={this.state.selectedFilterType}
