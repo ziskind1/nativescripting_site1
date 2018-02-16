@@ -33,6 +33,10 @@ body {
     margin: 0 auto 80px;
 }
 
+.heading h2 {
+    letter-spacing: -3px;
+}
+
 @media only screen and (max-width: 860px) {
     .heading {
         margin: 0 auto 60px;

@@ -19,6 +19,9 @@ import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
 import ActionButton from "../components/ActionButton/ActionButton";
 import BundleSection from "../components/home/BundleSection/BundleSection";
 import CoursesSection from "../components/home/CoursesSection/CoursesSection";
+import { CourseFilterType } from "../components/home/CourseFilter/CourseFilter";
+import SubHeroSection from "../components/home/SubHeroSection/SubHeroSection";
+import Benefits from "../components/home/Benefits/Benefits";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -31,8 +34,9 @@ interface IndexPageProps {
 }
 
 interface IndexPageState {
-    slectedFlavor?: CourseFlavorType;
     courses: Course[];
+    selectedFilterType: CourseFilterType;
+    selectedFlavor?: CourseFlavorType;
 }
 
 export default class extends React.Component<IndexPageProps, IndexPageState> {
@@ -48,26 +52,46 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
 
         this.state = {
-            courses: courses
+            courses: courses,
+            selectedFilterType: 'All'
         };
     }
 
 
     private filterByFlavor(flavor: CourseFlavorType) {
-        this.setState({ slectedFlavor: flavor });
+        this.setState({ selectedFlavor: flavor });
     }
 
-    private getFilteredCourses(): Course[] {
-        if (this.state.slectedFlavor === undefined) {
+    private filterByFilterType(filterType: CourseFilterType) {
+        this.setState({ selectedFilterType: filterType });
+    }
+
+    private getFilteredCourses(filterType: CourseFilterType): Course[] {
+        switch (filterType) {
+            case 'All':
+                return this.state.courses;
+            case 'Free':
+                return this.state.courses.filter(c => c.products.some(p => p.pricereg === 0));
+            case 'Core':
+                return this.state.courses.filter(c => c.flavors.includes('Core'));
+            case 'Angular':
+                return this.state.courses.filter(c => c.flavors.includes('Angular'));
+            default:
+                return this.state.courses;
+        }
+
+        /*
+        if (this.state.selectedFlavor === undefined) {
             return this.state.courses;
         } else {
-            return this.state.courses.filter(c => c.flavors.includes(this.state.slectedFlavor));
+            return this.state.courses.filter(c => c.flavors.includes(this.state.selectedFlavor));
         }
+        */
     }
 
     public render() {
 
-        const filteredCourses = this.getFilteredCourses();
+        const filteredCourses = this.getFilteredCourses(this.state.selectedFilterType);
 
         const bundles =
             this.props.data.bundlesConnection.edges.map(b => bundleFromBundlesJsonEdge(b, this.state.courses));
@@ -80,8 +104,16 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         return (
             <div>
                 <Hero />
+                <SubHeroSection />
 
-                <CoursesSection courses={filteredCourses} selectedFlavor={this.state.slectedFlavor} onSelectFlavor={(flavor) => this.filterByFlavor(flavor)} />
+                <Benefits />
+
+                <CoursesSection
+                    courses={filteredCourses}
+                    selectedFlavor={this.state.selectedFlavor}
+                    onSelectFlavor={(flavor) => this.filterByFlavor(flavor)}
+                    onSelectFilterType={(filterType) => this.filterByFilterType(filterType)}
+                />
 
                 <div style={clearStyle} ></div>
 

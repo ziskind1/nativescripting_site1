@@ -6,12 +6,14 @@ import { FlavorSelector } from '../../FlavorSelector';
 import FlavorDescription from '../../FlavorDescription';
 
 import './CoursesSection.css';
+import { CourseFilter, CourseFilterType } from '../CourseFilter/CourseFilter';
 
 
 export interface CoursesSectionProps {
     courses: Course[];
     selectedFlavor: CourseFlavorType;
     onSelectFlavor: (flavor: CourseFlavorType) => void;
+    onSelectFilterType: (filterType: CourseFilterType) => void;
 }
 
 
@@ -28,6 +30,8 @@ const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (props: Co
                         Everything you need to master NativeScript
                     </p>
                 </div>
+
+                <CourseFilter onSelectFilterType={props.onSelectFilterType} />
 
                 <FlavorSelector onSelectFlavor={props.onSelectFlavor} />
                 <FlavorDescription flavor={props.selectedFlavor} />
