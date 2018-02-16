@@ -33,12 +33,33 @@
 .hero-main-title {
     font-family: MonoRegular;
     font-weight: 700;
-
     font-size: 56px;
     font-weight: 400;
     line-height: 68px;
     margin-bottom: 50px;
     z-index: 10;
+    letter-spacing: -3px;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+.hero-content .bundle-notice {
+    margin-top:40px;
+    font-size: 16px;
+    color: #12FFCD;
+}
+
+.hero-content .bundle-notice a {
+    margin-top:40px;
+    font-size: 16px;
+    color: rgb(170, 250, 233);
+    text-decoration: underline;
+}
+
+.hero-content .bundle-notice a:hover {
+    color: rgb(104, 228, 201);
 }
 
 @media only screen and (max-width: 860px) {

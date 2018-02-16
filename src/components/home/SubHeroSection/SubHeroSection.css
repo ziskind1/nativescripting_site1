@@ -1,0 +1,23 @@
+.sub-hero {
+    background-color: #032E74;
+    position: relative;
+    margin: 0;
+    padding: 10px 60px 10px 60px;
+}
+
+.sub-hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.sub-hero-content p {
+    font-size: 16px;
+}
+
+
+.action-btn-wrapper {
+    width: 320px;
+}
