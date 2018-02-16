@@ -1,0 +1,106 @@
+.benefits {
+    background-color: #032E74;
+    padding-top: 40px;
+}
+
+.benefits__block {
+    padding: 40px 30px;
+}
+
+.benefits__block--flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.benefits__list {
+    width: 33.3%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.checklist li {
+    color: rgba(63,66,83,.8);
+    position: relative;
+    padding: 4px 0 4px 32px;
+}
+
+.benefits__list li {
+    line-height: 26px;
+    margin-top: 30px;
+}
+
+.benefits__list li:first-child {
+    margin-top: 0;
+}
+
+.benefits .checklist li {
+    padding: 0 0 0 46px;
+}
+
+.checklist li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(/img/check-mark.svg) center center no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+.benefits .checklist li:before {
+    top: 2px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.benefits__block h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+p {
+    margin: 0;
+}
+
+.benefits__block p {
+    color: #f4b535;
+    line-height: 26px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 990px) {
+    .benefits__block--flex {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .benefits__list {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .benefits__list {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .benefits__block h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+}

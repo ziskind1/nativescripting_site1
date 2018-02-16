@@ -22,6 +22,7 @@ import CoursesSection from "../components/home/CoursesSection/CoursesSection";
 import { CourseFilterType } from "../components/home/CourseFilter/CourseFilter";
 import SubHeroSection from "../components/home/SubHeroSection/SubHeroSection";
 import Benefits from "../components/home/Benefits/Benefits";
+import Logos from "../components/home/Logos/Logos";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -106,6 +107,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
                 <Hero />
                 <SubHeroSection />
 
+                <Logos />
                 <Benefits />
 
                 <CoursesSection
