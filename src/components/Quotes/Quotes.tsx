@@ -24,7 +24,7 @@ function Quotes() {
                         <img className="quotes__author-img" src="/img/people/todd_motto.jpg" alt="" />
                         <div>
                             <a target="_blank" href="https://twitter.com/toddmotto">Todd Motto</a>
-                            <p>Creator <a href="https://ultimateangular.com" target="_blank">@UltimateAngular</a> and Google Developer Expoert for Angular</p>
+                            <p>Creator <a href="https://ultimateangular.com" target="_blank">@UltimateAngular</a> and Google Developer Expert for Angular</p>
                         </div>
                     </div>
                 </div>
