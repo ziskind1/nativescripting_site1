@@ -25,6 +25,8 @@ import Benefits from "../components/home/Benefits/Benefits";
 import Logos from "../components/home/Logos/Logos";
 import { scrollToElementById } from "../utils/scrolling";
 import Quotes from "../components/Quotes/Quotes";
+import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
+import AddThisBlock from "../components/shared/AddThisBlock/AddThisBlock";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -129,6 +131,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
                 <BundleSection bundles={bundles} />
 
                 <Quotes />
+
+                <SignUpSection />
+
+                <AddThisBlock />
 
             </div>
         );
