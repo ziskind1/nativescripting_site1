@@ -1,0 +1,52 @@
+.course-author-card-container {
+    background-color: #073a8d;
+    padding: 15px;
+}
+
+.course-author-card-container .card-label {
+    font-family: OpenSansLight;
+    font-size: 12px;
+    line-height: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.course-author-card-container .card-bio {
+    font-family: OpenSansLight;
+    font-size: 13px;
+    line-height: 19px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.course-author-name-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-author-name-block img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.course-author-name-block h3 {
+    font-family: OpenSansRegular;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+.course-author-name-block h4 {
+    font-family: OpenSansLight;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+

@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Author } from '../../../domain/models';
 
 
+import './CourseAuthorCard.css';
+
 interface CourseAuthorCardProps {
     author: Author;
 }
@@ -12,14 +14,19 @@ export const CourseAuthorCard: React.StatelessComponent<CourseAuthorCardProps> =
     const authorImgSrc = `/img/authors/${author.picture}`;
 
     return (
-        <div>
-            <p>Author</p>
-            <h3>{author.name}</h3>
-            <h4>{author.title}</h4>
+        <div className="course-author-card-container">
+            <p className="card-label">Author</p>
+            <div className="course-author-name-block">
+                <div>
+                    <h3>{author.name}</h3>
+                    <h4>{author.title}</h4>
+                </div>
+                <div>
+                    <img src={authorImgSrc} alt={author.name} title={author.name} />
+                </div>
+            </div>
 
-            <img src={authorImgSrc} alt={author.name} title={author.name} />
-
-            <p>{author.bio}</p>
+            <p className="card-bio">{author.bio}</p>
 
         </div>
     );
