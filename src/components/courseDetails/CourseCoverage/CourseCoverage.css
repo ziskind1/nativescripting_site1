@@ -1,0 +1,9 @@
+.course-coverage-icon-wrapper img {
+    width: 44px;
+}
+
+.course-coverage-item {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
