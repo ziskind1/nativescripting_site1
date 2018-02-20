@@ -18,13 +18,14 @@ import Quotes from '../components/Quotes/Quotes';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import { CourseBanner } from '../components/courseDetails/CourseBanner/CourseBanner';
 
-import '../css/course-details.css';
 import { CourseMetaCard } from '../components/courseDetails/CourseMetaCard/CourseMetaCard';
 import { CourseBundleArea } from '../components/courseDetails/CourseBundleArea/CourseBundleArea';
 import { CoursePurchaseArea } from '../components/courseDetails/CoursePurchaseArea/CoursePurchaseArea';
 import BundleSection from '../components/home/BundleSection/BundleSection';
 import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/CourseCurriculum';
 
+
+import '../css/course-details.css';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -72,7 +73,7 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
       <div className="wrapper">
         <div className="course-details-container">
 
-          <div className="course-details-top-bar">
+          <div className="breadcrumb-wrapper">
             <BreadCrumbs breadcrumbs={breadCrumbs} />
           </div>
 

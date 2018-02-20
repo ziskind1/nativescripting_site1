@@ -10,6 +10,7 @@
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
     "@types/node": "^8.0.7",
     "@types/react": "15.0.21",
     "@types/react-dom": "0.14.23",
@@ -29,6 +30,7 @@
     "gatsby-transformer-remark": "^1.7.30",
     "gatsby-transformer-sharp": "1.6.18",
     "glamorous": "^4.11.4",
+    "normalize.css": "^8.0.0",
     "scroll-to-element": "^2.0.0",
     "typography-theme-kirkham": "^0.16.3"
   },

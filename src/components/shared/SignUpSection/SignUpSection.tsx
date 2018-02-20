@@ -1,5 +1,8 @@
 import * as React from "react";
 
+
+import './SignUpSection.css';
+
 var ga: any;
 
 function submitSubscribeForm() {

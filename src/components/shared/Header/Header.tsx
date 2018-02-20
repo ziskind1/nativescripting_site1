@@ -10,29 +10,8 @@ interface HeaderProps {
     siteName: string;
 }
 
-function getOldHeader(props: HeaderProps) {
-    return (
-        <div className="header">
-
-            <MainMenuMobile />
-
-            <div className="container">
-                <div className="col-md-12">
-                    <div className="row">
-                        <SiteLogo siteName={props.siteName} />
-                        <MainMenu />
-                        <Burger />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    );
-}
-
 function Header(props: HeaderProps) {
 
-    //return getOldHeader(props);
 
     return (
         <div className="site-header">

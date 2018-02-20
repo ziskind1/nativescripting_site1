@@ -1075,43 +1075,8 @@ hr {
 @media print {
   .hidden-print {
     display: none !important; } }
-@font-face {
-  font-family: "OpenSansRegular";
-  src: url("fonts/OpenSansRegular/OpenSansRegular.eot");
-  src: url("fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
-  font-family: "OpenSansLight";
-  src: url("fonts/OpenSansLight/OpenSansLight.eot");
-  src: url("fonts/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
-  font-family: "OpenSansBold";
-  src: url("fonts/OpenSansBold/OpenSansBold.eot");
-  src: url("fonts/OpenSansBold/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansBold/OpenSansBold.woff") format("woff"), url("fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
-  font-family: "MonoRegular";
-  src: url("fonts/overpass-mono-regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
-  font-family: "MonoBold";
-  src: url("fonts/overpass-mono-bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal; }
-@font-face {
-  font-family: "MonoLight";
-  src: url("fonts/overpass-mono-light.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal; }
+
   
-body {
-  background-color: #09224a; 
-}
 
 a:hover, a:focus, a:active {
   text-decoration: none; }

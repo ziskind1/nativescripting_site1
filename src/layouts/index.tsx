@@ -1,13 +1,12 @@
 import * as React from "react";
 import Link from "gatsby-link";
 import { ReactNode } from "react";
-
-
-import '../css/style.css';
-import '../css/styles.css';
-
-import Footer from "../components/shared/Footer";
+import Footer from "../components/shared/Footer/Footer";
 import Header from "../components/shared/Header/Header";
+
+
+import '../../node_modules/normalize.css/normalize.css';
+import '../css/styles.css';
 
 
 interface IndexLayoutProps {

@@ -5,6 +5,10 @@ import { AuthorsJsonConnection } from "../domain/graphql-types";
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 
 import { AuthorCardList } from "../components/about/AuthorCardList";
+import { BreadCrumbs } from "../components/shared/BreadCrumbs/BreadCrumbs";
+
+
+import '../css/about.css';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -31,62 +35,48 @@ export default class extends React.Component<AboutPageProps, {}> {
         const authors =
             this.props.data.authorsConnection.edges.map(authorFromAuthorsJsonEdge);
 
+        const breadCrumbs = [{ name: 'All courses', url: '/' }, { name: 'About', url: '' }];
+
         return (
-            <div>
-                <div className="pagination">
-                    <div className="container">
-                        <ul>
-                            <li>
-                                <a href="/">All Courses</a>
-                                <img src="/img/arrow.png" />
-                            </li>
-                            <li>
-                                <a>About</a>
-                            </li>
-                        </ul>
+            <div className="wrapper">
+                <div className="about-page-container">
+                    <div className="breadcrumb-wrapper">
+                        <BreadCrumbs breadcrumbs={breadCrumbs} />
                     </div>
-                </div>
-                <div className="detail-top-block">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-8 col-sm-12 col-xs-12">
-                                <img className="logo" src="/img/logo_2.svg" />
-                            </div>
-                            <div className="col-md-12 text-padding top-text-block">
-                                <h2>The most comprehensive NativeScript training</h2>
-                                <p>
-                                    NativeScripting is a single place for high quality, evergreen, on demand video learning for NativeScript. Created by Alex
-                                    Ziskind, who has also authored courses for Pluralsight and LinkedIn, NativeScripting offers
-                                    up to date video content that is delivered to the learner quickly, just as the versions of
-                                    NativeScript change quickly. This is the single place for top NativeScript experts to share
-                                    their knowledge with the world, in video form.
+
+                    <div className="about-top-block">
+                        <h2>The most comprehensive NativeScript training</h2>
+                        <p>
+                            NativeScripting is a single place for high quality, evergreen, on demand video learning for NativeScript. Created by Alex
+                            Ziskind, who has also authored courses for Pluralsight and LinkedIn, NativeScripting offers
+                            up to date video content that is delivered to the learner quickly, just as the versions of
+                            NativeScript change quickly. This is the single place for top NativeScript experts to share
+                            their knowledge with the world, in video form.
                                     </p>
+                    </div>
+
+
+                    <div style={clearStyle}></div>
+
+                    <AuthorCardList authors={authors} />
+
+                    <div style={clearStyle}></div>
+
+                    <div className="video-container">
+
+                        <div className="about-row">
+
+
+                            <h2>About NativeScripting</h2>
+
+                            <div className="video-wrapper">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/3isPtd8Q6rI" frameBorder="0" allowFullScreen></iframe>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
-
-                <div style={clearStyle}></div>
-
-                <AuthorCardList authors={authors} />
-
-                <div style={clearStyle}></div>
-
-                <div className="video-container">
-                    <div className="container">
-                        <div className="row about-row">
-                            <div className="col-md-6 col-md-offset-3">
-
-                                <h2>About NativeScripting</h2>
-
-                                <div className="video-wrapper">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3isPtd8Q6rI" frameBorder="0" allowFullScreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         );
     }

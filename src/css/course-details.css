@@ -2,12 +2,13 @@
     font-family: OpenSansLight;
 }
 
-
+/*
 .course-details-top-bar {
     display: flex;
     height: 40px;
     margin: 20px 0 0 0;
 }
+*/
 
 .course-details-wrapper {
     display: flex;

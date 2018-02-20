@@ -14,24 +14,7 @@ function getCoursesHtml(props: CourseCardListProps) {
     });
 }
 
-/*
-function getOldListHtml(props: CourseCardListProps) {
-    const coursesHtml = getCoursesHtml(props);
-    return (
-        <div className="course-card-list">
-            <div className="container">
-                <div className="col-md-12" id="loadCard">
-                    {coursesHtml}
-                </div>
-            </div>
-        </div>
-    );
-}
-*/
-
 export const CourseCardList: React.StatelessComponent<CourseCardListProps> = (props: CourseCardListProps) => {
-
-    //return getOldListHtml(props);
 
     const coursesHtml = getCoursesHtml(props);
 

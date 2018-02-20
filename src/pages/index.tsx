@@ -12,9 +12,6 @@ import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/
 import { Course, CourseFlavorType } from "../domain/models";
 
 import Hero from '../components/home/Hero/Hero';
-import { FlavorSelector } from "../components/FlavorSelector";
-import FlavorDescription from "../components/FlavorDescription";
-import HomeSpecialsSection from "../components/home/HomeSpecialsSection";
 import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
 import ActionButton from "../components/ActionButton/ActionButton";
 import BundleSection from "../components/home/BundleSection/BundleSection";

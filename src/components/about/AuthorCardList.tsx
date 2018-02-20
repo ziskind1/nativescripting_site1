@@ -14,17 +14,17 @@ export const AuthorCardList: React.StatelessComponent<AuthorCardListProps> = (pr
     });
 
     return (
-        <div className="about-authors-container">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12 text-padding top-text-block">
-                        <h2>Authors</h2>
+        <div className="wrapper">
+            <div className="about-authors-container">
 
-                        <div className="about-authors-wrapper">
-                            {html}
-                        </div>
+                <div className="">
+                    <h2>Authors</h2>
+
+                    <div className="about-authors-wrapper">
+                        {html}
                     </div>
                 </div>
+
             </div>
         </div>
     );
