@@ -1,0 +1,14 @@
+.chapter-container {
+    
+    background-color: #052d6f;
+    padding: 10px;
+}
+
+
+.chapter-container h3 {
+    font-family: MonoRegular;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 25px;
+    color: #fff;
+}

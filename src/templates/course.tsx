@@ -70,41 +70,43 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
 
     return (
       <div className="wrapper">
+        <div className="course-details-container">
 
-        <div className="course-details-top-bar">
-          <BreadCrumbs breadcrumbs={breadCrumbs} />
-        </div>
-
-        <CourseBanner course={course} />
-
-
-        <div className="course-details-wrapper">
-          <div className="course-details-pane">
-            <CourseMetaCard course={course} />
+          <div className="course-details-top-bar">
+            <BreadCrumbs breadcrumbs={breadCrumbs} />
           </div>
 
-          <div className="course-details-pane">
-            <CoursePurchaseArea course={course} />
+          <CourseBanner course={course} />
+
+
+          <div className="course-details-wrapper">
+            <div className="course-details-pane">
+              <CourseMetaCard course={course} />
+            </div>
+
+            <div className="course-details-pane">
+              <CoursePurchaseArea course={course} />
+            </div>
           </div>
-        </div>
 
-        <div className="course-description-wrapper">
-          <h2>What you'll learn</h2>
-          <p>
-            {course.description}
-          </p>
-        </div>
-
-
-        <CourseCurriculum course={course} />
-
-        <Quotes />
-
-        <BundleSection bundles={this.state.bundles} />
-
-        <SignUpSection />
+          <div className="course-description-wrapper">
+            <h2>What you'll learn</h2>
+            <p>
+              {course.description}
+            </p>
+          </div>
 
 
+          <CourseCurriculum course={course} />
+
+          <Quotes />
+
+          <BundleSection bundles={this.state.bundles} />
+
+          <SignUpSection />
+
+
+        </div >
       </div >
     );
   }
@@ -205,12 +207,13 @@ query CoursePageQuery($courseUrl: String) {
       }
         chapters {
           id
-        name
-        lessons {
-          chapterId
-          id
-        name
-      }
+          name
+          lessons {
+            chapterId
+            id
+            name
+            isPreview
+          }
     }
   }
 }

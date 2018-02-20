@@ -87,7 +87,7 @@ export interface lessons_2 {
   chapterId?: number | null; 
   id?: string | null; 
   name?: string | null; 
-  btnText?: string | null; 
+  isPreview?: boolean | null; 
 }
 
 export interface internal_11 {
@@ -539,9 +539,9 @@ export interface File extends Node {
   id: string; /* The id of this node. */
   parent?: Node | null; /* The parent of this node. */
   children?: Node[] | null; /* The children of this node. */
-  childrenBundlesJson?: BundlesJson[] | null; /* The children of this node of type bundlesJson */
   childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
   childMarkdownRemark?: MarkdownRemark | null; /* The child of this node of type markdownRemark */
+  childrenBundlesJson?: BundlesJson[] | null; /* The children of this node of type bundlesJson */
   childrenCoursesJson?: CoursesJson[] | null; /* The children of this node of type coursesJson */
   childImageSharp?: ImageSharp | null; /* The child of this node of type imageSharp */
   internal?: internal_16 | null; 
@@ -1027,7 +1027,7 @@ export interface coursesJsonConnectionChaptersLessonsInputObject_2 {
   chapterId?: coursesJsonConnectionChaptersLessonsChapterIdQueryInteger_2 | null; 
   id?: coursesJsonConnectionChaptersLessonsIdQueryString_2 | null; 
   name?: coursesJsonConnectionChaptersLessonsNameQueryString_2 | null; 
-  btnText?: coursesJsonConnectionChaptersLessonsBtnTextQueryString_2 | null; 
+  isPreview?: coursesJsonConnectionChaptersLessonsIsPreviewQueryBoolean_2 | null; 
 }
 
 export interface coursesJsonConnectionChaptersLessonsChapterIdQueryInteger_2 {
@@ -1049,11 +1049,9 @@ export interface coursesJsonConnectionChaptersLessonsNameQueryString_2 {
   glob?: string | null; 
 }
 
-export interface coursesJsonConnectionChaptersLessonsBtnTextQueryString_2 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
+export interface coursesJsonConnectionChaptersLessonsIsPreviewQueryBoolean_2 {
+  eq?: boolean | null; 
+  ne?: boolean | null; 
 }
 
 export interface coursesJsonConnectionInternalInputObject_2 {
@@ -1965,11 +1963,11 @@ export interface sitePluginConnectionPluginOptionsInputObject_2 {
   name?: sitePluginConnectionPluginOptionsNameQueryString_2 | null; 
   path?: sitePluginConnectionPluginOptionsPathQueryString_2 | null; 
   linkImagesToOriginal?: sitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null; 
-  maxWidth?: sitePluginConnectionPluginOptionsMaxWidthQueryInteger_2 | null; 
-  wrapperStyle?: sitePluginConnectionPluginOptionsWrapperStyleQueryString_2 | null; 
-  backgroundColor?: sitePluginConnectionPluginOptionsBackgroundColorQueryString_2 | null; 
-  pathPrefix?: sitePluginConnectionPluginOptionsPathPrefixQueryString_2 | null; 
-  ignoreFileExtensions?: sitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 | null; 
+  maxWidth?: sitePluginConnectionPluginOptionsMaxWidthQueryInteger | null; 
+  wrapperStyle?: sitePluginConnectionPluginOptionsWrapperStyleQueryString | null; 
+  backgroundColor?: sitePluginConnectionPluginOptionsBackgroundColorQueryString | null; 
+  pathPrefix?: sitePluginConnectionPluginOptionsPathPrefixQueryString | null; 
+  ignoreFileExtensions?: sitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList | null; 
 }
 
 export interface sitePluginConnectionPluginOptionsPluginsQueryList_2 {
@@ -2015,11 +2013,11 @@ export interface sitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
 
 export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2 {
   linkImagesToOriginal?: sitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null; 
-  maxWidth?: sitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 | null; 
-  wrapperStyle?: sitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 | null; 
-  backgroundColor?: sitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 | null; 
-  pathPrefix?: sitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 | null; 
-  ignoreFileExtensions?: sitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 | null; 
+  maxWidth?: sitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null; 
+  wrapperStyle?: sitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null; 
+  backgroundColor?: sitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null; 
+  pathPrefix?: sitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null; 
+  ignoreFileExtensions?: sitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null; 
 }
 
 export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
@@ -2027,33 +2025,33 @@ export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImages
   ne?: boolean | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
+export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
   eq?: number | null; 
   ne?: number | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
+export interface sitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -2101,33 +2099,33 @@ export interface sitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoole
   ne?: boolean | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsMaxWidthQueryInteger_2 {
+export interface sitePluginConnectionPluginOptionsMaxWidthQueryInteger {
   eq?: number | null; 
   ne?: number | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsWrapperStyleQueryString_2 {
+export interface sitePluginConnectionPluginOptionsWrapperStyleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsBackgroundColorQueryString_2 {
+export interface sitePluginConnectionPluginOptionsBackgroundColorQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsPathPrefixQueryString_2 {
+export interface sitePluginConnectionPluginOptionsPathPrefixQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 {
+export interface sitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -3694,7 +3692,7 @@ export interface coursesJsonChaptersLessonsInputObject_2 {
   chapterId?: coursesJsonChaptersLessonsChapterIdQueryInteger_2 | null; 
   id?: coursesJsonChaptersLessonsIdQueryString_2 | null; 
   name?: coursesJsonChaptersLessonsNameQueryString_2 | null; 
-  btnText?: coursesJsonChaptersLessonsBtnTextQueryString_2 | null; 
+  isPreview?: coursesJsonChaptersLessonsIsPreviewQueryBoolean_2 | null; 
 }
 
 export interface coursesJsonChaptersLessonsChapterIdQueryInteger_2 {
@@ -3716,11 +3714,9 @@ export interface coursesJsonChaptersLessonsNameQueryString_2 {
   glob?: string | null; 
 }
 
-export interface coursesJsonChaptersLessonsBtnTextQueryString_2 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
+export interface coursesJsonChaptersLessonsIsPreviewQueryBoolean_2 {
+  eq?: boolean | null; 
+  ne?: boolean | null; 
 }
 
 export interface coursesJsonInternalInputObject_2 {
@@ -4576,11 +4572,11 @@ export interface sitePluginPluginOptionsInputObject_2 {
   name?: sitePluginPluginOptionsNameQueryString_2 | null; 
   path?: sitePluginPluginOptionsPathQueryString_2 | null; 
   linkImagesToOriginal?: sitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null; 
-  maxWidth?: sitePluginPluginOptionsMaxWidthQueryInteger_2 | null; 
-  wrapperStyle?: sitePluginPluginOptionsWrapperStyleQueryString_2 | null; 
-  backgroundColor?: sitePluginPluginOptionsBackgroundColorQueryString_2 | null; 
-  pathPrefix?: sitePluginPluginOptionsPathPrefixQueryString_2 | null; 
-  ignoreFileExtensions?: sitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 | null; 
+  maxWidth?: sitePluginPluginOptionsMaxWidthQueryInteger | null; 
+  wrapperStyle?: sitePluginPluginOptionsWrapperStyleQueryString | null; 
+  backgroundColor?: sitePluginPluginOptionsBackgroundColorQueryString | null; 
+  pathPrefix?: sitePluginPluginOptionsPathPrefixQueryString | null; 
+  ignoreFileExtensions?: sitePluginPluginOptionsIgnoreFileExtensionsQueryList | null; 
 }
 
 export interface sitePluginPluginOptionsPluginsQueryList_2 {
@@ -4626,11 +4622,11 @@ export interface sitePluginPluginOptionsPluginsVersionQueryString_2 {
 
 export interface sitePluginPluginOptionsPluginsPluginOptionsInputObject_2 {
   linkImagesToOriginal?: sitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null; 
-  maxWidth?: sitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 | null; 
-  wrapperStyle?: sitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 | null; 
-  backgroundColor?: sitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 | null; 
-  pathPrefix?: sitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 | null; 
-  ignoreFileExtensions?: sitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 | null; 
+  maxWidth?: sitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null; 
+  wrapperStyle?: sitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null; 
+  backgroundColor?: sitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null; 
+  pathPrefix?: sitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null; 
+  ignoreFileExtensions?: sitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null; 
 }
 
 export interface sitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
@@ -4638,33 +4634,33 @@ export interface sitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginal
   ne?: boolean | null; 
 }
 
-export interface sitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
+export interface sitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
   eq?: number | null; 
   ne?: number | null; 
 }
 
-export interface sitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+export interface sitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+export interface sitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+export interface sitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
+export interface sitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4712,33 +4708,33 @@ export interface sitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
   ne?: boolean | null; 
 }
 
-export interface sitePluginPluginOptionsMaxWidthQueryInteger_2 {
+export interface sitePluginPluginOptionsMaxWidthQueryInteger {
   eq?: number | null; 
   ne?: number | null; 
 }
 
-export interface sitePluginPluginOptionsWrapperStyleQueryString_2 {
+export interface sitePluginPluginOptionsWrapperStyleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsBackgroundColorQueryString_2 {
+export interface sitePluginPluginOptionsBackgroundColorQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsPathPrefixQueryString_2 {
+export interface sitePluginPluginOptionsPathPrefixQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
 }
 
-export interface sitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
+export interface sitePluginPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 

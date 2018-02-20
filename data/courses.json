@@ -43,7 +43,7 @@
                         "chapterId": 10,
                         "id": "3649506",
                         "name": "Introduction (2:37)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
@@ -110,7 +110,7 @@
                         "chapterId": 20,
                         "id": "3649521",
                         "name": "Creating a CoreModule (4:24)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
@@ -131,7 +131,7 @@
                         "chapterId": 20,
                         "id": "3649508",
                         "name": "Using HttpInterceptors (6:03)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
@@ -207,7 +207,7 @@
                         "chapterId": 10,
                         "id": "4025688",
                         "name": "Course Introduction (1:19)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -219,19 +219,19 @@
                         "chapterId": 20,
                         "id": "4012627",
                         "name": "Introduction (1:32)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "4012635",
                         "name": "Creating a CoreModule (4:34)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "4013921",
                         "name": "Creating a Currency Service (8:26)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -243,19 +243,19 @@
                         "chapterId": 30,
                         "id": "4016790",
                         "name": "Install and Set up @ngrx (1:18)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "4016788",
                         "name": "Creating Currency Actions (5:16)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "4016789",
                         "name": "Creating a Currency Reducer (6:51)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -267,25 +267,25 @@
                         "chapterId": 40,
                         "id": "4024357",
                         "name": "Using Ngrx Effects (6:50)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "4024360",
                         "name": "Feature Modules and Lazy Loading (8:00)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "4024356",
                         "name": "Creating an ActionReducerMap (2:56)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "4024359",
                         "name": "Adding Feature Effects (0:58)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -297,13 +297,13 @@
                         "chapterId": 50,
                         "id": "4024595",
                         "name": "Creating Selectors (3:38)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4024771",
                         "name": "Displaying Currency Details (4:31)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -315,25 +315,25 @@
                         "chapterId": 60,
                         "id": "4024594",
                         "name": "Presentational Components (3:00)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4025056",
                         "name": "ChangeDetectionStrategy (2:27)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4024358",
                         "name": "Summary (0:33)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4025541",
                         "name": "Source Code",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             }
@@ -384,19 +384,19 @@
                         "chapterId": 10,
                         "id": "2953344",
                         "name": "Overview",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2976294",
                         "name": "Plugin Types",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2976299",
                         "name": "Using the Plugin Seed",
-                        "btnText": "Preview"
+                        "isPreview": true
                     }
                 ]
             },
@@ -408,7 +408,7 @@
                         "chapterId": 20,
                         "id": "2976326",
                         "name": "Installing a CocoaPod",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
@@ -505,13 +505,13 @@
                         "chapterId": 10,
                         "id": "2692194",
                         "name": "Welcome (0:51)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2543888",
                         "name": "About this course (2:56)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     }
                 ]
             },
@@ -523,31 +523,31 @@
                         "chapterId": 20,
                         "id": "2543904",
                         "name": "Overview",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2543905",
                         "name": "Creating apps",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2543906",
                         "name": "Running apps",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2543907",
                         "name": "Debugging apps",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2543908",
                         "name": "Choosing an editor",
-                        "btnText": "Preview"
+                        "isPreview": true
                     }
                 ]
             },
@@ -783,13 +783,13 @@
                         "chapterId": 10,
                         "id": "2564664",
                         "name": "Welcome (1:15)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2564665",
                         "name": "About this course",
-                        "btnText": "Preview"
+                        "isPreview": true
                     }
                 ]
             },
@@ -801,31 +801,31 @@
                         "chapterId": 20,
                         "id": "2564659",
                         "name": "Overview (0:24)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2564660",
                         "name": "Creating apps (1:40)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2564661",
                         "name": "Running apps (5:29)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2564662",
                         "name": "Debugging apps (3:37)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "2564663",
                         "name": "Choosing an editor (2:28)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     }
                 ]
             },
@@ -1056,25 +1056,25 @@
                         "chapterId": 10,
                         "id": "3766444",
                         "name": "Message from the Author (1:22)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2544422",
                         "name": "Course Overview (2:57)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 10,
                         "id": "2544423",
                         "name": "Using the exercise files (0:40)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 10,
                         "id": "2544424",
                         "name": "What We're Building (2:00)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1086,43 +1086,43 @@
                         "chapterId": 20,
                         "id": "3766433",
                         "name": "Overview (1:22)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 20,
                         "id": "3766434",
                         "name": "Native Platform Declarations (5:08)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "3766435",
                         "name": "Project Dependencies (5:24)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "3766436",
                         "name": "High Level App Folder Structure (13:07)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "3766437",
                         "name": "API Server (6:23)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "3766441",
                         "name": "Consuming the API (8:04)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 20,
                         "id": "3766442",
                         "name": "Code Style and Tools (4:07)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1134,67 +1134,67 @@
                         "chapterId": 30,
                         "id": "2544462",
                         "name": "Overview (1:50)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 30,
                         "id": "3843242",
                         "name": "Bootstrapping Options (6:46)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843244",
                         "name": "Application Configuration (8:07)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843245",
                         "name": "Auto-Injection (5:04)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843246",
                         "name": "Application Internationalization (8:07)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843249",
                         "name": "Better Console Visualization (5:48)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 30,
                         "id": "3843252",
                         "name": "Logging (7:44)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843253",
                         "name": "Life Cycle Platform Differences (7:41)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843254",
                         "name": "Native Application Events (7:52)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843255",
                         "name": "Native Application Resources (6:46)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 30,
                         "id": "3843256",
                         "name": "Error Handling (6:19)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1206,55 +1206,55 @@
                         "chapterId": 40,
                         "id": "3939799",
                         "name": "Overview (1:37)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939800",
                         "name": "Methodology (2:55)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939801",
                         "name": "Store and State (9:35)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939802",
                         "name": "Observable Store Pattern (5:10)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939806",
                         "name": "Moving to the Server (5:29)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939807",
                         "name": "Smart Components and Store (8:47)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939808",
                         "name": "Stateless Components and Store (11:16)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939809",
                         "name": "Expanding State Properties (11:49)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 40,
                         "id": "3939811",
                         "name": "Persisting Part of the State (7:15)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1266,91 +1266,91 @@
                         "chapterId": 50,
                         "id": "4101018",
                         "name": "Overview (2:33)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 50,
                         "id": "4101021",
                         "name": "Style and State Changes and the Navigation Plan (3:15)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101062",
                         "name": "Router Outlet (2:06)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101024",
                         "name": "Page Router Outlet (5:18)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101027",
                         "name": "RouterExtensions (3:27)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101029",
                         "name": "Routing via a Service (5:45)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101031",
                         "name": "NavigationOptions (5:25)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101035",
                         "name": "Module Specific Routing (3:08)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101037",
                         "name": "Guarding Routes (4:46)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101038",
                         "name": "Combining Routing Outlets (7:40)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101039",
                         "name": "Navigation Menu (3:00)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101044",
                         "name": "Menu Routing Parameters and State (6:54)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101046",
                         "name": "Lazy Loading and NSModuleFactoryLoader (6:40)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101049",
                         "name": "Creating a Navigation Directive (3:02)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 50,
                         "id": "4101051",
                         "name": "Back or Back to Previous Page? (2:51)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1362,79 +1362,79 @@
                         "chapterId": 60,
                         "id": "4285617",
                         "name": "Overview (1:56)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 60,
                         "id": "4285541",
                         "name": "Using Font Icons (4:33)",
-                        "btnText": "Preview"
+                        "isPreview": true
                     },
                     {
                         "chapterId": 60,
                         "id": "4285543",
                         "name": "Font Icon Plugin (5:26)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285555",
                         "name": "Pull to Refresh Plugin (5:12)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285557",
                         "name": "Pro UI Plugin (2:34)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285558",
                         "name": "Using the Side Drawer (12:18)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285561",
                         "name": "Using the Data Form (8:07)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285565",
                         "name": "Data Form: Saving Updates (6:02)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285567",
                         "name": "Data Form: Property Editor Types (8:38)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285569",
                         "name": "Data Form: Stepper Editor Customization (10:10)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285572",
                         "name": "Data Form: Multi Line Editor Customization (2:12)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285575",
                         "name": "Data Form: Segmented Editor Customization (1:48)",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 60,
                         "id": "4285616",
                         "name": "Data Form: Picker Editor Customization (1:26)",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1446,109 +1446,109 @@
                         "chapterId": 70,
                         "id": "2544435",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544437",
                         "name": "Using the Page",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544440",
                         "name": "View life cycle",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544442",
                         "name": "Dialogs",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544443",
                         "name": "Modals",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544444",
                         "name": "Multiple ListView templates",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544446",
                         "name": "FormattedString",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544447",
                         "name": "ActionBar",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544448",
                         "name": "Local notifications",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544449",
                         "name": "Controlling the keyboard",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544451",
                         "name": "Using icon fonts",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544452",
                         "name": "Lower cased and dashed components",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544453",
                         "name": "Programmatic components",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544455",
                         "name": "Custom components",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544457",
                         "name": "Platform specific declarations",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544458",
                         "name": "Screen size qualifiers",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544459",
                         "name": "Platform qualifiers",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 70,
                         "id": "2544460",
                         "name": "Orientation qualifiers",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1560,79 +1560,79 @@
                         "chapterId": 80,
                         "id": "2573725",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573726",
                         "name": "Placeholder",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573727",
                         "name": "Switch",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573730",
                         "name": "ListPicker",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573732",
                         "name": "DatePicker",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573734",
                         "name": "TimePicker",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573735",
                         "name": "ImagePicker",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573736",
                         "name": "Slider",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573737",
                         "name": "Repeater",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573738",
                         "name": "WebView",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573740",
                         "name": "HtmlView",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573742",
                         "name": "Progress",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 80,
                         "id": "2573743",
                         "name": "SearchBar",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1644,49 +1644,49 @@
                         "chapterId": 90,
                         "id": "2573747",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573748",
                         "name": "Using connectivity",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573750",
                         "name": "Timer",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573751",
                         "name": "Http",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573753",
                         "name": "Fetch polyfill",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573754",
                         "name": "Image cache",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573755",
                         "name": "Adding push notifications",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 90,
                         "id": "2573756",
                         "name": "Firebase integration",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1698,37 +1698,37 @@
                         "chapterId": 100,
                         "id": "2573757",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 100,
                         "id": "2573758",
                         "name": "Listening for events through code",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 100,
                         "id": "2573761",
                         "name": "PropertyChange event",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 100,
                         "id": "2573762",
                         "name": "Custom events",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 100,
                         "id": "2573763",
                         "name": "Avoiding Memory leaks",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 100,
                         "id": "2573764",
                         "name": "Weak events",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1740,19 +1740,19 @@
                         "chapterId": 110,
                         "id": "2573765",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 110,
                         "id": "2573766",
                         "name": "Using Location",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 110,
                         "id": "2573767",
                         "name": "Accessing the camera",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1764,37 +1764,37 @@
                         "chapterId": 120,
                         "id": "2573769",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 120,
                         "id": "2573770",
                         "name": "Setting up tracing",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 120,
                         "id": "2573771",
                         "name": "Using tracing",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 120,
                         "id": "2573772",
                         "name": "Debugging options",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 120,
                         "id": "2573774",
                         "name": "Debugging commands",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 120,
                         "id": "2573775",
                         "name": "Debugging with Visual Studio Code",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1806,25 +1806,25 @@
                         "chapterId": 130,
                         "id": "2573776",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 130,
                         "id": "2573777",
                         "name": "Workers API",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 130,
                         "id": "2573778",
                         "name": "General Guidelines",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 130,
                         "id": "2573779",
                         "name": "Limitations",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1836,31 +1836,31 @@
                         "chapterId": 140,
                         "id": "2573780",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 140,
                         "id": "2573781",
                         "name": "Configuring your project",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 140,
                         "id": "2573782",
                         "name": "Creating tests",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 140,
                         "id": "2573783",
                         "name": "Running tests",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 140,
                         "id": "2573784",
                         "name": "Configuring Karma",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1872,19 +1872,19 @@
                         "chapterId": 150,
                         "id": "2573786",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 150,
                         "id": "2573787",
                         "name": "TypeScript",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 150,
                         "id": "2573788",
                         "name": "Babel",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             },
@@ -1896,73 +1896,73 @@
                         "chapterId": 160,
                         "id": "2573791",
                         "name": "Overview",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573793",
                         "name": "AOT",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573794",
                         "name": "Configuring WebPack",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573795",
                         "name": "Bundling with WebPack",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573796",
                         "name": "Bundling Extra Assets",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573797",
                         "name": "Advanced WebPack",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573798",
                         "name": "iOS Launch screen",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573800",
                         "name": "iOS App Icons",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573801",
                         "name": "iOS publishing",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573802",
                         "name": "Android Launch screen",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573803",
                         "name": "Android App Icons",
-                        "btnText": "Start"
+                        "isPreview": false
                     },
                     {
                         "chapterId": 160,
                         "id": "2573804",
                         "name": "Android publishing",
-                        "btnText": "Start"
+                        "isPreview": false
                     }
                 ]
             }

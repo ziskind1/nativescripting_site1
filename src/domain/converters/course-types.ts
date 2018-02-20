@@ -10,7 +10,7 @@ export function courseFromCoursesJsonEdge(edge: CoursesJsonEdge, authors: Author
 }
 
 export function coursefromCoursesJson(c: CoursesJson, authors: Author[]): Course {
-    return {
+    const course = {
         id: c.id,
         title: c.title,
         subtitle: c.subtitle,
@@ -24,9 +24,23 @@ export function coursefromCoursesJson(c: CoursesJson, authors: Author[]): Course
         flavors: defaultArray(c.flavors).map(asCourseFlavorType),
         products: defaultArray(c.products).map(productFromProduct_3)
     };
+
+    numberCourseLessons(course);
+
+    return course;
 }
 
 function getAuthorsByAuthorIds(authors: Author[], ids: string[]) {
     return authors.filter(a => ids.includes(a.id));
 }
 
+function numberCourseLessons(course: Course): void {
+
+    let lessonCount = 0;
+    for (var i1 = 0; i1 < course.chapters.length; i1++) {
+        for (var j1 = 0; j1 < course.chapters[i1].lessons.length; j1++) {
+            lessonCount++;
+            course.chapters[i1].lessons[j1].lessonNumber = lessonCount;
+        }
+    }
+}

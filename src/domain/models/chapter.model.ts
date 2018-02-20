@@ -1,4 +1,4 @@
-import { Lesson } from './lesson';
+import { Lesson } from './lesson.model';
 
 export interface Chapter {
     id: number;

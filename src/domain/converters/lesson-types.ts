@@ -7,6 +7,6 @@ export function lessonFromLesson_2(l: lessons_2, index: number): Lesson {
         chapterId: l.chapterId,
         name: l.name,
         lessonNumber: index,
-        isPreview: l.btnText === 'Preview'
+        isPreview: l.isPreview
     };
 }

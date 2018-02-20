@@ -1,7 +1,6 @@
 import { defaultArray } from '../core';
 import { BundlesJsonEdge } from '../graphql-types';
 import { productFromProduct_3 } from './product-types';
-import { chapterFromChapter_2 } from './chapter-types';
 import { Course, asCourseLevel, asCourseFlavorType, Bundle } from '../models';
 
 export function bundleFromBundlesJsonEdge(edge: BundlesJsonEdge, allCourses: Course[]): Bundle {

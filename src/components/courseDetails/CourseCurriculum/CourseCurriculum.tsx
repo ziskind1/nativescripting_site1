@@ -15,7 +15,7 @@ export const CourseCurriculum: React.StatelessComponent<CourseCurriculumProps> =
     const chaptersHtml = props.course.chapters.map((chapter, idx) => {
         return (
             <li key={idx}>
-                <CurriculumChapter chapter={chapter} />
+                <CurriculumChapter chapter={chapter} courseSlug={props.course.url} />
             </li>
         );
     });
