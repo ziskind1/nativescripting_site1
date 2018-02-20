@@ -11,18 +11,22 @@
     width: 60%;
 }
 
+.course-meta-details-desc-container {
+    margin-top: 60px;
+}
+
+.course-meta-details-desc-container p {
+    font-family: OpenSansLight;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+
 .course-meta-author-pane {
     width: 30%;
 }
 
-.course-meta-details-pane h1 {
-    font-family: MonoRegular;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 42px;
-    color: #12ffcd;
-    letter-spacing: 2px;
-}
+
 
 .course-meta-actionable {
     display: flex;

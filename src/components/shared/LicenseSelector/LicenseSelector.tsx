@@ -114,7 +114,7 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
                             {this.state.selectedProduct.description}
                         </span>
                     </div>
-                    <div>
+                    <div className="selector-img-wrapper">
                         <img className="selector-img noselect" src="/img/arrow.png" />
                     </div>
                 </div>

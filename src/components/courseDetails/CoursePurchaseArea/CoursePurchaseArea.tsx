@@ -46,7 +46,8 @@ export class CoursePurchaseArea extends React.Component<CoursePurchaseAreaProps,
 
         return (
             <div className="course-purchase-area-container">
-                <div>
+                <h2>Course purchase options</h2>
+                <div className="course-purchase-area-options">
                     <div className="bundle-license">
                         <LicenseSelector products={course.products} onLicenseSelect={(p) => this.licenseSelect(p)} />
                     </div>

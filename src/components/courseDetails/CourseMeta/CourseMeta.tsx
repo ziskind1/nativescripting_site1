@@ -2,11 +2,11 @@ import * as React from 'react';
 import { Course } from '../../../domain/models';
 import LevelIcon from '../../LevelIcon/LevelIcon';
 import { CourseAuthorCard } from '../CourseAuthorCard/CourseAuthorCard';
-
-
-import './CourseMeta.css';
 import { CoursePurchaseArea } from '../CoursePurchaseArea/CoursePurchaseArea';
 import { CourseCoverage } from '../CourseCoverage/CourseCoverage';
+
+import './CourseMeta.css';
+
 
 
 
@@ -23,13 +23,13 @@ export const CourseMeta: React.StatelessComponent<CourseMetaProps> = (props: Cou
         <div className="course-meta-container">
 
             <div className="course-meta-details-pane">
-                <h1>{course.title}</h1>
 
-
-
-                <p>
-                    {course.description}
-                </p>
+                <div className="course-meta-details-desc-container">
+                    <h2>What you'll learn</h2>
+                    <p>
+                        {course.description}
+                    </p>
+                </div>
 
                 <div className="course-meta-actionable">
                     <CoursePurchaseArea course={course} />

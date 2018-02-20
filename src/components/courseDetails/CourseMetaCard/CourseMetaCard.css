@@ -1,0 +1,10 @@
+.course-meta-card-container {
+    padding-right: 50px;
+}
+
+
+@media only screen and (max-width: 760px) {
+    .course-meta-card-container {
+        padding-right: 0px;
+    }
+}

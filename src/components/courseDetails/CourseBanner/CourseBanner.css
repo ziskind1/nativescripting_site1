@@ -1,0 +1,26 @@
+.course-banner-container {
+    background-image: url('/img/logo_2.svg');
+    background-position-x: 80%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    padding-bottom: 100px; /*this is so that that the full background image shows, it has a corresponding offset in the .course-details-wrapper style */
+}
+
+.course-banner-container h1 {
+    font-family: MonoRegular;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #12ffcd;
+    letter-spacing: 2px;
+    width: 60%;
+}
+
+@media only screen and (max-width: 760px) {
+    .course-banner-container h1 {
+        font-size: 36px;
+        line-height: 36px;
+        width: 100%;
+    }
+
+}

@@ -1,3 +1,7 @@
 .course-bundle-area-container {
-    width: 360px;
+    width: 460px;
+}
+
+.course-bundle-area-container h2 {
+    margin-bottom: 60px;
 }

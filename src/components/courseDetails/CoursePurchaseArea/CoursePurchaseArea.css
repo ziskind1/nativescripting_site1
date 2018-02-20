@@ -1,5 +1,7 @@
 .course-purchase-area-container {
-    background-color: #073D95;
-    width: 300px;
+
 }
 
+.course-purchase-area-options {
+    background-color: #073D95;
+}

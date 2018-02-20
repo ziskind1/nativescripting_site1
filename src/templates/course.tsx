@@ -16,8 +16,15 @@ import { CourseMeta } from '../components/courseDetails/CourseMeta/CourseMeta';
 import { CourseDetailsBody } from '../components/courseDetails/CourseDetailsBody/CourseDetailsBody';
 import Quotes from '../components/Quotes/Quotes';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
+import { CourseBanner } from '../components/courseDetails/CourseBanner/CourseBanner';
 
 import '../css/course-details.css';
+import { CourseMetaCard } from '../components/courseDetails/CourseMetaCard/CourseMetaCard';
+import { CourseBundleArea } from '../components/courseDetails/CourseBundleArea/CourseBundleArea';
+import { CoursePurchaseArea } from '../components/courseDetails/CoursePurchaseArea/CoursePurchaseArea';
+import BundleSection from '../components/home/BundleSection/BundleSection';
+import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/CourseCurriculum';
+
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -57,6 +64,7 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
 
   public render() {
 
+    const course = this.state.course;
     const title = this.props.data.courseConnection.title;
     const breadCrumbs = [{ name: 'All courses', url: '/' }, { name: 'Course details', url: '' }];
 
@@ -67,14 +75,32 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
           <BreadCrumbs breadcrumbs={breadCrumbs} />
         </div>
 
-        <CourseMeta course={this.state.course} />
+        <CourseBanner course={course} />
 
-        <CourseDetailsBody
-          course={this.state.course}
-          bundles={this.state.bundles}
-        />
+
+        <div className="course-details-wrapper">
+          <div className="course-details-pane">
+            <CourseMetaCard course={course} />
+          </div>
+
+          <div className="course-details-pane">
+            <CoursePurchaseArea course={course} />
+          </div>
+        </div>
+
+        <div className="course-description-wrapper">
+          <h2>What you'll learn</h2>
+          <p>
+            {course.description}
+          </p>
+        </div>
+
+
+        <CourseCurriculum course={course} />
 
         <Quotes />
+
+        <BundleSection bundles={this.state.bundles} />
 
         <SignUpSection />
 
