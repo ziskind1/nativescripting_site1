@@ -25,24 +25,6 @@ export default class LicenseSelector extends React.Component<LicenseSelectorProp
         };
     }
 
-    /*
-    private getLicenseOptionsHtml_(
-        products: Product[],
-        selectedProduct: Product,
-        selectLicense: (product: Product) => Promise<void>
-    ): JSX.Element[] {
-        return products.map((p, idx) => {
-
-            const prodClassName = p.id === selectedProduct.id ? 'license selected' : 'license';
-
-            return (
-                <div key={idx} className={prodClassName} onClick={() => selectLicense(p)}>
-                    <span>{p.description}</span>
-                </div>
-            );
-        });
-    }
-    */
 
     private getLicenseOptionsHtml(
         products: Product[],

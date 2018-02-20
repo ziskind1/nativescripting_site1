@@ -14,6 +14,35 @@ interface CoursePurchaseAreaState {
     actionUrl: string;
 }
 
+function getPriceBlockHtml(selectedProduct: Product) {
+
+    const savingsPercent = Math.round((1 - selectedProduct.pricesale / selectedProduct.pricereg) * 100);
+
+    let savingsBlockHtml = null;
+    if (savingsPercent > 0) {
+        savingsBlockHtml = <div>
+            <span className="package__price-full">${selectedProduct.pricereg}</span>
+            <span className="package__price-save">
+                Save {savingsPercent}%
+        </span>
+        </div>;
+    }
+    let salePriceHtml = selectedProduct.pricesale === 0 ?
+        <p>
+            FREE
+        </p>
+        :
+        <p>
+            <span>$</span>{selectedProduct.pricesale}
+        </p>;
+
+    return (
+        <div className="bundle-price">
+            {salePriceHtml}
+            {savingsBlockHtml}
+        </div>
+    );
+}
 
 function getCourseActionUrl(course: Course, product: Product) {
     return 'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
@@ -42,7 +71,7 @@ export class CoursePurchaseArea extends React.Component<CoursePurchaseAreaProps,
 
         const course = this.props.course;
 
-        const savingsPercent = Math.round((1 - this.state.selectedProduct.pricesale / this.state.selectedProduct.pricereg) * 100);
+        const priceBlockHtml = getPriceBlockHtml(this.state.selectedProduct);
 
         return (
             <div className="course-purchase-area-container">
@@ -51,15 +80,7 @@ export class CoursePurchaseArea extends React.Component<CoursePurchaseAreaProps,
                     <div className="bundle-license">
                         <LicenseSelector products={course.products} onLicenseSelect={(p) => this.licenseSelect(p)} />
                     </div>
-                    <div className="bundle-price">
-                        <p>
-                            <span>$</span>{this.state.selectedProduct.pricesale}
-                        </p>
-                        <span className="package__price-full">${this.state.selectedProduct.pricereg}</span>
-                        <span className="package__price-save">
-                            Save {savingsPercent}%
-                        </span>
-                    </div>
+                    {priceBlockHtml}
                 </div>
 
                 <ActionButton
