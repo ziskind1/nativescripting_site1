@@ -20,10 +20,10 @@ import { CourseFilterType } from "../components/home/CourseFilter/CourseFilter";
 import SubHeroSection from "../components/home/SubHeroSection/SubHeroSection";
 import Benefits from "../components/home/Benefits/Benefits";
 import Logos from "../components/home/Logos/Logos";
-import { scrollToElementById } from "../utils/scrolling";
 import Quotes from "../components/Quotes/Quotes";
 import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
 import AddThisBlock from "../components/shared/AddThisBlock/AddThisBlock";
+import { scrollToElementById } from "../utils/scrolling";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema

@@ -31,7 +31,6 @@
     "gatsby-transformer-sharp": "1.6.18",
     "glamorous": "^4.11.4",
     "normalize.css": "^8.0.0",
-    "scroll-to-element": "^2.0.0",
     "typography-theme-kirkham": "^0.16.3"
   },
   "devDependencies": {
