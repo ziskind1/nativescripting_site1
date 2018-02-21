@@ -21,7 +21,7 @@ export const CourseMetaCard: React.StatelessComponent<CourseMetaCardProps> = (pr
 
     return (
         <div className="course-meta-card-container">
-            <h2>About the course</h2>
+            <h2>About this course</h2>
 
             <CourseAuthorCard author={course.authors[0]} />
             <CourseCoverage course={course} />

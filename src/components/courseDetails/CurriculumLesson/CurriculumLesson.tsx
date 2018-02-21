@@ -5,6 +5,7 @@ import './CurriculumLesson.css';
 
 interface CurriculumLessonProps {
     lesson: Lesson;
+    isPublishedChapter: boolean;
     courseSlug: string;
 }
 
@@ -19,6 +20,15 @@ export const CurriculumLesson: React.StatelessComponent<CurriculumLessonProps> =
 
     const lessonActionUrl = getLessonActionUrl(props.courseSlug, props.lesson.id);
 
+    const lessonActionHtml = props.isPublishedChapter ?
+        <div className="lesson-action-wrapper">
+            <a className={actionLinkClassName} href={lessonActionUrl}>{actionText}</a>
+        </div>
+        :
+        <div className="lesson-action-wrapper">
+            <span>Planned lesson</span>
+        </div>;
+
     return (
         <div className="lesson-container">
             <div className="lesson-number-wrapper">
@@ -27,9 +37,7 @@ export const CurriculumLesson: React.StatelessComponent<CurriculumLessonProps> =
             <div className="lesson-name-wrapper">
                 <span>{props.lesson.name}</span>
             </div>
-            <div className="lesson-action-wrapper">
-                <a className={actionLinkClassName} href={lessonActionUrl}>{actionText}</a>
-            </div>
+            {lessonActionHtml}
         </div>
     );
 };

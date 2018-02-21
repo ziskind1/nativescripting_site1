@@ -59,7 +59,10 @@
     order: 6;
     margin-left: auto;
 }
-
+.lesson-action-wrapper span {
+    color: #afafaf;
+    margin-right: 20px;
+}
 
 .lesson-action-wrapper a {
     transition: .5s;

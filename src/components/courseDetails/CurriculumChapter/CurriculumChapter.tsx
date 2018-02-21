@@ -6,6 +6,7 @@ import './CurriculumChapter.css';
 
 interface CurriculumChapterProps {
     chapter: Chapter;
+    isPublishedChapter: boolean;
     courseSlug: string;
 }
 
@@ -15,7 +16,11 @@ export const CurriculumChapter: React.StatelessComponent<CurriculumChapterProps>
     const lessonsHtml = props.chapter.lessons.map((lesson, idx) => {
         return (
             <li key={idx}>
-                <CurriculumLesson lesson={lesson} courseSlug={props.courseSlug} />
+                <CurriculumLesson
+                    lesson={lesson}
+                    courseSlug={props.courseSlug}
+                    isPublishedChapter={props.isPublishedChapter}
+                />
             </li>
         );
     });

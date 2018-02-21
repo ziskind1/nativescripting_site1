@@ -10,6 +10,7 @@ export interface Course {
     title: string;
     subtitle: string;
     description: string;
+    notes: string[];
     url: string;
     flavors: CourseFlavorType[];
     level: CourseLevel;
@@ -17,5 +18,6 @@ export interface Course {
     launchdate: Date;
     authors: Author[];
     products: Product[];
+    publishedChapters: number[];
     chapters: Chapter[];
 }

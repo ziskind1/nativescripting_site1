@@ -10,16 +10,18 @@ export function courseFromCoursesJsonEdge(edge: CoursesJsonEdge, authors: Author
 }
 
 export function coursefromCoursesJson(c: CoursesJson, authors: Author[]): Course {
-    const course = {
+    const course: Course = {
         id: c.id,
         title: c.title,
         subtitle: c.subtitle,
         description: c.description,
+        notes: c.notes,
         level: asCourseLevel(c.level),
         url: c.url,
         label: c.label,
         launchdate: new Date(c.launchdate),
         authors: getAuthorsByAuthorIds(authors, c.authors),
+        publishedChapters: c.publishedChapters,
         chapters: defaultArray(c.chapters).map((c, idx) => chapterFromChapter_2(c, idx)),
         flavors: defaultArray(c.flavors).map(asCourseFlavorType),
         products: defaultArray(c.products).map(productFromProduct_3)

@@ -31,10 +31,31 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
         'free course' : 'learn more';
     const actionBtnType = props.course.label === 'PRESALE' ? 'secondary' : 'primary';
 
-    const courseLabelClassName = props.course.label === 'NEW' ? 'course-tag course-tag-new' : 'course-tag';
+    let courseLabelClassName = 'course-tag';
+    switch (props.course.label) {
+        case 'NEW':
+            courseLabelClassName = 'course-tag course-tag-new';
+            break;
+        case 'PRESALE':
+            courseLabelClassName = 'course-tag';
+            break;
+        case 'SALE':
+            courseLabelClassName = 'course-tag';
+            break;
+        case 'POPULAR':
+            courseLabelClassName = 'course-tag course-tag-new';
+            break;
+        case 'UPDATED':
+            courseLabelClassName = 'course-tag course-tag-new';
+            break;
+        default:
+            courseLabelClassName = 'course-tag';
+    }
 
     const courseIconHtml = getCourseIconHtml(props.course);
 
+    const courseLabelHtml = props.course.label === '' ? null :
+        <span className={courseLabelClassName}>{course.label}</span>;
 
     return (
         <div className="course-container">
@@ -46,7 +67,7 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
                         {courseIconHtml}
                     </div>
                     <div className="course-labels">
-                        <span className={courseLabelClassName}>{course.label}</span>
+                        {courseLabelHtml}
                     </div>
                 </div>
 

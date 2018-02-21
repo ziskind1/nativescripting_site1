@@ -56,6 +56,7 @@ export interface CoursesJson extends Node {
   title?: string | null; 
   subtitle?: string | null; 
   description?: string | null; 
+  notes?: string[] | null; 
   url?: string | null; 
   flavors?: string[] | null; 
   level?: number | null; 
@@ -63,6 +64,7 @@ export interface CoursesJson extends Node {
   launchdate?: string | null; 
   authors?: string[] | null; 
   products?: products_3[] | null; 
+  publishedChapters?: number[] | null; 
   chapters?: chapters_2[] | null; 
   internal?: internal_11 | null; 
 }
@@ -540,8 +542,8 @@ export interface File extends Node {
   parent?: Node | null; /* The parent of this node. */
   children?: Node[] | null; /* The children of this node. */
   childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
-  childMarkdownRemark?: MarkdownRemark | null; /* The child of this node of type markdownRemark */
   childrenBundlesJson?: BundlesJson[] | null; /* The children of this node of type bundlesJson */
+  childMarkdownRemark?: MarkdownRemark | null; /* The child of this node of type markdownRemark */
   childrenCoursesJson?: CoursesJson[] | null; /* The children of this node of type coursesJson */
   childImageSharp?: ImageSharp | null; /* The child of this node of type imageSharp */
   internal?: internal_16 | null; 
@@ -861,6 +863,7 @@ export interface filterCoursesJson {
   title?: coursesJsonConnectionTitleQueryString_2 | null; 
   subtitle?: coursesJsonConnectionSubtitleQueryString_2 | null; 
   description?: coursesJsonConnectionDescriptionQueryString_2 | null; 
+  notes?: coursesJsonConnectionNotesQueryList_2 | null; 
   url?: coursesJsonConnectionUrlQueryString_2 | null; 
   flavors?: coursesJsonConnectionFlavorsQueryList_2 | null; 
   level?: coursesJsonConnectionLevelQueryInteger_2 | null; 
@@ -868,6 +871,7 @@ export interface filterCoursesJson {
   launchdate?: coursesJsonConnectionLaunchdateQueryString_2 | null; 
   authors?: coursesJsonConnectionAuthorsQueryList_2 | null; 
   products?: coursesJsonConnectionProductsQueryList_2 | null; 
+  publishedChapters?: coursesJsonConnectionPublishedChaptersQueryList_2 | null; 
   chapters?: coursesJsonConnectionChaptersQueryList_2 | null; 
   internal?: coursesJsonConnectionInternalInputObject_2 | null; 
 }
@@ -898,6 +902,14 @@ export interface coursesJsonConnectionDescriptionQueryString_2 {
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
+}
+
+export interface coursesJsonConnectionNotesQueryList_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+  in?: string[] | null; 
 }
 
 export interface coursesJsonConnectionUrlQueryString_2 {
@@ -995,6 +1007,12 @@ export interface coursesJsonConnectionProductsLicensesMinQueryInteger_2 {
 export interface coursesJsonConnectionProductsLicensesMaxQueryInteger_2 {
   eq?: number | null; 
   ne?: number | null; 
+}
+
+export interface coursesJsonConnectionPublishedChaptersQueryList_2 {
+  eq?: number | null; 
+  ne?: number | null; 
+  in?: number[] | null; 
 }
 
 export interface coursesJsonConnectionChaptersQueryList_2 {
@@ -3565,6 +3583,14 @@ export interface coursesJsonDescriptionQueryString_2 {
   glob?: string | null; 
 }
 
+export interface coursesJsonNotesQueryList_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+  in?: string[] | null; 
+}
+
 export interface coursesJsonUrlQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
@@ -3660,6 +3686,12 @@ export interface coursesJsonProductsLicensesMinQueryInteger_2 {
 export interface coursesJsonProductsLicensesMaxQueryInteger_2 {
   eq?: number | null; 
   ne?: number | null; 
+}
+
+export interface coursesJsonPublishedChaptersQueryList_2 {
+  eq?: number | null; 
+  ne?: number | null; 
+  in?: number[] | null; 
 }
 
 export interface coursesJsonChaptersQueryList_2 {
@@ -6141,6 +6173,7 @@ export interface CoursesJsonRootQueryTypeArgs {
   title?: coursesJsonTitleQueryString_2 | null; 
   subtitle?: coursesJsonSubtitleQueryString_2 | null; 
   description?: coursesJsonDescriptionQueryString_2 | null; 
+  notes?: coursesJsonNotesQueryList_2 | null; 
   url?: coursesJsonUrlQueryString_2 | null; 
   flavors?: coursesJsonFlavorsQueryList_2 | null; 
   level?: coursesJsonLevelQueryInteger_2 | null; 
@@ -6148,6 +6181,7 @@ export interface CoursesJsonRootQueryTypeArgs {
   launchdate?: coursesJsonLaunchdateQueryString_2 | null; 
   authors?: coursesJsonAuthorsQueryList_2 | null; 
   products?: coursesJsonProductsQueryList_2 | null; 
+  publishedChapters?: coursesJsonPublishedChaptersQueryList_2 | null; 
   chapters?: coursesJsonChaptersQueryList_2 | null; 
   internal?: coursesJsonInternalInputObject_2 | null; 
 }
@@ -6601,16 +6635,16 @@ export interface BuildTimeSiteArgs {
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
 
-export type CoursesJsonConnectionSortByFieldsEnum = "id" | "title" | "subtitle" | "description" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "chapters" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type CoursesJsonConnectionSortByFieldsEnum = "id" | "title" | "subtitle" | "description" | "notes" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "publishedChapters" | "chapters" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
 export type coursesJsonConnectionSortOrderValues = "ASC" | "DESC";
 
 
-export type coursesJsonDistinctEnum = "id" | "title" | "subtitle" | "description" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "chapters" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type coursesJsonDistinctEnum = "id" | "title" | "subtitle" | "description" | "notes" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "publishedChapters" | "chapters" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type coursesJsonGroupEnum = "id" | "title" | "subtitle" | "description" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "chapters" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type coursesJsonGroupEnum = "id" | "title" | "subtitle" | "description" | "notes" | "url" | "flavors" | "level" | "label" | "launchdate" | "authors" | "products" | "publishedChapters" | "chapters" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
 export type BundlesJsonConnectionSortByFieldsEnum = "id" | "title" | "subtitle" | "description" | "url" | "promototal" | "promoremaining" | "bundleLevel" | "products" | "courseIds" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";

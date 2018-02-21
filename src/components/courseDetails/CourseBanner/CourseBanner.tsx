@@ -18,7 +18,7 @@ export const CourseBanner: React.StatelessComponent<CourseBannerProps> = (props:
     return (
         <div className="course-banner-container">
             <h1>{course.title}</h1>
-
+            <h2 className="course-banner-subtitle">{course.subtitle}</h2>
 
         </div>
     );

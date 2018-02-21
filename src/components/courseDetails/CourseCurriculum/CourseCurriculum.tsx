@@ -12,10 +12,17 @@ interface CourseCurriculumProps {
 
 export const CourseCurriculum: React.StatelessComponent<CourseCurriculumProps> = (props: CourseCurriculumProps) => {
 
+
     const chaptersHtml = props.course.chapters.map((chapter, idx) => {
+        const isPublishedChapter = props.course.publishedChapters.includes(0) || props.course.publishedChapters.includes(chapter.id);
+
         return (
             <li key={idx}>
-                <CurriculumChapter chapter={chapter} courseSlug={props.course.url} />
+                <CurriculumChapter
+                    chapter={chapter}
+                    isPublishedChapter={isPublishedChapter}
+                    courseSlug={props.course.url}
+                />
             </li>
         );
     });

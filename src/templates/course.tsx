@@ -62,12 +62,35 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
     };
   }
 
+  private getNotesHtml(notes: string[]): JSX.Element {
+    if (!notes || (notes && notes.length === 0)) {
+      return null;
+    }
+    const notesHtml = notes.map((note, idx) => {
+      return (
+        <li key={idx}>
+          <span>{note}</span>
+        </li>
+      );
+    });
+    return (
+      <ul>
+        {notesHtml}
+      </ul>
+    );
+  }
 
   public render() {
 
     const course = this.state.course;
     const title = this.props.data.courseConnection.title;
     const breadCrumbs = [{ name: 'All courses', url: '/' }, { name: 'Course details', url: '' }];
+
+    let notesHeader = null;
+    const notesHtml = this.getNotesHtml(course.notes);
+    if (notesHtml !== null) {
+      notesHeader = <h2>Notes</h2>;
+    }
 
     return (
       <div className="wrapper">
@@ -95,6 +118,8 @@ class CourseTemplate extends React.Component<CourseTemplateProps, CourseTemplate
             <p>
               {course.description}
             </p>
+            {notesHeader}
+            {notesHtml}
           </div>
 
 
@@ -191,12 +216,14 @@ query CoursePageQuery($courseUrl: String) {
       title
         subtitle
         description
+        notes
         url
         flavors
         level
         label
         launchdate
         authors
+        publishedChapters
         products {
           id
             name
@@ -206,6 +233,7 @@ query CoursePageQuery($courseUrl: String) {
         pricereg
         pricesale
       }
+      
         chapters {
           id
           name

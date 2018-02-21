@@ -16,11 +16,26 @@
     width: 60%;
 }
 
+.course-banner-container h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #11f5ff;
+    letter-spacing: 2px;
+    width: 60%;
+}
+
+
+
+
 @media only screen and (max-width: 760px) {
     .course-banner-container h1 {
         font-size: 36px;
         line-height: 42px;
         width: 100%;
     }
-
+    .course-banner-container h2 {
+        font-size: 20px;
+        width: 100%;
+    }
 }
