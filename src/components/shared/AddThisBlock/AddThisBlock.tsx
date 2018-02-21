@@ -1,9 +1,11 @@
 import * as React from "react";
 
 
+import './AddThisBlock.css';
+
 function AddThisBlock() {
     return (
-        <div className="">
+        <div className="add-this-block-container">
 
             <div>
                 <div className="addthis_inline_share_toolbox"></div>
