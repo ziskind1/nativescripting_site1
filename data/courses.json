@@ -1078,7 +1078,8 @@
             30,
             40,
             50,
-            60
+            60,
+            70
         ],
         "chapters": [
             {
@@ -1473,112 +1474,166 @@
             },
             {
                 "id": 70,
-                "name": "Deeper UI",
+                "name": "Modal Patterns and Other Dialogs",
                 "lessons": [
                     {
                         "chapterId": 70,
+                        "id": "4522722",
+                        "name": "Overview (2:21)",
+                        "isPreview": true
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522723",
+                        "name": "Modal Dialog Checklist",
+                        "isPreview": true
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522726",
+                        "name": "Modal Dialog Example",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522736",
+                        "name": "Scalable and Reusable Modals Setup",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522742",
+                        "name": "Feature Specific Modal",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522745",
+                        "name": "Generic Modal Dialogs: Text Input Modal",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522746",
+                        "name": "Generic Modal Dialogs: List Picker Modals",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522749",
+                        "name": "Dialogs Module",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522751",
+                        "name": "Overriding Basic Dialog Options",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522753",
+                        "name": "Action Sheets",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 70,
+                        "id": "4522759",
+                        "name": "Custom Dialogs",
+                        "isPreview": false
+                    }
+                ]
+            },
+            {
+                "id": 80,
+                "name": "Deeper UI",
+                "lessons": [
+                    {
+                        "chapterId": 80,
                         "id": "2544435",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544437",
                         "name": "Using the Page",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544440",
                         "name": "View life cycle",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
-                        "id": "2544442",
-                        "name": "Dialogs",
-                        "isPreview": false
-                    },
-                    {
-                        "chapterId": 70,
-                        "id": "2544443",
-                        "name": "Modals",
-                        "isPreview": false
-                    },
-                    {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544444",
                         "name": "Multiple ListView templates",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544446",
                         "name": "FormattedString",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544447",
                         "name": "ActionBar",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544448",
                         "name": "Local notifications",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544449",
                         "name": "Controlling the keyboard",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
-                        "id": "2544451",
-                        "name": "Using icon fonts",
-                        "isPreview": false
-                    },
-                    {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544452",
                         "name": "Lower cased and dashed components",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544453",
                         "name": "Programmatic components",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544455",
                         "name": "Custom components",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544457",
                         "name": "Platform specific declarations",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544458",
                         "name": "Screen size qualifiers",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544459",
                         "name": "Platform qualifiers",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 70,
+                        "chapterId": 80,
                         "id": "2544460",
                         "name": "Orientation qualifiers",
                         "isPreview": false
@@ -1586,83 +1641,83 @@
                 ]
             },
             {
-                "id": 80,
+                "id": 90,
                 "name": "More UI Widgets",
                 "lessons": [
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573725",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573726",
                         "name": "Placeholder",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573727",
                         "name": "Switch",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573730",
                         "name": "ListPicker",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573732",
                         "name": "DatePicker",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573734",
                         "name": "TimePicker",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573735",
                         "name": "ImagePicker",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573736",
                         "name": "Slider",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573737",
                         "name": "Repeater",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573738",
                         "name": "WebView",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573740",
                         "name": "HtmlView",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573742",
                         "name": "Progress",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 80,
+                        "chapterId": 90,
                         "id": "2573743",
                         "name": "SearchBar",
                         "isPreview": false
@@ -1670,53 +1725,53 @@
                 ]
             },
             {
-                "id": 90,
+                "id": 100,
                 "name": "More modules",
                 "lessons": [
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573747",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573748",
                         "name": "Using connectivity",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573750",
                         "name": "Timer",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573751",
                         "name": "Http",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573753",
                         "name": "Fetch polyfill",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573754",
                         "name": "Image cache",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573755",
                         "name": "Adding push notifications",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 90,
+                        "chapterId": 100,
                         "id": "2573756",
                         "name": "Firebase integration",
                         "isPreview": false
@@ -1724,41 +1779,41 @@
                 ]
             },
             {
-                "id": 100,
+                "id": 110,
                 "name": "Events",
                 "lessons": [
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573757",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573758",
                         "name": "Listening for events through code",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573761",
                         "name": "PropertyChange event",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573762",
                         "name": "Custom events",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573763",
                         "name": "Avoiding Memory leaks",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 100,
+                        "chapterId": 110,
                         "id": "2573764",
                         "name": "Weak events",
                         "isPreview": false
@@ -1766,23 +1821,23 @@
                 ]
             },
             {
-                "id": 110,
+                "id": 120,
                 "name": "Hardware Access",
                 "lessons": [
                     {
-                        "chapterId": 110,
+                        "chapterId": 120,
                         "id": "2573765",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 110,
+                        "chapterId": 120,
                         "id": "2573766",
                         "name": "Using Location",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 110,
+                        "chapterId": 120,
                         "id": "2573767",
                         "name": "Accessing the camera",
                         "isPreview": false
@@ -1790,41 +1845,41 @@
                 ]
             },
             {
-                "id": 120,
+                "id": 130,
                 "name": "Tracing and Debugging",
                 "lessons": [
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573769",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573770",
                         "name": "Setting up tracing",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573771",
                         "name": "Using tracing",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573772",
                         "name": "Debugging options",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573774",
                         "name": "Debugging commands",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 120,
+                        "chapterId": 130,
                         "id": "2573775",
                         "name": "Debugging with Visual Studio Code",
                         "isPreview": false
@@ -1832,29 +1887,29 @@
                 ]
             },
             {
-                "id": 130,
+                "id": 140,
                 "name": "Multithreaded Programming",
                 "lessons": [
                     {
-                        "chapterId": 130,
+                        "chapterId": 140,
                         "id": "2573776",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 130,
+                        "chapterId": 140,
                         "id": "2573777",
                         "name": "Workers API",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 130,
+                        "chapterId": 140,
                         "id": "2573778",
                         "name": "General Guidelines",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 130,
+                        "chapterId": 140,
                         "id": "2573779",
                         "name": "Limitations",
                         "isPreview": false
@@ -1862,35 +1917,35 @@
                 ]
             },
             {
-                "id": 140,
+                "id": 150,
                 "name": "Testing",
                 "lessons": [
                     {
-                        "chapterId": 140,
+                        "chapterId": 150,
                         "id": "2573780",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 140,
+                        "chapterId": 150,
                         "id": "2573781",
                         "name": "Configuring your project",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 140,
+                        "chapterId": 150,
                         "id": "2573782",
                         "name": "Creating tests",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 140,
+                        "chapterId": 150,
                         "id": "2573783",
                         "name": "Running tests",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 140,
+                        "chapterId": 150,
                         "id": "2573784",
                         "name": "Configuring Karma",
                         "isPreview": false
@@ -1898,23 +1953,23 @@
                 ]
             },
             {
-                "id": 150,
+                "id": 160,
                 "name": "Transpilers",
                 "lessons": [
                     {
-                        "chapterId": 150,
+                        "chapterId": 160,
                         "id": "2573786",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 150,
+                        "chapterId": 160,
                         "id": "2573787",
                         "name": "TypeScript",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 150,
+                        "chapterId": 160,
                         "id": "2573788",
                         "name": "Babel",
                         "isPreview": false
@@ -1922,77 +1977,77 @@
                 ]
             },
             {
-                "id": 160,
+                "id": 170,
                 "name": "Preparing for deployment",
                 "lessons": [
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573791",
                         "name": "Overview",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573793",
                         "name": "AOT",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573794",
                         "name": "Configuring WebPack",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573795",
                         "name": "Bundling with WebPack",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573796",
                         "name": "Bundling Extra Assets",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573797",
                         "name": "Advanced WebPack",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573798",
                         "name": "iOS Launch screen",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573800",
                         "name": "iOS App Icons",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573801",
                         "name": "iOS publishing",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573802",
                         "name": "Android Launch screen",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573803",
                         "name": "Android App Icons",
                         "isPreview": false
                     },
                     {
-                        "chapterId": 160,
+                        "chapterId": 170,
                         "id": "2573804",
                         "name": "Android publishing",
                         "isPreview": false
