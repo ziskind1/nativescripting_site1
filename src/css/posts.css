@@ -1,3 +1,12 @@
+.posts-container {
+    background-image: url(/img/logo_2.svg);
+    background-position-x: 80%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-attachment: initial;
+    padding-bottom: 100px;
+}
+
 .posts-list {
     display: flex;
     flex-wrap: wrap;

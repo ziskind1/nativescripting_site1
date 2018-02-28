@@ -19,8 +19,7 @@ export const PostsSection: React.StatelessComponent<PostsSectionProps> = (props:
 
     return (
         <div>
-            <h1>Posts Section</h1>
-
+            <h1>NativeScripting Posts</h1>
             <ul className="posts-list">
                 {postsHtml}
             </ul>

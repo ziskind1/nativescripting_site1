@@ -27,10 +27,10 @@ A popular approach in JavaScript APIs these days is to pass a string that matche
 And why shouldn’t we use them? After all, JavaScript allows us to access object properties in either of these ways:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```javascript
 obj.property
 obj['property']
-</pre>
+```
 
 <br/><br/>
 
@@ -58,7 +58,7 @@ Open up the project folder in a code editor and open the `main-view-model.ts` fi
 At this point our class should look like this:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
 export class HelloWorldModel extends Observable {
     private _counter: number;
     constructor() {
@@ -79,14 +79,14 @@ export class HelloWorldModel extends Observable {
         }
     }
 }
-</pre>
+```
 
 <br/><br/>
 
 The problem here is that when we update the `message` property, we don’t get notifications and our UI won’t update. To get the free UI updates, we have to use Observable’s `set()` function to set the message property, which internally triggers notification. So change our `updateMessage()` method to this:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
     private updateMessage() {
         if (this._counter <= 0) {
             this.set('message', 'Hoorraaay! You unlocked the NativeScript clicker achievement!');
@@ -94,7 +94,7 @@ The problem here is that when we update the `message` property, we don’t get n
             this.set('message', `${this._counter} taps left`);
         }
     }
-</pre>
+```
 
 <br/><br/>
 
@@ -114,9 +114,9 @@ We can use the amazing `keyof` operator to do this.
 Just above our `HelloWorldModel` class definition, define a new type and use the `keyof` operator:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
 type MessageType = keyof HelloWorldModel;
-</pre>
+```
 
 <br/><br/>
 
@@ -126,16 +126,16 @@ If our editor provides TypeScript intellisense as Visual Studio Code does, when 
 This is perfect because now we can create a constant that will be just one of the properties, specifically the message property:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
 const messageType: MessageType = 'message';
-</pre>
+```
 
 <br/><br/>
 
 This constant looks like a string, but it’s not a string. It’s of type `MessageType`. If we try misspelling `message`, we’ll immediately see complication errors. Since we now have a strongly typed constant, we can just use it in the `set()` method call of our `updateMessage()` method:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
     private updateMessage() {
         if (this._counter <= 0) {
             this.set(messageType, 'Hoorraaay! You unlocked the NativeScript clicker achievement!');
@@ -143,7 +143,7 @@ This constant looks like a string, but it’s not a string. It’s of type `Mess
             this.set(messageType, `${this._counter} taps left`);
         }
     }
-</pre>
+```
 
 <br/><br/>
 
@@ -157,7 +157,7 @@ If we want a more generic approach and don’t want to add a constant for every 
 Create a new file called `observable-extensions.ts` and add the following code to the file:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
 import { Observable } from 'data/observable';
 export function getObservableProperty<T extends Observable, K extends keyof T>(obj: T, key: K) {
     return obj.get(key);
@@ -165,7 +165,7 @@ export function getObservableProperty<T extends Observable, K extends keyof T>(o
 export function setObservableProperty<T extends Observable, K extends keyof T>(obj: T, key: K, value: T[K]) {
     obj.set(key, value);
 }
-</pre>
+```
 
 <br/><br/>
 
@@ -175,15 +175,15 @@ We’re exporting two functions here that act on `Observable`s. Take a look at t
 We can now import the `setObservableProperty()` function in the `main-vew-model.ts` file:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
 import { setObservableProperty } from './observable-extensions';
-</pre>
+```
 
 <br/><br/>
 And modify the `updateMessage()` method once again to use the new function:
 <br/><br/>
 
-<pre class="brush: javascript; highlight: []">
+```typescript
     private updateMessage() {
         if (this._counter <= 0) {
             setObservableProperty(this, 'message', 'Hoorraaay! You unlocked the NativeScript clicker achievement!');
@@ -191,7 +191,7 @@ And modify the `updateMessage()` method once again to use the new function:
             setObservableProperty(this, 'message', `${this._counter} taps left`);
         }
     }
-</pre>
+```
 
 <br/><br/>
 

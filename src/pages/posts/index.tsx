@@ -6,12 +6,14 @@ import {
     AuthorsJsonConnection
 } from "../../domain/graphql-types";
 import { PostsSection } from "../../components/posts/PostsSection/PostsSection";
-
-
-import '../../css/posts.css';
 import { authorFromAuthorsJsonEdge } from "../../domain/converters";
 import { Author } from "../../domain/models";
 import { postFromMarkdownRemark } from "../../domain/converters/post-types";
+import { BreadCrumbs } from "../../components/shared/BreadCrumbs/BreadCrumbs";
+
+import '../../css/posts.css';
+import SignUpSection from "../../components/shared/SignUpSection/SignUpSection";
+import AddThisBlock from "../../components/shared/AddThisBlock/AddThisBlock";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -44,15 +46,22 @@ export default class extends React.Component<PostsIndexPageProps, {}> {
 
         const posts = mdConn.edges.map(e => postFromMarkdownRemark(e.node, this.authors));
 
-
+        const breadCrumbs = [{ name: 'All courses', url: '/' }, { name: 'Posts', url: '' }];
 
         return (
             <div className="wrapper">
-                <PostsSection posts={posts} />
-                <h1>
-                    Posts
-                </h1>
-                <h4>{this.props.data.markdownConnection.totalCount} Posts</h4>
+                <div className="posts-container">
+                    <div className="breadcrumb-wrapper">
+                        <BreadCrumbs breadcrumbs={breadCrumbs} />
+                    </div>
+
+                    <PostsSection posts={posts} />
+
+                </div>
+
+                <SignUpSection />
+
+                <AddThisBlock />
 
             </div>
         );
@@ -64,7 +73,7 @@ export const query = graphql`
   query PostsIndexQuery {
 
     #get authors
-    authorsConnection: allAuthorsJson(filter: {types: { in: "course" } }) {
+    authorsConnection: allAuthorsJson(filter: {types: { in: "post" } }) {
         totalCount
         edges {
           node {

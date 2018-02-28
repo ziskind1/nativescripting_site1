@@ -9,7 +9,7 @@ tags: ["NativeScript", "Courses", "Tutorial", "Video", "Angular"]
 image: ngrx_course_update.png
 ---
 
-Do you manage your application state using the Flux pattern (now better knows as Redux, I supposed)? Well you should check it out since it will make your application state handling life much easier.
+Do you manage your application state using the Flux pattern (now better knows as Redux, I suppose)? Well you should check it out since it will make your application state handling life much easier.
 @ngrx is a Redux inspired set of libraries for Angular. You'll find exactly the same concepts used in @ngrx as you did in Redux: actions, reducers, and a single store. The difference here is that @ngrx is build on top of RxJS, so at the heart of the @ngrx store are observables. The @ngrx with NativeScript course on NativeScripting.com was just updated to the latest versions of everything! It's a gentle introduction to using @ngrx in a NativeScript with Angular application.
 
 <br/>
