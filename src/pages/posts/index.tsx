@@ -1,81 +1,131 @@
 import * as React from "react";
-import Link from "gatsby-link";
 let Image = require("gatsby-image").default;
-import { MarkdownRemarkConnection, ImageSharp } from "../../domain/graphql-types";
+import {
+    MarkdownRemarkConnection,
+    ImageSharp,
+    AuthorsJsonConnection
+} from "../../domain/graphql-types";
+import { PostsSection } from "../../components/posts/PostsSection/PostsSection";
 
+
+import '../../css/posts.css';
+import { authorFromAuthorsJsonEdge } from "../../domain/converters";
+import { Author } from "../../domain/models";
+import { postFromMarkdownRemark } from "../../domain/converters/post-types";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface PostsIndexPageProps {
     data: {
+        authorsConnection: AuthorsJsonConnection,
+        markdownConnectionDev: MarkdownRemarkConnection,
         markdownConnection: MarkdownRemarkConnection
     };
 }
 
 export default class extends React.Component<PostsIndexPageProps, {}> {
+
+    private authors: Author[] = [];
+
     constructor(props: PostsIndexPageProps) {
         super(props);
+
+        this.authors =
+            this.props.data.authorsConnection.edges.map(authorFromAuthorsJsonEdge);
     }
 
     public render() {
         console.log(this.props.data);
 
-        const nodesHtml = this.props.data.markdownConnection.edges.map((edge, idx) => {
-            const node = edge.node;
+        let mdConn = this.props.data.markdownConnection;
+        if (process.env.NODE_ENV !== `production`) {
+            mdConn = this.props.data.markdownConnectionDev;
+        }
 
-            let d = null;
-            if (node.frontmatter.image) {
-                //node.frontmatter.image.publicURL
-                //const pImg = node.frontmatter.image.children[0] as ImageSharp;
+        const posts = mdConn.edges.map(e => postFromMarkdownRemark(e.node, this.authors));
 
-                d = <Image responsiveSizes={node.frontmatter.image.childImageSharp.responsiveSizes} />
 
-                //d = <Image sizes={pImg.sizes} />
-            }
-
-            const altText = 'alt';
-
-            return (
-                <div key={node.id}>
-                    <Link to={node.frontmatter.path}>
-                        <h3>
-                            {node.frontmatter.title}{" "}
-                            <span>{node.frontmatter.date}</span>
-                        </h3>
-
-                        {d}
-
-                        <p>{node.excerpt}</p>
-                    </Link>
-                </div>
-            );
-        });
 
         return (
-            <div>
+            <div className="wrapper">
+                <PostsSection posts={posts} />
                 <h1>
                     Posts
                 </h1>
                 <h4>{this.props.data.markdownConnection.totalCount} Posts</h4>
-                {nodesHtml}
+
             </div>
         );
     }
 }
 
+
 export const query = graphql`
   query PostsIndexQuery {
 
-    #get posts
-    markdownConnection: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    #get authors
+    authorsConnection: allAuthorsJson(filter: {types: { in: "course" } }) {
+        totalCount
+        edges {
+          node {
+            id
+            title
+            name
+            picture
+            bio
+            biolong
+            twitter
+            github
+          }
+        }
+      }
+
+    #get posts dev
+    markdownConnectionDev: allMarkdownRemark(
+                filter: {frontmatter: {draft: {ne: true}}}, 
+                sort: {order: DESC, fields: [frontmatter___updatedDate]}, 
+                limit: 1000) {
       totalCount
       edges {
         node {
           id
+          timeToRead
           frontmatter {
             title
             path
-            date(formatString: "DD MMMM, YYYY")
+            author
+            updatedDate(formatString: "DD MMMM, YYYY")
+            image {
+                childImageSharp {
+                    # Specify the image processing specifications right in the query.
+                    # Makes it trivial to update as your page's design changes.
+                    responsiveSizes (maxWidth: 1000) {
+                        base64
+                        aspectRatio
+                        src
+                        srcSet
+                        sizes
+                      }
+                  }
+            }
+          }
+          excerpt
+        }
+      }
+    }
+
+    #get posts
+    markdownConnection: allMarkdownRemark(filter: {frontmatter: {draft: {ne: false}}}, sort: {order: DESC, fields: [frontmatter___updatedDate]}, limit: 1000) {
+      totalCount
+      edges {
+        node {
+          id
+          timeToRead
+          frontmatter {
+            title
+            path
+            author
+            updatedDate(formatString: "DD MMMM, YYYY")
             image {
                 childImageSharp {
                     # Specify the image processing specifications right in the query.

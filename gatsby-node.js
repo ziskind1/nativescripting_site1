@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
 
             allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] }
+                sort: { order: DESC, fields: [frontmatter___updatedDate] }
                 limit: 1000
               )  {
             edges {
@@ -48,7 +48,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 id
                 timeToRead
                 frontmatter {
-                  date
+                  createdDate
+                  updatedDate
                   tags
                   path
                   title

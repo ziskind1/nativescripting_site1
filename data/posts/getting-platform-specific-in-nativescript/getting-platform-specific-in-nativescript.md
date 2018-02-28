@@ -1,7 +1,10 @@
 ---
 path: "/posts/getting-platform-specific-in-nativescript"
-title: "Getting Platform Specific in NativeScript"
-date: "2018-01-25"
+title: "Getting Platform Specific in NativeScript, and continue with a much"
+author: 'alex_ziskind'
+createdDate: '2017-05-02'
+updatedDate: '2017-05-06'
+draft: false
 tags: ["NativeScript", "Tips and Tricks", "Tutorial", "Video"]
 image: tns-platform-specific-poster.png
 ---

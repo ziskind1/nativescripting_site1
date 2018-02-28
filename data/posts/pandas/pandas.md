@@ -1,8 +1,12 @@
 ---
 path: "/posts/pandas"
 title: "Sweet Pandas Eating Sweets"
-date: "2017-08-10"
+author: 'alex_ziskind'
+createdDate: '2017-05-02'
+updatedDate: '2017-05-06'
+draft: true
 tags: ["pandas"]
+image: tns-platform-specific-poster.png
 ---
 
 

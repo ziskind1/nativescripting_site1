@@ -218,7 +218,6 @@ export interface posts {
   Tutorial?: tutorial[] | null; 
   Video?: video[] | null; 
   pandas?: pandas[] | null; 
-  bananas?: bananas[] | null; 
 }
 
 export interface nativeScript {
@@ -230,7 +229,8 @@ export interface nativeScript {
 }
 
 export interface frontmatter_2 {
-  date?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -245,7 +245,8 @@ export interface tipsAndTricks {
 }
 
 export interface frontmatter_3 {
-  date?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -260,7 +261,8 @@ export interface tutorial {
 }
 
 export interface frontmatter_4 {
-  date?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -275,7 +277,8 @@ export interface video {
 }
 
 export interface frontmatter_5 {
-  date?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -290,22 +293,8 @@ export interface pandas {
 }
 
 export interface frontmatter_6 {
-  date?: string | null; 
-  tags?: string[] | null; 
-  path?: string | null; 
-  title?: string | null; 
-}
-
-export interface bananas {
-  excerpt?: string | null; 
-  html?: string | null; 
-  id?: string | null; 
-  timeToRead?: number | null; 
-  frontmatter?: frontmatter_7 | null; 
-}
-
-export interface frontmatter_7 {
-  date?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -316,11 +305,12 @@ export interface post {
   html?: string | null; 
   id?: string | null; 
   timeToRead?: number | null; 
-  frontmatter?: frontmatter_8 | null; 
+  frontmatter?: frontmatter_7 | null; 
 }
 
-export interface frontmatter_8 {
-  date?: string | null; 
+export interface frontmatter_7 {
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
   tags?: string[] | null; 
   path?: string | null; 
   title?: string | null; 
@@ -541,8 +531,8 @@ export interface File extends Node {
   id: string; /* The id of this node. */
   parent?: Node | null; /* The parent of this node. */
   children?: Node[] | null; /* The children of this node. */
-  childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
   childrenBundlesJson?: BundlesJson[] | null; /* The children of this node of type bundlesJson */
+  childrenAuthorsJson?: AuthorsJson[] | null; /* The children of this node of type authorsJson */
   childMarkdownRemark?: MarkdownRemark | null; /* The child of this node of type markdownRemark */
   childrenCoursesJson?: CoursesJson[] | null; /* The children of this node of type coursesJson */
   childImageSharp?: ImageSharp | null; /* The child of this node of type imageSharp */
@@ -605,7 +595,7 @@ export interface MarkdownRemark extends Node {
   parent?: Node | null; /* The parent of this node. */
   children?: Node[] | null; /* The children of this node. */
   internal?: internal_18 | null; 
-  frontmatter?: frontmatter_9 | null; 
+  frontmatter?: frontmatter_8 | null; 
   excerpt?: string | null; 
   fileAbsolutePath?: string | null; 
   html?: string | null; 
@@ -623,14 +613,17 @@ export interface internal_18 {
   owner?: string | null; 
 }
 
-export interface frontmatter_9 {
+export interface frontmatter_8 {
   title?: string | null; 
   path?: string | null; 
-  date?: string | null; 
+  author?: string | null; 
+  createdDate?: string | null; 
+  updatedDate?: string | null; 
+  draft?: boolean | null; 
   tags?: string[] | null; 
+  image?: File | null; 
   _PARENT?: string | null; 
   parent?: string | null; 
-  image?: File | null; 
 }
 
 export interface MarkdownHeading {
@@ -1341,7 +1334,6 @@ export interface sitePageConnectionContextPostsInputObject {
   Tutorial?: sitePageConnectionContextPostsTutorialQueryList | null; 
   Video?: sitePageConnectionContextPostsVideoQueryList | null; 
   pandas?: sitePageConnectionContextPostsPandasQueryList | null; 
-  bananas?: sitePageConnectionContextPostsBananasQueryList | null; 
 }
 
 export interface sitePageConnectionContextPostsNativeScriptQueryList {
@@ -1383,13 +1375,21 @@ export interface sitePageConnectionContextPostsNativeScriptTimeToReadQueryIntege
 }
 
 export interface sitePageConnectionContextPostsNativeScriptFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsNativeScriptFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostsNativeScriptFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostsNativeScriptFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostsNativeScriptFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1457,13 +1457,21 @@ export interface sitePageConnectionContextPostsTipsAndTricksTimeToReadQueryInteg
 }
 
 export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsTipsAndTricksFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostsTipsAndTricksFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1531,13 +1539,21 @@ export interface sitePageConnectionContextPostsTutorialTimeToReadQueryInteger {
 }
 
 export interface sitePageConnectionContextPostsTutorialFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsTutorialFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostsTutorialFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostsTutorialFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostsTutorialFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostsTutorialFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1605,13 +1621,21 @@ export interface sitePageConnectionContextPostsVideoTimeToReadQueryInteger {
 }
 
 export interface sitePageConnectionContextPostsVideoFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsVideoFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostsVideoFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostsVideoFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostsVideoFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostsVideoFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1679,13 +1703,21 @@ export interface sitePageConnectionContextPostsPandasTimeToReadQueryInteger {
 }
 
 export interface sitePageConnectionContextPostsPandasFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsPandasFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostsPandasFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostsPandasFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostsPandasFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostsPandasFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1708,80 +1740,6 @@ export interface sitePageConnectionContextPostsPandasFrontmatterPathQueryString 
 }
 
 export interface sitePageConnectionContextPostsPandasFrontmatterTitleQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasQueryList {
-  in?: sitePageConnectionContextPostsBananasInputObject[] | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasInputObject {
-  excerpt?: sitePageConnectionContextPostsBananasExcerptQueryString | null; 
-  html?: sitePageConnectionContextPostsBananasHtmlQueryString | null; 
-  id?: sitePageConnectionContextPostsBananasIdQueryString | null; 
-  timeToRead?: sitePageConnectionContextPostsBananasTimeToReadQueryInteger | null; 
-  frontmatter?: sitePageConnectionContextPostsBananasFrontmatterInputObject | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasExcerptQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasHtmlQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasIdQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasTimeToReadQueryInteger {
-  eq?: number | null; 
-  ne?: number | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasFrontmatterInputObject {
-  date?: sitePageConnectionContextPostsBananasFrontmatterDateQueryString | null; 
-  tags?: sitePageConnectionContextPostsBananasFrontmatterTagsQueryList | null; 
-  path?: sitePageConnectionContextPostsBananasFrontmatterPathQueryString | null; 
-  title?: sitePageConnectionContextPostsBananasFrontmatterTitleQueryString | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasFrontmatterDateQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasFrontmatterTagsQueryList {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-  in?: string[] | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasFrontmatterPathQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageConnectionContextPostsBananasFrontmatterTitleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -1827,13 +1785,21 @@ export interface sitePageConnectionContextPostTimeToReadQueryInteger {
 }
 
 export interface sitePageConnectionContextPostFrontmatterInputObject {
-  date?: sitePageConnectionContextPostFrontmatterDateQueryString | null; 
+  createdDate?: sitePageConnectionContextPostFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageConnectionContextPostFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageConnectionContextPostFrontmatterTagsQueryList | null; 
   path?: sitePageConnectionContextPostFrontmatterPathQueryString | null; 
   title?: sitePageConnectionContextPostFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageConnectionContextPostFrontmatterDateQueryString {
+export interface sitePageConnectionContextPostFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageConnectionContextPostFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -3421,11 +3387,14 @@ export interface markdownRemarkConnectionInternalOwnerQueryString_2 {
 export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   title?: markdownRemarkConnectionFrontmatterTitleQueryString_2 | null; 
   path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null; 
-  date?: markdownRemarkConnectionFrontmatterDateQueryString_2 | null; 
+  author?: markdownRemarkConnectionFrontmatterAuthorQueryString_2 | null; 
+  createdDate?: markdownRemarkConnectionFrontmatterCreatedDateQueryString_2 | null; 
+  updatedDate?: markdownRemarkConnectionFrontmatterUpdatedDateQueryString_2 | null; 
+  draft?: markdownRemarkConnectionFrontmatterDraftQueryBoolean_2 | null; 
   tags?: markdownRemarkConnectionFrontmatterTagsQueryList_2 | null; 
+  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null; 
   _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null; 
   parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null; 
-  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null; 
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -3442,11 +3411,30 @@ export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
   glob?: string | null; 
 }
 
-export interface markdownRemarkConnectionFrontmatterDateQueryString_2 {
+export interface markdownRemarkConnectionFrontmatterAuthorQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
+}
+
+export interface markdownRemarkConnectionFrontmatterCreatedDateQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkConnectionFrontmatterUpdatedDateQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkConnectionFrontmatterDraftQueryBoolean_2 {
+  eq?: boolean | null; 
+  ne?: boolean | null; 
 }
 
 export interface markdownRemarkConnectionFrontmatterTagsQueryList_2 {
@@ -3457,6 +3445,13 @@ export interface markdownRemarkConnectionFrontmatterTagsQueryList_2 {
   in?: string[] | null; 
 }
 
+export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
 export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
   eq?: string | null; 
   ne?: string | null; 
@@ -3465,13 +3460,6 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
 }
 
 export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -3981,7 +3969,6 @@ export interface sitePageContextPostsInputObject {
   Tutorial?: sitePageContextPostsTutorialQueryList | null; 
   Video?: sitePageContextPostsVideoQueryList | null; 
   pandas?: sitePageContextPostsPandasQueryList | null; 
-  bananas?: sitePageContextPostsBananasQueryList | null; 
 }
 
 export interface sitePageContextPostsNativeScriptQueryList {
@@ -4023,13 +4010,21 @@ export interface sitePageContextPostsNativeScriptTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostsNativeScriptFrontmatterInputObject {
-  date?: sitePageContextPostsNativeScriptFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostsNativeScriptFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostsNativeScriptFrontmatterPathQueryString | null; 
   title?: sitePageContextPostsNativeScriptFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostsNativeScriptFrontmatterDateQueryString {
+export interface sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4097,13 +4092,21 @@ export interface sitePageContextPostsTipsAndTricksTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostsTipsAndTricksFrontmatterInputObject {
-  date?: sitePageContextPostsTipsAndTricksFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostsTipsAndTricksFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostsTipsAndTricksFrontmatterPathQueryString | null; 
   title?: sitePageContextPostsTipsAndTricksFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostsTipsAndTricksFrontmatterDateQueryString {
+export interface sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4171,13 +4174,21 @@ export interface sitePageContextPostsTutorialTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostsTutorialFrontmatterInputObject {
-  date?: sitePageContextPostsTutorialFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostsTutorialFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostsTutorialFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostsTutorialFrontmatterPathQueryString | null; 
   title?: sitePageContextPostsTutorialFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostsTutorialFrontmatterDateQueryString {
+export interface sitePageContextPostsTutorialFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4245,13 +4256,21 @@ export interface sitePageContextPostsVideoTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostsVideoFrontmatterInputObject {
-  date?: sitePageContextPostsVideoFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostsVideoFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostsVideoFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostsVideoFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostsVideoFrontmatterPathQueryString | null; 
   title?: sitePageContextPostsVideoFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostsVideoFrontmatterDateQueryString {
+export interface sitePageContextPostsVideoFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostsVideoFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4319,13 +4338,21 @@ export interface sitePageContextPostsPandasTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostsPandasFrontmatterInputObject {
-  date?: sitePageContextPostsPandasFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostsPandasFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostsPandasFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostsPandasFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostsPandasFrontmatterPathQueryString | null; 
   title?: sitePageContextPostsPandasFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostsPandasFrontmatterDateQueryString {
+export interface sitePageContextPostsPandasFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostsPandasFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4348,80 +4375,6 @@ export interface sitePageContextPostsPandasFrontmatterPathQueryString {
 }
 
 export interface sitePageContextPostsPandasFrontmatterTitleQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasQueryList {
-  in?: sitePageContextPostsBananasInputObject[] | null; 
-}
-
-export interface sitePageContextPostsBananasInputObject {
-  excerpt?: sitePageContextPostsBananasExcerptQueryString | null; 
-  html?: sitePageContextPostsBananasHtmlQueryString | null; 
-  id?: sitePageContextPostsBananasIdQueryString | null; 
-  timeToRead?: sitePageContextPostsBananasTimeToReadQueryInteger | null; 
-  frontmatter?: sitePageContextPostsBananasFrontmatterInputObject | null; 
-}
-
-export interface sitePageContextPostsBananasExcerptQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasHtmlQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasIdQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasTimeToReadQueryInteger {
-  eq?: number | null; 
-  ne?: number | null; 
-}
-
-export interface sitePageContextPostsBananasFrontmatterInputObject {
-  date?: sitePageContextPostsBananasFrontmatterDateQueryString | null; 
-  tags?: sitePageContextPostsBananasFrontmatterTagsQueryList | null; 
-  path?: sitePageContextPostsBananasFrontmatterPathQueryString | null; 
-  title?: sitePageContextPostsBananasFrontmatterTitleQueryString | null; 
-}
-
-export interface sitePageContextPostsBananasFrontmatterDateQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasFrontmatterTagsQueryList {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-  in?: string[] | null; 
-}
-
-export interface sitePageContextPostsBananasFrontmatterPathQueryString {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface sitePageContextPostsBananasFrontmatterTitleQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -4467,13 +4420,21 @@ export interface sitePageContextPostTimeToReadQueryInteger {
 }
 
 export interface sitePageContextPostFrontmatterInputObject {
-  date?: sitePageContextPostFrontmatterDateQueryString | null; 
+  createdDate?: sitePageContextPostFrontmatterCreatedDateQueryString | null; 
+  updatedDate?: sitePageContextPostFrontmatterUpdatedDateQueryString | null; 
   tags?: sitePageContextPostFrontmatterTagsQueryList | null; 
   path?: sitePageContextPostFrontmatterPathQueryString | null; 
   title?: sitePageContextPostFrontmatterTitleQueryString | null; 
 }
 
-export interface sitePageContextPostFrontmatterDateQueryString {
+export interface sitePageContextPostFrontmatterCreatedDateQueryString {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface sitePageContextPostFrontmatterUpdatedDateQueryString {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -5981,11 +5942,14 @@ export interface markdownRemarkInternalOwnerQueryString_2 {
 export interface markdownRemarkFrontmatterInputObject_2 {
   title?: markdownRemarkFrontmatterTitleQueryString_2 | null; 
   path?: markdownRemarkFrontmatterPathQueryString_2 | null; 
-  date?: markdownRemarkFrontmatterDateQueryString_2 | null; 
+  author?: markdownRemarkFrontmatterAuthorQueryString_2 | null; 
+  createdDate?: markdownRemarkFrontmatterCreatedDateQueryString_2 | null; 
+  updatedDate?: markdownRemarkFrontmatterUpdatedDateQueryString_2 | null; 
+  draft?: markdownRemarkFrontmatterDraftQueryBoolean_2 | null; 
   tags?: markdownRemarkFrontmatterTagsQueryList_2 | null; 
+  image?: markdownRemarkFrontmatterImageQueryString_2 | null; 
   _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null; 
   parent?: markdownRemarkFrontmatterParentQueryString_4 | null; 
-  image?: markdownRemarkFrontmatterImageQueryString_2 | null; 
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -6002,11 +5966,30 @@ export interface markdownRemarkFrontmatterPathQueryString_2 {
   glob?: string | null; 
 }
 
-export interface markdownRemarkFrontmatterDateQueryString_2 {
+export interface markdownRemarkFrontmatterAuthorQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
   glob?: string | null; 
+}
+
+export interface markdownRemarkFrontmatterCreatedDateQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkFrontmatterUpdatedDateQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
+export interface markdownRemarkFrontmatterDraftQueryBoolean_2 {
+  eq?: boolean | null; 
+  ne?: boolean | null; 
 }
 
 export interface markdownRemarkFrontmatterTagsQueryList_2 {
@@ -6017,6 +6000,13 @@ export interface markdownRemarkFrontmatterTagsQueryList_2 {
   in?: string[] | null; 
 }
 
+export interface markdownRemarkFrontmatterImageQueryString_2 {
+  eq?: string | null; 
+  ne?: string | null; 
+  regex?: string | null; 
+  glob?: string | null; 
+}
+
 export interface markdownRemarkFrontmatterParentQueryString_3 {
   eq?: string | null; 
   ne?: string | null; 
@@ -6025,13 +6015,6 @@ export interface markdownRemarkFrontmatterParentQueryString_3 {
 }
 
 export interface markdownRemarkFrontmatterParentQueryString_4 {
-  eq?: string | null; 
-  ne?: string | null; 
-  regex?: string | null; 
-  glob?: string | null; 
-}
-
-export interface markdownRemarkFrontmatterImageQueryString_2 {
   eq?: string | null; 
   ne?: string | null; 
   regex?: string | null; 
@@ -6364,43 +6347,73 @@ export interface GroupSitePageConnectionArgs {
   limit?: number | null; 
   field?: sitePageGroupEnum | null; 
 }
-export interface DateFrontmatter_2Args {
+export interface CreatedDateFrontmatter_2Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_3Args {
+export interface UpdatedDateFrontmatter_2Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_4Args {
+export interface CreatedDateFrontmatter_3Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_5Args {
+export interface UpdatedDateFrontmatter_3Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_6Args {
+export interface CreatedDateFrontmatter_4Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_7Args {
+export interface UpdatedDateFrontmatter_4Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
   locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
 }
-export interface DateFrontmatter_8Args {
+export interface CreatedDateFrontmatter_5Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface UpdatedDateFrontmatter_5Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface CreatedDateFrontmatter_6Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface UpdatedDateFrontmatter_6Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface CreatedDateFrontmatter_7Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface UpdatedDateFrontmatter_7Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
@@ -6532,7 +6545,13 @@ export interface ExcerptMarkdownRemarkArgs {
 export interface HeadingsMarkdownRemarkArgs {
   depth?: HeadingLevels | null; 
 }
-export interface DateFrontmatter_9Args {
+export interface CreatedDateFrontmatter_8Args {
+  formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
+  difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  locale?: string | null; /* Configures the locale Moment.js will use to format the date. */
+}
+export interface UpdatedDateFrontmatter_8Args {
   formatString?: string | null; /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   fromNow?: boolean | null; /* Returns a string generated with Moment.js&#x27; fromNow function */
   difference?: string | null; /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
@@ -6659,16 +6678,16 @@ export type bundlesJsonDistinctEnum = "id" | "title" | "subtitle" | "description
 export type bundlesJsonGroupEnum = "id" | "title" | "subtitle" | "description" | "url" | "promototal" | "promoremaining" | "bundleLevel" | "products" | "courseIds" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type SitePageConnectionSortByFieldsEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "matchPath" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___posts___bananas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "children" | "internal___type" | "internal___contentDigest" | "internal___owner";
+export type SitePageConnectionSortByFieldsEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "matchPath" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "children" | "internal___type" | "internal___contentDigest" | "internal___owner";
 
 
 export type sitePageConnectionSortOrderValues = "ASC" | "DESC";
 
 
-export type sitePageDistinctEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___posts___bananas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "internal___type" | "internal___contentDigest" | "internal___owner";
+export type sitePageDistinctEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "internal___type" | "internal___contentDigest" | "internal___owner";
 
 
-export type sitePageGroupEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___posts___bananas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "internal___type" | "internal___contentDigest" | "internal___owner";
+export type sitePageGroupEnum = "layout" | "jsonName" | "internalComponentName" | "path" | "component" | "componentChunkName" | "context___courseUrl" | "context___posts___NativeScript" | "context___posts___Tips_and_Tricks" | "context___posts___Tutorial" | "context___posts___Video" | "context___posts___pandas" | "context___post" | "context___tag" | "context___slug" | "updatedAt" | "pluginCreator___NODE" | "pluginCreatorId" | "componentPath" | "id" | "parent" | "internal___type" | "internal___contentDigest" | "internal___owner";
 
 
 export type SitePluginConnectionSortByFieldsEnum = "resolve" | "id" | "name" | "version" | "pluginOptions___plugins" | "pluginOptions___output" | "pluginOptions___query" | "pluginOptions___name" | "pluginOptions___path" | "pluginOptions___linkImagesToOriginal" | "pluginOptions___maxWidth" | "pluginOptions___wrapperStyle" | "pluginOptions___backgroundColor" | "pluginOptions___pathPrefix" | "pluginOptions___ignoreFileExtensions" | "nodeAPIs" | "pluginFilepath" | "packageJson___name" | "packageJson___description" | "packageJson___version" | "packageJson___main" | "packageJson___author" | "packageJson___license" | "packageJson___dependencies" | "packageJson___devDependencies" | "packageJson___peerDependencies" | "packageJson___optionalDependecies" | "packageJson___bundledDependecies" | "packageJson___keywords" | "parent" | "children" | "internal___contentDigest" | "internal___type" | "internal___owner";
@@ -6743,14 +6762,14 @@ export type authorsJsonDistinctEnum = "id" | "name" | "picture" | "bio" | "biolo
 export type authorsJsonGroupEnum = "id" | "name" | "picture" | "bio" | "biolong" | "title" | "twitter" | "github" | "types" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 
-export type MarkdownRemarkConnectionSortByFieldsEnum = "id" | "children" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath" | "html" | "headings" | "timeToRead" | "tableOfContents" | "wordCount___paragraphs" | "wordCount___sentences" | "wordCount___words";
+export type MarkdownRemarkConnectionSortByFieldsEnum = "id" | "children" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___author" | "frontmatter___createdDate" | "frontmatter___updatedDate" | "frontmatter___draft" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath" | "html" | "headings" | "timeToRead" | "tableOfContents" | "wordCount___paragraphs" | "wordCount___sentences" | "wordCount___words";
 
 
 export type markdownRemarkConnectionSortOrderValues = "ASC" | "DESC";
 
 
-export type markdownRemarkDistinctEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath";
+export type markdownRemarkDistinctEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___author" | "frontmatter___createdDate" | "frontmatter___updatedDate" | "frontmatter___draft" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath";
 
 
-export type markdownRemarkGroupEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___date" | "frontmatter___tags" | "frontmatter____PARENT" | "frontmatter___parent" | "frontmatter___image" | "excerpt" | "fileAbsolutePath";
+export type markdownRemarkGroupEnum = "id" | "parent" | "internal___content" | "internal___contentDigest" | "internal___type" | "internal___owner" | "frontmatter___title" | "frontmatter___path" | "frontmatter___author" | "frontmatter___createdDate" | "frontmatter___updatedDate" | "frontmatter___draft" | "frontmatter___tags" | "frontmatter___image" | "frontmatter____PARENT" | "frontmatter___parent" | "excerpt" | "fileAbsolutePath";
 
