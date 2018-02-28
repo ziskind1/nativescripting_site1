@@ -91,7 +91,6 @@ export const query = graphql`
 
     #get posts dev
     markdownConnectionDev: allMarkdownRemark(
-                filter: {frontmatter: {draft: {ne: true}}}, 
                 sort: {order: DESC, fields: [frontmatter___updatedDate]}, 
                 limit: 1000) {
       totalCount
@@ -124,7 +123,10 @@ export const query = graphql`
     }
 
     #get posts
-    markdownConnection: allMarkdownRemark(filter: {frontmatter: {draft: {ne: false}}}, sort: {order: DESC, fields: [frontmatter___updatedDate]}, limit: 1000) {
+    markdownConnection: allMarkdownRemark(
+                filter: {frontmatter: {draft: {ne: true}}}, 
+                sort: {order: DESC, fields: [frontmatter___updatedDate]}, 
+                limit: 1000) {
       totalCount
       edges {
         node {
