@@ -23,14 +23,18 @@
     font-family: OpenSansLight;
     font-size: 14px;
     line-height: 19px;
-    color: #fff;
+    color: #a3eaff;
     text-transform: uppercase;
+}
+.breadcrumbs-container ul li a:hover {
+    color: #7adffd;
+    text-decoration: underline;
 }
 
 .breadcrumbs-container ul li span {
     font-family: OpenSansLight;
     font-size: 14px;
     line-height: 19px;
-    color: #fff;
+    color: #ffffff;
     text-transform: uppercase;
 }
