@@ -6,6 +6,7 @@
     color: #12ffcd;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .post-inner {
@@ -33,19 +34,14 @@
 
 .post-body {
     background-color: azure;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 50px;
-
     font-family: Charter-Roman, Georgia,Cambria,"Times New Roman",Times,serif;
     font-size: 20px;
-    color: rgba(38,41,58,.8);
-    line-height: 30px;
-
-
     font-weight: 400;
     font-style: normal;
+    line-height: 30px;
+    color: rgba(38,41,58,.8);
     padding: 30px;
+    margin-bottom: 50px;
 }
 
 hr.section-divider {
@@ -70,4 +66,34 @@ hr.section-divider:before {
     font-size: 30px;
     letter-spacing: .6em;
     color: rgba(38,41,58,.8);
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width: 724px) {
+    .post-entry-container h1 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .post-excerpt {
+        font-size: 18px;
+    }
+    .post-body {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 10px;
+    }
 }

@@ -27,7 +27,7 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (props: PostPagePr
   const breadCrumbs = [
     { name: 'Courses', url: '/' },
     { name: 'Posts', url: '/posts' },
-    { name: post.title, url: '' },
+    { name: 'Current post', url: '' },
   ];
 
 
