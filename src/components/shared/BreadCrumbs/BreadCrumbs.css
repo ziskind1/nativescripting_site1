@@ -26,3 +26,11 @@
     color: #fff;
     text-transform: uppercase;
 }
+
+.breadcrumbs-container ul li span {
+    font-family: OpenSansLight;
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    text-transform: uppercase;
+}

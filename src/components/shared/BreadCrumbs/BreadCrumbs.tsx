@@ -17,7 +17,7 @@ export const BreadCrumbs: React.StatelessComponent<BreadCrumbsProps> = (props: B
         if (idx === props.breadcrumbs.length - 1) {
             return (
                 <li key={idx}>
-                    <a href={bc.url}>{bc.name}</a>
+                    <span>{bc.name}</span>
                 </li>
             );
         } else {
