@@ -82,6 +82,15 @@ hr.section-divider:before {
 	height: 100%;
 }
 
+
+.twitter-follow-button {
+    margin-left: 10px;
+    color: #12ffcd;
+    border: 1px solid #12ffcd;
+    padding: 0 5px 0 5px;
+}
+
+
 @media only screen and (max-width: 724px) {
     .post-entry-container h1 {
         font-size: 24px;

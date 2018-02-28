@@ -22,6 +22,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (props: PostE
 
     const authorImgSrc = getAuthorImgSrc(post.author.picture);
 
+    const twitterFollowScript = `<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>`;
 
     return (
         <div className="post-entry-container">
@@ -34,6 +35,9 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (props: PostE
                     <div className="post-meta-info-wrapper">
                         <div>
                             <span className="post-meta-author-name">{post.author.name}</span>
+
+                            <a href="https://twitter.com/intent/user?screen_name=digitalix" className="twitter-follow-button" target="_blank" alt="Follow digitalix">Follow</a>
+
                         </div>
                         <div>
                             <span className="post-meta-author-title">{post.author.title}</span>
