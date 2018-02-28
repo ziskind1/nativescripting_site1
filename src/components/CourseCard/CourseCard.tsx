@@ -5,6 +5,7 @@ import LevelIcon from "../LevelIcon/LevelIcon";
 
 
 import './CourseCard.css';
+import { getAuthorImgSrc } from "../../utils/urls";
 
 interface CourseCardProps {
     course: Course;
@@ -52,6 +53,8 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
             courseLabelClassName = 'course-tag';
     }
 
+    const authorImgSrc = getAuthorImgSrc(firstAuthor.picture);
+
     const courseIconHtml = getCourseIconHtml(props.course);
 
     const courseLabelHtml = props.course.label === '' ? null :
@@ -78,7 +81,7 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (props: Cou
                     </div>
 
                     <div className="course-info-row">
-                        <img className="course-card-author-img" src={`/img/authors/${firstAuthor.picture}`} alt={firstAuthor.name} />
+                        <img className="course-card-author-img" src={authorImgSrc} alt={firstAuthor.name} />
                         <h3 className="course-card-author">{firstAuthor.name}</h3>
                     </div>
                 </div>
