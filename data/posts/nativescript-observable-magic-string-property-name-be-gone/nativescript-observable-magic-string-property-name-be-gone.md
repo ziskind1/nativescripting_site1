@@ -12,17 +12,12 @@ image: tns-obs-prop-names-poster.png
 A popular approach in JavaScript APIs these days is to pass a string that matches a property name as a parameter to some function. These are sometimes called ‘magic strings’ and they are very code smelly. In this article and video we will fix this problem.
 <br/><br/>
 
-<div class="well">
-<h6>Related Resources</h6>
-<ul>
-<li>
-<p>
-<a title="NativeScript Observable Magic String Property Names, Be Gone!" href="https://youtu.be/lNcNYFNEaEI" target="_blank">NativeScript Observable Magic String Property Names, Be Gone!</a>
-</p>
-<iframe src="https://www.youtube.com/embed/lNcNYFNEaEI" frameborder="0" allowfullscreen></iframe>
-</li>
-</ul>
+
+
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lNcNYFNEaEI" frameborder="0" allowfullscreen></iframe>
 </div>
+
 
 And why shouldn’t we use them? After all, JavaScript allows us to access object properties in either of these ways:
 <br/><br/>
