@@ -41,12 +41,14 @@ export const PostsListEntry: React.StatelessComponent<PostsListEntryProps> = (pr
 
             <div className="post-body-wrapper">
 
-                <Link to={post.path}>
-                    <h2>{post.title}</h2>
-                    <p>
-                        {post.excerpt}
-                    </p>
-                </Link>
+                <div>
+                    <Link to={post.path}>
+                        <h2>{post.title}</h2>
+                        <p>
+                            {post.excerpt}
+                        </p>
+                    </Link>
+                </div>
 
                 <div className="post-meta-container">
                     <div className="post-meta-author-img-wrapper">

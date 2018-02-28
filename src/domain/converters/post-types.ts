@@ -19,7 +19,13 @@ export function postFromMarkdownRemark(node: MarkdownRemark, authors: Author[]):
 
 
 function timeToReadToTimeLength(timeToRead: number): string {
-    return `${timeToRead} minutes`;
+    if (timeToRead < 1) {
+        return '< 1 min to read';
+    } else if (timeToRead === 1) {
+        return 'about 1 min read';
+    } else {
+        return `${timeToRead} min read`;
+    }
 }
 
 function getAuthorByAuthorId(authors: Author[], id: string): Author {
