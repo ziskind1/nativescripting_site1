@@ -111,6 +111,9 @@
     line-height: 16px;
     color: #11f5ff;
 }
+.post-meta-date-time-wrapper span {
+    margin-right: 6px;
+}
 .middot-divider:after {
     content: '\00B7';
 }
