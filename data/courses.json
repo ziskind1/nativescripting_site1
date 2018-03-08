@@ -2659,8 +2659,8 @@
             "Angular"
         ],
         "level": 2,
-        "label": "PRESALE",
-        "launchdate": "11/30/2017",
+        "label": "NEW",
+        "launchdate": "03/08/2018",
         "authors": [
             "sean_perkins"
         ],
@@ -2684,7 +2684,127 @@
                 "licensesMax": 10
             }
         ],
-        "publishedChapters": [],
-        "chapters": []
+        "publishedChapters": [
+            10,
+            20,
+            30,
+            40
+        ],
+        "chapters": [
+            {
+                "id": 10,
+                "name": "Course Introduction",
+                "lessons": [
+                    {
+                        "chapterId": 10,
+                        "id": "4610408",
+                        "name": "Course Introduction (0:43)",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 10,
+                        "id": "4610409",
+                        "name": "Where to Find the Sample Code (0:29)",
+                        "isPreview": false
+                    }
+                ]
+            },
+            {
+                "id": 20,
+                "name": "Styling Concepts and Tactics",
+                "lessons": [
+                    {
+                        "chapterId": 20,
+                        "id": "4610410",
+                        "name": "Overview",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 20,
+                        "id": "4610411",
+                        "name": "Different Layout Containers",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 20,
+                        "id": "4610412",
+                        "name": "Global Styling (0:43)",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 20,
+                        "id": "4610413",
+                        "name": "Local and Inline Styling",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 20,
+                        "id": "4610415",
+                        "name": "Optimizing with SASS",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 20,
+                        "id": "4610417",
+                        "name": "Screen Size Qualifiers",
+                        "isPreview": false
+                    }
+                ]
+            },
+            {
+                "id": 30,
+                "name": "Advanced Styling Topics",
+                "lessons": [
+                    {
+                        "chapterId": 30,
+                        "id": "4610420",
+                        "name": "Overview (0:23)",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 30,
+                        "id": "4610421",
+                        "name": "Custom App Branding",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 30,
+                        "id": "4610422",
+                        "name": "Optimizing Rendering Time",
+                        "isPreview": false
+                    }
+                ]
+            },
+            {
+                "id": 40,
+                "name": "Building Real-World UI",
+                "lessons": [
+                    {
+                        "chapterId": 40,
+                        "id": "4610426",
+                        "name": "Overview (0:26)",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 40,
+                        "id": "4610428",
+                        "name": "Styling a Login Page",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 40,
+                        "id": "4610430",
+                        "name": "Building Custom Checkboxes",
+                        "isPreview": false
+                    },
+                    {
+                        "chapterId": 40,
+                        "id": "4610432",
+                        "name": "Overlapping UI Elements (1:28)",
+                        "isPreview": false
+                    }
+                ]
+            }
+        ]
     }
 ]
