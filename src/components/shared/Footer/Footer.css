@@ -1,16 +1,24 @@
 .footer-container {
-    border-top: solid 1px #123772;
-    height: 60px;
-    line-height: 60px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  border-top: solid 1px #123772;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-container a {
-    color: #fff;
-    font-family: "MonoRegular";
-    font-size: 14px;
-    display: inline-block;
-    margin-left: 30px; 
+  color: #fff;
+  font-family: "MonoRegular";
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.footer-container .privacy-links a {
+  color: #11f5ff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 30px;
 }
