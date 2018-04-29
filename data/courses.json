@@ -2398,22 +2398,21 @@
   },
   {
     "id": "171150",
-    "title": "Securing NativeScript Applications",
-    "subtitle": "Making your NativeScript Applications Bulletproof",
+    "title": "NativeScript Enterprise Auth",
+    "subtitle": "Securing NativeScript Mobile Apps",
     "description":
-      "In this course, we will learn how to deal with security in your NativeScript applications. We will look at both Core as well as Angular versions of the framework.\n\n\n",
-    "notes": [],
-    "url": "securing-nativescript-applications",
+      "In this course, we will learn how to set up and configure production-grade enterprise security in your NativeScript applications. Step by step this course demonstrates how to generate native iOS and Android applications that are built with JavaScript on the NativeScript framework, and configure OAuth, OpenID Connect, and SAML Redirect for security. We will look at both Core as well as Angular versions of the framework.",
+    "url": "nativescript-enterprise-auth",
     "flavors": ["Core", "Angular"],
-    "level": 3,
-    "label": "PRESALE",
-    "launchdate": "3/01/2018",
+    "level": 1,
+    "label": "NEW",
+    "launchdate": "05/01/2018",
     "authors": ["alex_ziskind"],
     "products": [
       {
         "id": "308161",
         "name": "Single user pre-launch price",
-        "description": "License for a single user. \n",
+        "description": "License for a single user.",
         "pricesale": 49,
         "pricereg": 69,
         "licensesMin": 1,
@@ -2422,15 +2421,226 @@
       {
         "id": "308162",
         "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
+        "description": "License for a team of 2 - 10 users.",
         "pricesale": 199,
         "pricereg": 209,
         "licensesMin": 2,
         "licensesMax": 10
       }
     ],
-    "publishedChapters": [],
-    "chapters": []
+    "publishedChapters": [0],
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Course Introduction",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "5020525",
+            "name": "Course Introduction",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "5020527",
+            "name": "Course Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "5020528",
+            "name": "What you should know",
+            "isPreview": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "NativeScript Sidekick",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "id": "5020545",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5020547",
+            "name": "Getting Sidekick",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5020549",
+            "name": "Sidekick Introduction",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5020550",
+            "name": "Running your App on a Device",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Azure Setup",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "id": "5020551",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5020553",
+            "name": "Azure Active Directory Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5020554",
+            "name": "Registering an Enterprise Application",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "OAuth2 Enterprise Auth",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "id": "5020556",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 40,
+            "id": "5020557",
+            "name": "Creating a New App with OAuth2",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5020558",
+            "name": "Connection Options",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5020559",
+            "name": "Using Enterprise App Configured Values",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "OpenID Connect Enterprise Auth",
+        "lessons": [
+          {
+            "chapterId": 50,
+            "id": "5020561",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5020562",
+            "name": "Creating a New App with OpenID Connect",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5020563",
+            "name": "Connection Options",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5020564",
+            "name": "Using Enterprise App Configured Values",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "SAML-Redirect Enterprise Auth",
+        "lessons": [
+          {
+            "chapterId": 60,
+            "id": "5020565",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5020566",
+            "name": "Creating a New App with SAML-Redirect",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5020567",
+            "name": "Connection Options",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5020568",
+            "name": "Enterprise App Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5020569",
+            "name": "Using Enterprise App Configured Values",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Kinvey Console",
+        "lessons": [
+          {
+            "chapterId": 70,
+            "id": "5020570",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5020571",
+            "name": "About the Kinvey Console",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5020572",
+            "name": "Authentication Service Association Keys",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5020574",
+            "name": "Making Service Modifications",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5020575",
+            "name": "Other Kinvey Services",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "171152",
@@ -2449,7 +2659,7 @@
       {
         "id": "308164",
         "name": "Single user pre-launch price",
-        "description": "License for a single user. \n",
+        "description": "License for a single user.",
         "pricesale": 29,
         "pricereg": 49,
         "licensesMin": 1,
@@ -2458,7 +2668,7 @@
       {
         "id": "308166",
         "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
+        "description": "License for a team of 2 - 10 users.",
         "pricesale": 119,
         "pricereg": 149,
         "licensesMin": 2,
