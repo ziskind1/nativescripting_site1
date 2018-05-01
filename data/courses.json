@@ -2399,7 +2399,7 @@
   {
     "id": "171150",
     "title": "NativeScript Enterprise Auth",
-    "subtitle": "Securing NativeScript Mobile Apps",
+    "subtitle": "Auth with Azure and Kinvey",
     "description":
       "In this course, we will learn how to set up and configure production-grade enterprise security in your NativeScript applications. Step by step this course demonstrates how to generate native iOS and Android applications that are built with JavaScript on the NativeScript framework, and configure OAuth, OpenID Connect, and SAML Redirect for security. We will look at both Core as well as Angular versions of the framework.",
     "url": "nativescript-enterprise-auth",
