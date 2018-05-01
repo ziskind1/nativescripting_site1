@@ -2643,6 +2643,40 @@
     ]
   },
   {
+    "id": "328975",
+    "title": "Securing NativeScript Applications",
+    "subtitle": "Making your NativeScript Apps Bulletproof",
+    "description": "The course description and curriculum are to be determined",
+    "url": "securing-nativescript-applications",
+    "flavors": ["Core", "Angular"],
+    "level": 2,
+    "label": "PRESALE",
+    "launchdate": "07/01/2018",
+    "authors": ["alex_ziskind"],
+    "products": [
+      {
+        "id": "641087",
+        "name": "Single user pre-launch price",
+        "description": "License for a single user.",
+        "pricesale": 49,
+        "pricereg": 69,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "641078",
+        "name": "Team of 2 - 10 pre-launch price",
+        "description": "License for a team of 2 - 10 users.",
+        "pricesale": 199,
+        "pricereg": 209,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "publishedChapters": [],
+    "chapters": []
+  },
+  {
     "id": "171152",
     "title": "Styling NativeScript Core Applications",
     "subtitle": "Everything about CSS in NativeScript Core",
