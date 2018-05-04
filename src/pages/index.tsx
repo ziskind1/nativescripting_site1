@@ -2,16 +2,19 @@ import * as React from "react";
 import Link from "gatsby-link";
 
 import {
-    AuthorsJsonConnection,
-    CoursesJsonConnection,
-    CoursesJsonEdge,
-    BundlesJsonConnection
+  AuthorsJsonConnection,
+  CoursesJsonConnection,
+  CoursesJsonEdge,
+  BundlesJsonConnection
 } from "../domain/graphql-types";
 
-import { authorFromAuthorsJsonEdge, courseFromCoursesJsonEdge } from '../domain/converters';
+import {
+  authorFromAuthorsJsonEdge,
+  courseFromCoursesJsonEdge
+} from "../domain/converters";
 import { Course, CourseFlavorType } from "../domain/models";
 
-import Hero from '../components/home/Hero/Hero';
+import Hero from "../components/home/Hero/Hero";
 import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
 import ActionButton from "../components/ActionButton/ActionButton";
 import BundleSection from "../components/home/BundleSection/BundleSection";
@@ -28,139 +31,141 @@ import { scrollToElementById } from "../utils/scrolling";
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
-    data: {
-        authorsConnection: AuthorsJsonConnection,
-        coursesConnection: CoursesJsonConnection,
-        bundlesConnection: BundlesJsonConnection
-    }
+  data: {
+    authorsConnection: AuthorsJsonConnection;
+    coursesConnection: CoursesJsonConnection;
+    bundlesConnection: BundlesJsonConnection;
+  };
 }
 
 interface IndexPageState {
-    courses: Course[];
-    selectedFilterType: CourseFilterType;
+  courses: Course[];
+  selectedFilterType: CourseFilterType;
 }
 
 export default class extends React.Component<IndexPageProps, IndexPageState> {
+  constructor(props: IndexPageProps) {
+    super(props);
 
-    constructor(props: IndexPageProps) {
-        super(props);
+    const authors = this.props.data.authorsConnection.edges.map(
+      authorFromAuthorsJsonEdge
+    );
 
-        const authors =
-            this.props.data.authorsConnection.edges.map(authorFromAuthorsJsonEdge);
+    const courses = this.props.data.coursesConnection.edges.map(c =>
+      courseFromCoursesJsonEdge(c, authors)
+    );
 
-        const courses =
-            this.props.data.coursesConnection.edges.map(c => courseFromCoursesJsonEdge(c, authors));
+    this.state = {
+      courses: courses,
+      selectedFilterType: "All"
+    };
+  }
 
+  private freeCoursesSelected() {
+    this.setState({ selectedFilterType: "Free" }, () => {
+      this.scrollToElementById("courses");
+    });
+  }
 
-        this.state = {
-            courses: courses,
-            selectedFilterType: 'All'
-        };
+  private premiumCoursesSelected() {
+    this.setState({ selectedFilterType: "All" }, () => {
+      this.scrollToElementById("courses");
+    });
+  }
+
+  private scrollToElementById(id: string) {
+    scrollToElementById(id);
+  }
+
+  private filterByFilterType(filterType: CourseFilterType) {
+    this.setState({ selectedFilterType: filterType });
+  }
+
+  private getFilteredCourses(filterType: CourseFilterType): Course[] {
+    switch (filterType) {
+      case "All":
+        return this.state.courses;
+      case "Free":
+        return this.state.courses.filter(c =>
+          c.products.some(p => p.pricereg === 0)
+        );
+      case "Core":
+        return this.state.courses.filter(c => c.flavors.includes("Core"));
+      case "Angular":
+        return this.state.courses.filter(c => c.flavors.includes("Angular"));
+      default:
+        return this.state.courses;
     }
 
-    private freeCoursesSelected() {
-        this.setState({ selectedFilterType: 'Free' }, () => {
-            this.scrollToElementById('courses');
-        });
-    }
-
-    private premiumCoursesSelected() {
-        this.setState({ selectedFilterType: 'All' }, () => {
-            this.scrollToElementById('courses');
-        });
-    }
-
-    private scrollToElementById(id: string) {
-        scrollToElementById(id);
-    }
-
-    private filterByFilterType(filterType: CourseFilterType) {
-        this.setState({ selectedFilterType: filterType });
-    }
-
-    private getFilteredCourses(filterType: CourseFilterType): Course[] {
-        switch (filterType) {
-            case 'All':
-                return this.state.courses;
-            case 'Free':
-                return this.state.courses.filter(c => c.products.some(p => p.pricereg === 0));
-            case 'Core':
-                return this.state.courses.filter(c => c.flavors.includes('Core'));
-            case 'Angular':
-                return this.state.courses.filter(c => c.flavors.includes('Angular'));
-            default:
-                return this.state.courses;
-        }
-
-        /*
+    /*
         if (this.state.selectedFlavor === undefined) {
             return this.state.courses;
         } else {
             return this.state.courses.filter(c => c.flavors.includes(this.state.selectedFlavor));
         }
         */
-    }
+  }
 
-    public render() {
-        const filteredCourses = this.getFilteredCourses(this.state.selectedFilterType);
+  public render() {
+    const filteredCourses = this.getFilteredCourses(
+      this.state.selectedFilterType
+    );
 
-        const bundles =
-            this.props.data.bundlesConnection.edges.map(b => bundleFromBundlesJsonEdge(b, this.state.courses));
+    const bundles = this.props.data.bundlesConnection.edges.map(b =>
+      bundleFromBundlesJsonEdge(b, this.state.courses)
+    );
 
-        return (
-            <div>
-                <Hero />
-                <SubHeroSection
-                    onFreeCoursesClick={() => this.freeCoursesSelected()}
-                    onPremiumCoursesClick={() => this.premiumCoursesSelected()}
-                />
+    return (
+      <div>
+        <Hero />
+        <SubHeroSection
+          onFreeCoursesClick={() => this.freeCoursesSelected()}
+          onPremiumCoursesClick={() => this.premiumCoursesSelected()}
+        />
 
-                <Logos />
-                <Benefits />
+        <Logos />
+        <Benefits />
 
-                <a id="courses" name="courses"></a>
-                <CoursesSection
-                    courses={filteredCourses}
-                    selectedFilterType={this.state.selectedFilterType}
-                    onSelectFilterType={(filterType) => this.filterByFilterType(filterType)}
-                />
+        <a id="courses" name="courses" />
+        <CoursesSection
+          courses={filteredCourses}
+          selectedFilterType={this.state.selectedFilterType}
+          onSelectFilterType={filterType => this.filterByFilterType(filterType)}
+        />
 
-                <BundleSection bundles={bundles} />
+        <BundleSection bundles={bundles} />
 
-                <Quotes />
+        <Quotes />
 
-                <SignUpSection />
+        <SignUpSection />
 
-                <AddThisBlock />
-
-            </div>
-        );
-    }
+        <AddThisBlock />
+      </div>
+    );
+  }
 }
 
-
 export const indexPageQuery = graphql`
-query IndexPageQuery{
-
+  query IndexPageQuery {
     #get authors
-    authorsConnection: allAuthorsJson(filter: {types: { in: "course" } }) {
-        totalCount
-        edges {
-          node {
-            id
-            title
-            name
-            picture
-            bio
-            biolong
-            twitter
-            github
-          }
+    authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
+      totalCount
+      edges {
+        node {
+          id
+          title
+          name
+          picture
+          bio
+          biolong
+          twitter
+          github
         }
       }
+    }
 
     #get courses
-    coursesConnection: allCoursesJson {
+    coursesConnection: allCoursesJson(sort: { order: ASC, fields: [order] }) {
       totalCount
       edges {
         node {
@@ -171,6 +176,7 @@ query IndexPageQuery{
           label
           authors
           level
+          order
           products {
             id
             name
@@ -186,29 +192,28 @@ query IndexPageQuery{
 
     #get bundles
     bundlesConnection: allBundlesJson {
-        edges {
-          node {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          description
+          url
+          promototal
+          promoremaining
+          courseIds
+          bundleLevel
+          products {
             id
-            title
-            subtitle
+            name
             description
-            url
-            promototal
-            promoremaining
-            courseIds
-            bundleLevel
-            products {
-              id
-              name
-              description
-              pricesale
-              pricereg
-              licensesMin
-              licensesMax
-            }
+            pricesale
+            pricereg
+            licensesMin
+            licensesMax
           }
         }
       }
+    }
   }
 `;
-
