@@ -1,5 +1,349 @@
 [
   {
+    "id": "329255",
+    "title": "NativeScript Hands-On UI",
+    "subtitle":
+      "A course all about NativeScript user interface views and components",
+    "description":
+      "NativeScript ships with a set of user interface views (also known as widgets) which you can use to build the user interface of a mobile application. These views wrap the corresponding native views for iOS and Android while providing a common API for working with it.\n\nThis course builds your hands-on knowledge of UI widgets, their properties, their events, and their styling capabilities, and it does so incrementally. We even take a look at some unexpected behaviors that the views exhibit.",
+    "url": "nativescript-hands-on-ui",
+    "flavors": ["Core", "Angular"],
+    "level": 1,
+    "order": 100,
+    "label": "PRESALE",
+    "launchdate": "05/11/2018",
+    "authors": ["alex_ziskind"],
+    "products": [
+      {
+        "id": "644442",
+        "name": "Single user pre-launch price",
+        "description": "License for a single user. \n",
+        "pricesale": 19,
+        "pricereg": 49,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "644444",
+        "name": "Team of 2 - 10 pre-launch price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 139,
+        "pricereg": 199,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80],
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Welcome",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "5044880",
+            "name": "Introduction (1:17)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "5044881",
+            "name": "Course Overview (0:54)",
+            "isPreview": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Essential Widgets",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "id": "5050593",
+            "name": "Overview (0:34)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "id": "5064671",
+            "name": "Button",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064687",
+            "name": "Label",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064686",
+            "name": "Switch",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064685",
+            "name": "Slider",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064683",
+            "name": "Progress",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064684",
+            "name": "ActivityIndicator",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5064682",
+            "name": "Image",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "ListView",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "id": "5050591",
+            "name": "Overview (0:21)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 30,
+            "id": "5064704",
+            "name": "Using the ListView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5064701",
+            "name": "Customizing the ListView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5064703",
+            "name": "Using Multiple Item Templates",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5064702",
+            "name": "Using the Async Pipe",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Data Entry Widgets",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "id": "5050602",
+            "name": "Overview (0:31)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 40,
+            "id": "5064717",
+            "name": "TextField Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064715",
+            "name": "TextField Properties and Events",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064716",
+            "name": "TextField Programmatic Control",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064718",
+            "name": "TextView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064713",
+            "name": "DatePicker",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064719",
+            "name": "TimePicker",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5064714",
+            "name": "ListPicker",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Web Widgets",
+        "lessons": [
+          {
+            "chapterId": 50,
+            "id": "5050601",
+            "name": "Overview (0:23)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 50,
+            "id": "5064731",
+            "name": "HtmlView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5064734",
+            "name": "WebView",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Bar Widgets",
+        "lessons": [
+          {
+            "chapterId": 60,
+            "id": "5050606",
+            "name": "Overview (0:28)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 60,
+            "id": "5064733",
+            "name": "SegmentedBar",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5064732",
+            "name": "SearchBar",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5064730",
+            "name": "SearchBar Use Case",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "ActionBar",
+        "lessons": [
+          {
+            "chapterId": 70,
+            "id": "5050605",
+            "name": "Overview (0:32)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 70,
+            "id": "5064745",
+            "name": "ActionBar Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5064746",
+            "name": "ActionItem",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5064747",
+            "name": "Android App Icon",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5064748",
+            "name": "NavigationButton",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5064750",
+            "name": "Programmatic Control",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5064749",
+            "name": "Styling",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Container Widgets",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "5050604",
+            "name": "Overview (0:23)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 80,
+            "id": "5064757",
+            "name": "ScrollView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5064758",
+            "name": "TabView Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5064755",
+            "name": "TabView Selection",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5064759",
+            "name": "TabView Styling",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5064756",
+            "name": "TabView Icon Fonts",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "171149",
     "title": "NativeScript with Angular Web Application Conversion",
     "subtitle": "Sharing your web and native mobile application code",
@@ -9,6 +353,7 @@
     "url": "nativescript-with-angular-web-application-conversion",
     "flavors": ["Angular"],
     "level": 2,
+    "order": 110,
     "label": "NEW",
     "launchdate": "10/30/2017",
     "authors": ["paul_halliday"],
@@ -172,6 +517,7 @@
     "url": "nativescript-with-@ngrx",
     "flavors": ["Angular"],
     "level": 2,
+    "order": 120,
     "label": "UPDATED",
     "launchdate": "07/10/2017",
     "authors": ["paul_halliday"],
@@ -347,6 +693,7 @@
     "url": "nativescript-plugins-creating-custom-view-components",
     "flavors": ["Core", "Angular"],
     "level": 2,
+    "order": 130,
     "label": "SALE",
     "launchdate": "07/13/2017",
     "authors": ["nathan_walker"],
@@ -468,6 +815,7 @@
     "url": "nativescript-with-angular-getting-started-guide",
     "flavors": ["Angular"],
     "level": 1,
+    "order": 140,
     "label": "",
     "launchdate": "05/29/2017",
     "authors": ["alex_ziskind"],
@@ -746,6 +1094,7 @@
     "url": "nativescript-core-getting-started-guide",
     "flavors": ["Core"],
     "level": 1,
+    "order": 150,
     "label": "",
     "launchdate": "07/17/2017",
     "authors": ["alex_ziskind"],
@@ -1021,6 +1370,7 @@
     "url": "nativescript-with-angular-pro",
     "flavors": ["Angular"],
     "level": 3,
+    "order": 160,
     "label": "POPULAR",
     "launchdate": "09/30/2017",
     "authors": ["alex_ziskind"],
@@ -1887,6 +2237,7 @@
     "url": "nativescript-core-pro",
     "flavors": ["Core"],
     "level": 3,
+    "order": 170,
     "label": "PRESALE",
     "launchdate": "09/30/2017",
     "authors": ["alex_ziskind"],
@@ -2405,6 +2756,7 @@
     "url": "nativescript-enterprise-auth",
     "flavors": ["Core", "Angular"],
     "level": 1,
+    "order": 180,
     "label": "NEW",
     "launchdate": "05/01/2018",
     "authors": ["alex_ziskind"],
@@ -2650,6 +3002,7 @@
     "url": "securing-nativescript-applications",
     "flavors": ["Core", "Angular"],
     "level": 2,
+    "order": 190,
     "label": "PRESALE",
     "launchdate": "07/01/2018",
     "authors": ["alex_ziskind"],
@@ -2686,6 +3039,7 @@
     "url": "styling-nativescript-core-applications",
     "flavors": ["Core"],
     "level": 2,
+    "order": 200,
     "label": "PRESALE",
     "launchdate": "11/30/2017",
     "authors": ["alex_ziskind"],
@@ -2722,6 +3076,7 @@
     "url": "styling-nativescript-with-angular-applications",
     "flavors": ["Angular"],
     "level": 2,
+    "order": 135,
     "label": "NEW",
     "launchdate": "03/08/2018",
     "authors": ["sean_perkins"],
