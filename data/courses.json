@@ -10,24 +10,24 @@
     "flavors": ["Core", "Angular"],
     "level": 1,
     "order": 100,
-    "label": "PRESALE",
+    "label": "NEW",
     "launchdate": "05/11/2018",
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "644442",
-        "name": "Single user pre-launch price",
+        "id": "651957",
+        "name": "Single user launch price",
         "description": "License for a single user. \n",
-        "pricesale": 19,
+        "pricesale": 29,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "644444",
-        "name": "Team of 2 - 10 pre-launch price",
+        "id": "651859",
+        "name": "Team of 2 - 10 launch price",
         "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 139,
+        "pricesale": 159,
         "pricereg": 199,
         "licensesMin": 2,
         "licensesMax": 10
@@ -247,7 +247,7 @@
             "chapterId": 60,
             "id": "5064730",
             "name": "SearchBar Use Case",
-            "isPreview": false
+            "isPreview": true
           }
         ]
       },
