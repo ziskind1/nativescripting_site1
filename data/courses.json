@@ -2762,19 +2762,19 @@
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "308161",
-        "name": "Single user pre-launch price",
+        "id": "308158",
+        "name": "Single user regular price",
         "description": "License for a single user.",
-        "pricesale": 49,
+        "pricesale": 69,
         "pricereg": 69,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "308162",
-        "name": "Team of 2 - 10 pre-launch price",
+        "id": "308159",
+        "name": "Team of 2 - 10 regular price",
         "description": "License for a team of 2 - 10 users.",
-        "pricesale": 199,
+        "pricesale": 209,
         "pricereg": 209,
         "licensesMin": 2,
         "licensesMax": 10
