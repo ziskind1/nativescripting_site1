@@ -3,7 +3,7 @@ path: "/posts/hands-on-ui-course-launch"
 title: "NativeScript Hands-on UI Course"
 author: 'alex_ziskind'
 createdDate: '2018-05-05'
-updatedDate: '2018-05-05'
+updatedDate: '2018-05-12'
 draft: false
 tags: ["NativeScript", "Angular", "Core", "UI", "Tutorial", "Video"]
 image: hands-on-ui-course-poster.png
@@ -21,7 +21,7 @@ Many people that are coming to NativeScript after being web developers or from o
 2.  Framework specifics like names of attributes and events
     <br><br>
 
-The new course called NativeScript Hands-on UI (and is on pre-sale with discount, see below) addresses these concerns by systematically showing all the cross-platform user interface component, also known as widgets, starting with the most basic, such as button and label, and building on from there.
+The new course called NativeScript Hands-on UI addresses these concerns by systematically showing all the cross-platform user interface component, also known as widgets, starting with the most basic, such as button and label, and building on from there.
 <br><br>
 
 In the course, not only do we comb through all the basic functionality of each widget, but we look at some caveats and surprising behavior that you might not necessarily expect.
@@ -42,10 +42,10 @@ In the course, not only do we comb through all the basic functionality of each w
 
 <br><br>
 
-This course, [that can be found here on NativeScripting](https://nativescripting.com/course/nativescript-hands-on-ui), launches on May 11, 2018 with all the lessons available immediately, and will be priced at $49. Until then, this course is in pre-launch mode for those who want to take advantage of a **discounted pre-launch price of $19**. That’s more than **60% off** for a single user license.
+This course, [that can be found here on NativeScripting](https://nativescripting.com/course/nativescript-hands-on-ui), launches on May 11, 2018 with all the lessons available immediately.
 <br><br>
 
-Also, only until May 11, anyone who purchases the [NativeScript with Angular Pro](https://nativescripting.com/course/nativescript-with-angular-pro) course gets the the Hands-on UI course for free, as a thanks for your early support.
+For a short time after launch, anyone who purchases any of the [bundles](https://nativescripting.com/) gets the the Hands-on UI course for free.
 <br><br>
 
 So go grab it while it's hot.
