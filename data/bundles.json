@@ -1,108 +1,96 @@
 [
-    {
-        "id": "171481",
-        "title": "NativeScript with Angular Super",
-        "subtitle": "Get the most useful knowledge about NativeScript with Angular",
-        "description": "\n",
-        "url": "nativescript-with-angular-super-bundle",
-        "promototal": 100,
-        "promoremaining": 47,
-        "bundleLevel": 1,
-        "products": [
-            {
-                "id": "308174",
-                "name": "Single user pre-launch price",
-                "description": "License for a single user. \n",
-                "pricesale": 79,
-                "pricereg": 139,
-                "licensesMin": 1,
-                "licensesMax": 1
-            },
-            {
-                "id": "308176",
-                "name": "Team of 2 - 10 pre-launch price",
-                "description": "License for a team of 2 - 10 users. \n",
-                "pricesale": 319,
-                "pricereg": 419,
-                "licensesMin": 2,
-                "licensesMax": 10
-            }
-        ],
-        "courseIds": [
-            "169856",
-            "171149",
-            "171151"
-        ]
-    },
-    {
-        "id": "171483",
-        "title": "NativeScript with Angular Ultra",
-        "subtitle": "Get as much NativeScript with Angular Knowledge as You Can Handle",
-        "description": "\n",
-        "url": "nativescript-with-angular-ultra-bundle",
-        "promototal": 100,
-        "promoremaining": 31,
-        "bundleLevel": 2,
-        "products": [
-            {
-                "id": "308178",
-                "name": "Single user pre-launch price",
-                "description": "License for a single user. \n",
-                "pricesale": 139,
-                "pricereg": 259,
-                "licensesMin": 1,
-                "licensesMax": 1
-            },
-            {
-                "id": "308181",
-                "name": "Team of 2 - 10 pre-launch price",
-                "description": "License for a team of 2 - 10 users. \n",
-                "pricesale": 559,
-                "pricereg": 779,
-                "licensesMin": 2,
-                "licensesMax": 10
-            }
-        ],
-        "courseIds": [
-            "169856",
-            "169916",
-            "171149",
-            "171151"
-        ]
-    },
-    {
-        "id": "171486",
-        "title": "NativeScript Core Master Bundle",
-        "subtitle": "Learn Anything and Everything About NativeScript Core",
-        "description": "\n",
-        "url": "nativescript-core-master-bundle",
-        "promototal": 100,
-        "promoremaining": 55,
-        "bundleLevel": 3,
-        "products": [
-            {
-                "id": "308184",
-                "name": "Single user pre-launch price",
-                "description": "License for a single user. \n",
-                "pricesale": 89,
-                "pricereg": 169,
-                "licensesMin": 1,
-                "licensesMax": 1
-            },
-            {
-                "id": "308186",
-                "name": "Team of 2 - 10 pre-launch price",
-                "description": "License for a team of 2 - 10 users. \n",
-                "pricesale": 359,
-                "pricereg": 509,
-                "licensesMin": 2,
-                "licensesMax": 10
-            }
-        ],
-        "courseIds": [
-            "171132",
-            "171131",
-            "171152"
-        ]
-    }
+  {
+    "id": "171481",
+    "title": "NativeScript with Angular Super",
+    "subtitle": "Get the most useful knowledge about NativeScript with Angular",
+    "description": "\n",
+    "url": "nativescript-with-angular-super-bundle",
+    "promototal": 100,
+    "promoremaining": 45,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "308174",
+        "name": "Single user pre-launch price",
+        "description": "License for a single user. \n",
+        "pricesale": 79,
+        "pricereg": 139,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "308176",
+        "name": "Team of 2 - 10 pre-launch price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 319,
+        "pricereg": 419,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "courseIds": ["169856", "171149", "171151"]
+  },
+  {
+    "id": "171483",
+    "title": "NativeScript with Angular Ultra",
+    "subtitle":
+      "Get as much NativeScript with Angular Knowledge as You Can Handle",
+    "description": "\n",
+    "url": "nativescript-with-angular-ultra-bundle",
+    "promototal": 100,
+    "promoremaining": 29,
+    "bundleLevel": 2,
+    "products": [
+      {
+        "id": "308178",
+        "name": "Single user pre-launch price",
+        "description": "License for a single user. \n",
+        "pricesale": 139,
+        "pricereg": 259,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "308181",
+        "name": "Team of 2 - 10 pre-launch price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 559,
+        "pricereg": 779,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "courseIds": ["169856", "169916", "171149", "171151"]
+  },
+  {
+    "id": "171486",
+    "title": "NativeScript Core Master Bundle",
+    "subtitle": "Learn Anything and Everything About NativeScript Core",
+    "description": "\n",
+    "url": "nativescript-core-master-bundle",
+    "promototal": 100,
+    "promoremaining": 51,
+    "bundleLevel": 3,
+    "products": [
+      {
+        "id": "308184",
+        "name": "Single user pre-launch price",
+        "description": "License for a single user. \n",
+        "pricesale": 89,
+        "pricereg": 169,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "308186",
+        "name": "Team of 2 - 10 pre-launch price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 359,
+        "pricereg": 509,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "courseIds": ["171132", "171131", "171152"]
+  }
 ]
