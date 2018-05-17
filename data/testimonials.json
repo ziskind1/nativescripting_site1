@@ -1,0 +1,63 @@
+[
+  {
+    "id": "100",
+    "name": "Raymond Camden",
+    "img": "raymond_camden.jpg",
+    "twitter": "raymondcamden",
+    "order": 100,
+    "quoteHtml":
+      "The courses on NativeScripting are easy to follow, paced well, and do a great job of getting you up to speed with NativeScript.",
+    "titleHtml": "DevRel for Auth0 Extend"
+  },
+  {
+    "id": "200",
+    "name": "Tracy Lee | ladyleet",
+    "img": "tracy_lee.jpg",
+    "twitter": "ladyleet",
+    "order": 200,
+    "quoteHtml":
+      "NativeScripting provides really high quality focused content around learning NativeScript! I love using the platform to refresh my skills and hone in on specific challenge areas to fill in my gaps of knowledge.",
+    "titleHtml": "RxJS Core Team member and Google Developer Expert"
+  },
+  {
+    "id": "300",
+    "name": "TJ VanToll",
+    "img": "tj_vantoll.jpg",
+    "twitter": "tjvantoll",
+    "order": 300,
+    "quoteHtml":
+      "The best NativeScript video content out there. NativeScripting’s courses are an amazing resource for getting started with NativeScript. Highly recommended.",
+    "titleHtml": "Principal Developer Advocate @ProgressSW"
+  },
+  {
+    "id": "400",
+    "name": "Nic Raboy",
+    "img": "nic_raboy.jpg",
+    "twitter": "nraboy",
+    "order": 400,
+    "quoteHtml":
+      "NativeScripting is a great resource with top notch material on NativeScript and mobile application development with frameworks such as Angular and Vue. I highly recommend it for any developer, beginner to expert.",
+    "titleHtml": "The Ployglot Developer"
+  },
+  {
+    "id": "500",
+    "name": "Todd Motto",
+    "img": "todd_motto.jpg",
+    "twitter": "toddmotto",
+    "order": 500,
+    "quoteHtml":
+      "As a previous Developer Advocate for Progress/Telerik, who makes NativeScript, I've no hesitation in saying that NativeScripting.com is the only place you need to learn NativeScript, from the masterful Alex. His teaching style is absolutely on point; comprehensive and concise enough to have you building real mobile applications, whilst giving you fundamental and advanced knowledge necessary to survive in the wild.",
+    "titleHtml":
+      "Creator @ UltimateAngular and Google Developer Expert for Angular"
+  },
+  {
+    "id": "600",
+    "name": "Jen Looper",
+    "img": "jen_looper.jpg",
+    "twitter": "jenlooper",
+    "order": 100,
+    "quoteHtml":
+      "Alex, affectionately known as the Voice of NativeScript, produces high quality video content that effectively teaches the ins and outs of NativeScript, walking students through the complexities of building mobile apps. These videos teach both NativeScript with Angular and NativeScript Core, offering two great ways to build beautiful apps.",
+    "titleHtml": "Sr. DevRel @ ProgressSW and Google Developer Expert"
+  }
+]

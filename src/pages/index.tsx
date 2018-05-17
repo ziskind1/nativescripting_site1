@@ -5,12 +5,14 @@ import {
   AuthorsJsonConnection,
   CoursesJsonConnection,
   CoursesJsonEdge,
-  BundlesJsonConnection
+  BundlesJsonConnection,
+  TestimonialsJsonConnection
 } from "../domain/graphql-types";
 
 import {
   authorFromAuthorsJsonEdge,
-  courseFromCoursesJsonEdge
+  courseFromCoursesJsonEdge,
+  testimonialFromTestimonialJsonEdge
 } from "../domain/converters";
 import { Course, CourseFlavorType } from "../domain/models";
 
@@ -27,6 +29,7 @@ import Quotes from "../components/Quotes/Quotes";
 import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
 import AddThisBlock from "../components/shared/AddThisBlock/AddThisBlock";
 import { scrollToElementById } from "../utils/scrolling";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -35,6 +38,7 @@ interface IndexPageProps {
     authorsConnection: AuthorsJsonConnection;
     coursesConnection: CoursesJsonConnection;
     bundlesConnection: BundlesJsonConnection;
+    testimonialsConnection: TestimonialsJsonConnection;
   };
 }
 
@@ -115,6 +119,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       bundleFromBundlesJsonEdge(b, this.state.courses)
     );
 
+    const testimonials = this.props.data.testimonialsConnection.edges.map(
+      testimonialFromTestimonialJsonEdge
+    );
+
     return (
       <div>
         <Hero />
@@ -135,7 +143,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <BundleSection bundles={bundles} />
 
-        <Quotes />
+        <Testimonials testimonials={testimonials} />
 
         <SignUpSection />
 
@@ -212,6 +220,22 @@ export const indexPageQuery = graphql`
             licensesMin
             licensesMax
           }
+        }
+      }
+    }
+
+    #get testimonials
+    testimonialsConnection: allTestimonialsJson {
+      totalCount
+      edges {
+        node {
+          id
+          name
+          img
+          twitter
+          order
+          quoteHtml
+          titleHtml
         }
       }
     }
