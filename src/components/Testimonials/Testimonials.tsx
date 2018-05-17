@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "./Testimonials.css";
+
 import TestimonialComponent from "./Testimonial";
 import { Testimonial } from "../../domain/models";
 
