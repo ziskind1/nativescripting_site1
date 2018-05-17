@@ -8,6 +8,26 @@ function Quotes() {
       <div className="quotes quotes--learning grid-3">
         <div className="quotes__item quotes__item--small">
           <h3 className="quotes__item-quote">
+            The courses on NativeScripting are easy to follow, paced well, and
+            do a great job of getting you up to speed with NativeScript.
+          </h3>
+          <div className="quotes__author">
+            <img
+              className="quotes__author-img"
+              src="/img/people/raymond_camden.jpg"
+              alt=""
+            />
+            <div>
+              <a target="_blank" href="https://twitter.com/raymondcamden">
+                Raymond Camden
+              </a>
+              <p>DevRel for Auth0 Extend</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="quotes__item quotes__item--small">
+          <h3 className="quotes__item-quote">
             NativeScripting provides really high quality focused content around
             learning NativeScript! I love using the platform to refresh my
             skills and hone in on specific challenge areas to fill in my gaps of
@@ -48,25 +68,7 @@ function Quotes() {
             </div>
           </div>
         </div>
-        <div className="quotes__item quotes__item--small">
-          <h3 className="quotes__item-quote">
-            The courses on NativeScripting are easy to follow, paced well, and
-            do a great job of getting you up to speed with NativeScript.
-          </h3>
-          <div className="quotes__author">
-            <img
-              className="quotes__author-img"
-              src="/img/people/raymond_camden.jpg"
-              alt=""
-            />
-            <div>
-              <a target="_blank" href="https://twitter.com/raymondcamden">
-                Raymond Camden
-              </a>
-              <p>DevRel for Auth0 Extend</p>
-            </div>
-          </div>
-        </div>
+
         <div className="quotes__item quotes__item--small">
           <h3 className="quotes__item-quote">
             NativeScripting is a great resource with top notch material on
@@ -115,6 +117,29 @@ function Quotes() {
                 </a>{" "}
                 and Google Developer Expert for Angular
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="quotes__item quotes__item--small">
+          <h3 className="quotes__item-quote">
+            Alex, affectionately known as the Voice of NativeScript, produces
+            high quality video content that effectively teaches the ins and outs
+            of NativeScript, walking students through the complexities of
+            building mobile apps. These videos teach both NativeScript with
+            Angular and NativeScript Core, offering two great ways to build
+            beautiful apps.
+          </h3>
+          <div className="quotes__author">
+            <img
+              className="quotes__author-img"
+              src="/img/people/jen_looper.jpg"
+              alt=""
+            />
+            <div>
+              <a target="_blank" href="https://twitter.com/jenlooper">
+                Jen Looper
+              </a>
+              <p>Sr. DevRel @ ProgressSW and Google Developer Expert</p>
             </div>
           </div>
         </div>
