@@ -2261,7 +2261,7 @@
         "licensesMax": 10
       }
     ],
-    "publishedChapters": [],
+    "publishedChapters": [10, 20, 30, 40, 50],
     "chapters": [
       {
         "id": 10,
