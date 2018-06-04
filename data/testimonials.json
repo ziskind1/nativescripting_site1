@@ -59,5 +59,15 @@
     "quoteHtml":
       "Alex, affectionately known as the Voice of NativeScript, produces high quality video content that effectively teaches the ins and outs of NativeScript, walking students through the complexities of building mobile apps. These videos teach both NativeScript with Angular and NativeScript Core, offering two great ways to build beautiful apps.",
     "titleHtml": "Sr. DevRel @ ProgressSW and Google Developer Expert"
+  },
+  {
+    "id": "700",
+    "name": "Burke Holland",
+    "img": "burke_holland.jpg",
+    "twitter": "burkeholland",
+    "order": 700,
+    "quoteHtml":
+      "If you're looking to learn NativeScript, look no further than NativeScripting. These instructors are the best in the business. I know that because they helped me when I was first learning NativeScript. You can't do any better.",
+    "titleHtml": "DevRel at Microsoft"
   }
 ]
