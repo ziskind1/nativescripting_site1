@@ -15,17 +15,17 @@
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "651957",
-        "name": "Single user launch price",
+        "id": "644441",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 29,
+        "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
         "id": "651859",
-        "name": "Team of 2 - 10 launch price",
+        "name": "Team of 2 - 10 sale price",
         "description": "License for a team of 2 - 10 users. \n",
         "pricesale": 159,
         "pricereg": 199,
