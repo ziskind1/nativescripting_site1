@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "gatsby-link";
+import { Helmet } from "react-helmet";
 
 import {
   AuthorsJsonConnection,
@@ -123,8 +124,14 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       testimonialFromTestimonialJsonEdge
     );
 
+    const pageTitle = `Courses | NativeScripting`;
+
     return (
       <div>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <Hero />
         <SubHeroSection
           onFreeCoursesClick={() => this.freeCoursesSelected()}

@@ -1,5 +1,7 @@
 import * as React from "react";
 import Link from "gatsby-link";
+import { Helmet } from "react-helmet";
+
 import {
   CoursesJson,
   AuthorsJsonConnection,
@@ -106,8 +108,14 @@ class CourseTemplate extends React.Component<
       testimonialFromTestimonialJsonEdge
     );
 
+    const pageTitle = `${course.title} | NativeScripting`;
+
     return (
       <div className="wrapper">
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
         <div className="course-details-container">
           <div className="breadcrumb-wrapper">
             <BreadCrumbs breadcrumbs={breadCrumbs} />

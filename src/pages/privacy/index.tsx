@@ -1,10 +1,17 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 
 import "../../css/privacy.css";
 
 function PrivacyPolicy() {
+  const pageTitle = `Privacy Policy | NativeScripting`;
+
   return (
     <div className="wrapper">
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+
       <div className="privacy-container">
         <h1>NativeScripting Privacy Policy</h1>
 
