@@ -1,56 +1,67 @@
 [
-    {
-        "id": "paul_halliday",
-        "name": "Paul Halliday",
-        "picture": "paul_halliday.png",
-        "bio": "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
-        "biolong": "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
-        "title": "NativeScript Trainer",
-        "twitter": "pwhsoftware",
-        "github": "PaulHalliday",
-        "types": [
-            "course"
-        ]
-    },
-    {
-        "id": "nathan_walker",
-        "name": "Nathan Walker",
-        "picture": "nathan_walker.png",
-        "bio": "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
-        "biolong": "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
-        "title": "NativeScript Trainer",
-        "twitter": "wwwalkerrun",
-        "github": "NathanWalker",
-        "types": [
-            "course"
-        ]
-    },
-    {
-        "id": "sean_perkins",
-        "name": "Sean Perkins",
-        "picture": "sean_perkins.png",
-        "bio": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
-        "biolong": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
-        "title": "NativeScript Trainer",
-        "twitter": "seanfperkins",
-        "github": "sean-perkins",
-        "types": [
-            "course",
-            "post"
-        ]
-    },
-    {
-        "id": "alex_ziskind",
-        "name": "Alex Ziskind",
-        "picture": "alex_ziskind.png",
-        "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",
-        "biolong": "Alex Ziskind consistently strives to be on the cutting edge of technology, employs the latest web and mobile techniques and integrates them with the cloud. For the last 16 years, Alex has been developing software solutions for the enterprise as well as small startups. In the last 8 years, his Washington DC based company, Nuvious, has been involved in architecting and implementing cloud solutions on an international scale. Since 2015, Alex has been recognized as a Telerik Developer Expert due to his community involvement with NativeScript. You can connect with Alex on Twitter <a href=\"\">@digitalix</a>.",
-        "title": "Trainer and Owner",
-        "twitter": "digitalix",
-        "github": "alexziskind1",
-        "types": [
-            "course",
-            "post"
-        ]
-    }
+  {
+    "id": "paul_halliday",
+    "name": "Paul Halliday",
+    "picture": "paul_halliday.png",
+    "bio":
+      "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
+    "biolong":
+      "Paul Halliday is a tech entrepreneur that specialises in cross platform mobile development. He graduated with a first class honours in BSc Computer Science from the University of Sunderland and has received numerous awards including the SIEM Prize, Sunderland University Professional Award, and more.",
+    "title": "NativeScript Trainer",
+    "twitter": "pwhsoftware",
+    "github": "PaulHalliday",
+    "types": ["course"]
+  },
+  {
+    "id": "nathan_walker",
+    "name": "Nathan Walker",
+    "picture": "nathan_walker.png",
+    "bio":
+      "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
+    "biolong":
+      "Nathan Ross Walker has enjoyed the opportunity to work in the web/mobile app development arena for over 15 years. His varied background rooted in the world of design and the arts provides him a unique approach to problem solving. Spending several years working across multiple industries including entertainment, audio/video production, manufacturing, b2b marketing, communications, and technology helped establish a focused sensibility with client needs.",
+    "title": "NativeScript Trainer",
+    "twitter": "wwwalkerrun",
+    "github": "NathanWalker",
+    "types": ["course"]
+  },
+  {
+    "id": "sean_perkins",
+    "name": "Sean Perkins",
+    "picture": "sean_perkins.png",
+    "bio":
+      "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
+    "biolong":
+      "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
+    "title": "NativeScript Trainer",
+    "twitter": "seanfperkins",
+    "github": "sean-perkins",
+    "types": ["course", "post"]
+  },
+  {
+    "id": "eddy_verbruggen",
+    "name": "Eddy Verbruggen",
+    "picture": "eddy_verbruggen.png",
+    "bio":
+      "Cordova plugin author, NativeScript’s #1 fanboy, Combidesk co-founder, movie addict, dad of two little rebels.",
+    "biolong":
+      "Cordova plugin author, NativeScript’s #1 fanboy, Combidesk co-founder, movie addict, dad of two little rebels.",
+    "title": "NativeScript Trainer",
+    "twitter": "eddyverbruggen",
+    "github": "eddyverbruggen",
+    "types": ["course", "post"]
+  },
+  {
+    "id": "alex_ziskind",
+    "name": "Alex Ziskind",
+    "picture": "alex_ziskind.png",
+    "bio":
+      "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",
+    "biolong":
+      "Alex Ziskind consistently strives to be on the cutting edge of technology, employs the latest web and mobile techniques and integrates them with the cloud. For the last 16 years, Alex has been developing software solutions for the enterprise as well as small startups. In the last 8 years, his Washington DC based company, Nuvious, has been involved in architecting and implementing cloud solutions on an international scale. Since 2015, Alex has been recognized as a Telerik Developer Expert due to his community involvement with NativeScript. You can connect with Alex on Twitter <a href=\"\">@digitalix</a>.",
+    "title": "Trainer and Owner",
+    "twitter": "digitalix",
+    "github": "alexziskind1",
+    "types": ["course", "post"]
+  }
 ]
