@@ -1,5 +1,348 @@
 [
   {
+    "id": "362074",
+    "title": "Upgrading Cordova Applications to NativeScript",
+    "subtitle": "An Introduction to NativeScript for Cordova Developers",
+    "description":
+      "Hello, and welcome to Upgrading Cordova Applications to NativeScript here at NativeScripting. Eddy Verbruggen and I (Alex Ziskind) are looking forward to helping you understand the basic differences and similarities in working with Cordova and NativeScript, and provide an understanding of the architecture and how the core concepts of the two frameworks work together to build applications. Along the way, you’re going to be learning about things like how your Cordova skills translate and prepare you to build NativeScript applications, project-based code samples focusing on specific features including NativeScript UI components, common non-UI modules, and third party plugins. We'll start out with concepts, and then we'll take a closer look at data binding, modules, navigation, and services. Before beginning this course, you’ll want to make sure you’re already familiar with JavaScript. So if you’re ready to get started, Upgrading Cordova Applications to NativeScript is waiting for you. Thanks again for visiting us here at NativeScripting!",
+    "url": "upgrading-cordova-applications-to-nativescript",
+    "flavors": ["Core"],
+    "level": 1,
+    "order": 50,
+    "label": "NEW",
+    "launchdate": "07/01/2018",
+    "authors": ["eddy_verbruggen", "alex_ziskind"],
+    "products": [
+      {
+        "id": "707408",
+        "name": "Single user regular price",
+        "description": "License for a single user.",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "707410",
+        "name": "Team 2 - 10 regular price",
+        "description": "License for a team of 2 - 10 users.",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 2,
+        "licensesMax": 10
+      }
+    ],
+    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90],
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Introduction",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "5547452",
+            "name": "Introduction (1:46)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547450",
+            "name": "Final Projects and Exercise Code (2:23)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547454",
+            "name": "What is Cordova? (1:50)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547451",
+            "name": "What is NativeScript? (2:04)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547455",
+            "name": "Other Native-Bound Frameworks (3:35)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547453",
+            "name": "Similarities (1:49)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "5547456",
+            "name": "Differences (3:59)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Tooling",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "id": "5547092",
+            "name": "Overview (1:08)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5547101",
+            "name": "CLI (7:34)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5547105",
+            "name": "Cloud Tools (5:21)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5547104",
+            "name": "IDE (2:26)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5547102",
+            "name": "App Templates: NPM packages (2:18)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "5547103",
+            "name": "App Templates: Sidekick and Playground (4:56)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Framework Features",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "id": "5547109",
+            "name": "Overview (0:42)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5547110",
+            "name": "Plugins (4:55)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5547112",
+            "name": "3rd Party JS Modules (3:35)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "5547111",
+            "name": "Debugging (2:45)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Project Structure",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "id": "5547118",
+            "name": "Overview (0:42)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5547119",
+            "name": "Folders (3:53)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5547120",
+            "name": "TypeScript (3:34)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "5547121",
+            "name": "CSS (3:42)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "UI Conversion",
+        "lessons": [
+          {
+            "chapterId": 50,
+            "id": "5547134",
+            "name": "Overview (1:13)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547135",
+            "name": "Cordova Project Survey (3:28)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547137",
+            "name": "NativeScript Project Kickoff (8:45)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547138",
+            "name": "ActionBar Intro (3:28)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547136",
+            "name": "Combining Layouts (5:54)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547140",
+            "name": "SegmentedBar Sorting (5:52)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547141",
+            "name": "Item List (10:55)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "5547139",
+            "name": "Adding CSS (6:49)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Navigating to the Details",
+        "lessons": [
+          {
+            "chapterId": 60,
+            "id": "5547148",
+            "name": "Overview (0:46)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5547149",
+            "name": "Details Page (3:32)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5547150",
+            "name": "Converting Navigation (6:59)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5547152",
+            "name": "Navigating Back (2:52)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "5547151",
+            "name": "CSS Animation (4:00)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Common Module Conversion",
+        "lessons": [
+          {
+            "chapterId": 70,
+            "id": "5547161",
+            "name": "Overview (0:50)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5547163",
+            "name": "Local Storage (4:00)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "5547162",
+            "name": "File System (3:00)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Plugin Conversion",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "5547172",
+            "name": "Overview (0:56)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5547173",
+            "name": "Replacing Internal Plugins (5:52)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "5547174",
+            "name": "Replacing External Plugins (9:08)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "Final Words",
+        "lessons": [
+          {
+            "chapterId": 90,
+            "id": "5547232",
+            "name": "Comparing Cordova and NativeScript Projects (2:54)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "5547233",
+            "name": "Resources (1:32)",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "329255",
     "title": "NativeScript Hands-On UI",
     "subtitle":
