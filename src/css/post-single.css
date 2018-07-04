@@ -40,8 +40,8 @@
     font-style: normal;
     line-height: 30px;
     color: rgba(38,41,58,.8);
-    padding: 30px;
-    margin-bottom: 50px;
+    padding: 30px 30px 60px 30px;
+
 }
 
 hr.section-divider {

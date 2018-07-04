@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 let Image = require("gatsby-image").default;
 import { Post } from "../../../domain/models/posts/post.model";
 import { getAuthorImgSrc } from "../../../utils/urls";
+import PostCallToAction from "../PostCallToAction/PostCallToAction";
 
 
 interface PostEntryProps {
@@ -63,6 +64,9 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (props: PostE
 
             {posterImage}
 
+            <div>
+                <PostCallToAction />
+            </div>
 
             <div className="post-body">
                 <div className="post-inner">
@@ -74,6 +78,10 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (props: PostE
                         <i>{post.author.bio}</i>
                     </div>
                 </div>
+            </div>
+
+            <div>
+                <PostCallToAction />
             </div>
         </div>
     );
