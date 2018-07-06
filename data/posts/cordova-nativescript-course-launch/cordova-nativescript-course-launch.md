@@ -2,8 +2,8 @@
 path: "/posts/cordova-nativescript-course-launch"
 title: "Cordova to NativeScript Course is Out!"
 author: 'eddy_verbruggen'
-createdDate: '2018-7-5'
-updatedDate: '2018-7-5'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
 draft: false
 tags: ["NativeScript", "Courses", "Tutorial", "Video", "Cordova"]
 image: cordova_nativescript_course_launch_poster.png
