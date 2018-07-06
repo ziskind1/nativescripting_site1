@@ -18,7 +18,7 @@ I know you hybrid developers aren’t about to run and learn native dev skills j
 
 <br/>
 <br/>
-Our new video course for Cordova developers, [Upgrading Cordova Applications to NativeScript](https://nativescripting.com/course/upgrading-cordova-applications-to-nativescript/), is out now. But it’s not like those other Cordova courses, you see this one will show you the similarities and differences to NativeScript, and then show you how to convert a Cordova app to NativeScript. What’s the surprise ending? It’s super easy! Oops I’ve ruined the surprise.
+Our new video course for Cordova developers, <a href="https://nativescripting.com/course/upgrading-cordova-applications-to-nativescript/" target="_blank">Upgrading Cordova Applications to NativeScript</a>, is out now. But it’s not like those other Cordova courses, you see this one will show you the similarities and differences to NativeScript, and then show you how to convert a Cordova app to NativeScript. What’s the surprise ending? It’s super easy! Oops I’ve ruined the surprise.
 <br/>
 <br/>
 
