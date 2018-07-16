@@ -9,6 +9,12 @@
     height: 350px;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.course-container:hover {
+    transition-duration: 300ms;
+    transform: scale(1.03);
 }
 
 .course-card-bg {
