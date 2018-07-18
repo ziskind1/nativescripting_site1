@@ -1,15 +1,16 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { MarkdownRemark, AuthorsJsonConnection } from "../domain/graphql-types";
-import { postFromMarkdownRemark } from "../domain/converters/post-types";
-import { authorFromAuthorsJsonEdge } from "../domain/converters";
-import { PostEntry } from "../components/posts/PostEntry/PostEntry";
-import { BreadCrumbs } from "../components/shared/BreadCrumbs/BreadCrumbs";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import { MarkdownRemark, AuthorsJsonConnection } from '../domain/graphql-types';
+import { postFromMarkdownRemark } from '../domain/converters/post-types';
+import { authorFromAuthorsJsonEdge } from '../domain/converters';
+import { PostEntry } from '../components/posts/PostEntry/PostEntry';
+import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 
-import "prismjs/themes/prism-okaidia.css";
-import "../css/post-single.css";
-import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
-import AddThisBlock from "../components/shared/AddThisBlock/AddThisBlock";
+import 'prismjs/themes/prism-okaidia.css';
+import '../css/post-single.css';
+import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
+import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
+import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 
 interface PostPageProps {
   data: {
@@ -28,9 +29,9 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
   const post = postFromMarkdownRemark(props.data.mdRemark, authors);
 
   const breadCrumbs = [
-    { name: "Courses", url: "/" },
-    { name: "Posts", url: "/posts" },
-    { name: "Current post", url: "" }
+    { name: 'Courses', url: '/' },
+    { name: 'Posts', url: '/posts' },
+    { name: 'Current post', url: '' }
   ];
 
   const pageTitle = `${post.title} | NativeScripting`;
@@ -40,6 +41,8 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
+
+      <CountdownTimer />
 
       <div className="wrapper">
         <div className="breadcrumb-wrapper">

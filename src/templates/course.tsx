@@ -1,6 +1,6 @@
-import * as React from "react";
-import Link from "gatsby-link";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import {
   CoursesJson,
@@ -8,32 +8,33 @@ import {
   CoursesJsonConnection,
   BundlesJsonConnection,
   TestimonialsJsonConnection
-} from "../domain/graphql-types";
+} from '../domain/graphql-types';
 
-import NsLink from "../components/NsLink";
-import { BreadCrumbs } from "../components/shared/BreadCrumbs/BreadCrumbs";
-import { Course, Bundle } from "../domain/models";
+import NsLink from '../components/NsLink';
+import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
+import { Course, Bundle } from '../domain/models';
 import {
   authorFromAuthorsJsonEdge,
   courseFromCoursesJsonEdge,
   coursefromCoursesJson,
   testimonialFromTestimonialJsonEdge
-} from "../domain/converters";
-import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
-import { CourseMeta } from "../components/courseDetails/CourseMeta/CourseMeta";
-import { CourseDetailsBody } from "../components/courseDetails/CourseDetailsBody/CourseDetailsBody";
-import Quotes from "../components/Quotes/Quotes";
-import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
-import { CourseBanner } from "../components/courseDetails/CourseBanner/CourseBanner";
+} from '../domain/converters';
+import { bundleFromBundlesJsonEdge } from '../domain/converters/bundle-types';
+import { CourseMeta } from '../components/courseDetails/CourseMeta/CourseMeta';
+import { CourseDetailsBody } from '../components/courseDetails/CourseDetailsBody/CourseDetailsBody';
+import Quotes from '../components/Quotes/Quotes';
+import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
+import { CourseBanner } from '../components/courseDetails/CourseBanner/CourseBanner';
 
-import { CourseMetaCard } from "../components/courseDetails/CourseMetaCard/CourseMetaCard";
-import { CourseBundleArea } from "../components/courseDetails/CourseBundleArea/CourseBundleArea";
-import { CoursePurchaseArea } from "../components/courseDetails/CoursePurchaseArea/CoursePurchaseArea";
-import BundleSection from "../components/home/BundleSection/BundleSection";
-import { CourseCurriculum } from "../components/courseDetails/CourseCurriculum/CourseCurriculum";
+import { CourseMetaCard } from '../components/courseDetails/CourseMetaCard/CourseMetaCard';
+import { CourseBundleArea } from '../components/courseDetails/CourseBundleArea/CourseBundleArea';
+import { CoursePurchaseArea } from '../components/courseDetails/CoursePurchaseArea/CoursePurchaseArea';
+import BundleSection from '../components/home/BundleSection/BundleSection';
+import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/CourseCurriculum';
 
-import "../css/course-details.css";
-import Testimonials from "../components/Testimonials/Testimonials";
+import '../css/course-details.css';
+import Testimonials from '../components/Testimonials/Testimonials';
+import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -94,8 +95,8 @@ class CourseTemplate extends React.Component<
     const course = this.state.course;
     const title = this.props.data.courseConnection.title;
     const breadCrumbs = [
-      { name: "All courses", url: "/" },
-      { name: "Course details", url: "" }
+      { name: 'All courses', url: '/' },
+      { name: 'Course details', url: '' }
     ];
 
     let notesHeader = null;
@@ -111,42 +112,46 @@ class CourseTemplate extends React.Component<
     const pageTitle = `${course.title} | NativeScripting`;
 
     return (
-      <div className="wrapper">
+      <div>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
 
-        <div className="course-details-container">
-          <div className="breadcrumb-wrapper">
-            <BreadCrumbs breadcrumbs={breadCrumbs} />
-          </div>
+        <CountdownTimer />
 
-          <CourseBanner course={course} />
-
-          <div className="course-details-wrapper">
-            <div className="course-details-pane">
-              <CourseMetaCard course={course} />
+        <div className="wrapper">
+          <div className="course-details-container">
+            <div className="breadcrumb-wrapper">
+              <BreadCrumbs breadcrumbs={breadCrumbs} />
             </div>
 
-            <div className="course-details-pane">
-              <CoursePurchaseArea course={course} />
+            <CourseBanner course={course} />
+
+            <div className="course-details-wrapper">
+              <div className="course-details-pane">
+                <CourseMetaCard course={course} />
+              </div>
+
+              <div className="course-details-pane">
+                <CoursePurchaseArea course={course} />
+              </div>
             </div>
+
+            <div className="course-description-wrapper">
+              <h2>What you'll learn</h2>
+              <p>{course.description}</p>
+              {notesHeader}
+              {notesHtml}
+            </div>
+
+            <CourseCurriculum course={course} />
+
+            <Testimonials testimonials={testimonials} />
+
+            <BundleSection bundles={this.state.bundles} />
+
+            <SignUpSection />
           </div>
-
-          <div className="course-description-wrapper">
-            <h2>What you'll learn</h2>
-            <p>{course.description}</p>
-            {notesHeader}
-            {notesHtml}
-          </div>
-
-          <CourseCurriculum course={course} />
-
-          <Testimonials testimonials={testimonials} />
-
-          <BundleSection bundles={this.state.bundles} />
-
-          <SignUpSection />
         </div>
       </div>
     );

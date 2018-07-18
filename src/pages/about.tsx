@@ -1,14 +1,15 @@
-import * as React from "react";
-import Link from "gatsby-link";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
-import { AuthorsJsonConnection } from "../domain/graphql-types";
-import { authorFromAuthorsJsonEdge } from "../domain/converters";
+import { AuthorsJsonConnection } from '../domain/graphql-types';
+import { authorFromAuthorsJsonEdge } from '../domain/converters';
 
-import { AuthorCardList } from "../components/about/AuthorCardList";
-import { BreadCrumbs } from "../components/shared/BreadCrumbs/BreadCrumbs";
+import { AuthorCardList } from '../components/about/AuthorCardList';
+import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 
-import "../css/about.css";
+import '../css/about.css';
+import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -25,7 +26,7 @@ export default class extends React.Component<AboutPageProps, {}> {
 
   public render() {
     const clearStyle = {
-      clear: "both"
+      clear: 'both'
     };
 
     const authors = this.props.data.authorsConnection.edges.map(
@@ -33,54 +34,59 @@ export default class extends React.Component<AboutPageProps, {}> {
     );
 
     const breadCrumbs = [
-      { name: "All courses", url: "/" },
-      { name: "About", url: "" }
+      { name: 'All courses', url: '/' },
+      { name: 'About', url: '' }
     ];
 
     const pageTitle = `About | NativeScripting`;
 
     return (
-      <div className="wrapper">
+      <div>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
 
-        <div className="about-page-container">
-          <div className="breadcrumb-wrapper">
-            <BreadCrumbs breadcrumbs={breadCrumbs} />
-          </div>
+        <CountdownTimer />
 
-          <div className="about-top-block">
-            <h2>The most comprehensive NativeScript training</h2>
-            <p>
-              NativeScripting is a single place for high quality, evergreen, on
-              demand video learning for NativeScript. Created by Alex Ziskind,
-              who has also authored courses for Pluralsight and LinkedIn,
-              NativeScripting offers up to date video content that is delivered
-              to the learner quickly, just as the versions of NativeScript
-              change quickly. This is the single place for top NativeScript
-              experts to share their knowledge with the world, in video form.
-            </p>
-          </div>
+        <div className="wrapper">
+          <div className="about-page-container">
+            <div className="breadcrumb-wrapper">
+              <BreadCrumbs breadcrumbs={breadCrumbs} />
+            </div>
 
-          <div style={clearStyle} />
+            <div className="about-top-block">
+              <h2>The most comprehensive NativeScript training</h2>
+              <p>
+                NativeScripting is a single place for high quality, evergreen,
+                on demand video learning for NativeScript. Created by Alex
+                Ziskind, who has also authored courses for Pluralsight and
+                LinkedIn, NativeScripting offers up to date video content that
+                is delivered to the learner quickly, just as the versions of
+                NativeScript change quickly. This is the single place for top
+                NativeScript experts to share their knowledge with the world, in
+                video form.
+              </p>
+            </div>
 
-          <AuthorCardList authors={authors} />
+            <div style={clearStyle} />
 
-          <div style={clearStyle} />
+            <AuthorCardList authors={authors} />
 
-          <div className="video-container">
-            <div className="about-row">
-              <h2>About NativeScripting</h2>
+            <div style={clearStyle} />
 
-              <div className="video-wrapper">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/3isPtd8Q6rI"
-                  frameBorder="0"
-                  allowFullScreen
-                />
+            <div className="video-container">
+              <div className="about-row">
+                <h2>About NativeScripting</h2>
+
+                <div className="video-wrapper">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3isPtd8Q6rI"
+                    frameBorder="0"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </div>

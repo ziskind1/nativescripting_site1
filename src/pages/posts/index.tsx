@@ -1,21 +1,22 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
-let Image = require("gatsby-image").default;
+let Image = require('gatsby-image').default;
 import {
   MarkdownRemarkConnection,
   ImageSharp,
   AuthorsJsonConnection
-} from "../../domain/graphql-types";
-import { PostsSection } from "../../components/posts/PostsSection/PostsSection";
-import { authorFromAuthorsJsonEdge } from "../../domain/converters";
-import { Author } from "../../domain/models";
-import { postFromMarkdownRemark } from "../../domain/converters/post-types";
-import { BreadCrumbs } from "../../components/shared/BreadCrumbs/BreadCrumbs";
+} from '../../domain/graphql-types';
+import { PostsSection } from '../../components/posts/PostsSection/PostsSection';
+import { authorFromAuthorsJsonEdge } from '../../domain/converters';
+import { Author } from '../../domain/models';
+import { postFromMarkdownRemark } from '../../domain/converters/post-types';
+import { BreadCrumbs } from '../../components/shared/BreadCrumbs/BreadCrumbs';
 
-import "../../css/posts.css";
-import SignUpSection from "../../components/shared/SignUpSection/SignUpSection";
-import AddThisBlock from "../../components/shared/AddThisBlock/AddThisBlock";
+import '../../css/posts.css';
+import SignUpSection from '../../components/shared/SignUpSection/SignUpSection';
+import AddThisBlock from '../../components/shared/AddThisBlock/AddThisBlock';
+import CountdownTimer from '../../components/shared/CountdownTimer/CountdownTimer';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -51,29 +52,33 @@ export default class extends React.Component<PostsIndexPageProps, {}> {
     );
 
     const breadCrumbs = [
-      { name: "All courses", url: "/" },
-      { name: "Posts", url: "" }
+      { name: 'All courses', url: '/' },
+      { name: 'Posts', url: '' }
     ];
 
     const pageTitle = `Posts | NativeScripting`;
 
     return (
-      <div className="wrapper">
+      <div>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
 
-        <div className="posts-container">
-          <div className="breadcrumb-wrapper">
-            <BreadCrumbs breadcrumbs={breadCrumbs} />
+        <CountdownTimer />
+
+        <div className="wrapper">
+          <div className="posts-container">
+            <div className="breadcrumb-wrapper">
+              <BreadCrumbs breadcrumbs={breadCrumbs} />
+            </div>
+
+            <PostsSection posts={posts} />
           </div>
 
-          <PostsSection posts={posts} />
+          <SignUpSection />
+
+          <AddThisBlock />
         </div>
-
-        <SignUpSection />
-
-        <AddThisBlock />
       </div>
     );
   }

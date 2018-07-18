@@ -1,6 +1,6 @@
-import * as React from "react";
-import Link from "gatsby-link";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import {
   AuthorsJsonConnection,
@@ -8,29 +8,30 @@ import {
   CoursesJsonEdge,
   BundlesJsonConnection,
   TestimonialsJsonConnection
-} from "../domain/graphql-types";
+} from '../domain/graphql-types';
 
 import {
   authorFromAuthorsJsonEdge,
   courseFromCoursesJsonEdge,
   testimonialFromTestimonialJsonEdge
-} from "../domain/converters";
-import { Course, CourseFlavorType } from "../domain/models";
+} from '../domain/converters';
+import { Course, CourseFlavorType } from '../domain/models';
 
-import Hero from "../components/home/Hero/Hero";
-import { bundleFromBundlesJsonEdge } from "../domain/converters/bundle-types";
-import ActionButton from "../components/ActionButton/ActionButton";
-import BundleSection from "../components/home/BundleSection/BundleSection";
-import CoursesSection from "../components/home/CoursesSection/CoursesSection";
-import { CourseFilterType } from "../components/home/CourseFilter/CourseFilter";
-import SubHeroSection from "../components/home/SubHeroSection/SubHeroSection";
-import Benefits from "../components/home/Benefits/Benefits";
-import Logos from "../components/home/Logos/Logos";
-import Quotes from "../components/Quotes/Quotes";
-import SignUpSection from "../components/shared/SignUpSection/SignUpSection";
-import AddThisBlock from "../components/shared/AddThisBlock/AddThisBlock";
-import { scrollToElementById } from "../utils/scrolling";
-import Testimonials from "../components/Testimonials/Testimonials";
+import Hero from '../components/home/Hero/Hero';
+import { bundleFromBundlesJsonEdge } from '../domain/converters/bundle-types';
+import ActionButton from '../components/ActionButton/ActionButton';
+import BundleSection from '../components/home/BundleSection/BundleSection';
+import CoursesSection from '../components/home/CoursesSection/CoursesSection';
+import { CourseFilterType } from '../components/home/CourseFilter/CourseFilter';
+import SubHeroSection from '../components/home/SubHeroSection/SubHeroSection';
+import Benefits from '../components/home/Benefits/Benefits';
+import Logos from '../components/home/Logos/Logos';
+import Quotes from '../components/Quotes/Quotes';
+import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
+import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
+import { scrollToElementById } from '../utils/scrolling';
+import Testimonials from '../components/Testimonials/Testimonials';
+import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -62,19 +63,19 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
     this.state = {
       courses: courses,
-      selectedFilterType: "All"
+      selectedFilterType: 'All'
     };
   }
 
   private freeCoursesSelected() {
-    this.setState({ selectedFilterType: "Free" }, () => {
-      this.scrollToElementById("courses");
+    this.setState({ selectedFilterType: 'Free' }, () => {
+      this.scrollToElementById('courses');
     });
   }
 
   private premiumCoursesSelected() {
-    this.setState({ selectedFilterType: "All" }, () => {
-      this.scrollToElementById("courses");
+    this.setState({ selectedFilterType: 'All' }, () => {
+      this.scrollToElementById('courses');
     });
   }
 
@@ -88,16 +89,16 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
   private getFilteredCourses(filterType: CourseFilterType): Course[] {
     switch (filterType) {
-      case "All":
+      case 'All':
         return this.state.courses;
-      case "Free":
+      case 'Free':
         return this.state.courses.filter(c =>
           c.products.some(p => p.pricereg === 0)
         );
-      case "Core":
-        return this.state.courses.filter(c => c.flavors.includes("Core"));
-      case "Angular":
-        return this.state.courses.filter(c => c.flavors.includes("Angular"));
+      case 'Core':
+        return this.state.courses.filter(c => c.flavors.includes('Core'));
+      case 'Angular':
+        return this.state.courses.filter(c => c.flavors.includes('Angular'));
       default:
         return this.state.courses;
     }
@@ -131,6 +132,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
+
+        <CountdownTimer />
 
         <Hero />
         <SubHeroSection

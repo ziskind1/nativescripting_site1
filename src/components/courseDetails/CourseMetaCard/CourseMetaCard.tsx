@@ -1,9 +1,9 @@
-import * as React from "react";
-import { Course } from "../../../domain/models";
-import { CourseAuthorsCard } from "../CourseAuthorsCard/CourseAuthorsCard";
-import { CourseCoverage } from "../CourseCoverage/CourseCoverage";
+import * as React from 'react';
+import { Course } from '../../../domain/models';
+import { CourseAuthorsCard } from '../CourseAuthorsCard/CourseAuthorsCard';
+import { CourseCoverage } from '../CourseCoverage/CourseCoverage';
 
-import "./CourseMetaCard.css";
+import './CourseMetaCard.css';
 
 interface CourseMetaCardProps {
   course: Course;

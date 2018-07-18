@@ -1,0 +1,168 @@
+.countdown-timer-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+  background-color: #f4b535;
+  width: 100%;
+  height: 76px;
+  box-shadow: 0 4px 8px #272727;
+}
+.countdown-timer-wrapper.show {
+  display: block;
+  position: fixed;
+  top: 0;
+}
+.with-countdown-timer {
+  margin-top: 76px;
+  transition-duration: 300ms;
+}
+
+.timer-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+
+.timer-heading {
+}
+
+.timer-contents h2 {
+  align-self: center;
+}
+
+.timer-contents h2 span.oomph {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.timer-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.timer-contents h3 {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.timer-parts-list {
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.timer-parts-list li {
+  background-color: #eca920;
+  width: 70px;
+  height: 50px;
+  margin-left: 2px;
+  box-shadow: 0 1px 1px #63460d;
+}
+
+.timer-part-number {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0px;
+  margin: 0px;
+  color: #12ffcd;
+}
+
+.timer-parts-list li span {
+  font-size: 10px;
+  color: #eeeeee;
+}
+
+.timer-cta-btn-container {
+  margin: auto auto;
+  width: 200px;
+}
+
+@media only screen and (min-width: 1160px) {
+  .timer-contents {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .timer-contents h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 926px) {
+  .timer-contents h2 {
+    font-size: 1em;
+  }
+  .timer-parts-list li {
+    width: 60px;
+    height: 40px;
+  }
+
+  .timer-part-number {
+    margin-top: 2px;
+    font-size: 24px;
+    line-height: 18px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .timer-contents h2 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .countdown-timer-wrapper {
+    height: 120px;
+  }
+  .with-countdown-timer {
+    margin-top: 120px;
+  }
+  .timer-contents {
+    flex-wrap: wrap;
+  }
+  .timer-heading {
+    align-self: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+  .timer-contents h2 {
+    font-size: 1.4em;
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .countdown-timer-wrapper {
+    height: 150px;
+  }
+  .with-countdown-timer {
+    margin-top: 150px;
+  }
+  .timer-contents {
+    flex-wrap: wrap;
+  }
+
+  .timer-contents h2 {
+    font-size: 1em;
+    line-height: 0.8em;
+  }
+  .timer-contents h3 {
+    font-size: 0.9em;
+    line-height: 0.8em;
+  }
+  .timer-section {
+    width: 100%;
+  }
+  .timer-cta-btn-wrapper {
+    margin-top: 5px;
+    width: 100%;
+  }
+}

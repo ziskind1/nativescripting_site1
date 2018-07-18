@@ -1,210 +1,232 @@
 @font-face {
-    font-family: "OpenSansRegular";
-    src: url("fonts/OpenSansRegular/OpenSansRegular.eot");
-    src: url("fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal; }
-  @font-face {
-    font-family: "OpenSansLight";
-    src: url("fonts/OpenSansLight/OpenSansLight.eot");
-    src: url("fonts/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal; }
-  @font-face {
-    font-family: "OpenSansBold";
-    src: url("fonts/OpenSansBold/OpenSansBold.eot");
-    src: url("fonts/OpenSansBold/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansBold/OpenSansBold.woff") format("woff"), url("fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal; }
-  @font-face {
-    font-family: "MonoRegular";
-    src: url("fonts/overpass-mono-regular.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal; }
-  @font-face {
-    font-family: "MonoBold";
-    src: url("fonts/overpass-mono-bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal; }
-  @font-face {
-    font-family: "MonoLight";
-    src: url("fonts/overpass-mono-light.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal; }
+  font-family: 'OpenSansRegular';
+  src: url('fonts/OpenSansRegular/OpenSansRegular.eot');
+  src: url('fonts/OpenSansRegular/OpenSansRegular.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/OpenSansRegular/OpenSansRegular.woff') format('woff'),
+    url('fonts/OpenSansRegular/OpenSansRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('fonts/OpenSansLight/OpenSansLight.eot');
+  src: url('fonts/OpenSansLight/OpenSansLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/OpenSansLight/OpenSansLight.woff') format('woff'),
+    url('fonts/OpenSansLight/OpenSansLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('fonts/OpenSansBold/OpenSansBold.eot');
+  src: url('fonts/OpenSansBold/OpenSansBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/OpenSansBold/OpenSansBold.woff') format('woff'),
+    url('fonts/OpenSansBold/OpenSansBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'MonoRegular';
+  src: url('fonts/overpass-mono-regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'MonoBold';
+  src: url('fonts/overpass-mono-bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'MonoLight';
+  src: url('fonts/overpass-mono-light.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
 
 html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: transparent; 
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #09224a;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #ffffff;  
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #09224a;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #ffffff;
+}
+
+#___gatsby {
+  transition: all 0.3s ease;
 }
 
 a {
-    color: #337ab7;
-    text-decoration: none; 
+  color: #337ab7;
+  text-decoration: none;
 }
 
 img {
-    vertical-align: middle; 
+  vertical-align: middle;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; 
-}
-  
-*:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #8eabe1;
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-::-moz-placeholder { /* Firefox 19+ */
-    color: #8eabe1;
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #8eabe1;
 }
-:-ms-input-placeholder { /* IE 10+ */
-    color: #8eabe1;
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8eabe1;
 }
-:-moz-placeholder { /* Firefox 18- */
-    color: #8eabe1;
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8eabe1;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8eabe1;
 }
 
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
-  }
+}
 
 .section {
-    padding-top: 120px;
-    position: relative;
+  padding-top: 120px;
+  position: relative;
 }
 
 .wrapper {
-    max-width: 1140px;
-    margin: auto;
-    padding: 0 10px;
-    position: relative;
-    z-index: 10;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .heading {
-    font-family: "MonoRegular";
-    text-align: center;
-    max-width: 860px;
-    margin: 0 auto 80px;
+  font-family: 'MonoRegular';
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 80px;
 }
 
 .heading h2 {
-    letter-spacing: -3px;
+  letter-spacing: -3px;
 }
 
 .site-logo-img {
-    display: inline;
+  display: inline;
 }
 
 .site-logo-icon-img {
-    display: none;
+  display: none;
 }
 
 .breadcrumb-wrapper {
-    display: flex;
-    height: 40px;
-    margin: 20px 0 0 0;
+  display: flex;
+  height: 40px;
+  margin: 20px 0 0 0;
 }
 
 @media only screen and (max-width: 860px) {
-    .heading {
-        margin: 0 auto 60px;
-    }
+  .heading {
+    margin: 0 auto 60px;
+  }
 }
 
 .heading__title {
-    font-weight: 400;
-    font-size: 56px;
+  font-weight: 400;
+  font-size: 56px;
 }
 
 @media only screen and (max-width: 860px) {
-    .heading__title {
-        font-size: 48px;
-    }
+  .heading__title {
+    font-size: 48px;
+  }
 }
 @media only screen and (max-width: 560px) {
-    .heading__title {
-        font-size: 38px;
-        line-height: 46px;
-    }
+  .heading__title {
+    font-size: 38px;
+    line-height: 46px;
+  }
 
-    .site-logo-img {
-        display: none;
-    }
-    
-    .site-logo-icon-img {
-        display: inline;
-    }
-    
+  .site-logo-img {
+    display: none;
+  }
+
+  .site-logo-icon-img {
+    display: inline;
+  }
 }
 
 .heading__text {
-    font-size: 18px;
-    margin-top: 20px;
+  font-size: 18px;
+  margin-top: 20px;
 }
-
 
 /* Code blocks (Fix a strange bug with prismjs) */
 pre {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-    border-radius: 0.3em;
-    background: #272822;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+  background: #272822;
 }
-  
+
 .video-container {
-    margin-top: 20px;
-    margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 0px;
-    height: 0;
-    margin: 8px;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+  margin: 8px;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .course-tag {
-    padding: 5px;
-    color: #09224a !important;
-    font-weight: bold;
-    font-size: smaller;
-    background-color: #F0AE26;
+  padding: 5px;
+  color: #09224a !important;
+  font-weight: bold;
+  font-size: smaller;
+  background-color: #f0ae26;
 }
-  
+
 .course-tag.course-tag-new {
-    color: #ffffff !important;;
-    background-color: #B517EC;
+  color: #ffffff !important;
+  background-color: #b517ec;
 }
