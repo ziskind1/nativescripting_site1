@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import './CountdownTimer.css';
 import {
@@ -90,7 +89,7 @@ class CountdownTimer extends React.Component<
         <div className="timer-contents">
           <div className="timer-heading">
             <h2>
-              <span className="oomph">50%</span> off the NativeScript Hands-on
+              <span className="oomph">51%</span> off the NativeScript Hands-on
               UI Course
             </h2>
           </div>
