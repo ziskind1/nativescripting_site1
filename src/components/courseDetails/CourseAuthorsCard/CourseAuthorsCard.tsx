@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Author } from "../../../domain/models";
+import * as React from 'react';
+import { Author } from '../../../domain/models';
 
-import "./CourseAuthorsCard.css";
+import './CourseAuthorsCard.css';
 
 interface CourseAuthorsCardProps {
   authors: Author[];
@@ -12,12 +12,12 @@ export const CourseAuthorsCard: React.StatelessComponent<
 > = (props: CourseAuthorsCardProps) => {
   const authors = props.authors;
 
-  const authorCardTitle = authors.length > 1 ? "Authors" : "Author";
+  const authorCardTitle = authors.length > 1 ? 'Authors' : 'Author';
 
   const authorsHtml = authors.map(a => {
     const authorImgSrc = `/img/authors/${a.picture}`;
     return (
-      <div className="course-author-block">
+      <div key={a.id} className="course-author-block">
         <div className="course-author-name-block">
           <div>
             <h3>{a.name}</h3>
