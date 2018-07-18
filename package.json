@@ -9,6 +9,9 @@
     "serve": "gatsby serve",
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "dependencies": {
     "@tweenjs/tween.js": "17.2.0",
     "@types/node": "8.10.7",
