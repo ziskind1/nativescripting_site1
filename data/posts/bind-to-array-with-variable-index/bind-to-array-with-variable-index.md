@@ -39,8 +39,10 @@ First, a little bit of setup. Here are the files involved in this NativeScript C
               <SegmentedBarItem title="{N} - Vue" />
             </SegmentedBar.items>
           </SegmentedBar>
-          <Label class="h3 m-10 text-center" text="{{ text index, text[index] }}" />
-          <Image width="250" src="{{ images index, images[index] }}" />
+          <!--  Bind the label to `index`th element in the `text` array -->
+          <Label class="h3 m-10 text-center" text="" />
+          <!--  Bind the src to `index`th element in the `images` array -->
+          <Image width="250" src="" />
         </FlexboxLayout>
       </Page>
 ```
