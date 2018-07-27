@@ -10,6 +10,7 @@ import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 
 import '../css/about.css';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -89,6 +90,8 @@ export default class extends React.Component<AboutPageProps, {}> {
                 </div>
               </div>
             </div>
+
+            <SignUpSection />
           </div>
         </div>
       </div>
@@ -99,7 +102,7 @@ export default class extends React.Component<AboutPageProps, {}> {
 export const aboutPageQuery = graphql`
   query AboutPageQuery {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
+    authorsConnection: allAuthorsJson {
       totalCount
       edges {
         node {
