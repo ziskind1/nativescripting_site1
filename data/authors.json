@@ -52,6 +52,19 @@
     "types": ["course", "post"]
   },
   {
+    "id": "shiva_prasad",
+    "name": "Shiva Prasad",
+    "picture": "shiva_prasad.png",
+    "bio":
+      "Shiva lives in Bangalore, India. He's a speaker, trainer, NativeScript Developer Expert and a Partner at nStudio.io. He is an Angular Evangelist and a Machine Learning Enthusiast.",
+    "biolong":
+      "Shiva lives in Bangalore, India. He's a speaker, trainer, NativeScript Developer Expert and a Partner at nStudio.io. He is an Angular Evangelist and a Machine Learning Enthusiast.",
+    "title": "NativeScript Expert",
+    "twitter": "multishiv19",
+    "github": "shiv19",
+    "types": ["post"]
+  },
+  {
     "id": "alex_ziskind",
     "name": "Alex Ziskind",
     "picture": "alex_ziskind.png",
