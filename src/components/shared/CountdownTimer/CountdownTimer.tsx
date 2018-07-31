@@ -6,7 +6,7 @@ import {
   ActionButtonProps
 } from '../../ActionButton/ActionButton';
 
-const expirationDateStr = 'Jul 31, 2018 11:59:59';
+const expirationDateStr = 'Jul 31, 2018 23:59:59';
 const ctaUrl = '/course/nativescript-hands-on-ui';
 
 interface CountdownTimerProps {
