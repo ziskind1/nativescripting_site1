@@ -168,18 +168,18 @@ img {
     font-size: 48px;
   }
 }
+@media only screen and (max-width: 624px) {
+  .site-logo-img {
+    display: none;
+  }
+  .site-logo-icon-img {
+    display: inline;
+  }
+}
 @media only screen and (max-width: 560px) {
   .heading__title {
     font-size: 38px;
     line-height: 46px;
-  }
-
-  .site-logo-img {
-    display: none;
-  }
-
-  .site-logo-icon-img {
-    display: inline;
   }
 }
 
