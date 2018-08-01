@@ -58,6 +58,7 @@ typings/
 .env
 
 .cache/
+.cache_*
 public
 yarn-error.log
 *_old
