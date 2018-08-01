@@ -55,18 +55,9 @@ export default class extends React.Component<AboutPageProps, {}> {
               <BreadCrumbs breadcrumbs={breadCrumbs} />
             </div>
 
-            <div className="about-top-block">
-              <h2>The most comprehensive NativeScript training</h2>
-              <p>
-                NativeScripting is a single place for high quality, evergreen,
-                on demand video learning for NativeScript. Created by Alex
-                Ziskind, who has also authored courses for Pluralsight and
-                LinkedIn, NativeScripting offers up to date video content that
-                is delivered to the learner quickly, just as the versions of
-                NativeScript change quickly. This is the single place for top
-                NativeScript experts to share their knowledge with the world, in
-                video form.
-              </p>
+            <div className="about-team">
+              <h2>Meet the awesome team behind</h2>
+              <h3>the most comprehensive NativeScript training</h3>
             </div>
 
             <div style={clearStyle} />
@@ -76,8 +67,21 @@ export default class extends React.Component<AboutPageProps, {}> {
             <div style={clearStyle} />
 
             <div className="video-container">
-              <div className="about-row">
-                <h2>About NativeScripting</h2>
+              <div className="about-row about-top-block">
+                <h2>About the most comprehensive NativeScript training</h2>
+
+                <div className="wrapper">
+                  <p>
+                    NativeScripting is a single place for high quality,
+                    evergreen, on demand video learning for NativeScript.
+                    Created by Alex Ziskind, who has also authored courses for
+                    Pluralsight and LinkedIn, NativeScripting offers up to date
+                    video content that is delivered to the learner quickly, just
+                    as the versions of NativeScript change quickly. This is the
+                    single place for top NativeScript experts to share their
+                    knowledge with the world, in video form.
+                  </p>
+                </div>
 
                 <div className="video-wrapper">
                   <iframe

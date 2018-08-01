@@ -45,7 +45,9 @@
 .about-authors-container a {
   color: #11f5ff;
 }
-.about-authors-container h2 {
+.about-authors-container h2,
+.about-team h2,
+.about-team h3 {
   color: #12ffcd;
   font-family: 'MonoRegular';
   font-size: 22px;
@@ -54,6 +56,16 @@
   line-height: 24px;
   letter-spacing: 1px;
   margin: 60px 0px 20px 0px;
+}
+
+.about-team h2 {
+  font-size: 42px;
+  line-height: 38px;
+  margin: 30px 0px 20px 0px;
+}
+.about-team h3 {
+  margin: 10px 0px 20px 0px;
+  color: #11f5ff;
 }
 
 .about-authors-wrapper {
@@ -130,6 +142,14 @@
 }
 .about-author-link-img {
   height: 40px;
+}
+
+@media (max-width: 790px) {
+  .about-team h2 {
+    font-size: 34px;
+    line-height: 30px;
+    margin: 30px 0px 20px 0px;
+  }
 }
 
 @media (min-width: 768px) {
