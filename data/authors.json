@@ -65,6 +65,19 @@
     "types": ["post"]
   },
   {
+    "id": "royi_namir",
+    "name": "Royi Namir",
+    "picture": "royi_namir.png",
+    "bio":
+      "Royi lives in Israel. He's a Stackoverflow addict, full stack developer and internals enthusiast.",
+    "biolong":
+      "Royi is a fullstack programmer from Israel, who has many years experience in programming Angular, C#, SQL, .Net, security, and building systems from scratch. He's also a NativeScript enthusiast. He loves new technologies, internals and to see clever code. He's been around for many years in Stackoverflow; contributing, asking, and helping. If he finds that something can be done much faster, or in a simpler way, you will know it.",
+    "title": "Fullstack Programmer",
+    "twitter": "Royi_Namir",
+    "github": "RoyiNamir",
+    "types": ["post"]
+  },
+  {
     "id": "alex_ziskind",
     "name": "Alex Ziskind",
     "picture": "alex_ziskind.png",
