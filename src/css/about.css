@@ -135,7 +135,7 @@
 @media (min-width: 768px) {
   .about-author-wrapper {
     flex: 1;
-    flex-basis: 260px;
+    flex-basis: 250px;
   }
 }
 
