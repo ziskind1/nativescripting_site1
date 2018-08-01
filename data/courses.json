@@ -353,15 +353,15 @@
     "flavors": ["Core", "Angular"],
     "level": 1,
     "order": 100,
-    "label": "SALE",
+    "label": "NEW",
     "launchdate": "05/11/2018",
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "726820",
-        "name": "Single user sale price",
+        "id": "644441",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 24,
+        "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
