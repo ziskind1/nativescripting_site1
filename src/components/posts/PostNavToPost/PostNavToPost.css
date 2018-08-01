@@ -1,0 +1,32 @@
+.post-nav-item-wrapper {
+  max-width: 40%;
+  transition: all 0.3s ease;
+  padding: 20px 40px 10px 40px;
+}
+
+.post-nav-item-wrapper:hover {
+  transition-duration: 300ms;
+  transform: scale(1.01);
+}
+
+.post-nav-item-wrapper:hover .post-img-container {
+  transition-duration: 300ms;
+  transform: scale(1.03);
+}
+
+.post-nav-item-wrapper:hover h2 {
+  transition-duration: 300ms;
+  color: #ffffff;
+}
+
+.post-nav-item-wrapper:hover p.zoom {
+  transition-duration: 300ms;
+  color: #eeeeee;
+}
+
+@media only screen and (max-width: 800px) {
+  .post-nav-item-wrapper {
+    max-width: 100%;
+    padding: 20px 40px 0px 40px;
+  }
+}

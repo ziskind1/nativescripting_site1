@@ -11,11 +11,14 @@ import '../css/post-single.css';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+import { PostNavToPost } from '../components/posts/PostNavToPost/PostNavToPost';
 
 interface PostPageProps {
   data: {
     authorsConnection: AuthorsJsonConnection;
     mdRemark: MarkdownRemark;
+    mdRemarkPrev: MarkdownRemark;
+    mdRemarkNext: MarkdownRemark;
   };
 }
 
@@ -36,6 +39,9 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
 
   const pageTitle = `${post.title} | NativeScripting`;
 
+  const postPrev = postFromMarkdownRemark(props.data.mdRemarkPrev, authors);
+  const postNext = postFromMarkdownRemark(props.data.mdRemarkNext, authors);
+
   return (
     <div>
       <Helmet>
@@ -52,6 +58,13 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
 
       <PostEntry post={post} />
 
+      <div className="wrapper">
+        <div className="post-nav-container">
+          <PostNavToPost prefix="Previous" post={postPrev} />
+          <PostNavToPost prefix="Next" post={postNext} />
+        </div>
+      </div>
+
       <SignUpSection />
 
       <AddThisBlock />
@@ -60,7 +73,11 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
 };
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+  query BlogPostQuery(
+    $slug: String!
+    $prevPostPath: String!
+    $nextPostPath: String!
+  ) {
     #get authors
     authorsConnection: allAuthorsJson(filter: { types: { in: "post" } }) {
       totalCount
@@ -84,6 +101,58 @@ export const query = graphql`
       timeToRead
       excerpt
       html
+      frontmatter {
+        title
+        path
+        author
+        updatedDate(formatString: "DD MMMM, YYYY")
+        image {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            responsiveSizes(maxWidth: 1000) {
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    }
+
+    #get prev post
+    mdRemarkPrev: markdownRemark(frontmatter: { path: { eq: $prevPostPath } }) {
+      id
+      timeToRead
+      excerpt
+      frontmatter {
+        title
+        path
+        author
+        updatedDate(formatString: "DD MMMM, YYYY")
+        image {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            responsiveSizes(maxWidth: 1000) {
+              base64
+              aspectRatio
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    }
+
+    #get next post
+    mdRemarkNext: markdownRemark(frontmatter: { path: { eq: $nextPostPath } }) {
+      id
+      timeToRead
+      excerpt
       frontmatter {
         title
         path
