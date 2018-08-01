@@ -152,6 +152,25 @@ img {
   margin: 20px 0 0 0;
 }
 
+/* overrides for code highlighting plugin styles*/
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #09224a !important;
+}
+
+:not(pre) > code[class*='language-'] {
+  background: #032e74 !important;
+}
+
+:not(pre) > code[class*='language-'] {
+  border-radius: 3px !important;
+}
+code,
+kbd,
+samp {
+  font-size: 0.8em !important;
+}
+
 @media only screen and (max-width: 860px) {
   .heading {
     margin: 0 auto 60px;
