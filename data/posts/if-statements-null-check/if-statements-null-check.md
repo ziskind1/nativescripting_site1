@@ -6,7 +6,7 @@ createdDate: '2018-08-01'
 updatedDate: '2018-08-01'
 draft: false
 tags: ["NativeScript", "JavaScript", "TypeScript", "Tip"]
-image: if-statements-null-check-poster.png
+image: if-statements-null-check-poster-v2.png
 ---
 
 JavaScript developers have a dirty secret: how we handle null and undefined variables in nested objects.
