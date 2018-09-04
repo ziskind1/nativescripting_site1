@@ -33,12 +33,11 @@
   {
     "id": "171483",
     "title": "NativeScript with Angular Ultra",
-    "subtitle":
-      "Get as much NativeScript with Angular Knowledge as You Can Handle",
+    "subtitle": "Get as much NativeScript with Angular Knowledge as You Can Handle",
     "description": "\n",
     "url": "nativescript-with-angular-ultra-bundle",
     "promototal": 100,
-    "promoremaining": 25,
+    "promoremaining": 23,
     "bundleLevel": 2,
     "products": [
       {
@@ -69,7 +68,7 @@
     "description": "\n",
     "url": "nativescript-core-master-bundle",
     "promototal": 100,
-    "promoremaining": 43,
+    "promoremaining": 41,
     "bundleLevel": 3,
     "products": [
       {
