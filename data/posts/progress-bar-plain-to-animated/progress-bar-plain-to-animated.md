@@ -1,11 +1,11 @@
 ---
-path: "/posts/progress-bar-plain-to-animated"
-title: "Progress Bar: Plain to Animated"
+path: '/posts/progress-bar-plain-to-animated'
+title: 'Progress Bar: Plain to Animated'
 author: 'alex_ziskind'
 createdDate: '2018-07-27'
-updatedDate: '2018-07-27'
+updatedDate: '2018-09-04'
 draft: false
-tags: ["NativeScript", "Tutorial", "Video"]
+tags: ['NativeScript', 'Tutorial', 'Video']
 image: tns-progress-bar-animated-poster.png
 ---
 
@@ -35,6 +35,7 @@ So I've written down these approaches in this post and created video recordings 
 2.  [Peter's Simplified Template](#Peters-Simplified-Template)
 3.  [Alex's JavaScript Animation Added](#Alexs-JavaScript-Animation-Added)
 4.  [Alex's RxJS Animation Added](#Alexs-RxJS-Animation-Added)
+5.  [Alex's Animation in a Pipe](#Alexs-Animation-in-a-Pipe) (UPDATE!)
 
 <a name="TJs-Approach-Modified"></a>
 
@@ -282,6 +283,24 @@ You can see me adding the RxJS animation implementation in this video:
 
 <div class="videoWrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/SMW1fGtd-A8" frameborder="0" allowfullscreen></iframe>
+</div>
+<a name="Alexs-Animation-in-a-Pipe"></a>
+
+<br/><br/>
+<br/><br/>
+
+## Abstracting To Angular Pipe
+
+Now that we have all the code in place, wouldn't it be nice to create a reusable "thing" that we can plug into any RxJS Observable that we want to "tween"? As it happens, Angular comes with a built-in concept called a `Pipe`, which is just a class that implements the `PipeTransform` interface and is declared along-side other Components in a module. If you don't know about Pipes, I suggest [reading up on them](https://angular.io/guide/pipes), and then coming back here to watch the video below.
+
+<br/>
+
+In this bonus video, I show you how to abstract away the code we've written so far in this post and in the previous videos of the progress bar series. The code is abstracted away into an Angular Pipe, making it more easily consumable.
+
+<br/><br/>
+
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zu0UIxYwzlI" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br/><br/>
