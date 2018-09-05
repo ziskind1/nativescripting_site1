@@ -1,17 +1,18 @@
-import * as React from "react";
-import { getMenu } from "../MainMenu";
+import * as React from 'react';
+import { getMenu } from '../MainMenu';
 
-import "./Footer.css";
+import './Footer.css';
 
 function Footer() {
   const year = new Date().getFullYear();
-  const menu = getMenu("");
+  const menu = getMenu('');
 
   return (
     <div className="wrapper">
       <div className="footer-container">
         <div>@{year} NativeScripting</div>
         <div className="privacy-links">
+          <a href="/faq">FAQ</a>
           <a href="/terms">Terms of Use</a>
           <a href="/privacy">Privacy Policy</a>
         </div>

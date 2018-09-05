@@ -21,6 +21,9 @@ function Header(props: HeaderProps) {
       <div className="header-nav-container">
         <Link to="/posts">Posts</Link>
         <Link to="/about">Authors</Link>
+        <Link to="/faq" className="secondary-link">
+          FAQ
+        </Link>
         <a
           href={
             'https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1'
