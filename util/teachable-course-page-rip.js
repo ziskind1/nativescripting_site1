@@ -3,33 +3,33 @@
 //Change the level, launch date, tag, and categories manually
 
 //Course rip code
-var courseTitle = $(".course-title")[0].innerText;
-var courseSubTitle = $(".course-subtitle")[0].innerText;
-var courseDescription = $(".course-description")[0].innerText;
-var courseId = $("#fedora-data").attr("data-course-id");
+var courseTitle = $('.course-title')[0].innerText;
+var courseSubTitle = $('.course-subtitle')[0].innerText;
+var courseDescription = $('.course-description')[0].innerText;
+var courseId = $('#fedora-data').attr('data-course-id');
 var courseUrl = courseTitle
   .toLocaleLowerCase()
-  .split(" ")
-  .join("-");
+  .split(' ')
+  .join('-');
 var chapters = [];
 var chapCounter = 0;
-$(".course-section").each((i, section) => {
+$('.course-section').each((i, section) => {
   chapCounter += 10;
-  var sectitleObj = $(section).find(".section-title");
+  var sectitleObj = $(section).find('.section-title');
   var sectitle = sectitleObj[0].innerText;
   var lessons = [];
   $(section)
-    .find(".section-item a")
+    .find('.section-item a')
     .each((j, secitem) => {
-      var secBtn = $(secitem).find(".btn-primary");
+      var secBtn = $(secitem).find('.btn-primary');
       var secBtnText = $(secBtn)
         .text()
         .trim();
-      var isPreview = secBtnText === "Preview";
+      var isPreview = secBtnText === 'Preview';
       $(secBtn).remove();
       var secItemTitle = secitem.innerText.trim();
       var href = secitem.href;
-      var id = href.substring(href.lastIndexOf("/") + 1);
+      var id = href.substring(href.lastIndexOf('/') + 1);
       lessons.push({
         chapterId: chapCounter,
         id: id,
@@ -40,19 +40,24 @@ $(".course-section").each((i, section) => {
   chapters.push({ id: chapCounter, name: sectitle, lessons: lessons });
 });
 var products = [];
-$(".checkout-button-group").each((i, group) => {
+$('.checkout-button-group').each((i, group) => {
   var prodId = $(group).find('input[type="radio"]')[0].value;
   var price = parseFloat(
     $(group)
-      .find(".default-product-price")[0]
-      .innerText.replace("$", "")
+      .find('.default-product-price')[0]
+      .innerText.replace('$', '')
   );
-  if (price == "FREE") price = 0;
-  var prodName = $(group).find(".product-name")[0].innerText;
-  var prodDesc = $(group).find(".description")[0].innerText;
-  var liccount = prodName.toLowerCase().indexOf("single") > -1 ? 1 : 2;
-  var licensesMin = liccount === 1 ? 1 : 2;
-  var licensesMax = liccount === 1 ? 1 : 10;
+  if (price == 'FREE') price = 0;
+  var prodName = $(group).find('.product-name')[0].innerText;
+  var prodDesc = $(group).find('.description')[0].innerText;
+
+  var regex = /\d+/g;
+  var matches = prodName.match(regex);
+
+  var liccountOne = prodName.toLowerCase().indexOf('single') > -1;
+  var licensesMin = liccountOne ? 1 : matches[0];
+  var licensesMax = liccountOne ? 1 : matches[1];
+
   products.push({
     id: prodId,
     name: prodName,
@@ -63,18 +68,18 @@ $(".checkout-button-group").each((i, group) => {
     licensesMax: licensesMax
   });
 });
-var authors = ["alex_ziskind"];
+var authors = ['alex_ziskind'];
 var courseObj = {
   id: courseId,
   title: courseTitle,
   subtitle: courseSubTitle,
   description: courseDescription,
   url: courseUrl,
-  flavors: ["Core", "Angular"],
+  flavors: ['Core', 'Angular'],
   level: 1,
   order: 999,
-  label: "PRESALE",
-  launchdate: "05/01/2017",
+  label: 'PRESALE',
+  launchdate: '05/01/2017',
   authors: authors,
   products: products,
   publishedChapters: [10, 20, 30, 40, 50, 60],
