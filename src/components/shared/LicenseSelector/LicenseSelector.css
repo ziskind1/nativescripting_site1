@@ -127,6 +127,14 @@
   display: block;
   font-size: 16px;
 }
+.license-options-list li a > div span.dd-option-price-full {
+  font-size: 16px;
+  color: #557ab7;
+  text-decoration: line-through;
+  display: inline-block;
+  margin: 0 8px 0 0;
+}
+
 .license-options-list li a > div span.dd-option-ppp {
   color: #c2d6d2;
   display: block;

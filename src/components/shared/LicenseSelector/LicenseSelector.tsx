@@ -48,7 +48,16 @@ export default class LicenseSelector extends React.Component<
           >
             {p.description}
             <div>
-              <span className="dd-option-price">${p.pricesale}</span>
+              {p.pricereg === p.pricesale && (
+                <span className="dd-option-price">${p.pricesale}</span>
+              )}
+              {p.pricereg !== p.pricesale && (
+                <span className="dd-option-price">
+                  <span className="dd-option-price-full">${p.pricereg}</span> $
+                  {p.pricesale}
+                </span>
+              )}
+
               <span className="dd-option-ppp">
                 ${Math.floor(p.pricesale / p.licensesMax)} per user
               </span>
