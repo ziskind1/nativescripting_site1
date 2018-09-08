@@ -39,15 +39,17 @@ $('.course-section').each((i, section) => {
     });
   chapters.push({ id: chapCounter, name: sectitle, lessons: lessons });
 });
-var products = [];
+var productsTemp = [];
 $('.checkout-button-group').each((i, group) => {
   var prodId = $(group).find('input[type="radio"]')[0].value;
   var price = parseFloat(
     $(group)
       .find('.default-product-price')[0]
       .innerText.replace('$', '')
+      .replace(',', '')
   );
-  if (price == 'FREE') price = 0;
+
+  if (price === 'FREE') price = 0;
   var prodName = $(group).find('.product-name')[0].innerText;
   var prodDesc = $(group).find('.description')[0].innerText;
 
@@ -55,19 +57,57 @@ $('.checkout-button-group').each((i, group) => {
   var matches = prodName.match(regex);
 
   var liccountOne = prodName.toLowerCase().indexOf('single') > -1;
-  var licensesMin = liccountOne ? 1 : matches[0];
-  var licensesMax = liccountOne ? 1 : matches[1];
+  var licensesMin = liccountOne ? 1 : parseInt(matches[0]);
+  var licensesMax = liccountOne ? 1 : parseInt(matches[1]);
 
-  products.push({
+  productsTemp.push({
     id: prodId,
     name: prodName,
     description: prodDesc,
-    pricesale: price,
-    pricereg: price,
+    price: price,
     licensesMin: licensesMin,
     licensesMax: licensesMax
   });
 });
+
+var products = [];
+productsTemp.forEach((p, i) => {
+  if (!products.find(f => f.licensesMin === p.licensesMin)) {
+    const curLicMats = productsTemp.filter(
+      pr => pr.licensesMin === p.licensesMin
+    );
+
+    if (curLicMats.length > 1) {
+      const saleProd =
+        curLicMats[0].price < curLicMats[1].price
+          ? curLicMats[0]
+          : curLicMats[1];
+
+      const regProd = curLicMats.find(c => c.id !== saleProd.id);
+
+      products.push({
+        id: saleProd.id,
+        name: saleProd.name,
+        description: saleProd.description,
+        pricesale: saleProd.price,
+        pricereg: regProd.price,
+        licensesMin: saleProd.licensesMin,
+        licensesMax: saleProd.licensesMax
+      });
+    } else {
+      products.push({
+        id: p.id,
+        name: p.name,
+        description: p.description,
+        pricesale: p.price,
+        pricereg: p.price,
+        licensesMin: p.licensesMin,
+        licensesMax: p.licensesMax
+      });
+    }
+  }
+});
+
 var authors = ['alex_ziskind'];
 var courseObj = {
   id: courseId,
@@ -85,4 +125,6 @@ var courseObj = {
   publishedChapters: [10, 20, 30, 40, 50, 60],
   chapters: chapters
 };
+//console.log(productsTemp);
+//console.log(products);
 console.log(JSON.stringify(courseObj, null, 2));
