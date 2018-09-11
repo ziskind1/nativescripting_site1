@@ -725,22 +725,49 @@
     "authors": ["paul_halliday"],
     "products": [
       {
-        "id": "449466",
-        "name": "Single user launch-price",
+        "id": "787018",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 59,
-        "pricereg": 99,
+        "pricesale": 79,
+        "pricereg": 79,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "449467",
-        "name": "Team of 2 - 10 launch price",
-        "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 239,
-        "pricereg": 299,
+        "id": "787019",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 309,
+        "pricereg": 309,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787020",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 479,
+        "pricereg": 479,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787021",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 799,
+        "pricereg": 799,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787022",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 959,
+        "pricereg": 959,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [0],
@@ -888,22 +915,49 @@
     "authors": ["paul_halliday"],
     "products": [
       {
-        "id": "354984",
-        "name": "Single user launch",
-        "description": "License for a single user.",
-        "pricesale": 19,
+        "id": "354983",
+        "name": "Single user regular price",
+        "description": "License for a single user. \n",
+        "pricesale": 29,
         "pricereg": 29,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "354987",
-        "name": "Team of 2 - 10 launch",
-        "description": "License for a team of 2 - 10 users.",
-        "pricesale": 79,
+        "id": "354986",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 119,
         "pricereg": 119,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787010",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 179,
+        "pricereg": 179,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787011",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 289,
+        "pricereg": 289,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787014",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 349,
+        "pricereg": 349,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [0],
@@ -1063,22 +1117,49 @@
     "authors": ["nathan_walker"],
     "products": [
       {
-        "id": "361874",
-        "name": "Single user launch price",
-        "description": "License for a single user.",
-        "pricesale": 29,
+        "id": "359694",
+        "name": "Single user regular price",
+        "description": "License for a single user. \n",
+        "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "361884",
-        "name": "Team of 2 - 10 launch price",
-        "description": "License for a team of 2 - 10 users.",
-        "pricesale": 139,
+        "id": "359702",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 199,
         "pricereg": 199,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787000",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 299,
+        "pricereg": 299,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787003",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 499,
+        "pricereg": 499,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787004",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 599,
+        "pricereg": 599,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [0],
@@ -1744,12 +1825,39 @@
       },
       {
         "id": "308148",
-        "name": "Team of 2 - 10 pre-launch",
-        "description": "License for a team of 2 - 10 users. \n",
+        "name": "Team of 2-5 pre-launch",
+        "description": "License for a team of 2-5 users. \n",
         "pricesale": 319,
-        "pricereg": 479,
+        "pricereg": 629,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "786986",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 969,
+        "pricereg": 969,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "786987",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 1609,
+        "pricereg": 1609,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "786988",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 1939,
+        "pricereg": 1939,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110],
@@ -3366,20 +3474,47 @@
       {
         "id": "641087",
         "name": "Single user pre-launch price",
-        "description": "License for a single user.",
+        "description": "License for a single user. \n",
         "pricesale": 49,
         "pricereg": 69,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "641078",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users.",
-        "pricesale": 199,
-        "pricereg": 209,
+        "id": "787062",
+        "name": "Team of 2-5 pre-launch price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 169,
+        "pricereg": 269,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787064",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 419,
+        "pricereg": 419,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787066",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 699,
+        "pricereg": 699,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787067",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 839,
+        "pricereg": 839,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [],
@@ -3402,7 +3537,7 @@
       {
         "id": "308164",
         "name": "Single user pre-launch price",
-        "description": "License for a single user.",
+        "description": "License for a single user. \n",
         "pricesale": 29,
         "pricereg": 49,
         "licensesMin": 1,
@@ -3410,12 +3545,39 @@
       },
       {
         "id": "308166",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users.",
+        "name": "Team of 2-5 pre-launch price",
+        "description": "License for a team of 2-5 users. \n",
         "pricesale": 119,
-        "pricereg": 149,
+        "pricereg": 199,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787055",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 299,
+        "pricereg": 299,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787057",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 499,
+        "pricereg": 499,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787058",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 599,
+        "pricereg": 599,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [],
@@ -3436,22 +3598,49 @@
     "authors": ["sean_perkins"],
     "products": [
       {
-        "id": "308168",
-        "name": "Single user pre-launch price",
+        "id": "308167",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 29,
+        "pricesale": 59,
         "pricereg": 59,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "308170",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 129,
-        "pricereg": 179,
+        "id": "787037",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 229,
+        "pricereg": 229,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "787039",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 359,
+        "pricereg": 359,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "787040",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 599,
+        "pricereg": 599,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "787042",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 719,
+        "pricereg": 719,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [10, 20, 30, 40],
