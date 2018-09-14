@@ -32,6 +32,7 @@ import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import { scrollToElementById } from '../utils/scrolling';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+import TrainingLink from '../components/home/TrainingLink/TrainingLink';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -156,6 +157,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <Testimonials testimonials={testimonials} />
 
         <SignUpSection />
+
+        <TrainingLink />
 
         <AddThisBlock />
       </div>
