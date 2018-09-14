@@ -158,9 +158,9 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <SignUpSection />
 
-        <TrainingLink />
-
         <AddThisBlock />
+
+        <TrainingLink />
       </div>
     );
   }

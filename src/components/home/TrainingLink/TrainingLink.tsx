@@ -4,7 +4,7 @@ import '../Benefits/Benefits.css';
 
 function TrainingLink() {
   return (
-    <div className="benefits">
+    <div className="benefits" style={{ marginTop: '30px' }}>
       <div className="wrapper">
         <div className="heading">
           <h2 className="heading__title">Live and Classroom Training</h2>
