@@ -532,3 +532,8 @@ header.half-height .lecture-nav a.nav-btn.complete,
 header.half-height .lecture-nav a.nav-btn:hover {
   background: #12ffcd;
 }
+
+/*user profile form*/
+.edit-settings-page .form-group:hover {
+  background: #032e74;
+}
