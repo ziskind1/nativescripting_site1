@@ -6,8 +6,8 @@ import {
   ActionButtonProps
 } from '../../ActionButton/ActionButton';
 
-const expirationDateStr = 'Jul 31, 2018 23:59:59';
-const ctaUrl = '/course/nativescript-hands-on-ui';
+const expirationDateStr = 'Sep 30, 2018 23:59:59';
+const ctaUrl = '/course/nativescript-with-angular-pro';
 
 interface CountdownTimerProps {
   expirationDateStr?: string;
@@ -89,8 +89,8 @@ class CountdownTimer extends React.Component<
         <div className="timer-contents">
           <div className="timer-heading">
             <h2>
-              <span className="oomph">51%</span> off the NativeScript Hands-on
-              UI Course
+              <span className="oomph">50%</span> off the NativeScript with
+              Angular Pro Course
             </h2>
           </div>
 
