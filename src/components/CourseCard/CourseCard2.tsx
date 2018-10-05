@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { CourseFlavorType, Course } from '../../domain/models';
+import { CourseFlavorType, Course, CourseLevel } from '../../domain/models';
 import ActionButton from '../ActionButton/ActionButton';
 import LevelIcon from '../LevelIcon/LevelIcon';
 
-import './CourseCard.css';
+import './CourseCard2.css';
 import { getAuthorImgSrc } from '../../utils/urls';
 
-interface CourseCardProps {
+interface CourseCard2Props {
   course: Course;
   onSelect?: () => void;
 }
@@ -34,8 +34,28 @@ function getCourseIconHtml(course: Course): JSX.Element[] {
   return ret;
 }
 
-export const CourseCard: React.StatelessComponent<CourseCardProps> = (
-  props: CourseCardProps
+function getLevelName(level: CourseLevel): string {
+  switch (level.levelId) {
+    case 1:
+      return 'Beginner';
+    case 2:
+      return 'Intermediate';
+    case 3:
+      return 'Advanced';
+  }
+}
+
+function getCourseLevelHtml(course: Course): JSX.Element {
+  return (
+    <div className="course-card-level-wrapper">
+      <LevelIcon level={course.level} />{' '}
+      <span>{getLevelName(course.level)}</span>
+    </div>
+  );
+}
+
+export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
+  props: CourseCard2Props
 ) => {
   const course = props.course;
   const firstAuthor = course.authors[0];
@@ -76,32 +96,29 @@ export const CourseCard: React.StatelessComponent<CourseCardProps> = (
       <span className={courseLabelClassName}>{course.label}</span>
     );
 
-  return (
-    <div className="course-container">
-      <div className="course-card-bg" />
+  const levelHtml = getCourseLevelHtml(course);
 
-      <div className="course-card-main">
-        <div className="course-header">
+  return (
+    <div className="course-container2">
+      <a href={'/course/' + course.url}>
+        <div className="course-card-label">{courseLabelHtml}</div>
+        <div className="course-card-flavors-container">
           <div className="course-icons">{courseIconHtml}</div>
-          <div className="course-labels">{courseLabelHtml}</div>
         </div>
 
-        <div className="course-body">
-          <div className="course-info-row">
-            <LevelIcon level={course.level} />
+        <div className="course-card-poster">
+          <img src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
+        </div>
+
+        <div className="course-card-main2">
+          <div className="course-card-body">
             <h3 className="course-card-title">{course.title}</h3>
           </div>
-
-          <div className="course-info-row">
-            <img
-              className="course-card-author-img"
-              src={authorImgSrc}
-              alt={firstAuthor.name}
-            />
-            <h3 className="course-card-author">{firstAuthor.name}</h3>
+          <div className="course-card-footer">
+            <div className="">{levelHtml}</div>
           </div>
         </div>
-      </div>
+      </a>
 
       <div className="course-bottom">
         <div className="course-license" />

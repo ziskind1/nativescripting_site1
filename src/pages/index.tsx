@@ -100,6 +100,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         return this.state.courses.filter(c => c.flavors.includes('Core'));
       case 'Angular':
         return this.state.courses.filter(c => c.flavors.includes('Angular'));
+      case 'Vue':
+        return this.state.courses.filter(c => c.flavors.includes('Vue'));
       default:
         return this.state.courses;
     }

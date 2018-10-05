@@ -1,41 +1,68 @@
 .course-banner-container {
-    background-image: url('/img/logo_2.svg');
+  /*background-image: url('/img/logo_2.svg');
     background-position-x: 80%;
     background-repeat: no-repeat;
     background-attachment: initial;
-    padding-bottom: 100px; /*this is so that that the full background image shows, it has a corresponding offset in the .course-details-wrapper style */
+    padding-bottom: 100px;*/ /*this is so that that the full background image shows, it has a corresponding offset in the .course-details-wrapper style */
+  display: flex;
+}
+
+.course-banner-titles {
+  width: 60%;
+}
+
+.course-banner-img {
+  width: 40%;
+  max-height: 230px;
+}
+
+.course-banner-img img {
+  width: 100%;
+  margin-top: -50px;
+  margin-right: -50px;
 }
 
 .course-banner-container h1 {
-    font-family: MonoRegular;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 50px;
-    color: #12ffcd;
-    letter-spacing: 2px;
-    width: 60%;
+  font-family: MonoRegular;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #12ffcd;
+  letter-spacing: 2px;
 }
 
-.course-banner-container h2{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    color: #11f5ff;
-    letter-spacing: 2px;
-    width: 60%;
+.course-banner-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #11f5ff;
+  letter-spacing: 2px;
 }
-
-
-
 
 @media only screen and (max-width: 760px) {
-    .course-banner-container h1 {
-        font-size: 36px;
-        line-height: 42px;
-        width: 100%;
-    }
-    .course-banner-container h2 {
-        font-size: 20px;
-        width: 100%;
-    }
+  .course-banner-container {
+    flex-direction: column-reverse;
+  }
+  .course-banner-container h1 {
+    font-size: 36px;
+    line-height: 42px;
+    width: 100%;
+  }
+  .course-banner-container h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .course-banner-titles {
+    width: 100%;
+  }
+
+  .course-banner-img {
+    width: 100%;
+    display: flex;
+  }
+
+  .course-banner-img img {
+    margin-top: 0px;
+  }
 }

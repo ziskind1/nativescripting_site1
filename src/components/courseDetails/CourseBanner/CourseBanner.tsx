@@ -3,23 +3,24 @@ import { Course } from '../../../domain/models';
 
 import './CourseBanner.css';
 
-
-
-
 interface CourseBannerProps {
-    course: Course;
+  course: Course;
 }
 
-export const CourseBanner: React.StatelessComponent<CourseBannerProps> = (props: CourseBannerProps) => {
+export const CourseBanner: React.StatelessComponent<CourseBannerProps> = (
+  props: CourseBannerProps
+) => {
+  const course = props.course;
 
-    const course = props.course;
-
-
-    return (
-        <div className="course-banner-container">
-            <h1>{course.title}</h1>
-            <h2 className="course-banner-subtitle">{course.subtitle}</h2>
-
-        </div>
-    );
+  return (
+    <div className="course-banner-container">
+      <div className="course-banner-titles">
+        <h1>{course.title}</h1>
+        <h2 className="course-banner-subtitle">{course.subtitle}</h2>
+      </div>
+      <div className="course-banner-img">
+        <img src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
+      </div>
+    </div>
+  );
 };
