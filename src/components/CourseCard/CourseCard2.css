@@ -38,6 +38,29 @@
 
 .course-card-poster {
   height: 210px;
+  background: #0949b2; /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    #0949b2 66%,
+    #0845a9 66%,
+    #0845a9 78%,
+    #0a429c 78%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #0949b2 66%,
+    #0845a9 66%,
+    #0845a9 78%,
+    #0a429c 78%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #0949b2 66%,
+    #0845a9 66%,
+    #0845a9 78%,
+    #0a429c 78%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0949b2', endColorstr='#0a429c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .course-card-poster img {
