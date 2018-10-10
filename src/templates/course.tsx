@@ -258,6 +258,10 @@ export const coursePageQuery = graphql`
       launchdate
       authors
       publishedChapters
+      publishingSchedule {
+        id
+        date
+      }
       products {
         id
         name

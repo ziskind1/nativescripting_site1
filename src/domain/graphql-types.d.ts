@@ -16,17 +16,16 @@ export interface RootQueryType {
   allTestimonialsJson?: TestimonialsJsonConnection | null /* Connection to all TestimonialsJson nodes */;
   allCoursesJson?: CoursesJsonConnection | null /* Connection to all CoursesJson nodes */;
   allBundlesJson?: BundlesJsonConnection | null /* Connection to all BundlesJson nodes */;
-  allSitePage?: SitePageConnection | null /* Connection to all SitePage nodes */;
   allSitePlugin?: SitePluginConnection | null /* Connection to all SitePlugin nodes */;
   allDirectory?: DirectoryConnection | null /* Connection to all Directory nodes */;
   allFile?: FileConnection | null /* Connection to all File nodes */;
   allImageSharp?: ImageSharpConnection | null /* Connection to all ImageSharp nodes */;
   allAuthorsJson?: AuthorsJsonConnection | null /* Connection to all AuthorsJson nodes */;
   allMarkdownRemark?: MarkdownRemarkConnection | null /* Connection to all MarkdownRemark nodes */;
+  allSitePage?: SitePageConnection | null /* Connection to all SitePage nodes */;
   testimonialsJson?: TestimonialsJson | null;
   coursesJson?: CoursesJson | null;
   bundlesJson?: BundlesJson | null;
-  sitePage?: SitePage | null;
   sitePlugin?: SitePlugin | null;
   site?: Site | null;
   directory?: Directory | null;
@@ -34,6 +33,7 @@ export interface RootQueryType {
   imageSharp?: ImageSharp | null;
   authorsJson?: AuthorsJson | null;
   markdownRemark?: MarkdownRemark | null;
+  sitePage?: SitePage | null;
 }
 /* A connection to a list of items. */
 export interface TestimonialsJsonConnection {
@@ -120,6 +120,7 @@ export interface CoursesJson extends Node {
   publishedChapters?: number[] | null;
   chapters?: chapters_2[] | null;
   internal?: internal_13 | null;
+  publishingSchedule?: publishingSchedule_2[] | null;
 }
 
 export interface products_3 {
@@ -149,6 +150,11 @@ export interface internal_13 {
   contentDigest?: string | null;
   type?: string | null;
   owner?: string | null;
+}
+
+export interface publishingSchedule_2 {
+  id?: number | null;
+  date?: string | null;
 }
 /* A connection to a list of items. */
 export interface coursesJsonGroupConnectionConnection {
@@ -225,283 +231,18 @@ export interface bundlesJsonGroupConnectionEdge {
   previous?: BundlesJson | null /* The previous edge in the connection */;
 }
 /* A connection to a list of items. */
-export interface SitePageConnection {
+export interface SitePluginConnection {
   pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: SitePageEdge[] | null /* A list of edges. */;
+  edges?: SitePluginEdge[] | null /* A list of edges. */;
   totalCount?: number | null;
   distinct?: string[] | null;
-  group?: sitePageGroupConnectionConnection[] | null;
+  group?: sitePluginGroupConnectionConnection[] | null;
 }
 /* An edge in a connection. */
-export interface SitePageEdge {
-  node?: SitePage | null /* The item at the end of the edge */;
-  next?: SitePage | null /* The next edge in the connection */;
-  previous?: SitePage | null /* The previous edge in the connection */;
-}
-/* Node of type SitePage */
-export interface SitePage extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
-  layout?: string | null;
-  jsonName?: string | null;
-  internalComponentName?: string | null;
-  path?: string | null;
-  component?: string | null;
-  componentChunkName?: string | null;
-  context?: context | null;
-  pluginCreator?: SitePlugin | null;
-  pluginCreatorId?: string | null;
-  componentPath?: string | null;
-  internal?: internal_15 | null;
-}
-
-export interface context {
-  courseUrl?: string | null;
-  posts?: posts | null;
-  post?: post[] | null;
-  tag?: string | null;
-  slug?: string | null;
-}
-
-export interface posts {
-  NativeScript?: nativeScript[] | null;
-  Angular?: angular[] | null;
-  Core?: core[] | null;
-  UI?: ui[] | null;
-  Tutorial?: tutorial[] | null;
-  Video?: video[] | null;
-  Authentication?: authentication[] | null;
-  Authorization?: authorization[] | null;
-  Enterprise?: enterprise[] | null;
-  Tips_and_Tricks?: tipsAndTricks[] | null;
-  Styling?: styling[] | null;
-  Courses?: courses[] | null;
-  pandas?: pandas[] | null;
-}
-
-export interface nativeScript {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_2 | null;
-}
-
-export interface frontmatter_2 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface angular {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_3 | null;
-}
-
-export interface frontmatter_3 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface core {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_4 | null;
-}
-
-export interface frontmatter_4 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface ui {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_5 | null;
-}
-
-export interface frontmatter_5 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface tutorial {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_6 | null;
-}
-
-export interface frontmatter_6 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface video {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_7 | null;
-}
-
-export interface frontmatter_7 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface authentication {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_8 | null;
-}
-
-export interface frontmatter_8 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface authorization {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_9 | null;
-}
-
-export interface frontmatter_9 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface enterprise {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_10 | null;
-}
-
-export interface frontmatter_10 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface tipsAndTricks {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_11 | null;
-}
-
-export interface frontmatter_11 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface styling {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_12 | null;
-}
-
-export interface frontmatter_12 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface courses {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_13 | null;
-}
-
-export interface frontmatter_13 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface pandas {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_14 | null;
-}
-
-export interface frontmatter_14 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
-}
-
-export interface post {
-  excerpt?: string | null;
-  html?: string | null;
-  id?: string | null;
-  timeToRead?: number | null;
-  frontmatter?: frontmatter_15 | null;
-}
-
-export interface frontmatter_15 {
-  createdDate?: Date | null;
-  updatedDate?: Date | null;
-  tags?: string[] | null;
-  path?: string | null;
-  title?: string | null;
+export interface SitePluginEdge {
+  node?: SitePlugin | null /* The item at the end of the edge */;
+  next?: SitePlugin | null /* The next edge in the connection */;
+  previous?: SitePlugin | null /* The previous edge in the connection */;
 }
 /* Node of type SitePlugin */
 export interface SitePlugin extends Node {
@@ -513,14 +254,16 @@ export interface SitePlugin extends Node {
   version?: string | null;
   pluginOptions?: pluginOptions_3 | null;
   nodeAPIs?: string[] | null;
+  browserAPIs?: string[] | null;
   ssrAPIs?: string[] | null;
   pluginFilepath?: string | null;
   packageJson?: packageJson_2 | null;
-  internal?: internal_16 | null;
+  internal?: internal_15 | null;
 }
 
 export interface pluginOptions_3 {
   plugins?: plugins_2[] | null;
+  siteUrl?: string | null;
   output?: string | null;
   query?: string | null;
   name?: string | null;
@@ -580,45 +323,10 @@ export interface peerDependencies_2 {
   version?: string | null;
 }
 
-export interface internal_16 {
-  contentDigest?: string | null;
-  type?: string | null;
-  owner?: string | null;
-}
-
 export interface internal_15 {
-  type?: string | null;
   contentDigest?: string | null;
-  description?: string | null;
+  type?: string | null;
   owner?: string | null;
-}
-/* A connection to a list of items. */
-export interface sitePageGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: sitePageGroupConnectionEdge[] | null /* A list of edges. */;
-  field?: string | null;
-  fieldValue?: string | null;
-  totalCount?: number | null;
-}
-/* An edge in a connection. */
-export interface sitePageGroupConnectionEdge {
-  node?: SitePage | null /* The item at the end of the edge */;
-  next?: SitePage | null /* The next edge in the connection */;
-  previous?: SitePage | null /* The previous edge in the connection */;
-}
-/* A connection to a list of items. */
-export interface SitePluginConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: SitePluginEdge[] | null /* A list of edges. */;
-  totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: sitePluginGroupConnectionConnection[] | null;
-}
-/* An edge in a connection. */
-export interface SitePluginEdge {
-  node?: SitePlugin | null /* The item at the end of the edge */;
-  next?: SitePlugin | null /* The next edge in the connection */;
-  previous?: SitePlugin | null /* The previous edge in the connection */;
 }
 /* A connection to a list of items. */
 export interface sitePluginGroupConnectionConnection {
@@ -653,7 +361,7 @@ export interface Directory extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  internal?: internal_17 | null;
+  internal?: internal_16 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
   relativePath?: string | null;
@@ -689,7 +397,7 @@ export interface Directory extends Node {
   birthtime?: Date | null;
 }
 
-export interface internal_17 {
+export interface internal_16 {
   contentDigest?: string | null;
   type?: string | null;
   description?: string | null;
@@ -738,11 +446,11 @@ export interface File extends Node {
     | TestimonialsJson[]
     | null /* The children of this node of type testimonialsJson */;
   childMarkdownRemark?: MarkdownRemark | null /* The child of this node of type markdownRemark */;
+  childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
   childrenCoursesJson?:
     | CoursesJson[]
     | null /* The children of this node of type coursesJson */;
-  childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
-  internal?: internal_18 | null;
+  internal?: internal_17 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
   relativePath?: string | null;
@@ -793,10 +501,10 @@ export interface AuthorsJson extends Node {
   twitter?: string | null;
   github?: string | null;
   types?: string[] | null;
-  internal?: internal_19 | null;
+  internal?: internal_18 | null;
 }
 
-export interface internal_19 {
+export interface internal_18 {
   contentDigest?: string | null;
   type?: string | null;
   owner?: string | null;
@@ -806,8 +514,8 @@ export interface MarkdownRemark extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  internal?: internal_20 | null;
-  frontmatter?: frontmatter_16 | null;
+  internal?: internal_19 | null;
+  frontmatter?: frontmatter_2 | null;
   excerpt?: string | null;
   fileAbsolutePath?: string | null;
   html?: string | null;
@@ -818,14 +526,14 @@ export interface MarkdownRemark extends Node {
   wordCount?: wordCount | null;
 }
 
-export interface internal_20 {
+export interface internal_19 {
   content?: string | null;
   type?: string | null;
   contentDigest?: string | null;
   owner?: string | null;
 }
 
-export interface frontmatter_16 {
+export interface frontmatter_2 {
   title?: string | null;
   path?: string | null;
   author?: string | null;
@@ -853,7 +561,7 @@ export interface ImageSharp extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  internal?: internal_21 | null;
+  internal?: internal_20 | null;
   original?: ImageSharpOriginal | null;
   resolutions?: ImageSharpResolutions | null;
   sizes?: ImageSharpSizes | null;
@@ -862,7 +570,7 @@ export interface ImageSharp extends Node {
   resize?: ImageSharpResize | null;
 }
 
-export interface internal_21 {
+export interface internal_20 {
   contentDigest?: string | null;
   type?: string | null;
   owner?: string | null;
@@ -929,7 +637,7 @@ export interface ImageSharpResize {
   originalName?: string | null;
 }
 
-export interface internal_18 {
+export interface internal_17 {
   contentDigest?: string | null;
   mediaType?: string | null;
   type?: string | null;
@@ -1033,6 +741,376 @@ export interface markdownRemarkGroupConnectionEdge {
   node?: MarkdownRemark | null /* The item at the end of the edge */;
   next?: MarkdownRemark | null /* The next edge in the connection */;
   previous?: MarkdownRemark | null /* The previous edge in the connection */;
+}
+/* A connection to a list of items. */
+export interface SitePageConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: SitePageEdge[] | null /* A list of edges. */;
+  totalCount?: number | null;
+  distinct?: string[] | null;
+  group?: sitePageGroupConnectionConnection[] | null;
+}
+/* An edge in a connection. */
+export interface SitePageEdge {
+  node?: SitePage | null /* The item at the end of the edge */;
+  next?: SitePage | null /* The next edge in the connection */;
+  previous?: SitePage | null /* The previous edge in the connection */;
+}
+/* Node of type SitePage */
+export interface SitePage extends Node {
+  id: string /* The id of this node. */;
+  parent?: Node | null /* The parent of this node. */;
+  children?: Node[] | null /* The children of this node. */;
+  layout?: string | null;
+  jsonName?: string | null;
+  internalComponentName?: string | null;
+  path?: string | null;
+  component?: string | null;
+  componentChunkName?: string | null;
+  context?: context | null;
+  pluginCreator?: SitePlugin | null;
+  pluginCreatorId?: string | null;
+  componentPath?: string | null;
+  internal?: internal_21 | null;
+}
+
+export interface context {
+  courseUrl?: string | null;
+  slug?: string | null;
+  prevPostPath?: string | null;
+  nextPostPath?: string | null;
+  posts?: posts | null;
+  post?: post[] | null;
+  tag?: string | null;
+}
+
+export interface posts {
+  pandas?: pandas[] | null;
+  NativeScript?: nativeScript[] | null;
+  Tips_and_Tricks?: tipsAndTricks[] | null;
+  Tutorial?: tutorial[] | null;
+  Video?: video[] | null;
+  Courses?: courses[] | null;
+  Angular?: angular[] | null;
+  Styling?: styling[] | null;
+  Core?: core[] | null;
+  Authentication?: authentication[] | null;
+  Authorization?: authorization[] | null;
+  Enterprise?: enterprise[] | null;
+  UI?: ui[] | null;
+  Cordova?: cordova[] | null;
+  Tip?: tip[] | null;
+  JavaScript?: javaScript[] | null;
+  TypeScript?: typeScript[] | null;
+}
+
+export interface pandas {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_3 | null;
+}
+
+export interface frontmatter_3 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface nativeScript {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_4 | null;
+}
+
+export interface frontmatter_4 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface tipsAndTricks {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_5 | null;
+}
+
+export interface frontmatter_5 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface tutorial {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_6 | null;
+}
+
+export interface frontmatter_6 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface video {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_7 | null;
+}
+
+export interface frontmatter_7 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface courses {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_8 | null;
+}
+
+export interface frontmatter_8 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface angular {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_9 | null;
+}
+
+export interface frontmatter_9 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface styling {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_10 | null;
+}
+
+export interface frontmatter_10 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface core {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_11 | null;
+}
+
+export interface frontmatter_11 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface authentication {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_12 | null;
+}
+
+export interface frontmatter_12 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface authorization {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_13 | null;
+}
+
+export interface frontmatter_13 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface enterprise {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_14 | null;
+}
+
+export interface frontmatter_14 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface ui {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_15 | null;
+}
+
+export interface frontmatter_15 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface cordova {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_16 | null;
+}
+
+export interface frontmatter_16 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface tip {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_17 | null;
+}
+
+export interface frontmatter_17 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface javaScript {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_18 | null;
+}
+
+export interface frontmatter_18 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface typeScript {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_19 | null;
+}
+
+export interface frontmatter_19 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface post {
+  excerpt?: string | null;
+  html?: string | null;
+  id?: string | null;
+  timeToRead?: number | null;
+  frontmatter?: frontmatter_20 | null;
+}
+
+export interface frontmatter_20 {
+  createdDate?: Date | null;
+  updatedDate?: Date | null;
+  tags?: string[] | null;
+  path?: string | null;
+  title?: string | null;
+}
+
+export interface internal_21 {
+  type?: string | null;
+  contentDigest?: string | null;
+  description?: string | null;
+  owner?: string | null;
+}
+/* A connection to a list of items. */
+export interface sitePageGroupConnectionConnection {
+  pageInfo: PageInfo /* Information to aid in pagination. */;
+  edges?: sitePageGroupConnectionEdge[] | null /* A list of edges. */;
+  field?: string | null;
+  fieldValue?: string | null;
+  totalCount?: number | null;
+}
+/* An edge in a connection. */
+export interface sitePageGroupConnectionEdge {
+  node?: SitePage | null /* The item at the end of the edge */;
+  next?: SitePage | null /* The next edge in the connection */;
+  previous?: SitePage | null /* The previous edge in the connection */;
 }
 /* Node of type Site */
 export interface Site extends Node {
@@ -1171,6 +1249,7 @@ export interface filterCoursesJson {
   publishedChapters?: coursesJsonConnectionPublishedChaptersQueryList_2 | null;
   chapters?: coursesJsonConnectionChaptersQueryList_2 | null;
   internal?: coursesJsonConnectionInternalInputObject_2 | null;
+  publishingSchedule?: coursesJsonConnectionPublishingScheduleQueryList_2 | null;
 }
 
 export interface coursesJsonConnectionIdQueryString_2 {
@@ -1401,6 +1480,27 @@ export interface coursesJsonConnectionInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
+export interface coursesJsonConnectionPublishingScheduleQueryList_2 {
+  in?: coursesJsonConnectionPublishingScheduleInputObject_2[] | null;
+}
+
+export interface coursesJsonConnectionPublishingScheduleInputObject_2 {
+  id?: coursesJsonConnectionPublishingScheduleIdQueryInteger_2 | null;
+  date?: coursesJsonConnectionPublishingScheduleDateQueryString_2 | null;
+}
+
+export interface coursesJsonConnectionPublishingScheduleIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface coursesJsonConnectionPublishingScheduleDateQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface bundlesJsonConnectionSort {
   fields: BundlesJsonConnectionSortByFieldsEnum[];
   order?: bundlesJsonConnectionSortOrderValues | null;
@@ -1560,1735 +1660,6 @@ export interface bundlesJsonConnectionInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface sitePageConnectionSort {
-  fields: SitePageConnectionSortByFieldsEnum[];
-  order?: sitePageConnectionSortOrderValues | null;
-}
-/* Filter connection on its fields */
-export interface filterSitePage {
-  layout?: sitePageConnectionLayoutQueryString | null;
-  jsonName?: sitePageConnectionJsonNameQueryString | null;
-  internalComponentName?: sitePageConnectionInternalComponentNameQueryString | null;
-  path?: sitePageConnectionPathQueryString_2 | null;
-  component?: sitePageConnectionComponentQueryString | null;
-  componentChunkName?: sitePageConnectionComponentChunkNameQueryString | null;
-  context?: sitePageConnectionContextInputObject | null;
-  pluginCreator?: sitePageConnectionPluginCreatorInputObject | null;
-  pluginCreatorId?: sitePageConnectionPluginCreatorIdQueryString_2 | null;
-  componentPath?: sitePageConnectionComponentPathQueryString | null;
-  id?: sitePageConnectionIdQueryString_2 | null;
-  internal?: sitePageConnectionInternalInputObject_2 | null;
-}
-
-export interface sitePageConnectionLayoutQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionJsonNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionInternalComponentNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionComponentQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionComponentChunkNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextInputObject {
-  courseUrl?: sitePageConnectionContextCourseUrlQueryString | null;
-  posts?: sitePageConnectionContextPostsInputObject | null;
-  post?: sitePageConnectionContextPostQueryList | null;
-  tag?: sitePageConnectionContextTagQueryString | null;
-  slug?: sitePageConnectionContextSlugQueryString | null;
-}
-
-export interface sitePageConnectionContextCourseUrlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsInputObject {
-  NativeScript?: sitePageConnectionContextPostsNativeScriptQueryList | null;
-  Angular?: sitePageConnectionContextPostsAngularQueryList | null;
-  Core?: sitePageConnectionContextPostsCoreQueryList | null;
-  UI?: sitePageConnectionContextPostsUiQueryList | null;
-  Tutorial?: sitePageConnectionContextPostsTutorialQueryList | null;
-  Video?: sitePageConnectionContextPostsVideoQueryList | null;
-  Authentication?: sitePageConnectionContextPostsAuthenticationQueryList | null;
-  Authorization?: sitePageConnectionContextPostsAuthorizationQueryList | null;
-  Enterprise?: sitePageConnectionContextPostsEnterpriseQueryList | null;
-  Tips_and_Tricks?: sitePageConnectionContextPostsTipsAndTricksQueryList | null;
-  Styling?: sitePageConnectionContextPostsStylingQueryList | null;
-  Courses?: sitePageConnectionContextPostsCoursesQueryList | null;
-  pandas?: sitePageConnectionContextPostsPandasQueryList | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptQueryList {
-  in?: sitePageConnectionContextPostsNativeScriptInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptInputObject {
-  excerpt?: sitePageConnectionContextPostsNativeScriptExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsNativeScriptHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsNativeScriptIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsNativeScriptTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsNativeScriptFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsNativeScriptFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsNativeScriptFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsNativeScriptFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsNativeScriptFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularQueryList {
-  in?: sitePageConnectionContextPostsAngularInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsAngularInputObject {
-  excerpt?: sitePageConnectionContextPostsAngularExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsAngularHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsAngularIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsAngularTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsAngularFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsAngularExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsAngularFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsAngularFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsAngularFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsAngularFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsAngularFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAngularFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreQueryList {
-  in?: sitePageConnectionContextPostsCoreInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsCoreInputObject {
-  excerpt?: sitePageConnectionContextPostsCoreExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsCoreHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsCoreIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsCoreTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsCoreFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsCoreExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsCoreFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsCoreFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsCoreFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsCoreFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsCoreFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoreFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiQueryList {
-  in?: sitePageConnectionContextPostsUiInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsUiInputObject {
-  excerpt?: sitePageConnectionContextPostsUiExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsUiHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsUiIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsUiTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsUiFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsUiExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsUiFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsUiFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsUiFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsUiFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsUiFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsUiFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialQueryList {
-  in?: sitePageConnectionContextPostsTutorialInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialInputObject {
-  excerpt?: sitePageConnectionContextPostsTutorialExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsTutorialHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsTutorialIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsTutorialTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsTutorialFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsTutorialFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsTutorialFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsTutorialFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTutorialFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoQueryList {
-  in?: sitePageConnectionContextPostsVideoInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsVideoInputObject {
-  excerpt?: sitePageConnectionContextPostsVideoExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsVideoHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsVideoIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsVideoTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsVideoFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsVideoExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsVideoFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsVideoFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsVideoFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsVideoFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationQueryList {
-  in?: sitePageConnectionContextPostsAuthenticationInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationInputObject {
-  excerpt?: sitePageConnectionContextPostsAuthenticationExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsAuthenticationHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsAuthenticationIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsAuthenticationTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsAuthenticationFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsAuthenticationFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsAuthenticationFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsAuthenticationFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsAuthenticationFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsAuthenticationFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthenticationFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationQueryList {
-  in?: sitePageConnectionContextPostsAuthorizationInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationInputObject {
-  excerpt?: sitePageConnectionContextPostsAuthorizationExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsAuthorizationHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsAuthorizationIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsAuthorizationTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsAuthorizationFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsAuthorizationFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsAuthorizationFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsAuthorizationFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsAuthorizationFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsAuthorizationFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsAuthorizationFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseQueryList {
-  in?: sitePageConnectionContextPostsEnterpriseInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseInputObject {
-  excerpt?: sitePageConnectionContextPostsEnterpriseExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsEnterpriseHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsEnterpriseIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsEnterpriseTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsEnterpriseFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsEnterpriseFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsEnterpriseFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsEnterpriseFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsEnterpriseFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsEnterpriseFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsEnterpriseFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksQueryList {
-  in?: sitePageConnectionContextPostsTipsAndTricksInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksInputObject {
-  excerpt?: sitePageConnectionContextPostsTipsAndTricksExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsTipsAndTricksHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsTipsAndTricksIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsTipsAndTricksTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsTipsAndTricksFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsTipsAndTricksFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingQueryList {
-  in?: sitePageConnectionContextPostsStylingInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsStylingInputObject {
-  excerpt?: sitePageConnectionContextPostsStylingExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsStylingHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsStylingIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsStylingTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsStylingFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsStylingExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsStylingFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsStylingFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsStylingFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsStylingFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsStylingFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsStylingFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesQueryList {
-  in?: sitePageConnectionContextPostsCoursesInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesInputObject {
-  excerpt?: sitePageConnectionContextPostsCoursesExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsCoursesHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsCoursesIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsCoursesTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsCoursesFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsCoursesFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsCoursesFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsCoursesFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsCoursesFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsCoursesFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsCoursesFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasQueryList {
-  in?: sitePageConnectionContextPostsPandasInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostsPandasInputObject {
-  excerpt?: sitePageConnectionContextPostsPandasExcerptQueryString | null;
-  html?: sitePageConnectionContextPostsPandasHtmlQueryString | null;
-  id?: sitePageConnectionContextPostsPandasIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostsPandasTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostsPandasFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostsPandasExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostsPandasFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostsPandasFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostsPandasFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostsPandasFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostQueryList {
-  in?: sitePageConnectionContextPostInputObject[] | null;
-}
-
-export interface sitePageConnectionContextPostInputObject {
-  excerpt?: sitePageConnectionContextPostExcerptQueryString | null;
-  html?: sitePageConnectionContextPostHtmlQueryString | null;
-  id?: sitePageConnectionContextPostIdQueryString | null;
-  timeToRead?: sitePageConnectionContextPostTimeToReadQueryInteger | null;
-  frontmatter?: sitePageConnectionContextPostFrontmatterInputObject | null;
-}
-
-export interface sitePageConnectionContextPostExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterInputObject {
-  createdDate?: sitePageConnectionContextPostFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageConnectionContextPostFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageConnectionContextPostFrontmatterTagsQueryList | null;
-  path?: sitePageConnectionContextPostFrontmatterPathQueryString | null;
-  title?: sitePageConnectionContextPostFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextPostFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextTagQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionContextSlugQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorInputObject {
-  resolve?: sitePageConnectionPluginCreatorResolveQueryString | null;
-  id?: sitePageConnectionPluginCreatorIdQueryString | null;
-  name?: sitePageConnectionPluginCreatorNameQueryString | null;
-  version?: sitePageConnectionPluginCreatorVersionQueryString | null;
-  pluginOptions?: sitePageConnectionPluginCreatorPluginOptionsInputObject | null;
-  nodeAPIs?: sitePageConnectionPluginCreatorNodeApIsQueryList | null;
-  ssrAPIs?: sitePageConnectionPluginCreatorSsrApIsQueryList | null;
-  pluginFilepath?: sitePageConnectionPluginCreatorPluginFilepathQueryString | null;
-  packageJson?: sitePageConnectionPluginCreatorPackageJsonInputObject | null;
-  parent?: sitePageConnectionPluginCreatorParentQueryString | null;
-  internal?: sitePageConnectionPluginCreatorInternalInputObject | null;
-}
-
-export interface sitePageConnectionPluginCreatorResolveQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsInputObject {
-  plugins?: sitePageConnectionPluginCreatorPluginOptionsPluginsQueryList | null;
-  output?: sitePageConnectionPluginCreatorPluginOptionsOutputQueryString | null;
-  query?: sitePageConnectionPluginCreatorPluginOptionsQueryQueryString | null;
-  name?: sitePageConnectionPluginCreatorPluginOptionsNameQueryString | null;
-  path?: sitePageConnectionPluginCreatorPluginOptionsPathQueryString | null;
-  linkImagesToOriginal?: sitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null;
-  maxWidth?: sitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger | null;
-  wrapperStyle?: sitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString | null;
-  backgroundColor?: sitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString | null;
-  showCaptions?: sitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean | null;
-  pathPrefix?: sitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString | null;
-  ignoreFileExtensions?: sitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsQueryList {
-  in?: sitePageConnectionPluginCreatorPluginOptionsPluginsInputObject[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsInputObject {
-  resolve?: sitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString | null;
-  id?: sitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString | null;
-  name?: sitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString | null;
-  version?: sitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString | null;
-  pluginOptions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject | null;
-  pluginFilepath?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
-  linkImagesToOriginal?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null;
-  maxWidth?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null;
-  wrapperStyle?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null;
-  backgroundColor?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null;
-  showCaptions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null;
-  pathPrefix?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null;
-  ignoreFileExtensions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsOutputQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsQueryQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorNodeApIsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorSsrApIsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorPluginFilepathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
-  name?: sitePageConnectionPluginCreatorPackageJsonNameQueryString | null;
-  description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
-  version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
-  main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
-  license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
-  dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
-  devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
-  peerDependencies?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null;
-  keywords?: sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
-  in?:
-    | sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject[]
-    | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject {
-  name?: sitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString | null;
-  version?: sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
-  in?:
-    | sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject[]
-    | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString | null;
-  version?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
-  in?:
-    | sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject[]
-    | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
-  version?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageConnectionPluginCreatorParentQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorInternalInputObject {
-  contentDigest?: sitePageConnectionPluginCreatorInternalContentDigestQueryString | null;
-  type?: sitePageConnectionPluginCreatorInternalTypeQueryString | null;
-  owner?: sitePageConnectionPluginCreatorInternalOwnerQueryString | null;
-}
-
-export interface sitePageConnectionPluginCreatorInternalContentDigestQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorInternalTypeQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorInternalOwnerQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionComponentPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionInternalInputObject_2 {
-  type?: sitePageConnectionInternalTypeQueryString_2 | null;
-  contentDigest?: sitePageConnectionInternalContentDigestQueryString_2 | null;
-  description?: sitePageConnectionInternalDescriptionQueryString | null;
-  owner?: sitePageConnectionInternalOwnerQueryString_2 | null;
-}
-
-export interface sitePageConnectionInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionInternalDescriptionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface sitePluginConnectionSort {
   fields: SitePluginConnectionSortByFieldsEnum[];
   order?: sitePluginConnectionSortOrderValues | null;
@@ -3301,6 +1672,7 @@ export interface filterSitePlugin {
   version?: sitePluginConnectionVersionQueryString_2 | null;
   pluginOptions?: sitePluginConnectionPluginOptionsInputObject_2 | null;
   nodeAPIs?: sitePluginConnectionNodeApIsQueryList_2 | null;
+  browserAPIs?: sitePluginConnectionBrowserApIsQueryList_2 | null;
   ssrAPIs?: sitePluginConnectionSsrApIsQueryList_2 | null;
   pluginFilepath?: sitePluginConnectionPluginFilepathQueryString_2 | null;
   packageJson?: sitePluginConnectionPackageJsonInputObject_2 | null;
@@ -3337,6 +1709,7 @@ export interface sitePluginConnectionVersionQueryString_2 {
 
 export interface sitePluginConnectionPluginOptionsInputObject_2 {
   plugins?: sitePluginConnectionPluginOptionsPluginsQueryList_2 | null;
+  siteUrl?: sitePluginConnectionPluginOptionsSiteUrlQueryString_2 | null;
   output?: sitePluginConnectionPluginOptionsOutputQueryString_2 | null;
   query?: sitePluginConnectionPluginOptionsQueryQueryString_2 | null;
   name?: sitePluginConnectionPluginOptionsNameQueryString_2 | null;
@@ -3452,6 +1825,13 @@ export interface sitePluginConnectionPluginOptionsPluginsPluginFilepathQueryStri
   glob?: string | null;
 }
 
+export interface sitePluginConnectionPluginOptionsSiteUrlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginConnectionPluginOptionsOutputQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -3525,6 +1905,14 @@ export interface sitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_
 }
 
 export interface sitePluginConnectionNodeApIsQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePluginConnectionBrowserApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5022,6 +3410,2100 @@ export interface wordCountWordsQueryInt_4 {
   ne?: number | null;
 }
 
+export interface sitePageConnectionSort {
+  fields: SitePageConnectionSortByFieldsEnum[];
+  order?: sitePageConnectionSortOrderValues | null;
+}
+/* Filter connection on its fields */
+export interface filterSitePage {
+  layout?: sitePageConnectionLayoutQueryString | null;
+  jsonName?: sitePageConnectionJsonNameQueryString | null;
+  internalComponentName?: sitePageConnectionInternalComponentNameQueryString | null;
+  path?: sitePageConnectionPathQueryString_2 | null;
+  component?: sitePageConnectionComponentQueryString | null;
+  componentChunkName?: sitePageConnectionComponentChunkNameQueryString | null;
+  context?: sitePageConnectionContextInputObject | null;
+  pluginCreator?: sitePageConnectionPluginCreatorInputObject | null;
+  pluginCreatorId?: sitePageConnectionPluginCreatorIdQueryString_2 | null;
+  componentPath?: sitePageConnectionComponentPathQueryString | null;
+  id?: sitePageConnectionIdQueryString_2 | null;
+  internal?: sitePageConnectionInternalInputObject_2 | null;
+}
+
+export interface sitePageConnectionLayoutQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionJsonNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionInternalComponentNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionComponentQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionComponentChunkNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextInputObject {
+  courseUrl?: sitePageConnectionContextCourseUrlQueryString | null;
+  slug?: sitePageConnectionContextSlugQueryString | null;
+  prevPostPath?: sitePageConnectionContextPrevPostPathQueryString | null;
+  nextPostPath?: sitePageConnectionContextNextPostPathQueryString | null;
+  posts?: sitePageConnectionContextPostsInputObject | null;
+  post?: sitePageConnectionContextPostQueryList | null;
+  tag?: sitePageConnectionContextTagQueryString | null;
+}
+
+export interface sitePageConnectionContextCourseUrlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextSlugQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPrevPostPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextNextPostPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsInputObject {
+  pandas?: sitePageConnectionContextPostsPandasQueryList | null;
+  NativeScript?: sitePageConnectionContextPostsNativeScriptQueryList | null;
+  Tips_and_Tricks?: sitePageConnectionContextPostsTipsAndTricksQueryList | null;
+  Tutorial?: sitePageConnectionContextPostsTutorialQueryList | null;
+  Video?: sitePageConnectionContextPostsVideoQueryList | null;
+  Courses?: sitePageConnectionContextPostsCoursesQueryList | null;
+  Angular?: sitePageConnectionContextPostsAngularQueryList | null;
+  Styling?: sitePageConnectionContextPostsStylingQueryList | null;
+  Core?: sitePageConnectionContextPostsCoreQueryList | null;
+  Authentication?: sitePageConnectionContextPostsAuthenticationQueryList | null;
+  Authorization?: sitePageConnectionContextPostsAuthorizationQueryList | null;
+  Enterprise?: sitePageConnectionContextPostsEnterpriseQueryList | null;
+  UI?: sitePageConnectionContextPostsUiQueryList | null;
+  Cordova?: sitePageConnectionContextPostsCordovaQueryList | null;
+  Tip?: sitePageConnectionContextPostsTipQueryList | null;
+  JavaScript?: sitePageConnectionContextPostsJavaScriptQueryList | null;
+  TypeScript?: sitePageConnectionContextPostsTypeScriptQueryList | null;
+}
+
+export interface sitePageConnectionContextPostsPandasQueryList {
+  in?: sitePageConnectionContextPostsPandasInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsPandasInputObject {
+  excerpt?: sitePageConnectionContextPostsPandasExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsPandasHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsPandasIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsPandasTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsPandasFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsPandasExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsPandasFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsPandasFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsPandasFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsPandasFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptQueryList {
+  in?: sitePageConnectionContextPostsNativeScriptInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptInputObject {
+  excerpt?: sitePageConnectionContextPostsNativeScriptExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsNativeScriptHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsNativeScriptIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsNativeScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsNativeScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsNativeScriptFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsNativeScriptFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsNativeScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsNativeScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksQueryList {
+  in?: sitePageConnectionContextPostsTipsAndTricksInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksInputObject {
+  excerpt?: sitePageConnectionContextPostsTipsAndTricksExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsTipsAndTricksHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsTipsAndTricksIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsTipsAndTricksTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsTipsAndTricksFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsTipsAndTricksFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsTipsAndTricksFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipsAndTricksFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialQueryList {
+  in?: sitePageConnectionContextPostsTutorialInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialInputObject {
+  excerpt?: sitePageConnectionContextPostsTutorialExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsTutorialHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsTutorialIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsTutorialTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsTutorialFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsTutorialFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsTutorialFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsTutorialFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTutorialFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoQueryList {
+  in?: sitePageConnectionContextPostsVideoInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsVideoInputObject {
+  excerpt?: sitePageConnectionContextPostsVideoExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsVideoHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsVideoIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsVideoTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsVideoFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsVideoExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsVideoFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsVideoFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsVideoFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsVideoFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesQueryList {
+  in?: sitePageConnectionContextPostsCoursesInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesInputObject {
+  excerpt?: sitePageConnectionContextPostsCoursesExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsCoursesHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsCoursesIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsCoursesTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsCoursesFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsCoursesFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsCoursesFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsCoursesFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsCoursesFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsCoursesFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoursesFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularQueryList {
+  in?: sitePageConnectionContextPostsAngularInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsAngularInputObject {
+  excerpt?: sitePageConnectionContextPostsAngularExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsAngularHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsAngularIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsAngularTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsAngularFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsAngularExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsAngularFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsAngularFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsAngularFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsAngularFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsAngularFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAngularFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingQueryList {
+  in?: sitePageConnectionContextPostsStylingInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsStylingInputObject {
+  excerpt?: sitePageConnectionContextPostsStylingExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsStylingHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsStylingIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsStylingTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsStylingFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsStylingExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsStylingFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsStylingFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsStylingFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsStylingFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsStylingFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsStylingFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreQueryList {
+  in?: sitePageConnectionContextPostsCoreInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsCoreInputObject {
+  excerpt?: sitePageConnectionContextPostsCoreExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsCoreHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsCoreIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsCoreTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsCoreFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsCoreExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsCoreFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsCoreFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsCoreFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsCoreFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsCoreFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCoreFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationQueryList {
+  in?: sitePageConnectionContextPostsAuthenticationInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationInputObject {
+  excerpt?: sitePageConnectionContextPostsAuthenticationExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsAuthenticationHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsAuthenticationIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsAuthenticationTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsAuthenticationFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsAuthenticationFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsAuthenticationFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsAuthenticationFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsAuthenticationFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsAuthenticationFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthenticationFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationQueryList {
+  in?: sitePageConnectionContextPostsAuthorizationInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationInputObject {
+  excerpt?: sitePageConnectionContextPostsAuthorizationExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsAuthorizationHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsAuthorizationIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsAuthorizationTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsAuthorizationFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsAuthorizationFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsAuthorizationFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsAuthorizationFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsAuthorizationFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsAuthorizationFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsAuthorizationFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseQueryList {
+  in?: sitePageConnectionContextPostsEnterpriseInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseInputObject {
+  excerpt?: sitePageConnectionContextPostsEnterpriseExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsEnterpriseHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsEnterpriseIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsEnterpriseTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsEnterpriseFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsEnterpriseFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsEnterpriseFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsEnterpriseFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsEnterpriseFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsEnterpriseFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsEnterpriseFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiQueryList {
+  in?: sitePageConnectionContextPostsUiInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsUiInputObject {
+  excerpt?: sitePageConnectionContextPostsUiExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsUiHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsUiIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsUiTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsUiFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsUiExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsUiFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsUiFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsUiFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsUiFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsUiFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsUiFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaQueryList {
+  in?: sitePageConnectionContextPostsCordovaInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaInputObject {
+  excerpt?: sitePageConnectionContextPostsCordovaExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsCordovaHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsCordovaIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsCordovaTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsCordovaFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsCordovaFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsCordovaFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsCordovaFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsCordovaFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsCordovaFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsCordovaFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipQueryList {
+  in?: sitePageConnectionContextPostsTipInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsTipInputObject {
+  excerpt?: sitePageConnectionContextPostsTipExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsTipHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsTipIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsTipTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsTipFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsTipExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsTipFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsTipFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsTipFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsTipFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsTipFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTipFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptQueryList {
+  in?: sitePageConnectionContextPostsJavaScriptInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptInputObject {
+  excerpt?: sitePageConnectionContextPostsJavaScriptExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsJavaScriptHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsJavaScriptIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsJavaScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsJavaScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsJavaScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsJavaScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsJavaScriptFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsJavaScriptFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsJavaScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsJavaScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptQueryList {
+  in?: sitePageConnectionContextPostsTypeScriptInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptInputObject {
+  excerpt?: sitePageConnectionContextPostsTypeScriptExcerptQueryString | null;
+  html?: sitePageConnectionContextPostsTypeScriptHtmlQueryString | null;
+  id?: sitePageConnectionContextPostsTypeScriptIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostsTypeScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostsTypeScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostsTypeScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostsTypeScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostsTypeScriptFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostsTypeScriptFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostsTypeScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostsTypeScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostQueryList {
+  in?: sitePageConnectionContextPostInputObject[] | null;
+}
+
+export interface sitePageConnectionContextPostInputObject {
+  excerpt?: sitePageConnectionContextPostExcerptQueryString | null;
+  html?: sitePageConnectionContextPostHtmlQueryString | null;
+  id?: sitePageConnectionContextPostIdQueryString | null;
+  timeToRead?: sitePageConnectionContextPostTimeToReadQueryInteger | null;
+  frontmatter?: sitePageConnectionContextPostFrontmatterInputObject | null;
+}
+
+export interface sitePageConnectionContextPostExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterInputObject {
+  createdDate?: sitePageConnectionContextPostFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageConnectionContextPostFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageConnectionContextPostFrontmatterTagsQueryList | null;
+  path?: sitePageConnectionContextPostFrontmatterPathQueryString | null;
+  title?: sitePageConnectionContextPostFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextPostFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionContextTagQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorInputObject {
+  resolve?: sitePageConnectionPluginCreatorResolveQueryString | null;
+  id?: sitePageConnectionPluginCreatorIdQueryString | null;
+  name?: sitePageConnectionPluginCreatorNameQueryString | null;
+  version?: sitePageConnectionPluginCreatorVersionQueryString | null;
+  pluginOptions?: sitePageConnectionPluginCreatorPluginOptionsInputObject | null;
+  nodeAPIs?: sitePageConnectionPluginCreatorNodeApIsQueryList | null;
+  browserAPIs?: sitePageConnectionPluginCreatorBrowserApIsQueryList | null;
+  ssrAPIs?: sitePageConnectionPluginCreatorSsrApIsQueryList | null;
+  pluginFilepath?: sitePageConnectionPluginCreatorPluginFilepathQueryString | null;
+  packageJson?: sitePageConnectionPluginCreatorPackageJsonInputObject | null;
+  parent?: sitePageConnectionPluginCreatorParentQueryString | null;
+  internal?: sitePageConnectionPluginCreatorInternalInputObject | null;
+}
+
+export interface sitePageConnectionPluginCreatorResolveQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsInputObject {
+  plugins?: sitePageConnectionPluginCreatorPluginOptionsPluginsQueryList | null;
+  siteUrl?: sitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString | null;
+  output?: sitePageConnectionPluginCreatorPluginOptionsOutputQueryString | null;
+  query?: sitePageConnectionPluginCreatorPluginOptionsQueryQueryString | null;
+  name?: sitePageConnectionPluginCreatorPluginOptionsNameQueryString | null;
+  path?: sitePageConnectionPluginCreatorPluginOptionsPathQueryString | null;
+  linkImagesToOriginal?: sitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null;
+  maxWidth?: sitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger | null;
+  wrapperStyle?: sitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString | null;
+  backgroundColor?: sitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString | null;
+  showCaptions?: sitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean | null;
+  pathPrefix?: sitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString | null;
+  ignoreFileExtensions?: sitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsQueryList {
+  in?: sitePageConnectionPluginCreatorPluginOptionsPluginsInputObject[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsInputObject {
+  resolve?: sitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString | null;
+  id?: sitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString | null;
+  name?: sitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString | null;
+  version?: sitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString | null;
+  pluginOptions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject | null;
+  pluginFilepath?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  linkImagesToOriginal?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null;
+  maxWidth?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null;
+  wrapperStyle?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null;
+  backgroundColor?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null;
+  showCaptions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null;
+  pathPrefix?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null;
+  ignoreFileExtensions?: sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsOutputQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsQueryQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorNodeApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorBrowserApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorSsrApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginFilepathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
+  name?: sitePageConnectionPluginCreatorPackageJsonNameQueryString | null;
+  description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
+  version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
+  main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
+  license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
+  dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
+  devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
+  peerDependencies?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null;
+  keywords?: sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
+  in?:
+    | sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject[]
+    | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject {
+  name?: sitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString | null;
+  version?: sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
+  in?:
+    | sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject[]
+    | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject {
+  name?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString | null;
+  version?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
+  in?:
+    | sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject[]
+    | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject {
+  name?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
+  version?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageConnectionPluginCreatorParentQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorInternalInputObject {
+  contentDigest?: sitePageConnectionPluginCreatorInternalContentDigestQueryString | null;
+  type?: sitePageConnectionPluginCreatorInternalTypeQueryString | null;
+  owner?: sitePageConnectionPluginCreatorInternalOwnerQueryString | null;
+}
+
+export interface sitePageConnectionPluginCreatorInternalContentDigestQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorInternalTypeQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorInternalOwnerQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionComponentPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionInternalInputObject_2 {
+  type?: sitePageConnectionInternalTypeQueryString_2 | null;
+  contentDigest?: sitePageConnectionInternalContentDigestQueryString_2 | null;
+  description?: sitePageConnectionInternalDescriptionQueryString | null;
+  owner?: sitePageConnectionInternalOwnerQueryString_2 | null;
+}
+
+export interface sitePageConnectionInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionInternalDescriptionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface testimonialsJsonIdQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -5324,6 +5806,27 @@ export interface coursesJsonInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
+export interface coursesJsonPublishingScheduleQueryList_2 {
+  in?: coursesJsonPublishingScheduleInputObject_2[] | null;
+}
+
+export interface coursesJsonPublishingScheduleInputObject_2 {
+  id?: coursesJsonPublishingScheduleIdQueryInteger_2 | null;
+  date?: coursesJsonPublishingScheduleDateQueryString_2 | null;
+}
+
+export interface coursesJsonPublishingScheduleIdQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface coursesJsonPublishingScheduleDateQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface bundlesJsonIdQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -5464,1709 +5967,6 @@ export interface bundlesJsonInternalOwnerQueryString_2 {
   glob?: string | null;
 }
 
-export interface sitePageLayoutQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageJsonNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageInternalComponentNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageComponentQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageComponentChunkNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextInputObject {
-  courseUrl?: sitePageContextCourseUrlQueryString | null;
-  posts?: sitePageContextPostsInputObject | null;
-  post?: sitePageContextPostQueryList | null;
-  tag?: sitePageContextTagQueryString | null;
-  slug?: sitePageContextSlugQueryString | null;
-}
-
-export interface sitePageContextCourseUrlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsInputObject {
-  NativeScript?: sitePageContextPostsNativeScriptQueryList | null;
-  Angular?: sitePageContextPostsAngularQueryList | null;
-  Core?: sitePageContextPostsCoreQueryList | null;
-  UI?: sitePageContextPostsUiQueryList | null;
-  Tutorial?: sitePageContextPostsTutorialQueryList | null;
-  Video?: sitePageContextPostsVideoQueryList | null;
-  Authentication?: sitePageContextPostsAuthenticationQueryList | null;
-  Authorization?: sitePageContextPostsAuthorizationQueryList | null;
-  Enterprise?: sitePageContextPostsEnterpriseQueryList | null;
-  Tips_and_Tricks?: sitePageContextPostsTipsAndTricksQueryList | null;
-  Styling?: sitePageContextPostsStylingQueryList | null;
-  Courses?: sitePageContextPostsCoursesQueryList | null;
-  pandas?: sitePageContextPostsPandasQueryList | null;
-}
-
-export interface sitePageContextPostsNativeScriptQueryList {
-  in?: sitePageContextPostsNativeScriptInputObject[] | null;
-}
-
-export interface sitePageContextPostsNativeScriptInputObject {
-  excerpt?: sitePageContextPostsNativeScriptExcerptQueryString | null;
-  html?: sitePageContextPostsNativeScriptHtmlQueryString | null;
-  id?: sitePageContextPostsNativeScriptIdQueryString | null;
-  timeToRead?: sitePageContextPostsNativeScriptTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsNativeScriptFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsNativeScriptExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterInputObject {
-  createdDate?: sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsNativeScriptFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsNativeScriptFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsNativeScriptFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsNativeScriptFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularQueryList {
-  in?: sitePageContextPostsAngularInputObject[] | null;
-}
-
-export interface sitePageContextPostsAngularInputObject {
-  excerpt?: sitePageContextPostsAngularExcerptQueryString | null;
-  html?: sitePageContextPostsAngularHtmlQueryString | null;
-  id?: sitePageContextPostsAngularIdQueryString | null;
-  timeToRead?: sitePageContextPostsAngularTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsAngularFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsAngularExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterInputObject {
-  createdDate?: sitePageContextPostsAngularFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsAngularFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsAngularFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsAngularFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsAngularFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAngularFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreQueryList {
-  in?: sitePageContextPostsCoreInputObject[] | null;
-}
-
-export interface sitePageContextPostsCoreInputObject {
-  excerpt?: sitePageContextPostsCoreExcerptQueryString | null;
-  html?: sitePageContextPostsCoreHtmlQueryString | null;
-  id?: sitePageContextPostsCoreIdQueryString | null;
-  timeToRead?: sitePageContextPostsCoreTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsCoreFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsCoreExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterInputObject {
-  createdDate?: sitePageContextPostsCoreFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsCoreFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsCoreFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsCoreFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsCoreFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoreFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiQueryList {
-  in?: sitePageContextPostsUiInputObject[] | null;
-}
-
-export interface sitePageContextPostsUiInputObject {
-  excerpt?: sitePageContextPostsUiExcerptQueryString | null;
-  html?: sitePageContextPostsUiHtmlQueryString | null;
-  id?: sitePageContextPostsUiIdQueryString | null;
-  timeToRead?: sitePageContextPostsUiTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsUiFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsUiExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterInputObject {
-  createdDate?: sitePageContextPostsUiFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsUiFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsUiFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsUiFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsUiFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsUiFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialQueryList {
-  in?: sitePageContextPostsTutorialInputObject[] | null;
-}
-
-export interface sitePageContextPostsTutorialInputObject {
-  excerpt?: sitePageContextPostsTutorialExcerptQueryString | null;
-  html?: sitePageContextPostsTutorialHtmlQueryString | null;
-  id?: sitePageContextPostsTutorialIdQueryString | null;
-  timeToRead?: sitePageContextPostsTutorialTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsTutorialFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsTutorialExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterInputObject {
-  createdDate?: sitePageContextPostsTutorialFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsTutorialFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsTutorialFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsTutorialFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTutorialFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoQueryList {
-  in?: sitePageContextPostsVideoInputObject[] | null;
-}
-
-export interface sitePageContextPostsVideoInputObject {
-  excerpt?: sitePageContextPostsVideoExcerptQueryString | null;
-  html?: sitePageContextPostsVideoHtmlQueryString | null;
-  id?: sitePageContextPostsVideoIdQueryString | null;
-  timeToRead?: sitePageContextPostsVideoTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsVideoFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsVideoExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterInputObject {
-  createdDate?: sitePageContextPostsVideoFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsVideoFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsVideoFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsVideoFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsVideoFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsVideoFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationQueryList {
-  in?: sitePageContextPostsAuthenticationInputObject[] | null;
-}
-
-export interface sitePageContextPostsAuthenticationInputObject {
-  excerpt?: sitePageContextPostsAuthenticationExcerptQueryString | null;
-  html?: sitePageContextPostsAuthenticationHtmlQueryString | null;
-  id?: sitePageContextPostsAuthenticationIdQueryString | null;
-  timeToRead?: sitePageContextPostsAuthenticationTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsAuthenticationFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsAuthenticationExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterInputObject {
-  createdDate?: sitePageContextPostsAuthenticationFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsAuthenticationFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsAuthenticationFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsAuthenticationFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsAuthenticationFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthenticationFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationQueryList {
-  in?: sitePageContextPostsAuthorizationInputObject[] | null;
-}
-
-export interface sitePageContextPostsAuthorizationInputObject {
-  excerpt?: sitePageContextPostsAuthorizationExcerptQueryString | null;
-  html?: sitePageContextPostsAuthorizationHtmlQueryString | null;
-  id?: sitePageContextPostsAuthorizationIdQueryString | null;
-  timeToRead?: sitePageContextPostsAuthorizationTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsAuthorizationFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsAuthorizationExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterInputObject {
-  createdDate?: sitePageContextPostsAuthorizationFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsAuthorizationFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsAuthorizationFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsAuthorizationFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsAuthorizationFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsAuthorizationFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseQueryList {
-  in?: sitePageContextPostsEnterpriseInputObject[] | null;
-}
-
-export interface sitePageContextPostsEnterpriseInputObject {
-  excerpt?: sitePageContextPostsEnterpriseExcerptQueryString | null;
-  html?: sitePageContextPostsEnterpriseHtmlQueryString | null;
-  id?: sitePageContextPostsEnterpriseIdQueryString | null;
-  timeToRead?: sitePageContextPostsEnterpriseTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsEnterpriseFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsEnterpriseExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterInputObject {
-  createdDate?: sitePageContextPostsEnterpriseFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsEnterpriseFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsEnterpriseFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsEnterpriseFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsEnterpriseFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsEnterpriseFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksQueryList {
-  in?: sitePageContextPostsTipsAndTricksInputObject[] | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksInputObject {
-  excerpt?: sitePageContextPostsTipsAndTricksExcerptQueryString | null;
-  html?: sitePageContextPostsTipsAndTricksHtmlQueryString | null;
-  id?: sitePageContextPostsTipsAndTricksIdQueryString | null;
-  timeToRead?: sitePageContextPostsTipsAndTricksTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsTipsAndTricksFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterInputObject {
-  createdDate?: sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsTipsAndTricksFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsTipsAndTricksFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsTipsAndTricksFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsTipsAndTricksFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingQueryList {
-  in?: sitePageContextPostsStylingInputObject[] | null;
-}
-
-export interface sitePageContextPostsStylingInputObject {
-  excerpt?: sitePageContextPostsStylingExcerptQueryString | null;
-  html?: sitePageContextPostsStylingHtmlQueryString | null;
-  id?: sitePageContextPostsStylingIdQueryString | null;
-  timeToRead?: sitePageContextPostsStylingTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsStylingFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsStylingExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterInputObject {
-  createdDate?: sitePageContextPostsStylingFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsStylingFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsStylingFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsStylingFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsStylingFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsStylingFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesQueryList {
-  in?: sitePageContextPostsCoursesInputObject[] | null;
-}
-
-export interface sitePageContextPostsCoursesInputObject {
-  excerpt?: sitePageContextPostsCoursesExcerptQueryString | null;
-  html?: sitePageContextPostsCoursesHtmlQueryString | null;
-  id?: sitePageContextPostsCoursesIdQueryString | null;
-  timeToRead?: sitePageContextPostsCoursesTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsCoursesFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsCoursesExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterInputObject {
-  createdDate?: sitePageContextPostsCoursesFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsCoursesFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsCoursesFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsCoursesFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsCoursesFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsCoursesFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasQueryList {
-  in?: sitePageContextPostsPandasInputObject[] | null;
-}
-
-export interface sitePageContextPostsPandasInputObject {
-  excerpt?: sitePageContextPostsPandasExcerptQueryString | null;
-  html?: sitePageContextPostsPandasHtmlQueryString | null;
-  id?: sitePageContextPostsPandasIdQueryString | null;
-  timeToRead?: sitePageContextPostsPandasTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostsPandasFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostsPandasExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterInputObject {
-  createdDate?: sitePageContextPostsPandasFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostsPandasFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostsPandasFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostsPandasFrontmatterPathQueryString | null;
-  title?: sitePageContextPostsPandasFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostsPandasFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostQueryList {
-  in?: sitePageContextPostInputObject[] | null;
-}
-
-export interface sitePageContextPostInputObject {
-  excerpt?: sitePageContextPostExcerptQueryString | null;
-  html?: sitePageContextPostHtmlQueryString | null;
-  id?: sitePageContextPostIdQueryString | null;
-  timeToRead?: sitePageContextPostTimeToReadQueryInteger | null;
-  frontmatter?: sitePageContextPostFrontmatterInputObject | null;
-}
-
-export interface sitePageContextPostExcerptQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostHtmlQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostTimeToReadQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePageContextPostFrontmatterInputObject {
-  createdDate?: sitePageContextPostFrontmatterCreatedDateQueryString | null;
-  updatedDate?: sitePageContextPostFrontmatterUpdatedDateQueryString | null;
-  tags?: sitePageContextPostFrontmatterTagsQueryList | null;
-  path?: sitePageContextPostFrontmatterPathQueryString | null;
-  title?: sitePageContextPostFrontmatterTitleQueryString | null;
-}
-
-export interface sitePageContextPostFrontmatterCreatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostFrontmatterUpdatedDateQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostFrontmatterTagsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePageContextPostFrontmatterPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextPostFrontmatterTitleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextTagQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageContextSlugQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorInputObject {
-  resolve?: sitePagePluginCreatorResolveQueryString | null;
-  id?: sitePagePluginCreatorIdQueryString | null;
-  name?: sitePagePluginCreatorNameQueryString | null;
-  version?: sitePagePluginCreatorVersionQueryString | null;
-  pluginOptions?: sitePagePluginCreatorPluginOptionsInputObject | null;
-  nodeAPIs?: sitePagePluginCreatorNodeApIsQueryList | null;
-  ssrAPIs?: sitePagePluginCreatorSsrApIsQueryList | null;
-  pluginFilepath?: sitePagePluginCreatorPluginFilepathQueryString | null;
-  packageJson?: sitePagePluginCreatorPackageJsonInputObject | null;
-  parent?: sitePagePluginCreatorParentQueryString | null;
-  internal?: sitePagePluginCreatorInternalInputObject | null;
-}
-
-export interface sitePagePluginCreatorResolveQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsInputObject {
-  plugins?: sitePagePluginCreatorPluginOptionsPluginsQueryList | null;
-  output?: sitePagePluginCreatorPluginOptionsOutputQueryString | null;
-  query?: sitePagePluginCreatorPluginOptionsQueryQueryString | null;
-  name?: sitePagePluginCreatorPluginOptionsNameQueryString | null;
-  path?: sitePagePluginCreatorPluginOptionsPathQueryString | null;
-  linkImagesToOriginal?: sitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null;
-  maxWidth?: sitePagePluginCreatorPluginOptionsMaxWidthQueryInteger | null;
-  wrapperStyle?: sitePagePluginCreatorPluginOptionsWrapperStyleQueryString | null;
-  backgroundColor?: sitePagePluginCreatorPluginOptionsBackgroundColorQueryString | null;
-  showCaptions?: sitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean | null;
-  pathPrefix?: sitePagePluginCreatorPluginOptionsPathPrefixQueryString | null;
-  ignoreFileExtensions?: sitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsQueryList {
-  in?: sitePagePluginCreatorPluginOptionsPluginsInputObject[] | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsInputObject {
-  resolve?: sitePagePluginCreatorPluginOptionsPluginsResolveQueryString | null;
-  id?: sitePagePluginCreatorPluginOptionsPluginsIdQueryString | null;
-  name?: sitePagePluginCreatorPluginOptionsPluginsNameQueryString | null;
-  version?: sitePagePluginCreatorPluginOptionsPluginsVersionQueryString | null;
-  pluginOptions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject | null;
-  pluginFilepath?: sitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsResolveQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsIdQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
-  linkImagesToOriginal?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null;
-  maxWidth?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null;
-  wrapperStyle?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null;
-  backgroundColor?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null;
-  showCaptions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null;
-  pathPrefix?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null;
-  ignoreFileExtensions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsOutputQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsQueryQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsMaxWidthQueryInteger {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsWrapperStyleQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsBackgroundColorQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsPathPrefixQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePagePluginCreatorNodeApIsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePagePluginCreatorSsrApIsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePagePluginCreatorPluginFilepathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonInputObject {
-  name?: sitePagePluginCreatorPackageJsonNameQueryString | null;
-  description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
-  version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
-  main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
-  license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
-  dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
-  devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
-  peerDependencies?: sitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null;
-  keywords?: sitePagePluginCreatorPackageJsonKeywordsQueryList | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonDependenciesInputObject[] | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDependenciesInputObject {
-  name?: sitePagePluginCreatorPackageJsonDependenciesNameQueryString | null;
-  version?: sitePagePluginCreatorPackageJsonDependenciesVersionQueryString | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDevDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonDevDependenciesInputObject[] | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: sitePagePluginCreatorPackageJsonDevDependenciesNameQueryString | null;
-  version?: sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonPeerDependenciesInputObject[] | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: sitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
-  version?: sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-  in?: string[] | null;
-}
-
-export interface sitePagePluginCreatorParentQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorInternalInputObject {
-  contentDigest?: sitePagePluginCreatorInternalContentDigestQueryString | null;
-  type?: sitePagePluginCreatorInternalTypeQueryString | null;
-  owner?: sitePagePluginCreatorInternalOwnerQueryString | null;
-}
-
-export interface sitePagePluginCreatorInternalContentDigestQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorInternalTypeQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorInternalOwnerQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageComponentPathQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageIdQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageInternalInputObject_2 {
-  type?: sitePageInternalTypeQueryString_2 | null;
-  contentDigest?: sitePageInternalContentDigestQueryString_2 | null;
-  description?: sitePageInternalDescriptionQueryString | null;
-  owner?: sitePageInternalOwnerQueryString_2 | null;
-}
-
-export interface sitePageInternalTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageInternalContentDigestQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageInternalDescriptionQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageInternalOwnerQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface sitePluginResolveQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -7197,6 +5997,7 @@ export interface sitePluginVersionQueryString_2 {
 
 export interface sitePluginPluginOptionsInputObject_2 {
   plugins?: sitePluginPluginOptionsPluginsQueryList_2 | null;
+  siteUrl?: sitePluginPluginOptionsSiteUrlQueryString_2 | null;
   output?: sitePluginPluginOptionsOutputQueryString_2 | null;
   query?: sitePluginPluginOptionsQueryQueryString_2 | null;
   name?: sitePluginPluginOptionsNameQueryString_2 | null;
@@ -7312,6 +6113,13 @@ export interface sitePluginPluginOptionsPluginsPluginFilepathQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginPluginOptionsSiteUrlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginPluginOptionsOutputQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -7385,6 +6193,14 @@ export interface sitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
 }
 
 export interface sitePluginNodeApIsQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePluginBrowserApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -8810,6 +7626,2074 @@ export interface wordCountWordsQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
 }
+
+export interface sitePageLayoutQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageJsonNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalComponentNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageComponentQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageComponentChunkNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextInputObject {
+  courseUrl?: sitePageContextCourseUrlQueryString | null;
+  slug?: sitePageContextSlugQueryString | null;
+  prevPostPath?: sitePageContextPrevPostPathQueryString | null;
+  nextPostPath?: sitePageContextNextPostPathQueryString | null;
+  posts?: sitePageContextPostsInputObject | null;
+  post?: sitePageContextPostQueryList | null;
+  tag?: sitePageContextTagQueryString | null;
+}
+
+export interface sitePageContextCourseUrlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextSlugQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPrevPostPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextNextPostPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsInputObject {
+  pandas?: sitePageContextPostsPandasQueryList | null;
+  NativeScript?: sitePageContextPostsNativeScriptQueryList | null;
+  Tips_and_Tricks?: sitePageContextPostsTipsAndTricksQueryList | null;
+  Tutorial?: sitePageContextPostsTutorialQueryList | null;
+  Video?: sitePageContextPostsVideoQueryList | null;
+  Courses?: sitePageContextPostsCoursesQueryList | null;
+  Angular?: sitePageContextPostsAngularQueryList | null;
+  Styling?: sitePageContextPostsStylingQueryList | null;
+  Core?: sitePageContextPostsCoreQueryList | null;
+  Authentication?: sitePageContextPostsAuthenticationQueryList | null;
+  Authorization?: sitePageContextPostsAuthorizationQueryList | null;
+  Enterprise?: sitePageContextPostsEnterpriseQueryList | null;
+  UI?: sitePageContextPostsUiQueryList | null;
+  Cordova?: sitePageContextPostsCordovaQueryList | null;
+  Tip?: sitePageContextPostsTipQueryList | null;
+  JavaScript?: sitePageContextPostsJavaScriptQueryList | null;
+  TypeScript?: sitePageContextPostsTypeScriptQueryList | null;
+}
+
+export interface sitePageContextPostsPandasQueryList {
+  in?: sitePageContextPostsPandasInputObject[] | null;
+}
+
+export interface sitePageContextPostsPandasInputObject {
+  excerpt?: sitePageContextPostsPandasExcerptQueryString | null;
+  html?: sitePageContextPostsPandasHtmlQueryString | null;
+  id?: sitePageContextPostsPandasIdQueryString | null;
+  timeToRead?: sitePageContextPostsPandasTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsPandasFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsPandasExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterInputObject {
+  createdDate?: sitePageContextPostsPandasFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsPandasFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsPandasFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsPandasFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsPandasFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsPandasFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptQueryList {
+  in?: sitePageContextPostsNativeScriptInputObject[] | null;
+}
+
+export interface sitePageContextPostsNativeScriptInputObject {
+  excerpt?: sitePageContextPostsNativeScriptExcerptQueryString | null;
+  html?: sitePageContextPostsNativeScriptHtmlQueryString | null;
+  id?: sitePageContextPostsNativeScriptIdQueryString | null;
+  timeToRead?: sitePageContextPostsNativeScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsNativeScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsNativeScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterInputObject {
+  createdDate?: sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsNativeScriptFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsNativeScriptFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsNativeScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsNativeScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksQueryList {
+  in?: sitePageContextPostsTipsAndTricksInputObject[] | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksInputObject {
+  excerpt?: sitePageContextPostsTipsAndTricksExcerptQueryString | null;
+  html?: sitePageContextPostsTipsAndTricksHtmlQueryString | null;
+  id?: sitePageContextPostsTipsAndTricksIdQueryString | null;
+  timeToRead?: sitePageContextPostsTipsAndTricksTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsTipsAndTricksFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterInputObject {
+  createdDate?: sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsTipsAndTricksFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsTipsAndTricksFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsTipsAndTricksFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipsAndTricksFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialQueryList {
+  in?: sitePageContextPostsTutorialInputObject[] | null;
+}
+
+export interface sitePageContextPostsTutorialInputObject {
+  excerpt?: sitePageContextPostsTutorialExcerptQueryString | null;
+  html?: sitePageContextPostsTutorialHtmlQueryString | null;
+  id?: sitePageContextPostsTutorialIdQueryString | null;
+  timeToRead?: sitePageContextPostsTutorialTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsTutorialFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsTutorialExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterInputObject {
+  createdDate?: sitePageContextPostsTutorialFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsTutorialFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsTutorialFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsTutorialFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTutorialFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoQueryList {
+  in?: sitePageContextPostsVideoInputObject[] | null;
+}
+
+export interface sitePageContextPostsVideoInputObject {
+  excerpt?: sitePageContextPostsVideoExcerptQueryString | null;
+  html?: sitePageContextPostsVideoHtmlQueryString | null;
+  id?: sitePageContextPostsVideoIdQueryString | null;
+  timeToRead?: sitePageContextPostsVideoTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsVideoFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsVideoExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterInputObject {
+  createdDate?: sitePageContextPostsVideoFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsVideoFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsVideoFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsVideoFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsVideoFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsVideoFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesQueryList {
+  in?: sitePageContextPostsCoursesInputObject[] | null;
+}
+
+export interface sitePageContextPostsCoursesInputObject {
+  excerpt?: sitePageContextPostsCoursesExcerptQueryString | null;
+  html?: sitePageContextPostsCoursesHtmlQueryString | null;
+  id?: sitePageContextPostsCoursesIdQueryString | null;
+  timeToRead?: sitePageContextPostsCoursesTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsCoursesFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsCoursesExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterInputObject {
+  createdDate?: sitePageContextPostsCoursesFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsCoursesFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsCoursesFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsCoursesFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsCoursesFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoursesFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularQueryList {
+  in?: sitePageContextPostsAngularInputObject[] | null;
+}
+
+export interface sitePageContextPostsAngularInputObject {
+  excerpt?: sitePageContextPostsAngularExcerptQueryString | null;
+  html?: sitePageContextPostsAngularHtmlQueryString | null;
+  id?: sitePageContextPostsAngularIdQueryString | null;
+  timeToRead?: sitePageContextPostsAngularTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsAngularFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsAngularExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterInputObject {
+  createdDate?: sitePageContextPostsAngularFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsAngularFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsAngularFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsAngularFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsAngularFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAngularFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingQueryList {
+  in?: sitePageContextPostsStylingInputObject[] | null;
+}
+
+export interface sitePageContextPostsStylingInputObject {
+  excerpt?: sitePageContextPostsStylingExcerptQueryString | null;
+  html?: sitePageContextPostsStylingHtmlQueryString | null;
+  id?: sitePageContextPostsStylingIdQueryString | null;
+  timeToRead?: sitePageContextPostsStylingTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsStylingFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsStylingExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterInputObject {
+  createdDate?: sitePageContextPostsStylingFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsStylingFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsStylingFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsStylingFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsStylingFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsStylingFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreQueryList {
+  in?: sitePageContextPostsCoreInputObject[] | null;
+}
+
+export interface sitePageContextPostsCoreInputObject {
+  excerpt?: sitePageContextPostsCoreExcerptQueryString | null;
+  html?: sitePageContextPostsCoreHtmlQueryString | null;
+  id?: sitePageContextPostsCoreIdQueryString | null;
+  timeToRead?: sitePageContextPostsCoreTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsCoreFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsCoreExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterInputObject {
+  createdDate?: sitePageContextPostsCoreFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsCoreFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsCoreFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsCoreFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsCoreFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCoreFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationQueryList {
+  in?: sitePageContextPostsAuthenticationInputObject[] | null;
+}
+
+export interface sitePageContextPostsAuthenticationInputObject {
+  excerpt?: sitePageContextPostsAuthenticationExcerptQueryString | null;
+  html?: sitePageContextPostsAuthenticationHtmlQueryString | null;
+  id?: sitePageContextPostsAuthenticationIdQueryString | null;
+  timeToRead?: sitePageContextPostsAuthenticationTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsAuthenticationFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsAuthenticationExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterInputObject {
+  createdDate?: sitePageContextPostsAuthenticationFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsAuthenticationFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsAuthenticationFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsAuthenticationFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsAuthenticationFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthenticationFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationQueryList {
+  in?: sitePageContextPostsAuthorizationInputObject[] | null;
+}
+
+export interface sitePageContextPostsAuthorizationInputObject {
+  excerpt?: sitePageContextPostsAuthorizationExcerptQueryString | null;
+  html?: sitePageContextPostsAuthorizationHtmlQueryString | null;
+  id?: sitePageContextPostsAuthorizationIdQueryString | null;
+  timeToRead?: sitePageContextPostsAuthorizationTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsAuthorizationFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsAuthorizationExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterInputObject {
+  createdDate?: sitePageContextPostsAuthorizationFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsAuthorizationFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsAuthorizationFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsAuthorizationFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsAuthorizationFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsAuthorizationFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseQueryList {
+  in?: sitePageContextPostsEnterpriseInputObject[] | null;
+}
+
+export interface sitePageContextPostsEnterpriseInputObject {
+  excerpt?: sitePageContextPostsEnterpriseExcerptQueryString | null;
+  html?: sitePageContextPostsEnterpriseHtmlQueryString | null;
+  id?: sitePageContextPostsEnterpriseIdQueryString | null;
+  timeToRead?: sitePageContextPostsEnterpriseTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsEnterpriseFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsEnterpriseExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterInputObject {
+  createdDate?: sitePageContextPostsEnterpriseFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsEnterpriseFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsEnterpriseFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsEnterpriseFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsEnterpriseFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsEnterpriseFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiQueryList {
+  in?: sitePageContextPostsUiInputObject[] | null;
+}
+
+export interface sitePageContextPostsUiInputObject {
+  excerpt?: sitePageContextPostsUiExcerptQueryString | null;
+  html?: sitePageContextPostsUiHtmlQueryString | null;
+  id?: sitePageContextPostsUiIdQueryString | null;
+  timeToRead?: sitePageContextPostsUiTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsUiFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsUiExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterInputObject {
+  createdDate?: sitePageContextPostsUiFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsUiFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsUiFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsUiFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsUiFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsUiFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaQueryList {
+  in?: sitePageContextPostsCordovaInputObject[] | null;
+}
+
+export interface sitePageContextPostsCordovaInputObject {
+  excerpt?: sitePageContextPostsCordovaExcerptQueryString | null;
+  html?: sitePageContextPostsCordovaHtmlQueryString | null;
+  id?: sitePageContextPostsCordovaIdQueryString | null;
+  timeToRead?: sitePageContextPostsCordovaTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsCordovaFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsCordovaExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterInputObject {
+  createdDate?: sitePageContextPostsCordovaFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsCordovaFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsCordovaFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsCordovaFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsCordovaFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsCordovaFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipQueryList {
+  in?: sitePageContextPostsTipInputObject[] | null;
+}
+
+export interface sitePageContextPostsTipInputObject {
+  excerpt?: sitePageContextPostsTipExcerptQueryString | null;
+  html?: sitePageContextPostsTipHtmlQueryString | null;
+  id?: sitePageContextPostsTipIdQueryString | null;
+  timeToRead?: sitePageContextPostsTipTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsTipFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsTipExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterInputObject {
+  createdDate?: sitePageContextPostsTipFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsTipFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsTipFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsTipFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsTipFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTipFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptQueryList {
+  in?: sitePageContextPostsJavaScriptInputObject[] | null;
+}
+
+export interface sitePageContextPostsJavaScriptInputObject {
+  excerpt?: sitePageContextPostsJavaScriptExcerptQueryString | null;
+  html?: sitePageContextPostsJavaScriptHtmlQueryString | null;
+  id?: sitePageContextPostsJavaScriptIdQueryString | null;
+  timeToRead?: sitePageContextPostsJavaScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsJavaScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsJavaScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterInputObject {
+  createdDate?: sitePageContextPostsJavaScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsJavaScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsJavaScriptFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsJavaScriptFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsJavaScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsJavaScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptQueryList {
+  in?: sitePageContextPostsTypeScriptInputObject[] | null;
+}
+
+export interface sitePageContextPostsTypeScriptInputObject {
+  excerpt?: sitePageContextPostsTypeScriptExcerptQueryString | null;
+  html?: sitePageContextPostsTypeScriptHtmlQueryString | null;
+  id?: sitePageContextPostsTypeScriptIdQueryString | null;
+  timeToRead?: sitePageContextPostsTypeScriptTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostsTypeScriptFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostsTypeScriptExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterInputObject {
+  createdDate?: sitePageContextPostsTypeScriptFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostsTypeScriptFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostsTypeScriptFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostsTypeScriptFrontmatterPathQueryString | null;
+  title?: sitePageContextPostsTypeScriptFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostsTypeScriptFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostQueryList {
+  in?: sitePageContextPostInputObject[] | null;
+}
+
+export interface sitePageContextPostInputObject {
+  excerpt?: sitePageContextPostExcerptQueryString | null;
+  html?: sitePageContextPostHtmlQueryString | null;
+  id?: sitePageContextPostIdQueryString | null;
+  timeToRead?: sitePageContextPostTimeToReadQueryInteger | null;
+  frontmatter?: sitePageContextPostFrontmatterInputObject | null;
+}
+
+export interface sitePageContextPostExcerptQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostHtmlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostTimeToReadQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePageContextPostFrontmatterInputObject {
+  createdDate?: sitePageContextPostFrontmatterCreatedDateQueryString | null;
+  updatedDate?: sitePageContextPostFrontmatterUpdatedDateQueryString | null;
+  tags?: sitePageContextPostFrontmatterTagsQueryList | null;
+  path?: sitePageContextPostFrontmatterPathQueryString | null;
+  title?: sitePageContextPostFrontmatterTitleQueryString | null;
+}
+
+export interface sitePageContextPostFrontmatterCreatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostFrontmatterUpdatedDateQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostFrontmatterTagsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePageContextPostFrontmatterPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextPostFrontmatterTitleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageContextTagQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorInputObject {
+  resolve?: sitePagePluginCreatorResolveQueryString | null;
+  id?: sitePagePluginCreatorIdQueryString | null;
+  name?: sitePagePluginCreatorNameQueryString | null;
+  version?: sitePagePluginCreatorVersionQueryString | null;
+  pluginOptions?: sitePagePluginCreatorPluginOptionsInputObject | null;
+  nodeAPIs?: sitePagePluginCreatorNodeApIsQueryList | null;
+  browserAPIs?: sitePagePluginCreatorBrowserApIsQueryList | null;
+  ssrAPIs?: sitePagePluginCreatorSsrApIsQueryList | null;
+  pluginFilepath?: sitePagePluginCreatorPluginFilepathQueryString | null;
+  packageJson?: sitePagePluginCreatorPackageJsonInputObject | null;
+  parent?: sitePagePluginCreatorParentQueryString | null;
+  internal?: sitePagePluginCreatorInternalInputObject | null;
+}
+
+export interface sitePagePluginCreatorResolveQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsInputObject {
+  plugins?: sitePagePluginCreatorPluginOptionsPluginsQueryList | null;
+  siteUrl?: sitePagePluginCreatorPluginOptionsSiteUrlQueryString | null;
+  output?: sitePagePluginCreatorPluginOptionsOutputQueryString | null;
+  query?: sitePagePluginCreatorPluginOptionsQueryQueryString | null;
+  name?: sitePagePluginCreatorPluginOptionsNameQueryString | null;
+  path?: sitePagePluginCreatorPluginOptionsPathQueryString | null;
+  linkImagesToOriginal?: sitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null;
+  maxWidth?: sitePagePluginCreatorPluginOptionsMaxWidthQueryInteger | null;
+  wrapperStyle?: sitePagePluginCreatorPluginOptionsWrapperStyleQueryString | null;
+  backgroundColor?: sitePagePluginCreatorPluginOptionsBackgroundColorQueryString | null;
+  showCaptions?: sitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean | null;
+  pathPrefix?: sitePagePluginCreatorPluginOptionsPathPrefixQueryString | null;
+  ignoreFileExtensions?: sitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsQueryList {
+  in?: sitePagePluginCreatorPluginOptionsPluginsInputObject[] | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsInputObject {
+  resolve?: sitePagePluginCreatorPluginOptionsPluginsResolveQueryString | null;
+  id?: sitePagePluginCreatorPluginOptionsPluginsIdQueryString | null;
+  name?: sitePagePluginCreatorPluginOptionsPluginsNameQueryString | null;
+  version?: sitePagePluginCreatorPluginOptionsPluginsVersionQueryString | null;
+  pluginOptions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject | null;
+  pluginFilepath?: sitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsResolveQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsIdQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  linkImagesToOriginal?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null;
+  maxWidth?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null;
+  wrapperStyle?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null;
+  backgroundColor?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null;
+  showCaptions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null;
+  pathPrefix?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null;
+  ignoreFileExtensions?: sitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsSiteUrlQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsOutputQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsQueryQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsWrapperStyleQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorNodeApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorBrowserApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorSsrApIsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorPluginFilepathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonInputObject {
+  name?: sitePagePluginCreatorPackageJsonNameQueryString | null;
+  description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
+  version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
+  main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
+  license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
+  dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
+  devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
+  peerDependencies?: sitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null;
+  keywords?: sitePagePluginCreatorPackageJsonKeywordsQueryList | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDescriptionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonMainQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDependenciesQueryList {
+  in?: sitePagePluginCreatorPackageJsonDependenciesInputObject[] | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDependenciesInputObject {
+  name?: sitePagePluginCreatorPackageJsonDependenciesNameQueryString | null;
+  version?: sitePagePluginCreatorPackageJsonDependenciesVersionQueryString | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDevDependenciesQueryList {
+  in?: sitePagePluginCreatorPackageJsonDevDependenciesInputObject[] | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDevDependenciesInputObject {
+  name?: sitePagePluginCreatorPackageJsonDevDependenciesNameQueryString | null;
+  version?: sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDevDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
+  in?: sitePagePluginCreatorPackageJsonPeerDependenciesInputObject[] | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
+  name?: sitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
+  version?: sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonKeywordsQueryList {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface sitePagePluginCreatorParentQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorInternalInputObject {
+  contentDigest?: sitePagePluginCreatorInternalContentDigestQueryString | null;
+  type?: sitePagePluginCreatorInternalTypeQueryString | null;
+  owner?: sitePagePluginCreatorInternalOwnerQueryString | null;
+}
+
+export interface sitePagePluginCreatorInternalContentDigestQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorInternalTypeQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorInternalOwnerQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageComponentPathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalInputObject_2 {
+  type?: sitePageInternalTypeQueryString_2 | null;
+  contentDigest?: sitePageInternalContentDigestQueryString_2 | null;
+  description?: sitePageInternalDescriptionQueryString | null;
+  owner?: sitePageInternalOwnerQueryString_2 | null;
+}
+
+export interface sitePageInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalDescriptionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
 export interface AllTestimonialsJsonRootQueryTypeArgs {
   skip?: number | null;
   limit?: number | null;
@@ -8827,12 +9711,6 @@ export interface AllBundlesJsonRootQueryTypeArgs {
   limit?: number | null;
   sort?: bundlesJsonConnectionSort | null;
   filter?: filterBundlesJson | null;
-}
-export interface AllSitePageRootQueryTypeArgs {
-  skip?: number | null;
-  limit?: number | null;
-  sort?: sitePageConnectionSort | null;
-  filter?: filterSitePage | null;
 }
 export interface AllSitePluginRootQueryTypeArgs {
   skip?: number | null;
@@ -8870,6 +9748,12 @@ export interface AllMarkdownRemarkRootQueryTypeArgs {
   sort?: markdownRemarkConnectionSort | null;
   filter?: filterMarkdownRemark | null;
 }
+export interface AllSitePageRootQueryTypeArgs {
+  skip?: number | null;
+  limit?: number | null;
+  sort?: sitePageConnectionSort | null;
+  filter?: filterSitePage | null;
+}
 export interface TestimonialsJsonRootQueryTypeArgs {
   id?: testimonialsJsonIdQueryString_2 | null;
   name?: testimonialsJsonNameQueryString_2 | null;
@@ -8897,6 +9781,7 @@ export interface CoursesJsonRootQueryTypeArgs {
   publishedChapters?: coursesJsonPublishedChaptersQueryList_2 | null;
   chapters?: coursesJsonChaptersQueryList_2 | null;
   internal?: coursesJsonInternalInputObject_2 | null;
+  publishingSchedule?: coursesJsonPublishingScheduleQueryList_2 | null;
 }
 export interface BundlesJsonRootQueryTypeArgs {
   id?: bundlesJsonIdQueryString_2 | null;
@@ -8911,20 +9796,6 @@ export interface BundlesJsonRootQueryTypeArgs {
   courseIds?: bundlesJsonCourseIdsQueryList_2 | null;
   internal?: bundlesJsonInternalInputObject_2 | null;
 }
-export interface SitePageRootQueryTypeArgs {
-  layout?: sitePageLayoutQueryString | null;
-  jsonName?: sitePageJsonNameQueryString | null;
-  internalComponentName?: sitePageInternalComponentNameQueryString | null;
-  path?: sitePagePathQueryString_2 | null;
-  component?: sitePageComponentQueryString | null;
-  componentChunkName?: sitePageComponentChunkNameQueryString | null;
-  context?: sitePageContextInputObject | null;
-  pluginCreator?: sitePagePluginCreatorInputObject | null;
-  pluginCreatorId?: sitePagePluginCreatorIdQueryString_2 | null;
-  componentPath?: sitePageComponentPathQueryString | null;
-  id?: sitePageIdQueryString_2 | null;
-  internal?: sitePageInternalInputObject_2 | null;
-}
 export interface SitePluginRootQueryTypeArgs {
   resolve?: sitePluginResolveQueryString_2 | null;
   id?: sitePluginIdQueryString_2 | null;
@@ -8932,6 +9803,7 @@ export interface SitePluginRootQueryTypeArgs {
   version?: sitePluginVersionQueryString_2 | null;
   pluginOptions?: sitePluginPluginOptionsInputObject_2 | null;
   nodeAPIs?: sitePluginNodeApIsQueryList_2 | null;
+  browserAPIs?: sitePluginBrowserApIsQueryList_2 | null;
   ssrAPIs?: sitePluginSsrApIsQueryList_2 | null;
   pluginFilepath?: sitePluginPluginFilepathQueryString_2 | null;
   packageJson?: sitePluginPackageJsonInputObject_2 | null;
@@ -9056,6 +9928,20 @@ export interface MarkdownRemarkRootQueryTypeArgs {
   tableOfContents?: tableOfContentsQueryString_3 | null;
   wordCount?: wordCountTypeName_3 | null;
 }
+export interface SitePageRootQueryTypeArgs {
+  layout?: sitePageLayoutQueryString | null;
+  jsonName?: sitePageJsonNameQueryString | null;
+  internalComponentName?: sitePageInternalComponentNameQueryString | null;
+  path?: sitePagePathQueryString_2 | null;
+  component?: sitePageComponentQueryString | null;
+  componentChunkName?: sitePageComponentChunkNameQueryString | null;
+  context?: sitePageContextInputObject | null;
+  pluginCreator?: sitePagePluginCreatorInputObject | null;
+  pluginCreatorId?: sitePagePluginCreatorIdQueryString_2 | null;
+  componentPath?: sitePageComponentPathQueryString | null;
+  id?: sitePageIdQueryString_2 | null;
+  internal?: sitePageInternalInputObject_2 | null;
+}
 export interface DistinctTestimonialsJsonConnectionArgs {
   field?: testimonialsJsonDistinctEnum | null;
 }
@@ -9094,13 +9980,259 @@ export interface GroupBundlesJsonConnectionArgs {
   limit?: number | null;
   field?: bundlesJsonGroupEnum | null;
 }
-export interface DistinctSitePageConnectionArgs {
-  field?: sitePageDistinctEnum | null;
+export interface DistinctSitePluginConnectionArgs {
+  field?: sitePluginDistinctEnum | null;
 }
-export interface GroupSitePageConnectionArgs {
+export interface GroupSitePluginConnectionArgs {
   skip?: number | null;
   limit?: number | null;
-  field?: sitePageGroupEnum | null;
+  field?: sitePluginGroupEnum | null;
+}
+export interface DistinctDirectoryConnectionArgs {
+  field?: directoryDistinctEnum | null;
+}
+export interface GroupDirectoryConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: directoryGroupEnum | null;
+}
+export interface ModifiedTimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface AccessTimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface ChangeTimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface BirthTimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface AtimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface MtimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface CtimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface BirthtimeDirectoryArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface DistinctFileConnectionArgs {
+  field?: fileDistinctEnum | null;
+}
+export interface GroupFileConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: fileGroupEnum | null;
+}
+export interface ModifiedTimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface AccessTimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface ChangeTimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface BirthTimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface AtimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface MtimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface CtimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface BirthtimeFileArgs {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface ExcerptMarkdownRemarkArgs {
+  pruneLength?: number | null;
+}
+export interface HeadingsMarkdownRemarkArgs {
+  depth?: HeadingLevels | null;
 }
 export interface CreatedDateFrontmatter_2Args {
   formatString?:
@@ -9129,6 +10261,98 @@ export interface UpdatedDateFrontmatter_2Args {
   locale?:
     | string
     | null /* Configures the locale Moment.js will use to format the date. */;
+}
+export interface ResolutionsImageSharpArgs {
+  width?: number | null;
+  height?: number | null;
+  jpegProgressive?: boolean | null;
+  grayscale?: boolean | null;
+  duotone?: DuotoneGradient | null;
+  traceSVG?: Potrace | null;
+  quality?: number | null;
+  toFormat?: ImageFormat | null;
+  cropFocus?: ImageCropFocus | null;
+  rotate?: number | null;
+}
+export interface SizesImageSharpArgs {
+  maxWidth?: number | null;
+  maxHeight?: number | null;
+  grayscale?: boolean | null;
+  jpegProgressive?: boolean | null;
+  duotone?: DuotoneGradient | null;
+  traceSVG?: Potrace | null;
+  quality?: number | null;
+  toFormat?: ImageFormat | null;
+  cropFocus?: ImageCropFocus | null;
+  rotate?: number | null;
+}
+export interface ResponsiveResolutionImageSharpArgs {
+  width?: number | null;
+  height?: number | null;
+  jpegProgressive?: boolean | null;
+  grayscale?: boolean | null;
+  duotone?: DuotoneGradient | null;
+  quality?: number | null;
+  toFormat?: ImageFormat | null;
+  cropFocus?: ImageCropFocus | null;
+  rotate?: number | null;
+}
+export interface ResponsiveSizesImageSharpArgs {
+  maxWidth?: number | null;
+  maxHeight?: number | null;
+  grayscale?: boolean | null;
+  jpegProgressive?: boolean | null;
+  duotone?: DuotoneGradient | null;
+  quality?: number | null;
+  toFormat?: ImageFormat | null;
+  cropFocus?: ImageCropFocus | null;
+  rotate?: number | null;
+}
+export interface ResizeImageSharpArgs {
+  width?: number | null;
+  height?: number | null;
+  quality?: number | null;
+  jpegProgressive?: boolean | null;
+  pngCompressionLevel?: number | null;
+  grayscale?: boolean | null;
+  duotone?: DuotoneGradient | null;
+  base64?: boolean | null;
+  traceSVG?: Potrace | null;
+  toFormat?: ImageFormat | null;
+  cropFocus?: ImageCropFocus | null;
+  rotate?: number | null;
+}
+export interface DistinctImageSharpConnectionArgs {
+  field?: imageSharpDistinctEnum | null;
+}
+export interface GroupImageSharpConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: imageSharpGroupEnum | null;
+}
+export interface DistinctAuthorsJsonConnectionArgs {
+  field?: authorsJsonDistinctEnum | null;
+}
+export interface GroupAuthorsJsonConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: authorsJsonGroupEnum | null;
+}
+export interface DistinctMarkdownRemarkConnectionArgs {
+  field?: markdownRemarkDistinctEnum | null;
+}
+export interface GroupMarkdownRemarkConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: markdownRemarkGroupEnum | null;
+}
+export interface DistinctSitePageConnectionArgs {
+  field?: sitePageDistinctEnum | null;
+}
+export interface GroupSitePageConnectionArgs {
+  skip?: number | null;
+  limit?: number | null;
+  field?: sitePageGroupEnum | null;
 }
 export interface CreatedDateFrontmatter_3Args {
   formatString?:
@@ -9494,260 +10718,6 @@ export interface UpdatedDateFrontmatter_15Args {
     | string
     | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface DistinctSitePluginConnectionArgs {
-  field?: sitePluginDistinctEnum | null;
-}
-export interface GroupSitePluginConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: sitePluginGroupEnum | null;
-}
-export interface DistinctDirectoryConnectionArgs {
-  field?: directoryDistinctEnum | null;
-}
-export interface GroupDirectoryConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: directoryGroupEnum | null;
-}
-export interface ModifiedTimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface AccessTimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface ChangeTimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface BirthTimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface AtimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface MtimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface CtimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface BirthtimeDirectoryArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface DistinctFileConnectionArgs {
-  field?: fileDistinctEnum | null;
-}
-export interface GroupFileConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: fileGroupEnum | null;
-}
-export interface ModifiedTimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface AccessTimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface ChangeTimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface BirthTimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface AtimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface MtimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface CtimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface BirthtimeFileArgs {
-  formatString?:
-    | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
-  fromNow?:
-    | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
-  difference?:
-    | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
-  locale?:
-    | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
-}
-export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: number | null;
-}
-export interface HeadingsMarkdownRemarkArgs {
-  depth?: HeadingLevels | null;
-}
 export interface CreatedDateFrontmatter_16Args {
   formatString?:
     | string
@@ -9776,89 +10746,117 @@ export interface UpdatedDateFrontmatter_16Args {
     | string
     | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface ResolutionsImageSharpArgs {
-  width?: number | null;
-  height?: number | null;
-  jpegProgressive?: boolean | null;
-  grayscale?: boolean | null;
-  duotone?: DuotoneGradient | null;
-  traceSVG?: Potrace | null;
-  quality?: number | null;
-  toFormat?: ImageFormat | null;
-  cropFocus?: ImageCropFocus | null;
-  rotate?: number | null;
+export interface CreatedDateFrontmatter_17Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface SizesImageSharpArgs {
-  maxWidth?: number | null;
-  maxHeight?: number | null;
-  grayscale?: boolean | null;
-  jpegProgressive?: boolean | null;
-  duotone?: DuotoneGradient | null;
-  traceSVG?: Potrace | null;
-  quality?: number | null;
-  toFormat?: ImageFormat | null;
-  cropFocus?: ImageCropFocus | null;
-  rotate?: number | null;
+export interface UpdatedDateFrontmatter_17Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface ResponsiveResolutionImageSharpArgs {
-  width?: number | null;
-  height?: number | null;
-  jpegProgressive?: boolean | null;
-  grayscale?: boolean | null;
-  duotone?: DuotoneGradient | null;
-  quality?: number | null;
-  toFormat?: ImageFormat | null;
-  cropFocus?: ImageCropFocus | null;
-  rotate?: number | null;
+export interface CreatedDateFrontmatter_18Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface ResponsiveSizesImageSharpArgs {
-  maxWidth?: number | null;
-  maxHeight?: number | null;
-  grayscale?: boolean | null;
-  jpegProgressive?: boolean | null;
-  duotone?: DuotoneGradient | null;
-  quality?: number | null;
-  toFormat?: ImageFormat | null;
-  cropFocus?: ImageCropFocus | null;
-  rotate?: number | null;
+export interface UpdatedDateFrontmatter_18Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface ResizeImageSharpArgs {
-  width?: number | null;
-  height?: number | null;
-  quality?: number | null;
-  jpegProgressive?: boolean | null;
-  pngCompressionLevel?: number | null;
-  grayscale?: boolean | null;
-  duotone?: DuotoneGradient | null;
-  base64?: boolean | null;
-  traceSVG?: Potrace | null;
-  toFormat?: ImageFormat | null;
-  cropFocus?: ImageCropFocus | null;
-  rotate?: number | null;
+export interface CreatedDateFrontmatter_19Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface DistinctImageSharpConnectionArgs {
-  field?: imageSharpDistinctEnum | null;
+export interface UpdatedDateFrontmatter_19Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface GroupImageSharpConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: imageSharpGroupEnum | null;
+export interface CreatedDateFrontmatter_20Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface DistinctAuthorsJsonConnectionArgs {
-  field?: authorsJsonDistinctEnum | null;
-}
-export interface GroupAuthorsJsonConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: authorsJsonGroupEnum | null;
-}
-export interface DistinctMarkdownRemarkConnectionArgs {
-  field?: markdownRemarkDistinctEnum | null;
-}
-export interface GroupMarkdownRemarkConnectionArgs {
-  skip?: number | null;
-  limit?: number | null;
-  field?: markdownRemarkGroupEnum | null;
+export interface UpdatedDateFrontmatter_20Args {
+  formatString?:
+    | string
+    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+  fromNow?:
+    | boolean
+    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+  difference?:
+    | string
+    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+  locale?:
+    | string
+    | null /* Configures the locale Moment.js will use to format the date. */;
 }
 export interface PortSiteArgs {
   formatString?:
@@ -9890,919 +10888,945 @@ export interface BuildTimeSiteArgs {
 }
 
 export enum TestimonialsJsonConnectionSortByFieldsEnum {
-  id = "id",
-  name = "name",
-  img = "img",
-  twitter = "twitter",
-  order = "order",
-  quoteHtml = "quoteHtml",
-  titleHtml = "titleHtml",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  img = 'img',
+  twitter = 'twitter',
+  order = 'order',
+  quoteHtml = 'quoteHtml',
+  titleHtml = 'titleHtml',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum testimonialsJsonConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum testimonialsJsonDistinctEnum {
-  id = "id",
-  name = "name",
-  img = "img",
-  twitter = "twitter",
-  order = "order",
-  quoteHtml = "quoteHtml",
-  titleHtml = "titleHtml",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  img = 'img',
+  twitter = 'twitter',
+  order = 'order',
+  quoteHtml = 'quoteHtml',
+  titleHtml = 'titleHtml',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum testimonialsJsonGroupEnum {
-  id = "id",
-  name = "name",
-  img = "img",
-  twitter = "twitter",
-  order = "order",
-  quoteHtml = "quoteHtml",
-  titleHtml = "titleHtml",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  img = 'img',
+  twitter = 'twitter',
+  order = 'order',
+  quoteHtml = 'quoteHtml',
+  titleHtml = 'titleHtml',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum CoursesJsonConnectionSortByFieldsEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  notes = "notes",
-  url = "url",
-  flavors = "flavors",
-  level = "level",
-  order = "order",
-  label = "label",
-  launchdate = "launchdate",
-  authors = "authors",
-  products = "products",
-  publishedChapters = "publishedChapters",
-  chapters = "chapters",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  notes = 'notes',
+  url = 'url',
+  flavors = 'flavors',
+  level = 'level',
+  order = 'order',
+  label = 'label',
+  launchdate = 'launchdate',
+  authors = 'authors',
+  products = 'products',
+  publishedChapters = 'publishedChapters',
+  chapters = 'chapters',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+  publishingSchedule = 'publishingSchedule'
 }
 
 export enum coursesJsonConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum coursesJsonDistinctEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  notes = "notes",
-  url = "url",
-  flavors = "flavors",
-  level = "level",
-  order = "order",
-  label = "label",
-  launchdate = "launchdate",
-  authors = "authors",
-  products = "products",
-  publishedChapters = "publishedChapters",
-  chapters = "chapters",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  notes = 'notes',
+  url = 'url',
+  flavors = 'flavors',
+  level = 'level',
+  order = 'order',
+  label = 'label',
+  launchdate = 'launchdate',
+  authors = 'authors',
+  products = 'products',
+  publishedChapters = 'publishedChapters',
+  chapters = 'chapters',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+  publishingSchedule = 'publishingSchedule'
 }
 
 export enum coursesJsonGroupEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  notes = "notes",
-  url = "url",
-  flavors = "flavors",
-  level = "level",
-  order = "order",
-  label = "label",
-  launchdate = "launchdate",
-  authors = "authors",
-  products = "products",
-  publishedChapters = "publishedChapters",
-  chapters = "chapters",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  notes = 'notes',
+  url = 'url',
+  flavors = 'flavors',
+  level = 'level',
+  order = 'order',
+  label = 'label',
+  launchdate = 'launchdate',
+  authors = 'authors',
+  products = 'products',
+  publishedChapters = 'publishedChapters',
+  chapters = 'chapters',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+  publishingSchedule = 'publishingSchedule'
 }
 
 export enum BundlesJsonConnectionSortByFieldsEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  url = "url",
-  promototal = "promototal",
-  promoremaining = "promoremaining",
-  bundleLevel = "bundleLevel",
-  products = "products",
-  courseIds = "courseIds",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  url = 'url',
+  promototal = 'promototal',
+  promoremaining = 'promoremaining',
+  bundleLevel = 'bundleLevel',
+  products = 'products',
+  courseIds = 'courseIds',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum bundlesJsonConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum bundlesJsonDistinctEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  url = "url",
-  promototal = "promototal",
-  promoremaining = "promoremaining",
-  bundleLevel = "bundleLevel",
-  products = "products",
-  courseIds = "courseIds",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  url = 'url',
+  promototal = 'promototal',
+  promoremaining = 'promoremaining',
+  bundleLevel = 'bundleLevel',
+  products = 'products',
+  courseIds = 'courseIds',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum bundlesJsonGroupEnum {
-  id = "id",
-  title = "title",
-  subtitle = "subtitle",
-  description = "description",
-  url = "url",
-  promototal = "promototal",
-  promoremaining = "promoremaining",
-  bundleLevel = "bundleLevel",
-  products = "products",
-  courseIds = "courseIds",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
-}
-
-export enum SitePageConnectionSortByFieldsEnum {
-  layout = "layout",
-  jsonName = "jsonName",
-  internalComponentName = "internalComponentName",
-  path = "path",
-  matchPath = "matchPath",
-  component = "component",
-  componentChunkName = "componentChunkName",
-  context___courseUrl = "context___courseUrl",
-  context___posts___NativeScript = "context___posts___NativeScript",
-  context___posts___Angular = "context___posts___Angular",
-  context___posts___Core = "context___posts___Core",
-  context___posts___UI = "context___posts___UI",
-  context___posts___Tutorial = "context___posts___Tutorial",
-  context___posts___Video = "context___posts___Video",
-  context___posts___Authentication = "context___posts___Authentication",
-  context___posts___Authorization = "context___posts___Authorization",
-  context___posts___Enterprise = "context___posts___Enterprise",
-  context___posts___Tips_and_Tricks = "context___posts___Tips_and_Tricks",
-  context___posts___Styling = "context___posts___Styling",
-  context___posts___Courses = "context___posts___Courses",
-  context___posts___pandas = "context___posts___pandas",
-  context___post = "context___post",
-  context___tag = "context___tag",
-  context___slug = "context___slug",
-  pluginCreator___NODE = "pluginCreator___NODE",
-  pluginCreatorId = "pluginCreatorId",
-  componentPath = "componentPath",
-  id = "id",
-  parent = "parent",
-  children = "children",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner"
-}
-
-export enum sitePageConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
-}
-
-export enum sitePageDistinctEnum {
-  layout = "layout",
-  jsonName = "jsonName",
-  internalComponentName = "internalComponentName",
-  path = "path",
-  component = "component",
-  componentChunkName = "componentChunkName",
-  context___courseUrl = "context___courseUrl",
-  context___posts___NativeScript = "context___posts___NativeScript",
-  context___posts___Angular = "context___posts___Angular",
-  context___posts___Core = "context___posts___Core",
-  context___posts___UI = "context___posts___UI",
-  context___posts___Tutorial = "context___posts___Tutorial",
-  context___posts___Video = "context___posts___Video",
-  context___posts___Authentication = "context___posts___Authentication",
-  context___posts___Authorization = "context___posts___Authorization",
-  context___posts___Enterprise = "context___posts___Enterprise",
-  context___posts___Tips_and_Tricks = "context___posts___Tips_and_Tricks",
-  context___posts___Styling = "context___posts___Styling",
-  context___posts___Courses = "context___posts___Courses",
-  context___posts___pandas = "context___posts___pandas",
-  context___post = "context___post",
-  context___tag = "context___tag",
-  context___slug = "context___slug",
-  pluginCreator___NODE = "pluginCreator___NODE",
-  pluginCreatorId = "pluginCreatorId",
-  componentPath = "componentPath",
-  id = "id",
-  parent = "parent",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner"
-}
-
-export enum sitePageGroupEnum {
-  layout = "layout",
-  jsonName = "jsonName",
-  internalComponentName = "internalComponentName",
-  path = "path",
-  component = "component",
-  componentChunkName = "componentChunkName",
-  context___courseUrl = "context___courseUrl",
-  context___posts___NativeScript = "context___posts___NativeScript",
-  context___posts___Angular = "context___posts___Angular",
-  context___posts___Core = "context___posts___Core",
-  context___posts___UI = "context___posts___UI",
-  context___posts___Tutorial = "context___posts___Tutorial",
-  context___posts___Video = "context___posts___Video",
-  context___posts___Authentication = "context___posts___Authentication",
-  context___posts___Authorization = "context___posts___Authorization",
-  context___posts___Enterprise = "context___posts___Enterprise",
-  context___posts___Tips_and_Tricks = "context___posts___Tips_and_Tricks",
-  context___posts___Styling = "context___posts___Styling",
-  context___posts___Courses = "context___posts___Courses",
-  context___posts___pandas = "context___posts___pandas",
-  context___post = "context___post",
-  context___tag = "context___tag",
-  context___slug = "context___slug",
-  pluginCreator___NODE = "pluginCreator___NODE",
-  pluginCreatorId = "pluginCreatorId",
-  componentPath = "componentPath",
-  id = "id",
-  parent = "parent",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner"
+  id = 'id',
+  title = 'title',
+  subtitle = 'subtitle',
+  description = 'description',
+  url = 'url',
+  promototal = 'promototal',
+  promoremaining = 'promoremaining',
+  bundleLevel = 'bundleLevel',
+  products = 'products',
+  courseIds = 'courseIds',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum SitePluginConnectionSortByFieldsEnum {
-  resolve = "resolve",
-  id = "id",
-  name = "name",
-  version = "version",
-  pluginOptions___plugins = "pluginOptions___plugins",
-  pluginOptions___output = "pluginOptions___output",
-  pluginOptions___query = "pluginOptions___query",
-  pluginOptions___name = "pluginOptions___name",
-  pluginOptions___path = "pluginOptions___path",
-  pluginOptions___linkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
-  pluginOptions___maxWidth = "pluginOptions___maxWidth",
-  pluginOptions___wrapperStyle = "pluginOptions___wrapperStyle",
-  pluginOptions___backgroundColor = "pluginOptions___backgroundColor",
-  pluginOptions___showCaptions = "pluginOptions___showCaptions",
-  pluginOptions___pathPrefix = "pluginOptions___pathPrefix",
-  pluginOptions___ignoreFileExtensions = "pluginOptions___ignoreFileExtensions",
-  nodeAPIs = "nodeAPIs",
-  browserAPIs = "browserAPIs",
-  ssrAPIs = "ssrAPIs",
-  pluginFilepath = "pluginFilepath",
-  packageJson___name = "packageJson___name",
-  packageJson___description = "packageJson___description",
-  packageJson___version = "packageJson___version",
-  packageJson___main = "packageJson___main",
-  packageJson___author = "packageJson___author",
-  packageJson___license = "packageJson___license",
-  packageJson___dependencies = "packageJson___dependencies",
-  packageJson___devDependencies = "packageJson___devDependencies",
-  packageJson___peerDependencies = "packageJson___peerDependencies",
-  packageJson___optionalDependecies = "packageJson___optionalDependecies",
-  packageJson___bundledDependecies = "packageJson___bundledDependecies",
-  packageJson___keywords = "packageJson___keywords",
-  parent = "parent",
-  children = "children",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  resolve = 'resolve',
+  id = 'id',
+  name = 'name',
+  version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
+  pluginOptions___output = 'pluginOptions___output',
+  pluginOptions___query = 'pluginOptions___query',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___path = 'pluginOptions___path',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
+  nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
+  ssrAPIs = 'ssrAPIs',
+  pluginFilepath = 'pluginFilepath',
+  packageJson___name = 'packageJson___name',
+  packageJson___description = 'packageJson___description',
+  packageJson___version = 'packageJson___version',
+  packageJson___main = 'packageJson___main',
+  packageJson___author = 'packageJson___author',
+  packageJson___license = 'packageJson___license',
+  packageJson___dependencies = 'packageJson___dependencies',
+  packageJson___devDependencies = 'packageJson___devDependencies',
+  packageJson___peerDependencies = 'packageJson___peerDependencies',
+  packageJson___optionalDependecies = 'packageJson___optionalDependecies',
+  packageJson___bundledDependecies = 'packageJson___bundledDependecies',
+  packageJson___keywords = 'packageJson___keywords',
+  parent = 'parent',
+  children = 'children',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum sitePluginConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum sitePluginDistinctEnum {
-  resolve = "resolve",
-  id = "id",
-  name = "name",
-  version = "version",
-  pluginOptions___plugins = "pluginOptions___plugins",
-  pluginOptions___output = "pluginOptions___output",
-  pluginOptions___query = "pluginOptions___query",
-  pluginOptions___name = "pluginOptions___name",
-  pluginOptions___path = "pluginOptions___path",
-  pluginOptions___linkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
-  pluginOptions___maxWidth = "pluginOptions___maxWidth",
-  pluginOptions___wrapperStyle = "pluginOptions___wrapperStyle",
-  pluginOptions___backgroundColor = "pluginOptions___backgroundColor",
-  pluginOptions___showCaptions = "pluginOptions___showCaptions",
-  pluginOptions___pathPrefix = "pluginOptions___pathPrefix",
-  pluginOptions___ignoreFileExtensions = "pluginOptions___ignoreFileExtensions",
-  nodeAPIs = "nodeAPIs",
-  ssrAPIs = "ssrAPIs",
-  pluginFilepath = "pluginFilepath",
-  packageJson___name = "packageJson___name",
-  packageJson___description = "packageJson___description",
-  packageJson___version = "packageJson___version",
-  packageJson___main = "packageJson___main",
-  packageJson___author = "packageJson___author",
-  packageJson___license = "packageJson___license",
-  packageJson___dependencies = "packageJson___dependencies",
-  packageJson___devDependencies = "packageJson___devDependencies",
-  packageJson___peerDependencies = "packageJson___peerDependencies",
-  packageJson___keywords = "packageJson___keywords",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  resolve = 'resolve',
+  id = 'id',
+  name = 'name',
+  version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
+  pluginOptions___output = 'pluginOptions___output',
+  pluginOptions___query = 'pluginOptions___query',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___path = 'pluginOptions___path',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
+  nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
+  ssrAPIs = 'ssrAPIs',
+  pluginFilepath = 'pluginFilepath',
+  packageJson___name = 'packageJson___name',
+  packageJson___description = 'packageJson___description',
+  packageJson___version = 'packageJson___version',
+  packageJson___main = 'packageJson___main',
+  packageJson___author = 'packageJson___author',
+  packageJson___license = 'packageJson___license',
+  packageJson___dependencies = 'packageJson___dependencies',
+  packageJson___devDependencies = 'packageJson___devDependencies',
+  packageJson___peerDependencies = 'packageJson___peerDependencies',
+  packageJson___keywords = 'packageJson___keywords',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum sitePluginGroupEnum {
-  resolve = "resolve",
-  id = "id",
-  name = "name",
-  version = "version",
-  pluginOptions___plugins = "pluginOptions___plugins",
-  pluginOptions___output = "pluginOptions___output",
-  pluginOptions___query = "pluginOptions___query",
-  pluginOptions___name = "pluginOptions___name",
-  pluginOptions___path = "pluginOptions___path",
-  pluginOptions___linkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
-  pluginOptions___maxWidth = "pluginOptions___maxWidth",
-  pluginOptions___wrapperStyle = "pluginOptions___wrapperStyle",
-  pluginOptions___backgroundColor = "pluginOptions___backgroundColor",
-  pluginOptions___showCaptions = "pluginOptions___showCaptions",
-  pluginOptions___pathPrefix = "pluginOptions___pathPrefix",
-  pluginOptions___ignoreFileExtensions = "pluginOptions___ignoreFileExtensions",
-  nodeAPIs = "nodeAPIs",
-  ssrAPIs = "ssrAPIs",
-  pluginFilepath = "pluginFilepath",
-  packageJson___name = "packageJson___name",
-  packageJson___description = "packageJson___description",
-  packageJson___version = "packageJson___version",
-  packageJson___main = "packageJson___main",
-  packageJson___author = "packageJson___author",
-  packageJson___license = "packageJson___license",
-  packageJson___dependencies = "packageJson___dependencies",
-  packageJson___devDependencies = "packageJson___devDependencies",
-  packageJson___peerDependencies = "packageJson___peerDependencies",
-  packageJson___keywords = "packageJson___keywords",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  resolve = 'resolve',
+  id = 'id',
+  name = 'name',
+  version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
+  pluginOptions___output = 'pluginOptions___output',
+  pluginOptions___query = 'pluginOptions___query',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___path = 'pluginOptions___path',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
+  nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
+  ssrAPIs = 'ssrAPIs',
+  pluginFilepath = 'pluginFilepath',
+  packageJson___name = 'packageJson___name',
+  packageJson___description = 'packageJson___description',
+  packageJson___version = 'packageJson___version',
+  packageJson___main = 'packageJson___main',
+  packageJson___author = 'packageJson___author',
+  packageJson___license = 'packageJson___license',
+  packageJson___dependencies = 'packageJson___dependencies',
+  packageJson___devDependencies = 'packageJson___devDependencies',
+  packageJson___peerDependencies = 'packageJson___peerDependencies',
+  packageJson___keywords = 'packageJson___keywords',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum DirectoryConnectionSortByFieldsEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime'
 }
 
 export enum directoryConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum directoryDistinctEnum {
-  id = "id",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime"
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime'
 }
 
 export enum directoryGroupEnum {
-  id = "id",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime"
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime'
 }
 
 export enum FileConnectionSortByFieldsEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___mediaType = "internal___mediaType",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime",
-  publicURL = "publicURL"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___mediaType = 'internal___mediaType',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime',
+  publicURL = 'publicURL'
 }
 
 export enum fileConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum HeadingLevels {
-  h1 = "h1",
-  h2 = "h2",
-  h3 = "h3",
-  h4 = "h4",
-  h5 = "h5",
-  h6 = "h6"
+  h1 = 'h1',
+  h2 = 'h2',
+  h3 = 'h3',
+  h4 = 'h4',
+  h5 = 'h5',
+  h6 = 'h6'
 }
 
 export enum PotraceTurnPolicy {
-  TURNPOLICY_BLACK = "TURNPOLICY_BLACK",
-  TURNPOLICY_WHITE = "TURNPOLICY_WHITE",
-  TURNPOLICY_LEFT = "TURNPOLICY_LEFT",
-  TURNPOLICY_RIGHT = "TURNPOLICY_RIGHT",
-  TURNPOLICY_MINORITY = "TURNPOLICY_MINORITY",
-  TURNPOLICY_MAJORITY = "TURNPOLICY_MAJORITY"
+  TURNPOLICY_BLACK = 'TURNPOLICY_BLACK',
+  TURNPOLICY_WHITE = 'TURNPOLICY_WHITE',
+  TURNPOLICY_LEFT = 'TURNPOLICY_LEFT',
+  TURNPOLICY_RIGHT = 'TURNPOLICY_RIGHT',
+  TURNPOLICY_MINORITY = 'TURNPOLICY_MINORITY',
+  TURNPOLICY_MAJORITY = 'TURNPOLICY_MAJORITY'
 }
 
 export enum ImageFormat {
-  NO_CHANGE = "NO_CHANGE",
-  JPG = "JPG",
-  PNG = "PNG",
-  WEBP = "WEBP"
+  NO_CHANGE = 'NO_CHANGE',
+  JPG = 'JPG',
+  PNG = 'PNG',
+  WEBP = 'WEBP'
 }
 
 export enum ImageCropFocus {
-  CENTER = "CENTER",
-  NORTH = "NORTH",
-  NORTHEAST = "NORTHEAST",
-  EAST = "EAST",
-  SOUTHEAST = "SOUTHEAST",
-  SOUTH = "SOUTH",
-  SOUTHWEST = "SOUTHWEST",
-  WEST = "WEST",
-  NORTHWEST = "NORTHWEST",
-  ENTROPY = "ENTROPY",
-  ATTENTION = "ATTENTION"
+  CENTER = 'CENTER',
+  NORTH = 'NORTH',
+  NORTHEAST = 'NORTHEAST',
+  EAST = 'EAST',
+  SOUTHEAST = 'SOUTHEAST',
+  SOUTH = 'SOUTH',
+  SOUTHWEST = 'SOUTHWEST',
+  WEST = 'WEST',
+  NORTHWEST = 'NORTHWEST',
+  ENTROPY = 'ENTROPY',
+  ATTENTION = 'ATTENTION'
 }
 
 export enum fileDistinctEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___mediaType = "internal___mediaType",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___mediaType = 'internal___mediaType',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime'
 }
 
 export enum fileGroupEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___mediaType = "internal___mediaType",
-  internal___type = "internal___type",
-  internal___description = "internal___description",
-  internal___owner = "internal___owner",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___mediaType = 'internal___mediaType',
+  internal___type = 'internal___type',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner',
+  sourceInstanceName = 'sourceInstanceName',
+  absolutePath = 'absolutePath',
+  relativePath = 'relativePath',
+  extension = 'extension',
+  size = 'size',
+  prettySize = 'prettySize',
+  modifiedTime = 'modifiedTime',
+  accessTime = 'accessTime',
+  changeTime = 'changeTime',
+  birthTime = 'birthTime',
+  root = 'root',
+  dir = 'dir',
+  base = 'base',
+  ext = 'ext',
+  name = 'name',
+  relativeDirectory = 'relativeDirectory',
+  dev = 'dev',
+  mode = 'mode',
+  nlink = 'nlink',
+  uid = 'uid',
+  gid = 'gid',
+  rdev = 'rdev',
+  blksize = 'blksize',
+  ino = 'ino',
+  blocks = 'blocks',
+  atimeMs = 'atimeMs',
+  mtimeMs = 'mtimeMs',
+  ctimeMs = 'ctimeMs',
+  birthtimeMs = 'birthtimeMs',
+  atime = 'atime',
+  mtime = 'mtime',
+  ctime = 'ctime',
+  birthtime = 'birthtime'
 }
 
 export enum ImageSharpConnectionSortByFieldsEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner",
-  original___width = "original___width",
-  original___height = "original___height",
-  original___src = "original___src",
-  resolutions___base64 = "resolutions___base64",
-  resolutions___tracedSVG = "resolutions___tracedSVG",
-  resolutions___aspectRatio = "resolutions___aspectRatio",
-  resolutions___width = "resolutions___width",
-  resolutions___height = "resolutions___height",
-  resolutions___src = "resolutions___src",
-  resolutions___srcSet = "resolutions___srcSet",
-  resolutions___srcWebp = "resolutions___srcWebp",
-  resolutions___srcSetWebp = "resolutions___srcSetWebp",
-  resolutions___originalName = "resolutions___originalName",
-  sizes___base64 = "sizes___base64",
-  sizes___tracedSVG = "sizes___tracedSVG",
-  sizes___aspectRatio = "sizes___aspectRatio",
-  sizes___src = "sizes___src",
-  sizes___srcSet = "sizes___srcSet",
-  sizes___srcWebp = "sizes___srcWebp",
-  sizes___srcSetWebp = "sizes___srcSetWebp",
-  sizes___sizes = "sizes___sizes",
-  sizes___originalImg = "sizes___originalImg",
-  sizes___originalName = "sizes___originalName",
-  responsiveResolution___base64 = "responsiveResolution___base64",
-  responsiveResolution___aspectRatio = "responsiveResolution___aspectRatio",
-  responsiveResolution___width = "responsiveResolution___width",
-  responsiveResolution___height = "responsiveResolution___height",
-  responsiveResolution___src = "responsiveResolution___src",
-  responsiveResolution___srcSet = "responsiveResolution___srcSet",
-  responsiveResolution___originalName = "responsiveResolution___originalName",
-  responsiveSizes___base64 = "responsiveSizes___base64",
-  responsiveSizes___aspectRatio = "responsiveSizes___aspectRatio",
-  responsiveSizes___src = "responsiveSizes___src",
-  responsiveSizes___srcSet = "responsiveSizes___srcSet",
-  responsiveSizes___sizes = "responsiveSizes___sizes",
-  responsiveSizes___originalImg = "responsiveSizes___originalImg",
-  responsiveSizes___originalName = "responsiveSizes___originalName",
-  resize___src = "resize___src",
-  resize___tracedSVG = "resize___tracedSVG",
-  resize___width = "resize___width",
-  resize___height = "resize___height",
-  resize___aspectRatio = "resize___aspectRatio",
-  resize___originalName = "resize___originalName"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+  original___width = 'original___width',
+  original___height = 'original___height',
+  original___src = 'original___src',
+  resolutions___base64 = 'resolutions___base64',
+  resolutions___tracedSVG = 'resolutions___tracedSVG',
+  resolutions___aspectRatio = 'resolutions___aspectRatio',
+  resolutions___width = 'resolutions___width',
+  resolutions___height = 'resolutions___height',
+  resolutions___src = 'resolutions___src',
+  resolutions___srcSet = 'resolutions___srcSet',
+  resolutions___srcWebp = 'resolutions___srcWebp',
+  resolutions___srcSetWebp = 'resolutions___srcSetWebp',
+  resolutions___originalName = 'resolutions___originalName',
+  sizes___base64 = 'sizes___base64',
+  sizes___tracedSVG = 'sizes___tracedSVG',
+  sizes___aspectRatio = 'sizes___aspectRatio',
+  sizes___src = 'sizes___src',
+  sizes___srcSet = 'sizes___srcSet',
+  sizes___srcWebp = 'sizes___srcWebp',
+  sizes___srcSetWebp = 'sizes___srcSetWebp',
+  sizes___sizes = 'sizes___sizes',
+  sizes___originalImg = 'sizes___originalImg',
+  sizes___originalName = 'sizes___originalName',
+  responsiveResolution___base64 = 'responsiveResolution___base64',
+  responsiveResolution___aspectRatio = 'responsiveResolution___aspectRatio',
+  responsiveResolution___width = 'responsiveResolution___width',
+  responsiveResolution___height = 'responsiveResolution___height',
+  responsiveResolution___src = 'responsiveResolution___src',
+  responsiveResolution___srcSet = 'responsiveResolution___srcSet',
+  responsiveResolution___originalName = 'responsiveResolution___originalName',
+  responsiveSizes___base64 = 'responsiveSizes___base64',
+  responsiveSizes___aspectRatio = 'responsiveSizes___aspectRatio',
+  responsiveSizes___src = 'responsiveSizes___src',
+  responsiveSizes___srcSet = 'responsiveSizes___srcSet',
+  responsiveSizes___sizes = 'responsiveSizes___sizes',
+  responsiveSizes___originalImg = 'responsiveSizes___originalImg',
+  responsiveSizes___originalName = 'responsiveSizes___originalName',
+  resize___src = 'resize___src',
+  resize___tracedSVG = 'resize___tracedSVG',
+  resize___width = 'resize___width',
+  resize___height = 'resize___height',
+  resize___aspectRatio = 'resize___aspectRatio',
+  resize___originalName = 'resize___originalName'
 }
 
 export enum imageSharpConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum imageSharpDistinctEnum {
-  id = "id",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum imageSharpGroupEnum {
-  id = "id",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum AuthorsJsonConnectionSortByFieldsEnum {
-  id = "id",
-  name = "name",
-  picture = "picture",
-  bio = "bio",
-  biolong = "biolong",
-  title = "title",
-  twitter = "twitter",
-  github = "github",
-  types = "types",
-  children = "children",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  picture = 'picture',
+  bio = 'bio',
+  biolong = 'biolong',
+  title = 'title',
+  twitter = 'twitter',
+  github = 'github',
+  types = 'types',
+  children = 'children',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum authorsJsonConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum authorsJsonDistinctEnum {
-  id = "id",
-  name = "name",
-  picture = "picture",
-  bio = "bio",
-  biolong = "biolong",
-  title = "title",
-  twitter = "twitter",
-  github = "github",
-  types = "types",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  picture = 'picture',
+  bio = 'bio',
+  biolong = 'biolong',
+  title = 'title',
+  twitter = 'twitter',
+  github = 'github',
+  types = 'types',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum authorsJsonGroupEnum {
-  id = "id",
-  name = "name",
-  picture = "picture",
-  bio = "bio",
-  biolong = "biolong",
-  title = "title",
-  twitter = "twitter",
-  github = "github",
-  types = "types",
-  parent = "parent",
-  internal___contentDigest = "internal___contentDigest",
-  internal___type = "internal___type",
-  internal___owner = "internal___owner"
+  id = 'id',
+  name = 'name',
+  picture = 'picture',
+  bio = 'bio',
+  biolong = 'biolong',
+  title = 'title',
+  twitter = 'twitter',
+  github = 'github',
+  types = 'types',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner'
 }
 
 export enum MarkdownRemarkConnectionSortByFieldsEnum {
-  id = "id",
-  children = "children",
-  parent = "parent",
-  internal___content = "internal___content",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___owner = "internal___owner",
-  frontmatter___title = "frontmatter___title",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___author = "frontmatter___author",
-  frontmatter___createdDate = "frontmatter___createdDate",
-  frontmatter___updatedDate = "frontmatter___updatedDate",
-  frontmatter___draft = "frontmatter___draft",
-  frontmatter___tags = "frontmatter___tags",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  excerpt = "excerpt",
-  fileAbsolutePath = "fileAbsolutePath",
-  html = "html",
-  headings = "headings",
-  timeToRead = "timeToRead",
-  tableOfContents = "tableOfContents",
-  wordCount___paragraphs = "wordCount___paragraphs",
-  wordCount___sentences = "wordCount___sentences",
-  wordCount___words = "wordCount___words"
+  id = 'id',
+  children = 'children',
+  parent = 'parent',
+  internal___content = 'internal___content',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___owner = 'internal___owner',
+  frontmatter___title = 'frontmatter___title',
+  frontmatter___path = 'frontmatter___path',
+  frontmatter___author = 'frontmatter___author',
+  frontmatter___createdDate = 'frontmatter___createdDate',
+  frontmatter___updatedDate = 'frontmatter___updatedDate',
+  frontmatter___draft = 'frontmatter___draft',
+  frontmatter___tags = 'frontmatter___tags',
+  frontmatter___image = 'frontmatter___image',
+  frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___parent = 'frontmatter___parent',
+  excerpt = 'excerpt',
+  fileAbsolutePath = 'fileAbsolutePath',
+  html = 'html',
+  headings = 'headings',
+  timeToRead = 'timeToRead',
+  tableOfContents = 'tableOfContents',
+  wordCount___paragraphs = 'wordCount___paragraphs',
+  wordCount___sentences = 'wordCount___sentences',
+  wordCount___words = 'wordCount___words'
 }
 
 export enum markdownRemarkConnectionSortOrderValues {
-  ASC = "ASC",
-  DESC = "DESC"
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export enum markdownRemarkDistinctEnum {
-  id = "id",
-  parent = "parent",
-  internal___content = "internal___content",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___owner = "internal___owner",
-  frontmatter___title = "frontmatter___title",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___author = "frontmatter___author",
-  frontmatter___createdDate = "frontmatter___createdDate",
-  frontmatter___updatedDate = "frontmatter___updatedDate",
-  frontmatter___draft = "frontmatter___draft",
-  frontmatter___tags = "frontmatter___tags",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  excerpt = "excerpt",
-  fileAbsolutePath = "fileAbsolutePath"
+  id = 'id',
+  parent = 'parent',
+  internal___content = 'internal___content',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___owner = 'internal___owner',
+  frontmatter___title = 'frontmatter___title',
+  frontmatter___path = 'frontmatter___path',
+  frontmatter___author = 'frontmatter___author',
+  frontmatter___createdDate = 'frontmatter___createdDate',
+  frontmatter___updatedDate = 'frontmatter___updatedDate',
+  frontmatter___draft = 'frontmatter___draft',
+  frontmatter___tags = 'frontmatter___tags',
+  frontmatter___image = 'frontmatter___image',
+  frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___parent = 'frontmatter___parent',
+  excerpt = 'excerpt',
+  fileAbsolutePath = 'fileAbsolutePath'
 }
 
 export enum markdownRemarkGroupEnum {
-  id = "id",
-  parent = "parent",
-  internal___content = "internal___content",
-  internal___type = "internal___type",
-  internal___contentDigest = "internal___contentDigest",
-  internal___owner = "internal___owner",
-  frontmatter___title = "frontmatter___title",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___author = "frontmatter___author",
-  frontmatter___createdDate = "frontmatter___createdDate",
-  frontmatter___updatedDate = "frontmatter___updatedDate",
-  frontmatter___draft = "frontmatter___draft",
-  frontmatter___tags = "frontmatter___tags",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  excerpt = "excerpt",
-  fileAbsolutePath = "fileAbsolutePath"
+  id = 'id',
+  parent = 'parent',
+  internal___content = 'internal___content',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___owner = 'internal___owner',
+  frontmatter___title = 'frontmatter___title',
+  frontmatter___path = 'frontmatter___path',
+  frontmatter___author = 'frontmatter___author',
+  frontmatter___createdDate = 'frontmatter___createdDate',
+  frontmatter___updatedDate = 'frontmatter___updatedDate',
+  frontmatter___draft = 'frontmatter___draft',
+  frontmatter___tags = 'frontmatter___tags',
+  frontmatter___image = 'frontmatter___image',
+  frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___parent = 'frontmatter___parent',
+  excerpt = 'excerpt',
+  fileAbsolutePath = 'fileAbsolutePath'
+}
+
+export enum SitePageConnectionSortByFieldsEnum {
+  layout = 'layout',
+  jsonName = 'jsonName',
+  internalComponentName = 'internalComponentName',
+  path = 'path',
+  matchPath = 'matchPath',
+  component = 'component',
+  componentChunkName = 'componentChunkName',
+  context___courseUrl = 'context___courseUrl',
+  context___slug = 'context___slug',
+  context___prevPostPath = 'context___prevPostPath',
+  context___nextPostPath = 'context___nextPostPath',
+  context___posts___pandas = 'context___posts___pandas',
+  context___posts___NativeScript = 'context___posts___NativeScript',
+  context___posts___Tips_and_Tricks = 'context___posts___Tips_and_Tricks',
+  context___posts___Tutorial = 'context___posts___Tutorial',
+  context___posts___Video = 'context___posts___Video',
+  context___posts___Courses = 'context___posts___Courses',
+  context___posts___Angular = 'context___posts___Angular',
+  context___posts___Styling = 'context___posts___Styling',
+  context___posts___Core = 'context___posts___Core',
+  context___posts___Authentication = 'context___posts___Authentication',
+  context___posts___Authorization = 'context___posts___Authorization',
+  context___posts___Enterprise = 'context___posts___Enterprise',
+  context___posts___UI = 'context___posts___UI',
+  context___posts___Cordova = 'context___posts___Cordova',
+  context___posts___Tip = 'context___posts___Tip',
+  context___posts___JavaScript = 'context___posts___JavaScript',
+  context___posts___TypeScript = 'context___posts___TypeScript',
+  context___post = 'context___post',
+  context___tag = 'context___tag',
+  pluginCreator___NODE = 'pluginCreator___NODE',
+  pluginCreatorId = 'pluginCreatorId',
+  componentPath = 'componentPath',
+  id = 'id',
+  parent = 'parent',
+  children = 'children',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner'
+}
+
+export enum sitePageConnectionSortOrderValues {
+  ASC = 'ASC',
+  DESC = 'DESC'
+}
+
+export enum sitePageDistinctEnum {
+  layout = 'layout',
+  jsonName = 'jsonName',
+  internalComponentName = 'internalComponentName',
+  path = 'path',
+  component = 'component',
+  componentChunkName = 'componentChunkName',
+  context___courseUrl = 'context___courseUrl',
+  context___slug = 'context___slug',
+  context___prevPostPath = 'context___prevPostPath',
+  context___nextPostPath = 'context___nextPostPath',
+  context___posts___pandas = 'context___posts___pandas',
+  context___posts___NativeScript = 'context___posts___NativeScript',
+  context___posts___Tips_and_Tricks = 'context___posts___Tips_and_Tricks',
+  context___posts___Tutorial = 'context___posts___Tutorial',
+  context___posts___Video = 'context___posts___Video',
+  context___posts___Courses = 'context___posts___Courses',
+  context___posts___Angular = 'context___posts___Angular',
+  context___posts___Styling = 'context___posts___Styling',
+  context___posts___Core = 'context___posts___Core',
+  context___posts___Authentication = 'context___posts___Authentication',
+  context___posts___Authorization = 'context___posts___Authorization',
+  context___posts___Enterprise = 'context___posts___Enterprise',
+  context___posts___UI = 'context___posts___UI',
+  context___posts___Cordova = 'context___posts___Cordova',
+  context___posts___Tip = 'context___posts___Tip',
+  context___posts___JavaScript = 'context___posts___JavaScript',
+  context___posts___TypeScript = 'context___posts___TypeScript',
+  context___post = 'context___post',
+  context___tag = 'context___tag',
+  pluginCreator___NODE = 'pluginCreator___NODE',
+  pluginCreatorId = 'pluginCreatorId',
+  componentPath = 'componentPath',
+  id = 'id',
+  parent = 'parent',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner'
+}
+
+export enum sitePageGroupEnum {
+  layout = 'layout',
+  jsonName = 'jsonName',
+  internalComponentName = 'internalComponentName',
+  path = 'path',
+  component = 'component',
+  componentChunkName = 'componentChunkName',
+  context___courseUrl = 'context___courseUrl',
+  context___slug = 'context___slug',
+  context___prevPostPath = 'context___prevPostPath',
+  context___nextPostPath = 'context___nextPostPath',
+  context___posts___pandas = 'context___posts___pandas',
+  context___posts___NativeScript = 'context___posts___NativeScript',
+  context___posts___Tips_and_Tricks = 'context___posts___Tips_and_Tricks',
+  context___posts___Tutorial = 'context___posts___Tutorial',
+  context___posts___Video = 'context___posts___Video',
+  context___posts___Courses = 'context___posts___Courses',
+  context___posts___Angular = 'context___posts___Angular',
+  context___posts___Styling = 'context___posts___Styling',
+  context___posts___Core = 'context___posts___Core',
+  context___posts___Authentication = 'context___posts___Authentication',
+  context___posts___Authorization = 'context___posts___Authorization',
+  context___posts___Enterprise = 'context___posts___Enterprise',
+  context___posts___UI = 'context___posts___UI',
+  context___posts___Cordova = 'context___posts___Cordova',
+  context___posts___Tip = 'context___posts___Tip',
+  context___posts___JavaScript = 'context___posts___JavaScript',
+  context___posts___TypeScript = 'context___posts___TypeScript',
+  context___post = 'context___post',
+  context___tag = 'context___tag',
+  pluginCreator___NODE = 'pluginCreator___NODE',
+  pluginCreatorId = 'pluginCreatorId',
+  componentPath = 'componentPath',
+  id = 'id',
+  parent = 'parent',
+  internal___type = 'internal___type',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___owner = 'internal___owner'
 }
