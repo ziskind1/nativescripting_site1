@@ -3119,7 +3119,7 @@
         "licensesMax": 40
       }
     ],
-    "publishedChapters": [10, 20, 30, 40, 50, 60],
+    "publishedChapters": [10, 20, 30, 40, 50, 60, 70],
     "chapters": [
       {
         "id": 10,
@@ -3272,61 +3272,61 @@
           {
             "chapterId": 50,
             "id": "5276010",
-            "name": "Overview",
+            "name": "Overview (1:56)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276012",
-            "name": "MVVM Pattern",
+            "name": "MVVM Pattern (2:09)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276016",
-            "name": "Applying MVVM: The View",
+            "name": "Applying MVVM: The View (8:09)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276017",
-            "name": "Applying MVVM: The ViewModel",
+            "name": "Applying MVVM: The ViewModel (11:59)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276018",
-            "name": "Clean Architecture",
+            "name": "Clean Architecture (4:50)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276019",
-            "name": "Clean Architecture: Core",
+            "name": "Clean Architecture: Core (9:45)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276020",
-            "name": "Clean Architecture: Infrastructure",
+            "name": "Clean Architecture: Infrastructure (5:44)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276021",
-            "name": "All Together Now",
+            "name": "All Together Now (9:59)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276022",
-            "name": "Adding Dependencies: Storage",
+            "name": "Adding Dependencies: Storage (6:11)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276023",
-            "name": "Adding Dependencies: Logging",
+            "name": "Adding Dependencies: Logging (3:38)",
             "isPreview": false
           }
         ]
@@ -3344,95 +3344,155 @@
           {
             "chapterId": 60,
             "id": "6239503",
-            "name": "Methodology",
+            "name": "Methodology (2:15)",
             "isPreview": true
           },
           {
             "chapterId": 60,
             "id": "6239505",
-            "name": "App State",
+            "name": "App State (6:20)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239508",
-            "name": "App State Service",
+            "name": "App State Service (5:47)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239506",
-            "name": "Backlog View Model",
+            "name": "Backlog View Model (4:05)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239507",
-            "name": "Backlog Page",
+            "name": "Backlog Page (2:07)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239509",
-            "name": "Backlog Repository",
+            "name": "Backlog Repository (3:33)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239510",
-            "name": "Backlog Service",
+            "name": "Backlog Service (3:44)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239513",
-            "name": "Using App State",
+            "name": "Using App State (6:19)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239512",
-            "name": "Moving to the Server",
+            "name": "Moving to the Server (6:05)",
             "isPreview": false
           },
           {
             "chapterId": 60,
             "id": "6239511",
-            "name": "Expanding the State Object",
+            "name": "Expanding the State Object (13:11)",
             "isPreview": false
           }
         ]
       },
       {
         "id": 70,
-        "name": "Testing",
+        "name": "Navigation",
         "lessons": [
           {
             "chapterId": 70,
+            "id": "6469678",
+            "name": "Overview (1:09)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469679",
+            "name": "Project Updates and Navigation Plan",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469682",
+            "name": "Basic Navigation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469685",
+            "name": "Routes and Nav Helper",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469681",
+            "name": "NavigationEntry",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469680",
+            "name": "Passing Data Between Pages",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469684",
+            "name": "Back (6:39)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469683",
+            "name": "Logging Out",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "6469686",
+            "name": "Programmatic Navigation",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 80,
             "id": "2573902",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 70,
+            "chapterId": 80,
             "id": "2573903",
             "name": "Configuring your project",
             "isPreview": false
           },
           {
-            "chapterId": 70,
+            "chapterId": 80,
             "id": "2573904",
             "name": "Creating tests",
             "isPreview": false
           },
           {
-            "chapterId": 70,
+            "chapterId": 80,
             "id": "2573906",
             "name": "Running tests",
             "isPreview": false
           },
           {
-            "chapterId": 70,
+            "chapterId": 80,
             "id": "2573907",
             "name": "Configuring Karma",
             "isPreview": false
@@ -3440,71 +3500,71 @@
         ]
       },
       {
-        "id": 80,
+        "id": 90,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573913",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573916",
             "name": "Configuring WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573917",
             "name": "Bundling with WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573918",
             "name": "Bundling Extra Assets",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573919",
             "name": "Advanced WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573920",
             "name": "iOS Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573921",
             "name": "iOS App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573923",
             "name": "iOS publishing",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573925",
             "name": "Android Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573926",
             "name": "Android App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "2573927",
             "name": "Android publishing",
             "isPreview": false
@@ -3512,11 +3572,11 @@
         ]
       },
       {
-        "id": 90,
+        "id": 100,
         "name": "More UI Widgets",
         "lessons": [
           {
-            "chapterId": 90,
+            "chapterId": 100,
             "id": "5275969",
             "name": "Note about UI chapters",
             "isPreview": false
@@ -3524,23 +3584,23 @@
         ]
       },
       {
-        "id": 100,
-        "name": "Hardware Access",
+        "id": 110,
+        "name": "Appendix: Hardware Access",
         "lessons": [
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573889",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573890",
             "name": "Using Location",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573891",
             "name": "Accessing the camera",
             "isPreview": false
@@ -3548,41 +3608,41 @@
         ]
       },
       {
-        "id": 110,
-        "name": "Tracing and Debugging",
+        "id": 120,
+        "name": "Appendix: Tracing and Debugging",
         "lessons": [
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573892",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573893",
             "name": "Setting up tracing",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573894",
             "name": "Using tracing",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573895",
             "name": "Debugging options",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573896",
             "name": "Debugging commands",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "2573897",
             "name": "Debugging with Visual Studio Code",
             "isPreview": false
@@ -3590,29 +3650,29 @@
         ]
       },
       {
-        "id": 120,
-        "name": "Multithreaded Programming",
+        "id": 130,
+        "name": "Appendix: Multithreaded Programming",
         "lessons": [
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573898",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573899",
             "name": "Workers API",
             "isPreview": false
           },
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573900",
             "name": "General Guidelines",
             "isPreview": false
           },
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573901",
             "name": "Limitations",
             "isPreview": false
