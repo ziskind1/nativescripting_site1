@@ -58,7 +58,7 @@
         "licensesMax": 40
       }
     ],
-    "publishedChapters": [10, 20, 30],
+    "publishedChapters": [10, 20, 30, 40],
     "publishingSchedule": [
       {
         "id": 10,
@@ -113,7 +113,7 @@
           {
             "chapterId": 10,
             "id": "6410382",
-            "name": "Setting up the Prerequisites",
+            "name": "Setting up the Prerequisites (3:23)",
             "isPreview": false
           },
           {
@@ -125,13 +125,13 @@
           {
             "chapterId": 10,
             "id": "6410383",
-            "name": "Using Vue DevTools",
+            "name": "Using Vue DevTools (5:03)",
             "isPreview": false
           },
           {
             "chapterId": 10,
             "id": "6410380",
-            "name": "Debugging",
+            "name": "Debugging (3:48)",
             "isPreview": false
           }
         ]
@@ -143,31 +143,31 @@
           {
             "chapterId": 20,
             "id": "6410387",
-            "name": "Overview",
+            "name": "Overview (1:11)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "6410384",
-            "name": "Declarative Rendering",
+            "name": "Declarative Rendering (2:04)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "6410388",
-            "name": "Property Binding",
+            "name": "Property Binding (1:56)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "6410385",
-            "name": "Conditionals",
+            "name": "Conditionals (1:10)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "6410386",
-            "name": "If vs Show",
+            "name": "If vs Show (1:53)",
             "isPreview": false
           },
           {
@@ -185,7 +185,7 @@
           {
             "chapterId": 20,
             "id": "6410389",
-            "name": "Gesture Binding",
+            "name": "Gesture Binding (2:20)",
             "isPreview": false
           },
           {
@@ -209,25 +209,25 @@
           {
             "chapterId": 30,
             "id": "6411976",
-            "name": "Watch",
+            "name": "Watch (3:00)",
             "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "6411973",
-            "name": "Computed",
+            "name": "Computed (1:39)",
             "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "6411974",
-            "name": "Computed Getters and Setters",
+            "name": "Computed Getters and Setters (1:46)",
             "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "6411972",
-            "name": "Computed vs. Method Calls",
+            "name": "Computed vs. Method Calls (1:37)",
             "isPreview": false
           }
         ]
@@ -238,31 +238,31 @@
         "lessons": [
           {
             "chapterId": 40,
-            "id": "6395062",
+            "id": "6484340",
             "name": "Overview",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "6395063",
-            "name": "Basic Component",
+            "id": "6484343",
+            "name": "Global Components",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "6395064",
+            "id": "6484344",
+            "name": "Component Layout (2:17)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "6484342",
             "name": "Component Props",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "6395065",
-            "name": "Don't Lose Your Keys",
-            "isPreview": false
-          },
-          {
-            "chapterId": 40,
-            "id": "6395066",
+            "id": "6484341",
             "name": "Component State",
             "isPreview": false
           }
