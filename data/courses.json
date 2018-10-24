@@ -58,7 +58,7 @@
         "licensesMax": 40
       }
     ],
-    "publishedChapters": [10, 20, 30, 40],
+    "publishedChapters": [10, 20, 30, 40, 50],
     "publishingSchedule": [
       {
         "id": 10,
@@ -82,7 +82,7 @@
       },
       {
         "id": 60,
-        "date": "10/23/2018"
+        "date": "10/30/2018"
       },
       {
         "id": 70,
@@ -274,26 +274,38 @@
         "lessons": [
           {
             "chapterId": 50,
-            "id": "6395052",
+            "id": "6575719",
             "name": "Overview",
             "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "6395053",
+            "id": "6575714",
             "name": "Single File Components",
             "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "6412058",
+            "id": "6575716",
+            "name": "Migrating from Global to Single File Component",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "6575715",
             "name": "Component Hierarchy",
             "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "6412059",
+            "id": "6575718",
             "name": "Component Communication",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "6575717",
+            "name": "Render Function",
             "isPreview": false
           }
         ]
