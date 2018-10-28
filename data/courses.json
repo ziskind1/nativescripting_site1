@@ -8,7 +8,7 @@
     "flavors": ["Vue"],
     "level": 1,
     "order": 49,
-    "label": "PRESALE",
+    "label": "POPULAR",
     "launchdate": "10/20/2018",
     "authors": ["alex_ziskind"],
     "products": [
@@ -357,7 +357,7 @@
     "flavors": ["Core"],
     "level": 1,
     "order": 70,
-    "label": "NEW",
+    "label": "FREE",
     "launchdate": "07/01/2018",
     "authors": ["eddy_verbruggen", "alex_ziskind"],
     "products": [
@@ -1069,7 +1069,7 @@
     "flavors": ["Angular"],
     "level": 2,
     "order": 110,
-    "label": "NEW",
+    "label": "",
     "launchdate": "10/30/2017",
     "authors": ["paul_halliday"],
     "products": [
@@ -1461,7 +1461,7 @@
     "flavors": ["Core", "Angular"],
     "level": 2,
     "order": 130,
-    "label": "SALE",
+    "label": "",
     "launchdate": "07/13/2017",
     "authors": ["nathan_walker"],
     "products": [
@@ -1608,7 +1608,7 @@
     "flavors": ["Angular"],
     "level": 1,
     "order": 140,
-    "label": "",
+    "label": "FREE",
     "launchdate": "05/29/2017",
     "authors": ["alex_ziskind"],
     "products": [
@@ -1885,7 +1885,7 @@
     "flavors": ["Core"],
     "level": 1,
     "order": 150,
-    "label": "",
+    "label": "FREE",
     "launchdate": "07/17/2017",
     "authors": ["alex_ziskind"],
     "products": [
@@ -4074,7 +4074,7 @@
     "flavors": ["Angular"],
     "level": 2,
     "order": 135,
-    "label": "NEW",
+    "label": "",
     "launchdate": "03/08/2018",
     "authors": ["sean_perkins"],
     "products": [
