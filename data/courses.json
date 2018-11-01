@@ -13,10 +13,10 @@
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "816405",
-        "name": "Single user pre-launch price",
+        "id": "816407",
+        "name": "Single user regular price",
         "description": "License for a single user.",
-        "pricesale": 19,
+        "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
