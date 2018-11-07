@@ -21,7 +21,7 @@ You can just watch the video tip that describes why we use the `topmost` frame a
 
 <br/><br/>
 
-Here is a preview lesson from that chapter.
+Here is the video posted to my YouTube channel.
 <br><br>
 
 <div class="videoWrapper">
