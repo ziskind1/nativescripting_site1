@@ -2,11 +2,11 @@
 path: '/posts/missing-frame-and-page'
 title: 'The Case of the Missing Frame and Page in NativeScript with Angular'
 author: 'alex_ziskind'
-createdDate: '2018-11-05'
-updatedDate: '2018-11-05'
-draft: true
+createdDate: '2018-11-06'
+updatedDate: '2018-11-06'
+draft: false
 tags: ['NativeScript', 'Tips and Tricks', 'Tutorial', 'Video']
-image: missing-frame-and-pages.png
+image: missing-frame-and-page-poster.png
 ---
 
 This just happened to me and I was seriously confused. I'm used to getting a hold of the `topmost` frame or injecting the `Page` into an Angular component constructor, but this time, they were missing!
@@ -17,7 +17,7 @@ While working on an Angular demo for the new [NativeScript OAuth2 plugin](https:
 
 ## TLDR
 
-You can just watch the video tip that describes why we use the `topmost` frame and the `Page` objects, shows the problem we run into when not using the `<page-router-outlet>`, and then shows how to use the new `createFrameOnBootstrap` property when bootstrapping an NativeScript Angular app. You can also find this documented in the ]Core Concepts section of the NativeScript docs](https://docs.nativescript.org/core-concepts/angular-bootstrap#nativescript-application-options), a section that I have read before, but completely forgot about.
+You can just watch the video tip that describes why we use the `topmost` frame and the `Page` objects, shows the problem we run into when not using the `<page-router-outlet>`, and then shows how to use the new `createFrameOnBootstrap` property when bootstrapping an NativeScript Angular app. You can also find this documented in the [Core Concepts section of the NativeScript docs](https://docs.nativescript.org/core-concepts/angular-bootstrap#nativescript-application-options), a section that I have read before, but completely forgot about.
 
 <br/><br/>
 
@@ -51,7 +51,8 @@ import { Page } from 'tns-core-modules/ui/page';
 })
 export class AppComponent {
   constructor(private page: Page) {
-    // create UI widgets and add them to page, or do some other neat stuff with the Page instance
+    // create UI widgets and add them to page,
+    // or do some other neat stuff with the Page instance
   }
 }
 ```
@@ -73,7 +74,10 @@ import { topmost } from 'tns-core-modules/ui/frame';
 })
 export class AppComponent {
   constructor() {
-    // try to use topmost to navigate, for example. You most likely wouldn't do this, but you could use the frame if you were building some native code, as I do in the NativeScript-OAuth2 plugin
+    // try to use topmost to navigate, for example.
+    // You most likely wouldn't do this, but you could
+    // use the frame if you were building some native code,
+    // as I do in the NativeScript-OAuth2 plugin
     topmost().navigate('...');
   }
 }
@@ -81,7 +85,7 @@ export class AppComponent {
 
 <br><br>
 
-Insert useless comment here: "Personally I think this causes more confusion than it is worth, but I'm sure it was done for a reason". - Alex
+> Insert useless comment here: "Personally I think this causes more confusion than it is worth, but I'm sure it was done for a reason". - Alex
 
 <br><br>
 
@@ -90,6 +94,8 @@ Insert useless comment here: "Personally I think this causes more confusion than
 If you are going to use `<page-router-outlet>`, then you are OK - the `Frame` and `Page` will be created for you by the framework and the pagework (hehe, see what I did there?).
 
 BUT, if you are going to remove `<page-router-outlet>` and things start breaking because `topmost()` returns `undefined` or your `Page` instance is `null`, then you can set the `createFrameOnBootstrap` boolean property to `true` when your app boots up.
+
+<br><br>
 
 ```typescript
 // main.ts
@@ -103,6 +109,7 @@ platformNativeScriptDynamic({ createFrameOnBootstrap: true }).bootstrapModule(
 ```
 
 <br><br>
+
 So next time you are sitting and scratching your head, wondering why your frame or page are missing, then I hope this post find you well.
 
 <br/><br/>
@@ -112,3 +119,7 @@ For more video tutorials about NativeScript, look at our courses on [NativeScrip
 <br/><br/>
 
 Let me know if you enjoyed this short tutorial on Twitter: <a href="https://twitter.com/digitalix" target="_blank">@digitalix</a> or comment here. And send me your NativeScript related questions that I can answer in video form. If I select your question to make a video answer, I'll send you swag.
+
+<br/><br/>
+
+Also, the first 3 people to tweet me the location of something NativeScript-related in the poster image of this post will get some stickers.
