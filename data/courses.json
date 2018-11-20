@@ -1731,9 +1731,9 @@
           },
           {
             "chapterId": 10,
-            "id": "2543888",
-            "name": "About this course (2:56)",
-            "isPreview": true
+            "id": "6887490",
+            "name": "About this Course (2:56)",
+            "isPreview": false
           }
         ]
       },
@@ -1744,31 +1744,31 @@
           {
             "chapterId": 20,
             "id": "2543904",
-            "name": "Overview",
+            "name": "Overview (0:23)",
             "isPreview": true
           },
           {
             "chapterId": 20,
-            "id": "2543905",
-            "name": "Creating apps",
+            "id": "6887492",
+            "name": "Creating Apps (1:34)",
             "isPreview": true
           },
           {
             "chapterId": 20,
-            "id": "2543906",
-            "name": "Running apps",
+            "id": "6887491",
+            "name": "Running Apps (5:18)",
             "isPreview": true
           },
           {
             "chapterId": 20,
             "id": "2543907",
-            "name": "Debugging apps",
+            "name": "Debugging Apps",
             "isPreview": true
           },
           {
             "chapterId": 20,
-            "id": "2543908",
-            "name": "Choosing an editor",
+            "id": "6887494",
+            "name": "Choosing an Editor (4:32)",
             "isPreview": true
           }
         ]
@@ -1780,47 +1780,56 @@
           {
             "chapterId": 30,
             "id": "2573640",
-            "name": "Overview"
+            "name": "Overview (0:42)",
+            "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "2573641",
-            "name": "What you're building"
+            "id": "6887518",
+            "name": "What You're Building (1:44)",
+            "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "2573642",
-            "name": "Folder structure"
+            "name": "Folder Structure",
+            "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "2573643",
-            "name": "Starting up"
+            "name": "Starting Up",
+            "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "2573644",
-            "name": "Adding UI elements"
+            "id": "6887496",
+            "name": "Adding UI Elements (4:50)",
+            "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "2573645",
-            "name": "Layouts"
+            "name": "Layouts",
+            "isPreview": false
           },
           {
             "chapterId": 30,
             "id": "2573646",
-            "name": "Global CSS"
+            "name": "Global CSS",
+            "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "2573648",
-            "name": "Component-specific CSS"
+            "id": "6887502",
+            "name": "Component-Specific CSS (3:31)",
+            "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "2573649",
-            "name": "Images"
+            "id": "6887500",
+            "name": "Images (3:02)",
+            "isPreview": false
           }
         ]
       },
@@ -1831,32 +1840,38 @@
           {
             "chapterId": 40,
             "id": "2573651",
-            "name": "Overview"
+            "name": "Overview (0:26)",
+            "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "2573654",
-            "name": "Events"
+            "id": "6887503",
+            "name": "Events (1:45)",
+            "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "2573655",
-            "name": "Data binding"
+            "id": "6887501",
+            "name": "Data Binding (6:34)",
+            "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "2573657",
-            "name": "Structuring your app"
+            "id": "6887504",
+            "name": "Structuring Your App (4:46)",
+            "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "2573658",
-            "name": "Services"
+            "id": "6887505",
+            "name": "Services (9:25)",
+            "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "2573660",
-            "name": "Routing"
+            "id": "6887506",
+            "name": "Routing (8:42)",
+            "isPreview": false
           }
         ]
       },
@@ -1867,32 +1882,38 @@
           {
             "chapterId": 50,
             "id": "2573661",
-            "name": "Overview"
+            "name": "Overview (2:24)",
+            "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "2573662",
-            "name": "UI elements"
+            "id": "6887508",
+            "name": "UI Elements (3:33)",
+            "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "2573663",
-            "name": "Animations"
+            "id": "6887507",
+            "name": "Animations (3:25)",
+            "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "2573664",
-            "name": "ListView"
+            "id": "6887509",
+            "name": "ListView (4:29)",
+            "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "2573666",
-            "name": "GridLayout"
+            "id": "6887510",
+            "name": "GridLayout (4:35)",
+            "isPreview": false
           },
           {
             "chapterId": 50,
-            "id": "2573667",
-            "name": "ActivityIndicator"
+            "id": "6887511",
+            "name": "ActivityIndicator (5:42)",
+            "isPreview": false
           }
         ]
       },
@@ -1903,17 +1924,20 @@
           {
             "chapterId": 60,
             "id": "2573669",
-            "name": "Overview"
+            "name": "Overview (0:54)",
+            "isPreview": false
           },
           {
             "chapterId": 60,
-            "id": "2573670",
-            "name": "Using npm modules"
+            "id": "6887512",
+            "name": "Using npm Modules (5:20)",
+            "isPreview": false
           },
           {
             "chapterId": 60,
-            "id": "2573673",
-            "name": "Using NativeScript plugins"
+            "id": "6887515",
+            "name": "Using NativeScript Plugins (4:59)",
+            "isPreview": false
           }
         ]
       },
@@ -1923,23 +1947,27 @@
         "lessons": [
           {
             "chapterId": 70,
-            "id": "2573675",
-            "name": "Overview"
+            "id": "6887513",
+            "name": "Overview (1:09)",
+            "isPreview": false
           },
           {
             "chapterId": 70,
-            "id": "2573677",
-            "name": "Accessing iOS APIs"
+            "id": "6887514",
+            "name": "Accessing iOS APIs (5:11)",
+            "isPreview": false
           },
           {
             "chapterId": 70,
-            "id": "2573678",
-            "name": "Accessing Android APIs"
+            "id": "6887517",
+            "name": "Accessing Android APIs (1:42)",
+            "isPreview": false
           },
           {
             "chapterId": 70,
-            "id": "2573679",
-            "name": "Customizing the status bar"
+            "id": "6887516",
+            "name": "Customizing the Status Bar (3:56)",
+            "isPreview": false
           }
         ]
       },
@@ -1950,12 +1978,26 @@
           {
             "chapterId": 80,
             "id": "2573681",
-            "name": "Community"
+            "name": "Community (1:16)",
+            "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "2573682",
-            "name": "Learning Materials"
+            "name": "Learning Materials (1:16)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "Finished",
+        "lessons": [
+          {
+            "chapterId": 90,
+            "id": "6887750",
+            "name": "Congratulations!",
+            "isPreview": false
           }
         ]
       }
