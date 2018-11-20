@@ -63,11 +63,20 @@
     "titleHtml": "DevRel at Microsoft"
   },
   {
+    "id": "750",
+    "name": "Sebastian Witalec",
+    "img": "sebastian_witalec.jpg",
+    "twitter": "sebawita",
+    "order": 750,
+    "quoteHtml": "NativeScripting is the best place for high quality NativeScript courses. Here you will find all learning materials you will ever need to get started with NativeScript. But also, there is a ton of advanced courses for a seasoned NativeScript dev.",
+    "titleHtml": "Sr. Developer Advocate at Progress"
+  },
+  {
     "id": "800",
     "name": "Devlin Duldulao",
     "img": "devlin_duldulao.jpg",
     "twitter": "DevlinDuldulao",
-    "order": 700,
+    "order": 800,
     "quoteHtml": "If you want to understand and master NativeScript, Alex’s NativeScripting course videos are the way to go. He is truly the ‘Voice of NativeScript’ as he can break down complex ideas in such a way that would help you accelerate your goal in building beautiful mobile applications. Highly recommend him and definitely worth your time and money!",
     "titleHtml": "Microsoft MVP"
   }
