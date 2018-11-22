@@ -1,62 +1,58 @@
 [
   {
-    "id": "171481",
-    "title": "NativeScript with Angular Super",
-    "subtitle": "Get the most useful knowledge about NativeScript with Angular",
-    "description": "\n",
-    "url": "nativescript-with-angular-super-bundle",
-    "promototal": 100,
-    "promoremaining": 25,
-    "bundleLevel": 1,
-    "products": [
-      {
-        "id": "308174",
-        "name": "Single user pre-launch price",
-        "description": "License for a single user. \n",
-        "pricesale": 79,
-        "pricereg": 139,
-        "licensesMin": 1,
-        "licensesMax": 1
-      },
-      {
-        "id": "308176",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 319,
-        "pricereg": 419,
-        "licensesMin": 2,
-        "licensesMax": 10
-      }
-    ],
-    "courseIds": ["169856", "171149", "171151"]
-  },
-  {
     "id": "171483",
     "title": "NativeScript with Angular Ultra",
     "subtitle": "Get as much NativeScript with Angular Knowledge as You Can Handle",
     "description": "\n",
     "url": "nativescript-with-angular-ultra-bundle",
     "promototal": 100,
-    "promoremaining": 2,
+    "promoremaining": 0,
     "bundleLevel": 2,
     "products": [
       {
-        "id": "308178",
-        "name": "Single user pre-launch price",
+        "id": "884994",
+        "name": "Single user sale price",
         "description": "License for a single user. \n",
-        "pricesale": 139,
+        "pricesale": 199,
         "pricereg": 259,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "308181",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 559,
-        "pricereg": 779,
+        "id": "884997",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 999,
+        "pricereg": 999,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "884998",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 1579,
+        "pricereg": 1579,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "884999",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 2599,
+        "pricereg": 2599,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "885000",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 3159,
+        "pricereg": 3159,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "courseIds": ["169856", "169916", "171149", "171151"]
@@ -68,7 +64,7 @@
     "description": "\n",
     "url": "nativescript-core-master-bundle",
     "promototal": 100,
-    "promoremaining": 39,
+    "promoremaining": 19,
     "bundleLevel": 3,
     "products": [
       {
@@ -81,13 +77,40 @@
         "licensesMax": 1
       },
       {
-        "id": "308186",
-        "name": "Team of 2 - 10 pre-launch price",
-        "description": "License for a team of 2 - 10 users. \n",
-        "pricesale": 359,
-        "pricereg": 509,
+        "id": "885019",
+        "name": "Team of 2-5 pre-launch price",
+        "description": "License for a team of 2-5 users. \n",
+        "pricesale": 339,
+        "pricereg": 669,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "885020",
+        "name": "Team of 6-10 pre-launch price",
+        "description": "License for a team of 6-10 users. \n",
+        "pricesale": 499,
+        "pricereg": 999,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "885021",
+        "name": "Team of 11-20 pre-launch price",
+        "description": "License for a team of 11-20 users. \n",
+        "pricesale": 849,
+        "pricereg": 1699,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "885013",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users. \n",
+        "pricesale": 2059,
+        "pricereg": 2059,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "courseIds": ["171132", "171131", "171152"]
