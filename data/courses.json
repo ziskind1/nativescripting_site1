@@ -3844,13 +3844,40 @@
         "licensesMax": 1
       },
       {
-        "id": "308159",
-        "name": "Team of 2 - 10 regular price",
-        "description": "License for a team of 2 - 10 users.",
-        "pricesale": 209,
-        "pricereg": 209,
+        "id": "888944",
+        "name": "Team of 2-5 regular price",
+        "description": "License for a team of 2-5 users.",
+        "pricesale": 269,
+        "pricereg": 269,
         "licensesMin": 2,
+        "licensesMax": 5
+      },
+      {
+        "id": "888945",
+        "name": "Team of 6-10 regular price",
+        "description": "License for a team of 6-10 users.",
+        "pricesale": 419,
+        "pricereg": 419,
+        "licensesMin": 6,
         "licensesMax": 10
+      },
+      {
+        "id": "888946",
+        "name": "Team of 11-20 regular price",
+        "description": "License for a team of 11-20 users.",
+        "pricesale": 699,
+        "pricereg": 699,
+        "licensesMin": 11,
+        "licensesMax": 20
+      },
+      {
+        "id": "888947",
+        "name": "Team of 21-40 regular price",
+        "description": "License for a team of 21-40 users.",
+        "pricesale": 839,
+        "pricereg": 839,
+        "licensesMin": 21,
+        "licensesMax": 40
       }
     ],
     "publishedChapters": [0],
