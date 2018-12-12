@@ -13,7 +13,11 @@ During development, I prefer using a local backend that I quickly spin up along 
 
 <br/><br/>
 
-In this video I use a collection of free and open source tools to get you up and running quickly and easily. We use Node and Express to run a local server, test out the API endpoints with Postman, and then convert the Hello World NativeScript with Angular app to fetch its data from this server. We even simulate a network delay and see how it effects loading and displaying of data.
+This is part one of a two-part video series on using NativeScript with a local dev backend.
+
+### Part One
+
+In this first video I use a collection of free and open source tools to get you up and running quickly and easily. We use Node and Express to run a local server, test out the API endpoints with Postman, and then convert the Hello World NativeScript with Angular app to fetch its data from this server. We even simulate a network delay and see how it effects loading and displaying of data.
 
 <br/><br/>
 
@@ -28,6 +32,13 @@ This video comes in at fifteen minutes - a bit longer than usual. But it's defin
 <div class="videoWrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/j5KyMJFTklw" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<br><br>
+
+### Part Two
+
+In the second part of the two-part series, I show how to convert a fetch API call to using HttpClient and RxJS Observables to get data for the details page, and some problems that one could face while doing this.
+See [part 2 here](https://nativescripting.com/posts/fetch-to-httpclient-gotchas).
 
 <br><br>
 
