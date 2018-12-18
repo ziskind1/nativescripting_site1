@@ -4196,7 +4196,368 @@
       }
     ],
     "publishedChapters": [],
-    "chapters": []
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Introduction",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "8582063",
+            "name": "Course Introduction",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "8582066",
+            "name": "Exercise Files",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Basic Login and Registration",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "id": "8582186",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "8582187",
+            "name": "App Auth Page",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "8582188",
+            "name": "Logging In",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "8582189",
+            "name": "Maintaining Auth State",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Backend Setup",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "id": "8582198",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "8582677",
+            "name": "About HTTPS",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "8582678",
+            "name": "Simple Backend",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "8582680",
+            "name": "Backend Data",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "8582681",
+            "name": "Login and Register Routes",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "8582684",
+            "name": "Login and Register Client",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Resource Protection with JWT",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "id": "8582200",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "8582689",
+            "name": "Hashing and Salting",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "8582690",
+            "name": "Generating JWT",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "8582692",
+            "name": "Protecting Data with JWT",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "8582694",
+            "name": "Token Expiration",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "HTTPS with SSL Pinning",
+        "lessons": [
+          {
+            "chapterId": 50,
+            "id": "8582201",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "8582701",
+            "name": "HTTPS Server Side",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "8582708",
+            "name": "HTTPS Client Side",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "8582713",
+            "name": "Enable SSL Pinning",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Auth with External Providers",
+        "lessons": [
+          {
+            "chapterId": 60,
+            "id": "8582203",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "8582723",
+            "name": "App UI Prep",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "8582724",
+            "name": "OAuth2 Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "8582729",
+            "name": "Register App with Provider",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "8582735",
+            "name": "Fetching Protected API Data",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "8582736",
+            "name": "Azure AD Example",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Using Auth0",
+        "lessons": [
+          {
+            "chapterId": 70,
+            "id": "8582204",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582778",
+            "name": "Methodology",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582739",
+            "name": "App Registration",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582741",
+            "name": "App Config",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582742",
+            "name": "Logging In",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582743",
+            "name": "Activating Provider",
+            "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "8582745",
+            "name": "Auth0 as Provider",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Client Data Protection",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "8582205",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582750",
+            "name": "Serverless Proxy: Local Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582751",
+            "name": "Serverless Proxy: Client Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582753",
+            "name": "Serverless Proxy: Example",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582755",
+            "name": "Serverless Proxy: Local Settings",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582756",
+            "name": "Serverless Proxy: Deployment",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582759",
+            "name": "Token Storage: App Settings",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582767",
+            "name": "Token Storage: Local Settings",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "8582768",
+            "name": "Token Storage: Secure Storage",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "Code Protection",
+        "lessons": [
+          {
+            "chapterId": 90,
+            "id": "8582674",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "8582782",
+            "name": "Uglify",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "8582789",
+            "name": "Deobfuscation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "8582794",
+            "name": "Webpack Obfuscator",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "8582796",
+            "name": "JScrambler Introduction",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "8582811",
+            "name": "JScrambler Options",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Going Further",
+        "lessons": [
+          {
+            "chapterId": 100,
+            "id": "8582207",
+            "name": "Overview",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "171152",
