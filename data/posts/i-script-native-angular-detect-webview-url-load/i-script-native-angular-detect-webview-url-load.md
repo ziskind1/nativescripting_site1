@@ -4,7 +4,7 @@ title: 'Angular WebView URL Load Detection - I Script Native'
 author: 'alex_ziskind'
 createdDate: '2018-12-07'
 updatedDate: '2018-12-07'
-draft: true
+draft: false
 tags: ['Tips and Tricks', 'Video', 'I Script Native']
 image: i-script-native-angular-detect-webview-url-load-poster.png
 ---
@@ -36,7 +36,7 @@ I show more details about the WebView and the HtmlView, and when to use each one
 <br/><br/>
 
 <div class="videoWrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/j5KyMJFTklw" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/e5IxqIazEuY" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br><br>
