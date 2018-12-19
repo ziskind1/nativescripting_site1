@@ -13,19 +13,19 @@
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "816407",
-        "name": "Single user regular price",
+        "id": "922980",
+        "name": "Single user sale price",
         "description": "License for a single user.",
-        "pricesale": 49,
+        "pricesale": 29,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "816409",
-        "name": "Team of 2-5 pre-launch price",
+        "id": "816410",
+        "name": "Team of 2-5 regular price",
         "description": "License for a team of 2-5 users.",
-        "pricesale": 99,
+        "pricesale": 199,
         "pricereg": 199,
         "licensesMin": 2,
         "licensesMax": 5
@@ -790,10 +790,10 @@
     "authors": ["alex_ziskind"],
     "products": [
       {
-        "id": "644441",
-        "name": "Single user regular price",
+        "id": "922985",
+        "name": "Single user sale price",
         "description": "License for a single user. \n",
-        "pricesale": 49,
+        "pricesale": 29,
         "pricereg": 49,
         "licensesMin": 1,
         "licensesMax": 1
@@ -4142,11 +4142,11 @@
     "subtitle": "Making your NativeScript Apps Bulletproof",
     "description": "The course description and curriculum are to be determined",
     "url": "securing-nativescript-applications",
-    "flavors": ["Core", "Angular"],
+    "flavors": ["Core", "Angular", "Vue"],
     "level": 2,
-    "order": 190,
+    "order": 40,
     "label": "PRESALE",
-    "launchdate": "07/01/2018",
+    "launchdate": "01/10/2018",
     "authors": ["alex_ziskind"],
     "products": [
       {
@@ -4154,7 +4154,7 @@
         "name": "Single user pre-launch price",
         "description": "License for a single user. \n",
         "pricesale": 49,
-        "pricereg": 69,
+        "pricereg": 89,
         "licensesMin": 1,
         "licensesMax": 1
       },
