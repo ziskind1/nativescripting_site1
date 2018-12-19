@@ -2,8 +2,8 @@
 path: '/posts/i-script-native-angular-detect-webview-url-load'
 title: 'Angular WebView URL Load Detection - I Script Native'
 author: 'alex_ziskind'
-createdDate: '2018-12-07'
-updatedDate: '2018-12-07'
+createdDate: '2018-12-17'
+updatedDate: '2018-12-17'
 draft: false
 tags: ['Tips and Tricks', 'Video', 'I Script Native']
 image: i-script-native-angular-detect-webview-url-load-poster.png
@@ -21,17 +21,7 @@ As it happens, I've also recently been using these techniques myself when I was 
 
 <br/><br/>
 
-So to answer this question, and as the inaugural video answer in the I Script Native series, I've posted up a YouTube video showing exactly how to get this done in a NativeScript with Angular app.
-
-<br/><br/>
-
-<div class="videoWrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/j5KyMJFTklw" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<br><br>
-
-I show more details about the WebView and the HtmlView, and when to use each one of these in my [NativeScript Hands-On UI course](https://nativescripting.com/course/nativescript-hands-on-ui/) that's available here.
+So to answer this question, and as the inaugural video answer in the _I Script Native_ series, I've posted up a YouTube video showing exactly how to get this done in a NativeScript with Angular app.
 
 <br/><br/>
 
@@ -40,6 +30,10 @@ I show more details about the WebView and the HtmlView, and when to use each one
 </div>
 
 <br><br>
+
+I show more details about the WebView and the HtmlView, and when to use each one of these in my [NativeScript Hands-On UI course](https://nativescripting.com/course/nativescript-hands-on-ui/) that's available here.
+
+<br/><br/>
 
 For more video tutorials about NativeScript, look at our courses on [NativeScripting.com](https://nativescripting.com).
 
