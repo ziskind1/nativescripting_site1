@@ -6,14 +6,14 @@
     "description": "\n",
     "url": "nativescript-with-angular-ultra-bundle",
     "promototal": 100,
-    "promoremaining": 1,
+    "promoremaining": 0,
     "bundleLevel": 2,
     "products": [
       {
-        "id": "884994",
-        "name": "Single user sale price",
+        "id": "308177",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 199,
+        "pricesale": 259,
         "pricereg": 259,
         "licensesMin": 1,
         "licensesMax": 1
