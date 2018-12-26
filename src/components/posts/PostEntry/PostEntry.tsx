@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DiscussionEmbed } from 'disqus-react';
+import styled from 'styled-components';
 
 let Image = require('gatsby-image').default;
 import { Post } from '../../../domain/models/posts/post.model';
@@ -18,7 +19,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
   let posterImage = null;
   if (post.image) {
     posterImage = (
-      <Image responsiveSizes={post.image.childImageSharp.responsiveSizes} />
+      <Image sizes={post.image.childImageSharp.sizes} />
     );
   }
 
@@ -28,18 +29,14 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
 
   const twitterFollowHref = `https://twitter.com/intent/user?screen_name=${
     post.author.twitter
-  }`;
+    }`;
 
-  const twitterFollowLink = (
-    <a
-      href={twitterFollowHref}
-      className="twitter-follow-button"
-      target="_blank"
-      alt="Follow me"
-    >
-      Follow
-    </a>
-  );
+  const TwitterFollowLink = styled.a`
+    margin-left: 10px;
+    color: #12ffcd;
+    border: 1px solid #12ffcd;
+    padding: 0 5px 0 5px;
+`;
 
   const disqusShortname = 'nativescripting';
   const disqusConfig = {
@@ -58,7 +55,8 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
             <div>
               <span className="post-meta-author-name">{post.author.name}</span>
 
-              {twitterFollowLink}
+              <TwitterFollowLink href={twitterFollowHref} target="_blank">Follow</TwitterFollowLink>
+
             </div>
             <div>
               <span className="post-meta-author-title">

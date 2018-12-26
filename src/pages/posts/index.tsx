@@ -17,6 +17,7 @@ import '../../css/posts.css';
 import SignUpSection from '../../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../../components/shared/AddThisBlock/AddThisBlock';
 import CountdownTimer from '../../components/shared/CountdownTimer/CountdownTimer';
+import { MainLayout } from '../../layouts/MainLayout';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -59,7 +60,7 @@ export default class extends React.Component<PostsIndexPageProps, {}> {
     const pageTitle = `Posts | NativeScripting`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -79,7 +80,7 @@ export default class extends React.Component<PostsIndexPageProps, {}> {
 
           <AddThisBlock />
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }
@@ -122,7 +123,7 @@ export const query = graphql`
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                responsiveSizes(maxWidth: 1000) {
+                sizes(maxWidth: 1000) {
                   base64
                   aspectRatio
                   src
@@ -157,7 +158,7 @@ export const query = graphql`
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                responsiveSizes(maxWidth: 1000) {
+                sizes(maxWidth: 1000) {
                   base64
                   aspectRatio
                   src

@@ -1,7 +1,9 @@
 import * as React from "react";
-
+import styled from 'styled-components';
+import { OffScreen } from "../OffScreen";
 
 import './SignUpSection.css';
+
 
 var ga: any;
 
@@ -16,20 +18,15 @@ const hideStyle = {
     display: 'none'
 };
 
-const styleOffScreen = {
-    position: 'absolute',
-    left: '-5000px'
-};
+const SubscriberSection = styled.div`
+    float: none !important;
+    margin-top: 160px !important;
+`;
 
-const styleSectionTopMargin = {
-    float: 'none',
-    marginTop: '160px'
-};
+class SignUpSection extends React.Component<any, { myInputVal: string }> {
 
-class SignUpSection extends React.Component<{}, { myInputVal: string }> {
-
-    constructor() {
-        super();
+    constructor(props: any) {
+        super(props);
         this.state = { myInputVal: '' };
     }
 
@@ -39,7 +36,7 @@ class SignUpSection extends React.Component<{}, { myInputVal: string }> {
 
     public render() {
         return (
-            <div className="special subscribe-container" style={styleSectionTopMargin}>
+            <SubscriberSection className="special subscribe-container">
                 <div className="logo-wrapper">
                     <img className="logo" src="/img/logo_2.svg" />
                 </div>
@@ -54,7 +51,7 @@ class SignUpSection extends React.Component<{}, { myInputVal: string }> {
                             <div className="input-wrapper">
                                 <div className="mc-field-group">
                                     <label htmlFor="mce-EMAIL"></label>
-                                    <input type="email" value={this.state.myInputVal} name="EMAIL" className="required email subscribe-email" placeholder="your email" id="mce-EMAIL" onChange={(e) => this.inputChanged(e)}
+                                    <input type="email" name="EMAIL" className="required email subscribe-email" placeholder="your email" id="mce-EMAIL" onChange={(e) => this.inputChanged(e)}
                                     />
                                 </div>
 
@@ -63,9 +60,10 @@ class SignUpSection extends React.Component<{}, { myInputVal: string }> {
                                     <div className={`response`} id="mce-success-response" style={hideStyle}></div>
                                 </div>
 
-                                <div style={styleOffScreen} aria-hidden="true">
-                                    <input type="text" name="b_214fb7067ed1686330f8a4c07_a0c12bbc78" tabIndex={-1} value="" />
-                                </div>
+                                <OffScreen aria-hidden="true">
+                                    <input type="text" name="b_214fb7067ed1686330f8a4c07_a0c12bbc78" tabIndex={-1} />
+                                </OffScreen>
+
                                 <div className="clear subscribe-btn-wrapper">
                                     <a className="button subscribe-btn" onClick={() => submitSubscribeForm()}>
                                         <span>Notify Me</span>
@@ -75,7 +73,7 @@ class SignUpSection extends React.Component<{}, { myInputVal: string }> {
                         </div>
                     </form>
                 </div>
-            </div>
+            </SubscriberSection>
         );
     }
 }

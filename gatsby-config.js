@@ -5,16 +5,9 @@ module.exports = {
   },
   plugins: [
     // Add typescript stack into webpack
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://nativescripting.com`
-      }
-    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

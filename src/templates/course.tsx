@@ -35,6 +35,7 @@ import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/C
 import '../css/course-details.css';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+import { MainLayout } from '../layouts/MainLayout';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -57,7 +58,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-> {
+  > {
   constructor(props: CourseTemplateProps) {
     super(props);
 
@@ -112,7 +113,7 @@ class CourseTemplate extends React.Component<
     const pageTitle = `${course.title} | NativeScripting`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -153,7 +154,7 @@ class CourseTemplate extends React.Component<
             <SignUpSection />
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }

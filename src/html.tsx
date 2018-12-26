@@ -14,6 +14,8 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
+styles = require("!raw-loader!./css/styles.css");
+
 interface HtmlProps {
   body: any;
   postBodyComponents: any;
@@ -21,7 +23,8 @@ interface HtmlProps {
 }
 
 // Use `module.exports` to be compliante with `webpack-require` import method
-module.exports = React.createClass<HtmlProps, void>({
+export default class extends React.Component<HtmlProps, void> {
+  //module.exports = React.createClass<HtmlProps, void>({
   render() {
     const head = Helmet.rewind();
 
@@ -86,7 +89,10 @@ module.exports = React.createClass<HtmlProps, void>({
             content="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png"
           />
 
-          {css}
+          <style
+            id="gatsby-inlined-css"
+            dangerouslySetInnerHTML={{ __html: styles }}
+          />
         </head>
         <body>
           <div
@@ -110,22 +116,10 @@ module.exports = React.createClass<HtmlProps, void>({
                             `
             }}
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                            (function (h, o, t, j, a, r) {
-                                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-                                h._hjSettings = { hjid: 726771, hjsv: 6 };
-                                a = o.getElementsByTagName('head')[0];
-                                r = o.createElement('script'); r.async = 1;
-                                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                                a.appendChild(r);
-                            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-                            `
-            }}
-          />
+
         </body>
       </html>
     );
   }
-});
+  //});
+}

@@ -19,7 +19,7 @@ export class CourseCardList extends React.Component<CourseCardListProps, {}> {
   }
 
   public componentWillReceiveProps(newProps: CourseCardListProps) {
-    const elem = ReactDOM.findDOMNode(this);
+    const elem = ReactDOM.findDOMNode(this) as any; // TODO: Ugh this is ugly.
 
     if (toId !== -1) {
       clearTimeout(toId);
@@ -32,6 +32,7 @@ export class CourseCardList extends React.Component<CourseCardListProps, {}> {
       elem.classList.remove('list-updated');
       toId = -1;
     }, animTimeout);
+
   }
 
   public render() {

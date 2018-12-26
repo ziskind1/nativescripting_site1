@@ -11,6 +11,8 @@ import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 import '../css/about.css';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
+import { Clear } from '../components/shared/Clear';
+import { MainLayout } from '../layouts/MainLayout';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -26,9 +28,6 @@ export default class extends React.Component<AboutPageProps, {}> {
   }
 
   public render() {
-    const clearStyle = {
-      clear: 'both'
-    };
 
     const authors = this.props.data.authorsConnection.edges.map(
       authorFromAuthorsJsonEdge
@@ -42,7 +41,7 @@ export default class extends React.Component<AboutPageProps, {}> {
     const pageTitle = `About | NativeScripting`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -60,11 +59,11 @@ export default class extends React.Component<AboutPageProps, {}> {
               <h3>the most comprehensive NativeScript training</h3>
             </div>
 
-            <div style={clearStyle} />
+            <Clear />
 
             <AuthorCardList authors={authors} />
 
-            <div style={clearStyle} />
+            <Clear />
 
             <div className="video-container">
               <div className="about-row about-top-block">
@@ -98,7 +97,7 @@ export default class extends React.Component<AboutPageProps, {}> {
             <SignUpSection />
           </div>
         </div>
-      </div>
+      </MainLayout>
     );
   }
 }

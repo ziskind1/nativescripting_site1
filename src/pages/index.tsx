@@ -33,6 +33,7 @@ import { scrollToElementById } from '../utils/scrolling';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import TrainingLink from '../components/home/TrainingLink/TrainingLink';
+import { MainLayout } from '../layouts/MainLayout';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -131,7 +132,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
     const pageTitle = `Courses | NativeScripting`;
 
     return (
-      <div>
+      <MainLayout>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -163,7 +164,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <AddThisBlock />
 
         <TrainingLink />
-      </div>
+      </MainLayout>
     );
   }
 }

@@ -12,6 +12,7 @@ import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import { PostNavToPost } from '../components/posts/PostNavToPost/PostNavToPost';
+import { MainLayout } from '../layouts/MainLayout';
 
 interface PostPageProps {
   data: {
@@ -43,7 +44,7 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
   const postNext = postFromMarkdownRemark(props.data.mdRemarkNext, authors);
 
   return (
-    <div>
+    <MainLayout>
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
@@ -68,7 +69,7 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
       <SignUpSection />
 
       <AddThisBlock />
-    </div>
+    </MainLayout>
   );
 };
 
@@ -110,7 +111,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            responsiveSizes(maxWidth: 1000) {
+            sizes(maxWidth: 1000) {
               base64
               aspectRatio
               src
@@ -136,7 +137,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            responsiveSizes(maxWidth: 1000) {
+            sizes(maxWidth: 1000) {
               base64
               aspectRatio
               src
@@ -162,7 +163,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            responsiveSizes(maxWidth: 1000) {
+            sizes(maxWidth: 1000) {
               base64
               aspectRatio
               src
