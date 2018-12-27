@@ -148,7 +148,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <Logos />
         <Benefits />
 
-        <a id="courses" name="courses" />
+        <a id="courses" />
+
         <CoursesSection
           courses={filteredCourses}
           selectedFilterType={this.state.selectedFilterType}
