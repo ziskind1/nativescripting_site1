@@ -15,7 +15,7 @@ const BundleSection: React.StatelessComponent<BundleSectionProps> = (props: Bund
     return (
         <section className="section">
             <div className="wrapper">
-                <a id="specials" name="specials"></a>
+                <a id="specials"></a>
                 <div className="heading">
                     <h2 className="heading__title">Complete Bundles</h2>
                     <p className="heading__text">
