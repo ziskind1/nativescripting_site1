@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { graphql } from "gatsby";
+
 import { Helmet } from 'react-helmet';
 
 let Image = require('gatsby-image').default;
