@@ -1,6 +1,8 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const config = require('./config/SiteConfig').default;
+
 /*
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -38,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         allMarkdownRemark(
+          filter: { frontmatter: { draft: { ne: true } } }
           sort: { order: ASC, fields: [frontmatter___updatedDate] }
           limit: 1000
         ) {
@@ -59,6 +62,10 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
+      if (result.errors) {
+        return Promise.reject(result.errors);
+      }
+
       //const flavoredCourses = result.data.allCoursesJson.edges;
       //createFlavorPages(createPage);
 
@@ -66,7 +73,10 @@ exports.createPages = ({ graphql, actions }) => {
       createCoursePages(createPage, courses);
 
       const posts = result.data.allMarkdownRemark.edges;
-      createPostPages(createPage, posts);
+      const postsPerPage = config.POSTS_PER_PAGE;
+      const numPages = Math.ceil(posts.length / postsPerPage);
+
+      createPostPages(createPage, posts, postsPerPage, numPages);
       createTagPages(createPage, posts);
 
       /*
@@ -122,8 +132,24 @@ const prevPost = (posts, curIdx) =>
 const nextPost = (posts, curIdx) =>
   isLast(curIdx, posts.length) ? null : posts[inc(curIdx)];
 
-const createPostPages = (createPage, posts) => {
+const createPostPages = (createPage, posts, postsPerPage, numPages) => {
   const postTemplate = path.resolve(`src/templates/post.tsx`);
+
+
+  Array.from({ length: numPages })
+    .forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+        component: path.resolve(`src/templates/posts.tsx`),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          totalPages: numPages,
+          currentPage: i + 1
+        },
+      });
+    });
+
 
   posts.forEach(({ node }, postIdx) => {
     const prev = prevPost(posts, postIdx);
