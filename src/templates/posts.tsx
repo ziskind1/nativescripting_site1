@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 
-
-
 import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
 import { AuthorsJsonConnection, MarkdownRemarkConnection } from '../domain/graphql-types';
@@ -16,6 +14,8 @@ import { PostsSection } from '../components/posts/PostsSection/PostsSection';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import { Pagination } from '../components/posts/Pagination/Pagination';
+
+import '../css/posts.css';
 
 interface PostsIndexPageProps {
     data: {
