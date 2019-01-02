@@ -73,11 +73,38 @@
   },
   {
     "id": "800",
+    "name": "Hernán Piña",
+    "img": "hernan_pina.jpg",
+    "twitter": "canelacho",
+    "order": 800,
+    "quoteHtml": "Excellent as an introduction, easy to understand, totally useful, if you are a Vue developer, you should take this material to start with the right foot.",
+    "titleHtml": "JavaScript Developer"
+  },
+  {
+    "id": "900",
     "name": "Devlin Duldulao",
     "img": "devlin_duldulao.jpg",
     "twitter": "DevlinDuldulao",
-    "order": 800,
+    "order": 900,
     "quoteHtml": "If you want to understand and master NativeScript, Alex’s NativeScripting course videos are the way to go. He is truly the ‘Voice of NativeScript’ as he can break down complex ideas in such a way that would help you accelerate your goal in building beautiful mobile applications. Highly recommend him and definitely worth your time and money!",
     "titleHtml": "Microsoft MVP"
+  },
+  {
+    "id": "1000",
+    "name": "Chase Putnam",
+    "img": "chase_putnam.jpg",
+    "twitter": "cdputnam",
+    "order": 1000,
+    "quoteHtml": "The introduction to NativeScript-Vue course is a fantastic foundation for learning how to both implement UIs using the Vue framework and also how to use the NativeScript toolsets, such as the CLI and the Sidekick app.",
+    "titleHtml": "Backend and Frontend Developer"
+  },
+  {
+    "id": "1100",
+    "name": "Eisson Alipio",
+    "img": "eisson_alipio.jpg",
+    "twitter": "eisson_alipio",
+    "order": 1100,
+    "quoteHtml": "NativeScripting is an amazing technology to build applications with very good performance for the both main mobile platforms. not only that, also you can use Angular with all it's advantages, I really recommend this course.",
+    "titleHtml": "Developer"
   }
 ]
