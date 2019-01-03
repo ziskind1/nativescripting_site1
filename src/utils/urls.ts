@@ -4,8 +4,10 @@ export function getAuthorImgSrc(authorImageName: string): string {
 
 export function isUrlExternal(url: string) {
   const windowGlobal = typeof window !== 'undefined' && window;
+  const locationGlobal =
+    typeof windowGlobal.location !== 'undefined' && windowGlobal.location;
 
-  const host = windowGlobal.location.hostname;
+  const host = locationGlobal.hostname;
 
   const linkHost = (function(url) {
     if (/^https?:\/\//.test(url)) {
@@ -18,7 +20,7 @@ export function isUrlExternal(url: string) {
       return parser.hostname;
     } else {
       // Relative URL.
-      return windowGlobal.location.hostname;
+      return locationGlobal.hostname;
     }
   })(url);
 
