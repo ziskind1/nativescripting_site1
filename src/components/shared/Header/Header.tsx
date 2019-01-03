@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 import SiteLogo from '../SiteLogo';
-import Burger from '../Burger';
-import { MainMenuMobile, MainMenu } from '../MainMenu';
 
 import './Header.css';
 
