@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
+
 import { getMenu } from '../MainMenu';
 
 import './Footer.css';
@@ -12,9 +14,9 @@ function Footer() {
       <div className="footer-container">
         <div>@{year} NativeScripting</div>
         <div className="privacy-links">
-          <a href="/faq">FAQ</a>
-          <a href="/terms">Terms of Use</a>
-          <a href="/privacy">Privacy Policy</a>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/terms">Terms of Use</Link>
+          <Link to="/privacy">Privacy Policy</Link>
         </div>
         <div>{menu}</div>
       </div>

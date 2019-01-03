@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { CourseFlavorType, Course, CourseLevel } from '../../domain/models';
+import { Link } from 'gatsby';
+
+import { Course, CourseLevel } from '../../domain/models';
 import ActionButton from '../ActionButton/ActionButton';
 import LevelIcon from '../LevelIcon/LevelIcon';
 
@@ -100,7 +102,7 @@ export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
 
   return (
     <div className="course-container2">
-      <a href={'/course/' + course.url}>
+      <Link to={'/course/' + course.url}>
         <div className="course-card-label">{courseLabelHtml}</div>
         <div className="course-card-flavors-container">
           <div className="course-icons">{courseIconHtml}</div>
@@ -118,7 +120,7 @@ export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
             <div className="">{levelHtml}</div>
           </div>
         </div>
-      </a>
+      </Link>
 
       <div className="course-bottom">
         <div className="course-license" />

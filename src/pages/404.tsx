@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
+
 import { Helmet } from 'react-helmet';
 
 import '../css/404.css';
@@ -27,13 +29,13 @@ function FourOhFour() {
 
             <p className="bundle-notice">
               You are likely looking for our amazing NativeScript courses, which
-              can be found <a href="/">here</a>.
+              can be found <Link to="/">here</Link>.
             </p>
 
             <div className="action-btn-container">
               <div className="action-btn-wrapper">
                 <div className="btn-action blue clear">
-                  <a href="/">
+                  <Link to="/">
                     <span className="action-text-full">
                       {actionGoDeepTextFull}
                     </span>
@@ -43,7 +45,7 @@ function FourOhFour() {
                     <span className="action-text-small">
                       {actionGoDeepTextSmall}
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
