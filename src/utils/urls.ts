@@ -2,6 +2,12 @@ export function getAuthorImgSrc(authorImageName: string): string {
   return `/img/authors/${authorImageName}`;
 }
 
+export function isUrlExternal(url: string): boolean {
+  const internal = /^\/(?!\/)/.test(url);
+  return !internal;
+}
+
+/*
 export function isUrlExternal(url: string) {
   const windowGlobal = typeof window !== 'undefined' && window;
   const locationGlobal =
@@ -30,3 +36,4 @@ export function isUrlExternal(url: string) {
 
   return host !== linkHost;
 }
+*/
