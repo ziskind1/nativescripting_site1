@@ -7,6 +7,9 @@ export function isUrlExternal(url: string) {
   const locationGlobal =
     typeof windowGlobal.location !== 'undefined' && windowGlobal.location;
   const documentGlobal = typeof document !== 'undefined' && document;
+  const createElementGlobal =
+    typeof documentGlobal.createElement !== 'undefined' &&
+    documentGlobal.createElement;
 
   const host = locationGlobal.hostname;
 
@@ -15,7 +18,7 @@ export function isUrlExternal(url: string) {
       // Absolute URL.
       // The easy way to parse an URL, is to create <a> element.
       // @see: https://gist.github.com/jlong/2428561
-      const parser = documentGlobal.createElement('a');
+      const parser = createElementGlobal('a');
       parser.href = url;
 
       return parser.hostname;
