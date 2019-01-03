@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { graphql } from "gatsby";
-import Link from 'gatsby-link';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { AuthorsJsonConnection } from '../domain/graphql-types';
@@ -29,7 +28,6 @@ export default class extends React.Component<AboutPageProps, {}> {
   }
 
   public render() {
-
     const authors = this.props.data.authorsConnection.edges.map(
       authorFromAuthorsJsonEdge
     );

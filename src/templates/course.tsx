@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
 
-import Link from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
 import {
@@ -12,7 +11,6 @@ import {
   TestimonialsJsonConnection
 } from '../domain/graphql-types';
 
-import NsLink from '../components/NsLink';
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 import { Course, Bundle } from '../domain/models';
 import {
@@ -22,14 +20,12 @@ import {
   testimonialFromTestimonialJsonEdge
 } from '../domain/converters';
 import { bundleFromBundlesJsonEdge } from '../domain/converters/bundle-types';
-import { CourseMeta } from '../components/courseDetails/CourseMeta/CourseMeta';
-import { CourseDetailsBody } from '../components/courseDetails/CourseDetailsBody/CourseDetailsBody';
-import Quotes from '../components/Quotes/Quotes';
+
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import { CourseBanner } from '../components/courseDetails/CourseBanner/CourseBanner';
 
 import { CourseMetaCard } from '../components/courseDetails/CourseMetaCard/CourseMetaCard';
-import { CourseBundleArea } from '../components/courseDetails/CourseBundleArea/CourseBundleArea';
+
 import { CoursePurchaseArea } from '../components/courseDetails/CoursePurchaseArea/CoursePurchaseArea';
 import BundleSection from '../components/home/BundleSection/BundleSection';
 import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/CourseCurriculum';
@@ -60,7 +56,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-  > {
+> {
   constructor(props: CourseTemplateProps) {
     super(props);
 

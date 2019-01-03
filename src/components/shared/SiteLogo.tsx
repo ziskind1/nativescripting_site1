@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
-
-import { withPrefix } from 'gatsby-link';
+import { Link, withPrefix } from 'gatsby';
 
 const logoSrc = withPrefix('/img/logo_full.svg');
 const logoIconSrc = withPrefix('/img/logo_full_icon.svg');

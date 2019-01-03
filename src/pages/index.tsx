@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { graphql } from "gatsby";
-import Link from 'gatsby-link';
+import { graphql } from 'gatsby';
+
 import { Helmet } from 'react-helmet';
 
 import {
   AuthorsJsonConnection,
   CoursesJsonConnection,
-  CoursesJsonEdge,
   BundlesJsonConnection,
   TestimonialsJsonConnection
 } from '../domain/graphql-types';
@@ -16,18 +15,17 @@ import {
   courseFromCoursesJsonEdge,
   testimonialFromTestimonialJsonEdge
 } from '../domain/converters';
-import { Course, CourseFlavorType } from '../domain/models';
 
 import Hero from '../components/home/Hero/Hero';
 import { bundleFromBundlesJsonEdge } from '../domain/converters/bundle-types';
-import ActionButton from '../components/ActionButton/ActionButton';
+
 import BundleSection from '../components/home/BundleSection/BundleSection';
 import CoursesSection from '../components/home/CoursesSection/CoursesSection';
 import { CourseFilterType } from '../components/home/CourseFilter/CourseFilter';
 import SubHeroSection from '../components/home/SubHeroSection/SubHeroSection';
 import Benefits from '../components/home/Benefits/Benefits';
 import Logos from '../components/home/Logos/Logos';
-import Quotes from '../components/Quotes/Quotes';
+
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import { scrollToElementById } from '../utils/scrolling';

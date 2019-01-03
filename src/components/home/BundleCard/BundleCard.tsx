@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
-import { Bundle, Course, Product } from '../../../domain/models';
+import { Bundle, Product } from '../../../domain/models';
 import ActionButton, { ActionBtnType } from '../../ActionButton/ActionButton';
 import BundleCourseList from '../BundleCourse/BundleCourseList';
 

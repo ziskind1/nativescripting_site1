@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
+
 import { Product } from '../../../domain/models';
 
 import './LicenseSelector.css';
