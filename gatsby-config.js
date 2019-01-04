@@ -19,6 +19,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     `gatsby-plugin-typescript`,
     `gatsby-transformer-json`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
