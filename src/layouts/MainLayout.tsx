@@ -8,6 +8,30 @@ import Header from '../components/shared/Header/Header';
 import '../../node_modules/normalize.css/normalize.css';
 //import '../css/styles.css';
 
+export const MainLayout: React.SFC = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+          query MainLayoutQuery {
+            site {
+              siteMetadata {
+                siteName
+              }
+            }
+          }
+        `}
+    render={data => (
+      <div>
+        <Header siteName={'NativeScripting'} />
+
+        <main role="main">{children}</main>
+
+        <Footer />
+      </div>
+    )}
+  />
+);
+
+/*
 export class MainLayout extends React.PureComponent<{}> {
   public render() {
     const { children } = this.props;
@@ -36,6 +60,7 @@ export class MainLayout extends React.PureComponent<{}> {
     );
   }
 }
+*/
 
 /*
 interface IndexLayoutProps {

@@ -5,14 +5,14 @@ import SiteConfig from '../../../../config/SiteConfig';
 import { MarkdownRemark } from '../../../domain/graphql-types';
 import { Post } from '../../../domain/models/posts/post.model';
 
-interface SEO {
+interface SeoProps {
     postNode: MarkdownRemark;
     post: Post;
-    postSEO: boolean;
+    postSeo: boolean;
 }
 
-export const SEO = (props: SEO) => {
-    const { postNode, post, postSEO } = props;
+export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
+    const { postNode, post, postSeo } = props;
     const postPath = postNode.frontmatter.path;
     let title;
     let description;
@@ -20,7 +20,7 @@ export const SEO = (props: SEO) => {
     let postURL;
     const realPrefix = SiteConfig.pathPrefix === '/' ? '' : SiteConfig.pathPrefix;
 
-    if (postSEO) {
+    if (postSeo) {
         const postMeta = postNode.frontmatter;
         title = postMeta.title;
         description = postNode.excerpt;
@@ -46,7 +46,7 @@ export const SEO = (props: SEO) => {
         },
     ];
 
-    if (postSEO) {
+    if (postSeo) {
         schemaOrgJSONLD = [
             {
                 '@context': 'http://schema.org',
@@ -86,27 +86,56 @@ export const SEO = (props: SEO) => {
         ];
     }
     return (
-        <Helmet>
-            <html lang={SiteConfig.siteLanguage} />
-            <title>{SiteConfig.siteTitle}</title>
-            <meta name="description" content={description} />
-            <meta name="image" content={image} />
-            <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
-            <meta property="og:locale" content={SiteConfig.ogLanguage} />
-            <meta property="og:site_name" content={SiteConfig.ogSiteName ? SiteConfig.ogSiteName : ''} />
-            <meta property="og:url" content={postSEO ? postURL : blogURL} />
-            {postSEO ? <meta property="og:type" content="article" /> : null}
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
-            <meta property="fb:app_id" content={SiteConfig.siteFBAppID ? SiteConfig.siteFBAppID : ''} />
-            <meta name="twitter:site" content="@nativescripting" />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:creator" content={post.author.twitter ? `@${post.author.twitter}` : SiteConfig.userTwitter} />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:url" content={postSEO ? postURL : blogURL} />
-            <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={image} />
-        </Helmet>
+
+        <Helmet
+            htmlAttributes={{
+                lang: SiteConfig.siteLanguage,
+            }}
+            title={title}
+
+            meta={[
+                {
+                    content: description,
+                    name: 'description',
+                },
+                {
+                    content: title,
+                    property: 'og:title',
+                },
+                {
+                    content: description,
+                    property: 'og:description',
+                },
+                {
+                    content: 'website',
+                    property: 'og:type',
+                },
+                {
+                    content: 'summary',
+                    name: 'twitter:card',
+                },
+                {
+                    content: post.author.twitter ? `@${post.author.twitter}` : SiteConfig.userTwitter,
+                    name: 'twitter:creator',
+                },
+                {
+                    content: title,
+                    name: 'twitter:title',
+                },
+                {
+                    content: description,
+                    name: 'twitter:description',
+                },
+                {
+                    content: postSeo ? postURL : blogURL,
+                    name: 'twitter:url',
+                },
+                {
+                    content: image,
+                    name: 'twitter:image',
+                },
+            ]}
+        />
+
     );
 };
