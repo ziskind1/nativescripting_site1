@@ -100,7 +100,8 @@ export const SEO = (props: SEO) => {
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
             <meta property="fb:app_id" content={SiteConfig.siteFBAppID ? SiteConfig.siteFBAppID : ''} />
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@nativescripting" />
+            <meta name="twitter:card" content="summary" />
             <meta name="twitter:creator" content={post.author.twitter ? `@${post.author.twitter}` : SiteConfig.userTwitter} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:url" content={postSEO ? postURL : blogURL} />
