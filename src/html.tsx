@@ -80,14 +80,6 @@ export default class extends React.Component<HtmlProps, void> {
             rel="image_src"
             href="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png"
           />
-          <meta
-            name="og:image"
-            content="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png"
-          />
-          <meta
-            name="twitter:image"
-            content="https://nativescripting.com/img/course_banners/nativescript_core_ng_course_banner_bg.png"
-          />
 
           <style
             id="gatsby-inlined-css"
