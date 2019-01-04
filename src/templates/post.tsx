@@ -15,6 +15,7 @@ import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import { PostNavToPost } from '../components/posts/PostNavToPost/PostNavToPost';
 import { MainLayout } from '../layouts/MainLayout';
+import { SEO } from '../components/shared/Seo/Seo';
 
 interface PostPageProps {
   data: {
@@ -47,6 +48,7 @@ const PostTemplate: React.StatelessComponent<PostPageProps> = (
 
   return (
     <MainLayout>
+      <SEO postNode={props.data.mdRemark} post={post} postSEO />
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
