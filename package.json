@@ -7,6 +7,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
+    "clean": "rm -rf .cache public",
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/domain/graphql-types.d.ts"
   },
   "prettier": {
