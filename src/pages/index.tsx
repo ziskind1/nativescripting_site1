@@ -33,6 +33,8 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import TrainingLink from '../components/home/TrainingLink/TrainingLink';
 import { MainLayout } from '../layouts/MainLayout';
+import { Course } from '../domain/models';
+import { Seo } from '../components/shared/Seo/Seo';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -132,6 +134,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
     return (
       <MainLayout>
+        <Seo />
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>

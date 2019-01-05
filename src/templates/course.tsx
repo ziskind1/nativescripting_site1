@@ -34,6 +34,7 @@ import '../css/course-details.css';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import { MainLayout } from '../layouts/MainLayout';
+import { Seo } from '../components/shared/Seo/Seo';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -112,6 +113,7 @@ class CourseTemplate extends React.Component<
 
     return (
       <MainLayout>
+        <Seo course={course} courseSeo />
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>

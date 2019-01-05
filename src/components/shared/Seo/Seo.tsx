@@ -4,138 +4,156 @@ import SiteConfig from '../../../../config/SiteConfig';
 
 import { MarkdownRemark } from '../../../domain/graphql-types';
 import { Post } from '../../../domain/models/posts/post.model';
+import { Course } from '../../../domain/models';
 
 interface SeoProps {
-    postNode: MarkdownRemark;
-    post: Post;
-    postSeo: boolean;
+  postNode?: MarkdownRemark;
+  post?: Post;
+  postSeo?: boolean;
+  course?: Course;
+  courseSeo?: boolean;
+  path?: string;
 }
 
 export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
-    const { postNode, post, postSeo } = props;
+  const { postNode, post, postSeo, course, courseSeo, path } = props;
+
+  let title;
+  let description;
+  let creator = SiteConfig.userTwitter;
+  let image = `/img/course_banners/nativescript_core_ng_course_banner_bg.png`;
+  let twitterCard = 'summary';
+  const realPrefix = SiteConfig.pathPrefix === '/' ? '' : SiteConfig.pathPrefix;
+  let pageUrl;
+
+  if (postSeo) {
     const postPath = postNode.frontmatter.path;
-    let title;
-    let description;
-    let image;
-    let postURL;
-    const realPrefix = SiteConfig.pathPrefix === '/' ? '' : SiteConfig.pathPrefix;
-
-    if (postSeo) {
-        const postMeta = postNode.frontmatter;
-        title = postMeta.title;
-        description = postNode.excerpt;
-        image = postNode.frontmatter.image.childImageSharp.sizes.src;
-        postURL = SiteConfig.siteUrl + realPrefix + postPath;
-    } else {
-        title = SiteConfig.siteTitle;
-        description = SiteConfig.siteDescription;
-        image = SiteConfig.siteBanner;
+    const postMeta = postNode.frontmatter;
+    title = postMeta.title;
+    description = postNode.excerpt;
+    image = postNode.frontmatter.image.childImageSharp.sizes.src;
+    pageUrl = SiteConfig.siteUrl + realPrefix + postPath;
+    creator = post.author.twitter
+      ? `@${post.author.twitter}`
+      : SiteConfig.userTwitter;
+    twitterCard = 'summary';
+  } else if (courseSeo) {
+    title = course.title;
+    description = course.description;
+    image = `/img/illustrations/transparent_bg/${course.url}.svg`;
+    pageUrl = SiteConfig.siteUrl + realPrefix + '/course/' + course.url;
+    creator = SiteConfig.userTwitter;
+    twitterCard = 'product';
+  } else {
+    title = SiteConfig.siteTitle;
+    description = SiteConfig.siteDescription;
+    image = SiteConfig.siteBanner;
+    if (path) {
+      pageUrl = SiteConfig.siteUrl + realPrefix + path;
     }
-    image = SiteConfig.siteUrl + realPrefix + image;
-    const blogURL = SiteConfig.siteUrl + SiteConfig.pathPrefix;
-    let schemaOrgJSONLD = [];
+  }
 
+  image = SiteConfig.siteUrl + realPrefix + image;
+  let schemaOrgJSONLD = [];
+
+  schemaOrgJSONLD = [
+    {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      '@id': pageUrl,
+      url: pageUrl,
+      name: title,
+      alternateName: SiteConfig.siteTitleAlt ? SiteConfig.siteTitleAlt : ''
+    }
+  ];
+
+  if (postSeo) {
     schemaOrgJSONLD = [
-        {
-            '@context': 'http://schema.org',
-            '@type': 'WebSite',
-            '@id': blogURL,
-            url: blogURL,
-            name: title,
-            alternateName: SiteConfig.siteTitleAlt ? SiteConfig.siteTitleAlt : '',
+      {
+        '@context': 'http://schema.org',
+        '@type': 'BlogPosting',
+        // @ts-ignore
+        '@id': pageUrl,
+        // @ts-ignore
+        url: pageUrl,
+        name: title,
+        alternateName: SiteConfig.siteTitleAlt ? SiteConfig.siteTitleAlt : '',
+        headline: title,
+        image: {
+          '@type': 'ImageObject',
+          url: image
         },
+        description: SiteConfig.siteDescription,
+        datePublished: postNode.frontmatter.createdDate,
+        dateModified: postNode.frontmatter.updatedDate,
+        author: {
+          '@type': 'Person',
+          name: post.author.twitter
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: SiteConfig.author,
+          logo: {
+            '@type': 'ImageObject',
+            url: SiteConfig.siteUrl + realPrefix + SiteConfig.siteLogo
+          }
+        },
+        isPartOf: pageUrl,
+        mainEntityOfPage: {
+          '@type': 'WebSite',
+          '@id': pageUrl
+        }
+      }
     ];
-
-    if (postSeo) {
-        schemaOrgJSONLD = [
-            {
-                '@context': 'http://schema.org',
-                '@type': 'BlogPosting',
-                // @ts-ignore
-                '@id': postURL,
-                // @ts-ignore
-                url: postURL,
-                name: title,
-                alternateName: SiteConfig.siteTitleAlt ? SiteConfig.siteTitleAlt : '',
-                headline: title,
-                image: {
-                    '@type': 'ImageObject',
-                    url: image,
-                },
-                description: SiteConfig.siteDescription,
-                datePublished: postNode.frontmatter.createdDate,
-                dateModified: postNode.frontmatter.updatedDate,
-                author: {
-                    '@type': 'Person',
-                    name: post.author.twitter
-                },
-                publisher: {
-                    '@type': 'Organization',
-                    name: SiteConfig.author,
-                    logo: {
-                        '@type': 'ImageObject',
-                        url: SiteConfig.siteUrl + realPrefix + SiteConfig.siteLogo,
-                    },
-                },
-                isPartOf: blogURL,
-                mainEntityOfPage: {
-                    '@type': 'WebSite',
-                    '@id': blogURL,
-                },
-            },
-        ];
-    }
-    return (
-
-        <Helmet
-            htmlAttributes={{
-                lang: SiteConfig.siteLanguage,
-            }}
-            title={title}
-
-            meta={[
-                {
-                    content: description,
-                    name: 'description',
-                },
-                {
-                    content: title,
-                    property: 'og:title',
-                },
-                {
-                    content: description,
-                    property: 'og:description',
-                },
-                {
-                    content: 'website',
-                    property: 'og:type',
-                },
-                {
-                    content: 'summary',
-                    name: 'twitter:card',
-                },
-                {
-                    content: post.author.twitter ? `@${post.author.twitter}` : SiteConfig.userTwitter,
-                    name: 'twitter:creator',
-                },
-                {
-                    content: title,
-                    name: 'twitter:title',
-                },
-                {
-                    content: description,
-                    name: 'twitter:description',
-                },
-                {
-                    content: postSeo ? postURL : blogURL,
-                    name: 'twitter:url',
-                },
-                {
-                    content: image,
-                    name: 'twitter:image',
-                },
-            ]}
-        />
-
-    );
+  }
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang: SiteConfig.siteLanguage
+      }}
+      title={title}
+      meta={[
+        {
+          content: description,
+          name: 'description'
+        },
+        {
+          content: title,
+          property: 'og:title'
+        },
+        {
+          content: description,
+          property: 'og:description'
+        },
+        {
+          content: 'website',
+          property: 'og:type'
+        },
+        {
+          content: twitterCard,
+          name: 'twitter:card'
+        },
+        {
+          content: creator,
+          name: 'twitter:creator'
+        },
+        {
+          content: title,
+          name: 'twitter:title'
+        },
+        {
+          content: description,
+          name: 'twitter:description'
+        },
+        {
+          content: pageUrl,
+          name: 'twitter:url'
+        },
+        {
+          content: image,
+          name: 'twitter:image'
+        }
+      ]}
+    />
+  );
 };

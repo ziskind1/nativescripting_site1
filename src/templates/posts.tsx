@@ -3,7 +3,10 @@ import { Link, graphql } from 'gatsby';
 
 import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
-import { AuthorsJsonConnection, MarkdownRemarkConnection } from '../domain/graphql-types';
+import {
+  AuthorsJsonConnection,
+  MarkdownRemarkConnection
+} from '../domain/graphql-types';
 import { Author } from '../domain/models';
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 import { postFromMarkdownRemark } from '../domain/converters/post-types';
@@ -16,78 +19,77 @@ import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import { Pagination } from '../components/posts/Pagination/Pagination';
 
 import '../css/posts.css';
+import { Seo } from '../components/shared/Seo/Seo';
 
 interface PostsIndexPageProps {
-    data: {
-        authorsConnection: AuthorsJsonConnection;
-        markdownConnection: MarkdownRemarkConnection;
-    };
-    pageContext: {
-        currentPage: number;
-        totalPages: number;
-    };
+  data: {
+    authorsConnection: AuthorsJsonConnection;
+    markdownConnection: MarkdownRemarkConnection;
+  };
+  pageContext: {
+    currentPage: number;
+    totalPages: number;
+  };
 }
 
-
 export default class PostsPage extends React.Component<PostsIndexPageProps> {
-    private authors: Author[] = [];
+  private authors: Author[] = [];
 
-    constructor(props: PostsIndexPageProps) {
-        super(props);
+  constructor(props: PostsIndexPageProps) {
+    super(props);
 
-        this.authors = this.props.data.authorsConnection.edges.map(
-            authorFromAuthorsJsonEdge
-        );
-    }
+    this.authors = this.props.data.authorsConnection.edges.map(
+      authorFromAuthorsJsonEdge
+    );
+  }
 
-    public render() {
-        const { currentPage, totalPages } = this.props.pageContext;
-        const { edges, totalCount } = this.props.data.markdownConnection;
+  public render() {
+    const { currentPage, totalPages } = this.props.pageContext;
+    const { edges, totalCount } = this.props.data.markdownConnection;
 
-        const posts = edges.map(e =>
-            postFromMarkdownRemark(e.node, this.authors)
-        );
+    const posts = edges.map(e => postFromMarkdownRemark(e.node, this.authors));
 
-        const breadCrumbs = [
-            { name: 'All courses', url: '/' },
-            { name: 'Posts', url: '' }
-        ];
+    const breadCrumbs = [
+      { name: 'All courses', url: '/' },
+      { name: 'Posts', url: '' }
+    ];
 
+    const pageTitle = `Posts | NativeScripting`;
 
+    return (
+      <MainLayout>
+        <Seo path="/posts" />
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
 
+        <CountdownTimer />
 
-        const pageTitle = `Posts | NativeScripting`;
+        <div className="wrapper">
+          <div className="posts-container">
+            <div className="breadcrumb-wrapper">
+              <BreadCrumbs breadcrumbs={breadCrumbs} />
+            </div>
 
-        return (
-            <MainLayout>
-                <Helmet>
-                    <title>{pageTitle}</title>
-                </Helmet>
+            <PostsSection posts={posts} />
 
-                <CountdownTimer />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              url={'posts'}
+            />
+          </div>
 
-                <div className="wrapper">
-                    <div className="posts-container">
-                        <div className="breadcrumb-wrapper">
-                            <BreadCrumbs breadcrumbs={breadCrumbs} />
-                        </div>
+          <SignUpSection />
 
-                        <PostsSection posts={posts} />
-
-                        <Pagination currentPage={currentPage} totalPages={totalPages} url={'posts'} />
-                    </div>
-
-                    <SignUpSection />
-
-                    <AddThisBlock />
-                </div>
-            </MainLayout>
-        );
-    }
+          <AddThisBlock />
+        </div>
+      </MainLayout>
+    );
+  }
 }
 export const PostsQuery = graphql`
   query($skip: Int!, $limit: Int!) {
-
     #get authors
     authorsConnection: allAuthorsJson(filter: { types: { in: "post" } }) {
       totalCount
@@ -107,37 +109,37 @@ export const PostsQuery = graphql`
 
     #get posts
     markdownConnection: allMarkdownRemark(
-        filter: { frontmatter: { draft: { ne: true } } }
-        sort: { order: DESC, fields: [frontmatter___updatedDate] }, 
-        limit: $limit, 
-        skip: $skip
-        ) {
+      filter: { frontmatter: { draft: { ne: true } } }
+      sort: { order: DESC, fields: [frontmatter___updatedDate] }
+      limit: $limit
+      skip: $skip
+    ) {
       totalCount
       edges {
         node {
-            id
-            timeToRead
-            frontmatter {
-              title
-              path
-              author
-              updatedDate(formatString: "DD MMMM, YYYY")
-              image {
-                childImageSharp {
-                  # Specify the image processing specifications right in the query.
-                  # Makes it trivial to update as your page's design changes.
-                  sizes(maxWidth: 1000) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
+          id
+          timeToRead
+          frontmatter {
+            title
+            path
+            author
+            updatedDate(formatString: "DD MMMM, YYYY")
+            image {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                sizes(maxWidth: 1000) {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
                 }
               }
             }
-            excerpt
           }
+          excerpt
+        }
       }
     }
   }

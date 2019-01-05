@@ -13,6 +13,7 @@ import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import { Clear } from '../components/shared/Clear';
 import { MainLayout } from '../layouts/MainLayout';
+import { Seo } from '../components/shared/Seo/Seo';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -41,6 +42,7 @@ export default class extends React.Component<AboutPageProps, {}> {
 
     return (
       <MainLayout>
+        <Seo path="/about" />
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
