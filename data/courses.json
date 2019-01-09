@@ -3,7 +3,7 @@
     "id": "418792",
     "title": "NativeScript-Vue Introduction",
     "subtitle": "An introductory course to get you started with NativeScript-Vue",
-    "description": "Welcome to the NativeScript-Vue Introduction Course. This course will take you through a series of exercises that build on one another to help you gain understanding about the NativeScript framework and how to use it with the VueJS UI framework to create native mobile apps. This course is currently on pre-sale until all the chapter are released. The full release is October 31, 2018.",
+    "description": "Welcome to the NativeScript-Vue Introduction Course. This course will take you through a series of exercises that build on one another to help you gain understanding about the NativeScript framework and how to use it with the VueJS UI framework to create native mobile apps.",
     "url": "nativescript-vue-introduction",
     "flavors": ["Vue"],
     "level": 1,
@@ -4140,7 +4140,7 @@
     "id": "328975",
     "title": "Securing NativeScript Applications",
     "subtitle": "Making your NativeScript Apps Bulletproof",
-    "description": "The course description and curriculum are to be determined",
+    "description": "Welcome to Securing NativeScript applications. You're here because you understand about the dangers that apps can face.\n\nIn this course, you will build layers of security into a simple, completely unsecured NativeScript app. You'll start out with protecting resources with authentication and authorization. However, simple auth is not enough. You'll find out how to keep your passwords safe with hashing and salting, JSON web token, server-side auth middleware, and controlling the user login lifetime.\n\nIn Chapter 4 we’ll balance between the server and clients worlds and secure the protocols they use to communicate with a technique called SSL pinning.\n\nYou'll also offload identity management and use the common OAuth2 protocol with those identity providers, and you’ll use the latest serverless technologies to help keep important data off your device.\n\nThere are techniques for keeping your data and code safe on the client as well. In the data protection chapter we'll see the differences between device storage mechanisms and their security implications.\n\nHowever, your assets aren’t only data. Your other exposed asset is your application code itself. While these days, NativeScript apps are bundled through Webpack, we will take code protection a step further.\n\nThis course is meant to show you some available options when it comes to securing your NativeScript apps, but it’s by far not an exhaustive set of guidelines.\n\n\n",
     "url": "securing-nativescript-applications",
     "flavors": ["Core", "Angular", "Vue"],
     "level": 2,
@@ -4195,7 +4195,49 @@
         "licensesMax": 40
       }
     ],
-    "publishedChapters": [],
+    "publishedChapters": [10, 20, 30, 40],
+    "publishingSchedule": [
+      {
+        "id": 10,
+        "date": "10/2/2018"
+      },
+      {
+        "id": 20,
+        "date": "10/2/2018"
+      },
+      {
+        "id": 30,
+        "date": "10/2/2018"
+      },
+      {
+        "id": 40,
+        "date": "10/13/2018"
+      },
+      {
+        "id": 50,
+        "date": "1/10/2019"
+      },
+      {
+        "id": 60,
+        "date": "1/10/2019"
+      },
+      {
+        "id": 70,
+        "date": "1/10/2019"
+      },
+      {
+        "id": 80,
+        "date": "1/10/2019"
+      },
+      {
+        "id": 90,
+        "date": "1/10/2019"
+      },
+      {
+        "id": 100,
+        "date": "1/10/2019"
+      }
+    ],
     "chapters": [
       {
         "id": 10,
@@ -4203,14 +4245,32 @@
         "lessons": [
           {
             "chapterId": 10,
-            "id": "8582063",
-            "name": "Course Introduction",
+            "id": "8771479",
+            "name": "Course Introduction (2:35)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "8771480",
+            "name": "OWASP Mobile Top 10 (1:47)",
             "isPreview": false
           },
           {
             "chapterId": 10,
-            "id": "8582066",
-            "name": "Exercise Files",
+            "id": "8771478",
+            "name": "Client and Server Security (2:40)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "8771481",
+            "name": "Prerequisites (2:11)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "8771482",
+            "name": "Terminology (2:45)",
             "isPreview": false
           }
         ]
@@ -4221,26 +4281,26 @@
         "lessons": [
           {
             "chapterId": 20,
-            "id": "8582186",
-            "name": "Overview",
+            "id": "8771488",
+            "name": "Overview (2:17)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "id": "8771491",
+            "name": "App Auth Page (7:00)",
             "isPreview": false
           },
           {
             "chapterId": 20,
-            "id": "8582187",
-            "name": "App Auth Page",
+            "id": "8771490",
+            "name": "Logging In (7:47)",
             "isPreview": false
           },
           {
             "chapterId": 20,
-            "id": "8582188",
-            "name": "Logging In",
-            "isPreview": false
-          },
-          {
-            "chapterId": 20,
-            "id": "8582189",
-            "name": "Maintaining Auth State",
+            "id": "8771489",
+            "name": "Maintaining Auth State (3:37)",
             "isPreview": false
           }
         ]
@@ -4251,38 +4311,38 @@
         "lessons": [
           {
             "chapterId": 30,
-            "id": "8582198",
-            "name": "Overview",
+            "id": "8771494",
+            "name": "Overview (1:26)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 30,
+            "id": "8771498",
+            "name": "About HTTPS (1:09)",
             "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "8582677",
-            "name": "About HTTPS",
+            "id": "8771495",
+            "name": "Building a Backend (7:32)",
             "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "8582678",
-            "name": "Simple Backend",
+            "id": "8771497",
+            "name": "Serving API Data (8:00)",
             "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "8582680",
-            "name": "Backend Data",
+            "id": "8771496",
+            "name": "Auth API Routes (8:21)",
             "isPreview": false
           },
           {
             "chapterId": 30,
-            "id": "8582681",
-            "name": "Login and Register Routes",
-            "isPreview": false
-          },
-          {
-            "chapterId": 30,
-            "id": "8582684",
-            "name": "Login and Register Client",
+            "id": "8771499",
+            "name": "Auth Client Setup (4:29)",
             "isPreview": false
           }
         ]
@@ -4293,32 +4353,38 @@
         "lessons": [
           {
             "chapterId": 40,
-            "id": "8582200",
-            "name": "Overview",
+            "id": "8771504",
+            "name": "Overview (2:06)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 40,
+            "id": "8771503",
+            "name": "Hashing and Salting (6:59)",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "8582689",
-            "name": "Hashing and Salting",
+            "id": "8771505",
+            "name": "Generating JWT (6:55)",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "8582690",
-            "name": "Generating JWT",
+            "id": "8771506",
+            "name": "Storing JWT on the Client (2:28)",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "8582692",
-            "name": "Protecting Data with JWT",
+            "id": "8771508",
+            "name": "Protecting Data with JWT (6:54)",
             "isPreview": false
           },
           {
             "chapterId": 40,
-            "id": "8582694",
-            "name": "Token Expiration",
+            "id": "8771507",
+            "name": "Token Expiration (6:12)",
             "isPreview": false
           }
         ]
@@ -4456,31 +4522,31 @@
           {
             "chapterId": 80,
             "id": "8582750",
-            "name": "Serverless Proxy: Local Setup",
+            "name": "Proxy Function: Local Setup",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "8582751",
-            "name": "Serverless Proxy: Client Setup",
+            "name": "Proxy Function: Client Setup",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "8582753",
-            "name": "Serverless Proxy: Example",
+            "name": "Proxy Function: Example",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "8582755",
-            "name": "Serverless Proxy: Local Settings",
+            "name": "Proxy Function: Local Settings",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "8582756",
-            "name": "Serverless Proxy: Deployment",
+            "name": "Proxy Function: Deployment",
             "isPreview": false
           },
           {
