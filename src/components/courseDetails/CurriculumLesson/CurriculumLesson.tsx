@@ -24,8 +24,13 @@ export const CurriculumLesson: React.StatelessComponent<
     : 'lesson-start-link';
 
   const lessonActionUrl = getLessonActionUrl(props.courseSlug, props.lesson.id);
+  const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
   const lessonDate = props.chapterPublishScheduleItem
-    ? 'Coming ' + props.chapterPublishScheduleItem.date.toLocaleDateString()
+    ? 'Coming ' +
+      props.chapterPublishScheduleItem.date.toLocaleDateString(
+        'en-US',
+        dateOptions
+      )
     : 'Planned Lesson';
 
   const lessonActionHtml = props.isPublishedChapter ? (
