@@ -816,7 +816,7 @@
     ],
     "level": 1,
     "order": 59,
-    "label": "NEW",
+    "label": "POPULAR",
     "launchdate": "05/11/2018",
     "authors": [
       "alex_ziskind"
@@ -4262,7 +4262,7 @@
     ],
     "level": 2,
     "order": 40,
-    "label": "PRESALE",
+    "label": "NEW",
     "launchdate": "01/10/2018",
     "authors": [
       "alex_ziskind"
