@@ -4684,14 +4684,14 @@
           },
           {
             "chapterId": 90,
-            "id": "8801194",
-            "name": "Deobfuscation",
+            "id": "8801192",
+            "name": "Uglify",
             "isPreview": false
           },
           {
             "chapterId": 90,
-            "id": "8801192",
-            "name": "Uglify",
+            "id": "8801194",
+            "name": "Deobfuscation",
             "isPreview": false
           },
           {
