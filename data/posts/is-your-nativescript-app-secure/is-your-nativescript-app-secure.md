@@ -197,8 +197,8 @@ This course is a practical guide on how to accomplish certain security related t
 
 - Deobfuscation
 - Uglify
-- Jscrambler Introduction
 - Webpack Obfuscator
+- Jscrambler Introduction
 - Jscrambler Options
 
 ### Other Security Considerations
