@@ -106,5 +106,32 @@
     "order": 1100,
     "quoteHtml": "NativeScripting is an amazing technology to build applications with very good performance for the both main mobile platforms. not only that, also you can use Angular with all it's advantages, I really recommend this course.",
     "titleHtml": "Developer"
+  },
+  {
+    "id": "1200",
+    "name": "Ramazan Ayvaz",
+    "img": "ramazan_ayvaz.jpg",
+    "twitter": "ramazanayvaz",
+    "order": 1200,
+    "quoteHtml": "NativeScripting is a great platform for learning NativeScript! There are many high quality video courses. Anyone who wants to develop a Native mobile application with NativeScript must have NativeScripting account. Try free courses to convince yourself.",
+    "titleHtml": "Entrepreneur and Software Engineer"
+  },
+  {
+    "id": "1300",
+    "name": "Emmanuel Oduro",
+    "img": "emmanuel_oduro.jpg",
+    "twitter": "pedmindset",
+    "order": 1300,
+    "quoteHtml": "Being an introduction, it does a good job of clarifying some well know issues for beginners to the nativescript platform.",
+    "titleHtml": "Entrepreneur and Laravel Developer"
+  },
+  {
+    "id": "1400",
+    "name": "Thiago Glauco",
+    "img": "thiago_glauco.jpg",
+    "twitter": "thiago_glauco",
+    "order": 1400,
+    "quoteHtml": "Excelent free course. You will get the basics for build simple but usefull apps and to grow in understanding about NativeScript framework.",
+    "titleHtml": "JavaScript and Angular Developer"
   }
 ]
