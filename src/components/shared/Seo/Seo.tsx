@@ -40,7 +40,7 @@ export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
   } else if (courseSeo) {
     title = course.title;
     description = course.description;
-    image = `/img/illustrations/transparent_bg/${course.url}.svg`;
+    image = `/img/illustrations/png/${course.url}.png`;
     pageUrl = SiteConfig.siteUrl + realPrefix + '/course/' + course.url;
     creator = SiteConfig.userTwitter;
     twitterCard = 'product';
