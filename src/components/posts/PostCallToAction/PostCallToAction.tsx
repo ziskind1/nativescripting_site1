@@ -33,7 +33,7 @@ const PostCallToAction: React.StatelessComponent<ActionButtonProps> = (props: Ac
 
         <div className="post-cta-wrapper">
             <div>
-                <h2>Learn something new. Take control of your career.</h2>
+                <h2>Take control of your career. Build JavaScript mobile apps.</h2>
             </div>
             <div className="post-cta-btn-container">
                 <div className={className}>
