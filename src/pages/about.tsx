@@ -85,9 +85,9 @@ export default class extends React.Component<AboutPageProps, {}> {
 
                 <div className="video-wrapper">
                   <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/3isPtd8Q6rI"
+                    width="640"
+                    height="360"
+                    src="https://player.vimeo.com/video/315803315"
                     frameBorder="0"
                     allowFullScreen
                   />
