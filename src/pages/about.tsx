@@ -87,7 +87,7 @@ export default class extends React.Component<AboutPageProps, {}> {
                   <iframe
                     width="640"
                     height="360"
-                    src="https://player.vimeo.com/video/315803315"
+                    src="https://player.vimeo.com/video/315987685"
                     frameBorder="0"
                     allowFullScreen
                   />
