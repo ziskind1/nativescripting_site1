@@ -3,7 +3,7 @@ path: '/posts/async-await-in-nativescript'
 title: 'Async/Await in NativeScript'
 author: 'alex_ziskind'
 createdDate: '2018-11-03'
-updatedDate: '2018-11-03'
+updatedDate: '2019-02-07'
 draft: false
 tags: ['NativeScript', 'Tips and Tricks', 'Tutorial', 'Video']
 image: async-await-in-nativescript-poster.png
@@ -13,7 +13,7 @@ The mysterious async/await combination has been permeating JavaScriptland the fo
 
 <br/><br/>
 
-Async/await works for either NativeScript Core or NativeScript with Angular, so I'll just demonstrate this using the Angular Hello World template, especially since it already has a service set up that returns items to a component. Just in case, here is the service.
+Async/await works for either NativeScript Core, NativeScript with Angular, or NativeScript-Vue. I'll  demonstrate this using the Angular Hello World template, especially since it already has a service set up that returns items to a component. Just in case, here is the service.
 
 <br/><br/>
 
@@ -26,6 +26,18 @@ You can just watch the video tip that shows how to use async/await in NativeScri
 <div class="videoWrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/fGDLjePyQTU" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<br><br>
+
+
+UPDATE: A few of you asked me about a NativeScript-Vue version of this video tutorial. Here is the update with the Vue version:
+
+<br/><br/>
+
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FQmdB5P1iYw" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 <br><br>
 
