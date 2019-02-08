@@ -156,9 +156,20 @@ And your single file Vue components have a code block that specifies TypeScript 
 
 ## Finally, with TypeScript AND Class Components
 
-Out of the box, the new nativescript-vue cli template creates function-based TypeScript components. If you want to get Class Components AND TypeScript, there are a few manual steps you need to perform. Hopefully these will be rolled into the template too at some point.
+If you are coming from an Angular background, then you'll feel right at home with class-based components with decorators. This is the next logical step to take after switching to using TypeScript and a natural one for Angular devs.
+
+<br/>
+
+Why use class components? Simple - the syntax is cleaner. Class properties are automatically data properties. No need for strange functional syntax returned by the data property, **and** you don't have to worry about `this`.
+
+<br/>
+
 
 ### Step 1
+
+Out of the box, the new nativescript-vue cli template creates function-based TypeScript components. If you want to get Class Components AND TypeScript, there are a few manual steps you need to perform. Hopefully these will be rolled into the template too at some point.
+
+<br/>
 
 In your project's `package.json` file, add the following dependencies to support Vue class components and and decorators:
 
