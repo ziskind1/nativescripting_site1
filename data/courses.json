@@ -4457,37 +4457,37 @@
             "chapterId": 70,
             "id": "8801161",
             "name": "Domain Setup",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 70,
             "id": "8801160",
             "name": "Registration",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 70,
             "id": "8801162",
             "name": "Configuration",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 70,
             "id": "8801163",
             "name": "Authorizing",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 70,
             "id": "8801165",
             "name": "Activating Provider",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 70,
             "id": "8801164",
             "name": "Auth0 as Identity Provider",
-            "isPreview": false
+            "isPreview": true
           }
         ]
       },
