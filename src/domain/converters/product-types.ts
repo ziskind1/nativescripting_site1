@@ -1,7 +1,7 @@
-import { products_3 } from '../graphql-types';
+import { Products_3 } from '../graphql-types';
 import { Product } from '../models';
 
-function descriptionLegible(p: products_3) {
+function descriptionLegible(p: Products_3) {
   if (p.licensesMax === 1) {
     return `1 user`;
   } else {
@@ -9,7 +9,7 @@ function descriptionLegible(p: products_3) {
   }
 }
 
-export function productFromProduct_3(p: products_3): Product {
+export function productFromProduct_3(p: Products_3): Product {
   return {
     id: p.id,
     name: p.name,

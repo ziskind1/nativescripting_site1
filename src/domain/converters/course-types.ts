@@ -1,8 +1,18 @@
 import { defaultArray } from '../core';
-import { CoursesJsonEdge, CoursesJson } from '../graphql-types';
+import {
+  CoursesJsonEdge,
+  CoursesJson,
+  DescriptionHtmlSections_2
+} from '../graphql-types';
 import { productFromProduct_3 } from './product-types';
 import { chapterFromChapter_2 } from './chapter-types';
-import { Course, asCourseLevel, Author, asCourseFlavorType } from '../models';
+import {
+  Course,
+  asCourseLevel,
+  Author,
+  asCourseFlavorType,
+  DescriptionHtmlSection
+} from '../models';
 import { publishingScheduleItemFromPublishingSchdule_2 } from './publishing-schedule-types';
 
 export function courseFromCoursesJsonEdge(
@@ -22,6 +32,9 @@ export function coursefromCoursesJson(
     title: c.title,
     subtitle: c.subtitle,
     description: c.description,
+    descriptionHtmlSections: defaultArray(c.descriptionHtmlSections).map(
+      descriptionHtmlSectionFromDescriptionHtmlSection_2
+    ),
     notes: c.notes,
     level: asCourseLevel(c.level),
     url: c.url,
@@ -56,4 +69,13 @@ function numberCourseLessons(course: Course): void {
       course.chapters[i1].lessons[j1].lessonNumber = lessonCount;
     }
   }
+}
+
+export function descriptionHtmlSectionFromDescriptionHtmlSection_2(
+  s: DescriptionHtmlSections_2
+): DescriptionHtmlSection {
+  return {
+    title: s.title,
+    descriptionHtml: s.descriptionHtml
+  };
 }

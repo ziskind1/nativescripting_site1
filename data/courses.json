@@ -2281,7 +2281,17 @@
     "subtitle": "The complete course for developing NativeScript with Angular mobile applications for iOS and Android.",
     "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications.\n\n\n",
     "notes": [
-      "This course is live with evergreen content being added all the time"
+      "This course is live with evergreen content being added all the time. When you purchase the course, you get unlimited free updates - forever."
+    ],
+    "descriptionHtmlSections": [
+      {
+        "title": "Summary",
+        "descriptionHtml": "<p>This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications, using the NativeScript framework with Angular.</p>"
+      },
+      {
+        "title": "What you'll learn",
+        "descriptionHtml": "<p>This course will help you become and expert in cross-platform mobile app development by mastering the advanced topics in NativeScript and Angular. You will use a practical approach to the advanced topics by building an end-to-end mobile application, solving a real-world problem at an enterprise level.</p> <p>You will begin with covering the important features of NativeScript that you might not be aware of, which can make your work easier. Then we'll cover advanced topics like the core concepts, user interface, plugins, templates, performance optimisations, framework modules, etc. You will also cover unit testing, debugging along with advanced CLI workings. And of course, we'll cover deployment to app stores.</p> <p>We'll go into some best practices as well as troubleshooting techniques that will be useful. By the end of the course, you will have upgraded your skills by mastering the advanced topics in NativeScript and will have a skilled advantage to grow in your career.</p>"
+      }
     ],
     "url": "nativescript-with-angular-pro",
     "flavors": ["Angular"],
@@ -3204,7 +3214,19 @@
     "title": "NativeScript Core Pro",
     "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android.",
     "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.\n\n\n",
-    "notes": ["This course is coming soon"],
+    "descriptionHtmlSections": [
+      {
+        "title": "Summary",
+        "descriptionHtml": "<p>This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.</p>"
+      },
+      {
+        "title": "What you'll learn",
+        "descriptionHtml": "<p>This course will help you become and expert in cross-platform mobile app development by mastering the advanced topics in NativeScript. You will use a practical approach to the advanced topics by building an end-to-end mobile application, solving a real-world problem at an enterprise level.</p> <p>You will begin with covering the important features of NativeScript that you might not be aware of, which can make your work easier. Then we'll cover advanced topics like the core concepts, user interface, plugins, templates, performance optimisations, framework modules, etc. You will also cover unit testing, debugging along with advanced CLI workings. And of course, we'll cover deployment to app stores.</p> <p>We'll go into some best practices as well as troubleshooting techniques that will be useful. By the end of the course, you will have upgraded your skills by mastering the advanced topics in NativeScript and will have a skilled advantage to grow in your career.</p>"
+      }
+    ],
+    "notes": [
+      "This course is available now at pre-sale pricing. Many of the chapters are already released and ready to watch, with new chapters being released continuously."
+    ],
     "url": "nativescript-core-pro",
     "flavors": ["Core"],
     "level": 3,

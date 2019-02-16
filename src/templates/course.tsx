@@ -111,6 +111,28 @@ class CourseTemplate extends React.Component<
 
     const pageTitle = `${course.title} | NativeScripting`;
 
+    let descHtml = (
+      <div>
+        <h2>What you'll learn</h2>
+        <p>{course.description}</p>
+      </div>
+    );
+
+    if (
+      course.descriptionHtmlSections &&
+      course.descriptionHtmlSections.length > 0
+    ) {
+      const descSections = course.descriptionHtmlSections.map((s, i) => {
+        return (
+          <div key={i}>
+            <h2>{s.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: s.descriptionHtml }} />
+          </div>
+        );
+      });
+      descHtml = <div>{descSections}</div>;
+    }
+
     return (
       <MainLayout>
         <Seo course={course} courseSeo />
@@ -139,8 +161,8 @@ class CourseTemplate extends React.Component<
             </div>
 
             <div className="course-description-wrapper">
-              <h2>What you'll learn</h2>
-              <p>{course.description}</p>
+              {descHtml}
+
               {notesHeader}
               {notesHtml}
             </div>
@@ -251,6 +273,10 @@ export const coursePageQuery = graphql`
       title
       subtitle
       description
+      descriptionHtmlSections {
+        title
+        descriptionHtml
+      }
       notes
       url
       flavors

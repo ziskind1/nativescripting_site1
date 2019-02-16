@@ -1,11 +1,12 @@
 /* tslint:disable no-var-requires */
 /* tslint:disable no-console */
 
-import * as React from "react";
-import Helmet from "react-helmet";
+import * as React from 'react';
+import Helmet from 'react-helmet';
 
 // Load production style
 let styles: string;
+/*
 if (process.env.NODE_ENV === `production`) {
   try {
     styles = require("!raw-loader!../public/styles.css");
@@ -13,8 +14,9 @@ if (process.env.NODE_ENV === `production`) {
     console.log(err);
   }
 }
+*/
 
-styles = require("!raw-loader!./css/styles.css");
+styles = require('!raw-loader!./css/styles.css');
 
 interface HtmlProps {
   body: any;
@@ -108,7 +110,6 @@ export default class extends React.Component<HtmlProps, void> {
                             `
             }}
           />
-
         </body>
       </html>
     );

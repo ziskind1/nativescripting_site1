@@ -5,11 +5,17 @@ import { CourseLevel } from './course-level.model';
 import { CourseFlavorType } from './course-flavor.model';
 import { PublishingScheduleItem } from './publishing-schedule-item.model';
 
+export interface DescriptionHtmlSection {
+  title: string;
+  descriptionHtml: string;
+}
+
 export interface Course {
   id: string;
   title: string;
   subtitle: string;
   description: string;
+  descriptionHtmlSections: DescriptionHtmlSection[];
   notes: string[];
   url: string;
   flavors: CourseFlavorType[];
