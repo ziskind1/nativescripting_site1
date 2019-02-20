@@ -35,6 +35,7 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
+import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -57,7 +58,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-> {
+  > {
   constructor(props: CourseTemplateProps) {
     super(props);
 
@@ -75,6 +76,18 @@ class CourseTemplate extends React.Component<
         bundleFromBundlesJsonEdge(b, courses)
       )
     };
+  }
+
+  public componentDidMount() {
+    this.mountAddThis();
+  }
+
+  private mountAddThis() {
+    const script = document.createElement("script");
+    script.src =
+      `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
+    script.async = true;
+    document.body.appendChild(script);
   }
 
   private getNotesHtml(notes: string[]): JSX.Element {
@@ -174,6 +187,9 @@ class CourseTemplate extends React.Component<
             <BundleSection bundles={this.state.bundles} />
 
             <SignUpSection />
+
+            <AddThisBlock />
+
           </div>
         </div>
       </MainLayout>

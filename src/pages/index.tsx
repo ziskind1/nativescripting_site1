@@ -70,6 +70,18 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
     };
   }
 
+  public componentDidMount() {
+    this.mountAddThis();
+  }
+
+  private mountAddThis() {
+    const script = document.createElement("script");
+    script.src =
+      `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
   private freeCoursesSelected() {
     this.setState({ selectedFilterType: 'Free' }, () => {
       this.scrollToElementById('courses');
