@@ -6,6 +6,7 @@ let Image = require('gatsby-image').default;
 import { Post } from '../../../domain/models/posts/post.model';
 import { getAuthorImgSrc } from '../../../utils/urls';
 import PostCallToAction from '../PostCallToAction/PostCallToAction';
+import AddThisBlock from '../../shared/AddThisBlock/AddThisBlock';
 
 interface PostEntryProps {
   post: Post;
@@ -92,6 +93,12 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
           <div>
             <i>{post.author.bio}</i>
           </div>
+
+          <div style={{ textAlign: 'center', marginTop: 50, marginBottom: 50 }}>
+            <h2 className="text-header">Did you enjoy this? Share it!</h2>
+            <AddThisBlock />
+          </div>
+
           <div className="post-comments-wrapper">
             <DiscussionEmbed
               shortname={disqusShortname}

@@ -26,56 +26,80 @@ interface PostPageProps {
   };
 }
 
-const PostTemplate: React.StatelessComponent<PostPageProps> = (
-  props: PostPageProps
-) => {
-  const authors = props.data.authorsConnection.edges.map(
-    authorFromAuthorsJsonEdge
-  );
+class PostTemplate extends React.Component<
+  PostPageProps,
+  any
+  > {
 
-  const post = postFromMarkdownRemark(props.data.mdRemark, authors);
+  constructor(props: PostPageProps) {
+    super(props);
+  }
 
-  const breadCrumbs = [
-    { name: 'Courses', url: '/' },
-    { name: 'Posts', url: '/posts' },
-    { name: 'Current post', url: '' }
-  ];
+  public componentDidMount() {
+    this.mountAddThis();
+  }
 
-  const pageTitle = `${post.title} | NativeScripting`;
+  private mountAddThis() {
+    const script = document.createElement("script");
+    script.src =
+      `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
+    script.async = true;
+    document.body.appendChild(script);
+  }
 
-  const postPrev = postFromMarkdownRemark(props.data.mdRemarkPrev, authors);
-  const postNext = postFromMarkdownRemark(props.data.mdRemarkNext, authors);
+  public render() {
+    const authors = this.props.data.authorsConnection.edges.map(
+      authorFromAuthorsJsonEdge
+    );
 
-  return (
-    <MainLayout>
-      <Seo postNode={props.data.mdRemark} post={post} postSeo />
-      <Helmet>
-        <title>{pageTitle}</title>
-      </Helmet>
+    const post = postFromMarkdownRemark(this.props.data.mdRemark, authors);
 
-      <CountdownTimer />
+    const breadCrumbs = [
+      { name: 'Courses', url: '/' },
+      { name: 'Posts', url: '/posts' },
+      { name: 'Current post', url: '' }
+    ];
 
-      <div className="wrapper">
-        <div className="breadcrumb-wrapper">
-          <BreadCrumbs breadcrumbs={breadCrumbs} />
+    const pageTitle = `${post.title} | NativeScripting`;
+
+    const postPrev = postFromMarkdownRemark(this.props.data.mdRemarkPrev, authors);
+    const postNext = postFromMarkdownRemark(this.props.data.mdRemarkNext, authors);
+
+    return (
+      <MainLayout>
+        <Seo postNode={this.props.data.mdRemark} post={post} postSeo />
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
+
+        <CountdownTimer />
+
+        <div className="wrapper">
+          <div className="breadcrumb-wrapper">
+            <BreadCrumbs breadcrumbs={breadCrumbs} />
+          </div>
         </div>
-      </div>
 
-      <PostEntry post={post} />
+        <PostEntry post={post} />
 
-      <div className="wrapper">
-        <div className="post-nav-container">
-          <PostNavToPost prefix="Previous" post={postPrev} />
-          <PostNavToPost prefix="Next" post={postNext} />
+
+
+        <div className="wrapper">
+          <div className="post-nav-container">
+            <PostNavToPost prefix="Previous" post={postPrev} />
+            <PostNavToPost prefix="Next" post={postNext} />
+          </div>
         </div>
-      </div>
 
-      <SignUpSection />
 
-      <AddThisBlock />
-    </MainLayout>
-  );
-};
+        <SignUpSection />
+
+
+
+      </MainLayout>
+    );
+  }
+}
 
 export const query = graphql`
   query BlogPostQuery(
