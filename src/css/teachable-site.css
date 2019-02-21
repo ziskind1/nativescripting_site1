@@ -602,13 +602,20 @@ h5.comments__heading {
   .comments__block--awaiting_review
   .comments__block-box
   .comment-arrow-border
+  .comment-arrow,
+.comments
+  .comments__wrapper
+  .comments__block--approved
+  .comments__block-box
+  .comment-arrow-border
   .comment-arrow {
   border: none;
 }
 .comments
   .comments__wrapper
   .comments__block--awaiting_review
-  .comments__block-box {
+  .comments__block-box,
+.comments .comments__wrapper .comments__block--approved .comments__block-box {
   border: none;
   background-color: #052d6f;
 }
@@ -639,6 +646,11 @@ h5.comments__heading {
 .comments
   .comments__wrapper
   .comments__block--awaiting_review
+  .comments__block-box
+  .comment-arrow-border,
+.comments
+  .comments__wrapper
+  .comments__block--approved
   .comments__block-box
   .comment-arrow-border {
   border-right-color: #052d6f;
