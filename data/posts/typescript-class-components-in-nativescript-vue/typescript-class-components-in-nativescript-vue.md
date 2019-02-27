@@ -3,7 +3,7 @@ path: '/posts/typescript-class-components-in-nativescript-vue'
 title: 'TypeScript and Class Components in NativeScript-Vue'
 author: 'alex_ziskind'
 createdDate: '2019-02-04'
-updatedDate: '2019-02-04'
+updatedDate: '2019-02-26'
 draft: false
 tags: ['NativeScript', 'Tips and Tricks', 'TypeScript', 'Video']
 image: typescript-class-components-in-nativescript-vue-poster.png
@@ -16,6 +16,20 @@ The time that we've all been waiting for has finally come. Ok, maybe the time th
 ## Big News
 
 NativeScript-Vue finally got TypeScript support! Here is the [pull request](https://github.com/nativescript-vue/vue-cli-template/pull/121) by [Manuel Saelices](https://twitter.com/linator) that made it possible.
+
+<br/>
+
+<div style="background-color: #b5d1ff; padding: 10px;margin:30px;">
+
+<h3>UPDATE:</h3>
+
+This news is still news, but within the same month that we got yet another update: NativeScript-Vue is now officially supported. You can read this post, or you can just [skip right to the new announcement](https://nativescripting.com/posts/nativescript-vue-class-components-examined).
+
+<h3>CAUTION:</h3>
+
+One word of caution: as of this moment, you **cannot** create a NativeScript-Vue project with TypeScript using the NativeScript-CLI. Hopefully this will be implemented soon. So this post still applies for those folks that want to use TypeScript in their NativeScript-Vue apps.
+
+</div>
 
 <br/>
 
@@ -34,6 +48,12 @@ If you like videos instead, watch this one to get all the info about NativeScrip
 <br><br>
 
 ## First, There is No NativeScript-Vue
+
+<div style="background-color: #b5d1ff; padding: 5px;margin:10px;">
+
+> There is now 😃, but with a caution. see the note above.
+
+</div>
 
 Before diving into the TypeScript options, here is just a quick intro to how NativeScript-Vue works. If you want to get to the TypeScript part ASAP, go to the next section.
 
@@ -55,7 +75,7 @@ To work NativeScript-Vue needs:
 
 <br/>
 
-- ⚫ Vue CLI (2.x or higher) 
+- ⚫ Vue CLI (2.x or higher)
 - ⚫ The vue cli-init package
 - ⚫ The nativescript-vue/vue-cli-template
 - ⚫ All the latest [NativeScript bits and pieces](https://docs.nativescript.org/angular/start/quick-setup)
@@ -82,7 +102,7 @@ Boom! You're done!
 
 <br/>
 
-I ALWAYS forget this, please don't: Make sure that when you run your app on the  iOS or Android emulator or device, please, please, please remember to use the `--bundle` flag. Otherwise you'll be scratching your head and creating a bald spot, like me.
+I ALWAYS forget this, please don't: Make sure that when you run your app on the iOS or Android emulator or device, please, please, please remember to use the `--bundle` flag. Otherwise you'll be scratching your head and creating a bald spot, like me.
 
 ```
 tns run ios --bundle
@@ -108,8 +128,7 @@ When you run the Vue CLI command as I've shown above, you get an interactive wiz
 
 <br/>
 
-The one you want. Scratch that. The one you NEED is: 
-
+The one you want. Scratch that. The one you NEED is:
 
 ```
 - Select the programming language
@@ -124,7 +143,6 @@ The one you want. Scratch that. The one you NEED is:
 This will create a new NativeScript project, with the proper packages in the package.json file, a properly configured `tsconfig.json`, and here's the big one: a properly comfigured `webpack.config.js` file. There is also a `types` folder that has extra TypeScript declarations for the environment, Vue shims, and nativescript platform references.
 
 <br/>
-
 
 ![screenshot](./images/folders.png)
 
@@ -150,7 +168,7 @@ And your single file Vue components have a code block that specifies TypeScript 
 
 <br/>
 
- By the way, you can omit this lang attribute and just write plain JavaScript here if you want. This is useful for projects that are transitioning from JavaScript to TypeScript, for example.
+By the way, you can omit this lang attribute and just write plain JavaScript here if you want. This is useful for projects that are transitioning from JavaScript to TypeScript, for example.
 
 <br/>
 
@@ -163,7 +181,6 @@ If you are coming from an Angular background, then you'll feel right at home wit
 Why use class components? Simple - the syntax is cleaner. Class properties are automatically data properties. No need for strange functional syntax returned by the data property, **and** you don't have to worry about `this`.
 
 <br/>
-
 
 ### Step 1
 
@@ -184,7 +201,7 @@ In your project's `package.json` file, add the following dependencies to support
 
 Run `npm install`
 
-### Step 2 
+### Step 2
 
 You can start using Class Components right away.
 Create a single file component file, let's call it `MyComp.vue` and add this code:
@@ -205,7 +222,6 @@ export default class MyComp extends Vue {
 
 Notice instead of the default export being a function, here we're exporting a class. And instead of importing `Vue` from `vue`, we're importing it from `vue-property-decorator`.
 Don't forget the `@Component` decorator on the class.
-
 
 <br/><br/>
 
