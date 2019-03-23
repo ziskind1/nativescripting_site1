@@ -3,6 +3,9 @@ import { DiscussionEmbed } from 'disqus-react';
 import styled from 'styled-components';
 
 let Image = require('gatsby-image').default;
+
+import * as config from '../../../../config/SiteConfig';
+
 import { Post } from '../../../domain/models/posts/post.model';
 import { getAuthorImgSrc } from '../../../utils/urls';
 import PostCallToAction from '../PostCallToAction/PostCallToAction';
@@ -39,8 +42,11 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
     padding: 0 5px 0 5px;
 `;
 
+  debugger;
+
   const disqusShortname = 'nativescripting';
   const disqusConfig = {
+    url: config.default.siteUrl + post.path,
     identifier: post.path,
     title: post.title
   };
