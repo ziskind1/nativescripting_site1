@@ -434,7 +434,9 @@ You might also like the following animation tutorial on creating a custom action
 
 <br>
 
-EMBEDDED VIDEO: https://youtu.be/k6v4VQwGdnQ
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/k6v4VQwGdnQ" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <br>
 
