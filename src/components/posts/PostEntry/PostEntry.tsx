@@ -42,8 +42,6 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
     padding: 0 5px 0 5px;
 `;
 
-  debugger;
-
   const disqusShortname = 'nativescripting';
   const disqusConfig = {
     url: config.default.siteUrl + post.path,
