@@ -17,6 +17,12 @@
   margin: 0 auto;
 }
 
+.post-inner blockquote {
+  background: rgba(60,187,176,.2);
+    padding: 30px;
+    margin-top: 20px;
+}
+
 .post-entry-container .post-meta-author-img-wrapper img {
   height: 60px;
   border-radius: 30px;
