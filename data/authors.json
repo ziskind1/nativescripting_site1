@@ -8,7 +8,10 @@
     "title": "NativeScript Trainer",
     "twitter": "pwhsoftware",
     "github": "PaulHalliday",
-    "types": ["course", "post"]
+    "types": [
+      "course",
+      "post"
+    ]
   },
   {
     "id": "nathan_walker",
@@ -19,7 +22,9 @@
     "title": "NativeScript Trainer",
     "twitter": "wwwalkerrun",
     "github": "NathanWalker",
-    "types": ["course"]
+    "types": [
+      "course"
+    ]
   },
   {
     "id": "sean_perkins",
@@ -30,7 +35,10 @@
     "title": "NativeScript Trainer",
     "twitter": "seanfperkins",
     "github": "sean-perkins",
-    "types": ["course", "post"]
+    "types": [
+      "course",
+      "post"
+    ]
   },
   {
     "id": "eddy_verbruggen",
@@ -41,7 +49,10 @@
     "title": "NativeScript Trainer",
     "twitter": "eddyverbruggen",
     "github": "eddyverbruggen",
-    "types": ["course", "post"]
+    "types": [
+      "course",
+      "post"
+    ]
   },
   {
     "id": "shiva_prasad",
@@ -52,7 +63,22 @@
     "title": "NativeScript Expert",
     "twitter": "multishiv19",
     "github": "shiv19",
-    "types": ["post"]
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "tiago_alves",
+    "name": "Tiago Alves",
+    "picture": "tiago_alves.png",
+    "bio": "Tiago is a NativeScript-Vue contributer and enthusiastic developer. He's also a speaker and community leader.",
+    "biolong": "Over the last 15 years in the development business, Tiago did a bit of everything until finally landing in the soft arms of Vue.js. He is very excited with the possibility of using Vue with NativeScript and so he has been helping with the nativescript-vue community effort for some time.",
+    "title": "NativeScript Vue Guru",
+    "twitter": "tiagoreisalves",
+    "github": "tralves",
+    "types": [
+      "post"
+    ]
   },
   {
     "id": "royi_namir",
@@ -63,7 +89,9 @@
     "title": "Fullstack Programmer",
     "twitter": "Royi_Namir",
     "github": "RoyiNamir",
-    "types": ["post"]
+    "types": [
+      "post"
+    ]
   },
   {
     "id": "alex_ziskind",
@@ -74,6 +102,9 @@
     "title": "Trainer and Owner",
     "twitter": "digitalix",
     "github": "alexziskind1",
-    "types": ["course", "post"]
+    "types": [
+      "course",
+      "post"
+    ]
   }
 ]
