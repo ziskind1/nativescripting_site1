@@ -51,7 +51,7 @@
     "twitter": "jenlooper",
     "order": 100,
     "quoteHtml": "Alex, affectionately known as the Voice of NativeScript, produces high quality video content that effectively teaches the ins and outs of NativeScript, walking students through the complexities of building mobile apps. These videos teach both NativeScript with Angular and NativeScript Core, offering two great ways to build beautiful apps.",
-    "titleHtml": "Sr. DevRel @ ProgressSW and Google Developer Expert"
+    "titleHtml": "Lead Dev Advocate @Microsoft, Founder and CEO of Vue Vixens"
   },
   {
     "id": "700",
@@ -133,5 +133,59 @@
     "order": 1400,
     "quoteHtml": "Excelent free course. You will get the basics for build simple but usefull apps and to grow in understanding about NativeScript framework.",
     "titleHtml": "JavaScript and Angular Developer"
+  },
+  {
+    "id": "1500",
+    "name": "Vahid Najafi",
+    "img": "vahid_najafi.jpg",
+    "twitter": "vahidvdn",
+    "order": 1500,
+    "quoteHtml": "NativeScripting provides a wide range of courses, from basic to advanced concepts and from the core framework to Angular and Vue. That's why there is no need for other resources. Highly recommended.",
+    "titleHtml": "Co-founder @ Sazmand, Backend and Frontend Developer"
+  },
+  {
+    "id": "1600",
+    "name": "Kelvin O. Omereshone",
+    "img": "kelvin_omereshone.jpg",
+    "twitter": "dominus_kelvin",
+    "order": 1600,
+    "quoteHtml": "This course is amazing. I was already fumbling in creating my first NativeScript iOS app but this course helped set me up straight. It's awesome. Really detailed and thorough. I could sense an high level of know-how from the author.",
+    "titleHtml": "Software developer 🥑. Modern Mobile Web Developer."
+  },
+  {
+    "id": "1700",
+    "name": "Ruggiero Marco Paolillo",
+    "img": "ruggiero_marco_paolillo.jpg",
+    "twitter": "",
+    "order": 1700,
+    "quoteHtml": "The Vue NativeScript introductory course is treated without unnecessary technical details. That allows you to be productive from day one. ",
+    "titleHtml": "IT Consultant"
+  },
+  {
+    "id": "1800",
+    "name": "Sushan Baskota",
+    "img": "sushan_baskota.jpg",
+    "twitter": "baskota_sushan",
+    "order": 1800,
+    "quoteHtml": "Course is short, very concise with very good narration and teaching by Alex. Great for starters on NativeScript. Has coverage on a range of topics needed for creating full production cross platform application. I had already started creating my startup idea.",
+    "titleHtml": "Full Stack Java and Angular Developer."
+  },
+  {
+    "id": "1900",
+    "name": "Helio Silva",
+    "img": "helio_silva.jpg",
+    "twitter": "muktharrox",
+    "order": 1900,
+    "quoteHtml": "One of the best courses I've ever done, simple, objective and practical. Congratulations to the NativeScript team.",
+    "titleHtml": "Software Developer"
+  },
+  {
+    "id": "2000",
+    "name": "Chris Custer",
+    "img": "chris_custer.jpg",
+    "twitter": "",
+    "order": 2000,
+    "quoteHtml": "Please, if you are new to NativeScript this course is perfect. No nonsense at all. It is straight to the point and the instructor is awesome. The production of the course is fantastic. It is not often I find a course is this well put together.",
+    "titleHtml": "Software Architect/Developer by day. RC Helicopter enthusiast by nights and weekend."
   }
 ]
