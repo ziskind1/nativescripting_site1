@@ -30,7 +30,7 @@ You can just watch the video tip that shows how to use async/await in NativeScri
 <br><br>
 
 
-UPDATE: A few of you asked me about a NativeScript-Vue version of this video tutorial. Here is the update with the Vue version:
+> UPDATE: A few of you asked me about a NativeScript-Vue version of this video tutorial. Here is the update with the Vue version:
 
 <br/><br/>
 
@@ -38,6 +38,15 @@ UPDATE: A few of you asked me about a NativeScript-Vue version of this video tut
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FQmdB5P1iYw" frameborder="0" allowfullscreen></iframe>
 </div>
 
+<br/><br/>
+
+> ANOTHER UPDATE: NativeScript supports async/await now out of the box. You can still use the Angular and Vue videos above for more complex examples, but for a really simple example that also doesn't require the extra async/await function code, check out this video:
+
+<br/><br/>
+
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9F0sRJQYR9k" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <br><br>
 
