@@ -66,10 +66,11 @@
 
 .timer-part-number {
   font-size: 24px;
+  font-weight: 900;
   line-height: 28px;
   padding: 0px;
   margin: 0px;
-  color: #12ffcd;
+  color: #032e74;
 }
 
 .timer-parts-list li span {
