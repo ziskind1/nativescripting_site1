@@ -20,7 +20,7 @@ function Hero() {
                     </p>
 
                     <p className="bundle-notice">
-                        Get ultra-discounted <a onClick={() => goToSpecials()}>course bundles</a> for a limited time.
+                        Complete your knowledge with <a onClick={() => goToSpecials()}>course bundles</a>.
                     </p>
                 </div>
             </div>
