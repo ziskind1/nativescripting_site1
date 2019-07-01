@@ -55,7 +55,12 @@
         "licensesMax": 40
       }
     ],
-    "courseIds": ["169856", "169916", "171149", "171151"]
+    "courseIds": [
+      "169856",
+      "169916",
+      "171149",
+      "171151"
+    ]
   },
   {
     "id": "171486",
@@ -64,7 +69,7 @@
     "description": "\n",
     "url": "nativescript-core-master-bundle",
     "promototal": 100,
-    "promoremaining": 7,
+    "promoremaining": 6,
     "bundleLevel": 3,
     "products": [
       {
@@ -113,6 +118,10 @@
         "licensesMax": 40
       }
     ],
-    "courseIds": ["171132", "171131", "171152"]
+    "courseIds": [
+      "171132",
+      "171131",
+      "171152"
+    ]
   }
 ]
