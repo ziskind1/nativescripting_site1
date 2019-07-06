@@ -10,6 +10,18 @@ image: cradle-tab-bar-poster.png
 ---
 
 In this tutorial, you'll learn how to create a bottom navigation bar with a cradle like effect that can be either dragged or clicked.
+<br/>
+<br/>
+
+The final result will look something like this..
+
+<br/>
+<br/>
+
+![Cradle Tab Bar](ns-cradletabbar.gif)
+
+<br/>
+<br/>
 
 ## Getting Started
 
