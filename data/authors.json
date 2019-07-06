@@ -55,6 +55,19 @@
     ]
   },
   {
+    "id": "william_tjondrosuharto",
+    "name": "William TjondroSuharto",
+    "picture": "william_tjondrosuharto.png",
+    "bio": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "biolong": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "title": "Nativescript Ambassador",
+    "twitter": "williamjuan27",
+    "github": "williamjuan027",
+    "types": [
+      "post"
+    ]
+  },
+  {
     "id": "shiva_prasad",
     "name": "Shiva Prasad",
     "picture": "shiva_prasad.png",
