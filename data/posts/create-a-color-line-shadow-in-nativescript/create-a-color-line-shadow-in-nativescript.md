@@ -4,7 +4,7 @@ title: 'Create a Color Line Shadow in NativeScript'
 author: 'alex_ziskind'
 createdDate: '2019-07-15'
 updatedDate: '2019-07-15'
-draft: true
+draft: false
 tags: ['NativeScript', 'Tutorial', 'Video']
 image: color-line-shadow-poster.png
 ---
