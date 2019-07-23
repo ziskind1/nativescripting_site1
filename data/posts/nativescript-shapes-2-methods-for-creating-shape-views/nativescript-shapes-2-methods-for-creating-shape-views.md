@@ -2,9 +2,9 @@
 path: '/posts/nativescript-shapes-2-methods-for-creating-shape-views'
 title: '2 Methods for Creating Shapes in NativeScript'
 author: 'alex_ziskind'
-createdDate: '2019-07-08'
-updatedDate: '2019-07-08'
-draft: true
+createdDate: '2019-07-22'
+updatedDate: '2019-07-22'
+draft: false
 tags: ['NativeScript', 'Tutorial', 'Video']
 image: shapes-poster.png
 ---
