@@ -2,8 +2,8 @@
 path: '/posts/snapping-stepper-tutorial'
 title: 'How to Create a Snapping Stepper in Nativescript'
 author: 'william_tjondrosuharto'
-createdDate: '2019-08-02'
-updatedDate: '2019-08-02'
+createdDate: '2019-08-05'
+updatedDate: '2019-08-05'
 draft: false
 tags: ['NativeScript', 'Tutorial']
 image: snapping-stepper-poster.png
