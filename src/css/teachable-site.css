@@ -601,6 +601,16 @@ color: #032e74;
   border: none;
 }
 
+.lecture-content .lecture-attachment .attachment {
+  background-color: #052D6F;
+  margin: 0px;
+  font-size: 14px;
+  padding: 6px 13px;
+  line-height: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid #12ffcd;
+}
+
 
 /* WORKSHOP START */
 
