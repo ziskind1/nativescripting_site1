@@ -3595,7 +3595,8 @@
       50,
       60,
       70,
-      80
+      80,
+      90
     ],
     "chapters": [
       {
@@ -3617,7 +3618,7 @@
           {
             "chapterId": 10,
             "id": "2573814",
-            "name": "Using the Exercise Files (0:37)",
+            "name": "Using the Exercise Files (0:34)",
             "isPreview": false
           },
           {
@@ -3636,7 +3637,7 @@
       },
       {
         "id": 20,
-        "name": "Getting Started",
+        "name": "Tooling",
         "lessons": [
           {
             "chapterId": 20,
@@ -3647,25 +3648,31 @@
           {
             "chapterId": 20,
             "id": "5275501",
-            "name": "Native Platform Declarations (6:43)",
+            "name": "Accessing the Native Platform (7:11)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "5275507",
-            "name": "Project Dependencies (2:58)",
+            "name": "Project Dependencies (2:44)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "5275512",
-            "name": "Editor Cleanup and Debugging (4:09)",
+            "name": "Keeping a Clean Workspace (3:12)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "11290622",
+            "name": "Debugging Options (4:22)",
             "isPreview": false
           },
           {
             "chapterId": 20,
             "id": "5275523",
-            "name": "Configuring Linting (6:07)",
+            "name": "Configuring Linting (7:39)",
             "isPreview": false
           },
           {
@@ -3695,7 +3702,7 @@
           {
             "chapterId": 30,
             "id": "5275601",
-            "name": "Consuming the API (7:22)",
+            "name": "Consuming the API Using the Fetch Polyfill (7:22)",
             "isPreview": false
           }
         ]
@@ -3719,19 +3726,25 @@
           {
             "chapterId": 40,
             "id": "2573820",
-            "name": "Bootstrapping (5:36)",
+            "name": "Bootstrapping with Authentication in Mind (5:21)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "11290666",
+            "name": "Application Multi-Environment Configuration (8:06)",
             "isPreview": false
           },
           {
             "chapterId": 40,
             "id": "2573822",
-            "name": "Application Configuration (8:23)",
+            "name": "Application Configuration via Command Line (7:27)",
             "isPreview": false
           },
           {
             "chapterId": 40,
             "id": "5275611",
-            "name": "Life Cycle Platform Differences (5:09)",
+            "name": "Application Life Cycle Platform Differences (5:09)",
             "isPreview": false
           },
           {
@@ -3749,7 +3762,7 @@
           {
             "chapterId": 50,
             "id": "5276010",
-            "name": "Overview (1:56)",
+            "name": "Overview (1:55)",
             "isPreview": true
           },
           {
@@ -3761,7 +3774,7 @@
           {
             "chapterId": 50,
             "id": "5276016",
-            "name": "Applying MVVM: The View (8:09)",
+            "name": "MVVM View Responsibilities (8:04)",
             "isPreview": false
           },
           {
@@ -3779,19 +3792,19 @@
           {
             "chapterId": 50,
             "id": "5276019",
-            "name": "Clean Architecture: Core (9:45)",
+            "name": "Applying Clean Architecture to Core (9:45)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276020",
-            "name": "Clean Architecture: Infrastructure (5:44)",
+            "name": "Applying Clean Architecture to Infrastructure (5:44)",
             "isPreview": false
           },
           {
             "chapterId": 50,
             "id": "5276021",
-            "name": "All Together Now (9:59)",
+            "name": "Auth Flow Business Logic: Injecting Repositories and Services (9:59)",
             "isPreview": false
           },
           {
@@ -3804,6 +3817,12 @@
             "chapterId": 50,
             "id": "5276023",
             "name": "Adding Dependencies: Logging (3:38)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "11290765",
+            "name": "Observable Property Decorator (5:04)",
             "isPreview": false
           }
         ]
@@ -3833,7 +3852,7 @@
           {
             "chapterId": 60,
             "id": "6239508",
-            "name": "App State Service (5:47)",
+            "name": "App State Service (5:54)",
             "isPreview": false
           },
           {
@@ -3863,7 +3882,7 @@
           {
             "chapterId": 60,
             "id": "6239513",
-            "name": "Using App State (6:19)",
+            "name": "Using App State (6:38)",
             "isPreview": false
           },
           {
@@ -3875,7 +3894,7 @@
           {
             "chapterId": 60,
             "id": "6239511",
-            "name": "Expanding the State Object (13:11)",
+            "name": "Expanding the State Object with CurrentUser (13:11)",
             "isPreview": false
           }
         ]
@@ -3899,7 +3918,7 @@
           {
             "chapterId": 70,
             "id": "6469682",
-            "name": "Basic Navigation (3:28)",
+            "name": "Login/Registration Navigation (3:28)",
             "isPreview": false
           },
           {
@@ -3911,7 +3930,7 @@
           {
             "chapterId": 70,
             "id": "6469681",
-            "name": "NavigationEntry (5:51)",
+            "name": "Controlling Login Navigation State and Transition (5:51)",
             "isPreview": false
           },
           {
@@ -3923,7 +3942,7 @@
           {
             "chapterId": 70,
             "id": "6469684",
-            "name": "Back (6:39)",
+            "name": "Controlling Platform Specific Back Navigation (6:39)",
             "isPreview": false
           },
           {
@@ -3937,6 +3956,12 @@
             "id": "6469686",
             "name": "Programmatic Navigation (4:07)",
             "isPreview": false
+          },
+          {
+            "chapterId": 70,
+            "id": "11290783",
+            "name": "Dynamic Page Loading (3:50)",
+            "isPreview": false
           }
         ]
       },
@@ -3947,71 +3972,137 @@
           {
             "chapterId": 80,
             "id": "7011098",
-            "name": "Overview",
+            "name": "Overview (0:54)",
             "isPreview": true
           },
           {
             "chapterId": 80,
             "id": "7011101",
-            "name": "NativeScript UI Intro",
+            "name": "NativeScript UI Intro (2:15)",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "7011099",
-            "name": "Integrating the Side Drawer",
+            "name": "Integrating the Side Drawer (8:43)",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "7011103",
-            "name": "Current Preset State Property",
+            "name": "Application State for Custom Component (6:31)",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "7011102",
-            "name": "Custom Menu Component",
+            "name": "Custom Menu Component (3:24)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "11290796",
+            "name": "Accessing Custom Properties in TypeScript (3:49)",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "7011100",
-            "name": "Custom Component Binding",
+            "name": "Custom Component Binding (4:47)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "11300253",
+            "name": "Building a Custom TabStrip",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "11300265",
+            "name": "Floating Action Button (FAB)",
             "isPreview": false
           }
         ]
       },
       {
         "id": 90,
-        "name": "Testing",
+        "name": "Scalable Modal Dialog Architecture",
         "lessons": [
           {
             "chapterId": 90,
+            "id": "11298441",
+            "name": "Overview (1:16)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 90,
+            "id": "11298443",
+            "name": "Modal Dialog Implementation (9:37)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "11298442",
+            "name": "Reusable Modal Wrappers (4:59)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "11298559",
+            "name": "Scalable and Typed Modal List Picker (6:17)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "11298556",
+            "name": "Specialized List Selection Modal Dialog (7:04)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "11298557",
+            "name": "Nested Modal Pages (5:08)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "11298558",
+            "name": "Navigable Modal Pages with ActionBar (7:09)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 100,
             "id": "2573902",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 90,
+            "chapterId": 100,
             "id": "2573903",
             "name": "Configuring your project",
             "isPreview": false
           },
           {
-            "chapterId": 90,
+            "chapterId": 100,
             "id": "2573904",
             "name": "Creating tests",
             "isPreview": false
           },
           {
-            "chapterId": 90,
+            "chapterId": 100,
             "id": "2573906",
             "name": "Running tests",
             "isPreview": false
           },
           {
-            "chapterId": 90,
+            "chapterId": 100,
             "id": "2573907",
             "name": "Configuring Karma",
             "isPreview": false
@@ -4019,71 +4110,71 @@
         ]
       },
       {
-        "id": 100,
+        "id": 110,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573913",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573916",
             "name": "Configuring WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573917",
             "name": "Bundling with WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573918",
             "name": "Bundling Extra Assets",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573919",
             "name": "Advanced WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573920",
             "name": "iOS Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573921",
             "name": "iOS App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573923",
             "name": "iOS publishing",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573925",
             "name": "Android Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573926",
             "name": "Android App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 110,
             "id": "2573927",
             "name": "Android publishing",
             "isPreview": false
@@ -4091,11 +4182,11 @@
         ]
       },
       {
-        "id": 110,
+        "id": 120,
         "name": "More UI Widgets",
         "lessons": [
           {
-            "chapterId": 110,
+            "chapterId": 120,
             "id": "5275969",
             "name": "Note about UI chapters",
             "isPreview": false
@@ -4103,23 +4194,23 @@
         ]
       },
       {
-        "id": 120,
+        "id": 130,
         "name": "Appendix: Hardware Access",
         "lessons": [
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573889",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573890",
             "name": "Using Location",
             "isPreview": false
           },
           {
-            "chapterId": 120,
+            "chapterId": 130,
             "id": "2573891",
             "name": "Accessing the camera",
             "isPreview": false
@@ -4127,41 +4218,41 @@
         ]
       },
       {
-        "id": 130,
+        "id": 140,
         "name": "Appendix: Tracing and Debugging",
         "lessons": [
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573892",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573893",
             "name": "Setting up tracing",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573894",
             "name": "Using tracing",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573895",
             "name": "Debugging options",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573896",
             "name": "Debugging commands",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 140,
             "id": "2573897",
             "name": "Debugging with Visual Studio Code",
             "isPreview": false
@@ -4169,29 +4260,29 @@
         ]
       },
       {
-        "id": 140,
+        "id": 150,
         "name": "Appendix: Multithreaded Programming",
         "lessons": [
           {
-            "chapterId": 140,
+            "chapterId": 150,
             "id": "2573898",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 150,
             "id": "2573899",
             "name": "Workers API",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 150,
             "id": "2573900",
             "name": "General Guidelines",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 150,
             "id": "2573901",
             "name": "Limitations",
             "isPreview": false
