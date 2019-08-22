@@ -3596,7 +3596,9 @@
       60,
       70,
       80,
-      90
+      90,
+      100,
+      110
     ],
     "chapters": [
       {
@@ -3703,6 +3705,12 @@
             "chapterId": 30,
             "id": "5275601",
             "name": "Consuming the API Using the Fetch Polyfill (7:22)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "id": "11301554",
+            "name": "Running the Completed Backend (1:15)",
             "isPreview": false
           }
         ]
@@ -4014,13 +4022,13 @@
           {
             "chapterId": 80,
             "id": "11300253",
-            "name": "Building a Custom TabStrip",
+            "name": "Building a Custom TabStrip (9:16)",
             "isPreview": false
           },
           {
             "chapterId": 80,
             "id": "11300265",
-            "name": "Floating Action Button (FAB)",
+            "name": "Floating Action Button (FAB) (4:51)",
             "isPreview": false
           }
         ]
@@ -4075,34 +4083,148 @@
       },
       {
         "id": 100,
-        "name": "Testing",
+        "name": "DataForm and Native Editor Modifications",
         "lessons": [
           {
             "chapterId": 100,
+            "id": "11454604",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 100,
+            "id": "11454601",
+            "name": "DataForm Introduction and Setup",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454603",
+            "name": "DataForm Editors",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454602",
+            "name": "DataForm Commit Modes Workflow",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454612",
+            "name": "DataForm Manual Commit Mode",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454611",
+            "name": "Stepper Editor Native Modification Example",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454609",
+            "name": "Segmented Editor Native Modification Example",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454613",
+            "name": "Multiline Editor Native Modification Example",
+            "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "11454610",
+            "name": "Picker Editor Native Modification Example",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 110,
+        "name": "Native UI Control of Status Bar and ListView",
+        "lessons": [
+          {
+            "chapterId": 110,
+            "id": "11454626",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 110,
+            "id": "11454623",
+            "name": "iOS Status Bar Colors",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454625",
+            "name": "Animating the Status Bar on iOS",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454627",
+            "name": "Android Immersive Full Screen Mode",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454638",
+            "name": "Android Status Bar Background Color",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454635",
+            "name": "Animating the Status Bar on Android",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454636",
+            "name": "Detecting ListView Scroll on iOS with the UITableViewDelegate",
+            "isPreview": false
+          },
+          {
+            "chapterId": 110,
+            "id": "11454637",
+            "name": "Detecting ListView Scroll on Android with the OnScrollListener",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 120,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 120,
             "id": "2573902",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 120,
             "id": "2573903",
             "name": "Configuring your project",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 120,
             "id": "2573904",
             "name": "Creating tests",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 120,
             "id": "2573906",
             "name": "Running tests",
             "isPreview": false
           },
           {
-            "chapterId": 100,
+            "chapterId": 120,
             "id": "2573907",
             "name": "Configuring Karma",
             "isPreview": false
@@ -4110,71 +4232,71 @@
         ]
       },
       {
-        "id": 110,
+        "id": 130,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573913",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573916",
             "name": "Configuring WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573917",
             "name": "Bundling with WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573918",
             "name": "Bundling Extra Assets",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573919",
             "name": "Advanced WebPack",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573920",
             "name": "iOS Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573921",
             "name": "iOS App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573923",
             "name": "iOS publishing",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573925",
             "name": "Android Launch screen",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573926",
             "name": "Android App Icons",
             "isPreview": false
           },
           {
-            "chapterId": 110,
+            "chapterId": 130,
             "id": "2573927",
             "name": "Android publishing",
             "isPreview": false
@@ -4182,11 +4304,11 @@
         ]
       },
       {
-        "id": 120,
+        "id": 140,
         "name": "More UI Widgets",
         "lessons": [
           {
-            "chapterId": 120,
+            "chapterId": 140,
             "id": "5275969",
             "name": "Note about UI chapters",
             "isPreview": false
@@ -4194,23 +4316,23 @@
         ]
       },
       {
-        "id": 130,
+        "id": 150,
         "name": "Appendix: Hardware Access",
         "lessons": [
           {
-            "chapterId": 130,
+            "chapterId": 150,
             "id": "2573889",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 150,
             "id": "2573890",
             "name": "Using Location",
             "isPreview": false
           },
           {
-            "chapterId": 130,
+            "chapterId": 150,
             "id": "2573891",
             "name": "Accessing the camera",
             "isPreview": false
@@ -4218,41 +4340,41 @@
         ]
       },
       {
-        "id": 140,
+        "id": 160,
         "name": "Appendix: Tracing and Debugging",
         "lessons": [
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573892",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573893",
             "name": "Setting up tracing",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573894",
             "name": "Using tracing",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573895",
             "name": "Debugging options",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573896",
             "name": "Debugging commands",
             "isPreview": false
           },
           {
-            "chapterId": 140,
+            "chapterId": 160,
             "id": "2573897",
             "name": "Debugging with Visual Studio Code",
             "isPreview": false
@@ -4260,29 +4382,29 @@
         ]
       },
       {
-        "id": 150,
+        "id": 170,
         "name": "Appendix: Multithreaded Programming",
         "lessons": [
           {
-            "chapterId": 150,
+            "chapterId": 170,
             "id": "2573898",
             "name": "Overview",
             "isPreview": false
           },
           {
-            "chapterId": 150,
+            "chapterId": 170,
             "id": "2573899",
             "name": "Workers API",
             "isPreview": false
           },
           {
-            "chapterId": 150,
+            "chapterId": 170,
             "id": "2573900",
             "name": "General Guidelines",
             "isPreview": false
           },
           {
-            "chapterId": 150,
+            "chapterId": 170,
             "id": "2573901",
             "name": "Limitations",
             "isPreview": false
