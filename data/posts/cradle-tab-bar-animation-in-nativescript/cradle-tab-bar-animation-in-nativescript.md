@@ -277,6 +277,10 @@ getUnfocusAnimation(index: number, duration: number) {
     duration: duration
   };
 }
+
+getTabTranslateX(index: number): number {
+  return index * screen.mainScreen.widthDIPs / this.tabList.length - (screen.mainScreen.widthDIPs / 2) + (80 / 2)
+}
 ```
 
 <br/>
@@ -365,3 +369,7 @@ onCenterCirclePan(args: PanGestureEventData): void {
   }
 }
 ```
+
+<br/>
+
+This code and demo are available on my GitHub account in <a href="https://github.com/williamjuan027/nativescript-cradleTabBar" target="_blank">this repo</a>. Ping me on Twitter if you have any ideas on how to make this better!
