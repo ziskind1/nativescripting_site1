@@ -23,7 +23,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
   let posterImage = null;
   if (post.image) {
     posterImage = (
-      <Image sizes={post.image.childImageSharp.sizes} />
+      <Image fluid={post.image.childImageSharp.fluid} />
     );
   }
 

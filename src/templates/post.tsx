@@ -139,7 +139,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            sizes(maxWidth: 1000) {
+            fluid(maxWidth: 1000) {
               base64
               aspectRatio
               src
@@ -165,7 +165,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            sizes(maxWidth: 1000) {
+            fluid(maxWidth: 1000) {
               base64
               aspectRatio
               src
@@ -191,7 +191,7 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            sizes(maxWidth: 1000) {
+            fluid(maxWidth: 1000) {
               base64
               aspectRatio
               src

@@ -25,7 +25,7 @@ export const PostsListEntry: React.StatelessComponent<PostsListEntryProps> = (
         }
     */
   const imgStyle = {
-    backgroundImage: `url(${post.image.childImageSharp.sizes.src})`
+    backgroundImage: `url(${post.image.childImageSharp.fluid.src})`
   };
 
   const authorImgSrc = getAuthorImgSrc(post.author.picture);

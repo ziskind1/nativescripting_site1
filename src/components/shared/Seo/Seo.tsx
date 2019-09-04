@@ -31,7 +31,7 @@ export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
     const postMeta = postNode.frontmatter;
     title = postMeta.title;
     description = postNode.excerpt;
-    image = postNode.frontmatter.image.childImageSharp.sizes.src;
+    image = postNode.frontmatter.image.childImageSharp.fluid.src;
     pageUrl = SiteConfig.siteUrl + realPrefix + postPath;
     creator = post.author.twitter
       ? `@${post.author.twitter}`

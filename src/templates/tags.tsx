@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-const Tags: React.StatelessComponent<{ pathContext: any }> = ({
-  pathContext
+const Tags: React.StatelessComponent<{ pageContext: any }> = ({
+  pageContext
 }) => {
-  const { posts, post, tag } = pathContext;
+  const { posts, post, tag } = pageContext;
   if (tag) {
     return (
       <div>
