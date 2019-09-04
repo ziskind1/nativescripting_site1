@@ -34,6 +34,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+node_modules_bak/
 jspm_packages/
 
 # Typescript v1 declaration files
@@ -62,3 +63,5 @@ typings/
 public
 yarn-error.log
 *_old
+
+package-lock.json
