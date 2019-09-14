@@ -6,7 +6,7 @@ createdDate: '2019-09-14'
 updatedDate: '2019-09-14'
 draft: false
 tags: ['NativeScript', 'Tutorial', 'Video', 'Security']
-image: force-component-destroy-by-using-page-life-cycle-poster.png
+image: google-login-with-oauth2-in-nativescript-poster.png
 ---
 
 
