@@ -26,7 +26,7 @@ export const BreadCrumbs: React.StatelessComponent<BreadCrumbsProps> = (
       return (
         <li key={idx}>
           <Link to={bc.url}>{bc.name}</Link>
-          <img src="/img/arrow.png" />
+          <img alt="breadcrumb arrow" src="/img/arrow.png" />
         </li>
       );
     }

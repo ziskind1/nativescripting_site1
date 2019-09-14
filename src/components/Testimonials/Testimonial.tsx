@@ -15,7 +15,7 @@ const TestimonialComponent: React.StatelessComponent<TestimonialProps> = (
     <div className="quotes__item quotes__item--small">
       <h3 className="quotes__item-quote">{props.testimonial.quoteHtml}</h3>
       <div className="quotes__author">
-        <img className="quotes__author-img" src={imgUrl} alt="" />
+        <img alt={props.testimonial.name} className="quotes__author-img" src={imgUrl} />
         <div>
           <a target="_blank" href={twitterUrl}>
             {props.testimonial.name}

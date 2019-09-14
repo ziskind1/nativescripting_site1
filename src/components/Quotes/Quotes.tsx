@@ -12,10 +12,10 @@ function Quotes() {
             do a great job of getting you up to speed with NativeScript.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="Raymond Camden"
               className="quotes__author-img"
               src="/img/people/raymond_camden.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/raymondcamden">
@@ -34,10 +34,10 @@ function Quotes() {
             knowledge.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="Tracy Lee"
               className="quotes__author-img"
               src="/img/people/tracy_lee.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/ladyleet">
@@ -55,10 +55,10 @@ function Quotes() {
             NativeScript. Highly recommended.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="TJ VanToll"
               className="quotes__author-img"
               src="/img/people/tj_vantoll.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/tjvantoll">
@@ -77,10 +77,10 @@ function Quotes() {
             beginner to expert.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="Nic Raboy"
               className="quotes__author-img"
               src="/img/people/nic_raboy.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/nraboy">
@@ -101,10 +101,10 @@ function Quotes() {
             in the wild.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="Todd Motto"
               className="quotes__author-img"
               src="/img/people/todd_motto.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/toddmotto">
@@ -130,10 +130,10 @@ function Quotes() {
             beautiful apps.
           </h3>
           <div className="quotes__author">
-            <img
+            <img alt="Jen Looper"
               className="quotes__author-img"
               src="/img/people/jen_looper.jpg"
-              alt=""
+
             />
             <div>
               <a target="_blank" href="https://twitter.com/jenlooper">

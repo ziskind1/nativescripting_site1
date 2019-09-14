@@ -22,7 +22,7 @@ export const CourseAuthorCard: React.StatelessComponent<CourseAuthorCardProps> =
                     <h4>{author.title}</h4>
                 </div>
                 <div>
-                    <img src={authorImgSrc} alt={author.name} title={author.name} />
+                    <img alt={author.name} src={authorImgSrc} title={author.name} />
                 </div>
             </div>
 

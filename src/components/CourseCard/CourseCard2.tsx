@@ -17,12 +17,12 @@ function getCourseIconHtml(course: Course): JSX.Element[] {
   var ret = [];
   if (course.flavors.includes('Core')) {
     ret.push(
-      <img key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />
+      <img alt="NativeScript Core logo" key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />
     );
   }
   if (course.flavors.includes('Angular')) {
     ret.push(
-      <img
+      <img alt="NativeScript Angular logo"
         key={'nativescript_angular.svg'}
         src="/img/nativescript_angular.svg"
       />
@@ -30,7 +30,7 @@ function getCourseIconHtml(course: Course): JSX.Element[] {
   }
   if (course.flavors.includes('Vue')) {
     ret.push(
-      <img key={'nativescript_vue.svg'} src="/img/nativescript_vue.svg" />
+      <img alt="NativeScript Vue logo" key={'nativescript_vue.svg'} src="/img/nativescript_vue.svg" />
     );
   }
   return ret;
@@ -109,7 +109,7 @@ export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
         </div>
 
         <div className="course-card-poster">
-          <img src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
+          <img alt={course.title} src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
         </div>
 
         <div className="course-card-main2">

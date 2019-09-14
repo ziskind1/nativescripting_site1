@@ -23,7 +23,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
   let posterImage = null;
   if (post.image) {
     posterImage = (
-      <Image fluid={post.image.childImageSharp.fluid} />
+      <Image alt={post.title + ' poster'} fluid={post.image.childImageSharp.fluid} />
     );
   }
 
@@ -54,7 +54,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
       <div className="post-header post-inner">
         <div className="post-meta-container">
           <div className="post-meta-author-img-wrapper">
-            <img src={authorImgSrc} />
+            <img alt={post.author.name} src={authorImgSrc} />
           </div>
           <div className="post-meta-info-wrapper">
             <div>

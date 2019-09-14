@@ -11,11 +11,11 @@ interface SiteLogoProps {
 function SiteLogo(props: SiteLogoProps) {
   return (
     <Link to="/">
-      <img className="site-logo-img" src={logoSrc} alt={props.siteName} />
-      <img
+      <img alt={props.siteName} className="site-logo-img" src={logoSrc} />
+      <img alt={props.siteName}
         className="site-logo-icon-img"
         src={logoIconSrc}
-        alt={props.siteName}
+
       />
     </Link>
   );

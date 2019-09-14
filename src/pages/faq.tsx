@@ -74,12 +74,12 @@ function FaqPage() {
                   coming from a plain JavaScript world, then follow the
                   NativeScript Core track. Each course is clearly marked with
                   either the NativeScript with Angular logo{' '}
-                  <img
+                  <img alt="NativeScript Angular logo"
                     src="/img/nativescript_angular.svg"
                     className="text-img"
                   />{' '}
                   or the NativeScript Core logo{' '}
-                  <img src="/img/nativescript_white.svg" className="text-img" />{' '}
+                  <img alt="NativeScript Core logo" src="/img/nativescript_white.svg" className="text-img" />{' '}
                   , and some courses apply to both Angular AND Core.
                 </em>
               </p>
@@ -103,7 +103,7 @@ function FaqPage() {
                   are for absolute beginners, so if this is the first line of
                   code you are writing for NativeScript, you’re in a good place!
                   The beginner classes are labeled with the level 1 icon{' '}
-                  <img src="/img/level_icon1.svg" className="text-img" /> . The
+                  <img alt="beginner" src="/img/level_icon1.svg" className="text-img" /> . The
                   Pro courses (
                   <a href="https://nativescripting.com/course/nativescript-with-angular-pro/">
                     Angular
@@ -113,7 +113,7 @@ function FaqPage() {
                     Core
                   </a>
                   ) are for students with a bit more experience and have a level
-                  3 icon <img src="/img/level_icon3.svg" className="text-img" />{' '}
+                  3 icon <img alt="advanced" src="/img/level_icon3.svg" className="text-img" />{' '}
                   .
                 </em>
               </p>

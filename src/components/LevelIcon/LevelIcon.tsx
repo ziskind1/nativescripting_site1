@@ -21,7 +21,7 @@ const LevelIcon: React.StatelessComponent<LevelIconProps> = (
 ) => {
   const imgSrc = getLevelIconImgSrc(props.level);
 
-  return <img src={imgSrc} title={props.level.levelName} />;
+  return <img alt={props.level.levelName} src={imgSrc} title={props.level.levelName} />;
 };
 
 export default LevelIcon;

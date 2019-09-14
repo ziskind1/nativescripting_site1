@@ -19,7 +19,7 @@ export const CourseBanner: React.StatelessComponent<CourseBannerProps> = (
         <h2 className="course-banner-subtitle">{course.subtitle}</h2>
       </div>
       <div className="course-banner-img">
-        <img src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
+        <img alt={course.title} src={`/img/illustrations/transparent_bg/${course.url}.svg`} />
       </div>
     </div>
   );

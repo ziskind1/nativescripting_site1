@@ -17,7 +17,7 @@ interface LicenseSelectorState {
 export default class LicenseSelector extends React.Component<
   LicenseSelectorProps,
   LicenseSelectorState
-> {
+  > {
   constructor(props: LicenseSelectorProps) {
     super(props);
 
@@ -123,7 +123,7 @@ export default class LicenseSelector extends React.Component<
             </span>
           </div>
           <div className="selector-img-wrapper">
-            <img className="selector-img noselect" src="/img/arrow.png" />
+            <img alt="selector arrow" className="selector-img noselect" src="/img/arrow.png" />
           </div>
         </div>
 

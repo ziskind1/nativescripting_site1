@@ -19,7 +19,7 @@ export const AuthorCard: React.StatelessComponent<AuthorCardProps> = (
     <div className="about-author-wrapper">
       <div className="about-author-wrapper-decoration" />
       <div className="about-author-img-wrapper">
-        <img
+        <img alt={author.name}
           src={authorImgSrc}
           className="about-author-img"
           title={author.name}
@@ -32,13 +32,13 @@ export const AuthorCard: React.StatelessComponent<AuthorCardProps> = (
       </div>
       <div className="about-author-links">
         <a href={twitterLink} className="about-author-link">
-          <img
+          <img alt="Twitter icon"
             className="about-author-link-img"
             src="/img/nativescripting_twitter_icon.svg"
           />
         </a>
         <a href={gitHubLink} className="about-author-link">
-          <img
+          <img alt="GitHub icon"
             className="about-author-link-img"
             src="/img/nativescripting_github_icon.svg"
           />

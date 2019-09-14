@@ -5,13 +5,13 @@ import './CourseCoverage.css';
 import LevelIcon from '../../LevelIcon/LevelIcon';
 
 const iconCore = (
-  <img key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />
+  <img alt="NativeScript Core logo" key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />
 );
 const iconNg = (
-  <img key={'nativescript_angular.svg'} src="/img/nativescript_angular.svg" />
+  <img alt="NativeScript Angular logo" key={'nativescript_angular.svg'} src="/img/nativescript_angular.svg" />
 );
 const iconVue = (
-  <img key={'nativescript_vue.svg'} src="/img/nativescript_vue.svg" />
+  <img alt="NativeScript Vue logo" key={'nativescript_vue.svg'} src="/img/nativescript_vue.svg" />
 );
 
 export interface CourseCoverageProps {

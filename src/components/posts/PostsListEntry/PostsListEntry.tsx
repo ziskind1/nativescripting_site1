@@ -46,7 +46,7 @@ export const PostsListEntry: React.StatelessComponent<PostsListEntryProps> = (
 
         <div className="post-meta-container">
           <div className="post-meta-author-img-wrapper">
-            <img src={authorImgSrc} />
+            <img alt={post.author.name} src={authorImgSrc} />
           </div>
           <div className="post-meta-info-wrapper">
             <div>

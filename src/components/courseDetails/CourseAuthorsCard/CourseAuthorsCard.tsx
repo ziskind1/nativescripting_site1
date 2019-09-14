@@ -24,7 +24,7 @@ export const CourseAuthorsCard: React.StatelessComponent<
             <h4>{a.title}</h4>
           </div>
           <div>
-            <img src={authorImgSrc} alt={a.name} title={a.name} />
+            <img alt={a.name} src={authorImgSrc} title={a.name} />
           </div>
         </div>
 

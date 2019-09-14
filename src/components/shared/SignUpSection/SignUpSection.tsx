@@ -38,7 +38,7 @@ class SignUpSection extends React.Component<any, { myInputVal: string }> {
         return (
             <SubscriberSection className="special subscribe-container">
                 <div className="logo-wrapper">
-                    <img className="logo" src="/img/logo_2.svg" />
+                    <img alt="logo" className="logo" src="/img/logo_2.svg" />
                 </div>
 
                 <div id="mc_embed_signup">
