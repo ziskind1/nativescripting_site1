@@ -4228,41 +4228,71 @@
           {
             "chapterId": 130,
             "id": "11883006",
-            "name": "Root Popover Container Layer",
+            "name": "Root Popover Container Layer (4:40)",
             "isPreview": false
           },
           {
             "chapterId": 130,
             "id": "11883005",
-            "name": "UI Hierarchy Communication with Custom Events",
+            "name": "UI Hierarchy Communication with Custom Events (7:39)",
             "isPreview": false
           },
           {
             "chapterId": 130,
             "id": "11883008",
-            "name": "Custom Popover with Shared Load Logic",
+            "name": "Custom Popover with Shared Load Logic (5:53)",
             "isPreview": false
           },
           {
             "chapterId": 130,
             "id": "11883003",
-            "name": "Lazy Loading Global Popover Using Builder",
+            "name": "Lazy Loading Global Popover Using Builder (4:13)",
             "isPreview": false
           },
           {
             "chapterId": 130,
             "id": "11883004",
-            "name": "Event Bubbling and Platform Differences",
+            "name": "Event Bubbling and Platform Differences (5:12)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 130,
+            "id": "11885735",
+            "name": "Adding Animation to Popover (2:17)",
             "isPreview": false
           }
         ]
       },
       {
         "id": 140,
-        "name": "Testing",
+        "name": "NativeScript Chart",
         "lessons": [
           {
             "chapterId": 140,
+            "id": "11922677",
+            "name": "Coming 9/30/19",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 150,
+        "name": "Internationalization",
+        "lessons": [
+          {
+            "chapterId": 150,
+            "id": "11922678",
+            "name": "Coming 10/4/19",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 160,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 160,
             "id": "2573902",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4270,11 +4300,11 @@
         ]
       },
       {
-        "id": 150,
+        "id": 170,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 150,
+            "chapterId": 170,
             "id": "2573913",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4282,11 +4312,11 @@
         ]
       },
       {
-        "id": 160,
+        "id": 180,
         "name": "Hardware Access",
         "lessons": [
           {
-            "chapterId": 160,
+            "chapterId": 180,
             "id": "2573889",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4294,11 +4324,11 @@
         ]
       },
       {
-        "id": 170,
+        "id": 190,
         "name": "Tracing",
         "lessons": [
           {
-            "chapterId": 170,
+            "chapterId": 190,
             "id": "2573892",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4306,11 +4336,11 @@
         ]
       },
       {
-        "id": 180,
+        "id": 200,
         "name": "Multithreaded Programming",
         "lessons": [
           {
-            "chapterId": 180,
+            "chapterId": 200,
             "id": "2573898",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4318,11 +4348,11 @@
         ]
       },
       {
-        "id": 190,
+        "id": 210,
         "name": "More Modules",
         "lessons": [
           {
-            "chapterId": 190,
+            "chapterId": 210,
             "id": "2573862",
             "name": "Lessons TBD",
             "isPreview": false
