@@ -1027,7 +1027,7 @@
     ],
     "level": 1,
     "order": 59,
-    "label": "POPULAR",
+    "label": "",
     "launchdate": "05/11/2018",
     "authors": [
       "alex_ziskind"
@@ -1608,7 +1608,7 @@
     ],
     "level": 2,
     "order": 120,
-    "label": "UPDATED",
+    "label": "",
     "launchdate": "07/10/2017",
     "authors": [
       "paul_halliday"
@@ -3534,7 +3534,7 @@
       "Core"
     ],
     "level": 3,
-    "order": 68,
+    "order": 36,
     "label": "POPULAR",
     "launchdate": "09/30/2019",
     "authors": [
@@ -5180,8 +5180,8 @@
       "Core"
     ],
     "level": 2,
-    "order": 30,
-    "label": "NEW",
+    "order": 48,
+    "label": "",
     "launchdate": "04/07/2019",
     "authors": [
       "alex_ziskind"
