@@ -3535,26 +3535,26 @@
     ],
     "level": 3,
     "order": 68,
-    "label": "SALE",
-    "launchdate": "09/30/2017",
+    "label": "POPULAR",
+    "launchdate": "09/30/2019",
     "authors": [
       "alex_ziskind"
     ],
     "products": [
       {
-        "id": "306837",
-        "name": "Single user pre-launch",
+        "id": "308149",
+        "name": "Single user regular price",
         "description": "License for a single user. \n",
-        "pricesale": 69,
+        "pricesale": 139,
         "pricereg": 139,
         "licensesMin": 1,
         "licensesMax": 1
       },
       {
-        "id": "308151",
-        "name": "Team of 2-5 pre-launch price",
+        "id": "784683",
+        "name": "Team of 2-5 regular price",
         "description": "License for a team of 2-5 users. \n",
-        "pricesale": 279,
+        "pricesale": 549,
         "pricereg": 549,
         "licensesMin": 2,
         "licensesMax": 5
