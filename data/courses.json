@@ -3600,7 +3600,8 @@
       100,
       110,
       120,
-      130
+      130,
+      140
     ],
     "chapters": [
       {
@@ -4269,8 +4270,38 @@
         "lessons": [
           {
             "chapterId": 140,
-            "id": "11922677",
-            "name": "Coming 9/30/19",
+            "id": "11948200",
+            "name": "Overview (1:17)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 140,
+            "id": "11948199",
+            "name": "Getting Started with the Chart (4:41)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 140,
+            "id": "11948198",
+            "name": "Chart Series (3:21)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 140,
+            "id": "11948197",
+            "name": "Chart Categorical Axis (6:21)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 140,
+            "id": "11948201",
+            "name": "Chart Styling (6:38)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 140,
+            "id": "11948228",
+            "name": "Chart Interaction (6:47)",
             "isPreview": false
           }
         ]
