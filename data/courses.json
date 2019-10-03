@@ -3601,7 +3601,8 @@
       110,
       120,
       130,
-      140
+      140,
+      150
     ],
     "chapters": [
       {
@@ -4312,8 +4313,32 @@
         "lessons": [
           {
             "chapterId": 150,
-            "id": "11922678",
-            "name": "Coming 10/4/19",
+            "id": "11982955",
+            "name": "Overview (0:47)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 150,
+            "id": "11982952",
+            "name": "Setting up i18n (5:22)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 150,
+            "id": "11982953",
+            "name": "Translation Workflow (3:06)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 150,
+            "id": "11982951",
+            "name": "Setting a Language",
+            "isPreview": false
+          },
+          {
+            "chapterId": 150,
+            "id": "11982954",
+            "name": "Handling Locales",
             "isPreview": false
           }
         ]
