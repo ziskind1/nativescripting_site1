@@ -43,7 +43,7 @@ In the XML file, we have a simple UI with a `Button` and a `ListView` that is bo
 
 <br/>
 
-```
+```xml
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="navigatingTo"
   class="page">
 
@@ -66,7 +66,7 @@ Next, let's take a look at the View Model:
 
 <br/>
 
-```
+```typescript
 import { Observable } from 'tns-core-modules/data/observable';
 import { ObservableArray } from 'tns-core-modules/data/observable-array';
 
@@ -109,7 +109,7 @@ We are going to switch out our `ObservableArray` object for a regular array:
 
 <br/>
 
-```
+```typescript
 export class HelloWorldModel extends Observable {
 
     public items = ['item1', 'item2'];
@@ -147,7 +147,7 @@ Let's quickly look at the initial code:
 
  <br/>
 
-```
+```xml
 <StackLayout>
 
   <Button (tap)="onTap()" class="btn btn-primary" style="background-color:red;"
@@ -168,7 +168,7 @@ View Model:
 
 <br/>
 
-```
+```typescript
 import { Component } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 
@@ -206,7 +206,7 @@ Again, let's switch out the `ObservableArray` for a regular array and see what h
 
 <br/>
 
-```
+```typescript
 export class AppComponent {
 
     private counter = 3;
@@ -224,7 +224,7 @@ export class AppComponent {
 
 <br/>
 
-```
+```xml
 <ListView [items]="items">
 ```
 
@@ -240,7 +240,7 @@ Again, the code:
 
 <br/>
 
-```
+```vue
 <template>
     <Page>
         <ActionBar title="Welcome to NativeScript-Vue!" />
@@ -293,7 +293,7 @@ Let's see what effect we'll get by using a regular array in the Vue app:
 
 <br/>
 
-```
+```vue
 <template>
     <Page>
         <ActionBar title="Welcome to NativeScript-Vue!" />
