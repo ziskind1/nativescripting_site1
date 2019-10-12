@@ -3602,7 +3602,8 @@
       120,
       130,
       140,
-      150
+      150,
+      160
     ],
     "chapters": [
       {
@@ -4332,23 +4333,71 @@
           {
             "chapterId": 150,
             "id": "11982951",
-            "name": "Setting a Language",
+            "name": "Setting a Language (1:51)",
             "isPreview": false
           },
           {
             "chapterId": 150,
             "id": "11982954",
-            "name": "Handling Locales",
+            "name": "Handling Locales (2:44)",
             "isPreview": false
           }
         ]
       },
       {
         "id": 160,
-        "name": "Testing",
+        "name": "Tracing and Error Reporting",
         "lessons": [
           {
             "chapterId": 160,
+            "id": "12095530",
+            "name": "Overview (1:12)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 160,
+            "id": "12095524",
+            "name": "Tracing Basics (4:26)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 160,
+            "id": "12095528",
+            "name": "Trace Built-in and Custom Categories (5:37)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 160,
+            "id": "12095527",
+            "name": "How to Use a Custom TraceWriter",
+            "isPreview": false
+          },
+          {
+            "chapterId": 160,
+            "id": "12095529",
+            "name": "Trace Message Types in Custom TraceWriters (3:02)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 160,
+            "id": "12095526",
+            "name": "Error Reporting Infrastructure (2:19)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 160,
+            "id": "12095525",
+            "name": "Reporting Trace Errors (3:17)",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 170,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 170,
             "id": "2573902",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4356,11 +4405,11 @@
         ]
       },
       {
-        "id": 170,
+        "id": 180,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 170,
+            "chapterId": 180,
             "id": "2573913",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4368,24 +4417,12 @@
         ]
       },
       {
-        "id": 180,
+        "id": 190,
         "name": "Hardware Access",
         "lessons": [
           {
-            "chapterId": 180,
-            "id": "2573889",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
-      },
-      {
-        "id": 190,
-        "name": "Tracing",
-        "lessons": [
-          {
             "chapterId": 190,
-            "id": "2573892",
+            "id": "2573889",
             "name": "Lessons TBD",
             "isPreview": false
           }
