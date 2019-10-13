@@ -3603,7 +3603,8 @@
       130,
       140,
       150,
-      160
+      160,
+      170
     ],
     "chapters": [
       {
@@ -4369,7 +4370,7 @@
           {
             "chapterId": 160,
             "id": "12095527",
-            "name": "How to Use a Custom TraceWriter",
+            "name": "How to Use a Custom TraceWriter (4:12)",
             "isPreview": false
           },
           {
@@ -4394,10 +4395,58 @@
       },
       {
         "id": 170,
-        "name": "Testing",
+        "name": "Exception Handling and Crash Reporting",
         "lessons": [
           {
             "chapterId": 170,
+            "id": "12103303",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 170,
+            "id": "12103306",
+            "name": "Custom Error Handler",
+            "isPreview": false
+          },
+          {
+            "chapterId": 170,
+            "id": "12103300",
+            "name": "Handling Exceptions in Production",
+            "isPreview": false
+          },
+          {
+            "chapterId": 170,
+            "id": "12103304",
+            "name": "Lazy Service Locator Pattern for Error Services",
+            "isPreview": false
+          },
+          {
+            "chapterId": 170,
+            "id": "12103301",
+            "name": "Handled and Unhandled Exceptions",
+            "isPreview": false
+          },
+          {
+            "chapterId": 170,
+            "id": "12103305",
+            "name": "Disable Native Exception Propagation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 170,
+            "id": "12103302",
+            "name": "Third Party Crash Reporting and Analytics",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 180,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 180,
             "id": "2573902",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4405,11 +4454,11 @@
         ]
       },
       {
-        "id": 180,
+        "id": 190,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 180,
+            "chapterId": 190,
             "id": "2573913",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4417,11 +4466,11 @@
         ]
       },
       {
-        "id": 190,
+        "id": 200,
         "name": "Hardware Access",
         "lessons": [
           {
-            "chapterId": 190,
+            "chapterId": 200,
             "id": "2573889",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4429,11 +4478,11 @@
         ]
       },
       {
-        "id": 200,
+        "id": 210,
         "name": "Multithreaded Programming",
         "lessons": [
           {
-            "chapterId": 200,
+            "chapterId": 210,
             "id": "2573898",
             "name": "Lessons TBD",
             "isPreview": false
@@ -4441,11 +4490,11 @@
         ]
       },
       {
-        "id": 210,
+        "id": 220,
         "name": "More Modules",
         "lessons": [
           {
-            "chapterId": 210,
+            "chapterId": 220,
             "id": "2573862",
             "name": "Lessons TBD",
             "isPreview": false
