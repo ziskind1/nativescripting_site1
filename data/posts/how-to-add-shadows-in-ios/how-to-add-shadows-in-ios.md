@@ -494,7 +494,15 @@ If you run the app, you'll see the octagonal view with a similarly shaped shadow
 
 <br>
 
-That brings us to the end of the tutorial. I hope you learned a thing or two!
+We hope you've enjoyed this short tutorial. We are creating a series of iOS-focused NativeScript tutorials, so look out for those. Here are some of the posts in the series. We'll be adding to the collection in the coming weeks.
+
+<br>
+
+- How to Add SHADOWS in iOS
+- [How to Use iOS Large Titles](/posts/how-to-use-ios-large-titles)
+- [How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color](/posts/how-to-create-ios-podcast-cover-art-animation-with-inheriting-shadow-color)
+- [How to Use iOS Collapsing SearchBar](/posts/how-to-use-ios-collapsing-searchbar)
+- [Translucent Tabs in iOS]()
 
 <br>
 

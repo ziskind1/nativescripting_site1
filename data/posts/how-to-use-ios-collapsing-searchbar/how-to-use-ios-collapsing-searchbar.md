@@ -212,9 +212,9 @@ We hope you've enjoyed this short tutorial. We are creating a series of iOS-focu
 
 <br>
 
-- [How to Add SHADOWS in iOS]()
-- [How to Use iOS Large Titles]()
-- [How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color]()
+- [How to Add SHADOWS in iOS](/posts/how-to-add-shadows-in-ios)
+- [How to Use iOS Large Titles](/posts/how-to-use-ios-large-titles)
+- [How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color](/posts/how-to-create-ios-podcast-cover-art-animation-with-inheriting-shadow-color)
 - How to Use iOS Collapsing SearchBar
 - [Translucent Tabs in iOS]()
 

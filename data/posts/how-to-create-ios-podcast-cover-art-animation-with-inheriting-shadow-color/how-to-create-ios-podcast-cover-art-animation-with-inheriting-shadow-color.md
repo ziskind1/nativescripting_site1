@@ -565,10 +565,10 @@ We hope you've enjoyed this tutorial. We are creating a series of iOS-focused Na
 
 <br>
 
-- [How to Add SHADOWS in iOS]()
-- [How to Use iOS Large Titles]()
+- [How to Add SHADOWS in iOS](/posts/how-to-add-shadows-in-ios)
+- [How to Use iOS Large Titles](/posts/how-to-use-ios-large-titles)
 - How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color
-- [How to Use iOS Collapsing SearchBar]()
+- [How to Use iOS Collapsing SearchBar](/posts/how-to-use-ios-collapsing-searchbar)
 - [Translucent Tabs in iOS]()
 - [Recreating the Spotify App Artist Page in NativeScript]()
 
