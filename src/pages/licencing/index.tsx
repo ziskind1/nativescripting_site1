@@ -5,7 +5,7 @@ import "../../css/privacy.css";
 import { MainLayout } from "../../layouts/MainLayout";
 
 function Terms() {
-  const pageTitle = `Terms | NativeScripting`;
+  const pageTitle = `Licensing Agreement | NativeScripting`;
 
   return (
     <MainLayout>
@@ -15,7 +15,7 @@ function Terms() {
         </Helmet>
 
         <div className="privacy-container">
-          <h1>Terms of Use</h1>
+          <h1>Licensing Agreement</h1>
 
           <div className="article">
             <p>
@@ -475,8 +475,8 @@ function Terms() {
           </p>
             <p>Summary of your key legal rights as a consumer</p>
             <p>
-              These Terms of Use affect your legal rights and obligations. If you
-              do not agree to be bound by all of these Terms of Use, do not access
+              The terms in this licensing agreement affect your legal rights and obligations. If you
+              do not agree to be bound by all of these terms, do not access
               or use the Service.
           </p>
 
@@ -681,7 +681,7 @@ function Terms() {
             <p>
               <strong>18.1</strong> We will process the information we receive
               from you or otherwise hold about you in accordance with these terms
-              and our privacy policy [add link to privacy policy]. You consent to
+              and our privacy policy. You consent to
               our use of such information in accordance with these terms and our
               privacy policy.
           </p>
@@ -703,6 +703,17 @@ function Terms() {
               to other third parties where the law either requires or allows us to
               do so.
           </p>
+
+            <p>
+              <strong>18.4.</strong> You hereby grant us the nonexclusive right and license to use and display the logo and similar indicia (“Customer Marks”) derrived from the information you have provided to us under these terms, including your email address
+          </p>
+            <ul>
+              <li>to the extent any customization or implementation of the Services involve the incorporation of Customer Marks in furtherance of these terms</li>
+              <li>
+                on its website and marketing collateral identifying Customer as a customer of NativeScripting or NativeScript Training. We obtain no rights in the Customer Marks except for the limited right described in the preceding sentence, and Customer retains all right, title and interest in the Customer Marks. All use of the Customer Marks by us will inure to Customer.
+            </li>
+            </ul>
+
             <h3 id="19-ip-rights">19. IP Rights</h3>
             <p>
               <strong>19.1.</strong> You acknowledge that all intellectual
@@ -721,8 +732,7 @@ function Terms() {
               of our intellectual property rights.
           </p>
             <p>
-              <strong>
-                19.3. If you take out a single user licence for a Course and
+              <strong>19.3.</strong> If you take out a single user licence for a Course and
                 Content but allow or permit any part of them to be accessed or
                 used by other users, this will be an infringement of our and our
                 licensors’ intellectual property rights. We are able to track and
@@ -735,7 +745,7 @@ function Terms() {
                 other Courses, without any liability on our part. We and our
                 licensors also reserve the right to pursue all available remedies
                 against you for intellectual property right infringement.
-            </strong>
+
             </p>
             <h3 id="20-other-important-terms">20. Other important terms</h3>
             <p>

@@ -15,7 +15,7 @@ function Footer() {
         <div>@{year} NativeScripting</div>
         <div className="privacy-links">
           <Link to="/faq">FAQ</Link>
-          <Link to="/terms">Terms of Use</Link>
+          <Link to="/licencing">Licencing Agreement</Link>
           <Link to="/privacy">Privacy Policy</Link>
         </div>
         <div>{menu}</div>
