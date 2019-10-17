@@ -22,9 +22,6 @@ function Hero() {
                         Upgrade your skills with online courses so you can master the NativeScript framework and build real world native mobile apps using your existing web development skills.
                     </p>
 
-                    <p className="bundle-notice">
-                        Complete your knowledge with <a onClick={() => goToSpecials()}>course bundles</a>.
-                    </p>
                 </div>
             </div>
             <div className="hero-overlay"></div>
