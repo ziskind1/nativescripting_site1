@@ -26,7 +26,7 @@ function SubHeroSection(props: SubHeroSectionProps) {
                 <div className="sub-hero-content">
 
                     <p>
-                        Start with our <span className="green">free beginner courses</span> and continue to our more <span className="blue">advanced premium courses</span> in both NativeScript Core and NativeScript with Angular.
+                        Start with our <span className="green">free beginner courses</span> and continue to our more <span className="blue">advanced premium courses</span> in NativeScript Core, NativeScript with Angular, and NativeScript Vue.
                     </p>
 
                     <div className="action-buttons">
