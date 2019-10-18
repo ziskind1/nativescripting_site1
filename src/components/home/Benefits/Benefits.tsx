@@ -16,8 +16,8 @@ function Benefits() {
                 <div className="benefits__block benefits__block--flex">
                     <ul className="benefits__list checklist">
                         <li>
-                            <h3>Expert authors</h3>
-                            <p>Learn from some of the best NativeScript experts</p>
+                            <h3>Expert instructors</h3>
+                            <p>Learn from some of the top NativeScript experts</p>
                         </li>
                         <li>
                             <h3>Only the best</h3>
