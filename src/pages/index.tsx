@@ -36,6 +36,7 @@ import { MainLayout } from '../layouts/MainLayout';
 import { Course } from '../domain/models';
 import { Seo } from '../components/shared/Seo/Seo';
 import { TrackSection } from '../components/home/TrackSection/TrackSection';
+import { BrandsSection } from '../components/shared/Brands/BrandsSection';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -163,7 +164,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           onPremiumCoursesClick={() => this.premiumCoursesSelected()}
         />
 
-        <Logos />
+
+
+        <BrandsSection disabled={false} />
+
         <Benefits />
 
         <a id="courses" />
@@ -175,6 +179,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         />
 
         <BundleSection bundles={bundles} />
+
+        <Logos />
 
         <Testimonials testimonials={testimonials} />
 

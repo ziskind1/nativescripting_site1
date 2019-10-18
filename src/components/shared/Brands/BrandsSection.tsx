@@ -1,23 +1,25 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { TrackCardList } from '../../shared/TrackCard/TrackCardList';
+import { BrandItemList } from './BrandItemList';
 
 
-interface TrackSectionProps {
+interface BrandsSectionProps {
     disabled?: boolean;
 }
 
-export const TrackSection: React.StatelessComponent<TrackSectionProps> = (
-    props: TrackSectionProps
+export const BrandsSection: React.StatelessComponent<BrandsSectionProps> = (
+    props: BrandsSectionProps
 ) => {
 
-
     const Section = styled.div`
-        background-color: #032E74;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    `;
+        padding-top: 100px;
+        padding-bottom: 100px;
 
+        @media only screen and (max-width: 767px)
+        {
+            padding: 60px 0;
+        }
+    `;
 
     const SectionWrapper = styled.div`
         display: ${props.disabled ? 'none' : 'block'}
@@ -31,19 +33,21 @@ export const TrackSection: React.StatelessComponent<TrackSectionProps> = (
     const Heading = styled.h2`
         color: #11f5ff;
         letter-spacing: -2px;
-        line-height: 46px;
+        line-height: 40px;
         margin-bottom: 5px;
-        font-size: 3.4rem;
+        font-size: 3rem;
         font-family: 'MonoRegular';
 
         @media only screen and (max-width: 1024px) and (min-width: 768px)
         {
-            font-size: 2.8rem;
+            font-size: 2.4rem;
+            line-height: 32px;
         }
         @media only screen and (max-width: 767px)
         {
             letter-spacing: 0px;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
+            line-height: 24px;
         }
     `;
 
@@ -58,9 +62,9 @@ export const TrackSection: React.StatelessComponent<TrackSectionProps> = (
     return (
         <Section>
             <SectionWrapper className="wrapper">
-                <HeadingWrapper><Heading>Choose your track</Heading><SubTitle>Whether you want to learn the Core NativeScript framework, or you are already using a UI framework like Angular or Vue and want to leverage those UI frameworks with NativeScript, we've got you covered.</SubTitle></HeadingWrapper>
+                <HeadingWrapper><Heading>Helping hundreds of organizations and tens of thousands of students build NativeScript skills</Heading></HeadingWrapper>
 
-                <TrackCardList></TrackCardList>
+                <BrandItemList></BrandItemList>
             </SectionWrapper>
         </Section>
     );
