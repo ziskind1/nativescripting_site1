@@ -1,0 +1,71 @@
+[
+    {
+        "id": "angular",
+        "title": "NativeScript Angular",
+        "imageSrc": "/img/nativescript_angular.svg",
+        "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "levels": [
+            {
+                "levelId": 1,
+                "title": "beginner",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 2,
+                "title": "intermediate",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 3,
+                "title": "advanced",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            }
+        ]
+    },
+    {
+        "id": "core",
+        "title": "NativeScript Core",
+        "imageSrc": "/img/nativescript_core.svg",
+        "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "levels": [
+            {
+                "levelId": 1,
+                "title": "beginner",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 2,
+                "title": "intermediate",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 3,
+                "title": "advanced",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            }
+        ]
+    },
+    {
+        "id": "vue",
+        "title": "NativeScript Vue",
+        "imageSrc": "/img/nativescript_vue.svg",
+        "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "levels": [
+            {
+                "levelId": 1,
+                "title": "beginner",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 2,
+                "title": "intermediate",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            },
+            {
+                "levelId": 3,
+                "title": "advanced",
+                "description": "If you are new to programming, look no further. These beginning courses will give you a strong foundation in both programming and the JavaScript language."
+            }
+        ]
+    }
+]

@@ -8,3 +8,4 @@ export * from "./coursedata.model";
 export * from "./lesson.model";
 export * from "./product.model";
 export * from "./testimonial.model";
+export * from './track.model';

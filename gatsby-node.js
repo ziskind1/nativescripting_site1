@@ -39,6 +39,20 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allTracksJson {
+          totalCount
+          edges {
+            node {
+              id
+              levels {
+                levelId,
+                title,
+                description
+              }
+            }
+          }
+        }
+
         allMarkdownRemark(
           filter: { frontmatter: { draft: { ne: true } } }
           sort: { order: ASC, fields: [frontmatter___updatedDate] }
@@ -71,6 +85,9 @@ exports.createPages = ({ graphql, actions }) => {
 
       const courses = result.data.allCoursesJson.edges;
       createCoursePages(createPage, courses);
+
+      const tracks = result.data.allTracksJson.edges;
+      createTrackPages(createPage, tracks);
 
       const posts = result.data.allMarkdownRemark.edges;
       const postsPerPage = config.POSTS_PER_PAGE;
@@ -106,6 +123,21 @@ const createCoursePages = (createPage, courses) => {
       component: courseTemplate,
       context: {
         courseUrl: course.url
+      }
+    });
+  });
+};
+
+const createTrackPages = (createPage, tracks) => {
+  const template = path.resolve(`src/templates/track.tsx`);
+
+  tracks.forEach(o => {
+    const track = o.node;
+    createPage({
+      path: `/track/${track.id}`,
+      component: template,
+      context: {
+        trackId: track.id
       }
     });
   });

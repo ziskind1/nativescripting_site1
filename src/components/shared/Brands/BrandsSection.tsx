@@ -62,7 +62,7 @@ export const BrandsSection: React.StatelessComponent<BrandsSectionProps> = (
     return (
         <Section>
             <SectionWrapper className="wrapper">
-                <HeadingWrapper><Heading>Helping hundreds of organizations and tens of thousands of students build NativeScript skills</Heading></HeadingWrapper>
+                <HeadingWrapper><Heading>Helping 200+ organizations and 20,000+ students build NativeScript skills</Heading></HeadingWrapper>
 
                 <BrandItemList></BrandItemList>
             </SectionWrapper>
