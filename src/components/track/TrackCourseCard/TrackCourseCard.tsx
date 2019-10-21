@@ -113,20 +113,34 @@ export const TrackCourseCard: React.StatelessComponent<TrackCourseCardProps> = (
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url(${courseImage}), linear-gradient( 45deg, #0949b2 66%, #0845a9 66%, #0845a9 78%, #0a429c 78% );
-    `;
+    
+        @media (max-width: 640px)
+        {
+                height: 200px;
+                background-size: 300px;
+                background-position: 50%;
+                background-color:  #0949b2;
+                background-image: url(${courseImage});
+        }
+        `;
 
     const TrackCourseBlock = styled.div`
-    width: 240px;
-    float: left;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+        width: 240px;
+        float: left;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
 
-    :hover {
-        transition-duration: 300ms;
-        transform: scale(1.03);
-      }
+        :hover {
+            transition-duration: 300ms;
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 640px)
+        {
+                width: 100%;
+        }
     `;
 
     const CourseBox = styled.div`

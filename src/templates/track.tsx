@@ -41,6 +41,8 @@ import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import TrackHeader from '../components/track/TrackHeader/TrackHeader';
 import Collapsible from "../components/shared/Collapsible/Collapsible";
 import { TrackCourseCardList } from "../components/track/TrackCourseCardList/TrackCourseCardList";
+import { scrollToElementById } from '../utils/scrolling';
+import { BrandsSection } from '../components/shared/Brands/BrandsSection';
 
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
@@ -103,19 +105,6 @@ class TrackTemplate extends React.Component<
         document.body.appendChild(script);
     }
 
-    private getNotesHtml(notes: string[]): JSX.Element {
-        if (!notes || (notes && notes.length === 0)) {
-            return null;
-        }
-        const notesHtml = notes.map((note, idx) => {
-            return (
-                <li key={idx}>
-                    <span>{note}</span>
-                </li>
-            );
-        });
-        return <ul>{notesHtml}</ul>;
-    }
 
     private getFilteredCourses(levelName: string, level: CourseLevelType): Course[] {
         const coursesFlavor: Course[] = [];
@@ -181,6 +170,12 @@ class TrackTemplate extends React.Component<
         return <>{html}</>;
     }
 
+    private onCTAClick() {
+
+        scrollToElementById('bundles');
+
+    }
+
 
     public render() {
 
@@ -191,24 +186,21 @@ class TrackTemplate extends React.Component<
             { name: 'Track details', url: '' }
         ];
 
-
-
         const testimonials = this.props.data.testimonialsConnection.edges.map(
             testimonialFromTestimonialJsonEdge
         );
 
+        const allBundles = this.props.data.bundlesConnection.edges.map(b =>
+            bundleFromBundlesJsonEdge(b, this.state.courses)
+        );
+
+        const trackBundleIds = track.bundles.map(b => b.bundleId);
+
+        const trackBundles = allBundles.filter(b => trackBundleIds.includes(b.id));
+
         const pageTitle = `${track.title} Track | NativeScripting`;
-
         const levels = this.getLevelsHtml(track);
-
-        const coursesBeginner = this.getFilteredCourses('Angular', 1);
-        const coursesIntermediate = this.getFilteredCourses('Angular', 2);
-        const coursesAdvanced = this.getFilteredCourses('Angular', 3);
-
         const authorNames = this.getAuthorNames();
-
-
-
 
 
         return (
@@ -220,11 +212,26 @@ class TrackTemplate extends React.Component<
 
                 <CountdownTimer />
 
-                <TrackHeader track={track} authorNames={authorNames} iconImgSrc={track.imgSrc} desc={track.description} />
+
+                <TrackHeader
+                    track={track}
+                    authorNames={authorNames}
+                    iconImgSrc={track.imgSrc}
+                    desc={track.description}
+                    onCTAClick={() => this.onCTAClick()}
+                />
 
                 {levels}
 
+                <a id="bundles" />
+
+                <BundleSection bundles={trackBundles} bundlesTitle={`Master ${track.title}`} bundlesDesc="Join over 20,000 others who have fast-tracked their skills to get jobs at top companies." bg="#032E74" />
+
+                <BrandsSection disabled={false} />
+
                 <Testimonials testimonials={testimonials} />
+
+                <BundleSection bundles={trackBundles} bundlesTitle="Become a NativeScript Expert" bundlesDesc="Everything you need to know to master NativeScript today." bg="#032E74" />
 
 
                 <SignUpSection />
@@ -281,6 +288,32 @@ export const trackPageQuery = graphql`
         }
     }
 
+    #get bundles
+    bundlesConnection: allBundlesJson {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          description
+          url
+          promototal
+          promoremaining
+          courseIds
+          bundleLevel
+          products {
+            id
+            name
+            description
+            pricesale
+            pricereg
+            licensesMin
+            licensesMax
+          }
+        }
+      }
+    }
+
     #get testimonials
     testimonialsConnection: allTestimonialsJson {
       totalCount
@@ -322,6 +355,11 @@ export const trackPageQuery = graphql`
           levelId
           title
           description
+        }
+        bundles {
+            id
+            order
+            description
         }
     }
   }

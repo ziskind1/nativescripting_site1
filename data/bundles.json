@@ -1,5 +1,230 @@
 [
   {
+    "id": "684512",
+    "title": "NativeScript Core Master Bundle",
+    "subtitle": "Get the complete NativeScript Core Package",
+    "description": "\n",
+    "url": "nativescript-core-master-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1421115",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 219,
+        "pricereg": 444,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "1421116",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 372,
+        "pricereg": 888,
+        "licensesMin": 2,
+        "licensesMax": 2
+      },
+      {
+        "id": "1421117",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 558,
+        "pricereg": 1332,
+        "licensesMin": 3,
+        "licensesMax": 3
+      },
+      {
+        "id": "1421118",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 701,
+        "pricereg": 1776,
+        "licensesMin": 4,
+        "licensesMax": 4
+      },
+      {
+        "id": "1421119",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 876,
+        "pricereg": 2220,
+        "licensesMin": 5,
+        "licensesMax": 5
+      },
+      {
+        "id": "1421120",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 986,
+        "pricereg": 2664,
+        "licensesMin": 6,
+        "licensesMax": 6
+      },
+      {
+        "id": "1421121",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 1150,
+        "pricereg": 3108,
+        "licensesMin": 7,
+        "licensesMax": 7
+      },
+      {
+        "id": "1421122",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 1226,
+        "pricereg": 3552,
+        "licensesMin": 8,
+        "licensesMax": 8
+      },
+      {
+        "id": "1421123",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1380,
+        "pricereg": 3996,
+        "licensesMin": 9,
+        "licensesMax": 9
+      },
+      {
+        "id": "1421124",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1424,
+        "pricereg": 4440,
+        "licensesMin": 10,
+        "licensesMax": 10
+      }
+    ],
+    "courseIds": [
+      "171132",
+      "171131",
+      "171150",
+      "171152",
+      "193924",
+      "328975",
+      "329255",
+      "362074"
+    ]
+  },
+  {
+    "id": "684386",
+    "title": "NativeScript with Angular Master Bundle",
+    "subtitle": "Get the complete NativeScript with Angular Package",
+    "description": "\n",
+    "url": "nativescript-with-angular-master-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1420961",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 229,
+        "pricereg": 582,
+        "licensesMin": 1,
+        "licensesMax": 1
+      },
+      {
+        "id": "1420965",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 389,
+        "pricereg": 1164,
+        "licensesMin": 2,
+        "licensesMax": 2
+      },
+      {
+        "id": "1420966",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 584,
+        "pricereg": 1746,
+        "licensesMin": 3,
+        "licensesMax": 3
+      },
+      {
+        "id": "1420967",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 733,
+        "pricereg": 2328,
+        "licensesMin": 4,
+        "licensesMax": 4
+      },
+      {
+        "id": "1420968",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 916,
+        "pricereg": 2910,
+        "licensesMin": 5,
+        "licensesMax": 5
+      },
+      {
+        "id": "1420969",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 1030,
+        "pricereg": 3492,
+        "licensesMin": 6,
+        "licensesMax": 6
+      },
+      {
+        "id": "1420970",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 1202,
+        "pricereg": 4074,
+        "licensesMin": 7,
+        "licensesMax": 7
+      },
+      {
+        "id": "1420972",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 1282,
+        "pricereg": 4656,
+        "licensesMin": 8,
+        "licensesMax": 8
+      },
+      {
+        "id": "1420973",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1443,
+        "pricereg": 5238,
+        "licensesMin": 9,
+        "licensesMax": 9
+      },
+      {
+        "id": "1420981",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1489,
+        "pricereg": 5820,
+        "licensesMin": 10,
+        "licensesMax": 10
+      }
+    ],
+    "courseIds": [
+      "169856",
+      "169916",
+      "171149",
+      "171150",
+      "171151",
+      "193399",
+      "193924",
+      "328975",
+      "329255"
+    ]
+  },
+  {
     "id": "171483",
     "title": "NativeScript with Angular Ultra",
     "subtitle": "Get as much NativeScript with Angular Knowledge as You Can Handle",
@@ -64,10 +289,10 @@
   },
   {
     "id": "171486",
-    "title": "NativeScript Core Master Bundle",
+    "title": "NativeScript Core Super Bundle",
     "subtitle": "Learn Anything and Everything About NativeScript Core",
     "description": "\n",
-    "url": "nativescript-core-master-bundle",
+    "url": "nativescript-core-super-bundle",
     "promototal": 100,
     "promoremaining": 3,
     "bundleLevel": 3,

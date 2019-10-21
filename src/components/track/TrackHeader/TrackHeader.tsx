@@ -7,17 +7,22 @@ interface TrackHeaderProps {
     authorNames: string[];
     iconImgSrc: string;
     desc: string;
+    onCTAClick: () => void;
 }
 
 export default function TrackHeader(props: TrackHeaderProps) {
 
     const TracksHeader = styled.div`
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px;
+      
         background-image: url(/img/bg/track-${props.track.id}-bg.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 0px -90px;
+
+        @media only screen and (max-width: 640px)
+        {
+            text-align: center;
+        }
     `;
 
     const Row = styled.div`
@@ -35,6 +40,13 @@ export default function TrackHeader(props: TrackHeaderProps) {
             content: " ";
             display: table;
         }
+
+        @media only screen and (max-width: 1300px) and (min-width: 641px)
+        {
+            max-width: 2000px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
     `;
 
     const TrackImg = styled.img`
@@ -43,12 +55,33 @@ export default function TrackHeader(props: TrackHeaderProps) {
     margin-bottom: -110px;
     margin-left: -90px;
     max-width: 80px;
+
+    @media only screen and (max-width: 1300px)
+    {
+        margin-left: -66px;
+        max-width: 70px;
+    }
+
+    @media only screen and (max-width: 640px)
+    {
+        margin-left: 0;
+        margin-bottom: 15px;
+        max-width: 80px;
+    }
     `;
 
     const TrackTitleArea = styled.div`
     @media only screen and (min-width: 64.0625em)
     {
         width: 58.33333%;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        float: left;
+    }
+
+    @media only screen and (min-width: 40.0625em)
+    {
         position: relative;
         padding-left: 15px;
         padding-right: 15px;
@@ -73,6 +106,13 @@ export default function TrackHeader(props: TrackHeaderProps) {
         display: inline-block;
         vertical-align: middle;
         margin-bottom: 8px;
+
+        @media only screen and (max-width: 640px)
+        {
+            font-size: 24px;
+            line-height: 26px;
+            margin-bottom: 4px;
+        }
     `;
 
     const IntructorList = styled.p`
@@ -81,6 +121,12 @@ export default function TrackHeader(props: TrackHeaderProps) {
         color: #aaa;
         margin-bottom: 10px;
         line-height: 14px;
+
+        @media only screen and (max-width: 640px)
+        {
+            font-size: 11px;
+            line-height: 14px;
+        }
     `;
 
     const TrackDesc = styled.p`
@@ -104,6 +150,16 @@ export default function TrackHeader(props: TrackHeaderProps) {
         padding-left: 15px;
         padding-right: 15px;
         float: left;
+    }
+
+    @media only screen and (max-width: 1024px)
+    {
+        padding-left: 15px;
+    }
+
+    @media only screen and (max-width: 640px)
+    {
+        padding-left: 0;
     }
     `;
 
@@ -135,41 +191,56 @@ export default function TrackHeader(props: TrackHeaderProps) {
     width: 100%;
     `;
 
+    const ActionButtonWrapper = styled.div`
+        width: 320px;
+        margin-top: 20px;
+
+        @media only screen and (max-width: 640px)
+        {
+            text-align: center;
+            display: inline-block;
+        }
+    `;
+
     return (
         <TracksHeader>
-            <div className="wrapper">
-                <Row>
-                    <TrackImg src={props.iconImgSrc} alt="JavaScript" />
-                </Row>
-                <Row>
-                    <TrackTitleArea>
-                        <TrackH4>Track</TrackH4>
-                        <TrackH1>{props.track.title}</TrackH1>
-                        <IntructorList>Instructors:{' '}
-                            {props.authorNames.join(', ')}
-                        </IntructorList>
-                        <div>
-                            <TrackDesc>{props.desc}</TrackDesc>
+
+            <Row>
+                <TrackImg src={props.iconImgSrc} alt="JavaScript" />
+            </Row>
+            <Row>
+                <TrackTitleArea>
+                    <TrackH4>Track</TrackH4>
+                    <TrackH1>{props.track.title}</TrackH1>
+                    <IntructorList>Instructors:{' '}
+                        {props.authorNames.join(', ')}
+                    </IntructorList>
+                    <div>
+                        <TrackDesc>{props.desc}</TrackDesc>
+                    </div>
+                </TrackTitleArea>
+                <RelatedArea style={{ display: 'none' }}>
+                    <RelatedH4>Test</RelatedH4>
+                    <p className="related-p">
+                        <a href="https://www.pluralsight.com/search?q=Web%20Developer"><RelatedLinkSpan>Web Developer</RelatedLinkSpan></a>
+
+                    </p>
+                </RelatedArea>
+                <GetStartedWrapper>
+                    <ActionButtonWrapper >
+                        <div className="btn-action green">
+                            <a onClick={() => props.onCTAClick()}>
+                                <span className="action-text-full">Get Started</span>
+                                <span className="action-text-medium">Get Started</span>
+                                <span className="action-text-small">Get Started</span>
+                            </a>
                         </div>
-                    </TrackTitleArea>
-                    <RelatedArea>
-
-                    </RelatedArea>
-                    <GetStartedWrapper>
-                        <div className="action-btn-wrapper">
-                            <div className="btn-action green">
-                                <a>
-                                    <span className="action-text-full">Get Started</span>
-                                    <span className="action-text-medium">Get Started</span>
-                                    <span className="action-text-small">Get Started</span>
-                                </a>
-                            </div>
-                        </div>
-                    </GetStartedWrapper>
-                </Row>
+                    </ActionButtonWrapper>
+                </GetStartedWrapper>
+            </Row>
 
 
-            </div>
+
         </TracksHeader>
     );
 }

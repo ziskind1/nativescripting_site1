@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import styled from 'styled-components';
+
 import { Bundle } from '../../../domain/models';
 import BundleCardList from '../BundleCard/BundleCardList';
 
@@ -6,25 +9,33 @@ import './BundleSection.css';
 
 export interface BundleSectionProps {
   bundles: Bundle[];
+  bundlesTitle: string;
+  bundlesDesc: string;
+  bg?: string;
 }
 
 const BundleSection: React.StatelessComponent<BundleSectionProps> = (
   props: BundleSectionProps
 ) => {
+
+  const Section = styled.div`
+    ${props.bg ? 'background-color: ' + props.bg : ''}
+  `;
+
   return (
-    <section className="section">
+    <Section className="section">
       <div className="wrapper">
         <a id="specials" />
         <div className="heading">
-          <h2 className="heading__title">Complete Bundles</h2>
+          <h2 className="heading__title">{props.bundlesTitle}</h2>
           <p className="heading__text">
-            Everything you need to master NativeScript
+            {props.bundlesDesc}
           </p>
         </div>
 
         <BundleCardList bundles={props.bundles} />
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -4,6 +4,13 @@
         "title": "NativeScript Angular",
         "imageSrc": "/img/nativescript_angular.svg",
         "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "bundles": [
+            {
+                "id": "684386",
+                "order": 1,
+                "description": "NativeScript with Angular Master Bundle"
+            }
+        ],
         "levels": [
             {
                 "levelId": 1,
@@ -27,6 +34,13 @@
         "title": "NativeScript Core",
         "imageSrc": "/img/nativescript_core.svg",
         "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "bundles": [
+            {
+                "id": "684512",
+                "order": 1,
+                "description": "NativeScript Core Master Bundle"
+            }
+        ],
         "levels": [
             {
                 "levelId": 1,
@@ -50,6 +64,7 @@
         "title": "NativeScript Vue",
         "imageSrc": "/img/nativescript_vue.svg",
         "description": "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development, you’ll be able to accomplish all of this and more with JavaScript. This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and enhance their skills.",
+        "bundles": [],
         "levels": [
             {
                 "levelId": 1,

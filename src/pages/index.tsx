@@ -178,7 +178,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           onSelectFilterType={filterType => this.filterByFilterType(filterType)}
         />
 
-        <BundleSection bundles={bundles} />
+        <BundleSection bundles={bundles} bundlesTitle="Complete Bundles" bundlesDesc="Everything you need to master NativeScript" />
 
         <Logos />
 

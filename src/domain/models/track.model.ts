@@ -6,10 +6,17 @@ export interface TrackLevel {
     levelDescription: string;
 }
 
+export interface TrackBundle {
+    bundleId: string;
+    bundleOrder: number;
+    bundleDescription: string;
+}
+
 export interface Track {
     id: string;
     title: string;
     description: string;
     imgSrc: string;
-    levels: TrackLevel[]
+    levels: TrackLevel[];
+    bundles: TrackBundle[];
 }

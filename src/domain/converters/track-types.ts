@@ -1,5 +1,5 @@
-import { TracksJsonEdge, TracksJson, Levels_2 } from '../graphql-types';
-import { Track, TrackLevel, TrackLevelType } from '../models';
+import { TracksJsonEdge, TracksJson, Levels_2, Bundles_2 } from '../graphql-types';
+import { Track, TrackLevel, TrackLevelType, TrackBundle } from '../models';
 import { defaultArray } from '../core';
 
 
@@ -8,6 +8,14 @@ export function trackLevelFromLevels_2(l: Levels_2): TrackLevel {
         levelId: l.levelId as TrackLevelType,
         levelName: l.title,
         levelDescription: l.description
+    };
+}
+
+export function trackBundleFromBundles_2(b: Bundles_2): TrackBundle {
+    return {
+        bundleId: b.id,
+        bundleOrder: b.order,
+        bundleDescription: b.description
     };
 }
 
@@ -22,7 +30,8 @@ export function trackFromTracksJson(t: TracksJson): Track {
         title: t.title,
         description: t.description,
         imgSrc: t.imageSrc,
-        levels: defaultArray(t.levels).map(trackLevelFromLevels_2)
+        levels: defaultArray(t.levels).map(trackLevelFromLevels_2),
+        bundles: defaultArray(t.bundles).map(trackBundleFromBundles_2)
     };
     return track;
 }

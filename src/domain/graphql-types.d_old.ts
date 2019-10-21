@@ -1265,7 +1265,7 @@ export interface SitePageConnectionComponentChunkNameQueryString {
 export interface SitePageConnectionContextInputObject {
   courseUrl?: Maybe<SitePageConnectionContextCourseUrlQueryString>;
 
-  trackId?: Maybe<SitePageConnectionContextTrackIdQueryString>;
+  url?: Maybe<SitePageConnectionContextUrlQueryString>;
 
   limit?: Maybe<SitePageConnectionContextLimitQueryInteger>;
 
@@ -1302,7 +1302,7 @@ export interface SitePageConnectionContextCourseUrlQueryString {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
-export interface SitePageConnectionContextTrackIdQueryString {
+export interface SitePageConnectionContextUrlQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -10725,8 +10725,6 @@ export interface FilterTracksJson {
 
   description?: Maybe<TracksJsonConnectionDescriptionQueryString_2>;
 
-  bundles?: Maybe<TracksJsonConnectionBundlesQueryList_2>;
-
   levels?: Maybe<TracksJsonConnectionLevelsQueryList_2>;
 
   internal?: Maybe<TracksJsonConnectionInternalInputObject_2>;
@@ -10775,64 +10773,6 @@ export interface TracksJsonConnectionImageSrcQueryString_2 {
 }
 
 export interface TracksJsonConnectionDescriptionQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface TracksJsonConnectionBundlesQueryList_2 {
-  elemMatch?: Maybe<TracksJsonConnectionBundlesInputObject_2>;
-}
-
-export interface TracksJsonConnectionBundlesInputObject_2 {
-  id?: Maybe<TracksJsonConnectionBundlesIdQueryString_2>;
-
-  order?: Maybe<TracksJsonConnectionBundlesOrderQueryInteger_2>;
-
-  description?: Maybe<TracksJsonConnectionBundlesDescriptionQueryString_2>;
-}
-
-export interface TracksJsonConnectionBundlesIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface TracksJsonConnectionBundlesOrderQueryInteger_2 {
-  eq?: Maybe<number>;
-
-  ne?: Maybe<number>;
-
-  gt?: Maybe<number>;
-
-  gte?: Maybe<number>;
-
-  lt?: Maybe<number>;
-
-  lte?: Maybe<number>;
-
-  in?: Maybe<(Maybe<number>)[]>;
-
-  nin?: Maybe<(Maybe<number>)[]>;
-}
-
-export interface TracksJsonConnectionBundlesDescriptionQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -12075,7 +12015,7 @@ export interface SitePageComponentChunkNameQueryString {
 export interface SitePageContextInputObject {
   courseUrl?: Maybe<SitePageContextCourseUrlQueryString>;
 
-  trackId?: Maybe<SitePageContextTrackIdQueryString>;
+  url?: Maybe<SitePageContextUrlQueryString>;
 
   limit?: Maybe<SitePageContextLimitQueryInteger>;
 
@@ -12112,7 +12052,7 @@ export interface SitePageContextCourseUrlQueryString {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
-export interface SitePageContextTrackIdQueryString {
+export interface SitePageContextUrlQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -21198,64 +21138,6 @@ export interface TracksJsonDescriptionQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
-export interface TracksJsonBundlesQueryList_2 {
-  elemMatch?: Maybe<TracksJsonBundlesInputObject_2>;
-}
-
-export interface TracksJsonBundlesInputObject_2 {
-  id?: Maybe<TracksJsonBundlesIdQueryString_2>;
-
-  order?: Maybe<TracksJsonBundlesOrderQueryInteger_2>;
-
-  description?: Maybe<TracksJsonBundlesDescriptionQueryString_2>;
-}
-
-export interface TracksJsonBundlesIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface TracksJsonBundlesOrderQueryInteger_2 {
-  eq?: Maybe<number>;
-
-  ne?: Maybe<number>;
-
-  gt?: Maybe<number>;
-
-  gte?: Maybe<number>;
-
-  lt?: Maybe<number>;
-
-  lte?: Maybe<number>;
-
-  in?: Maybe<(Maybe<number>)[]>;
-
-  nin?: Maybe<(Maybe<number>)[]>;
-}
-
-export interface TracksJsonBundlesDescriptionQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
 export interface TracksJsonLevelsQueryList_2 {
   elemMatch?: Maybe<TracksJsonLevelsInputObject_2>;
 }
@@ -21551,7 +21433,7 @@ export enum SitePageConnectionSortByFieldsEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
-  ContextTrackId = 'context___trackId',
+  ContextUrl = 'context___url',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -21608,7 +21490,7 @@ export enum SitePageDistinctEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
-  ContextTrackId = 'context___trackId',
+  ContextUrl = 'context___url',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -21660,7 +21542,7 @@ export enum SitePageGroupEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
-  ContextTrackId = 'context___trackId',
+  ContextUrl = 'context___url',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -22356,7 +22238,6 @@ export enum TracksJsonConnectionSortByFieldsEnum {
   Title = 'title',
   ImageSrc = 'imageSrc',
   Description = 'description',
-  Bundles = 'bundles',
   Levels = 'levels',
   Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
@@ -22374,7 +22255,6 @@ export enum TracksJsonDistinctEnum {
   Title = 'title',
   ImageSrc = 'imageSrc',
   Description = 'description',
-  Bundles = 'bundles',
   Levels = 'levels',
   Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
@@ -22387,7 +22267,6 @@ export enum TracksJsonGroupEnum {
   Title = 'title',
   ImageSrc = 'imageSrc',
   Description = 'description',
-  Bundles = 'bundles',
   Levels = 'levels',
   Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
@@ -22863,7 +22742,7 @@ export interface SitePage extends Node {
 export interface Context {
   courseUrl?: Maybe<string>;
 
-  trackId?: Maybe<string>;
+  url?: Maybe<string>;
 
   limit?: Maybe<number>;
 
@@ -23926,16 +23805,16 @@ export interface File extends Node {
   parent?: Maybe<Node>;
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
-  /** The children of this node of type bundlesJson */
-  childrenBundlesJson?: Maybe<(Maybe<BundlesJson>)[]>;
   /** The children of this node of type authorsJson */
   childrenAuthorsJson?: Maybe<(Maybe<AuthorsJson>)[]>;
-  /** The child of this node of type markdownRemark */
-  childMarkdownRemark?: Maybe<MarkdownRemark>;
+  /** The children of this node of type bundlesJson */
+  childrenBundlesJson?: Maybe<(Maybe<BundlesJson>)[]>;
+  /** The child of this node of type tracksJson */
+  childTracksJson?: Maybe<TracksJson>;
   /** The children of this node of type testimonialsJson */
   childrenTestimonialsJson?: Maybe<(Maybe<TestimonialsJson>)[]>;
-  /** The children of this node of type tracksJson */
-  childrenTracksJson?: Maybe<(Maybe<TracksJson>)[]>;
+  /** The child of this node of type markdownRemark */
+  childMarkdownRemark?: Maybe<MarkdownRemark>;
   /** The child of this node of type imageSharp */
   childImageSharp?: Maybe<ImageSharp>;
   /** The children of this node of type coursesJson */
@@ -24048,6 +23927,42 @@ export interface Internal_20 {
   owner?: Maybe<string>;
 }
 
+/** Node of type TracksJson */
+export interface TracksJson extends Node {
+  /** The id of this node. */
+  id: string;
+  /** The parent of this node. */
+  parent?: Maybe<Node>;
+  /** The children of this node. */
+  children?: Maybe<(Maybe<Node>)[]>;
+
+  title?: Maybe<string>;
+
+  imageSrc?: Maybe<string>;
+
+  description?: Maybe<string>;
+
+  levels?: Maybe<(Maybe<Levels_2>)[]>;
+
+  internal?: Maybe<Internal_21>;
+}
+
+export interface Levels_2 {
+  levelId?: Maybe<number>;
+
+  title?: Maybe<string>;
+
+  description?: Maybe<string>;
+}
+
+export interface Internal_21 {
+  contentDigest?: Maybe<string>;
+
+  type?: Maybe<string>;
+
+  owner?: Maybe<string>;
+}
+
 /** Node of type MarkdownRemark */
 export interface MarkdownRemark extends Node {
   /** The id of this node. */
@@ -24057,7 +23972,7 @@ export interface MarkdownRemark extends Node {
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
 
-  internal?: Maybe<Internal_21>;
+  internal?: Maybe<Internal_22>;
 
   frontmatter?: Maybe<Frontmatter_27>;
 
@@ -24080,7 +23995,7 @@ export interface MarkdownRemark extends Node {
   wordCount?: Maybe<WordCount>;
 }
 
-export interface Internal_21 {
+export interface Internal_22 {
   content?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -24122,52 +24037,6 @@ export interface WordCount {
   sentences?: Maybe<number>;
 
   words?: Maybe<number>;
-}
-
-/** Node of type TracksJson */
-export interface TracksJson extends Node {
-  /** The id of this node. */
-  id: string;
-  /** The parent of this node. */
-  parent?: Maybe<Node>;
-  /** The children of this node. */
-  children?: Maybe<(Maybe<Node>)[]>;
-
-  title?: Maybe<string>;
-
-  imageSrc?: Maybe<string>;
-
-  description?: Maybe<string>;
-
-  bundles?: Maybe<(Maybe<Bundles_2>)[]>;
-
-  levels?: Maybe<(Maybe<Levels_2>)[]>;
-
-  internal?: Maybe<Internal_22>;
-}
-
-export interface Bundles_2 {
-  id?: Maybe<string>;
-
-  order?: Maybe<number>;
-
-  description?: Maybe<string>;
-}
-
-export interface Levels_2 {
-  levelId?: Maybe<number>;
-
-  title?: Maybe<string>;
-
-  description?: Maybe<string>;
-}
-
-export interface Internal_22 {
-  contentDigest?: Maybe<string>;
-
-  type?: Maybe<string>;
-
-  owner?: Maybe<string>;
 }
 
 /** Node of type ImageSharp */
@@ -25044,8 +24913,6 @@ export interface TracksJsonQueryArgs {
   imageSrc?: Maybe<TracksJsonImageSrcQueryString_2>;
 
   description?: Maybe<TracksJsonDescriptionQueryString_2>;
-
-  bundles?: Maybe<TracksJsonBundlesQueryList_2>;
 
   levels?: Maybe<TracksJsonLevelsQueryList_2>;
 
