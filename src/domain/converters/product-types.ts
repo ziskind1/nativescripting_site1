@@ -4,6 +4,8 @@ import { Product } from '../models';
 function descriptionLegible(p: Products_3) {
   if (p.licensesMax === 1) {
     return `1 user`;
+  } else if (p.licensesMin === p.licensesMax) {
+    return `${p.licensesMin} users`;
   } else {
     return `${p.licensesMin}-${p.licensesMax} users`;
   }
