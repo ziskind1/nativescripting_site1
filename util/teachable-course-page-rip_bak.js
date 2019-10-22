@@ -70,13 +70,8 @@ $('.checkout-button-group').each((i, group) => {
   });
 });
 
-const singleRegPrice = productsTemp.find(p => p.licensesMin === 1).price;
-
 var products = [];
 productsTemp.forEach((p, i) => {
-
-  const regPrice = p.licensesMin * singleRegPrice;
-
   if (!products.find(f => f.licensesMin === p.licensesMin)) {
     const curLicMats = productsTemp.filter(
       pr => pr.licensesMin === p.licensesMin
@@ -90,13 +85,12 @@ productsTemp.forEach((p, i) => {
 
       const regProd = curLicMats.find(c => c.id !== saleProd.id);
 
-
       products.push({
         id: saleProd.id,
         name: saleProd.name,
         description: saleProd.description,
         pricesale: saleProd.price,
-        pricereg: regPrice,
+        pricereg: regProd.price,
         licensesMin: saleProd.licensesMin,
         licensesMax: saleProd.licensesMax
       });
@@ -106,7 +100,7 @@ productsTemp.forEach((p, i) => {
         name: p.name,
         description: p.description,
         pricesale: p.price,
-        pricereg: regPrice,
+        pricereg: p.price,
         licensesMin: p.licensesMin,
         licensesMax: p.licensesMax
       });

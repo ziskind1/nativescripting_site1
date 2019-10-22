@@ -1,5 +1,267 @@
 [
   {
+    "id": "684659",
+    "title": "Styling NativeScript Vue Applications",
+    "subtitle": "Everything about CSS in NativeScript Vue",
+    "description": "\n",
+    "url": "styling-nativescript-vue-applications",
+    "flavors": [
+      "Vue"
+    ],
+    "level": 1,
+    "order": 999,
+    "label": "PRESALE",
+    "launchdate": "02/01/2020",
+    "authors": [
+      "alex_ziskind"
+    ],
+    "products": [
+      {
+        "id": "1421530",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 49,
+        "pricereg": 49,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1421531",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 83,
+        "pricereg": 98,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1421532",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 125,
+        "pricereg": 147,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1421534",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 157,
+        "pricereg": 196,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1421535",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 196,
+        "pricereg": 245,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1421536",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 221,
+        "pricereg": 294,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1421538",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 257,
+        "pricereg": 343,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1421539",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 274,
+        "pricereg": 392,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1421541",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 309,
+        "pricereg": 441,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1421542",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 319,
+        "pricereg": 490,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "publishedChapters": [
+      10
+    ],
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Coming soon",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "12215300",
+            "name": "Coming soon",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "684644",
+    "title": "NativeScript Vue Pro",
+    "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android.",
+    "description": "\n",
+    "descriptionHtmlSections": [
+      {
+        "title": "Summary",
+        "descriptionHtml": "<p>This course offers an introduction to Vuex with the context of NativeScript Vue. You'll learn about everything from local component state, to namespaced modules, actions, getters, mutations and much more!</p>"
+      },
+      {
+        "title": "What you'll learn",
+        "descriptionHtml": "<p>Throughout the course, we'll look at everything from what state means, to appropriately mutating state with actions, mutations, as well as using getters to slice state when we need it most. We'll also be using the module approach to separate our state into different containers.</p> <p>Finally, we'll be spending time to ensure that our workflows are scalable by using the map helpers. This stops us having to manually access state, actions, mutations and getters with the $store prototype, and makes extending our Store a breeze!</p>"
+      }
+    ],
+    "url": "nativescript-vue-pro",
+    "flavors": [
+      "Vue"
+    ],
+    "level": 3,
+    "order": 999,
+    "label": "PRESALE",
+    "launchdate": "01/01/2020",
+    "authors": [
+      "alex_ziskind"
+    ],
+    "products": [
+      {
+        "id": "1421470",
+        "name": "1 user",
+        "description": "",
+        "pricesale": 139,
+        "pricereg": 139,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1421507",
+        "name": "2 users",
+        "description": "",
+        "pricesale": 236,
+        "pricereg": 278,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1421509",
+        "name": "3 users",
+        "description": "",
+        "pricesale": 354,
+        "pricereg": 417,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1421510",
+        "name": "4 users",
+        "description": "",
+        "pricesale": 445,
+        "pricereg": 556,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1421511",
+        "name": "5 users",
+        "description": "",
+        "pricesale": 556,
+        "pricereg": 695,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1421513",
+        "name": "6 users",
+        "description": "",
+        "pricesale": 626,
+        "pricereg": 834,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1421514",
+        "name": "7 users",
+        "description": "",
+        "pricesale": 730,
+        "pricereg": 973,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1421515",
+        "name": "8 users",
+        "description": "",
+        "pricesale": 778,
+        "pricereg": 1112,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1421516",
+        "name": "9 users",
+        "description": "",
+        "pricesale": 876,
+        "pricereg": 1251,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1421517",
+        "name": "10 users",
+        "description": "",
+        "pricesale": 904,
+        "pricereg": 1390,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "publishedChapters": [
+      10
+    ],
+    "chapters": [
+      {
+        "id": 10,
+        "name": "Coming soon",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "id": "12214934",
+            "name": "Coming soon",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "494196",
     "title": "NativeScript Vue and Vuex",
     "subtitle": "Start using Vuex for state management in your NativeScript-Vue apps",

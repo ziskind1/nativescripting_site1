@@ -1,5 +1,115 @@
 [
   {
+    "id": "684643",
+    "title": "NativeScript Vue Master Bundle",
+    "subtitle": "Get the complete NativeScript Vue course collection",
+    "description": "\n",
+    "url": "nativescript-vue-master-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1421574",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 209,
+        "pricereg": 424,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1421575",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 355,
+        "pricereg": 848,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1421576",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 533,
+        "pricereg": 1272,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1421577",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 669,
+        "pricereg": 1696,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1421578",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 836,
+        "pricereg": 2120,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1421579",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 941,
+        "pricereg": 2544,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1421580",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 1097,
+        "pricereg": 2968,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1421581",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 1170,
+        "pricereg": 3392,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1421582",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1317,
+        "pricereg": 3816,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1421583",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1359,
+        "pricereg": 4240,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "courseIds": [
+      "418792",
+      "328975",
+      "329255",
+      "494196",
+      "684644",
+      "684659"
+    ]
+  },
+  {
     "id": "684512",
     "title": "NativeScript Core Master Bundle",
     "subtitle": "Get the complete NativeScript Core Package",

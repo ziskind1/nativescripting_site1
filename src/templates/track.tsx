@@ -142,7 +142,7 @@ class TrackTemplate extends React.Component<
             position: relative;
             padding-left: 15px;
             padding-right: 15px;
-            float: left;
+            
         `;
 
         const TrackLevelDescription = styled.p`
