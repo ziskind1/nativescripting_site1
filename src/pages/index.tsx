@@ -39,6 +39,7 @@ import { Seo } from '../components/shared/Seo/Seo';
 import { TrackSection } from '../components/home/TrackSection/TrackSection';
 import { BrandsSection } from '../components/shared/Brands/BrandsSection';
 import { TracksJsonConnection } from '../domain/graphql-types.d_old';
+import SubHeroSection2 from '../components/home/SubHeroSection/SubHeroSection2';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -87,6 +88,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
     document.body.appendChild(script);
   }
 
+  /*
   private freeCoursesSelected() {
     this.setState({ selectedFilterType: 'Free' }, () => {
       this.scrollToElementById('courses');
@@ -98,6 +100,17 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       this.scrollToElementById('courses');
     });
   }
+
+    private allBundlesSelected() {
+    this.scrollToElementById('bundles');
+  }
+  */
+
+  private allCoursesSelected() {
+    this.scrollToElementById('courses');
+  }
+
+
 
   private scrollToElementById(id: string) {
     scrollToElementById(id);
@@ -162,14 +175,11 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <Hero />
 
-        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} />
+        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} heading="Choose your track" subheading="Whether you want to learn the Core NativeScript framework, or you are already using a UI framework like Angular or Vue and want to leverage those UI frameworks with NativeScript, we've got you covered." />
 
-        <SubHeroSection
-          onFreeCoursesClick={() => this.freeCoursesSelected()}
-          onPremiumCoursesClick={() => this.premiumCoursesSelected()}
+        <SubHeroSection2
+          onCoursesClick={() => this.allCoursesSelected()}
         />
-
-
 
         <BrandsSection disabled={false} />
 
@@ -183,11 +193,11 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           onSelectFilterType={filterType => this.filterByFilterType(filterType)}
         />
 
-        <BundleSection bundles={bundles} bundlesTitle="All available bundles" bundlesDesc="Everything you need to master NativeScript" />
-
         <Logos />
 
         <Testimonials testimonials={testimonials} />
+
+        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} heading="Get started today" subheading="Choose your track and start learning" />
 
         <SignUpSection />
 

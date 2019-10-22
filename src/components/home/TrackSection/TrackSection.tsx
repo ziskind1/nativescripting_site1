@@ -7,6 +7,8 @@ import { Course, Track } from '../../../domain/models';
 interface TrackSectionProps {
     courses: Course[];
     tracks: Track[];
+    heading: string;
+    subheading: string;
     disabled?: boolean;
 }
 
@@ -61,7 +63,7 @@ export const TrackSection: React.StatelessComponent<TrackSectionProps> = (
     return (
         <Section>
             <SectionWrapper className="wrapper">
-                <HeadingWrapper><Heading>Choose your track</Heading><SubTitle>Whether you want to learn the Core NativeScript framework, or you are already using a UI framework like Angular or Vue and want to leverage those UI frameworks with NativeScript, we've got you covered.</SubTitle></HeadingWrapper>
+                <HeadingWrapper><Heading>{props.heading}</Heading><SubTitle>{props.subheading}</SubTitle></HeadingWrapper>
 
                 <TrackCardList courses={props.courses} tracks={props.tracks}></TrackCardList>
             </SectionWrapper>
