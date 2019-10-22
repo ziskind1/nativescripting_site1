@@ -82,6 +82,7 @@ img {
   height: 48px;
   border-radius: 50%;
   margin-bottom: 10px;
+  border: 2px solid rgb(252, 201, 106);
 }
 
 .quotes__author a {
