@@ -2,6 +2,9 @@ import { Products_3 } from '../graphql-types';
 import { Product } from '../models';
 
 function descriptionLegible(p: Products_3) {
+  if (!p.licensesMax) {
+    p.licensesMax = p.licensesMin;
+  }
   if (p.licensesMax === 1) {
     return `1 user`;
   } else if (p.licensesMin === p.licensesMax) {
