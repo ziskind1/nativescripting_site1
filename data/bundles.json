@@ -1,5 +1,328 @@
 [
   {
+    "id": "685044",
+    "title": "NativeScript Vue Essential Bundle",
+    "subtitle": "Just the necessities for learning NativeScript Vue",
+    "description": "\n",
+    "url": "nativescript-vue-essential-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1422524",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 189,
+        "pricereg": 237,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1422525",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 321,
+        "pricereg": 474,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1422526",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 482,
+        "pricereg": 711,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1422527",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 605,
+        "pricereg": 948,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1422528",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 756,
+        "pricereg": 1185,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1422529",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 851,
+        "pricereg": 1422,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1422530",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 992,
+        "pricereg": 1659,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1422531",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 1058,
+        "pricereg": 1896,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1422532",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1191,
+        "pricereg": 2133,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1422534",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1229,
+        "pricereg": 2370,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "courseIds": [
+      "418792",
+      "684644",
+      "684659"
+    ]
+  },
+  {
+    "id": "685042",
+    "title": "NativeScript Core Essential Bundle",
+    "subtitle": "Just the necessities for learning NativeScript Core",
+    "description": "\n",
+    "url": "nativescript-core-essential-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1422505",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 159,
+        "pricereg": 188,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1422506",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 270,
+        "pricereg": 376,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1422511",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 405,
+        "pricereg": 564,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1422512",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 509,
+        "pricereg": 752,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1422514",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 636,
+        "pricereg": 940,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1422515",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 716,
+        "pricereg": 1128,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1422516",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 835,
+        "pricereg": 1316,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1422518",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 890,
+        "pricereg": 1504,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1422520",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1002,
+        "pricereg": 1692,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1422521",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1034,
+        "pricereg": 1880,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "courseIds": [
+      "171132",
+      "171131",
+      "171152",
+      "362074"
+    ]
+  },
+  {
+    "id": "685039",
+    "title": "NativeScript with Angular Essential Bundle",
+    "subtitle": "Just the necessities for learning NativeScript with Angular",
+    "description": "\n",
+    "url": "nativescript-with-angular-essential-bundle",
+    "promototal": 100,
+    "promoremaining": 0,
+    "bundleLevel": 1,
+    "products": [
+      {
+        "id": "1422494",
+        "name": "1 user",
+        "description": "\n",
+        "pricesale": 179,
+        "pricereg": 297,
+        "licensesMin": 1,
+        "licensesMax": null
+      },
+      {
+        "id": "1422495",
+        "name": "2 users",
+        "description": "\n",
+        "pricesale": 304,
+        "pricereg": 594,
+        "licensesMin": 2,
+        "licensesMax": null
+      },
+      {
+        "id": "1422496",
+        "name": "3 users",
+        "description": "\n",
+        "pricesale": 456,
+        "pricereg": 891,
+        "licensesMin": 3,
+        "licensesMax": null
+      },
+      {
+        "id": "1422498",
+        "name": "4 users",
+        "description": "\n",
+        "pricesale": 573,
+        "pricereg": 1188,
+        "licensesMin": 4,
+        "licensesMax": null
+      },
+      {
+        "id": "1422499",
+        "name": "5 users",
+        "description": "\n",
+        "pricesale": 716,
+        "pricereg": 1485,
+        "licensesMin": 5,
+        "licensesMax": null
+      },
+      {
+        "id": "1422500",
+        "name": "6 users",
+        "description": "\n",
+        "pricesale": 806,
+        "pricereg": 1782,
+        "licensesMin": 6,
+        "licensesMax": null
+      },
+      {
+        "id": "1422501",
+        "name": "7 users",
+        "description": "\n",
+        "pricesale": 940,
+        "pricereg": 2079,
+        "licensesMin": 7,
+        "licensesMax": null
+      },
+      {
+        "id": "1422502",
+        "name": "8 users",
+        "description": "\n",
+        "pricesale": 1002,
+        "pricereg": 2376,
+        "licensesMin": 8,
+        "licensesMax": null
+      },
+      {
+        "id": "1422503",
+        "name": "9 users",
+        "description": "\n",
+        "pricesale": 1128,
+        "pricereg": 2673,
+        "licensesMin": 9,
+        "licensesMax": null
+      },
+      {
+        "id": "1422504",
+        "name": "10 users",
+        "description": "\n",
+        "pricesale": 1164,
+        "pricereg": 2970,
+        "licensesMin": 10,
+        "licensesMax": null
+      }
+    ],
+    "courseIds": [
+      "169856",
+      "169916",
+      "171149",
+      "171151"
+    ]
+  },
+  {
     "id": "684643",
     "title": "NativeScript Vue Master Bundle",
     "subtitle": "Get the complete NativeScript Vue course collection",
@@ -7,7 +330,7 @@
     "url": "nativescript-vue-master-bundle",
     "promototal": 100,
     "promoremaining": 0,
-    "bundleLevel": 1,
+    "bundleLevel": 3,
     "products": [
       {
         "id": "1421574",
@@ -117,7 +440,7 @@
     "url": "nativescript-core-master-bundle",
     "promototal": 100,
     "promoremaining": 0,
-    "bundleLevel": 1,
+    "bundleLevel": 3,
     "products": [
       {
         "id": "1421115",
@@ -229,7 +552,7 @@
     "url": "nativescript-with-angular-master-bundle",
     "promototal": 100,
     "promoremaining": 0,
-    "bundleLevel": 1,
+    "bundleLevel": 3,
     "products": [
       {
         "id": "1420961",

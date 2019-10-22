@@ -19,7 +19,7 @@ const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (
     <section className="section">
       <div className="wrapper">
         <div className="heading">
-          <h2 className="heading__title">Available Courses</h2>
+          <h2 className="heading__title">All available courses</h2>
         </div>
 
         <CourseFilter

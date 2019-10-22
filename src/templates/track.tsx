@@ -146,7 +146,7 @@ class TrackTemplate extends React.Component<
         `;
 
         const TrackLevelDescription = styled.p`
-            color: #858585;
+            color: #fbe4b6;
             font-size: 15px;
             line-height: 1.7em;
             font-weight: 400;

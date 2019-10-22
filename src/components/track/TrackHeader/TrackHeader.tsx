@@ -131,7 +131,7 @@ export default function TrackHeader(props: TrackHeaderProps) {
 
     const TrackDesc = styled.p`
         font-weight: 300;
-        color: #858585;
+        color: #fbe4b6;
         font-size: 15px;
         line-height: 1.7em;
     `;
@@ -222,7 +222,7 @@ export default function TrackHeader(props: TrackHeaderProps) {
                 <RelatedArea style={{ display: 'none' }}>
                     <RelatedH4>Test</RelatedH4>
                     <p className="related-p">
-                        <a href="https://www.pluralsight.com/search?q=Web%20Developer"><RelatedLinkSpan>Web Developer</RelatedLinkSpan></a>
+                        <a href=""><RelatedLinkSpan>Web Developer</RelatedLinkSpan></a>
 
                     </p>
                 </RelatedArea>

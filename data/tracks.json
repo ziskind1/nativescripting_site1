@@ -7,8 +7,13 @@
         "bundles": [
             {
                 "id": "684386",
-                "order": 1,
+                "order": 10,
                 "description": "NativeScript with Angular Master Bundle"
+            },
+            {
+                "id": "685039",
+                "order": 5,
+                "description": "NativeScript with Angular Essential Bundle"
             }
         ],
         "levels": [
@@ -37,8 +42,13 @@
         "bundles": [
             {
                 "id": "684512",
-                "order": 1,
+                "order": 5,
                 "description": "NativeScript Core Master Bundle"
+            },
+            {
+                "id": "685042",
+                "order": 10,
+                "description": "NativeScript Core Essential Bundle"
             }
         ],
         "levels": [
@@ -67,8 +77,13 @@
         "bundles": [
             {
                 "id": "684643",
-                "order": 1,
+                "order": 10,
                 "description": "NativeScript Vue Master Bundle"
+            },
+            {
+                "id": "685044",
+                "order": 5,
+                "title": "NativeScript Vue Essential Bundle"
             }
         ],
         "levels": [

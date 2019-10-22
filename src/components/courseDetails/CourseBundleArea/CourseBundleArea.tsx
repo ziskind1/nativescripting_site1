@@ -13,7 +13,7 @@ export const CourseBundleArea: React.StatelessComponent<
 > = (props: CourseBundleAreaProps) => {
   return (
     <div className="course-bundle-area-container">
-      <h2>Complete Bundles</h2>
+      <h2>All available bundles</h2>
 
       <BundleCardList bundles={props.bundles} />
     </div>

@@ -13,7 +13,8 @@ import {
 import {
   authorFromAuthorsJsonEdge,
   courseFromCoursesJsonEdge,
-  testimonialFromTestimonialJsonEdge
+  testimonialFromTestimonialJsonEdge,
+  trackFromTracksJsonEdge
 } from '../domain/converters';
 
 import Hero from '../components/home/Hero/Hero';
@@ -37,6 +38,7 @@ import { Course } from '../domain/models';
 import { Seo } from '../components/shared/Seo/Seo';
 import { TrackSection } from '../components/home/TrackSection/TrackSection';
 import { BrandsSection } from '../components/shared/Brands/BrandsSection';
+import { TracksJsonConnection } from '../domain/graphql-types.d_old';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -45,6 +47,7 @@ interface IndexPageProps {
     authorsConnection: AuthorsJsonConnection;
     coursesConnection: CoursesJsonConnection;
     bundlesConnection: BundlesJsonConnection;
+    tracksConnection: TracksJsonConnection;
     testimonialsConnection: TestimonialsJsonConnection;
   };
 }
@@ -140,6 +143,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       bundleFromBundlesJsonEdge(b, this.state.courses)
     );
 
+    const tracks = this.props.data.tracksConnection.edges.map(t => trackFromTracksJsonEdge(t));
+
     const testimonials = this.props.data.testimonialsConnection.edges.map(
       testimonialFromTestimonialJsonEdge
     );
@@ -157,7 +162,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <Hero />
 
-        <TrackSection disabled={true} />
+        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} />
 
         <SubHeroSection
           onFreeCoursesClick={() => this.freeCoursesSelected()}
@@ -178,7 +183,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           onSelectFilterType={filterType => this.filterByFilterType(filterType)}
         />
 
-        <BundleSection bundles={bundles} bundlesTitle="Complete Bundles" bundlesDesc="Everything you need to master NativeScript" />
+        <BundleSection bundles={bundles} bundlesTitle="All available bundles" bundlesDesc="Everything you need to master NativeScript" />
 
         <Logos />
 
@@ -260,6 +265,28 @@ export const indexPageQuery = graphql`
             pricereg
             licensesMin
             licensesMax
+          }
+        }
+      }
+    }
+
+    #get tracks
+    tracksConnection: allTracksJson {
+      totalCount
+      edges {
+        node {
+          id
+          title
+          description
+          bundles {
+            id
+            order
+            description
+          }
+          levels {
+            levelId
+            title
+            description
           }
         }
       }
