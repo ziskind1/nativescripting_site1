@@ -21,7 +21,7 @@ export const MainLayout: React.SFC = ({ children }) => (
         `}
     render={data => (
       <div>
-        <Header siteName={'NativeScripting'} />
+        <Header siteName={'NativeScript Courses'} />
 
         <main role="main">{children}</main>
 

@@ -1,8 +1,8 @@
 export default {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'NativeScripting', // Navigation and Site Title
-  siteTitleAlt: '', // Alternative Site title for SEO
+  siteTitle: 'NativeScript Courses', // Navigation and Site Title
+  siteTitleAlt: 'NativeScripting', // Alternative Site title for SEO
   siteUrl: 'https://nativescripting.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteBanner: '/img/course_banners/nativescript_core_ng_course_banner_bg.png', // Your image for og:image tag. You can find it in the /static folder

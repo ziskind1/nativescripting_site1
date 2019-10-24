@@ -11,7 +11,7 @@ const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
 module.exports = {
   siteMetadata: {
-    siteName: `NativeScripting`,
+    siteName: `NativeScript Courses`,
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [

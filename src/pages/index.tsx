@@ -162,7 +162,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       testimonialFromTestimonialJsonEdge
     );
 
-    const pageTitle = `Courses | NativeScripting`;
+    const pageTitle = `NativeScript Courses on NativeScripting`;
 
     return (
       <MainLayout>
