@@ -56,8 +56,8 @@ export default class extends React.Component<AboutPageProps, {}> {
             </div>
 
             <div className="about-team">
-              <h2>Meet the awesome team behind</h2>
-              <h3>the most comprehensive NativeScript training</h3>
+              <h2>Meet the awesome team</h2>
+              <h3>behind the most comprehensive NativeScript training</h3>
             </div>
 
             <Clear />

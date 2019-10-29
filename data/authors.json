@@ -27,20 +27,6 @@
     ]
   },
   {
-    "id": "sean_perkins",
-    "name": "Sean Perkins",
-    "picture": "sean_perkins.png",
-    "bio": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
-    "biolong": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
-    "title": "NativeScript Trainer",
-    "twitter": "seanfperkins",
-    "github": "sean-perkins",
-    "types": [
-      "course",
-      "post"
-    ]
-  },
-  {
     "id": "eddy_verbruggen",
     "name": "Eddy Verbruggen",
     "picture": "eddy_verbruggen.png",
@@ -55,15 +41,16 @@
     ]
   },
   {
-    "id": "william_tjondrosuharto",
-    "name": "William TjondroSuharto",
-    "picture": "william_tjondrosuharto.png",
-    "bio": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
-    "biolong": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
-    "title": "Nativescript Ambassador",
-    "twitter": "williamjuan27",
-    "github": "williamjuan027",
+    "id": "sean_perkins",
+    "name": "Sean Perkins",
+    "picture": "sean_perkins.png",
+    "bio": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
+    "biolong": "Sean Perkins is a technology enthusiast with a deep background in object-orientated programming languages. Experienced with full-stack development, design and digital marketing best-practices; he focuses on building stable, performant and scalable web, native and backend solutions for corporate enterprises.",
+    "title": "NativeScript Trainer",
+    "twitter": "seanfperkins",
+    "github": "sean-perkins",
     "types": [
+      "course",
       "post"
     ]
   },
@@ -81,6 +68,32 @@
     ]
   },
   {
+    "id": "dave_coffin",
+    "name": "Dave Coffin",
+    "picture": "dave_coffin.png",
+    "bio": "Dave is an accomplished NativeScript developer, a Progress Developer Expert for NativeScript, a full stack web developer, and a passion for creating intuitive and beautiful digital experiences.",
+    "biolong": "Dave is the full package with an eye for design and UI/UX, an accomplished NativeScript developer, a full stack web developer, and a passion for creating intuitive and beautiful digital experiences. His favorite quote, told to him by a mentor: 'This is software, we can do whatever we want!' He's also a prolific songwriter and musician.",
+    "title": "Nativescript Expert",
+    "twitter": "davecoffin",
+    "github": "davecoffin",
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "william_tjondrosuharto",
+    "name": "William TjondroSuharto",
+    "picture": "william_tjondrosuharto.png",
+    "bio": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "biolong": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "title": "Nativescript Ambassador",
+    "twitter": "williamjuan27",
+    "github": "williamjuan027",
+    "types": [
+      "post"
+    ]
+  },
+  {
     "id": "tiago_alves",
     "name": "Tiago Alves",
     "picture": "tiago_alves.png",
@@ -89,6 +102,19 @@
     "title": "NativeScript Vue Guru",
     "twitter": "tiagoreisalves",
     "github": "tralves",
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "tyler_blake",
+    "name": "Tyler Blake",
+    "picture": "tyler_blake.png",
+    "bio": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
+    "biolong": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
+    "title": "Full Stack Developer",
+    "twitter": "TylerBlakeLOU",
+    "github": "tylerablake",
     "types": [
       "post"
     ]
@@ -111,8 +137,8 @@
     "name": "Alex Ziskind",
     "picture": "alex_ziskind.png",
     "bio": "Alex lives in Washington, DC. He's a speaker, trainer, and a Telerik Developer Expert. He's been invloved in NativeScript projects since 2015 and has created courses for Pluralsight and LinkedIn.",
-    "biolong": "Alex Ziskind consistently strives to be on the cutting edge of technology, employs the latest web and mobile techniques and integrates them with the cloud. For the last 16 years, Alex has been developing software solutions for the enterprise as well as small startups. In the last 8 years, his Washington DC based company, Nuvious, has been involved in architecting and implementing cloud solutions on an international scale. Since 2015, Alex has been recognized as a Telerik Developer Expert due to his community involvement with NativeScript. You can connect with Alex on Twitter <a href=\"\">@digitalix</a>.",
-    "title": "Trainer and Owner",
+    "biolong": "Alex Ziskind consistently strives to be on the cutting edge of technology, employs the latest web and mobile techniques and integrates them with the cloud. For the last 16 years, Alex has been developing software solutions for the enterprise as well as small startups. In the last 8 years, his Washington DC based company, Nuvious, has been involved in architecting and implementing cloud solutions on an international scale. Since 2015, Alex has been recognized as a Telerik Developer Expert due to his community involvement with NativeScript. You can connect with Alex on Twitter <a href=\"https://twitter.com/intent/user?screen_name=digitalix\">@digitalix</a>.",
+    "title": "Trainer and Founder",
     "twitter": "digitalix",
     "github": "alexziskind1",
     "types": [
