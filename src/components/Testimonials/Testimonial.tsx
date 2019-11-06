@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Testimonial } from "../../domain/models";
+import { getTestimonialImgSrc } from "../../utils/urls";
 
 export interface TestimonialProps {
   testimonial: Testimonial;
@@ -8,7 +9,9 @@ export interface TestimonialProps {
 const TestimonialComponent: React.StatelessComponent<TestimonialProps> = (
   props: TestimonialProps
 ) => {
-  const imgUrl = `/img/people/${props.testimonial.img}`;
+  //const imgUrl = `/img/people/${props.testimonial.img}`;
+  const imgUrl = getTestimonialImgSrc(props.testimonial.img, 48, 'jpg');
+
   const twitterUrl = `https://twitter.com/${props.testimonial.twitter}`;
 
   return (

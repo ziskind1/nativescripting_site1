@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Author } from '../../domain/models';
+import { getAuthorImgSrc } from '../../utils/urls';
 
 interface AuthorCardProps {
   author: Author;
@@ -11,7 +12,9 @@ export const AuthorCard: React.StatelessComponent<AuthorCardProps> = (
 ) => {
   const author = props.author;
 
-  const authorImgSrc = `/img/authors/${author.picture}`;
+  //const authorImgSrc = `/img/authors/${author.picture}`;
+  const authorImgSrc = getAuthorImgSrc(author.picture, 100);
+
   const twitterLink = `https://twitter.com/${author.twitter}`;
   const gitHubLink = `https://github.com/${author.github}`;
 

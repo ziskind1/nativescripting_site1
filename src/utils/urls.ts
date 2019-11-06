@@ -1,5 +1,22 @@
-export function getAuthorImgSrc(authorImageName: string): string {
-  return `/img/authors/${authorImageName}`;
+export function getAuthorImgSrc(authorImageName: string, size?: number, format?: string): string {
+  return getImageUrl('authors', authorImageName, size, format);
+}
+
+export function getTestimonialImgSrc(imageName: string, size?: number, format?: string): string {
+  return getImageUrl('people', imageName, size, format);
+}
+
+function getImageUrl(dir: string, imageName: string, size?: number, format?: string): string {
+  let ext = '.png';
+  let fileName = imageName + ext;
+
+  if (format) {
+    fileName = `${imageName}.${format}`;
+  }
+  if (size) {
+    return `/img/${dir}/${size}/${fileName}`;
+  }
+  return `/img/${dir}/${fileName}`;
 }
 
 export function isUrlExternal(url: string): boolean {

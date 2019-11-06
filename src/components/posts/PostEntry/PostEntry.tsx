@@ -27,7 +27,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
     );
   }
 
-  const authorImgSrc = getAuthorImgSrc(post.author.picture);
+  const authorImgSrc = getAuthorImgSrc(post.author.picture, 100);
 
   const twitterFollowScript = `<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>`;
 
