@@ -6,7 +6,7 @@ createdDate: '2019-11-05'
 updatedDate: '2019-11-05'
 draft: false
 tags: ['NativeScript', 'Tutorial']
-image: tns-progress-bar-animated-poster.png
+image: sliding-colors-tab-bar-animation-in-nativescript-poster.png
 ---
 
 In this tutorial, you'll learn how to create a bottom navigation bar with a sliding color animation. This tutorial will be focused more on creating the custom tab bar rather than how to use the `Tabs` component.
@@ -656,41 +656,3 @@ Thats it, we just created a custom tab bar that can be used with nativescript's 
 
 
 <br/>
-
-
-```typescript
-import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { Tabs, BottombarSlidingColorConfig } from "./bottombar-sliding-color/bottombar-sliding-color-config";
-
-@Component({
-    selector: "Home",
-    moduleId: module.id,
-    templateUrl: "./home.component.html",
-    styleUrls: ["./home.component.css"]
-})
-export class HomeComponent implements OnInit {
-
-    tabs: Tabs = [
-        { image: '~/assets/ic_local_bar.png', text: 'Bar', backgroundColor: "#7B6BE7" },
-        { image: '~/assets/ic_local_pizza.png', text: 'Pizza', backgroundColor: "#DD5A73" },
-        { image: '~/assets/ic_local_cafe.png', text: 'Coffee', backgroundColor: "#6CDFDF" },
-        { image: '~/assets/ic_fastfood.png', text: 'Burger', backgroundColor: "#84E7AD" },
-        { image: '~/assets/ic_tag_faces.png', text: 'Profile', backgroundColor: "#F8CB49" }
-    ];
-
-    bottombarConfig: BottombarSlidingColorConfig = {
-        height: 80,
-        backgroundColor: '#10101F'
-    };
-
-    constructor() {
-    }
-
-    ngOnInit(): void {
-    }
-
-    onTabIndexChange(index: number): void {
-        console.log('index', index);
-    }
-}
-```
