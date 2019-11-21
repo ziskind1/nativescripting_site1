@@ -187,5 +187,59 @@
     "order": 2000,
     "quoteHtml": "Please, if you are new to NativeScript this course is perfect. No nonsense at all. It is straight to the point and the instructor is awesome. The production of the course is fantastic. It is not often I find a course is this well put together.",
     "titleHtml": "Software Architect/Developer by day. RC Helicopter enthusiast by nights and weekend."
+  },
+  {
+    "id": "2200",
+    "name": "Paul Grimes",
+    "img": "paul_grimes",
+    "twitter": "paulgrimes_",
+    "order": 2200,
+    "quoteHtml": "Just finished NativeScript-Vue Introduction - great course, well done Alex, will be signing up to do more!",
+    "titleHtml": "CTO of OK200"
+  },
+  {
+    "id": "2240",
+    "name": "Ekpoto Liberty",
+    "img": "ekpoto_liberty",
+    "twitter": "am_delino",
+    "order": 2240,
+    "quoteHtml": "My experience with NativeScript coming from a web development background as a Javascript Developer is something words can't describe. No Java or Swift Skills required and I rock mobile application in a sec.",
+    "titleHtml": "Software Developer & Sound Engineer"
+  },
+  {
+    "id": "2250",
+    "name": "Brian Dillingham",
+    "img": "brian_dillingham",
+    "twitter": "dillinghammm",
+    "order": 2250,
+    "quoteHtml": "Well crafted step by step walkthroughs, very professional and worth the money.",
+    "titleHtml": "Laravel, Vue, React, Tailwind developer."
+  },
+  {
+    "id": "2300",
+    "name": "Mohammed Alarayshi",
+    "img": "mohammed_alarayshi",
+    "twitter": "MArayshi",
+    "order": 2300,
+    "quoteHtml": "Hi Alex. Thanks for your course NativeScript-Vue Introduction. It's really very helpful.",
+    "titleHtml": "Full-stack web and mobile developer"
+  },
+  {
+    "id": "2350",
+    "name": "Dima Liubko",
+    "img": "dima_liubko",
+    "twitter": "",
+    "order": 2350,
+    "quoteHtml": "Awesome course.",
+    "titleHtml": "Front-end Developer from Kiev, Ukraine."
+  },
+  {
+    "id": "2400",
+    "name": "Sohil Mansuri",
+    "img": "sohil_mansuri",
+    "twitter": "sohil0784",
+    "order": 2400,
+    "quoteHtml": "Super course",
+    "titleHtml": "Co-founder"
   }
 ]
