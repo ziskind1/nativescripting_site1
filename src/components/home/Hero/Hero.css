@@ -5,7 +5,8 @@
     position: relative;
     background-size: cover;
     /*background: url('/img/mobile-splash.jpg') center center no-repeat;*/
-    background: url('/img/bg-3.jpg') center center no-repeat;
+    background: url('/img/bg-4.png') center center no-repeat;
+    background-size: cover;
     padding: 120px;
 }
 .hero-content,
@@ -29,7 +30,7 @@
     /*background: -webkit-linear-gradient(305deg,#054cbf 0,#032E74 100%);
     background: linear-gradient(145deg,#054cbf 0,#032E74 100%);*/
     
-    background: linear-gradient(145deg,#061b39cc 0,rgba(8, 42, 94, .9) 100%);
+    /*background: linear-gradient(145deg,rgba(6, 27, 57, 0.2) 0,rgba(8, 42, 94, 0.1) 100%);*/
 }
 
 .hero-main-title {
