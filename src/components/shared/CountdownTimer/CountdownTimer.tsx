@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
 import './CountdownTimer.css';
 import {
@@ -6,8 +7,9 @@ import {
   ActionButtonProps
 } from '../../ActionButton/ActionButton';
 
-const expirationDateStr = 'Jul 5, 2019 23:59:59';
+const expirationDateStr = 'Dec 1, 2019 23:59:59';
 const ctaUrl = '/course/nativescript-with-angular-pro';
+const couponCode = 'SHOPFRIDAY19';
 
 interface CountdownTimerProps {
   expirationDateStr?: string;
@@ -78,6 +80,10 @@ class CountdownTimer extends React.Component<
     const timeStr =
       days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
+    const CouponCode = styled.span`
+      color: red;
+    `;
+
     return (
       <div
         className={
@@ -89,8 +95,8 @@ class CountdownTimer extends React.Component<
         <div className="timer-contents">
           <div className="timer-heading">
             <h2>
-              July 4th &nbsp;
-              <span className="oomph">50%</span> off any course
+              This weekend&nbsp;
+              <span className="oomph">40%</span> off any course or bundle
             </h2>
           </div>
 
@@ -116,7 +122,9 @@ class CountdownTimer extends React.Component<
             </ul>
           </div>
 
-          <h2>Use code 4JULY2019 at checkout!</h2>
+          <div className="timer-tail">
+            <h2>Use <CouponCode>SHOPFRIDAY19</CouponCode> at checkout!</h2>
+          </div>
 
           {
             // <CountdownTimerCTA text="Get It Now" />
