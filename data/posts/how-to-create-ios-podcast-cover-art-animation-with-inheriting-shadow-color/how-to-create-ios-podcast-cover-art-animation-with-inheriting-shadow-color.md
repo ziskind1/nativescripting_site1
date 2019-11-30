@@ -569,7 +569,7 @@ We hope you've enjoyed this tutorial. We are creating a series of iOS-focused Na
 - [How to Use iOS Large Titles](/posts/how-to-use-ios-large-titles)
 - How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color
 - [How to Use iOS Collapsing SearchBar](/posts/how-to-use-ios-collapsing-searchbar)
-- [Translucent Tabs in iOS]()
+- [Translucent Tabs in iOS](/posts/translucent-tabs-in-ios)
 - [Recreating the Spotify App Artist Page in NativeScript]()
 
 <br>

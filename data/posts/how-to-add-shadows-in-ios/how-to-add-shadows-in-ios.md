@@ -502,7 +502,7 @@ We hope you've enjoyed this short tutorial. We are creating a series of iOS-focu
 - [How to Use iOS Large Titles](/posts/how-to-use-ios-large-titles)
 - [How to Create iOS Podcast Cover Art Animation with Inheriting Shadow Color](/posts/how-to-create-ios-podcast-cover-art-animation-with-inheriting-shadow-color)
 - [How to Use iOS Collapsing SearchBar](/posts/how-to-use-ios-collapsing-searchbar)
-- [Translucent Tabs in iOS]()
+- [Translucent Tabs in iOS](/posts/translucent-tabs-in-ios)
 
 <br>
 
