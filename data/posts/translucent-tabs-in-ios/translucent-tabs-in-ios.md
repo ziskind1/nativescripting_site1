@@ -6,7 +6,7 @@ createdDate: '2019-11-25'
 updatedDate: '2019-11-25'
 draft: false
 tags: ['NativeScript', 'Tutorial', 'iOS']
-image: translucent-tabs-in-ios-poster.png
+image: translucent-nativescript-tabs-in-ios-poster.png
 ---
 
 
