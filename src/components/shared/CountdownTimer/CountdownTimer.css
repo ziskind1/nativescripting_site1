@@ -37,6 +37,7 @@
 .timer-contents h2 span.oomph {
   font-size: 1.5em;
   vertical-align: middle;
+  color: red;
 }
 
 .timer-section {
