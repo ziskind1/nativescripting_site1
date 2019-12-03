@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 interface CollapsibleProps {
     title: string;
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 //Currently not collapsible - make collapsible later

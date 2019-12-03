@@ -1,5 +1,8 @@
 import * as React from 'react';
+import styled from 'styled-components';
+
 import { handleFormSubmit } from '../../utils/form-utils';
+import { colors } from '../../global/colors';
 
 
 interface ContactPageFormProps { }
@@ -35,6 +38,83 @@ export class ContactPageForm extends React.Component<
     }
 
     public render() {
+
+        const SingleInputWrapper = styled.div`
+        
+        `;
+
+        const ILabel = styled.label`
+            padding-top: 0;
+        `;
+
+        const ISpan = styled.span`
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+        `;
+
+        const IInput = styled.input`
+            margin: 0;
+            vertical-align: baseline;
+            width: 100%;
+
+            appearance: none;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 0 rgba(84,94,111,.2);
+            font-family: geomanist,system;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: rgba(84,94,111,.8);
+            padding: 9px 14px 5px;
+            background: rgba(84,94,111,.04);
+            border: none;
+            outline: none;
+            line-height: 28px;
+        `;
+
+        const ITextarea = styled.textarea`
+            margin: 0;
+            vertical-align: baseline;
+            width: 100%;
+
+            appearance: none;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 0 rgba(84,94,111,.2);
+            font-family: geomanist,system;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: rgba(84,94,111,.8);
+            padding: 9px 14px 5px;
+            background: rgba(84,94,111,.04);
+            border: none;
+            outline: none;
+            line-height: 28px;
+        `;
+
+        const IInvisible = styled.input`
+            visibility: hidden;
+        `;
+
+        const ISubmit = styled.input`
+            position: relative;
+            height: 56px;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            background-color: ${colors.actionGreen1};
+
+            font-family: MonoRegular;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgb(25, 57, 109);
+            text-transform: uppercase;
+            line-height: 56px;
+            text-decoration: none;
+            border: none;
+            width: 100%;
+        `;
+
         return (
             <div>
                 {this.state.submitted && (
@@ -51,47 +131,59 @@ export class ContactPageForm extends React.Component<
                     >
                         <input type="hidden" name="form-name" value="contact-page-form" />
 
-                        <div className="single-input">
-                            <label>* Name</label>
-                            <input
-                                type="text"
-                                placeholder="Type your name here"
-                                name="name"
-                                required
-                                onChange={e => this.handleChange(e)}
-                            />
-                        </div>
-                        <div className="single-input">
-                            <label>* Email</label>
-                            <input
-                                type="email"
-                                placeholder="How to contact you back"
-                                name="email"
-                                required
-                                onChange={e => this.handleChange(e)}
-                            />
-                        </div>
-                        <div className="single-input">
-                            <label>* Message</label>
-                            <textarea
-                                placeholder="Type something"
-                                name="message"
-                                required
-                                onChange={e => this.handleChange(e)}
-                            />
-                        </div>
+                        <SingleInputWrapper>
+                            <ILabel>Name *
+                                <ISpan>
+                                    <IInput type="text"
+                                        placeholder="Type your name here"
+                                        name="name"
+                                        required
+                                        onChange={e => this.handleChange(e)}
+                                        value={this.state['name']}
+                                    />
+                                </ISpan>
+                            </ILabel>
+                        </SingleInputWrapper>
+
+                        <SingleInputWrapper>
+                            <ILabel>Email *
+                            <ISpan>
+                                    <IInput
+                                        type="email"
+                                        placeholder="How to contact you back"
+                                        name="email"
+                                        required
+                                        onChange={e => this.handleChange(e)}
+                                        value={this.state['email']}
+                                    />
+                                </ISpan>
+                            </ILabel>
+                        </SingleInputWrapper>
+
+                        <SingleInputWrapper>
+                            <ILabel>* Message
+                            <ISpan>
+                                    <ITextarea
+                                        placeholder="Type something"
+                                        name="message"
+                                        required
+                                        onChange={e => this.handleChange(e)}
+                                        value={this.state['message']}
+                                    />
+                                </ISpan>
+                            </ILabel>
+                        </SingleInputWrapper>
 
                         <div data-netlify-recaptcha />
-                        <input
-                            className="invisible"
+
+                        <IInvisible
                             name="bot-field"
                             onChange={e => this.handleChange(e)}
                         />
 
-                        <input
+                        <ISubmit
                             type="submit"
-                            value="Send request"
-                            className="theme-solid-button theme-button"
+                            value="Send"
                         />
                     </form>
                 )}
