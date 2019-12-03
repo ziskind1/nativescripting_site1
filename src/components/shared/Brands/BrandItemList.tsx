@@ -7,24 +7,21 @@ interface BrandItemListProps {
 
 }
 
+const BrandItemsContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 40px;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+`;
+
 export const BrandItemList: React.StatelessComponent<BrandItemListProps> = (
     props: BrandItemListProps
 ) => {
-
-
-
-    const BrandItemsContainer = styled.div`
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 40px;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    `;
-
     return (
 
         <BrandItemsContainer>

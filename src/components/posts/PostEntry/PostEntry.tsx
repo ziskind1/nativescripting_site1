@@ -15,6 +15,13 @@ interface PostEntryProps {
   post: Post;
 }
 
+const TwitterFollowLink = styled.a`
+margin-left: 10px;
+color: #12ffcd;
+border: 1px solid #12ffcd;
+padding: 0 5px 0 5px;
+`;
+
 export const PostEntry: React.StatelessComponent<PostEntryProps> = (
   props: PostEntryProps
 ) => {
@@ -35,12 +42,7 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
     post.author.twitter
     }`;
 
-  const TwitterFollowLink = styled.a`
-    margin-left: 10px;
-    color: #12ffcd;
-    border: 1px solid #12ffcd;
-    padding: 0 5px 0 5px;
-`;
+
 
   const disqusShortname = 'nativescripting';
   const disqusConfig = {

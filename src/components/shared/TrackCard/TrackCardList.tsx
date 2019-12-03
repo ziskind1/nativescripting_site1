@@ -10,6 +10,16 @@ interface TrackCardListProps {
     tracks: Track[];
 }
 
+
+const TrackCardsContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-end;
+margin-top: 40px;
+`;
+
+
 export const TrackCardList: React.StatelessComponent<TrackCardListProps> = (
     props: TrackCardListProps
 ) => {
@@ -21,14 +31,6 @@ export const TrackCardList: React.StatelessComponent<TrackCardListProps> = (
     const numBundlesCore = props.tracks.find(t => t.id === 'core').bundles.length;
     const numBundlesAngular = props.tracks.find(t => t.id === 'angular').bundles.length;
     const numBundlesVue = props.tracks.find(t => t.id === 'vue').bundles.length;
-
-    const TrackCardsContainer = styled.div`
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-end;
-        margin-top: 40px;
-    `;
 
 
     return (

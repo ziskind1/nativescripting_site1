@@ -5,13 +5,13 @@ import styled from 'styled-components';
 
 import './Hero.css';
 
-
+const MainTitle = styled.h1``;
 
 function Hero() {
 
     const goToSpecials = () => scrollToElementById('specials');
 
-    const MainTitle = styled.h1``;
+
 
     return (
         <div className="hero">

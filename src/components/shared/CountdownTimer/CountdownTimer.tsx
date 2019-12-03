@@ -15,6 +15,10 @@ interface CountdownTimerProps {
   expirationDateStr?: string;
 }
 
+const CouponCode = styled.span`
+color: red;
+`;
+
 interface CountdownTimerState {
   expired: boolean;
   distance: number;
@@ -80,9 +84,7 @@ class CountdownTimer extends React.Component<
     const timeStr =
       days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
-    const CouponCode = styled.span`
-      color: red;
-    `;
+
 
     return (
       <div

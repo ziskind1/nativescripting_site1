@@ -7,6 +7,11 @@ import './SignUpSection.css';
 
 var ga: any;
 
+const SubscriberSection = styled.div`
+    float: none !important;
+    margin-top: 160px !important;
+`;
+
 function submitSubscribeForm() {
     //ga('send', 'event', 'Outbound Link', 'click', 'Notify Me');
     const form = document.getElementById("mc-embedded-subscribe-form") as HTMLFormElement;
@@ -18,10 +23,7 @@ const hideStyle = {
     display: 'none'
 };
 
-const SubscriberSection = styled.div`
-    float: none !important;
-    margin-top: 160px !important;
-`;
+
 
 class SignUpSection extends React.Component<any, { myInputVal: string }> {
 

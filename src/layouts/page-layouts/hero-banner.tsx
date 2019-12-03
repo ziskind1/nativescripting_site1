@@ -6,16 +6,18 @@ interface HeroBannerProps {
     children: React.ReactNode;
 }
 
+
+const Internal = styled.div`
+background-color: ${colors.darkBlue};
+color: #fff;
+text-align: center;
+padding: 30px;
+`;
+
 export const HeroBanner: React.StatelessComponent<
     HeroBannerProps
 > = (props: HeroBannerProps) => {
 
-    const Internal = styled.div`
-        background-color: ${colors.darkBlue};
-        color: #fff;
-        text-align: center;
-        padding: 30px;
-    `;
 
     return (
         <Internal>

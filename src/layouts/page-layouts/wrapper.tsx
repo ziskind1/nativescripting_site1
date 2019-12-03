@@ -5,16 +5,18 @@ interface WrapperProps {
     children: React.ReactNode;
 }
 
+const WrapperInternal = styled.div`
+max-width: 1140px;
+margin: auto;
+padding: 0 10px;
+position: relative;
+`;
+
+
 export const Wrapper: React.StatelessComponent<
     WrapperProps
 > = (props: WrapperProps) => {
 
-    const WrapperInternal = styled.div`
-        max-width: 1140px;
-        margin: auto;
-        padding: 0 10px;
-        position: relative;
-    `;
 
     return (
         <WrapperInternal>

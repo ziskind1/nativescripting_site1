@@ -11,6 +11,12 @@ interface TrackCourseCardListProps {
     courses: Course[];
 }
 
+const TrackTiles = styled.div`
+float: left;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+`;
 
 export const TrackCourseCardList: React.StatelessComponent<TrackCourseCardListProps> = (
     props: TrackCourseCardListProps
@@ -20,12 +26,7 @@ export const TrackCourseCardList: React.StatelessComponent<TrackCourseCardListPr
         return <TrackCourseCard key={idx} course={course} />;
     });
 
-    const TrackTiles = styled.div`
-    float: left;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    `;
+
 
     return (
         <TrackTiles>{coursesHtml}</TrackTiles>

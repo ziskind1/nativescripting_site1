@@ -57,6 +57,85 @@ function getCourseLevelHtml(course: Course): JSX.Element {
     );
 }
 
+
+const TrackCourseBlock = styled.div`
+width: 240px;
+float: left;
+margin-bottom: 20px;
+margin-left: 10px;
+cursor: pointer;
+transition: all 0.3s ease;
+
+:hover {
+    transition-duration: 300ms;
+    transform: scale(1.03);
+}
+
+@media (max-width: 640px)
+{
+        width: 100%;
+}
+`;
+
+const CourseBox = styled.div`
+position: relative;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+
+@media only screen and (min-width: 641px)
+{
+    height: 100%;
+}
+`;
+
+const CourseBottom = styled.div`
+background-color: #032E74;
+padding: 10px 15px;
+position: relative;
+z-index: 10;
+flex: auto;
+`;
+
+const TrackCourseH4 = styled.h4`
+font-size: 14px;
+color: #fff;
+margin-bottom: 40px;
+`;
+
+const CourseInfoBox = styled.div`
+position: absolute;
+bottom: 10px;
+`;
+
+const CourseAuthor = styled.p`
+font-size: 11px;
+font-weight: 500;
+margin: 0;
+`;
+const CourseInfo = styled.p`
+font-size: 11px;
+font-weight: 500;
+margin: 0;
+line-height: 1.7em;
+`;
+const BadgeIcon = styled.div`
+color: #ffffff;
+fill: #ffffff;
+width: 16px;
+float: left;
+margin-bottom: -2px;
+`;
+
+const BadgeText = styled.div`
+float: left;
+text-transform: uppercase;
+color: #ffffff;
+font-size: 11px;
+font-weight: 700;
+margin-left: 6px;
+`;
+
 export const TrackCourseCard: React.StatelessComponent<TrackCourseCardProps> = (
     props: TrackCourseCardProps
 ) => {
@@ -124,67 +203,8 @@ export const TrackCourseCard: React.StatelessComponent<TrackCourseCardProps> = (
         }
         `;
 
-    const TrackCourseBlock = styled.div`
-        width: 240px;
-        float: left;
-        margin-bottom: 20px;
-        margin-left: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
 
-        :hover {
-            transition-duration: 300ms;
-            transform: scale(1.03);
-        }
 
-        @media (max-width: 640px)
-        {
-                width: 100%;
-        }
-    `;
-
-    const CourseBox = styled.div`
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    
-    @media only screen and (min-width: 641px)
-    {
-        height: 100%;
-    }
-    `;
-
-    const CourseBottom = styled.div`
-    background-color: #032E74;
-    padding: 10px 15px;
-    position: relative;
-    z-index: 10;
-    flex: auto;
-    `;
-
-    const TrackCourseH4 = styled.h4`
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 40px;
-    `;
-
-    const CourseInfoBox = styled.div`
-    position: absolute;
-    bottom: 10px;
-    `;
-
-    const CourseAuthor = styled.p`
-    font-size: 11px;
-    font-weight: 500;
-    margin: 0;
-    `;
-    const CourseInfo = styled.p`
-    font-size: 11px;
-    font-weight: 500;
-    margin: 0;
-    line-height: 1.7em;
-    `;
 
     const Badge = styled.div`
     background-color: #b517ec;
@@ -205,22 +225,7 @@ export const TrackCourseCard: React.StatelessComponent<TrackCourseCardProps> = (
     }
     `;
 
-    const BadgeIcon = styled.div`
-    color: #ffffff;
-    fill: #ffffff;
-    width: 16px;
-    float: left;
-    margin-bottom: -2px;
-    `;
 
-    const BadgeText = styled.div`
-    float: left;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    margin-left: 6px;
-    `;
 
     return (
 

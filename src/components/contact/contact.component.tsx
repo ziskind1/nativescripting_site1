@@ -13,18 +13,20 @@ export const PHYSICAL_ADDRESS_ONE_LINE =
 export const EMAIL_TRAINING_NUVIOUS = 'training@nuvious.com';
 export const CONST_PHONE_NUMBER = '1-855-656-6884';
 
+const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
+const telLink = `tel:${CONST_PHONE_NUMBER}`;
+
+
+const FormWrapper = styled.div`
+    background-color: ${colors.darkerBlue};
+`;
+
 interface ContactComponentProps { }
 
 export const ContactComponent: React.StatelessComponent<
     ContactComponentProps
 > = (props: ContactComponentProps) => {
-    const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
-    const telLink = `tel:${CONST_PHONE_NUMBER}`;
 
-
-    const FormWrapper = styled.div`
-        background-color: ${colors.darkerBlue};
-    `;
 
     return (
         <GridContainer>

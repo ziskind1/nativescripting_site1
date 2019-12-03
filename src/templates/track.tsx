@@ -65,6 +65,22 @@ interface TrackTemplateState {
     //bundles: Bundle[];
 }
 
+const TrackLevelDescriptionWrapper = styled.div`
+position: relative;
+padding-left: 15px;
+padding-right: 15px;
+
+`;
+
+const TrackLevelDescription = styled.p`
+color: #fbe4b6;
+font-size: 15px;
+line-height: 1.7em;
+font-weight: 400;
+margin-bottom: 20px;
+text-rendering: optimizeLegibility;
+`;
+
 class TrackTemplate extends React.Component<
     TrackTemplateProps,
     TrackTemplateState
@@ -138,21 +154,7 @@ class TrackTemplate extends React.Component<
             return null;
         }
 
-        const TrackLevelDescriptionWrapper = styled.div`
-            position: relative;
-            padding-left: 15px;
-            padding-right: 15px;
-            
-        `;
 
-        const TrackLevelDescription = styled.p`
-            color: #fbe4b6;
-            font-size: 15px;
-            line-height: 1.7em;
-            font-weight: 400;
-            margin-bottom: 20px;
-            text-rendering: optimizeLegibility;
-        `;
 
         const html = levels.map((level, idx) => {
 
