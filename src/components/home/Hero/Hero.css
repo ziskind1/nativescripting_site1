@@ -5,7 +5,7 @@
     position: relative;
     background-size: cover;
     /*background: url('/img/mobile-splash.jpg') center center no-repeat;*/
-    background: url('/img/bg-4.png') center center no-repeat;
+    background: url('/img/bg/home-banner.jpg') center center no-repeat;
     background-size: cover;
     padding: 120px;
 }
