@@ -12,11 +12,16 @@ interface ContactPageFormState {
     [key: string]: any;
 }
 
+
+
 const SingleInputWrapper = styled.div`
-        
+margin-bottom: 20px;
 `;
 
+
+
 const ILabel = styled.label`
+    color: ${colors.titleBlue};
     padding-top: 0;
 `;
 
@@ -33,17 +38,19 @@ const IInput = styled.input`
     width: 100%;
 
     appearance: none;
-    border-radius: 5px;
-    box-shadow: inset 0 2px 0 rgba(84,94,111,.2);
-    font-family: geomanist,system;
+
     font-weight: 400;
     font-size: 1.6rem;
-    color: rgba(84,94,111,.8);
-    padding: 9px 14px 5px;
-    background: rgba(84,94,111,.04);
-    border: none;
+    color: ${colors.titleGreen};
+    padding: 5px 10px;
+
     outline: none;
     line-height: 28px;
+
+
+    background-color: #032e74;
+    border: 1px solid #12ffcd;
+    box-shadow: 0px 0px 0px 0px #E6E9EC;
 `;
 
 const ITextarea = styled.textarea`
@@ -52,17 +59,21 @@ const ITextarea = styled.textarea`
     width: 100%;
 
     appearance: none;
-    border-radius: 5px;
+
     box-shadow: inset 0 2px 0 rgba(84,94,111,.2);
-    font-family: geomanist,system;
+
     font-weight: 400;
     font-size: 1.6rem;
-    color: rgba(84,94,111,.8);
-    padding: 9px 14px 5px;
-    background: rgba(84,94,111,.04);
-    border: none;
+    color: ${colors.titleGreen};
+    padding: 5px 10px;
+
+
     outline: none;
     line-height: 28px;
+
+    background-color: #032e74;
+    border: 1px solid #12ffcd;
+    box-shadow: 0px 0px 0px 0px #E6E9EC;
 `;
 
 const IInvisible = styled.input`
@@ -75,17 +86,17 @@ const ISubmit = styled.input`
     cursor: pointer;
     text-align: center;
     overflow: hidden;
-    background-color: ${colors.actionGreen1};
+    background-color: ${colors.actionPurple};
 
     font-family: MonoRegular;
     font-size: 16px;
     font-weight: 700;
-    color: rgb(25, 57, 109);
+    color: ${colors.white};
     text-transform: uppercase;
     line-height: 56px;
     text-decoration: none;
     border: none;
-    width: 100%;
+    width: 50%;
 `;
 
 export class ContactPageForm extends React.Component<
@@ -137,8 +148,6 @@ export class ContactPageForm extends React.Component<
                             <ILabel>Name *
                                 <ISpan>
                                     <IInput type="text"
-                                        key="name"
-                                        placeholder="Type your name here"
                                         name="name"
                                         required
                                         onChange={e => this.handleChange(e)}
@@ -153,7 +162,6 @@ export class ContactPageForm extends React.Component<
                             <ISpan>
                                     <IInput
                                         type="email"
-                                        placeholder="How to contact you back"
                                         name="email"
                                         required
                                         onChange={e => this.handleChange(e)}
@@ -164,10 +172,9 @@ export class ContactPageForm extends React.Component<
                         </SingleInputWrapper>
 
                         <SingleInputWrapper>
-                            <ILabel>* Message
+                            <ILabel>Message *
                             <ISpan>
                                     <ITextarea
-                                        placeholder="Type something"
                                         name="message"
                                         required
                                         onChange={e => this.handleChange(e)}
@@ -179,14 +186,16 @@ export class ContactPageForm extends React.Component<
 
                         <div data-netlify-recaptcha />
 
+                        <SingleInputWrapper style={{ textAlign: 'center' }}>
+                            <ISubmit
+                                type="submit"
+                                value="Send"
+                            />
+                        </SingleInputWrapper>
+
                         <IInvisible
                             name="bot-field"
                             onChange={e => this.handleChange(e)}
-                        />
-
-                        <ISubmit
-                            type="submit"
-                            value="Send"
                         />
                     </form>
                 )}

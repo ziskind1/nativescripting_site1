@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface GridColumnProps {
     children: React.ReactNode;
     doubleCol?: boolean;
+    style?: React.CSSProperties;
 }
 
 const Column = styled.div`
@@ -31,7 +32,7 @@ export const GridColumn: React.StatelessComponent<
     const colClass = props.doubleCol ? 'double-column' : 'column';
 
     return (
-        <Column className={colClass}>
+        <Column className={colClass} style={props.style}>
             {props.children}
         </Column>
     );

@@ -6,19 +6,25 @@ import { GridContainer } from '../../layouts/grid/grid-container';
 import { GridRow } from '../../layouts/grid/grid-row';
 import { GridColumn } from '../../layouts/grid/grid-column';
 import { colors } from '../../global/colors';
+import { PageHeading2 } from '../shared/PageHeaders';
 
 
 export const PHYSICAL_ADDRESS_ONE_LINE =
     '9466 Georgia Ave. #66, Silver Spring MD 20910, United States';
-export const EMAIL_TRAINING_NUVIOUS = 'training@nuvious.com';
-export const CONST_PHONE_NUMBER = '1-855-656-6884';
+export const EMAIL_TRAINING_NUVIOUS = 'info@nuvious.com';
 
-const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScript%20Training%20Email`;
-const telLink = `tel:${CONST_PHONE_NUMBER}`;
+
+const mailtoLink = `mailto:${EMAIL_TRAINING_NUVIOUS}?cc=alex@nuvious.com&subject=NativeScripting%20Contact%20Email`;
+
 
 
 const FormWrapper = styled.div`
     background-color: ${colors.darkerBlue};
+    padding: 30px;
+`;
+
+const ContactInfoList = styled.div`
+    margin-bottom: 30px;
 `;
 
 interface ContactComponentProps { }
@@ -32,12 +38,13 @@ export const ContactComponent: React.StatelessComponent<
         <GridContainer>
             <GridRow>
                 <GridColumn>
-                    <h3>Let's get your team trained!</h3>
+                    <PageHeading2>Get in touch</PageHeading2>
+                    <p>We'll get back to you shortly.</p>
                 </GridColumn>
             </GridRow>
 
-            <GridRow>
-                <GridColumn>
+            <GridRow small={true}>
+                <GridColumn style={{ marginRight: '30px' }}>
                     <GridContainer>
 
                         <GridRow>
@@ -51,29 +58,41 @@ export const ContactComponent: React.StatelessComponent<
                     </GridContainer>
                 </GridColumn>
 
-                <GridColumn>
-                    <div className="contact-address">
+                <GridColumn style={{ margin: '30px' }}>
+
+                    <h4>Address</h4>
+
+                    <ContactInfoList>
                         <ul className="address">
+                            <li>NativeScripting</li>
                             <li>
-                                <i className="flaticon-map-bold" />{' '}
-                                {PHYSICAL_ADDRESS_ONE_LINE}
+                                9466 Georgia Ave. #66
                             </li>
+                            <li>
+                                Silver Spring, MD 20910
+                            </li>
+                            <li>
+                                United States
+                            </li>
+                        </ul>
+                    </ContactInfoList>
+
+                    <h4>Contact</h4>
+
+                    <ContactInfoList>
+                        <ul className="address">
                             <li>
                                 <i className="flaticon-email" />{' '}
                                 <a href={mailtoLink}>{EMAIL_TRAINING_NUVIOUS}</a>
                             </li>
                             <li>
-                                <i className="flaticon-call" />
-                                <a href={telLink}>+{CONST_PHONE_NUMBER}</a>
-                            </li>
-                            <li>
                                 <i className="fa fa-calendar" />
                                 <a href="https://calendly.com/nuvious" target="_blank">
                                     Schedule a quick call
-                    </a>
+                                </a>
                             </li>
                         </ul>
-                    </div>
+                    </ContactInfoList>
                 </GridColumn>
 
             </GridRow>
