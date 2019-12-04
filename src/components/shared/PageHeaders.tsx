@@ -5,6 +5,7 @@ import { colors } from '../../global/colors';
 
 interface PageHeadingMainProps {
     children: React.ReactNode;
+    center?: boolean;
 }
 
 interface PageHeading2Props {
@@ -16,30 +17,30 @@ interface PageHeading3Props {
 }
 
 
-export const PageHeadingMain = styled.h1`
+export const PageHeadingMainInternal = styled.h1`
     font-family: MonoRegular;
     font-size: ${sizes.h1}px;
     font-weight: 700;
     line-height: 50px;
     color: ${colors.titleGreen};
     letter-spacing: 2px;
-    margin: 10px 0 10px 0;
-    text-align: center;
+    margin: 10px 0 0 0;
 `;
 
-/*
+
 export const PageHeadingMain: React.StatelessComponent<
     PageHeadingMainProps
 > = (props: PageHeadingMainProps) => {
 
+    const style: React.CSSProperties = { textAlign: props.center ? 'center' : 'left' };
 
     return (
-        <H1>
+        <PageHeadingMainInternal style={style}>
             {props.children}
-        </H1>
+        </PageHeadingMainInternal>
     );
 };
-*/
+
 
 export const PageHeading2 = styled.h2`
 font-family: MonoRegular;

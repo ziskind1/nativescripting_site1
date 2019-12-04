@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { DEBUG_LAYOUT, debugBorderWhite } from '../../global/layout-debug';
 
 interface GridColumnProps {
     children: React.ReactNode;
@@ -11,7 +12,6 @@ const Column = styled.div`
 display: flex;
 flex-direction: column;
 flex-basis: 100%;
-border: 1px solid orange;
 
 @media screen and (min-width: 800px) {
     .column {
@@ -31,8 +31,12 @@ export const GridColumn: React.StatelessComponent<
 
     const colClass = props.doubleCol ? 'double-column' : 'column';
 
+    // This combines the incoming style with the debug border
+    const style = { ...(props.style ? props.style : {}), ...(DEBUG_LAYOUT ? debugBorderWhite : {}) };
+
+
     return (
-        <Column className={colClass} style={props.style}>
+        <Column className={colClass} style={style}>
             {props.children}
         </Column>
     );

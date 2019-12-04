@@ -22,7 +22,7 @@ export default class extends React.Component<ContactPageProps, any> {
     }
 
     public render() {
-        const pageTitle = `Contact Us | NativeScript Training`;
+        const pageTitle = `Contact Us | NativeScript Courses`;
 
         return (
 
@@ -35,13 +35,10 @@ export default class extends React.Component<ContactPageProps, any> {
                 <ContentPageWrapper>
                     <PageSection>
                         <Wrapper>
-                            <GridContainer>
-                                <GridRow>
-                                    <GridColumn>
-                                        <PageHeadingMain>Contact Us</PageHeadingMain>
-                                    </GridColumn>
-                                </GridRow>
 
+                            <PageHeadingMain center>Contact Us</PageHeadingMain>
+
+                            <GridContainer>
                                 <GridRow>
                                     <GridColumn>
                                         <ContactComponent />
