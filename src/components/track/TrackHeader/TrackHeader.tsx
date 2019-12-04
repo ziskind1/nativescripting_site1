@@ -193,7 +193,7 @@ export default function TrackHeader(props: TrackHeaderProps) {
     const TracksHeader = styled.div`
         padding: 30px;
       
-        background-image: url(/img/bg/track-${props.track.id}-bg.jpg);
+        background-image: url(/img/bg/track-${props.track.id}-bg.svg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
