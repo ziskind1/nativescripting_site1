@@ -1,31 +1,27 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { ContactComponent } from '../components/contact/contact.component';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
 import { ContentPageWrapper } from '../layouts/page-layouts/content-page';
 import { Wrapper } from '../layouts/page-layouts/wrapper';
-import { PageHeadingMain } from '../components/shared/PageHeaders';
+import { PageHeadingMain, PageHeading2, PageHeading3 } from '../components/shared/PageHeaders';
 import { PageSection } from '../layouts/page-layouts/page-section';
 
-import { GridRow } from '../layouts/grid2/grid-row';
-import { GridColumn } from '../layouts/grid2/grid-column';
-import { ContactComponent } from '../components/contact/contact.component';
+interface ContactPageProps { }
 
-
-interface JoinAuthorsPageProps { }
-
-export default class extends React.Component<JoinAuthorsPageProps, any> {
-    constructor(props: JoinAuthorsPageProps) {
+export default class extends React.Component<ContactPageProps, any> {
+    constructor(props: ContactPageProps) {
         super(props);
     }
 
     public render() {
-        const pageTitle = `Join Us | NativeScript Courses`;
+        const pageTitle = `Affiliates | NativeScript Courses`;
 
         return (
             <MainLayout>
-                <Seo path="/join-authors" />
+                <Seo path="/affiliates" />
                 <Helmet>
                     <title>{pageTitle}</title>
                 </Helmet>
@@ -33,7 +29,7 @@ export default class extends React.Component<JoinAuthorsPageProps, any> {
                 <ContentPageWrapper>
                     <PageSection>
                         <Wrapper>
-                            <PageHeadingMain center>Join Us</PageHeadingMain>
+                            <PageHeadingMain center>Boost your earnings with our affiliate program</PageHeadingMain>
                             <ContactComponent />
                         </Wrapper>
                     </PageSection>

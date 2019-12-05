@@ -16,19 +16,35 @@ const FooterBottom = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    color: #aaa;
+    color: ${colors.titleBlue};
     font-weight: 500;
+    margin-top: 30px;
 `;
 const FooterLogoImg = styled.img`
 width: 34px;
 height: 34px;
 margin-right: 20px;
 `;
-const Terms = styled.span`
-min-width: 150px;
-text-align: center;
-height: 34px;
-line-height: 34px;
+
+
+const FooterSocialList = styled.ul`
+list-style: none;
+padding: 0;
+    margin: 0;
+`;
+const FooterSocialListItem = styled.li`
+line-height: 28px;
+margin-right: 5px;
+display: inline-block;
+transition: opacity .2s ease;
+list-style: none;
+`;
+const FooterSocialLink = styled.a`
+color: #fff!important;
+    transition: color .2s ease;
+    display: block;
+    width: 24px;
+    height: 24px;
 `;
 
 export const FooterCopyrightLinks: React.StatelessComponent<
@@ -47,14 +63,34 @@ export const FooterCopyrightLinks: React.StatelessComponent<
                     <Link to="/">
                         <FooterLogoImg src="/img/logo_full_icon.svg" alt="NativeScripting" />
                     </Link>
-                    <span className="ftr-copyright">Copyright © {year} - NativeScripting. All rights reserved</span>
+                    <span>Copyright © {year} - NativeScripting. All rights reserved</span>
                 </FooterBottom>
             </GridColumn>
             <GridColumn xs={12} md={6}>
                 <FooterBottom>
-                    <Terms><Link to="/licencing">Licencing Agreement</Link></Terms>
+                    <FooterSocialList>
 
-                    <Terms><Link to="/privacy">Privacy Policy</Link></Terms>
+                        <FooterSocialListItem>
+                            <FooterSocialLink target="_blank" rel="noopener" href="https://twitter.com/nativescripting">
+                                <img src="/img/social/twitter-34px.svg" alt="Twitter" />
+                            </FooterSocialLink>
+                        </FooterSocialListItem>
+                        <FooterSocialListItem>
+                            <FooterSocialLink target="_blank" rel="noopener" href="https://fb.me/nativescripting">
+                                <img src="/img/social/facebook-34px.svg" alt="Facebook" />
+                            </FooterSocialLink>
+                        </FooterSocialListItem>
+                        <FooterSocialListItem>
+                            <FooterSocialLink target="_blank" rel="noopener" href="https://github.com/nativescripting">
+                                <img src="/img/social/github-34px.svg" alt="GitHub" />
+                            </FooterSocialLink>
+                        </FooterSocialListItem>
+                        <FooterSocialListItem>
+                            <FooterSocialLink target="_blank" rel="noopener" href="https://www.youtube.com/c/alexanderziskind">
+                                <img src="/img/social/youtube-34px.svg" alt="YouTube" />
+                            </FooterSocialLink>
+                        </FooterSocialListItem>
+                    </FooterSocialList>
                 </FooterBottom>
             </GridColumn>
 

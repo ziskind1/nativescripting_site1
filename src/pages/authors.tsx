@@ -14,7 +14,7 @@ import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import { Clear } from '../components/shared/Clear';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
-import { PageHeadingMain } from '../components/shared/PageHeaders';
+import { colors } from '../global/colors';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -36,14 +36,14 @@ export default class extends React.Component<AboutPageProps, {}> {
 
     const breadCrumbs = [
       { name: 'All courses', url: '/' },
-      { name: 'About', url: '' }
+      { name: 'Authors', url: '' }
     ];
 
-    const pageTitle = `About | NativeScripting`;
+    const pageTitle = `Authors | NativeScripting`;
 
     return (
       <MainLayout>
-        <Seo path="/about" />
+        <Seo path="/authors" />
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -54,33 +54,28 @@ export default class extends React.Component<AboutPageProps, {}> {
           <div className="about-page-container">
 
 
-            <div className="video-container">
-              <div className="about-top-block">
-                <PageHeadingMain center>About the most comprehensive NativeScript training</PageHeadingMain>
-
-                <p>
-                  NativeScripting is a single place for high quality,
-                  evergreen, on demand video learning for NativeScript.
-                  Created by Alex Ziskind, who has also authored courses for
-                  Pluralsight and LinkedIn, NativeScripting offers up to date
-                  video content that is delivered to the learner quickly, just
-                  as the versions of NativeScript change quickly. This is the
-                  single place for top NativeScript experts to share their
-                  knowledge with the world, in video form.
-                  </p>
-
-
-                <div className="video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://player.vimeo.com/video/315987685"
-                    frameBorder="0"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
+            <div className="about-team">
+              <h2>Meet the awesome team</h2>
+              <h3>behind the most comprehensive NativeScript training</h3>
             </div>
+
+            <Clear />
+
+            <AuthorCardList authors={authors} />
+
+            <Clear />
+
+            <div className="about-team">
+              <h2>Join Us</h2>
+              <h3>Write about NativeScript!</h3>
+
+              <div style={{ textAlign: 'center' }}>
+                <a href="/join-authors" style={{ color: colors.actionGreen1 }}>Inquire here</a>
+              </div>
+
+
+            </div>
+
 
             <SignUpSection />
           </div>
@@ -90,8 +85,8 @@ export default class extends React.Component<AboutPageProps, {}> {
   }
 }
 
-export const aboutPageQuery = graphql`
-  query AboutPageQuery {
+export const authorsPageQuery = graphql`
+  query AuthorsPageQuery {
     #get authors
     authorsConnection: allAuthorsJson {
       totalCount

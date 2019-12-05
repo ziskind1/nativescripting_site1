@@ -54,7 +54,7 @@ export default class PostsPage extends React.Component<PostsIndexPageProps> {
       { name: 'Posts', url: '' }
     ];
 
-    const pageTitle = `Posts | NativeScripting`;
+    const pageTitle = `Articles | NativeScript Courses`;
 
     return (
       <MainLayout>
@@ -67,9 +67,7 @@ export default class PostsPage extends React.Component<PostsIndexPageProps> {
 
         <div className="wrapper">
           <div className="posts-container">
-            <div className="breadcrumb-wrapper">
-              <BreadCrumbs breadcrumbs={breadCrumbs} />
-            </div>
+
 
             <PostsSection posts={posts} />
 

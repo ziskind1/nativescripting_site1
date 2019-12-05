@@ -17,8 +17,8 @@ function Header(props: HeaderProps) {
       </div>
 
       <div className="header-nav-container">
-        <Link to="/posts">Posts</Link>
-        <Link to="/about">Authors</Link>
+        <Link to="/posts">Articles</Link>
+        <Link to="/authors" className="secondary-link">Authors</Link>
         <Link to="/faq" className="secondary-link">
           FAQ
         </Link>

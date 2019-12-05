@@ -37,7 +37,7 @@ export const Footer2: React.StatelessComponent<
             <Wrapper>
 
                 <FooterCatLinks />
-                <FooterCopyrightLinks />
+                <FooterCopyrightLinks style={{ marginTop: '50px', borderTop: '1px solid #11f5ff33' }} />
 
             </Wrapper>
         </Footer >
