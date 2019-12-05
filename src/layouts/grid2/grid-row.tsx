@@ -9,7 +9,7 @@ interface GridRowProps {
     style?: React.CSSProperties;
 }
 
-export const GridRow2: React.StatelessComponent<
+export const GridRow: React.StatelessComponent<
     GridRowProps
 > = (props: GridRowProps) => {
 

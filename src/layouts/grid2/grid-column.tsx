@@ -12,7 +12,7 @@ interface GridColumnProps {
 }
 
 
-export const GridColumn2: React.StatelessComponent<
+export const GridColumn: React.StatelessComponent<
     GridColumnProps
 > = (props: GridColumnProps) => {
 

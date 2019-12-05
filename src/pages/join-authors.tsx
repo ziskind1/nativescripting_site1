@@ -8,8 +8,8 @@ import { Wrapper } from '../layouts/page-layouts/wrapper';
 import { PageHeadingMain } from '../components/shared/PageHeaders';
 import { PageSection } from '../layouts/page-layouts/page-section';
 
-import { GridRow2 } from '../layouts/grid2/grid-row';
-import { GridColumn2 } from '../layouts/grid2/grid-column';
+import { GridRow } from '../layouts/grid2/grid-row';
+import { GridColumn } from '../layouts/grid2/grid-column';
 
 
 interface JoinAuthorsPageProps { }
@@ -36,14 +36,14 @@ export default class extends React.Component<JoinAuthorsPageProps, any> {
                             <PageHeadingMain center>Join Our Authors Team</PageHeadingMain>
 
 
-                            <GridRow2>
-                                <GridColumn2 xs={12} md={6}>
+                            <GridRow>
+                                <GridColumn xs={12} md={6}>
                                     col1
-                                </GridColumn2>
-                                <GridColumn2 xs={12} md={6}>
+                                </GridColumn>
+                                <GridColumn xs={12} md={6}>
                                     col2
-                                </GridColumn2>
-                            </GridRow2>
+                                </GridColumn>
+                            </GridRow>
 
 
                         </Wrapper>

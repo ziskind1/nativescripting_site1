@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { ContactPageForm } from './contact-page-form';
 import { colors } from '../../global/colors';
 import { PageHeading2 } from '../shared/PageHeaders';
-import { GridColumn2 } from '../../layouts/grid2/grid-column';
-import { GridRow2 } from '../../layouts/grid2/grid-row';
+import { GridColumn } from '../../layouts/grid2/grid-column';
+import { GridRow } from '../../layouts/grid2/grid-row';
 
 
 export const PHYSICAL_ADDRESS_ONE_LINE =
@@ -35,21 +35,21 @@ export const ContactComponent: React.StatelessComponent<
 
     return (
         <>
-            <GridRow2>
-                <GridColumn2 xs={12} style={{ marginBottom: '30px' }}>
+            <GridRow>
+                <GridColumn xs={12} style={{ marginBottom: '30px' }}>
                     <PageHeading2>Get in touch</PageHeading2>
                     <p>We'll get back to you shortly.</p>
-                </GridColumn2>
-            </GridRow2>
+                </GridColumn>
+            </GridRow>
 
-            <GridRow2>
-                <GridColumn2 xs={12} sm={6} md={6}>
+            <GridRow>
+                <GridColumn xs={12} sm={6} md={6}>
                     <FormWrapper>
                         <ContactPageForm />
                     </FormWrapper>
-                </GridColumn2>
+                </GridColumn>
 
-                <GridColumn2 xs={12} sm={6} md={6} style={{ padding: '30px' }}>
+                <GridColumn xs={12} sm={6} md={6} style={{ padding: '30px' }}>
 
                     <h4>Address</h4>
 
@@ -84,9 +84,9 @@ export const ContactComponent: React.StatelessComponent<
                             </li>
                         </ul>
                     </ContactInfoList>
-                </GridColumn2>
+                </GridColumn>
 
-            </GridRow2>
+            </GridRow>
 
 
         </>
