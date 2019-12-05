@@ -6,6 +6,7 @@ import Footer from '../components/shared/Footer/Footer';
 import Header from '../components/shared/Header/Header';
 
 import '../../node_modules/normalize.css/normalize.css';
+import { Footer2 } from '../components/shared/Footer/Footer2';
 //import '../css/styles.css';
 
 export const MainLayout: React.SFC = ({ children }) => (
@@ -25,7 +26,7 @@ export const MainLayout: React.SFC = ({ children }) => (
 
         <main role="main">{children}</main>
 
-        <Footer />
+        <Footer2 />
       </div>
     )}
   />

@@ -12,6 +12,7 @@ import { Wrapper } from '../layouts/page-layouts/wrapper';
 import { PageHeadingMain, PageHeading2, PageHeading3 } from '../components/shared/PageHeaders';
 import { PageSection } from '../layouts/page-layouts/page-section';
 import { HeroBanner } from '../layouts/page-layouts/hero-banner';
+import { Footer2 } from '../components/shared/Footer/Footer2';
 
 
 interface ContactPageProps { }
@@ -25,7 +26,6 @@ export default class extends React.Component<ContactPageProps, any> {
         const pageTitle = `Contact Us | NativeScript Courses`;
 
         return (
-
             <MainLayout>
                 <Seo path="/contact" />
                 <Helmet>
@@ -45,12 +45,10 @@ export default class extends React.Component<ContactPageProps, any> {
                                     </GridColumn>
                                 </GridRow>
                             </GridContainer>
+
                         </Wrapper>
                     </PageSection>
-
-
                 </ContentPageWrapper>
-
 
             </MainLayout>
         );

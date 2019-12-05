@@ -15,7 +15,7 @@ function PrivacyPolicy() {
         </Helmet>
 
         <div className="privacy-container">
-          <h1>NativeScripting Privacy Policy</h1>
+          <h1>Privacy Policy</h1>
 
           <div className="article">
             <p>
