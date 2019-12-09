@@ -31,7 +31,7 @@ import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
 import { scrollToElementById } from '../utils/scrolling';
 import Testimonials from '../components/Testimonials/Testimonials';
-import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+
 import TrainingLink from '../components/home/TrainingLink/TrainingLink';
 import { MainLayout } from '../layouts/MainLayout';
 import { Course } from '../domain/models';
@@ -170,8 +170,6 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
-
-        <CountdownTimer />
 
         <Hero />
 

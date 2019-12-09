@@ -1,6 +1,6 @@
 .countdown-timer-wrapper {
   display: none;
-  position: fixed;
+  
   top: 0;
   z-index: 3000;
   background-color: #f4b535;
@@ -10,11 +10,11 @@
 }
 .countdown-timer-wrapper.show {
   display: block;
-  position: fixed;
+
   top: 0;
 }
 .with-countdown-timer {
-  margin-top: 76px;
+  /*margin-top: 76px;*/
   transition-duration: 300ms;
 }
 
@@ -125,7 +125,7 @@
      height: 150px;
   }
   .with-countdown-timer {
-    margin-top: 150px;
+    /*margin-top: 150px;*/
   }
   .timer-contents {
     display: flex;
@@ -152,7 +152,7 @@
     height: 150px;
   }
   .with-countdown-timer {
-    margin-top: 150px;
+    /*margin-top: 150px;*/
   }
   .timer-contents {
     flex-wrap: wrap;

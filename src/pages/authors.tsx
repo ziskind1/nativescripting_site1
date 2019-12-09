@@ -9,7 +9,6 @@ import { AuthorCardList } from '../components/about/AuthorCardList';
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 
 import '../css/about.css';
-import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import { Clear } from '../components/shared/Clear';
 import { MainLayout } from '../layouts/MainLayout';
@@ -48,7 +47,7 @@ export default class extends React.Component<AboutPageProps, {}> {
           <title>{pageTitle}</title>
         </Helmet>
 
-        <CountdownTimer />
+
 
         <div className="wrapper">
           <div className="about-page-container">

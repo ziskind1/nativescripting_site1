@@ -32,7 +32,7 @@ import { CourseCurriculum } from '../components/courseDetails/CourseCurriculum/C
 
 import '../css/course-details.css';
 import Testimonials from '../components/Testimonials/Testimonials';
-import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
@@ -153,13 +153,10 @@ class CourseTemplate extends React.Component<
           <title>{pageTitle}</title>
         </Helmet>
 
-        <CountdownTimer />
+
 
         <div className="wrapper">
           <div className="course-details-container">
-            <div className="breadcrumb-wrapper">
-              <BreadCrumbs breadcrumbs={breadCrumbs} />
-            </div>
 
             <CourseBanner course={course} />
 

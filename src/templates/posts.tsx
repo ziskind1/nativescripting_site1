@@ -11,7 +11,7 @@ import { Author } from '../domain/models';
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 import { postFromMarkdownRemark } from '../domain/converters/post-types';
 import { MainLayout } from '../layouts/MainLayout';
-import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 import { PostsSection } from '../components/posts/PostsSection/PostsSection';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
@@ -63,7 +63,6 @@ export default class PostsPage extends React.Component<PostsIndexPageProps> {
           <title>{pageTitle}</title>
         </Helmet>
 
-        <CountdownTimer />
 
         <div className="wrapper">
           <div className="posts-container">

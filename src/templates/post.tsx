@@ -12,7 +12,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import '../css/post-single.css';
 import SignUpSection from '../components/shared/SignUpSection/SignUpSection';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
-import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
+
 import { PostNavToPost } from '../components/posts/PostNavToPost/PostNavToPost';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
@@ -72,13 +72,8 @@ class PostTemplate extends React.Component<
           <title>{pageTitle}</title>
         </Helmet>
 
-        <CountdownTimer />
 
-        <div className="wrapper">
-          <div className="breadcrumb-wrapper">
-            <BreadCrumbs breadcrumbs={breadCrumbs} />
-          </div>
-        </div>
+
 
         <PostEntry post={post} />
 

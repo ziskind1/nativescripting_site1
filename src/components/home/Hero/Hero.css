@@ -12,7 +12,7 @@
 .hero-content,
 .hero-content .container,
 .hero-content .text-padding {
-    z-index: 10;
+    z-index: 1;
     position: relative;
 }
 .hero-overlay {
