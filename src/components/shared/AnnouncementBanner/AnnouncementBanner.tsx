@@ -48,7 +48,7 @@ AnnouncementBannerProps
                     </GridColumn>
                     <GridColumn xs={12} style={{ textAlign: 'center' }}>
                         <AnnounceText>
-                            <a href=''>Next Workshop</a>
+                            <a href='https://ti.to/ngatlconf/ngatlanta-nodeatlanta/with/wzdhimfwuoi,lt7-artwm3i'>Next Workshop</a>
                         </AnnounceText>
                     </GridColumn>
                 </GridRow>

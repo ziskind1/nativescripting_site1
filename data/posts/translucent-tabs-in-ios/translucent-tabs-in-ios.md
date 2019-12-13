@@ -231,13 +231,6 @@ We are creating a series of iOS-focused NativeScript tutorials, so look out for 
 If you have any questions or comments about the tutorial, leave them in the comments below, or get in touch with me on Twitter [@davecoffin](https://twitter.com/davecoffin) or Alex [@digitalix](https://twitter.com/digitalix?lang=en).
 
 
-
 <br/>
-
-
-
-> ![iOS Trailers app](no-year-wht.svg) Catch Dave Coffin, Nathan Walker, and Alex Ziskind at ngAtlanta in February 2020 for an advanced NativeScript with Angular workshop called `Breathe life into mobile UX with solid architecture lessons`. You can register now and take your NativeScript skills up a notch. More info [here](https://ng-atl.org/workshops).
-
-<br>
 
 For more video tutorials about NativeScript, check out the courses on [NativeScripting.com](https://nativescripting.com). You'll find courses that cover all flavors of NativeScript (Core, Angular and Vue) and that cater to different levels of experience, whether you are just beginning your journey in the NativeScript world or you have some experience with NativeScript and are looking to level up.

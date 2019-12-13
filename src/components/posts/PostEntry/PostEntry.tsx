@@ -10,16 +10,30 @@ import { Post } from '../../../domain/models/posts/post.model';
 import { getAuthorImgSrc } from '../../../utils/urls';
 import PostCallToAction from '../PostCallToAction/PostCallToAction';
 import AddThisBlock from '../../shared/AddThisBlock/AddThisBlock';
+import { GridRow } from '../../../layouts/grid2/grid-row';
+import { GridColumn } from '../../../layouts/grid2/grid-column';
+import { ENABLE_IN_POST_ANNOUNCEMENT } from '../../../global/switches';
 
 interface PostEntryProps {
   post: Post;
 }
 
 const TwitterFollowLink = styled.a`
-margin-left: 10px;
-color: #12ffcd;
-border: 1px solid #12ffcd;
-padding: 0 5px 0 5px;
+  margin-left: 10px;
+  color: #12ffcd;
+  border: 1px solid #12ffcd;
+  padding: 0 5px 0 5px;
+`;
+
+const AnnounceWrapper = styled.div`
+  margin: 30px;
+  padding: 30px;
+  background-color: #032e74;
+`;
+
+const AnnouncementText = styled.p`
+  color: white;
+  font-size: 18px;
 `;
 
 export const PostEntry: React.StatelessComponent<PostEntryProps> = (
@@ -88,8 +102,34 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
         <PostCallToAction />
       </div>
 
+
+
+
       <div className="post-body">
+        { ENABLE_IN_POST_ANNOUNCEMENT ? (
+          <AnnounceWrapper>
+                <GridRow>
+                  <GridColumn xs={12} sm={2}>
+                    <img src="/img/logos/ng-atlanta.svg" alt="ng atlanta" />
+                  </GridColumn>
+                  <GridColumn xs={12} sm={10}>
+                    <AnnouncementText>
+                    
+                        Catch Dave Coffin, Nathan Walker, and Alex Ziskind at ngAtlanta in February 2020 for an advanced NativeScript with Angular workshop called 
+                        <code className="language-text">&nbsp;
+                          Breathe life into mobile UX with solid architecture lessons
+                        </code>. You can register now and take your NativeScript skills up a notch.
+                        &nbsp;
+                        <a href="https://ti.to/ngatlconf/ngatlanta-nodeatlanta/with/wzdhimfwuoi,lt7-artwm3i" style={{color: '#11F5FF'}}>Register here</a>.
+                    </AnnouncementText>
+                  </GridColumn>
+                </GridRow>
+          </AnnounceWrapper>
+        ) : null }
+
+
         <div className="post-inner">
+
           <div dangerouslySetInnerHTML={{ __html: post.body }} />
 
           <div className="section-divider">
