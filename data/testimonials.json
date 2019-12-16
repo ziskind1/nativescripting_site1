@@ -72,6 +72,15 @@
     "titleHtml": "Sr. Developer Advocate at Progress"
   },
   {
+    "id": "760",
+    "name": "David Wison",
+    "img": "david_wilson",
+    "twitter": "DavidWilsonHome",
+    "order": 760,
+    "quoteHtml": "Alex, thank you so much for creating this course. The architecture chapter alone is worth the price of the course, and saved me tons of time in the long run - time I would have spent reworking the solution over and over. Can’t wait for the next chapters.",
+    "titleHtml": "Mobile Developer"
+  },
+  {
     "id": "800",
     "name": "Hernán Piña",
     "img": "hernan_pina",
