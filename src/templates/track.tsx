@@ -315,7 +315,7 @@ export const trackPageQuery = graphql`
     }
 
     #get testimonials
-    testimonialsConnection: allTestimonialsJson {
+    testimonialsConnection: allTestimonialsJson(filter: {order: {lte: 6000}}) {
       totalCount
       edges {
         node {
