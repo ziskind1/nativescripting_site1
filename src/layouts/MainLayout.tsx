@@ -9,7 +9,6 @@ import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 import '../../node_modules/normalize.css/normalize.css';
 import { AnnouncementBanner } from '../components/shared/AnnouncementBanner/AnnouncementBanner';
 
-
 //import '../css/styles.css';
 
 export const MainLayout: React.SFC = ({ children }) => (
@@ -26,15 +25,11 @@ export const MainLayout: React.SFC = ({ children }) => (
     render={data => (
       <div id="ns-outer">
 
-
-
         <div id="ns-inner">
-
           <Header siteName={'NativeScript Courses'} />
-
           <CountdownTimer />
-          <AnnouncementBanner />
 
+          <AnnouncementBanner />
 
           <main role="main">{children}</main>
 
