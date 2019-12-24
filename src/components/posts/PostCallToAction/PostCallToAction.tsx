@@ -31,6 +31,8 @@ const PostCallToAction: React.StatelessComponent<ActionButtonProps> = (props: Ac
 
     const signUpUrl = 'https://sso.teachable.com/secure/89912/users/sign_up?flow_school_id=89912';
 
+    // const signUpUrl = 'https://sso.teachable.com/secure/89912/users/sign_up?reset_purchase_session=1';
+
     return (
 
         <div className="post-cta-wrapper">
