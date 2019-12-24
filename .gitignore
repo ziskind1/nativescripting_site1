@@ -65,3 +65,5 @@ yarn-error.log
 *_old
 
 package-lock.json
+
+.DS_Store
