@@ -9,10 +9,6 @@ tags: ['NativeScript', 'NativeScripting', 'tutorial', 'video']
 image: are-you-being-a-good-code-recycler-poster.png
 ---
 
-# Are you Being a Good Code Recycler?
-
-![Are you Being a Good Code Recycler?](are-you-being-a-good-code-recycler-poster.png)
-
 This may sound familiar to you.
 
 You've built an Angular web application for the browser, and then had to create a mobile application that has pretty much the same features. So you start from scratch, and maybe, just maybe, you can use some of the business logic code that you've already written in your mobile app. If you're lucky.
