@@ -17,6 +17,10 @@
   margin: 0 auto;
 }
 
+.post-inner p {
+  margin-bottom: 40px;
+}
+
 .post-inner blockquote {
   background: rgba(60,187,176,.2);
     padding: 30px;
