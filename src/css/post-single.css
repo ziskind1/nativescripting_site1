@@ -21,10 +21,18 @@
   margin-bottom: 40px;
 }
 
+.post-inner h2 {
+  margin-top: 60px;
+}
+
 .post-inner blockquote {
   background: rgba(60,187,176,.2);
     padding: 30px;
     margin-top: 20px;
+}
+
+.gatsby-highlight {
+  margin-bottom: 40px;
 }
 
 .post-entry-container .post-meta-author-img-wrapper img {
