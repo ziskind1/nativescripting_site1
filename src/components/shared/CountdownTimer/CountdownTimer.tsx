@@ -6,10 +6,12 @@ import {
   ActionBtnType,
   ActionButtonProps
 } from '../../ActionButton/ActionButton';
+import { ENABLE_COUNTDOWN_TIMER } from '../../../global/switches';
 
-const expirationDateStr = 'Dec 2, 2019 23:59:59';
+const expirationDateStr = 'Dec 31, 2019 23:59:59';
 const ctaUrl = '/course/nativescript-with-angular-pro';
-const couponCode = 'CYBER19';
+const couponCode = 'BYE2019';
+const discountPercentage = 20;
 
 interface CountdownTimerProps {
   expirationDateStr?: string;
@@ -51,6 +53,10 @@ class CountdownTimer extends React.Component<
   }
 
   public componentDidMount() {
+    if (!ENABLE_COUNTDOWN_TIMER) {
+      return;
+    }
+
     var intervalId = window.setInterval(() => {
       this.timerFunctionBody();
     }, 1000);
@@ -58,6 +64,10 @@ class CountdownTimer extends React.Component<
   }
 
   public componentDidUpdate() {
+    if (!ENABLE_COUNTDOWN_TIMER) {
+      return;
+    }
+
     if (this.state.distance < 0) {
       window.clearInterval(this.state.intervalId);
 
@@ -72,6 +82,10 @@ class CountdownTimer extends React.Component<
   }
 
   public render() {
+    if (!ENABLE_COUNTDOWN_TIMER) {
+      return (null);
+    }
+
     const days = Math.floor(this.state.distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (this.state.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -98,7 +112,7 @@ class CountdownTimer extends React.Component<
           <div className="timer-heading">
             <h2>
               &nbsp;
-              <span className="oomph">30%</span> off any course or bundle
+              <span className="oomph">{discountPercentage}%</span> off any course or bundle
             </h2>
           </div>
 
