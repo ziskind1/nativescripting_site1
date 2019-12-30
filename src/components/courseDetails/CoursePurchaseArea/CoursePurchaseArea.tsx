@@ -4,6 +4,7 @@ import ActionButton from '../../ActionButton/ActionButton';
 import { Course, Product } from '../../../domain/models';
 
 import './CoursePurchaseArea.css';
+import { PaymentTypes } from '../../shared/PaymentTypes/PaymentTypes';
 
 interface CoursePurchaseAreaProps {
     course: Course;
@@ -89,6 +90,8 @@ export class CoursePurchaseArea extends React.Component<CoursePurchaseAreaProps,
                     type='primary'
                     newWindow={true}
                 />
+
+                <PaymentTypes style={{ marginTop: '40px' }}/>
             </div>
         );
     }

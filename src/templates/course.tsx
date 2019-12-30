@@ -181,7 +181,7 @@ class CourseTemplate extends React.Component<
 
             <Testimonials testimonials={testimonials} />
 
-            <BundleSection bundles={this.state.bundles} />
+            <BundleSection bundles={this.state.bundles} bundlesTitle='Or pick up a complete bundle...' bundlesDesc='Everything you need to start mastering NativeScript today' />
 
             <SignUpSection />
 

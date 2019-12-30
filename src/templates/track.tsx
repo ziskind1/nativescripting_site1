@@ -234,6 +234,7 @@ class TrackTemplate extends React.Component<
                 <BundleSection bundles={trackBundles} bundlesTitle="Become a NativeScript Expert" bundlesDesc="Everything you need to know to master NativeScript today." bg="#032E74" />
 
 
+
                 <SignUpSection />
 
                 <AddThisBlock />

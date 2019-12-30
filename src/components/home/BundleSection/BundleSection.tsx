@@ -6,6 +6,8 @@ import { Bundle } from '../../../domain/models';
 import BundleCardList from '../BundleCard/BundleCardList';
 
 import './BundleSection.css';
+import { PaymentTypes } from '../../shared/PaymentTypes/PaymentTypes';
+
 
 export interface BundleSectionProps {
   bundles: Bundle[];
@@ -34,6 +36,9 @@ const BundleSection: React.StatelessComponent<BundleSectionProps> = (
         </div>
 
         <BundleCardList bundles={props.bundles} />
+
+        <PaymentTypes/>
+        
       </div>
     </Section>
   );
