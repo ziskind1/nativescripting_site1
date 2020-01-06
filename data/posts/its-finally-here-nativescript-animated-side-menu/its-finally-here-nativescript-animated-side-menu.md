@@ -1,6 +1,6 @@
 ---
 path: '/posts/its-finally-here-nativescript-animated-side-menu'
-title: 'It's Finally Here! NativeScript Animated Side Menu'
+title: "It's Finally Here! NativeScript Animated Side Menu"
 author: 'alex_ziskind'
 createdDate: '2015-05-30'
 updatedDate: '2015-05-30'
