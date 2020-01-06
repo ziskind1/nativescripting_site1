@@ -4,7 +4,7 @@ title: 'Are you Being a Good Code Recycler?'
 author: 'alex_ziskind'
 createdDate: '2017-10-30'
 updatedDate: '2017-10-30'
-draft: true
+draft: false
 tags: ['NativeScript', 'NativeScripting', 'tutorial', 'video']
 image: are-you-being-a-good-code-recycler-poster.png
 ---
