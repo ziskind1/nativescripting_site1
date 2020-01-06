@@ -1,6 +1,6 @@
 ---
 path: '/posts/dont-lose-your-hair-over-nativescript-listview-bindings-that-dont-cooperate'
-title: 'Don\'t Lose Your Hair Over NativeScript ListView Bindings that Don\'t Cooperate'
+title: "Don't Lose Your Hair Over NativeScript ListView Bindings that Don't Cooperate"
 author: 'alex_ziskind'
 createdDate: '2017-08-11'
 updatedDate: '2017-08-11'
