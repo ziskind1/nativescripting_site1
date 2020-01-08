@@ -181,9 +181,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           onCoursesClick={() => this.allCoursesSelected()}
         />
 
-        <div style={{ margin: 50 }}>
-          <iframe src="//fast.wistia.net/embed/iframe/hzfap1z2sn" frameBorder="0" scrolling="no" className="wistia_embed" name="wistia_embed" allowFullScreen allowTransparency></iframe>
-        </div>
+
 
         <BrandsSection disabled={false} />
 
