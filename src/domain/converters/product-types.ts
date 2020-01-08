@@ -1,7 +1,7 @@
-import { Products_3 } from '../graphql-types';
+import { CoursesJsonProducts } from '../graphql-types';
 import { Product } from '../models';
 
-function descriptionLegible(p: Products_3) {
+function descriptionLegible(p: CoursesJsonProducts) {
   if (!p.licensesMax) {
     p.licensesMax = p.licensesMin;
   }
@@ -14,7 +14,7 @@ function descriptionLegible(p: Products_3) {
   }
 }
 
-export function productFromProduct_3(p: Products_3): Product {
+export function productFromProduct_3(p: CoursesJsonProducts): Product {
   return {
     id: p.id,
     name: p.name,

@@ -1,12 +1,14 @@
 schema:
   - 'http://localhost:8000/___graphql'
 documents: []
-config: {}
+config: 
+  namingConvention:
+    enumValues: keep
 generates:
   ./src/domain/graphql-types.d.ts:
     config: {}
     plugins:
-      - 'typescript-common'
-      - 'typescript-client'
-      - 'typescript-server'
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-compatibility"
 require: []

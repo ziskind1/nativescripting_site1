@@ -1,8 +1,8 @@
-import { Chapters_2 } from '../graphql-types';
+import { CoursesJsonChapters } from '../graphql-types';
 import { Chapter } from '../models';
 import { lessonFromLesson_2 } from './lesson-types';
 
-export function chapterFromChapter_2(l: Chapters_2, index: number): Chapter {
+export function chapterFromChapter_2(l: CoursesJsonChapters, index: number): Chapter {
   return {
     id: l.id,
     name: l.name,

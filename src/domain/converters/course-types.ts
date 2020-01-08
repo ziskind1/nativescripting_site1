@@ -2,8 +2,9 @@ import { defaultArray } from '../core';
 import {
   CoursesJsonEdge,
   CoursesJson,
-  DescriptionHtmlSections_2
+  CoursesJsonDescriptionHtmlSections
 } from '../graphql-types';
+
 import { productFromProduct_3 } from './product-types';
 import { chapterFromChapter_2 } from './chapter-types';
 import {
@@ -72,7 +73,7 @@ function numberCourseLessons(course: Course): void {
 }
 
 export function descriptionHtmlSectionFromDescriptionHtmlSection_2(
-  s: DescriptionHtmlSections_2
+  s: CoursesJsonDescriptionHtmlSections
 ): DescriptionHtmlSection {
   return {
     title: s.title,

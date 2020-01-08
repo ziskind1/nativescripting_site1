@@ -8,7 +8,7 @@
     "deploy": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
-    "graphql-types": "gql-gen"
+    "generate": "graphql-codegen"
   },
   "prettier": {
     "singleQuote": true
@@ -48,10 +48,10 @@
     "gatsby-transformer-json": "2.2.22",
     "gatsby-transformer-remark": "2.6.42",
     "gatsby-transformer-sharp": "2.3.9",
-    "graphql-code-generator": "0.18.2",
-    "graphql-codegen-typescript-client": "0.18.2",
-    "graphql-codegen-typescript-common": "0.18.2",
-    "graphql-codegen-typescript-server": "0.18.2",
+    "@graphql-codegen/cli": "1.8.3",
+    "@graphql-codegen/typescript": "1.8.3",
+    "@graphql-codegen/typescript-operations": "1.8.3",
+    "@graphql-codegen/typescript-compatibility": "1.8.3",
     "normalize.css": "8.0.1",
     "prismjs": "1.17.1",
     "react": "16.12.0",

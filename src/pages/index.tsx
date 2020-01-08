@@ -7,7 +7,8 @@ import {
   AuthorsJsonConnection,
   CoursesJsonConnection,
   BundlesJsonConnection,
-  TestimonialsJsonConnection
+  TestimonialsJsonConnection,
+  TracksJsonConnection
 } from '../domain/graphql-types';
 
 import {
@@ -38,8 +39,9 @@ import { Course } from '../domain/models';
 import { Seo } from '../components/shared/Seo/Seo';
 import { TrackSection } from '../components/home/TrackSection/TrackSection';
 import { BrandsSection } from '../components/shared/Brands/BrandsSection';
-import { TracksJsonConnection } from '../domain/graphql-types.d_old';
+
 import SubHeroSection2 from '../components/home/SubHeroSection/SubHeroSection2';
+
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -178,6 +180,10 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         <SubHeroSection2
           onCoursesClick={() => this.allCoursesSelected()}
         />
+
+        <div style={{ margin: 50 }}>
+          <iframe src="//fast.wistia.net/embed/iframe/hzfap1z2sn" frameBorder="0" scrolling="no" className="wistia_embed" name="wistia_embed" allowFullScreen allowTransparency></iframe>
+        </div>
 
         <BrandsSection disabled={false} />
 
