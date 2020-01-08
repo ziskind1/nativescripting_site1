@@ -3,7 +3,7 @@ export type Maybe<T> = T | null;
 export interface TestimonialsJsonConnectionSort {
   fields: (Maybe<TestimonialsJsonConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<TestimonialsJsonConnectionSortOrderValues>)[];
+  order?: TestimonialsJsonConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterTestimonialsJson {
@@ -181,7 +181,7 @@ export interface TestimonialsJsonConnectionInternalOwnerQueryString_2 {
 export interface CoursesJsonConnectionSort {
   fields: (Maybe<CoursesJsonConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<CoursesJsonConnectionSortOrderValues>)[];
+  order?: CoursesJsonConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterCoursesJson {
@@ -809,7 +809,7 @@ export interface CoursesJsonConnectionPublishingScheduleDateQueryString_2 {
 export interface BundlesJsonConnectionSort {
   fields: (Maybe<BundlesJsonConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<BundlesJsonConnectionSortOrderValues>)[];
+  order?: BundlesJsonConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterBundlesJson {
@@ -1163,7 +1163,7 @@ export interface BundlesJsonConnectionInternalOwnerQueryString_2 {
 export interface SitePageConnectionSort {
   fields: (Maybe<SitePageConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<SitePageConnectionSortOrderValues>)[];
+  order?: SitePageConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterSitePage {
@@ -1265,6 +1265,8 @@ export interface SitePageConnectionComponentChunkNameQueryString {
 export interface SitePageConnectionContextInputObject {
   courseUrl?: Maybe<SitePageConnectionContextCourseUrlQueryString>;
 
+  trackId?: Maybe<SitePageConnectionContextTrackIdQueryString>;
+
   limit?: Maybe<SitePageConnectionContextLimitQueryInteger>;
 
   skip?: Maybe<SitePageConnectionContextSkipQueryInteger>;
@@ -1287,6 +1289,20 @@ export interface SitePageConnectionContextInputObject {
 }
 
 export interface SitePageConnectionContextCourseUrlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextTrackIdQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -1452,6 +1468,18 @@ export interface SitePageConnectionContextPostsInputObject {
   I_Script_Native?: Maybe<SitePageConnectionContextPostsIScriptNativeQueryList>;
 
   Course?: Maybe<SitePageConnectionContextPostsCourseQueryList>;
+
+  Android?: Maybe<SitePageConnectionContextPostsAndroidQueryList>;
+
+  FAB?: Maybe<SitePageConnectionContextPostsFabQueryList>;
+
+  Floating_Action_Button?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonQueryList
+  >;
+
+  Security?: Maybe<SitePageConnectionContextPostsSecurityQueryList>;
+
+  iOS?: Maybe<SitePageConnectionContextPostsIosQueryList>;
 }
 
 export interface SitePageConnectionContextPostsNativeScriptQueryList {
@@ -4660,6 +4688,846 @@ export interface SitePageConnectionContextPostsCourseFrontmatterTitleQueryString
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface SitePageConnectionContextPostsAndroidQueryList {
+  elemMatch?: Maybe<SitePageConnectionContextPostsAndroidInputObject>;
+}
+
+export interface SitePageConnectionContextPostsAndroidInputObject {
+  excerpt?: Maybe<SitePageConnectionContextPostsAndroidExcerptQueryString>;
+
+  html?: Maybe<SitePageConnectionContextPostsAndroidHtmlQueryString>;
+
+  id?: Maybe<SitePageConnectionContextPostsAndroidIdQueryString>;
+
+  timeToRead?: Maybe<
+    SitePageConnectionContextPostsAndroidTimeToReadQueryInteger
+  >;
+
+  frontmatter?: Maybe<
+    SitePageConnectionContextPostsAndroidFrontmatterInputObject
+  >;
+}
+
+export interface SitePageConnectionContextPostsAndroidExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageConnectionContextPostsAndroidFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageConnectionContextPostsAndroidFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageConnectionContextPostsAndroidFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageConnectionContextPostsAndroidFrontmatterPathQueryString>;
+
+  title?: Maybe<
+    SitePageConnectionContextPostsAndroidFrontmatterTitleQueryString
+  >;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsAndroidFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabQueryList {
+  elemMatch?: Maybe<SitePageConnectionContextPostsFabInputObject>;
+}
+
+export interface SitePageConnectionContextPostsFabInputObject {
+  excerpt?: Maybe<SitePageConnectionContextPostsFabExcerptQueryString>;
+
+  html?: Maybe<SitePageConnectionContextPostsFabHtmlQueryString>;
+
+  id?: Maybe<SitePageConnectionContextPostsFabIdQueryString>;
+
+  timeToRead?: Maybe<SitePageConnectionContextPostsFabTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageConnectionContextPostsFabFrontmatterInputObject>;
+}
+
+export interface SitePageConnectionContextPostsFabExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageConnectionContextPostsFabFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageConnectionContextPostsFabFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageConnectionContextPostsFabFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageConnectionContextPostsFabFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageConnectionContextPostsFabFrontmatterTitleQueryString>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFabFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonQueryList {
+  elemMatch?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonInputObject
+  >;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonInputObject {
+  excerpt?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonExcerptQueryString
+  >;
+
+  html?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonHtmlQueryString
+  >;
+
+  id?: Maybe<SitePageConnectionContextPostsFloatingActionButtonIdQueryString>;
+
+  timeToRead?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonTimeToReadQueryInteger
+  >;
+
+  frontmatter?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterInputObject
+  >;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterTagsQueryList
+  >;
+
+  path?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterPathQueryString
+  >;
+
+  title?: Maybe<
+    SitePageConnectionContextPostsFloatingActionButtonFrontmatterTitleQueryString
+  >;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsFloatingActionButtonFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityQueryList {
+  elemMatch?: Maybe<SitePageConnectionContextPostsSecurityInputObject>;
+}
+
+export interface SitePageConnectionContextPostsSecurityInputObject {
+  excerpt?: Maybe<SitePageConnectionContextPostsSecurityExcerptQueryString>;
+
+  html?: Maybe<SitePageConnectionContextPostsSecurityHtmlQueryString>;
+
+  id?: Maybe<SitePageConnectionContextPostsSecurityIdQueryString>;
+
+  timeToRead?: Maybe<
+    SitePageConnectionContextPostsSecurityTimeToReadQueryInteger
+  >;
+
+  frontmatter?: Maybe<
+    SitePageConnectionContextPostsSecurityFrontmatterInputObject
+  >;
+}
+
+export interface SitePageConnectionContextPostsSecurityExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageConnectionContextPostsSecurityFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageConnectionContextPostsSecurityFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageConnectionContextPostsSecurityFrontmatterTagsQueryList>;
+
+  path?: Maybe<
+    SitePageConnectionContextPostsSecurityFrontmatterPathQueryString
+  >;
+
+  title?: Maybe<
+    SitePageConnectionContextPostsSecurityFrontmatterTitleQueryString
+  >;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsSecurityFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosQueryList {
+  elemMatch?: Maybe<SitePageConnectionContextPostsIosInputObject>;
+}
+
+export interface SitePageConnectionContextPostsIosInputObject {
+  excerpt?: Maybe<SitePageConnectionContextPostsIosExcerptQueryString>;
+
+  html?: Maybe<SitePageConnectionContextPostsIosHtmlQueryString>;
+
+  id?: Maybe<SitePageConnectionContextPostsIosIdQueryString>;
+
+  timeToRead?: Maybe<SitePageConnectionContextPostsIosTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageConnectionContextPostsIosFrontmatterInputObject>;
+}
+
+export interface SitePageConnectionContextPostsIosExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageConnectionContextPostsIosFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageConnectionContextPostsIosFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageConnectionContextPostsIosFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageConnectionContextPostsIosFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageConnectionContextPostsIosFrontmatterTitleQueryString>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionContextPostsIosFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface SitePageConnectionContextPostQueryList {
   elemMatch?: Maybe<SitePageConnectionContextPostInputObject>;
 }
@@ -4860,6 +5728,8 @@ export interface SitePageConnectionPluginCreatorInputObject {
   >;
 
   packageJson?: Maybe<SitePageConnectionPluginCreatorPackageJsonInputObject>;
+
+  parent?: Maybe<SitePageConnectionPluginCreatorParentQueryString>;
 
   internal?: Maybe<SitePageConnectionPluginCreatorInternalInputObject>;
 }
@@ -5694,6 +6564,20 @@ export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface SitePageConnectionPluginCreatorParentQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface SitePageConnectionPluginCreatorInternalInputObject {
   contentDigest?: Maybe<
     SitePageConnectionPluginCreatorInternalContentDigestQueryString
@@ -5857,7 +6741,7 @@ export interface SitePageConnectionInternalOwnerQueryString_2 {
 export interface SitePluginConnectionSort {
   fields: (Maybe<SitePluginConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<SitePluginConnectionSortOrderValues>)[];
+  order?: SitePluginConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterSitePlugin {
@@ -6741,7 +7625,7 @@ export interface SitePluginConnectionInternalOwnerQueryString_2 {
 export interface DirectoryConnectionSort {
   fields: (Maybe<DirectoryConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<DirectoryConnectionSortOrderValues>)[];
+  order?: DirectoryConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterDirectory {
@@ -7419,7 +8303,7 @@ export interface DirectoryConnectionBirthtimeQueryString_2 {
 export interface FileConnectionSort {
   fields: (Maybe<FileConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<FileConnectionSortOrderValues>)[];
+  order?: FileConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterFile {
@@ -8125,9 +9009,9 @@ export interface PublicUrlQueryString_4 {
 }
 
 export interface DuotoneGradient {
-  highlight?: Maybe<string>;
+  highlight: string;
 
-  shadow?: Maybe<string>;
+  shadow: string;
 
   opacity?: Maybe<number>;
 }
@@ -8155,7 +9039,7 @@ export interface Potrace {
 export interface ImageSharpConnectionSort {
   fields: (Maybe<ImageSharpConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<ImageSharpConnectionSortOrderValues>)[];
+  order?: ImageSharpConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterImageSharp {
@@ -9171,7 +10055,7 @@ export interface ResizeOriginalNameQueryString_4 {
 export interface AuthorsJsonConnectionSort {
   fields: (Maybe<AuthorsJsonConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<AuthorsJsonConnectionSortOrderValues>)[];
+  order?: AuthorsJsonConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterAuthorsJson {
@@ -9377,7 +10261,7 @@ export interface AuthorsJsonConnectionInternalOwnerQueryString_2 {
 export interface MarkdownRemarkConnectionSort {
   fields: (Maybe<MarkdownRemarkConnectionSortByFieldsEnum>)[];
 
-  order?: (Maybe<MarkdownRemarkConnectionSortOrderValues>)[];
+  order?: MarkdownRemarkConnectionSortOrderValues;
 }
 /** Filter connection on its fields */
 export interface FilterMarkdownRemark {
@@ -9387,6 +10271,8 @@ export interface FilterMarkdownRemark {
 
   frontmatter?: Maybe<MarkdownRemarkConnectionFrontmatterInputObject_2>;
 
+  excerpt?: Maybe<ExcerptQueryString_4>;
+
   rawMarkdownBody?: Maybe<MarkdownRemarkConnectionRawMarkdownBodyQueryString_2>;
 
   fileAbsolutePath?: Maybe<
@@ -9394,8 +10280,6 @@ export interface FilterMarkdownRemark {
   >;
 
   html?: Maybe<HtmlQueryString_4>;
-
-  excerpt?: Maybe<ExcerptQueryString_4>;
 
   headings?: Maybe<HeadingsQueryList_4>;
 
@@ -9508,6 +10392,8 @@ export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
   tags?: Maybe<MarkdownRemarkConnectionFrontmatterTagsQueryList_2>;
 
   image?: Maybe<MarkdownRemarkConnectionFrontmatterImageQueryString_2>;
+
+  _PARENT?: Maybe<MarkdownRemarkConnectionFrontmatterParentQueryString_2>;
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -9618,6 +10504,34 @@ export interface MarkdownRemarkConnectionFrontmatterImageQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface MarkdownRemarkConnectionFrontmatterParentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ExcerptQueryString_4 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface MarkdownRemarkConnectionRawMarkdownBodyQueryString_2 {
   eq?: Maybe<string>;
 
@@ -9647,20 +10561,6 @@ export interface MarkdownRemarkConnectionFileAbsolutePathQueryString_2 {
 }
 
 export interface HtmlQueryString_4 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ExcerptQueryString_4 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -9808,6 +10708,250 @@ export interface WordCountWordsQueryInt_4 {
   in?: Maybe<(Maybe<number>)[]>;
 
   nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonConnectionSort {
+  fields: (Maybe<TracksJsonConnectionSortByFieldsEnum>)[];
+
+  order?: TracksJsonConnectionSortOrderValues;
+}
+/** Filter connection on its fields */
+export interface FilterTracksJson {
+  id?: Maybe<TracksJsonConnectionIdQueryString_2>;
+
+  title?: Maybe<TracksJsonConnectionTitleQueryString_2>;
+
+  imageSrc?: Maybe<TracksJsonConnectionImageSrcQueryString_2>;
+
+  description?: Maybe<TracksJsonConnectionDescriptionQueryString_2>;
+
+  bundles?: Maybe<TracksJsonConnectionBundlesQueryList_2>;
+
+  levels?: Maybe<TracksJsonConnectionLevelsQueryList_2>;
+
+  internal?: Maybe<TracksJsonConnectionInternalInputObject_2>;
+}
+
+export interface TracksJsonConnectionIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionTitleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionImageSrcQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionBundlesQueryList_2 {
+  elemMatch?: Maybe<TracksJsonConnectionBundlesInputObject_2>;
+}
+
+export interface TracksJsonConnectionBundlesInputObject_2 {
+  id?: Maybe<TracksJsonConnectionBundlesIdQueryString_2>;
+
+  order?: Maybe<TracksJsonConnectionBundlesOrderQueryInteger_2>;
+
+  description?: Maybe<TracksJsonConnectionBundlesDescriptionQueryString_2>;
+}
+
+export interface TracksJsonConnectionBundlesIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionBundlesOrderQueryInteger_2 {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonConnectionBundlesDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionLevelsQueryList_2 {
+  elemMatch?: Maybe<TracksJsonConnectionLevelsInputObject_2>;
+}
+
+export interface TracksJsonConnectionLevelsInputObject_2 {
+  levelId?: Maybe<TracksJsonConnectionLevelsLevelIdQueryInteger_2>;
+
+  title?: Maybe<TracksJsonConnectionLevelsTitleQueryString_2>;
+
+  description?: Maybe<TracksJsonConnectionLevelsDescriptionQueryString_2>;
+}
+
+export interface TracksJsonConnectionLevelsLevelIdQueryInteger_2 {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonConnectionLevelsTitleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionLevelsDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionInternalInputObject_2 {
+  contentDigest?: Maybe<TracksJsonConnectionInternalContentDigestQueryString_2>;
+
+  type?: Maybe<TracksJsonConnectionInternalTypeQueryString_2>;
+
+  owner?: Maybe<TracksJsonConnectionInternalOwnerQueryString_2>;
+}
+
+export interface TracksJsonConnectionInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonConnectionInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
 }
 
 export interface TestimonialsJsonIdQueryString_2 {
@@ -10931,6 +12075,8 @@ export interface SitePageComponentChunkNameQueryString {
 export interface SitePageContextInputObject {
   courseUrl?: Maybe<SitePageContextCourseUrlQueryString>;
 
+  trackId?: Maybe<SitePageContextTrackIdQueryString>;
+
   limit?: Maybe<SitePageContextLimitQueryInteger>;
 
   skip?: Maybe<SitePageContextSkipQueryInteger>;
@@ -10953,6 +12099,20 @@ export interface SitePageContextInputObject {
 }
 
 export interface SitePageContextCourseUrlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextTrackIdQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -11118,6 +12278,18 @@ export interface SitePageContextPostsInputObject {
   I_Script_Native?: Maybe<SitePageContextPostsIScriptNativeQueryList>;
 
   Course?: Maybe<SitePageContextPostsCourseQueryList>;
+
+  Android?: Maybe<SitePageContextPostsAndroidQueryList>;
+
+  FAB?: Maybe<SitePageContextPostsFabQueryList>;
+
+  Floating_Action_Button?: Maybe<
+    SitePageContextPostsFloatingActionButtonQueryList
+  >;
+
+  Security?: Maybe<SitePageContextPostsSecurityQueryList>;
+
+  iOS?: Maybe<SitePageContextPostsIosQueryList>;
 }
 
 export interface SitePageContextPostsNativeScriptQueryList {
@@ -14186,6 +15358,818 @@ export interface SitePageContextPostsCourseFrontmatterTitleQueryString {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface SitePageContextPostsAndroidQueryList {
+  elemMatch?: Maybe<SitePageContextPostsAndroidInputObject>;
+}
+
+export interface SitePageContextPostsAndroidInputObject {
+  excerpt?: Maybe<SitePageContextPostsAndroidExcerptQueryString>;
+
+  html?: Maybe<SitePageContextPostsAndroidHtmlQueryString>;
+
+  id?: Maybe<SitePageContextPostsAndroidIdQueryString>;
+
+  timeToRead?: Maybe<SitePageContextPostsAndroidTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageContextPostsAndroidFrontmatterInputObject>;
+}
+
+export interface SitePageContextPostsAndroidExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageContextPostsAndroidFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageContextPostsAndroidFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageContextPostsAndroidFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageContextPostsAndroidFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageContextPostsAndroidFrontmatterTitleQueryString>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsAndroidFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabQueryList {
+  elemMatch?: Maybe<SitePageContextPostsFabInputObject>;
+}
+
+export interface SitePageContextPostsFabInputObject {
+  excerpt?: Maybe<SitePageContextPostsFabExcerptQueryString>;
+
+  html?: Maybe<SitePageContextPostsFabHtmlQueryString>;
+
+  id?: Maybe<SitePageContextPostsFabIdQueryString>;
+
+  timeToRead?: Maybe<SitePageContextPostsFabTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageContextPostsFabFrontmatterInputObject>;
+}
+
+export interface SitePageContextPostsFabExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageContextPostsFabFrontmatterInputObject {
+  createdDate?: Maybe<SitePageContextPostsFabFrontmatterCreatedDateQueryString>;
+
+  updatedDate?: Maybe<SitePageContextPostsFabFrontmatterUpdatedDateQueryString>;
+
+  tags?: Maybe<SitePageContextPostsFabFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageContextPostsFabFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageContextPostsFabFrontmatterTitleQueryString>;
+}
+
+export interface SitePageContextPostsFabFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFabFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonQueryList {
+  elemMatch?: Maybe<SitePageContextPostsFloatingActionButtonInputObject>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonInputObject {
+  excerpt?: Maybe<SitePageContextPostsFloatingActionButtonExcerptQueryString>;
+
+  html?: Maybe<SitePageContextPostsFloatingActionButtonHtmlQueryString>;
+
+  id?: Maybe<SitePageContextPostsFloatingActionButtonIdQueryString>;
+
+  timeToRead?: Maybe<
+    SitePageContextPostsFloatingActionButtonTimeToReadQueryInteger
+  >;
+
+  frontmatter?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterInputObject
+  >;
+}
+
+export interface SitePageContextPostsFloatingActionButtonExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterTagsQueryList
+  >;
+
+  path?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterPathQueryString
+  >;
+
+  title?: Maybe<
+    SitePageContextPostsFloatingActionButtonFrontmatterTitleQueryString
+  >;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsFloatingActionButtonFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityQueryList {
+  elemMatch?: Maybe<SitePageContextPostsSecurityInputObject>;
+}
+
+export interface SitePageContextPostsSecurityInputObject {
+  excerpt?: Maybe<SitePageContextPostsSecurityExcerptQueryString>;
+
+  html?: Maybe<SitePageContextPostsSecurityHtmlQueryString>;
+
+  id?: Maybe<SitePageContextPostsSecurityIdQueryString>;
+
+  timeToRead?: Maybe<SitePageContextPostsSecurityTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageContextPostsSecurityFrontmatterInputObject>;
+}
+
+export interface SitePageContextPostsSecurityExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterInputObject {
+  createdDate?: Maybe<
+    SitePageContextPostsSecurityFrontmatterCreatedDateQueryString
+  >;
+
+  updatedDate?: Maybe<
+    SitePageContextPostsSecurityFrontmatterUpdatedDateQueryString
+  >;
+
+  tags?: Maybe<SitePageContextPostsSecurityFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageContextPostsSecurityFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageContextPostsSecurityFrontmatterTitleQueryString>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsSecurityFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosQueryList {
+  elemMatch?: Maybe<SitePageContextPostsIosInputObject>;
+}
+
+export interface SitePageContextPostsIosInputObject {
+  excerpt?: Maybe<SitePageContextPostsIosExcerptQueryString>;
+
+  html?: Maybe<SitePageContextPostsIosHtmlQueryString>;
+
+  id?: Maybe<SitePageContextPostsIosIdQueryString>;
+
+  timeToRead?: Maybe<SitePageContextPostsIosTimeToReadQueryInteger>;
+
+  frontmatter?: Maybe<SitePageContextPostsIosFrontmatterInputObject>;
+}
+
+export interface SitePageContextPostsIosExcerptQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosHtmlQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosIdQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosTimeToReadQueryInteger {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface SitePageContextPostsIosFrontmatterInputObject {
+  createdDate?: Maybe<SitePageContextPostsIosFrontmatterCreatedDateQueryString>;
+
+  updatedDate?: Maybe<SitePageContextPostsIosFrontmatterUpdatedDateQueryString>;
+
+  tags?: Maybe<SitePageContextPostsIosFrontmatterTagsQueryList>;
+
+  path?: Maybe<SitePageContextPostsIosFrontmatterPathQueryString>;
+
+  title?: Maybe<SitePageContextPostsIosFrontmatterTitleQueryString>;
+}
+
+export interface SitePageContextPostsIosFrontmatterCreatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosFrontmatterUpdatedDateQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosFrontmatterTagsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosFrontmatterPathQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageContextPostsIosFrontmatterTitleQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface SitePageContextPostQueryList {
   elemMatch?: Maybe<SitePageContextPostInputObject>;
 }
@@ -14378,6 +16362,8 @@ export interface SitePagePluginCreatorInputObject {
   pluginFilepath?: Maybe<SitePagePluginCreatorPluginFilepathQueryString>;
 
   packageJson?: Maybe<SitePagePluginCreatorPackageJsonInputObject>;
+
+  parent?: Maybe<SitePagePluginCreatorParentQueryString>;
 
   internal?: Maybe<SitePagePluginCreatorInternalInputObject>;
 }
@@ -15169,6 +17155,20 @@ export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryStr
 }
 
 export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePagePluginCreatorParentQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -18824,6 +20824,8 @@ export interface MarkdownRemarkFrontmatterInputObject_2 {
   tags?: Maybe<MarkdownRemarkFrontmatterTagsQueryList_2>;
 
   image?: Maybe<MarkdownRemarkFrontmatterImageQueryString_2>;
+
+  _PARENT?: Maybe<MarkdownRemarkFrontmatterParentQueryString_2>;
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
@@ -18934,6 +20936,34 @@ export interface MarkdownRemarkFrontmatterImageQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface MarkdownRemarkFrontmatterParentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ExcerptQueryString_3 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface MarkdownRemarkRawMarkdownBodyQueryString_2 {
   eq?: Maybe<string>;
 
@@ -18963,20 +20993,6 @@ export interface MarkdownRemarkFileAbsolutePathQueryString_2 {
 }
 
 export interface HtmlQueryString_3 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ExcerptQueryString_3 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -19124,6 +21140,228 @@ export interface WordCountWordsQueryInt_3 {
   in?: Maybe<(Maybe<number>)[]>;
 
   nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonTitleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonImageSrcQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonBundlesQueryList_2 {
+  elemMatch?: Maybe<TracksJsonBundlesInputObject_2>;
+}
+
+export interface TracksJsonBundlesInputObject_2 {
+  id?: Maybe<TracksJsonBundlesIdQueryString_2>;
+
+  order?: Maybe<TracksJsonBundlesOrderQueryInteger_2>;
+
+  description?: Maybe<TracksJsonBundlesDescriptionQueryString_2>;
+}
+
+export interface TracksJsonBundlesIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonBundlesOrderQueryInteger_2 {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonBundlesDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonLevelsQueryList_2 {
+  elemMatch?: Maybe<TracksJsonLevelsInputObject_2>;
+}
+
+export interface TracksJsonLevelsInputObject_2 {
+  levelId?: Maybe<TracksJsonLevelsLevelIdQueryInteger_2>;
+
+  title?: Maybe<TracksJsonLevelsTitleQueryString_2>;
+
+  description?: Maybe<TracksJsonLevelsDescriptionQueryString_2>;
+}
+
+export interface TracksJsonLevelsLevelIdQueryInteger_2 {
+  eq?: Maybe<number>;
+
+  ne?: Maybe<number>;
+
+  gt?: Maybe<number>;
+
+  gte?: Maybe<number>;
+
+  lt?: Maybe<number>;
+
+  lte?: Maybe<number>;
+
+  in?: Maybe<(Maybe<number>)[]>;
+
+  nin?: Maybe<(Maybe<number>)[]>;
+}
+
+export interface TracksJsonLevelsTitleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonLevelsDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonInternalInputObject_2 {
+  contentDigest?: Maybe<TracksJsonInternalContentDigestQueryString_2>;
+
+  type?: Maybe<TracksJsonInternalTypeQueryString_2>;
+
+  owner?: Maybe<TracksJsonInternalOwnerQueryString_2>;
+}
+
+export interface TracksJsonInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface TracksJsonInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
 }
 
 export enum TestimonialsJsonConnectionSortByFieldsEnum {
@@ -19313,6 +21551,7 @@ export enum SitePageConnectionSortByFieldsEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
+  ContextTrackId = 'context___trackId',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -19339,12 +21578,18 @@ export enum SitePageConnectionSortByFieldsEnum {
   ContextPostsVue = 'context___posts___Vue',
   ContextPostsIScriptNative = 'context___posts___I_Script_Native',
   ContextPostsCourse = 'context___posts___Course',
+  ContextPostsAndroid = 'context___posts___Android',
+  ContextPostsFab = 'context___posts___FAB',
+  ContextPostsFloatingActionButton = 'context___posts___Floating_Action_Button',
+  ContextPostsSecurity = 'context___posts___Security',
+  ContextPostsIOs = 'context___posts___iOS',
   ContextPost = 'context___post',
   ContextTag = 'context___tag',
   PluginCreatorNode = 'pluginCreator___NODE',
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
+  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
@@ -19363,6 +21608,7 @@ export enum SitePageDistinctEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
+  ContextTrackId = 'context___trackId',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -19389,12 +21635,18 @@ export enum SitePageDistinctEnum {
   ContextPostsVue = 'context___posts___Vue',
   ContextPostsIScriptNative = 'context___posts___I_Script_Native',
   ContextPostsCourse = 'context___posts___Course',
+  ContextPostsAndroid = 'context___posts___Android',
+  ContextPostsFab = 'context___posts___FAB',
+  ContextPostsFloatingActionButton = 'context___posts___Floating_Action_Button',
+  ContextPostsSecurity = 'context___posts___Security',
+  ContextPostsIOs = 'context___posts___iOS',
   ContextPost = 'context___post',
   ContextTag = 'context___tag',
   PluginCreatorNode = 'pluginCreator___NODE',
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
+  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
@@ -19408,6 +21660,7 @@ export enum SitePageGroupEnum {
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
   ContextCourseUrl = 'context___courseUrl',
+  ContextTrackId = 'context___trackId',
   ContextLimit = 'context___limit',
   ContextSkip = 'context___skip',
   ContextTotalPages = 'context___totalPages',
@@ -19434,12 +21687,18 @@ export enum SitePageGroupEnum {
   ContextPostsVue = 'context___posts___Vue',
   ContextPostsIScriptNative = 'context___posts___I_Script_Native',
   ContextPostsCourse = 'context___posts___Course',
+  ContextPostsAndroid = 'context___posts___Android',
+  ContextPostsFab = 'context___posts___FAB',
+  ContextPostsFloatingActionButton = 'context___posts___Floating_Action_Button',
+  ContextPostsSecurity = 'context___posts___Security',
+  ContextPostsIOs = 'context___posts___iOS',
   ContextPost = 'context___post',
   ContextTag = 'context___tag',
   PluginCreatorNode = 'pluginCreator___NODE',
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
+  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
@@ -19479,6 +21738,7 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner'
@@ -19522,6 +21782,7 @@ export enum SitePluginDistinctEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner'
@@ -19560,6 +21821,7 @@ export enum SitePluginGroupEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner'
@@ -19567,6 +21829,7 @@ export enum SitePluginGroupEnum {
 
 export enum DirectoryConnectionSortByFieldsEnum {
   Id = 'id',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -19613,6 +21876,7 @@ export enum DirectoryConnectionSortOrderValues {
 
 export enum DirectoryDistinctEnum {
   Id = 'id',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -19654,6 +21918,7 @@ export enum DirectoryDistinctEnum {
 
 export enum DirectoryGroupEnum {
   Id = 'id',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -19696,6 +21961,7 @@ export enum DirectoryGroupEnum {
 export enum FileConnectionSortByFieldsEnum {
   Id = 'id',
   Children = 'children',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -19742,11 +22008,6 @@ export enum FileConnectionSortOrderValues {
   Desc = 'DESC'
 }
 
-export enum ExcerptFormats {
-  Plain = 'PLAIN',
-  Html = 'HTML'
-}
-
 export enum HeadingLevels {
   H1 = 'h1',
   H2 = 'h2',
@@ -19786,9 +22047,16 @@ export enum ImageCropFocus {
   Attention = 'ATTENTION'
 }
 
+export enum ImageFit {
+  Cover = 'COVER',
+  Contain = 'CONTAIN',
+  Fill = 'FILL'
+}
+
 export enum FileDistinctEnum {
   Id = 'id',
   Children = 'children',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -19832,6 +22100,7 @@ export enum FileDistinctEnum {
 export enum FileGroupEnum {
   Id = 'id',
   Children = 'children',
+  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -20022,10 +22291,11 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   FrontmatterDraft = 'frontmatter___draft',
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterImage = 'frontmatter___image',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   Html = 'html',
-  Excerpt = 'excerpt',
   Headings = 'headings',
   TimeToRead = 'timeToRead',
   TableOfContents = 'tableOfContents',
@@ -20054,6 +22324,8 @@ export enum MarkdownRemarkDistinctEnum {
   FrontmatterDraft = 'frontmatter___draft',
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterImage = 'frontmatter___image',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath'
 }
@@ -20073,8 +22345,54 @@ export enum MarkdownRemarkGroupEnum {
   FrontmatterDraft = 'frontmatter___draft',
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterImage = 'frontmatter___image',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath'
+}
+
+export enum TracksJsonConnectionSortByFieldsEnum {
+  Id = 'id',
+  Title = 'title',
+  ImageSrc = 'imageSrc',
+  Description = 'description',
+  Bundles = 'bundles',
+  Levels = 'levels',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner'
+}
+
+export enum TracksJsonConnectionSortOrderValues {
+  Asc = 'ASC',
+  Desc = 'DESC'
+}
+
+export enum TracksJsonDistinctEnum {
+  Id = 'id',
+  Title = 'title',
+  ImageSrc = 'imageSrc',
+  Description = 'description',
+  Bundles = 'bundles',
+  Levels = 'levels',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner'
+}
+
+export enum TracksJsonGroupEnum {
+  Id = 'id',
+  Title = 'title',
+  ImageSrc = 'imageSrc',
+  Description = 'description',
+  Bundles = 'bundles',
+  Levels = 'levels',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner'
 }
 
 /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
@@ -20126,6 +22444,8 @@ export interface Query {
   allAuthorsJson?: Maybe<AuthorsJsonConnection>;
   /** Connection to all MarkdownRemark nodes */
   allMarkdownRemark?: Maybe<MarkdownRemarkConnection>;
+  /** Connection to all TracksJson nodes */
+  allTracksJson?: Maybe<TracksJsonConnection>;
 
   testimonialsJson?: Maybe<TestimonialsJson>;
 
@@ -20148,6 +22468,8 @@ export interface Query {
   authorsJson?: Maybe<AuthorsJson>;
 
   markdownRemark?: Maybe<MarkdownRemark>;
+
+  tracksJson?: Maybe<TracksJson>;
 }
 
 /** A connection to a list of items. */
@@ -20201,10 +22523,10 @@ export interface TestimonialsJson extends Node {
 
   titleHtml?: Maybe<string>;
 
-  internal?: Maybe<Internal_12>;
+  internal?: Maybe<Internal_13>;
 }
 
-export interface Internal_12 {
+export interface Internal_13 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -20297,7 +22619,7 @@ export interface CoursesJson extends Node {
 
   chapters?: Maybe<(Maybe<Chapters_2>)[]>;
 
-  internal?: Maybe<Internal_13>;
+  internal?: Maybe<Internal_14>;
 
   descriptionHtmlSections?: Maybe<(Maybe<DescriptionHtmlSections_2>)[]>;
 
@@ -20338,7 +22660,7 @@ export interface Lessons_2 {
   isPreview?: Maybe<boolean>;
 }
 
-export interface Internal_13 {
+export interface Internal_14 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -20433,7 +22755,7 @@ export interface BundlesJson extends Node {
 
   courseIds?: Maybe<(Maybe<string>)[]>;
 
-  internal?: Maybe<Internal_14>;
+  internal?: Maybe<Internal_15>;
 }
 
 export interface Products_4 {
@@ -20452,7 +22774,7 @@ export interface Products_4 {
   licensesMax?: Maybe<number>;
 }
 
-export interface Internal_14 {
+export interface Internal_15 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -20535,11 +22857,13 @@ export interface SitePage extends Node {
 
   componentPath?: Maybe<string>;
 
-  internal?: Maybe<Internal_15>;
+  internal?: Maybe<Internal_16>;
 }
 
 export interface Context {
   courseUrl?: Maybe<string>;
+
+  trackId?: Maybe<string>;
 
   limit?: Maybe<number>;
 
@@ -20600,6 +22924,16 @@ export interface Posts {
   I_Script_Native?: Maybe<(Maybe<IScriptNative>)[]>;
 
   Course?: Maybe<(Maybe<Course>)[]>;
+
+  Android?: Maybe<(Maybe<Android>)[]>;
+
+  FAB?: Maybe<(Maybe<Fab>)[]>;
+
+  Floating_Action_Button?: Maybe<(Maybe<FloatingActionButton>)[]>;
+
+  Security?: Maybe<(Maybe<Security>)[]>;
+
+  iOS?: Maybe<(Maybe<IOs>)[]>;
 }
 
 export interface NativeScript {
@@ -21058,7 +23392,7 @@ export interface Frontmatter_20 {
   title?: Maybe<string>;
 }
 
-export interface Post {
+export interface Android {
   excerpt?: Maybe<string>;
 
   html?: Maybe<string>;
@@ -21071,6 +23405,126 @@ export interface Post {
 }
 
 export interface Frontmatter_21 {
+  createdDate?: Maybe<Date>;
+
+  updatedDate?: Maybe<Date>;
+
+  tags?: Maybe<(Maybe<string>)[]>;
+
+  path?: Maybe<string>;
+
+  title?: Maybe<string>;
+}
+
+export interface Fab {
+  excerpt?: Maybe<string>;
+
+  html?: Maybe<string>;
+
+  id?: Maybe<string>;
+
+  timeToRead?: Maybe<number>;
+
+  frontmatter?: Maybe<Frontmatter_22>;
+}
+
+export interface Frontmatter_22 {
+  createdDate?: Maybe<Date>;
+
+  updatedDate?: Maybe<Date>;
+
+  tags?: Maybe<(Maybe<string>)[]>;
+
+  path?: Maybe<string>;
+
+  title?: Maybe<string>;
+}
+
+export interface FloatingActionButton {
+  excerpt?: Maybe<string>;
+
+  html?: Maybe<string>;
+
+  id?: Maybe<string>;
+
+  timeToRead?: Maybe<number>;
+
+  frontmatter?: Maybe<Frontmatter_23>;
+}
+
+export interface Frontmatter_23 {
+  createdDate?: Maybe<Date>;
+
+  updatedDate?: Maybe<Date>;
+
+  tags?: Maybe<(Maybe<string>)[]>;
+
+  path?: Maybe<string>;
+
+  title?: Maybe<string>;
+}
+
+export interface Security {
+  excerpt?: Maybe<string>;
+
+  html?: Maybe<string>;
+
+  id?: Maybe<string>;
+
+  timeToRead?: Maybe<number>;
+
+  frontmatter?: Maybe<Frontmatter_24>;
+}
+
+export interface Frontmatter_24 {
+  createdDate?: Maybe<Date>;
+
+  updatedDate?: Maybe<Date>;
+
+  tags?: Maybe<(Maybe<string>)[]>;
+
+  path?: Maybe<string>;
+
+  title?: Maybe<string>;
+}
+
+export interface IOs {
+  excerpt?: Maybe<string>;
+
+  html?: Maybe<string>;
+
+  id?: Maybe<string>;
+
+  timeToRead?: Maybe<number>;
+
+  frontmatter?: Maybe<Frontmatter_25>;
+}
+
+export interface Frontmatter_25 {
+  createdDate?: Maybe<Date>;
+
+  updatedDate?: Maybe<Date>;
+
+  tags?: Maybe<(Maybe<string>)[]>;
+
+  path?: Maybe<string>;
+
+  title?: Maybe<string>;
+}
+
+export interface Post {
+  excerpt?: Maybe<string>;
+
+  html?: Maybe<string>;
+
+  id?: Maybe<string>;
+
+  timeToRead?: Maybe<number>;
+
+  frontmatter?: Maybe<Frontmatter_26>;
+}
+
+export interface Frontmatter_26 {
   createdDate?: Maybe<Date>;
 
   updatedDate?: Maybe<Date>;
@@ -21109,7 +23563,7 @@ export interface SitePlugin extends Node {
 
   packageJson?: Maybe<PackageJson_2>;
 
-  internal?: Maybe<Internal_16>;
+  internal?: Maybe<Internal_17>;
 }
 
 export interface PluginOptions_3 {
@@ -21214,7 +23668,7 @@ export interface PeerDependencies_2 {
   version?: Maybe<string>;
 }
 
-export interface Internal_16 {
+export interface Internal_17 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21222,7 +23676,7 @@ export interface Internal_16 {
   owner?: Maybe<string>;
 }
 
-export interface Internal_15 {
+export interface Internal_16 {
   type?: Maybe<string>;
 
   contentDigest?: Maybe<string>;
@@ -21337,7 +23791,7 @@ export interface Directory extends Node {
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
 
-  internal?: Maybe<Internal_17>;
+  internal?: Maybe<Internal_18>;
 
   sourceInstanceName?: Maybe<string>;
 
@@ -21406,7 +23860,7 @@ export interface Directory extends Node {
   birthtime?: Maybe<Date>;
 }
 
-export interface Internal_17 {
+export interface Internal_18 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21472,20 +23926,22 @@ export interface File extends Node {
   parent?: Maybe<Node>;
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
-  /** The children of this node of type authorsJson */
-  childrenAuthorsJson?: Maybe<(Maybe<AuthorsJson>)[]>;
   /** The children of this node of type bundlesJson */
   childrenBundlesJson?: Maybe<(Maybe<BundlesJson>)[]>;
-  /** The children of this node of type testimonialsJson */
-  childrenTestimonialsJson?: Maybe<(Maybe<TestimonialsJson>)[]>;
+  /** The children of this node of type authorsJson */
+  childrenAuthorsJson?: Maybe<(Maybe<AuthorsJson>)[]>;
   /** The child of this node of type markdownRemark */
   childMarkdownRemark?: Maybe<MarkdownRemark>;
+  /** The children of this node of type testimonialsJson */
+  childrenTestimonialsJson?: Maybe<(Maybe<TestimonialsJson>)[]>;
+  /** The children of this node of type tracksJson */
+  childrenTracksJson?: Maybe<(Maybe<TracksJson>)[]>;
   /** The child of this node of type imageSharp */
   childImageSharp?: Maybe<ImageSharp>;
   /** The children of this node of type coursesJson */
   childrenCoursesJson?: Maybe<(Maybe<CoursesJson>)[]>;
 
-  internal?: Maybe<Internal_18>;
+  internal?: Maybe<Internal_19>;
 
   sourceInstanceName?: Maybe<string>;
 
@@ -21581,10 +24037,10 @@ export interface AuthorsJson extends Node {
 
   types?: Maybe<(Maybe<string>)[]>;
 
-  internal?: Maybe<Internal_19>;
+  internal?: Maybe<Internal_20>;
 }
 
-export interface Internal_19 {
+export interface Internal_20 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21601,9 +24057,9 @@ export interface MarkdownRemark extends Node {
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
 
-  internal?: Maybe<Internal_20>;
+  internal?: Maybe<Internal_21>;
 
-  frontmatter?: Maybe<Frontmatter_22>;
+  frontmatter?: Maybe<Frontmatter_27>;
 
   rawMarkdownBody?: Maybe<string>;
 
@@ -21624,7 +24080,7 @@ export interface MarkdownRemark extends Node {
   wordCount?: Maybe<WordCount>;
 }
 
-export interface Internal_20 {
+export interface Internal_21 {
   content?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21634,7 +24090,7 @@ export interface Internal_20 {
   owner?: Maybe<string>;
 }
 
-export interface Frontmatter_22 {
+export interface Frontmatter_27 {
   title?: Maybe<string>;
 
   path?: Maybe<string>;
@@ -21650,6 +24106,8 @@ export interface Frontmatter_22 {
   tags?: Maybe<(Maybe<string>)[]>;
 
   image?: Maybe<File>;
+
+  _PARENT?: Maybe<string>;
 }
 
 export interface MarkdownHeading {
@@ -21666,6 +24124,52 @@ export interface WordCount {
   words?: Maybe<number>;
 }
 
+/** Node of type TracksJson */
+export interface TracksJson extends Node {
+  /** The id of this node. */
+  id: string;
+  /** The parent of this node. */
+  parent?: Maybe<Node>;
+  /** The children of this node. */
+  children?: Maybe<(Maybe<Node>)[]>;
+
+  title?: Maybe<string>;
+
+  imageSrc?: Maybe<string>;
+
+  description?: Maybe<string>;
+
+  bundles?: Maybe<(Maybe<Bundles_2>)[]>;
+
+  levels?: Maybe<(Maybe<Levels_2>)[]>;
+
+  internal?: Maybe<Internal_22>;
+}
+
+export interface Bundles_2 {
+  id?: Maybe<string>;
+
+  order?: Maybe<number>;
+
+  description?: Maybe<string>;
+}
+
+export interface Levels_2 {
+  levelId?: Maybe<number>;
+
+  title?: Maybe<string>;
+
+  description?: Maybe<string>;
+}
+
+export interface Internal_22 {
+  contentDigest?: Maybe<string>;
+
+  type?: Maybe<string>;
+
+  owner?: Maybe<string>;
+}
+
 /** Node of type ImageSharp */
 export interface ImageSharp extends Node {
   /** The id of this node. */
@@ -21675,7 +24179,7 @@ export interface ImageSharp extends Node {
   /** The children of this node. */
   children?: Maybe<(Maybe<Node>)[]>;
 
-  internal?: Maybe<Internal_21>;
+  internal?: Maybe<Internal_23>;
 
   fixed?: Maybe<ImageSharpFixed>;
 
@@ -21690,7 +24194,7 @@ export interface ImageSharp extends Node {
   resize?: Maybe<ImageSharpResize>;
 }
 
-export interface Internal_21 {
+export interface Internal_23 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21816,7 +24320,7 @@ export interface ImageSharpResize {
   originalName?: Maybe<string>;
 }
 
-export interface Internal_18 {
+export interface Internal_19 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -21996,6 +24500,54 @@ export interface MarkdownRemarkGroupConnectionEdge {
   previous?: Maybe<MarkdownRemark>;
 }
 
+/** A connection to a list of items. */
+export interface TracksJsonConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<TracksJsonEdge>)[]>;
+
+  totalCount?: Maybe<number>;
+
+  distinct?: Maybe<(Maybe<string>)[]>;
+
+  group?: Maybe<(Maybe<TracksJsonGroupConnectionConnection>)[]>;
+}
+
+/** An edge in a connection. */
+export interface TracksJsonEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<TracksJson>;
+  /** The next edge in the connection */
+  next?: Maybe<TracksJson>;
+  /** The previous edge in the connection */
+  previous?: Maybe<TracksJson>;
+}
+
+/** A connection to a list of items. */
+export interface TracksJsonGroupConnectionConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<TracksJsonGroupConnectionEdge>)[]>;
+
+  field?: Maybe<string>;
+
+  fieldValue?: Maybe<string>;
+
+  totalCount?: Maybe<number>;
+}
+
+/** An edge in a connection. */
+export interface TracksJsonGroupConnectionEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<TracksJson>;
+  /** The next edge in the connection */
+  next?: Maybe<TracksJson>;
+  /** The previous edge in the connection */
+  previous?: Maybe<TracksJson>;
+}
+
 /** Node of type Site */
 export interface Site extends Node {
   /** The id of this node. */
@@ -22017,7 +24569,7 @@ export interface Site extends Node {
 
   buildTime?: Maybe<Date>;
 
-  internal?: Maybe<Internal_22>;
+  internal?: Maybe<Internal_24>;
 }
 
 export interface SiteMetadata_2 {
@@ -22026,7 +24578,7 @@ export interface SiteMetadata_2 {
   siteUrl?: Maybe<string>;
 }
 
-export interface Internal_22 {
+export interface Internal_24 {
   contentDigest?: Maybe<string>;
 
   type?: Maybe<string>;
@@ -22127,6 +24679,15 @@ export interface AllMarkdownRemarkQueryArgs {
   sort?: Maybe<MarkdownRemarkConnectionSort>;
 
   filter?: Maybe<FilterMarkdownRemark>;
+}
+export interface AllTracksJsonQueryArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  sort?: Maybe<TracksJsonConnectionSort>;
+
+  filter?: Maybe<FilterTracksJson>;
 }
 export interface TestimonialsJsonQueryArgs {
   id?: Maybe<TestimonialsJsonIdQueryString_2>;
@@ -22459,13 +25020,13 @@ export interface MarkdownRemarkQueryArgs {
 
   frontmatter?: Maybe<MarkdownRemarkFrontmatterInputObject_2>;
 
+  excerpt?: Maybe<ExcerptQueryString_3>;
+
   rawMarkdownBody?: Maybe<MarkdownRemarkRawMarkdownBodyQueryString_2>;
 
   fileAbsolutePath?: Maybe<MarkdownRemarkFileAbsolutePathQueryString_2>;
 
   html?: Maybe<HtmlQueryString_3>;
-
-  excerpt?: Maybe<ExcerptQueryString_3>;
 
   headings?: Maybe<HeadingsQueryList_3>;
 
@@ -22474,6 +25035,21 @@ export interface MarkdownRemarkQueryArgs {
   tableOfContents?: Maybe<TableOfContentsQueryString_3>;
 
   wordCount?: Maybe<WordCountTypeName_3>;
+}
+export interface TracksJsonQueryArgs {
+  id?: Maybe<TracksJsonIdQueryString_2>;
+
+  title?: Maybe<TracksJsonTitleQueryString_2>;
+
+  imageSrc?: Maybe<TracksJsonImageSrcQueryString_2>;
+
+  description?: Maybe<TracksJsonDescriptionQueryString_2>;
+
+  bundles?: Maybe<TracksJsonBundlesQueryList_2>;
+
+  levels?: Maybe<TracksJsonLevelsQueryList_2>;
+
+  internal?: Maybe<TracksJsonInternalInputObject_2>;
 }
 export interface DistinctTestimonialsJsonConnectionArgs {
   field?: Maybe<TestimonialsJsonDistinctEnum>;
@@ -22925,6 +25501,106 @@ export interface UpdatedDateFrontmatter_21Args {
   /** Configures the locale Moment.js will use to format the date. */
   locale?: Maybe<string>;
 }
+export interface CreatedDateFrontmatter_22Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface UpdatedDateFrontmatter_22Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface CreatedDateFrontmatter_23Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface UpdatedDateFrontmatter_23Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface CreatedDateFrontmatter_24Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface UpdatedDateFrontmatter_24Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface CreatedDateFrontmatter_25Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface UpdatedDateFrontmatter_25Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface CreatedDateFrontmatter_26Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
+export interface UpdatedDateFrontmatter_26Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>;
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: Maybe<boolean>;
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>;
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: Maybe<string>;
+}
 export interface DistinctSitePluginConnectionArgs {
   field?: Maybe<SitePluginDistinctEnum>;
 }
@@ -23118,21 +25794,15 @@ export interface BirthtimeFileArgs {
 export interface ExcerptMarkdownRemarkArgs {
   pruneLength?: number;
 
-  truncate?: Maybe<boolean>;
-
-  format?: Maybe<ExcerptFormats>;
+  truncate?: boolean;
 }
 export interface HeadingsMarkdownRemarkArgs {
   depth?: Maybe<HeadingLevels>;
 }
 export interface TableOfContentsMarkdownRemarkArgs {
   pathToSlugField?: string;
-
-  maxDepth?: Maybe<number>;
-
-  heading?: Maybe<string>;
 }
-export interface CreatedDateFrontmatter_22Args {
+export interface CreatedDateFrontmatter_27Args {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   formatString?: Maybe<string>;
   /** Returns a string generated with Moment.js' fromNow function */
@@ -23142,7 +25812,7 @@ export interface CreatedDateFrontmatter_22Args {
   /** Configures the locale Moment.js will use to format the date. */
   locale?: Maybe<string>;
 }
-export interface UpdatedDateFrontmatter_22Args {
+export interface UpdatedDateFrontmatter_27Args {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   formatString?: Maybe<string>;
   /** Returns a string generated with Moment.js' fromNow function */
@@ -23157,65 +25827,101 @@ export interface FixedImageSharpArgs {
 
   height?: Maybe<number>;
 
+  base64Width?: Maybe<number>;
+
   jpegProgressive?: boolean;
 
-  grayscale?: Maybe<boolean>;
+  pngCompressionSpeed?: number;
+
+  grayscale?: boolean;
 
   duotone?: Maybe<DuotoneGradient>;
 
   traceSVG?: Maybe<Potrace>;
 
-  quality?: number;
+  quality?: Maybe<number>;
 
   toFormat?: Maybe<ImageFormat>;
 
+  toFormatBase64?: Maybe<ImageFormat>;
+
   cropFocus?: Maybe<ImageCropFocus>;
 
-  rotate?: Maybe<number>;
+  fit?: Maybe<ImageFit>;
+
+  background?: string;
+
+  rotate?: number;
+
+  trim?: number;
 }
 export interface ResolutionsImageSharpArgs {
   width?: Maybe<number>;
 
   height?: Maybe<number>;
 
+  base64Width?: Maybe<number>;
+
   jpegProgressive?: boolean;
 
-  grayscale?: Maybe<boolean>;
+  pngCompressionSpeed?: number;
+
+  grayscale?: boolean;
 
   duotone?: Maybe<DuotoneGradient>;
 
   traceSVG?: Maybe<Potrace>;
 
-  quality?: number;
+  quality?: Maybe<number>;
 
   toFormat?: Maybe<ImageFormat>;
 
+  toFormatBase64?: Maybe<ImageFormat>;
+
   cropFocus?: Maybe<ImageCropFocus>;
 
-  rotate?: Maybe<number>;
+  fit?: Maybe<ImageFit>;
+
+  background?: string;
+
+  rotate?: number;
+
+  trim?: number;
 }
 export interface FluidImageSharpArgs {
   maxWidth?: Maybe<number>;
 
   maxHeight?: Maybe<number>;
 
-  grayscale?: Maybe<boolean>;
+  base64Width?: Maybe<number>;
+
+  grayscale?: boolean;
 
   jpegProgressive?: boolean;
+
+  pngCompressionSpeed?: number;
 
   duotone?: Maybe<DuotoneGradient>;
 
   traceSVG?: Maybe<Potrace>;
 
-  quality?: number;
+  quality?: Maybe<number>;
 
   toFormat?: Maybe<ImageFormat>;
 
+  toFormatBase64?: Maybe<ImageFormat>;
+
   cropFocus?: Maybe<ImageCropFocus>;
 
-  rotate?: Maybe<number>;
+  fit?: Maybe<ImageFit>;
 
-  sizes?: Maybe<string>;
+  background?: string;
+
+  rotate?: number;
+
+  trim?: number;
+
+  sizes?: string;
   /** A list of image widths to be generated. Example: [ 200, 340, 520, 890 ] */
   srcSetBreakpoints?: (Maybe<number>)[];
 }
@@ -23224,23 +25930,35 @@ export interface SizesImageSharpArgs {
 
   maxHeight?: Maybe<number>;
 
-  grayscale?: Maybe<boolean>;
+  base64Width?: Maybe<number>;
+
+  grayscale?: boolean;
 
   jpegProgressive?: boolean;
+
+  pngCompressionSpeed?: number;
 
   duotone?: Maybe<DuotoneGradient>;
 
   traceSVG?: Maybe<Potrace>;
 
-  quality?: number;
+  quality?: Maybe<number>;
 
   toFormat?: Maybe<ImageFormat>;
 
+  toFormatBase64?: Maybe<ImageFormat>;
+
   cropFocus?: Maybe<ImageCropFocus>;
 
-  rotate?: Maybe<number>;
+  fit?: Maybe<ImageFit>;
 
-  sizes?: Maybe<string>;
+  background?: string;
+
+  rotate?: number;
+
+  trim?: number;
+
+  sizes?: string;
   /** A list of image widths to be generated. Example: [ 200, 340, 520, 890 ] */
   srcSetBreakpoints?: (Maybe<number>)[];
 }
@@ -23249,17 +25967,19 @@ export interface ResizeImageSharpArgs {
 
   height?: Maybe<number>;
 
-  quality?: number;
+  quality?: Maybe<number>;
 
   jpegProgressive?: boolean;
 
   pngCompressionLevel?: number;
 
-  grayscale?: Maybe<boolean>;
+  pngCompressionSpeed?: number;
+
+  grayscale?: boolean;
 
   duotone?: Maybe<DuotoneGradient>;
 
-  base64?: Maybe<boolean>;
+  base64?: boolean;
 
   traceSVG?: Maybe<Potrace>;
 
@@ -23267,7 +25987,13 @@ export interface ResizeImageSharpArgs {
 
   cropFocus?: Maybe<ImageCropFocus>;
 
-  rotate?: Maybe<number>;
+  fit?: Maybe<ImageFit>;
+
+  background?: string;
+
+  rotate?: number;
+
+  trim?: number;
 }
 export interface DistinctImageSharpConnectionArgs {
   field?: Maybe<ImageSharpDistinctEnum>;
@@ -23298,6 +26024,16 @@ export interface GroupMarkdownRemarkConnectionArgs {
   limit?: Maybe<number>;
 
   field?: Maybe<MarkdownRemarkGroupEnum>;
+}
+export interface DistinctTracksJsonConnectionArgs {
+  field?: Maybe<TracksJsonDistinctEnum>;
+}
+export interface GroupTracksJsonConnectionArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  field?: Maybe<TracksJsonGroupEnum>;
 }
 export interface PortSiteArgs {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
