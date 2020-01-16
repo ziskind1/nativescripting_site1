@@ -4,4 +4,5 @@ export interface Lesson {
     name: string;
     lessonNumber: number;
     isPreview: boolean;
+    vidId?: string;
 }

@@ -1,20 +1,22 @@
-{
-    "coursePreviews": [
-        {
-            "courseId": "6",
-            "videoId": "7"
-        }
-    ],
-    "chapterPreviews": [
-        {
-            "chapterId": 10,
-            "videoId": "7"
-        }
-    ],
-    "lessonPreviews": [
-        {
-            "lessonId": "8",
-            "videoId": "7"
-        }
-    ]
-}
+[
+    {
+        "coursePreviews": [
+            {
+                "courseId": "6",
+                "videoId": "7"
+            }
+        ],
+        "chapterPreviews": [
+            {
+                "chapterId": 10,
+                "videoId": "7"
+            }
+        ],
+        "lessonPreviews": [
+            {
+                "lessonId": "6410378",
+                "videoId": "hello-there"
+            }
+        ]
+    }
+]

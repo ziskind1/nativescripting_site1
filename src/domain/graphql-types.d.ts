@@ -728,214 +728,6 @@ export type CoursesJsonSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>,
 };
 
-export type DataJson = Node & {
-   __typename?: 'DataJson',
-  id: Scalars['ID'],
-  parent?: Maybe<Node>,
-  children: Array<Node>,
-  internal: Internal,
-  coursePreviews?: Maybe<Array<Maybe<DataJsonCoursePreviews>>>,
-  chapterPreviews?: Maybe<Array<Maybe<DataJsonChapterPreviews>>>,
-  lessonPreviews?: Maybe<Array<Maybe<DataJsonLessonPreviews>>>,
-};
-
-export type DataJsonChapterPreviews = {
-   __typename?: 'DataJsonChapterPreviews',
-  chapterId?: Maybe<Scalars['Int']>,
-  videoId?: Maybe<Scalars['String']>,
-};
-
-export type DataJsonChapterPreviewsFilterInput = {
-  chapterId?: Maybe<IntQueryOperatorInput>,
-  videoId?: Maybe<StringQueryOperatorInput>,
-};
-
-export type DataJsonChapterPreviewsFilterListInput = {
-  elemMatch?: Maybe<DataJsonChapterPreviewsFilterInput>,
-};
-
-export type DataJsonConnection = {
-   __typename?: 'DataJsonConnection',
-  totalCount: Scalars['Int'],
-  edges: Array<DataJsonEdge>,
-  nodes: Array<DataJson>,
-  pageInfo: PageInfo,
-  distinct: Array<Scalars['String']>,
-  group: Array<DataJsonGroupConnection>,
-};
-
-
-export type DataJsonConnectionDistinctArgs = {
-  field: DataJsonFieldsEnum
-};
-
-
-export type DataJsonConnectionGroupArgs = {
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>,
-  field: DataJsonFieldsEnum
-};
-
-export type DataJsonCoursePreviews = {
-   __typename?: 'DataJsonCoursePreviews',
-  courseId?: Maybe<Scalars['String']>,
-  videoId?: Maybe<Scalars['String']>,
-};
-
-export type DataJsonCoursePreviewsFilterInput = {
-  courseId?: Maybe<StringQueryOperatorInput>,
-  videoId?: Maybe<StringQueryOperatorInput>,
-};
-
-export type DataJsonCoursePreviewsFilterListInput = {
-  elemMatch?: Maybe<DataJsonCoursePreviewsFilterInput>,
-};
-
-export type DataJsonEdge = {
-   __typename?: 'DataJsonEdge',
-  next?: Maybe<DataJson>,
-  node: DataJson,
-  previous?: Maybe<DataJson>,
-};
-
-export enum DataJsonFieldsEnum {
-  id = 'id',
-  parent___id = 'parent___id',
-  parent___parent___id = 'parent___parent___id',
-  parent___parent___parent___id = 'parent___parent___parent___id',
-  parent___parent___parent___children = 'parent___parent___parent___children',
-  parent___parent___children = 'parent___parent___children',
-  parent___parent___children___id = 'parent___parent___children___id',
-  parent___parent___children___children = 'parent___parent___children___children',
-  parent___parent___internal___content = 'parent___parent___internal___content',
-  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
-  parent___parent___internal___description = 'parent___parent___internal___description',
-  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
-  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
-  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
-  parent___parent___internal___owner = 'parent___parent___internal___owner',
-  parent___parent___internal___type = 'parent___parent___internal___type',
-  parent___children = 'parent___children',
-  parent___children___id = 'parent___children___id',
-  parent___children___parent___id = 'parent___children___parent___id',
-  parent___children___parent___children = 'parent___children___parent___children',
-  parent___children___children = 'parent___children___children',
-  parent___children___children___id = 'parent___children___children___id',
-  parent___children___children___children = 'parent___children___children___children',
-  parent___children___internal___content = 'parent___children___internal___content',
-  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
-  parent___children___internal___description = 'parent___children___internal___description',
-  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
-  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
-  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
-  parent___children___internal___owner = 'parent___children___internal___owner',
-  parent___children___internal___type = 'parent___children___internal___type',
-  parent___internal___content = 'parent___internal___content',
-  parent___internal___contentDigest = 'parent___internal___contentDigest',
-  parent___internal___description = 'parent___internal___description',
-  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
-  parent___internal___ignoreType = 'parent___internal___ignoreType',
-  parent___internal___mediaType = 'parent___internal___mediaType',
-  parent___internal___owner = 'parent___internal___owner',
-  parent___internal___type = 'parent___internal___type',
-  children = 'children',
-  children___id = 'children___id',
-  children___parent___id = 'children___parent___id',
-  children___parent___parent___id = 'children___parent___parent___id',
-  children___parent___parent___children = 'children___parent___parent___children',
-  children___parent___children = 'children___parent___children',
-  children___parent___children___id = 'children___parent___children___id',
-  children___parent___children___children = 'children___parent___children___children',
-  children___parent___internal___content = 'children___parent___internal___content',
-  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
-  children___parent___internal___description = 'children___parent___internal___description',
-  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
-  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
-  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
-  children___parent___internal___owner = 'children___parent___internal___owner',
-  children___parent___internal___type = 'children___parent___internal___type',
-  children___children = 'children___children',
-  children___children___id = 'children___children___id',
-  children___children___parent___id = 'children___children___parent___id',
-  children___children___parent___children = 'children___children___parent___children',
-  children___children___children = 'children___children___children',
-  children___children___children___id = 'children___children___children___id',
-  children___children___children___children = 'children___children___children___children',
-  children___children___internal___content = 'children___children___internal___content',
-  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
-  children___children___internal___description = 'children___children___internal___description',
-  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
-  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
-  children___children___internal___mediaType = 'children___children___internal___mediaType',
-  children___children___internal___owner = 'children___children___internal___owner',
-  children___children___internal___type = 'children___children___internal___type',
-  children___internal___content = 'children___internal___content',
-  children___internal___contentDigest = 'children___internal___contentDigest',
-  children___internal___description = 'children___internal___description',
-  children___internal___fieldOwners = 'children___internal___fieldOwners',
-  children___internal___ignoreType = 'children___internal___ignoreType',
-  children___internal___mediaType = 'children___internal___mediaType',
-  children___internal___owner = 'children___internal___owner',
-  children___internal___type = 'children___internal___type',
-  internal___content = 'internal___content',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___fieldOwners = 'internal___fieldOwners',
-  internal___ignoreType = 'internal___ignoreType',
-  internal___mediaType = 'internal___mediaType',
-  internal___owner = 'internal___owner',
-  internal___type = 'internal___type',
-  coursePreviews = 'coursePreviews',
-  coursePreviews___courseId = 'coursePreviews___courseId',
-  coursePreviews___videoId = 'coursePreviews___videoId',
-  chapterPreviews = 'chapterPreviews',
-  chapterPreviews___chapterId = 'chapterPreviews___chapterId',
-  chapterPreviews___videoId = 'chapterPreviews___videoId',
-  lessonPreviews = 'lessonPreviews',
-  lessonPreviews___lessonId = 'lessonPreviews___lessonId',
-  lessonPreviews___videoId = 'lessonPreviews___videoId'
-}
-
-export type DataJsonFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>,
-  coursePreviews?: Maybe<DataJsonCoursePreviewsFilterListInput>,
-  chapterPreviews?: Maybe<DataJsonChapterPreviewsFilterListInput>,
-  lessonPreviews?: Maybe<DataJsonLessonPreviewsFilterListInput>,
-};
-
-export type DataJsonGroupConnection = {
-   __typename?: 'DataJsonGroupConnection',
-  totalCount: Scalars['Int'],
-  edges: Array<DataJsonEdge>,
-  nodes: Array<DataJson>,
-  pageInfo: PageInfo,
-  field: Scalars['String'],
-  fieldValue?: Maybe<Scalars['String']>,
-};
-
-export type DataJsonLessonPreviews = {
-   __typename?: 'DataJsonLessonPreviews',
-  lessonId?: Maybe<Scalars['String']>,
-  videoId?: Maybe<Scalars['String']>,
-};
-
-export type DataJsonLessonPreviewsFilterInput = {
-  lessonId?: Maybe<StringQueryOperatorInput>,
-  videoId?: Maybe<StringQueryOperatorInput>,
-};
-
-export type DataJsonLessonPreviewsFilterListInput = {
-  elemMatch?: Maybe<DataJsonLessonPreviewsFilterInput>,
-};
-
-export type DataJsonSortInput = {
-  fields?: Maybe<Array<Maybe<DataJsonFieldsEnum>>>,
-  order?: Maybe<Array<Maybe<SortOrderEnum>>>,
-};
-
 
 export type DateQueryOperatorInput = {
   eq?: Maybe<Scalars['Date']>,
@@ -1301,7 +1093,7 @@ export type File = Node & {
   internal: Internal,
   childrenAuthorsJson?: Maybe<Array<Maybe<AuthorsJson>>>,
   childrenBundlesJson?: Maybe<Array<Maybe<BundlesJson>>>,
-  childDataJson?: Maybe<DataJson>,
+  childPreviewsJson?: Maybe<PreviewsJson>,
   childrenTestimonialsJson?: Maybe<Array<Maybe<TestimonialsJson>>>,
   childrenTracksJson?: Maybe<Array<Maybe<TracksJson>>>,
   childMarkdownRemark?: Maybe<MarkdownRemark>,
@@ -1707,53 +1499,53 @@ export enum FileFieldsEnum {
   childrenBundlesJson___products___licensesMin = 'childrenBundlesJson___products___licensesMin',
   childrenBundlesJson___products___licensesMax = 'childrenBundlesJson___products___licensesMax',
   childrenBundlesJson___courseIds = 'childrenBundlesJson___courseIds',
-  childDataJson___id = 'childDataJson___id',
-  childDataJson___parent___id = 'childDataJson___parent___id',
-  childDataJson___parent___parent___id = 'childDataJson___parent___parent___id',
-  childDataJson___parent___parent___children = 'childDataJson___parent___parent___children',
-  childDataJson___parent___children = 'childDataJson___parent___children',
-  childDataJson___parent___children___id = 'childDataJson___parent___children___id',
-  childDataJson___parent___children___children = 'childDataJson___parent___children___children',
-  childDataJson___parent___internal___content = 'childDataJson___parent___internal___content',
-  childDataJson___parent___internal___contentDigest = 'childDataJson___parent___internal___contentDigest',
-  childDataJson___parent___internal___description = 'childDataJson___parent___internal___description',
-  childDataJson___parent___internal___fieldOwners = 'childDataJson___parent___internal___fieldOwners',
-  childDataJson___parent___internal___ignoreType = 'childDataJson___parent___internal___ignoreType',
-  childDataJson___parent___internal___mediaType = 'childDataJson___parent___internal___mediaType',
-  childDataJson___parent___internal___owner = 'childDataJson___parent___internal___owner',
-  childDataJson___parent___internal___type = 'childDataJson___parent___internal___type',
-  childDataJson___children = 'childDataJson___children',
-  childDataJson___children___id = 'childDataJson___children___id',
-  childDataJson___children___parent___id = 'childDataJson___children___parent___id',
-  childDataJson___children___parent___children = 'childDataJson___children___parent___children',
-  childDataJson___children___children = 'childDataJson___children___children',
-  childDataJson___children___children___id = 'childDataJson___children___children___id',
-  childDataJson___children___children___children = 'childDataJson___children___children___children',
-  childDataJson___children___internal___content = 'childDataJson___children___internal___content',
-  childDataJson___children___internal___contentDigest = 'childDataJson___children___internal___contentDigest',
-  childDataJson___children___internal___description = 'childDataJson___children___internal___description',
-  childDataJson___children___internal___fieldOwners = 'childDataJson___children___internal___fieldOwners',
-  childDataJson___children___internal___ignoreType = 'childDataJson___children___internal___ignoreType',
-  childDataJson___children___internal___mediaType = 'childDataJson___children___internal___mediaType',
-  childDataJson___children___internal___owner = 'childDataJson___children___internal___owner',
-  childDataJson___children___internal___type = 'childDataJson___children___internal___type',
-  childDataJson___internal___content = 'childDataJson___internal___content',
-  childDataJson___internal___contentDigest = 'childDataJson___internal___contentDigest',
-  childDataJson___internal___description = 'childDataJson___internal___description',
-  childDataJson___internal___fieldOwners = 'childDataJson___internal___fieldOwners',
-  childDataJson___internal___ignoreType = 'childDataJson___internal___ignoreType',
-  childDataJson___internal___mediaType = 'childDataJson___internal___mediaType',
-  childDataJson___internal___owner = 'childDataJson___internal___owner',
-  childDataJson___internal___type = 'childDataJson___internal___type',
-  childDataJson___coursePreviews = 'childDataJson___coursePreviews',
-  childDataJson___coursePreviews___courseId = 'childDataJson___coursePreviews___courseId',
-  childDataJson___coursePreviews___videoId = 'childDataJson___coursePreviews___videoId',
-  childDataJson___chapterPreviews = 'childDataJson___chapterPreviews',
-  childDataJson___chapterPreviews___chapterId = 'childDataJson___chapterPreviews___chapterId',
-  childDataJson___chapterPreviews___videoId = 'childDataJson___chapterPreviews___videoId',
-  childDataJson___lessonPreviews = 'childDataJson___lessonPreviews',
-  childDataJson___lessonPreviews___lessonId = 'childDataJson___lessonPreviews___lessonId',
-  childDataJson___lessonPreviews___videoId = 'childDataJson___lessonPreviews___videoId',
+  childPreviewsJson___id = 'childPreviewsJson___id',
+  childPreviewsJson___parent___id = 'childPreviewsJson___parent___id',
+  childPreviewsJson___parent___parent___id = 'childPreviewsJson___parent___parent___id',
+  childPreviewsJson___parent___parent___children = 'childPreviewsJson___parent___parent___children',
+  childPreviewsJson___parent___children = 'childPreviewsJson___parent___children',
+  childPreviewsJson___parent___children___id = 'childPreviewsJson___parent___children___id',
+  childPreviewsJson___parent___children___children = 'childPreviewsJson___parent___children___children',
+  childPreviewsJson___parent___internal___content = 'childPreviewsJson___parent___internal___content',
+  childPreviewsJson___parent___internal___contentDigest = 'childPreviewsJson___parent___internal___contentDigest',
+  childPreviewsJson___parent___internal___description = 'childPreviewsJson___parent___internal___description',
+  childPreviewsJson___parent___internal___fieldOwners = 'childPreviewsJson___parent___internal___fieldOwners',
+  childPreviewsJson___parent___internal___ignoreType = 'childPreviewsJson___parent___internal___ignoreType',
+  childPreviewsJson___parent___internal___mediaType = 'childPreviewsJson___parent___internal___mediaType',
+  childPreviewsJson___parent___internal___owner = 'childPreviewsJson___parent___internal___owner',
+  childPreviewsJson___parent___internal___type = 'childPreviewsJson___parent___internal___type',
+  childPreviewsJson___children = 'childPreviewsJson___children',
+  childPreviewsJson___children___id = 'childPreviewsJson___children___id',
+  childPreviewsJson___children___parent___id = 'childPreviewsJson___children___parent___id',
+  childPreviewsJson___children___parent___children = 'childPreviewsJson___children___parent___children',
+  childPreviewsJson___children___children = 'childPreviewsJson___children___children',
+  childPreviewsJson___children___children___id = 'childPreviewsJson___children___children___id',
+  childPreviewsJson___children___children___children = 'childPreviewsJson___children___children___children',
+  childPreviewsJson___children___internal___content = 'childPreviewsJson___children___internal___content',
+  childPreviewsJson___children___internal___contentDigest = 'childPreviewsJson___children___internal___contentDigest',
+  childPreviewsJson___children___internal___description = 'childPreviewsJson___children___internal___description',
+  childPreviewsJson___children___internal___fieldOwners = 'childPreviewsJson___children___internal___fieldOwners',
+  childPreviewsJson___children___internal___ignoreType = 'childPreviewsJson___children___internal___ignoreType',
+  childPreviewsJson___children___internal___mediaType = 'childPreviewsJson___children___internal___mediaType',
+  childPreviewsJson___children___internal___owner = 'childPreviewsJson___children___internal___owner',
+  childPreviewsJson___children___internal___type = 'childPreviewsJson___children___internal___type',
+  childPreviewsJson___internal___content = 'childPreviewsJson___internal___content',
+  childPreviewsJson___internal___contentDigest = 'childPreviewsJson___internal___contentDigest',
+  childPreviewsJson___internal___description = 'childPreviewsJson___internal___description',
+  childPreviewsJson___internal___fieldOwners = 'childPreviewsJson___internal___fieldOwners',
+  childPreviewsJson___internal___ignoreType = 'childPreviewsJson___internal___ignoreType',
+  childPreviewsJson___internal___mediaType = 'childPreviewsJson___internal___mediaType',
+  childPreviewsJson___internal___owner = 'childPreviewsJson___internal___owner',
+  childPreviewsJson___internal___type = 'childPreviewsJson___internal___type',
+  childPreviewsJson___coursePreviews = 'childPreviewsJson___coursePreviews',
+  childPreviewsJson___coursePreviews___courseId = 'childPreviewsJson___coursePreviews___courseId',
+  childPreviewsJson___coursePreviews___videoId = 'childPreviewsJson___coursePreviews___videoId',
+  childPreviewsJson___chapterPreviews = 'childPreviewsJson___chapterPreviews',
+  childPreviewsJson___chapterPreviews___chapterId = 'childPreviewsJson___chapterPreviews___chapterId',
+  childPreviewsJson___chapterPreviews___videoId = 'childPreviewsJson___chapterPreviews___videoId',
+  childPreviewsJson___lessonPreviews = 'childPreviewsJson___lessonPreviews',
+  childPreviewsJson___lessonPreviews___lessonId = 'childPreviewsJson___lessonPreviews___lessonId',
+  childPreviewsJson___lessonPreviews___videoId = 'childPreviewsJson___lessonPreviews___videoId',
   childrenTestimonialsJson = 'childrenTestimonialsJson',
   childrenTestimonialsJson___id = 'childrenTestimonialsJson___id',
   childrenTestimonialsJson___parent___id = 'childrenTestimonialsJson___parent___id',
@@ -2067,7 +1859,7 @@ export type FileFilterInput = {
   internal?: Maybe<InternalFilterInput>,
   childrenAuthorsJson?: Maybe<AuthorsJsonFilterListInput>,
   childrenBundlesJson?: Maybe<BundlesJsonFilterListInput>,
-  childDataJson?: Maybe<DataJsonFilterInput>,
+  childPreviewsJson?: Maybe<PreviewsJsonFilterInput>,
   childrenTestimonialsJson?: Maybe<TestimonialsJsonFilterListInput>,
   childrenTracksJson?: Maybe<TracksJsonFilterListInput>,
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>,
@@ -2837,11 +2629,11 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___image___childrenBundlesJson___bundleLevel = 'frontmatter___image___childrenBundlesJson___bundleLevel',
   frontmatter___image___childrenBundlesJson___products = 'frontmatter___image___childrenBundlesJson___products',
   frontmatter___image___childrenBundlesJson___courseIds = 'frontmatter___image___childrenBundlesJson___courseIds',
-  frontmatter___image___childDataJson___id = 'frontmatter___image___childDataJson___id',
-  frontmatter___image___childDataJson___children = 'frontmatter___image___childDataJson___children',
-  frontmatter___image___childDataJson___coursePreviews = 'frontmatter___image___childDataJson___coursePreviews',
-  frontmatter___image___childDataJson___chapterPreviews = 'frontmatter___image___childDataJson___chapterPreviews',
-  frontmatter___image___childDataJson___lessonPreviews = 'frontmatter___image___childDataJson___lessonPreviews',
+  frontmatter___image___childPreviewsJson___id = 'frontmatter___image___childPreviewsJson___id',
+  frontmatter___image___childPreviewsJson___children = 'frontmatter___image___childPreviewsJson___children',
+  frontmatter___image___childPreviewsJson___coursePreviews = 'frontmatter___image___childPreviewsJson___coursePreviews',
+  frontmatter___image___childPreviewsJson___chapterPreviews = 'frontmatter___image___childPreviewsJson___chapterPreviews',
+  frontmatter___image___childPreviewsJson___lessonPreviews = 'frontmatter___image___childPreviewsJson___lessonPreviews',
   frontmatter___image___childrenTestimonialsJson = 'frontmatter___image___childrenTestimonialsJson',
   frontmatter___image___childrenTestimonialsJson___id = 'frontmatter___image___childrenTestimonialsJson___id',
   frontmatter___image___childrenTestimonialsJson___children = 'frontmatter___image___childrenTestimonialsJson___children',
@@ -3125,6 +2917,214 @@ export enum PotraceTurnPolicy {
   TURNPOLICY_MAJORITY = 'TURNPOLICY_MAJORITY'
 }
 
+export type PreviewsJson = Node & {
+   __typename?: 'PreviewsJson',
+  id: Scalars['ID'],
+  parent?: Maybe<Node>,
+  children: Array<Node>,
+  internal: Internal,
+  coursePreviews?: Maybe<Array<Maybe<PreviewsJsonCoursePreviews>>>,
+  chapterPreviews?: Maybe<Array<Maybe<PreviewsJsonChapterPreviews>>>,
+  lessonPreviews?: Maybe<Array<Maybe<PreviewsJsonLessonPreviews>>>,
+};
+
+export type PreviewsJsonChapterPreviews = {
+   __typename?: 'PreviewsJsonChapterPreviews',
+  chapterId?: Maybe<Scalars['Int']>,
+  videoId?: Maybe<Scalars['String']>,
+};
+
+export type PreviewsJsonChapterPreviewsFilterInput = {
+  chapterId?: Maybe<IntQueryOperatorInput>,
+  videoId?: Maybe<StringQueryOperatorInput>,
+};
+
+export type PreviewsJsonChapterPreviewsFilterListInput = {
+  elemMatch?: Maybe<PreviewsJsonChapterPreviewsFilterInput>,
+};
+
+export type PreviewsJsonConnection = {
+   __typename?: 'PreviewsJsonConnection',
+  totalCount: Scalars['Int'],
+  edges: Array<PreviewsJsonEdge>,
+  nodes: Array<PreviewsJson>,
+  pageInfo: PageInfo,
+  distinct: Array<Scalars['String']>,
+  group: Array<PreviewsJsonGroupConnection>,
+};
+
+
+export type PreviewsJsonConnectionDistinctArgs = {
+  field: PreviewsJsonFieldsEnum
+};
+
+
+export type PreviewsJsonConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>,
+  field: PreviewsJsonFieldsEnum
+};
+
+export type PreviewsJsonCoursePreviews = {
+   __typename?: 'PreviewsJsonCoursePreviews',
+  courseId?: Maybe<Scalars['String']>,
+  videoId?: Maybe<Scalars['String']>,
+};
+
+export type PreviewsJsonCoursePreviewsFilterInput = {
+  courseId?: Maybe<StringQueryOperatorInput>,
+  videoId?: Maybe<StringQueryOperatorInput>,
+};
+
+export type PreviewsJsonCoursePreviewsFilterListInput = {
+  elemMatch?: Maybe<PreviewsJsonCoursePreviewsFilterInput>,
+};
+
+export type PreviewsJsonEdge = {
+   __typename?: 'PreviewsJsonEdge',
+  next?: Maybe<PreviewsJson>,
+  node: PreviewsJson,
+  previous?: Maybe<PreviewsJson>,
+};
+
+export enum PreviewsJsonFieldsEnum {
+  id = 'id',
+  parent___id = 'parent___id',
+  parent___parent___id = 'parent___parent___id',
+  parent___parent___parent___id = 'parent___parent___parent___id',
+  parent___parent___parent___children = 'parent___parent___parent___children',
+  parent___parent___children = 'parent___parent___children',
+  parent___parent___children___id = 'parent___parent___children___id',
+  parent___parent___children___children = 'parent___parent___children___children',
+  parent___parent___internal___content = 'parent___parent___internal___content',
+  parent___parent___internal___contentDigest = 'parent___parent___internal___contentDigest',
+  parent___parent___internal___description = 'parent___parent___internal___description',
+  parent___parent___internal___fieldOwners = 'parent___parent___internal___fieldOwners',
+  parent___parent___internal___ignoreType = 'parent___parent___internal___ignoreType',
+  parent___parent___internal___mediaType = 'parent___parent___internal___mediaType',
+  parent___parent___internal___owner = 'parent___parent___internal___owner',
+  parent___parent___internal___type = 'parent___parent___internal___type',
+  parent___children = 'parent___children',
+  parent___children___id = 'parent___children___id',
+  parent___children___parent___id = 'parent___children___parent___id',
+  parent___children___parent___children = 'parent___children___parent___children',
+  parent___children___children = 'parent___children___children',
+  parent___children___children___id = 'parent___children___children___id',
+  parent___children___children___children = 'parent___children___children___children',
+  parent___children___internal___content = 'parent___children___internal___content',
+  parent___children___internal___contentDigest = 'parent___children___internal___contentDigest',
+  parent___children___internal___description = 'parent___children___internal___description',
+  parent___children___internal___fieldOwners = 'parent___children___internal___fieldOwners',
+  parent___children___internal___ignoreType = 'parent___children___internal___ignoreType',
+  parent___children___internal___mediaType = 'parent___children___internal___mediaType',
+  parent___children___internal___owner = 'parent___children___internal___owner',
+  parent___children___internal___type = 'parent___children___internal___type',
+  parent___internal___content = 'parent___internal___content',
+  parent___internal___contentDigest = 'parent___internal___contentDigest',
+  parent___internal___description = 'parent___internal___description',
+  parent___internal___fieldOwners = 'parent___internal___fieldOwners',
+  parent___internal___ignoreType = 'parent___internal___ignoreType',
+  parent___internal___mediaType = 'parent___internal___mediaType',
+  parent___internal___owner = 'parent___internal___owner',
+  parent___internal___type = 'parent___internal___type',
+  children = 'children',
+  children___id = 'children___id',
+  children___parent___id = 'children___parent___id',
+  children___parent___parent___id = 'children___parent___parent___id',
+  children___parent___parent___children = 'children___parent___parent___children',
+  children___parent___children = 'children___parent___children',
+  children___parent___children___id = 'children___parent___children___id',
+  children___parent___children___children = 'children___parent___children___children',
+  children___parent___internal___content = 'children___parent___internal___content',
+  children___parent___internal___contentDigest = 'children___parent___internal___contentDigest',
+  children___parent___internal___description = 'children___parent___internal___description',
+  children___parent___internal___fieldOwners = 'children___parent___internal___fieldOwners',
+  children___parent___internal___ignoreType = 'children___parent___internal___ignoreType',
+  children___parent___internal___mediaType = 'children___parent___internal___mediaType',
+  children___parent___internal___owner = 'children___parent___internal___owner',
+  children___parent___internal___type = 'children___parent___internal___type',
+  children___children = 'children___children',
+  children___children___id = 'children___children___id',
+  children___children___parent___id = 'children___children___parent___id',
+  children___children___parent___children = 'children___children___parent___children',
+  children___children___children = 'children___children___children',
+  children___children___children___id = 'children___children___children___id',
+  children___children___children___children = 'children___children___children___children',
+  children___children___internal___content = 'children___children___internal___content',
+  children___children___internal___contentDigest = 'children___children___internal___contentDigest',
+  children___children___internal___description = 'children___children___internal___description',
+  children___children___internal___fieldOwners = 'children___children___internal___fieldOwners',
+  children___children___internal___ignoreType = 'children___children___internal___ignoreType',
+  children___children___internal___mediaType = 'children___children___internal___mediaType',
+  children___children___internal___owner = 'children___children___internal___owner',
+  children___children___internal___type = 'children___children___internal___type',
+  children___internal___content = 'children___internal___content',
+  children___internal___contentDigest = 'children___internal___contentDigest',
+  children___internal___description = 'children___internal___description',
+  children___internal___fieldOwners = 'children___internal___fieldOwners',
+  children___internal___ignoreType = 'children___internal___ignoreType',
+  children___internal___mediaType = 'children___internal___mediaType',
+  children___internal___owner = 'children___internal___owner',
+  children___internal___type = 'children___internal___type',
+  internal___content = 'internal___content',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___description = 'internal___description',
+  internal___fieldOwners = 'internal___fieldOwners',
+  internal___ignoreType = 'internal___ignoreType',
+  internal___mediaType = 'internal___mediaType',
+  internal___owner = 'internal___owner',
+  internal___type = 'internal___type',
+  coursePreviews = 'coursePreviews',
+  coursePreviews___courseId = 'coursePreviews___courseId',
+  coursePreviews___videoId = 'coursePreviews___videoId',
+  chapterPreviews = 'chapterPreviews',
+  chapterPreviews___chapterId = 'chapterPreviews___chapterId',
+  chapterPreviews___videoId = 'chapterPreviews___videoId',
+  lessonPreviews = 'lessonPreviews',
+  lessonPreviews___lessonId = 'lessonPreviews___lessonId',
+  lessonPreviews___videoId = 'lessonPreviews___videoId'
+}
+
+export type PreviewsJsonFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>,
+  coursePreviews?: Maybe<PreviewsJsonCoursePreviewsFilterListInput>,
+  chapterPreviews?: Maybe<PreviewsJsonChapterPreviewsFilterListInput>,
+  lessonPreviews?: Maybe<PreviewsJsonLessonPreviewsFilterListInput>,
+};
+
+export type PreviewsJsonGroupConnection = {
+   __typename?: 'PreviewsJsonGroupConnection',
+  totalCount: Scalars['Int'],
+  edges: Array<PreviewsJsonEdge>,
+  nodes: Array<PreviewsJson>,
+  pageInfo: PageInfo,
+  field: Scalars['String'],
+  fieldValue?: Maybe<Scalars['String']>,
+};
+
+export type PreviewsJsonLessonPreviews = {
+   __typename?: 'PreviewsJsonLessonPreviews',
+  lessonId?: Maybe<Scalars['String']>,
+  videoId?: Maybe<Scalars['String']>,
+};
+
+export type PreviewsJsonLessonPreviewsFilterInput = {
+  lessonId?: Maybe<StringQueryOperatorInput>,
+  videoId?: Maybe<StringQueryOperatorInput>,
+};
+
+export type PreviewsJsonLessonPreviewsFilterListInput = {
+  elemMatch?: Maybe<PreviewsJsonLessonPreviewsFilterInput>,
+};
+
+export type PreviewsJsonSortInput = {
+  fields?: Maybe<Array<Maybe<PreviewsJsonFieldsEnum>>>,
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>,
+};
+
 export type Query = {
    __typename?: 'Query',
   file?: Maybe<File>,
@@ -3139,8 +3139,6 @@ export type Query = {
   allCoursesJson: CoursesJsonConnection,
   tracksJson?: Maybe<TracksJson>,
   allTracksJson: TracksJsonConnection,
-  dataJson?: Maybe<DataJson>,
-  allDataJson: DataJsonConnection,
   testimonialsJson?: Maybe<TestimonialsJson>,
   allTestimonialsJson: TestimonialsJsonConnection,
   bundlesJson?: Maybe<BundlesJson>,
@@ -3153,6 +3151,8 @@ export type Query = {
   allSitePlugin: SitePluginConnection,
   sitePage?: Maybe<SitePage>,
   allSitePage: SitePageConnection,
+  previewsJson?: Maybe<PreviewsJson>,
+  allPreviewsJson: PreviewsJsonConnection,
 };
 
 
@@ -3198,7 +3198,7 @@ export type QueryFileArgs = {
   internal?: Maybe<InternalFilterInput>,
   childrenAuthorsJson?: Maybe<AuthorsJsonFilterListInput>,
   childrenBundlesJson?: Maybe<BundlesJsonFilterListInput>,
-  childDataJson?: Maybe<DataJsonFilterInput>,
+  childPreviewsJson?: Maybe<PreviewsJsonFilterInput>,
   childrenTestimonialsJson?: Maybe<TestimonialsJsonFilterListInput>,
   childrenTracksJson?: Maybe<TracksJsonFilterListInput>,
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>,
@@ -3365,25 +3365,6 @@ export type QueryAllTracksJsonArgs = {
 };
 
 
-export type QueryDataJsonArgs = {
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>,
-  coursePreviews?: Maybe<DataJsonCoursePreviewsFilterListInput>,
-  chapterPreviews?: Maybe<DataJsonChapterPreviewsFilterListInput>,
-  lessonPreviews?: Maybe<DataJsonLessonPreviewsFilterListInput>
-};
-
-
-export type QueryAllDataJsonArgs = {
-  filter?: Maybe<DataJsonFilterInput>,
-  sort?: Maybe<DataJsonSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
-};
-
-
 export type QueryTestimonialsJsonArgs = {
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
@@ -3507,8 +3488,8 @@ export type QuerySitePageArgs = {
   parent?: Maybe<NodeFilterInput>,
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
-  path?: Maybe<StringQueryOperatorInput>,
   internalComponentName?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
   component?: Maybe<StringQueryOperatorInput>,
   componentChunkName?: Maybe<StringQueryOperatorInput>,
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>,
@@ -3522,6 +3503,25 @@ export type QuerySitePageArgs = {
 export type QueryAllSitePageArgs = {
   filter?: Maybe<SitePageFilterInput>,
   sort?: Maybe<SitePageSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
+};
+
+
+export type QueryPreviewsJsonArgs = {
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>,
+  coursePreviews?: Maybe<PreviewsJsonCoursePreviewsFilterListInput>,
+  chapterPreviews?: Maybe<PreviewsJsonChapterPreviewsFilterListInput>,
+  lessonPreviews?: Maybe<PreviewsJsonLessonPreviewsFilterListInput>
+};
+
+
+export type QueryAllPreviewsJsonArgs = {
+  filter?: Maybe<PreviewsJsonFilterInput>,
+  sort?: Maybe<PreviewsJsonSortInput>,
   skip?: Maybe<Scalars['Int']>,
   limit?: Maybe<Scalars['Int']>
 };
@@ -3702,8 +3702,8 @@ export type SitePage = Node & {
   parent?: Maybe<Node>,
   children: Array<Node>,
   internal: Internal,
-  path?: Maybe<Scalars['String']>,
   internalComponentName?: Maybe<Scalars['String']>,
+  path?: Maybe<Scalars['String']>,
   component?: Maybe<Scalars['String']>,
   componentChunkName?: Maybe<Scalars['String']>,
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>,
@@ -3796,6 +3796,22 @@ export type SitePageContextPostFrontmatter = {
   title?: Maybe<Scalars['String']>,
 };
 
+
+export type SitePageContextPostFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
 export type SitePageContextPostFrontmatterFilterInput = {
   createdDate?: Maybe<DateQueryOperatorInput>,
   updatedDate?: Maybe<DateQueryOperatorInput>,
@@ -3847,6 +3863,22 @@ export type SitePageContextPostsIosFrontmatter = {
   title?: Maybe<Scalars['String']>,
 };
 
+
+export type SitePageContextPostsIosFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsIosFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
 export type SitePageContextPostsIosFrontmatterFilterInput = {
   createdDate?: Maybe<DateQueryOperatorInput>,
   updatedDate?: Maybe<DateQueryOperatorInput>,
@@ -3885,6 +3917,22 @@ export type SitePageContextPostsMobileFrontmatter = {
   title?: Maybe<Scalars['String']>,
 };
 
+
+export type SitePageContextPostsMobileFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsMobileFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
 export type SitePageContextPostsMobileFrontmatterFilterInput = {
   createdDate?: Maybe<DateQueryOperatorInput>,
   updatedDate?: Maybe<DateQueryOperatorInput>,
@@ -3921,6 +3969,22 @@ export type SitePageContextPostsNativeScriptFrontmatter = {
   tags?: Maybe<Array<Maybe<Scalars['String']>>>,
   path?: Maybe<Scalars['String']>,
   title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsNativeScriptFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsNativeScriptFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
 };
 
 export type SitePageContextPostsNativeScriptFrontmatterFilterInput = {
@@ -4025,8 +4089,8 @@ export enum SitePageFieldsEnum {
   internal___mediaType = 'internal___mediaType',
   internal___owner = 'internal___owner',
   internal___type = 'internal___type',
-  path = 'path',
   internalComponentName = 'internalComponentName',
+  path = 'path',
   component = 'component',
   componentChunkName = 'componentChunkName',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
@@ -4147,8 +4211,8 @@ export type SitePageFilterInput = {
   parent?: Maybe<NodeFilterInput>,
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
-  path?: Maybe<StringQueryOperatorInput>,
   internalComponentName?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
   component?: Maybe<StringQueryOperatorInput>,
   componentChunkName?: Maybe<StringQueryOperatorInput>,
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>,

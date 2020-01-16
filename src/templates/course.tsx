@@ -8,7 +8,8 @@ import {
   AuthorsJsonConnection,
   CoursesJsonConnection,
   BundlesJsonConnection,
-  TestimonialsJsonConnection
+  TestimonialsJsonConnection,
+  PreviewsJsonConnection
 } from '../domain/graphql-types';
 
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
@@ -47,6 +48,7 @@ interface CourseTemplateProps {
     bundlesConnection: BundlesJsonConnection;
     testimonialsConnection: TestimonialsJsonConnection;
     courseConnection: CoursesJson;
+    previewsConnection: PreviewsJsonConnection;
   };
 }
 
@@ -70,8 +72,10 @@ class CourseTemplate extends React.Component<
       courseFromCoursesJsonEdge(c, authors)
     );
 
+    const lessonPreviews = this.props.data.previewsConnection.nodes[0].lessonPreviews;
+
     this.state = {
-      course: coursefromCoursesJson(this.props.data.courseConnection, authors),
+      course: coursefromCoursesJson(this.props.data.courseConnection, authors, lessonPreviews),
       bundles: this.props.data.bundlesConnection.edges.map(b =>
         bundleFromBundlesJsonEdge(b, courses)
       )
@@ -276,6 +280,16 @@ export const coursePageQuery = graphql`
           order
           quoteHtml
           titleHtml
+        }
+      }
+    }
+
+    #get previews
+    previewsConnection: allPreviewsJson {
+      nodes {
+        lessonPreviews {
+          lessonId
+          videoId
         }
       }
     }

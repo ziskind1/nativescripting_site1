@@ -2,7 +2,8 @@ import { defaultArray } from '../core';
 import {
   CoursesJsonEdge,
   CoursesJson,
-  CoursesJsonDescriptionHtmlSections
+  CoursesJsonDescriptionHtmlSections,
+  PreviewsJsonLessonPreviews
 } from '../graphql-types';
 
 import { productFromProduct_3 } from './product-types';
@@ -26,7 +27,8 @@ export function courseFromCoursesJsonEdge(
 
 export function coursefromCoursesJson(
   c: CoursesJson,
-  authors: Author[]
+  authors: Author[],
+  lessonPreviews?: PreviewsJsonLessonPreviews[]
 ): Course {
   const course: Course = {
     id: c.id,
@@ -47,7 +49,7 @@ export function coursefromCoursesJson(
       publishingScheduleItemFromPublishingSchdule_2(si)
     ),
     chapters: defaultArray(c.chapters).map((c, idx) =>
-      chapterFromChapter_2(c, idx)
+      chapterFromChapter_2(c, idx, lessonPreviews)
     ),
     flavors: defaultArray(c.flavors).map(asCourseFlavorType),
     products: defaultArray(c.products).map(productFromProduct_3)
