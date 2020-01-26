@@ -70,12 +70,12 @@ export default class extends React.Component<ProWebinarPageProps, ProWebinarPage
                         <Wrapper>
 
 
-                            <PageHeadingMain center>Online training begins in <WebinarCountdownTimer style={{ color: '#e43145' }} /></PageHeadingMain>
+                            <PageHeadingMain center>Online training webinar begins in <WebinarCountdownTimer style={{ color: '#e43145' }} /></PageHeadingMain>
 
 
                             <CTAWrapper>
                                 <CTA type="button" className="" title="regpopbox_819005285141055972_623cfc39cd">
-                                    <span>Yes, I want to join the free training</span>
+                                    <span>Yes, I want to join the free training webinar</span>
                                 </CTA>
                             </CTAWrapper>
 
