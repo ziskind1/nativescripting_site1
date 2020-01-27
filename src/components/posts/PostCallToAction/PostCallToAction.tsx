@@ -1,6 +1,7 @@
 import * as React from "react";
-
+import { Link } from "gatsby";
 import './PostCallToAction.css';
+
 
 export type ActionBtnType = 'primary' | 'secondary' | 'tertiary';
 
@@ -40,10 +41,11 @@ const PostCallToAction: React.StatelessComponent<ActionButtonProps> = (props: Ac
                 <h2>Take control of your career. Build JavaScript mobile apps.</h2>
             </div>
             <div className="post-cta-btn-container">
+                
                 <div className={className}>
-                    <a href={signUpUrl}>
-                        <span>Sign Up</span>
-                    </a>
+                    <Link to="/pro-webinar">
+                        <span>Join the FREE training webinar</span>
+                    </Link>
                 </div>
             </div>
         </div>
