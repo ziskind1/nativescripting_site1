@@ -27,9 +27,9 @@ function Header(props: HeaderProps) {
         <div className="desktop-nav">
           <Link to="/posts">Articles</Link>
           <Link to="/authors" className="secondary-link">Authors</Link>
-          <Link to="/pro-webinar" className="secondary-link">Free Webinar</Link>
+          <Link to="/pro-webinar">Free Webinar</Link>
 
-          <a href='https://nativescript.training'>Live Training</a>
+          <a href='https://nativescript.training' className="secondary-link">Live Training</a>
           <a
             href={
               'https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1'
