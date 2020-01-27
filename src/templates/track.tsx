@@ -43,6 +43,7 @@ import Collapsible from "../components/shared/Collapsible/Collapsible";
 import { TrackCourseCardList } from "../components/track/TrackCourseCardList/TrackCourseCardList";
 import { scrollToElementById } from '../utils/scrolling';
 import { BrandsSection } from '../components/shared/Brands/BrandsSection';
+import SubHeroSection3 from '../components/home/SubHeroSection/SubHeroSection3';
 
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
@@ -220,6 +221,8 @@ class TrackTemplate extends React.Component<
                     desc={track.description}
                     onCTAClick={() => this.onCTAClick()}
                 />
+
+                <SubHeroSection3 />
 
                 {levels}
 
