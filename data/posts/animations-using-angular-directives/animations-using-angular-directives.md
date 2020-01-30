@@ -13,7 +13,7 @@ Have you ever wanted to create an animation to show that a user is tapping on so
 
 ![animation gif](directive-animation.gif)
 
-Here is a [link to a playground demo](https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7) of this animation.
+Here is a <a href="https://play.nativescript.org/?template=play-ng&id=sxs0F7&v=7" target="_blank">link to a playground demo</a> of this animation.
 
 ### Why a Directive
 There are multiple ways to create this effect. Here are a few reasons why I chose to use a directive for this
@@ -181,7 +181,7 @@ export class TouchScaleAnimationDirective {
 We will need to import the Directive we created and add it to the Declarations array into the module that has your component before we can use it.
 
 ```typescript
-import { TouchScaleAnimationDirective } from './touch-scale-animation.directive.ts
+import { TouchScaleAnimationDirective } from './touch-scale-animation.directive.ts'
 
 @NgModule({
     ...
@@ -205,8 +205,6 @@ From the component we created in the beginning of the tutorial, all we need to a
         <Label text="Another Text Here"></Label>
     </StackLayout>
 </StackLayout>
-```
-
 ```
 
 This is a basic implementation of an animation that can be done using this technique. It can be used for more complex animations, and also be triggered using different gestures or events. 
