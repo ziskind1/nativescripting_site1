@@ -2,8 +2,8 @@
 path: '/posts/nativescript-ci-cd-with-fastlane-and-github-actions'
 title: 'CI/CD for NativeScript apps with Fastlane and GitHub Actions'
 author: 'tiago_alves'
-createdDate: '2014-02-07'
-updatedDate: '2014-02-07'
+createdDate: '2020-02-07'
+updatedDate: '2020-02-07'
 draft: false
 tags: ['NativeScript', 'Fastlane', 'GitHub Actions']
 image: nativescript-ci-cd-with-fastlane-and-github-actions-poster.png
