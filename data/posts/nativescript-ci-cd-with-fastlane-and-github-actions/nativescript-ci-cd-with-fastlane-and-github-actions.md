@@ -2,11 +2,11 @@
 path: '/posts/nativescript-ci-cd-with-fastlane-and-github-actions'
 title: 'CI/CD for NativeScript apps with Fastlane and GitHub Actions'
 author: 'tiago_alves'
-createdDate: '2020-02-07'
-updatedDate: '2020-02-07'
+createdDate: '2014-02-07'
+updatedDate: '2014-02-07'
 draft: false
 tags: ['NativeScript', 'Fastlane', 'GitHub Actions']
-image: nativescript-vue-transitions-poster.png
+image: nativescript-ci-cd-with-fastlane-and-github-actions-poster.png
 ---
 
 
@@ -21,23 +21,25 @@ You can see the complete _fastlane_ and GitHub setup used in this article at htt
 ## Why?
 
 I am not going to [repeat myself on why deployments are so boring and hard to do](https://www.nativescript.org/blog/automatic-nativescript-app-deployments-with-fastlane).
+
 _fastlane_ will make this chore much easier, but still, there are good reasons to move the entire process to the cloud.
+
 The main reason is that you no longer need to worry about configuring the deployment environment for each
 team member. Even if [_match_](https://docs.fastlane.tools/actions/match/) makes it much easier, you would
 still have to share secrets and certificates with your team, configure Xcode accounts, etc. The developer doesn't even need to have a mac to release a new iOS version! Not only that, but
 anyone in the team will be able to deploy the app (reducing the [bus factor](https://en.wikipedia.org/wiki/Bus_factor) of the project).
+
 The last is that with _fastlane_ you would need to run only 2 commands to
 deploy (e.g. `fastlane ios beta` and `fastlane android beta`), but with GitHub actions, you will need 0
 commands, which is even better.
 
-GitHub includes 2.000 minutes of GitHub action runtime per month for free plans and this number grows in
-paid plans. Let's say each deploy takes 40 minutes. That's 50 deployments per month! It's a deployment machine for free.
+GitHub includes 2000 minutes of GitHub action runtime per month for free plans and this number grows in paid plans. Let's say each deploy takes 40 minutes. That's 50 deployments per month! It's a deployment machine for free.
 
 To add a GitHub action that runs your _fastlane_ configuration, we will need to:
 
-- Add secrets to the GitHub repo;
-- Adjust the _fastlane_ configuration to run on a cloud instance;
-- Create the GitHub Action workflow;
+1. Add secrets to the GitHub repo;
+2. Adjust the _fastlane_ configuration to run on a cloud instance;
+3. Create the GitHub Action workflow;
 
 We will detail all these steps next.
 
@@ -59,6 +61,8 @@ These are the required secrets:
 - `MATCH_PASSWORD`: Encryption password for the _match_ repository [here](https://docs.fastlane.tools/best-practices/continuous-integration/#environment-variables-to-set)
 - `PLAYSTORE_JSON_KEY_DATA`: contents of the `PLAYSTORE_JSON_KEY_DATA` var in `.env.default`;
 - `SIGNING_IDENTITY`: Code signing identity to use. e.g. `Apple Distribution: Tiago Alves (47XC3F8J4V)`. See the certificate name in Keychain Access.
+
+<br/>
 
 I **highly recommend** creating a new AppleId account **without 2FA** and add it as a developer to the Apple developer Team. This will avoid lots of problems with 2FA which will cause the workflow to stop with no warning. Otherwise, you will have to add the `FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD` and `FASTLANE_SESSION` (more info [here](https://docs.fastlane.tools/best-practices/continuous-integration/#environment-variables-to-set)). Not only that, but `FASTLANE_SESSION` will have to be manually re-generated at least once a month, but depending on your region it could be once per day (as it happened to me)! Not good...
 
