@@ -1,5 +1,5 @@
 ---
-path: '/posts/how-to-work-with-safe-areas-in-ios'
+path: '/posts/ios-azure-pipelines-testing'
 title: 'iOS Testing with Azure Pipelines'
 author: 'tyler_blake'
 createdDate: '2020-02-14'
