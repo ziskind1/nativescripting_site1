@@ -2,8 +2,8 @@
 path: '/posts/using-angular-animations-in-nativescript'
 title: 'Using Angular Animations in NativeScript'
 author: 'william_tjondrosuharto'
-createdDate: '2010-02-16'
-updatedDate: '2010-02-16'
+createdDate: '2020-02-17'
+updatedDate: '2020-02-17'
 draft: false
 tags: ['NativeScript', 'Tutorial', 'Animation']
 image: using-angular-animations-in-nativescript-poster.png
