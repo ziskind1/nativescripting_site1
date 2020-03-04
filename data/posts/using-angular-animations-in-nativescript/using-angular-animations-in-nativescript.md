@@ -96,6 +96,6 @@ Using the animation we wrote in the previous section is just a matter of adding 
 <Label @fadeAndSlide *ngIf="showLabel"></Label>
 ```
 
-This kind of animations also lets you hook into the animation's start and end event easily by adding `(@animationTriggerName.start)` and `(@animationTriggerName.end)` to the element you are animating.
+This kind of animations also lets you hook into the animation's start and end event easily by adding `(@animationTriggerName.start)` and `(@animationTriggerName.done)` to the element you are animating.
 
 That's it! Similar to my previous post on [using directives to create animations](https://nativescripting.com/posts/animations-using-angular-directives), this is a basic implementation of adding a quick trainsition animation to your application. This technique can also be used for more complex animations such as transitioning between multiple states, animating different properties, running animations in parallel, and staggering your animation.
