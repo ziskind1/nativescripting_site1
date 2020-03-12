@@ -9,7 +9,7 @@ const VideoFrame = styled.iframe``;
 
 export class VideoPlayer extends React.Component<PageHeadingMainProps> {
   public render() {
-    const src = `http://fast.wistia.com/embed/iframe/${this.props.videoId}`;
+    const src = `https://fast.wistia.com/embed/iframe/${this.props.videoId}`;
 
     return (
       <div className="videoWrapper">
