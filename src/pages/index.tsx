@@ -83,9 +83,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
   }
 
   private mountAddThis() {
-    const script = document.createElement("script");
-    script.src =
-      `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
+    const script = document.createElement('script');
+    script.src = `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
     script.async = true;
     document.body.appendChild(script);
   }
@@ -111,8 +110,6 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
   private allCoursesSelected() {
     this.scrollToElementById('courses');
   }
-
-
 
   private scrollToElementById(id: string) {
     scrollToElementById(id);
@@ -158,7 +155,9 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       bundleFromBundlesJsonEdge(b, this.state.courses)
     );
 
-    const tracks = this.props.data.tracksConnection.edges.map(t => trackFromTracksJsonEdge(t));
+    const tracks = this.props.data.tracksConnection.edges.map(t =>
+      trackFromTracksJsonEdge(t)
+    );
 
     const testimonials = this.props.data.testimonialsConnection.edges.map(
       testimonialFromTestimonialJsonEdge
@@ -175,7 +174,13 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <Hero />
 
-        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} heading="Choose your track" subheading="Whether you want to learn the Core NativeScript framework, or you are already using a UI framework like Angular or Vue and want to leverage those UI frameworks with NativeScript, we've got you covered." />
+        <TrackSection
+          disabled={false}
+          courses={this.state.courses}
+          tracks={tracks}
+          heading="Choose your track"
+          subheading="Whether you want to learn the Core NativeScript framework, or you are already using a UI framework like Angular or Vue and want to leverage those UI frameworks with NativeScript, we've got you covered."
+        />
 
         <SubHeroSection3 />
 
@@ -195,7 +200,13 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <Testimonials testimonials={testimonials} />
 
-        <TrackSection disabled={false} courses={this.state.courses} tracks={tracks} heading="Get started today" subheading="Choose your track and start learning" />
+        <TrackSection
+          disabled={false}
+          courses={this.state.courses}
+          tracks={tracks}
+          heading="Get started today"
+          subheading="Choose your track and start learning"
+        />
 
         <SignUpSection />
 
@@ -301,7 +312,9 @@ export const indexPageQuery = graphql`
     }
 
     #get testimonials
-    testimonialsConnection: allTestimonialsJson(filter: {order: {lte: 6000}}) {
+    testimonialsConnection: allTestimonialsJson(
+      filter: { order: { lte: 6000 } }
+    ) {
       totalCount
       edges {
         node {

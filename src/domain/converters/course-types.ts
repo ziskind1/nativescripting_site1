@@ -3,7 +3,8 @@ import {
   CoursesJsonEdge,
   CoursesJson,
   CoursesJsonDescriptionHtmlSections,
-  PreviewsJsonLessonPreviews
+  PreviewsJsonLessonPreviews,
+  PreviewsJsonCoursePreviews
 } from '../graphql-types';
 
 import { productFromProduct_3 } from './product-types';
@@ -28,8 +29,14 @@ export function courseFromCoursesJsonEdge(
 export function coursefromCoursesJson(
   c: CoursesJson,
   authors: Author[],
+  coursePreviews?: PreviewsJsonCoursePreviews[],
   lessonPreviews?: PreviewsJsonLessonPreviews[]
 ): Course {
+  let prev = undefined;
+  if (coursePreviews) {
+    prev = coursePreviews.find(p => p.courseId === c.id);
+  }
+
   const course: Course = {
     id: c.id,
     title: c.title,
@@ -52,7 +59,8 @@ export function coursefromCoursesJson(
       chapterFromChapter_2(c, idx, lessonPreviews)
     ),
     flavors: defaultArray(c.flavors).map(asCourseFlavorType),
-    products: defaultArray(c.products).map(productFromProduct_3)
+    products: defaultArray(c.products).map(productFromProduct_3),
+    previewVideoId: prev?.videoId
   };
 
   numberCourseLessons(course);

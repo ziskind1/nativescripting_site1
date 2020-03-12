@@ -60,7 +60,7 @@ interface CourseTemplateState {
 class CourseTemplate extends React.Component<
   CourseTemplateProps,
   CourseTemplateState
-  > {
+> {
   constructor(props: CourseTemplateProps) {
     super(props);
 
@@ -72,10 +72,18 @@ class CourseTemplate extends React.Component<
       courseFromCoursesJsonEdge(c, authors)
     );
 
-    const lessonPreviews = this.props.data.previewsConnection.nodes[0].lessonPreviews;
+    const coursePreviews = this.props.data.previewsConnection.nodes[0]
+      .coursePreviews;
+    const lessonPreviews = this.props.data.previewsConnection.nodes[0]
+      .lessonPreviews;
 
     this.state = {
-      course: coursefromCoursesJson(this.props.data.courseConnection, authors, lessonPreviews),
+      course: coursefromCoursesJson(
+        this.props.data.courseConnection,
+        authors,
+        coursePreviews,
+        lessonPreviews
+      ),
       bundles: this.props.data.bundlesConnection.edges.map(b =>
         bundleFromBundlesJsonEdge(b, courses)
       )
@@ -87,9 +95,8 @@ class CourseTemplate extends React.Component<
   }
 
   private mountAddThis() {
-    const script = document.createElement("script");
-    script.src =
-      `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
+    const script = document.createElement('script');
+    script.src = `//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-597d29b3b4e298a5`;
     script.async = true;
     document.body.appendChild(script);
   }
@@ -157,11 +164,8 @@ class CourseTemplate extends React.Component<
           <title>{pageTitle}</title>
         </Helmet>
 
-
-
         <div className="wrapper">
           <div className="course-details-container">
-
             <CourseBanner course={course} />
 
             <div className="course-details-wrapper">
@@ -185,12 +189,15 @@ class CourseTemplate extends React.Component<
 
             <Testimonials testimonials={testimonials} />
 
-            <BundleSection bundles={this.state.bundles} bundlesTitle='Or pick up a complete bundle...' bundlesDesc='Everything you need to start mastering NativeScript today' />
+            <BundleSection
+              bundles={this.state.bundles}
+              bundlesTitle="Or pick up a complete bundle..."
+              bundlesDesc="Everything you need to start mastering NativeScript today"
+            />
 
             <SignUpSection />
 
             <AddThisBlock />
-
           </div>
         </div>
       </MainLayout>
@@ -269,7 +276,9 @@ export const coursePageQuery = graphql`
     }
 
     #get testimonials
-    testimonialsConnection: allTestimonialsJson(filter: {order: {lte: 6000}}) {
+    testimonialsConnection: allTestimonialsJson(
+      filter: { order: { lte: 6000 } }
+    ) {
       totalCount
       edges {
         node {
@@ -287,6 +296,10 @@ export const coursePageQuery = graphql`
     #get previews
     previewsConnection: allPreviewsJson {
       nodes {
+        coursePreviews {
+          courseId
+          videoId
+        }
         lessonPreviews {
           lessonId
           videoId

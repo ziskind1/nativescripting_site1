@@ -27,4 +27,5 @@ export interface Course {
   publishedChapters: number[];
   publishingScheduleItems: PublishingScheduleItem[];
   chapters: Chapter[];
+  previewVideoId?: string;
 }
