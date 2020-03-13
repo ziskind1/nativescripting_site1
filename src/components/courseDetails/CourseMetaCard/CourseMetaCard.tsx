@@ -25,7 +25,7 @@ export const CourseMetaCard: React.StatelessComponent<CourseMetaCardProps> = (
   if (course.previewVideoId) {
     vidSection = (
       <VideoPlayerContainer>
-        <VideoPlayer videoId="2vb4t6gqkg" />
+        <VideoPlayer videoId={course.previewVideoId} />
       </VideoPlayerContainer>
     );
   }
