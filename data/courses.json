@@ -306,15 +306,159 @@
       }
     ],
     "publishedChapters": [10],
+    "publishingSchedule": [
+      {
+        "id": 10,
+        "date": "10/2/2018"
+      },
+      {
+        "id": 20,
+        "date": "3/16/2020"
+      },
+      {
+        "id": 30,
+        "date": "10/2/2018"
+      },
+      {
+        "id": 40,
+        "date": "10/13/2018"
+      },
+      {
+        "id": 50,
+        "date": "10/23/2018"
+      },
+      {
+        "id": 60,
+        "date": "10/30/2018"
+      },
+      {
+        "id": 70,
+        "date": "10/30/2018"
+      }
+    ],
     "chapters": [
       {
         "id": 10,
-        "name": "Coming soon",
+        "name": "Welcome",
         "lessons": [
           {
             "chapterId": 10,
-            "id": "12214934",
-            "name": "Coming soon",
+            "id": "13727730",
+            "name": "Welcome Notes",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "14637618",
+            "name": "Welcome Message (3:08)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "13727738",
+            "name": "How to Join the Private FB Group",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "14637619",
+            "name": "Course Overview (3:40)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "id": "14637617",
+            "name": "Using the Exercise Files (1:03)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "14637620",
+            "name": "About Versions (1:21)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 10,
+            "id": "14637616",
+            "name": "What We're Building (2:09)",
+            "isPreview": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Getting Your Tools Ready",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "id": "14697366",
+            "name": "Overview (0:55)",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "id": "14691767",
+            "name": "Two Ways to Scaffold New NativeScript Vue Projects (7:15)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691760",
+            "name": "Project Dependencies (10:29)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691761",
+            "name": "Keeping a Clean Workspace (4:13)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691769",
+            "name": "Useful Editor Extensions (6:52)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691764",
+            "name": "Debugging in VS Code (5:14)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691768",
+            "name": "Debugging in Chrome (5:34)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691765",
+            "name": "Vue Devtools (3:59)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691762",
+            "name": "Code Formatting (3:56)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691766",
+            "name": "TypeScript Strict Levels (6:03)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691763",
+            "name": "Native Platform Declarations (7:04)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 20,
+            "id": "14691770",
+            "name": "Configuring Linting (9:23)",
             "isPreview": false
           }
         ]
