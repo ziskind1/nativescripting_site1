@@ -41,7 +41,23 @@ $('.course-section').each((i, section) => {
 });
 var productsTemp = [];
 $('.checkout-button-group').each((i, group) => {
-  var prodId = $(group).find('input[type="radio"]')[0].value;
+  let prodId = $(group).find('input[type="radio"]')[0].value;
+
+  const priceStr = $(group).find('.default-product-price')[0].innerText;
+  let priceRecurring = false;
+  let planNumPayments = 0;
+  let planPricePerMonth = 0;
+
+  if (priceStr.includes('payments')) {
+    priceRecurring = true;
+    const planParts = priceStr
+      .replace(' payments of ', '')
+      .replace('/m', '')
+      .split('$');
+    planNumPayments = parseFloat(planParts[0]);
+    planPricePerMonth = parseFloat(planParts[1]);
+  }
+
   var price = parseFloat(
     $(group)
       .find('.default-product-price')[0]
@@ -64,9 +80,12 @@ $('.checkout-button-group').each((i, group) => {
     id: prodId,
     name: prodName,
     description: prodDesc,
-    price: price,
+    price: priceRecurring ? planPricePerMonth : price,
     licensesMin: licensesMin,
-    licensesMax: licensesMax
+    licensesMax: licensesMax,
+    prodType: priceRecurring ? 'plan' : 'once',
+    numPayments: planNumPayments,
+    recurring: priceRecurring
   });
 });
 
@@ -74,7 +93,6 @@ const singleRegPrice = productsTemp.find(p => p.licensesMin === 1).price;
 
 var products = [];
 productsTemp.forEach((p, i) => {
-
   const regPrice = p.licensesMin * singleRegPrice;
 
   if (!products.find(f => f.licensesMin === p.licensesMin)) {
@@ -89,7 +107,6 @@ productsTemp.forEach((p, i) => {
           : curLicMats[1];
 
       const regProd = curLicMats.find(c => c.id !== saleProd.id);
-
 
       products.push({
         id: saleProd.id,
