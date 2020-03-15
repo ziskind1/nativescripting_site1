@@ -7,7 +7,7 @@ import {
   PreviewsJsonCoursePreviews
 } from '../graphql-types';
 
-import { productFromProduct_3 } from './product-types';
+import { productFromCoursesJsonProducts } from './product-types';
 import { chapterFromChapter_2 } from './chapter-types';
 import {
   Course,
@@ -59,7 +59,7 @@ export function coursefromCoursesJson(
       chapterFromChapter_2(c, idx, lessonPreviews)
     ),
     flavors: defaultArray(c.flavors).map(asCourseFlavorType),
-    products: defaultArray(c.products).map(productFromProduct_3),
+    products: defaultArray(c.products).map(productFromCoursesJsonProducts),
     previewVideoId: prev?.videoId
   };
 

@@ -19,7 +19,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421531",
@@ -28,7 +31,10 @@
         "pricesale": 83,
         "pricereg": 98,
         "licensesMin": 2,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421532",
@@ -37,7 +43,10 @@
         "pricesale": 125,
         "pricereg": 147,
         "licensesMin": 3,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421534",
@@ -46,7 +55,10 @@
         "pricesale": 157,
         "pricereg": 196,
         "licensesMin": 4,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421535",
@@ -55,7 +67,10 @@
         "pricesale": 196,
         "pricereg": 245,
         "licensesMin": 5,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421536",
@@ -64,7 +79,10 @@
         "pricesale": 221,
         "pricereg": 294,
         "licensesMin": 6,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421538",
@@ -73,7 +91,10 @@
         "pricesale": 257,
         "pricereg": 343,
         "licensesMin": 7,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421539",
@@ -82,7 +103,10 @@
         "pricesale": 274,
         "pricereg": 392,
         "licensesMin": 8,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421541",
@@ -91,7 +115,10 @@
         "pricesale": 309,
         "pricereg": 441,
         "licensesMin": 9,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421542",
@@ -100,7 +127,10 @@
         "pricesale": 319,
         "pricereg": 490,
         "licensesMin": 10,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10],
@@ -149,7 +179,10 @@
         "pricesale": 139,
         "pricereg": 139,
         "licensesMin": 1,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421507",
@@ -158,7 +191,10 @@
         "pricesale": 236,
         "pricereg": 278,
         "licensesMin": 2,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421509",
@@ -167,7 +203,10 @@
         "pricesale": 354,
         "pricereg": 417,
         "licensesMin": 3,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421510",
@@ -176,7 +215,10 @@
         "pricesale": 445,
         "pricereg": 556,
         "licensesMin": 4,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421511",
@@ -185,7 +227,10 @@
         "pricesale": 556,
         "pricereg": 695,
         "licensesMin": 5,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421513",
@@ -194,7 +239,10 @@
         "pricesale": 626,
         "pricereg": 834,
         "licensesMin": 6,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421514",
@@ -203,7 +251,10 @@
         "pricesale": 730,
         "pricereg": 973,
         "licensesMin": 7,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421515",
@@ -212,7 +263,10 @@
         "pricesale": 778,
         "pricereg": 1112,
         "licensesMin": 8,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421516",
@@ -221,7 +275,10 @@
         "pricesale": 876,
         "pricereg": 1251,
         "licensesMin": 9,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1421517",
@@ -230,7 +287,22 @@
         "pricesale": 904,
         "pricereg": 1390,
         "licensesMin": 10,
-        "licensesMax": null
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      },
+      {
+        "id": "1725613",
+        "name": "Single user payment plan",
+        "description": "",
+        "pricesale": 49,
+        "pricereg": 49,
+        "licensesMin": 1,
+        "licensesMax": 1,
+        "prodType": "plan",
+        "numPayments": 3,
+        "recurring": true
       }
     ],
     "publishedChapters": [10],
@@ -279,7 +351,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1010653",
@@ -288,7 +363,10 @@
         "pricesale": 119,
         "pricereg": 119,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1010655",
@@ -297,7 +375,10 @@
         "pricesale": 179,
         "pricereg": 179,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1010656",
@@ -306,7 +387,10 @@
         "pricesale": 289,
         "pricereg": 289,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "1010657",
@@ -315,7 +399,10 @@
         "pricesale": 349,
         "pricereg": 349,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -474,7 +561,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "816410",
@@ -483,7 +573,10 @@
         "pricesale": 199,
         "pricereg": 199,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "816412",
@@ -492,7 +585,10 @@
         "pricesale": 299,
         "pricereg": 299,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "816413",
@@ -501,7 +597,10 @@
         "pricesale": 499,
         "pricereg": 499,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "816414",
@@ -510,7 +609,10 @@
         "pricesale": 599,
         "pricereg": 599,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70],
@@ -909,7 +1011,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "707410",
@@ -918,7 +1023,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 2,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90],
@@ -1251,7 +1359,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "644445",
@@ -1260,7 +1371,10 @@
         "pricesale": 199,
         "pricereg": 199,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "783967",
@@ -1269,7 +1383,10 @@
         "pricesale": 299,
         "pricereg": 299,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "783968",
@@ -1278,7 +1395,10 @@
         "pricesale": 499,
         "pricereg": 499,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "783970",
@@ -1287,7 +1407,10 @@
         "pricesale": 599,
         "pricereg": 599,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80],
@@ -1621,7 +1744,10 @@
         "pricesale": 79,
         "pricereg": 79,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787019",
@@ -1630,7 +1756,10 @@
         "pricesale": 309,
         "pricereg": 309,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787020",
@@ -1639,7 +1768,10 @@
         "pricesale": 479,
         "pricereg": 479,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787021",
@@ -1648,7 +1780,10 @@
         "pricesale": 799,
         "pricereg": 799,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787022",
@@ -1657,7 +1792,10 @@
         "pricesale": 959,
         "pricereg": 959,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -1811,7 +1949,10 @@
         "pricesale": 29,
         "pricereg": 29,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "354986",
@@ -1820,7 +1961,10 @@
         "pricesale": 119,
         "pricereg": 119,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787010",
@@ -1829,7 +1973,10 @@
         "pricesale": 179,
         "pricereg": 179,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787011",
@@ -1838,7 +1985,10 @@
         "pricesale": 289,
         "pricereg": 289,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787014",
@@ -1847,7 +1997,10 @@
         "pricesale": 349,
         "pricereg": 349,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -2013,7 +2166,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "359702",
@@ -2022,7 +2178,10 @@
         "pricesale": 199,
         "pricereg": 199,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787000",
@@ -2031,7 +2190,10 @@
         "pricesale": 299,
         "pricereg": 299,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787003",
@@ -2040,7 +2202,10 @@
         "pricesale": 499,
         "pricereg": 499,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787004",
@@ -2049,7 +2214,10 @@
         "pricesale": 599,
         "pricereg": 599,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -2160,7 +2328,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "305781",
@@ -2169,7 +2340,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 2,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -2479,7 +2653,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "306839",
@@ -2488,7 +2665,10 @@
         "pricesale": 0,
         "pricereg": 0,
         "licensesMin": 2,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -2763,7 +2943,10 @@
         "pricesale": 159,
         "pricereg": 159,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "786985",
@@ -2772,7 +2955,10 @@
         "pricesale": 629,
         "pricereg": 629,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "786986",
@@ -2781,7 +2967,10 @@
         "pricesale": 969,
         "pricereg": 969,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "786987",
@@ -2790,7 +2979,10 @@
         "pricesale": 1609,
         "pricereg": 1609,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "786988",
@@ -2799,7 +2991,10 @@
         "pricesale": 1939,
         "pricereg": 1939,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110],
@@ -3697,7 +3892,10 @@
         "pricesale": 139,
         "pricereg": 139,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "784683",
@@ -3706,7 +3904,10 @@
         "pricesale": 549,
         "pricereg": 549,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "784684",
@@ -3715,7 +3916,10 @@
         "pricesale": 849,
         "pricereg": 849,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "784685",
@@ -3724,7 +3928,10 @@
         "pricesale": 1409,
         "pricereg": 1409,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "784686",
@@ -3733,7 +3940,10 @@
         "pricesale": 1699,
         "pricereg": 1699,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [
@@ -4672,7 +4882,10 @@
         "pricesale": 69,
         "pricereg": 69,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "888944",
@@ -4681,7 +4894,10 @@
         "pricesale": 269,
         "pricereg": 269,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "888945",
@@ -4690,7 +4906,10 @@
         "pricesale": 419,
         "pricereg": 419,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "888946",
@@ -4699,7 +4918,10 @@
         "pricesale": 699,
         "pricereg": 699,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "888947",
@@ -4708,7 +4930,10 @@
         "pricesale": 839,
         "pricereg": 839,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -4945,7 +5170,10 @@
         "pricesale": 89,
         "pricereg": 89,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787063",
@@ -4954,7 +5182,10 @@
         "pricesale": 269,
         "pricereg": 269,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787064",
@@ -4963,7 +5194,10 @@
         "pricesale": 419,
         "pricereg": 419,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787066",
@@ -4972,7 +5206,10 @@
         "pricesale": 699,
         "pricereg": 699,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787067",
@@ -4981,7 +5218,10 @@
         "pricesale": 839,
         "pricereg": 839,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -5435,7 +5675,10 @@
         "pricesale": 49,
         "pricereg": 49,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "308166",
@@ -5444,7 +5687,10 @@
         "pricesale": 119,
         "pricereg": 199,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787055",
@@ -5453,7 +5699,10 @@
         "pricesale": 299,
         "pricereg": 299,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787057",
@@ -5462,7 +5711,10 @@
         "pricesale": 499,
         "pricereg": 499,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787058",
@@ -5471,7 +5723,10 @@
         "pricesale": 599,
         "pricereg": 599,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [0],
@@ -5895,7 +6150,10 @@
         "pricesale": 59,
         "pricereg": 59,
         "licensesMin": 1,
-        "licensesMax": 1
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787037",
@@ -5904,7 +6162,10 @@
         "pricesale": 229,
         "pricereg": 229,
         "licensesMin": 2,
-        "licensesMax": 5
+        "licensesMax": 5,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787039",
@@ -5913,7 +6174,10 @@
         "pricesale": 359,
         "pricereg": 359,
         "licensesMin": 6,
-        "licensesMax": 10
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787040",
@@ -5922,7 +6186,10 @@
         "pricesale": 599,
         "pricereg": 599,
         "licensesMin": 11,
-        "licensesMax": 20
+        "licensesMax": 20,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       },
       {
         "id": "787042",
@@ -5931,7 +6198,10 @@
         "pricesale": 719,
         "pricereg": 719,
         "licensesMin": 21,
-        "licensesMax": 40
+        "licensesMax": 40,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
       }
     ],
     "publishedChapters": [10, 20, 30, 40],

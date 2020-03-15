@@ -628,6 +628,9 @@ export enum CoursesJsonFieldsEnum {
   products___pricereg = 'products___pricereg',
   products___licensesMin = 'products___licensesMin',
   products___licensesMax = 'products___licensesMax',
+  products___prodType = 'products___prodType',
+  products___numPayments = 'products___numPayments',
+  products___recurring = 'products___recurring',
   publishedChapters = 'publishedChapters',
   chapters = 'chapters',
   chapters___id = 'chapters___id',
@@ -692,6 +695,9 @@ export type CoursesJsonProducts = {
   pricereg?: Maybe<Scalars['Int']>,
   licensesMin?: Maybe<Scalars['Int']>,
   licensesMax?: Maybe<Scalars['Int']>,
+  prodType?: Maybe<Scalars['String']>,
+  numPayments?: Maybe<Scalars['Int']>,
+  recurring?: Maybe<Scalars['Boolean']>,
 };
 
 export type CoursesJsonProductsFilterInput = {
@@ -702,6 +708,9 @@ export type CoursesJsonProductsFilterInput = {
   pricereg?: Maybe<IntQueryOperatorInput>,
   licensesMin?: Maybe<IntQueryOperatorInput>,
   licensesMax?: Maybe<IntQueryOperatorInput>,
+  prodType?: Maybe<StringQueryOperatorInput>,
+  numPayments?: Maybe<IntQueryOperatorInput>,
+  recurring?: Maybe<BooleanQueryOperatorInput>,
 };
 
 export type CoursesJsonProductsFilterListInput = {
@@ -1096,8 +1105,8 @@ export type File = Node & {
   childPreviewsJson?: Maybe<PreviewsJson>,
   childrenTestimonialsJson?: Maybe<Array<Maybe<TestimonialsJson>>>,
   childrenTracksJson?: Maybe<Array<Maybe<TracksJson>>>,
-  childMarkdownRemark?: Maybe<MarkdownRemark>,
   childrenCoursesJson?: Maybe<Array<Maybe<CoursesJson>>>,
+  childMarkdownRemark?: Maybe<MarkdownRemark>,
 };
 
 
@@ -1642,6 +1651,82 @@ export enum FileFieldsEnum {
   childrenTracksJson___levels___levelId = 'childrenTracksJson___levels___levelId',
   childrenTracksJson___levels___title = 'childrenTracksJson___levels___title',
   childrenTracksJson___levels___description = 'childrenTracksJson___levels___description',
+  childrenCoursesJson = 'childrenCoursesJson',
+  childrenCoursesJson___id = 'childrenCoursesJson___id',
+  childrenCoursesJson___parent___id = 'childrenCoursesJson___parent___id',
+  childrenCoursesJson___parent___parent___id = 'childrenCoursesJson___parent___parent___id',
+  childrenCoursesJson___parent___parent___children = 'childrenCoursesJson___parent___parent___children',
+  childrenCoursesJson___parent___children = 'childrenCoursesJson___parent___children',
+  childrenCoursesJson___parent___children___id = 'childrenCoursesJson___parent___children___id',
+  childrenCoursesJson___parent___children___children = 'childrenCoursesJson___parent___children___children',
+  childrenCoursesJson___parent___internal___content = 'childrenCoursesJson___parent___internal___content',
+  childrenCoursesJson___parent___internal___contentDigest = 'childrenCoursesJson___parent___internal___contentDigest',
+  childrenCoursesJson___parent___internal___description = 'childrenCoursesJson___parent___internal___description',
+  childrenCoursesJson___parent___internal___fieldOwners = 'childrenCoursesJson___parent___internal___fieldOwners',
+  childrenCoursesJson___parent___internal___ignoreType = 'childrenCoursesJson___parent___internal___ignoreType',
+  childrenCoursesJson___parent___internal___mediaType = 'childrenCoursesJson___parent___internal___mediaType',
+  childrenCoursesJson___parent___internal___owner = 'childrenCoursesJson___parent___internal___owner',
+  childrenCoursesJson___parent___internal___type = 'childrenCoursesJson___parent___internal___type',
+  childrenCoursesJson___children = 'childrenCoursesJson___children',
+  childrenCoursesJson___children___id = 'childrenCoursesJson___children___id',
+  childrenCoursesJson___children___parent___id = 'childrenCoursesJson___children___parent___id',
+  childrenCoursesJson___children___parent___children = 'childrenCoursesJson___children___parent___children',
+  childrenCoursesJson___children___children = 'childrenCoursesJson___children___children',
+  childrenCoursesJson___children___children___id = 'childrenCoursesJson___children___children___id',
+  childrenCoursesJson___children___children___children = 'childrenCoursesJson___children___children___children',
+  childrenCoursesJson___children___internal___content = 'childrenCoursesJson___children___internal___content',
+  childrenCoursesJson___children___internal___contentDigest = 'childrenCoursesJson___children___internal___contentDigest',
+  childrenCoursesJson___children___internal___description = 'childrenCoursesJson___children___internal___description',
+  childrenCoursesJson___children___internal___fieldOwners = 'childrenCoursesJson___children___internal___fieldOwners',
+  childrenCoursesJson___children___internal___ignoreType = 'childrenCoursesJson___children___internal___ignoreType',
+  childrenCoursesJson___children___internal___mediaType = 'childrenCoursesJson___children___internal___mediaType',
+  childrenCoursesJson___children___internal___owner = 'childrenCoursesJson___children___internal___owner',
+  childrenCoursesJson___children___internal___type = 'childrenCoursesJson___children___internal___type',
+  childrenCoursesJson___internal___content = 'childrenCoursesJson___internal___content',
+  childrenCoursesJson___internal___contentDigest = 'childrenCoursesJson___internal___contentDigest',
+  childrenCoursesJson___internal___description = 'childrenCoursesJson___internal___description',
+  childrenCoursesJson___internal___fieldOwners = 'childrenCoursesJson___internal___fieldOwners',
+  childrenCoursesJson___internal___ignoreType = 'childrenCoursesJson___internal___ignoreType',
+  childrenCoursesJson___internal___mediaType = 'childrenCoursesJson___internal___mediaType',
+  childrenCoursesJson___internal___owner = 'childrenCoursesJson___internal___owner',
+  childrenCoursesJson___internal___type = 'childrenCoursesJson___internal___type',
+  childrenCoursesJson___title = 'childrenCoursesJson___title',
+  childrenCoursesJson___subtitle = 'childrenCoursesJson___subtitle',
+  childrenCoursesJson___description = 'childrenCoursesJson___description',
+  childrenCoursesJson___url = 'childrenCoursesJson___url',
+  childrenCoursesJson___flavors = 'childrenCoursesJson___flavors',
+  childrenCoursesJson___level = 'childrenCoursesJson___level',
+  childrenCoursesJson___order = 'childrenCoursesJson___order',
+  childrenCoursesJson___label = 'childrenCoursesJson___label',
+  childrenCoursesJson___launchdate = 'childrenCoursesJson___launchdate',
+  childrenCoursesJson___authors = 'childrenCoursesJson___authors',
+  childrenCoursesJson___products = 'childrenCoursesJson___products',
+  childrenCoursesJson___products___id = 'childrenCoursesJson___products___id',
+  childrenCoursesJson___products___name = 'childrenCoursesJson___products___name',
+  childrenCoursesJson___products___description = 'childrenCoursesJson___products___description',
+  childrenCoursesJson___products___pricesale = 'childrenCoursesJson___products___pricesale',
+  childrenCoursesJson___products___pricereg = 'childrenCoursesJson___products___pricereg',
+  childrenCoursesJson___products___licensesMin = 'childrenCoursesJson___products___licensesMin',
+  childrenCoursesJson___products___licensesMax = 'childrenCoursesJson___products___licensesMax',
+  childrenCoursesJson___products___prodType = 'childrenCoursesJson___products___prodType',
+  childrenCoursesJson___products___numPayments = 'childrenCoursesJson___products___numPayments',
+  childrenCoursesJson___products___recurring = 'childrenCoursesJson___products___recurring',
+  childrenCoursesJson___publishedChapters = 'childrenCoursesJson___publishedChapters',
+  childrenCoursesJson___chapters = 'childrenCoursesJson___chapters',
+  childrenCoursesJson___chapters___id = 'childrenCoursesJson___chapters___id',
+  childrenCoursesJson___chapters___name = 'childrenCoursesJson___chapters___name',
+  childrenCoursesJson___chapters___lessons = 'childrenCoursesJson___chapters___lessons',
+  childrenCoursesJson___chapters___lessons___chapterId = 'childrenCoursesJson___chapters___lessons___chapterId',
+  childrenCoursesJson___chapters___lessons___id = 'childrenCoursesJson___chapters___lessons___id',
+  childrenCoursesJson___chapters___lessons___name = 'childrenCoursesJson___chapters___lessons___name',
+  childrenCoursesJson___chapters___lessons___isPreview = 'childrenCoursesJson___chapters___lessons___isPreview',
+  childrenCoursesJson___descriptionHtmlSections = 'childrenCoursesJson___descriptionHtmlSections',
+  childrenCoursesJson___descriptionHtmlSections___title = 'childrenCoursesJson___descriptionHtmlSections___title',
+  childrenCoursesJson___descriptionHtmlSections___descriptionHtml = 'childrenCoursesJson___descriptionHtmlSections___descriptionHtml',
+  childrenCoursesJson___publishingSchedule = 'childrenCoursesJson___publishingSchedule',
+  childrenCoursesJson___publishingSchedule___id = 'childrenCoursesJson___publishingSchedule___id',
+  childrenCoursesJson___publishingSchedule___date = 'childrenCoursesJson___publishingSchedule___date',
+  childrenCoursesJson___notes = 'childrenCoursesJson___notes',
   childMarkdownRemark___id = 'childMarkdownRemark___id',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark___frontmatter___title',
   childMarkdownRemark___frontmatter___path = 'childMarkdownRemark___frontmatter___path',
@@ -1741,80 +1826,7 @@ export enum FileFieldsEnum {
   childMarkdownRemark___internal___ignoreType = 'childMarkdownRemark___internal___ignoreType',
   childMarkdownRemark___internal___mediaType = 'childMarkdownRemark___internal___mediaType',
   childMarkdownRemark___internal___owner = 'childMarkdownRemark___internal___owner',
-  childMarkdownRemark___internal___type = 'childMarkdownRemark___internal___type',
-  childrenCoursesJson = 'childrenCoursesJson',
-  childrenCoursesJson___id = 'childrenCoursesJson___id',
-  childrenCoursesJson___parent___id = 'childrenCoursesJson___parent___id',
-  childrenCoursesJson___parent___parent___id = 'childrenCoursesJson___parent___parent___id',
-  childrenCoursesJson___parent___parent___children = 'childrenCoursesJson___parent___parent___children',
-  childrenCoursesJson___parent___children = 'childrenCoursesJson___parent___children',
-  childrenCoursesJson___parent___children___id = 'childrenCoursesJson___parent___children___id',
-  childrenCoursesJson___parent___children___children = 'childrenCoursesJson___parent___children___children',
-  childrenCoursesJson___parent___internal___content = 'childrenCoursesJson___parent___internal___content',
-  childrenCoursesJson___parent___internal___contentDigest = 'childrenCoursesJson___parent___internal___contentDigest',
-  childrenCoursesJson___parent___internal___description = 'childrenCoursesJson___parent___internal___description',
-  childrenCoursesJson___parent___internal___fieldOwners = 'childrenCoursesJson___parent___internal___fieldOwners',
-  childrenCoursesJson___parent___internal___ignoreType = 'childrenCoursesJson___parent___internal___ignoreType',
-  childrenCoursesJson___parent___internal___mediaType = 'childrenCoursesJson___parent___internal___mediaType',
-  childrenCoursesJson___parent___internal___owner = 'childrenCoursesJson___parent___internal___owner',
-  childrenCoursesJson___parent___internal___type = 'childrenCoursesJson___parent___internal___type',
-  childrenCoursesJson___children = 'childrenCoursesJson___children',
-  childrenCoursesJson___children___id = 'childrenCoursesJson___children___id',
-  childrenCoursesJson___children___parent___id = 'childrenCoursesJson___children___parent___id',
-  childrenCoursesJson___children___parent___children = 'childrenCoursesJson___children___parent___children',
-  childrenCoursesJson___children___children = 'childrenCoursesJson___children___children',
-  childrenCoursesJson___children___children___id = 'childrenCoursesJson___children___children___id',
-  childrenCoursesJson___children___children___children = 'childrenCoursesJson___children___children___children',
-  childrenCoursesJson___children___internal___content = 'childrenCoursesJson___children___internal___content',
-  childrenCoursesJson___children___internal___contentDigest = 'childrenCoursesJson___children___internal___contentDigest',
-  childrenCoursesJson___children___internal___description = 'childrenCoursesJson___children___internal___description',
-  childrenCoursesJson___children___internal___fieldOwners = 'childrenCoursesJson___children___internal___fieldOwners',
-  childrenCoursesJson___children___internal___ignoreType = 'childrenCoursesJson___children___internal___ignoreType',
-  childrenCoursesJson___children___internal___mediaType = 'childrenCoursesJson___children___internal___mediaType',
-  childrenCoursesJson___children___internal___owner = 'childrenCoursesJson___children___internal___owner',
-  childrenCoursesJson___children___internal___type = 'childrenCoursesJson___children___internal___type',
-  childrenCoursesJson___internal___content = 'childrenCoursesJson___internal___content',
-  childrenCoursesJson___internal___contentDigest = 'childrenCoursesJson___internal___contentDigest',
-  childrenCoursesJson___internal___description = 'childrenCoursesJson___internal___description',
-  childrenCoursesJson___internal___fieldOwners = 'childrenCoursesJson___internal___fieldOwners',
-  childrenCoursesJson___internal___ignoreType = 'childrenCoursesJson___internal___ignoreType',
-  childrenCoursesJson___internal___mediaType = 'childrenCoursesJson___internal___mediaType',
-  childrenCoursesJson___internal___owner = 'childrenCoursesJson___internal___owner',
-  childrenCoursesJson___internal___type = 'childrenCoursesJson___internal___type',
-  childrenCoursesJson___title = 'childrenCoursesJson___title',
-  childrenCoursesJson___subtitle = 'childrenCoursesJson___subtitle',
-  childrenCoursesJson___description = 'childrenCoursesJson___description',
-  childrenCoursesJson___url = 'childrenCoursesJson___url',
-  childrenCoursesJson___flavors = 'childrenCoursesJson___flavors',
-  childrenCoursesJson___level = 'childrenCoursesJson___level',
-  childrenCoursesJson___order = 'childrenCoursesJson___order',
-  childrenCoursesJson___label = 'childrenCoursesJson___label',
-  childrenCoursesJson___launchdate = 'childrenCoursesJson___launchdate',
-  childrenCoursesJson___authors = 'childrenCoursesJson___authors',
-  childrenCoursesJson___products = 'childrenCoursesJson___products',
-  childrenCoursesJson___products___id = 'childrenCoursesJson___products___id',
-  childrenCoursesJson___products___name = 'childrenCoursesJson___products___name',
-  childrenCoursesJson___products___description = 'childrenCoursesJson___products___description',
-  childrenCoursesJson___products___pricesale = 'childrenCoursesJson___products___pricesale',
-  childrenCoursesJson___products___pricereg = 'childrenCoursesJson___products___pricereg',
-  childrenCoursesJson___products___licensesMin = 'childrenCoursesJson___products___licensesMin',
-  childrenCoursesJson___products___licensesMax = 'childrenCoursesJson___products___licensesMax',
-  childrenCoursesJson___publishedChapters = 'childrenCoursesJson___publishedChapters',
-  childrenCoursesJson___chapters = 'childrenCoursesJson___chapters',
-  childrenCoursesJson___chapters___id = 'childrenCoursesJson___chapters___id',
-  childrenCoursesJson___chapters___name = 'childrenCoursesJson___chapters___name',
-  childrenCoursesJson___chapters___lessons = 'childrenCoursesJson___chapters___lessons',
-  childrenCoursesJson___chapters___lessons___chapterId = 'childrenCoursesJson___chapters___lessons___chapterId',
-  childrenCoursesJson___chapters___lessons___id = 'childrenCoursesJson___chapters___lessons___id',
-  childrenCoursesJson___chapters___lessons___name = 'childrenCoursesJson___chapters___lessons___name',
-  childrenCoursesJson___chapters___lessons___isPreview = 'childrenCoursesJson___chapters___lessons___isPreview',
-  childrenCoursesJson___descriptionHtmlSections = 'childrenCoursesJson___descriptionHtmlSections',
-  childrenCoursesJson___descriptionHtmlSections___title = 'childrenCoursesJson___descriptionHtmlSections___title',
-  childrenCoursesJson___descriptionHtmlSections___descriptionHtml = 'childrenCoursesJson___descriptionHtmlSections___descriptionHtml',
-  childrenCoursesJson___publishingSchedule = 'childrenCoursesJson___publishingSchedule',
-  childrenCoursesJson___publishingSchedule___id = 'childrenCoursesJson___publishingSchedule___id',
-  childrenCoursesJson___publishingSchedule___date = 'childrenCoursesJson___publishingSchedule___date',
-  childrenCoursesJson___notes = 'childrenCoursesJson___notes'
+  childMarkdownRemark___internal___type = 'childMarkdownRemark___internal___type'
 }
 
 export type FileFilterInput = {
@@ -1862,8 +1874,8 @@ export type FileFilterInput = {
   childPreviewsJson?: Maybe<PreviewsJsonFilterInput>,
   childrenTestimonialsJson?: Maybe<TestimonialsJsonFilterListInput>,
   childrenTracksJson?: Maybe<TracksJsonFilterListInput>,
-  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>,
   childrenCoursesJson?: Maybe<CoursesJsonFilterListInput>,
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>,
 };
 
 export type FileGroupConnection = {
@@ -2651,17 +2663,6 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___image___childrenTracksJson___description = 'frontmatter___image___childrenTracksJson___description',
   frontmatter___image___childrenTracksJson___bundles = 'frontmatter___image___childrenTracksJson___bundles',
   frontmatter___image___childrenTracksJson___levels = 'frontmatter___image___childrenTracksJson___levels',
-  frontmatter___image___childMarkdownRemark___id = 'frontmatter___image___childMarkdownRemark___id',
-  frontmatter___image___childMarkdownRemark___excerpt = 'frontmatter___image___childMarkdownRemark___excerpt',
-  frontmatter___image___childMarkdownRemark___rawMarkdownBody = 'frontmatter___image___childMarkdownRemark___rawMarkdownBody',
-  frontmatter___image___childMarkdownRemark___fileAbsolutePath = 'frontmatter___image___childMarkdownRemark___fileAbsolutePath',
-  frontmatter___image___childMarkdownRemark___html = 'frontmatter___image___childMarkdownRemark___html',
-  frontmatter___image___childMarkdownRemark___htmlAst = 'frontmatter___image___childMarkdownRemark___htmlAst',
-  frontmatter___image___childMarkdownRemark___excerptAst = 'frontmatter___image___childMarkdownRemark___excerptAst',
-  frontmatter___image___childMarkdownRemark___headings = 'frontmatter___image___childMarkdownRemark___headings',
-  frontmatter___image___childMarkdownRemark___timeToRead = 'frontmatter___image___childMarkdownRemark___timeToRead',
-  frontmatter___image___childMarkdownRemark___tableOfContents = 'frontmatter___image___childMarkdownRemark___tableOfContents',
-  frontmatter___image___childMarkdownRemark___children = 'frontmatter___image___childMarkdownRemark___children',
   frontmatter___image___childrenCoursesJson = 'frontmatter___image___childrenCoursesJson',
   frontmatter___image___childrenCoursesJson___id = 'frontmatter___image___childrenCoursesJson___id',
   frontmatter___image___childrenCoursesJson___children = 'frontmatter___image___childrenCoursesJson___children',
@@ -2681,6 +2682,17 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___image___childrenCoursesJson___descriptionHtmlSections = 'frontmatter___image___childrenCoursesJson___descriptionHtmlSections',
   frontmatter___image___childrenCoursesJson___publishingSchedule = 'frontmatter___image___childrenCoursesJson___publishingSchedule',
   frontmatter___image___childrenCoursesJson___notes = 'frontmatter___image___childrenCoursesJson___notes',
+  frontmatter___image___childMarkdownRemark___id = 'frontmatter___image___childMarkdownRemark___id',
+  frontmatter___image___childMarkdownRemark___excerpt = 'frontmatter___image___childMarkdownRemark___excerpt',
+  frontmatter___image___childMarkdownRemark___rawMarkdownBody = 'frontmatter___image___childMarkdownRemark___rawMarkdownBody',
+  frontmatter___image___childMarkdownRemark___fileAbsolutePath = 'frontmatter___image___childMarkdownRemark___fileAbsolutePath',
+  frontmatter___image___childMarkdownRemark___html = 'frontmatter___image___childMarkdownRemark___html',
+  frontmatter___image___childMarkdownRemark___htmlAst = 'frontmatter___image___childMarkdownRemark___htmlAst',
+  frontmatter___image___childMarkdownRemark___excerptAst = 'frontmatter___image___childMarkdownRemark___excerptAst',
+  frontmatter___image___childMarkdownRemark___headings = 'frontmatter___image___childMarkdownRemark___headings',
+  frontmatter___image___childMarkdownRemark___timeToRead = 'frontmatter___image___childMarkdownRemark___timeToRead',
+  frontmatter___image___childMarkdownRemark___tableOfContents = 'frontmatter___image___childMarkdownRemark___tableOfContents',
+  frontmatter___image___childMarkdownRemark___children = 'frontmatter___image___childMarkdownRemark___children',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -3135,6 +3147,8 @@ export type Query = {
   allMarkdownRemark: MarkdownRemarkConnection,
   imageSharp?: Maybe<ImageSharp>,
   allImageSharp: ImageSharpConnection,
+  previewsJson?: Maybe<PreviewsJson>,
+  allPreviewsJson: PreviewsJsonConnection,
   coursesJson?: Maybe<CoursesJson>,
   allCoursesJson: CoursesJsonConnection,
   tracksJson?: Maybe<TracksJson>,
@@ -3151,8 +3165,6 @@ export type Query = {
   allSitePlugin: SitePluginConnection,
   sitePage?: Maybe<SitePage>,
   allSitePage: SitePageConnection,
-  previewsJson?: Maybe<PreviewsJson>,
-  allPreviewsJson: PreviewsJsonConnection,
 };
 
 
@@ -3201,8 +3213,8 @@ export type QueryFileArgs = {
   childPreviewsJson?: Maybe<PreviewsJsonFilterInput>,
   childrenTestimonialsJson?: Maybe<TestimonialsJsonFilterListInput>,
   childrenTracksJson?: Maybe<TracksJsonFilterListInput>,
-  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>,
-  childrenCoursesJson?: Maybe<CoursesJsonFilterListInput>
+  childrenCoursesJson?: Maybe<CoursesJsonFilterListInput>,
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>
 };
 
 
@@ -3307,6 +3319,25 @@ export type QueryImageSharpArgs = {
 export type QueryAllImageSharpArgs = {
   filter?: Maybe<ImageSharpFilterInput>,
   sort?: Maybe<ImageSharpSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
+};
+
+
+export type QueryPreviewsJsonArgs = {
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>,
+  coursePreviews?: Maybe<PreviewsJsonCoursePreviewsFilterListInput>,
+  chapterPreviews?: Maybe<PreviewsJsonChapterPreviewsFilterListInput>,
+  lessonPreviews?: Maybe<PreviewsJsonLessonPreviewsFilterListInput>
+};
+
+
+export type QueryAllPreviewsJsonArgs = {
+  filter?: Maybe<PreviewsJsonFilterInput>,
+  sort?: Maybe<PreviewsJsonSortInput>,
   skip?: Maybe<Scalars['Int']>,
   limit?: Maybe<Scalars['Int']>
 };
@@ -3503,25 +3534,6 @@ export type QuerySitePageArgs = {
 export type QueryAllSitePageArgs = {
   filter?: Maybe<SitePageFilterInput>,
   sort?: Maybe<SitePageSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
-};
-
-
-export type QueryPreviewsJsonArgs = {
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>,
-  coursePreviews?: Maybe<PreviewsJsonCoursePreviewsFilterListInput>,
-  chapterPreviews?: Maybe<PreviewsJsonChapterPreviewsFilterListInput>,
-  lessonPreviews?: Maybe<PreviewsJsonLessonPreviewsFilterListInput>
-};
-
-
-export type QueryAllPreviewsJsonArgs = {
-  filter?: Maybe<PreviewsJsonFilterInput>,
-  sort?: Maybe<PreviewsJsonSortInput>,
   skip?: Maybe<Scalars['Int']>,
   limit?: Maybe<Scalars['Int']>
 };
@@ -3822,15 +3834,1295 @@ export type SitePageContextPostFrontmatterFilterInput = {
 
 export type SitePageContextPosts = {
    __typename?: 'SitePageContextPosts',
-  iOS?: Maybe<Array<Maybe<SitePageContextPostsIos>>>,
+  Azure?: Maybe<Array<Maybe<SitePageContextPostsAzure>>>,
   Mobile?: Maybe<Array<Maybe<SitePageContextPostsMobile>>>,
   NativeScript?: Maybe<Array<Maybe<SitePageContextPostsNativeScript>>>,
+  iOS?: Maybe<Array<Maybe<SitePageContextPostsIos>>>,
+  JavaScript?: Maybe<Array<Maybe<SitePageContextPostsJavaScript>>>,
+  Simulator?: Maybe<Array<Maybe<SitePageContextPostsSimulator>>>,
+  TypeScript?: Maybe<Array<Maybe<SitePageContextPostsTypeScript>>>,
+  Visual_Studio_Code?: Maybe<Array<Maybe<SitePageContextPostsVisual_Studio_Code>>>,
+  Organization?: Maybe<Array<Maybe<SitePageContextPostsOrganization>>>,
+  Tips_and_Tricks?: Maybe<Array<Maybe<SitePageContextPostsTips_And_Tricks>>>,
+  Pluralsight?: Maybe<Array<Maybe<SitePageContextPostsPluralsight>>>,
+  tutorial?: Maybe<Array<Maybe<SitePageContextPostsTutorial>>>,
+  video?: Maybe<Array<Maybe<SitePageContextPostsVideo>>>,
+  Office365?: Maybe<Array<Maybe<SitePageContextPostsOffice365>>>,
+  CLI?: Maybe<Array<Maybe<SitePageContextPostsCli>>>,
+  GitHub?: Maybe<Array<Maybe<SitePageContextPostsGitHub>>>,
+  OAuth?: Maybe<Array<Maybe<SitePageContextPostsOAuth>>>,
+  Plugins?: Maybe<Array<Maybe<SitePageContextPostsPlugins>>>,
+  Facebook?: Maybe<Array<Maybe<SitePageContextPostsFacebook>>>,
+  Android?: Maybe<Array<Maybe<SitePageContextPostsAndroid>>>,
+  Angular?: Maybe<Array<Maybe<SitePageContextPostsAngular>>>,
+  Animation?: Maybe<Array<Maybe<SitePageContextPostsAnimation>>>,
+  Training?: Maybe<Array<Maybe<SitePageContextPostsTraining>>>,
+  NativeScripting?: Maybe<Array<Maybe<SitePageContextPostsNativeScripting>>>,
+  Tutorial?: Maybe<Array<Maybe<SitePageContextPostsTutorial>>>,
+  Video?: Maybe<Array<Maybe<SitePageContextPostsVideo>>>,
+  Courses?: Maybe<Array<Maybe<SitePageContextPostsCourses>>>,
+  Styling?: Maybe<Array<Maybe<SitePageContextPostsStyling>>>,
+  Core?: Maybe<Array<Maybe<SitePageContextPostsCore>>>,
+  Authentication?: Maybe<Array<Maybe<SitePageContextPostsAuthentication>>>,
+  Authorization?: Maybe<Array<Maybe<SitePageContextPostsAuthorization>>>,
+  Enterprise?: Maybe<Array<Maybe<SitePageContextPostsEnterprise>>>,
+  UI?: Maybe<Array<Maybe<SitePageContextPostsUi>>>,
+  Cordova?: Maybe<Array<Maybe<SitePageContextPostsCordova>>>,
+  Tip?: Maybe<Array<Maybe<SitePageContextPostsTip>>>,
+  Vue?: Maybe<Array<Maybe<SitePageContextPostsVue>>>,
+  I_Script_Native?: Maybe<Array<Maybe<SitePageContextPostsI_Script_Native>>>,
+  Course?: Maybe<Array<Maybe<SitePageContextPostsCourse>>>,
+  FAB?: Maybe<Array<Maybe<SitePageContextPostsFab>>>,
+  Floating_Action_Button?: Maybe<Array<Maybe<SitePageContextPostsFloating_Action_Button>>>,
+  Security?: Maybe<Array<Maybe<SitePageContextPostsSecurity>>>,
+  Architecture?: Maybe<Array<Maybe<SitePageContextPostsArchitecture>>>,
+  Maps?: Maybe<Array<Maybe<SitePageContextPostsMaps>>>,
+  Testing?: Maybe<Array<Maybe<SitePageContextPostsTesting>>>,
+  CI?: Maybe<Array<Maybe<SitePageContextPostsCi>>>,
+  npx?: Maybe<Array<Maybe<SitePageContextPostsNpx>>>,
+  Fastlane?: Maybe<Array<Maybe<SitePageContextPostsFastlane>>>,
+  GitHub_Actions?: Maybe<Array<Maybe<SitePageContextPostsGitHub_Actions>>>,
+  Azure_Pipeline?: Maybe<Array<Maybe<SitePageContextPostsAzure_Pipeline>>>,
+};
+
+export type SitePageContextPostsAndroid = {
+   __typename?: 'SitePageContextPostsAndroid',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAndroidFrontmatter>,
+};
+
+export type SitePageContextPostsAndroidFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAndroidFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAndroidFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAndroidFilterInput>,
+};
+
+export type SitePageContextPostsAndroidFrontmatter = {
+   __typename?: 'SitePageContextPostsAndroidFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAndroidFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAndroidFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAndroidFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAngular = {
+   __typename?: 'SitePageContextPostsAngular',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAngularFrontmatter>,
+};
+
+export type SitePageContextPostsAngularFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAngularFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAngularFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAngularFilterInput>,
+};
+
+export type SitePageContextPostsAngularFrontmatter = {
+   __typename?: 'SitePageContextPostsAngularFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAngularFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAngularFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAngularFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAnimation = {
+   __typename?: 'SitePageContextPostsAnimation',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAnimationFrontmatter>,
+};
+
+export type SitePageContextPostsAnimationFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAnimationFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAnimationFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAnimationFilterInput>,
+};
+
+export type SitePageContextPostsAnimationFrontmatter = {
+   __typename?: 'SitePageContextPostsAnimationFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAnimationFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAnimationFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAnimationFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsArchitecture = {
+   __typename?: 'SitePageContextPostsArchitecture',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsArchitectureFrontmatter>,
+};
+
+export type SitePageContextPostsArchitectureFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsArchitectureFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsArchitectureFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsArchitectureFilterInput>,
+};
+
+export type SitePageContextPostsArchitectureFrontmatter = {
+   __typename?: 'SitePageContextPostsArchitectureFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsArchitectureFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsArchitectureFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsArchitectureFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAuthentication = {
+   __typename?: 'SitePageContextPostsAuthentication',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAuthenticationFrontmatter>,
+};
+
+export type SitePageContextPostsAuthenticationFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAuthenticationFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAuthenticationFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAuthenticationFilterInput>,
+};
+
+export type SitePageContextPostsAuthenticationFrontmatter = {
+   __typename?: 'SitePageContextPostsAuthenticationFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAuthenticationFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAuthenticationFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAuthenticationFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAuthorization = {
+   __typename?: 'SitePageContextPostsAuthorization',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAuthorizationFrontmatter>,
+};
+
+export type SitePageContextPostsAuthorizationFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAuthorizationFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAuthorizationFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAuthorizationFilterInput>,
+};
+
+export type SitePageContextPostsAuthorizationFrontmatter = {
+   __typename?: 'SitePageContextPostsAuthorizationFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAuthorizationFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAuthorizationFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAuthorizationFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAzure = {
+   __typename?: 'SitePageContextPostsAzure',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAzureFrontmatter>,
+};
+
+export type SitePageContextPostsAzure_Pipeline = {
+   __typename?: 'SitePageContextPostsAzure_Pipeline',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsAzure_PipelineFrontmatter>,
+};
+
+export type SitePageContextPostsAzure_PipelineFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAzure_PipelineFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAzure_PipelineFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAzure_PipelineFilterInput>,
+};
+
+export type SitePageContextPostsAzure_PipelineFrontmatter = {
+   __typename?: 'SitePageContextPostsAzure_PipelineFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAzure_PipelineFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAzure_PipelineFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAzure_PipelineFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsAzureFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsAzureFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsAzureFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsAzureFilterInput>,
+};
+
+export type SitePageContextPostsAzureFrontmatter = {
+   __typename?: 'SitePageContextPostsAzureFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsAzureFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsAzureFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsAzureFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCi = {
+   __typename?: 'SitePageContextPostsCI',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCiFrontmatter>,
+};
+
+export type SitePageContextPostsCiFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCiFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCiFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCiFilterInput>,
+};
+
+export type SitePageContextPostsCiFrontmatter = {
+   __typename?: 'SitePageContextPostsCIFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCiFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCiFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCiFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCli = {
+   __typename?: 'SitePageContextPostsCLI',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCliFrontmatter>,
+};
+
+export type SitePageContextPostsCliFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCliFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCliFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCliFilterInput>,
+};
+
+export type SitePageContextPostsCliFrontmatter = {
+   __typename?: 'SitePageContextPostsCLIFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCliFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCliFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCliFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCordova = {
+   __typename?: 'SitePageContextPostsCordova',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCordovaFrontmatter>,
+};
+
+export type SitePageContextPostsCordovaFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCordovaFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCordovaFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCordovaFilterInput>,
+};
+
+export type SitePageContextPostsCordovaFrontmatter = {
+   __typename?: 'SitePageContextPostsCordovaFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCordovaFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCordovaFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCordovaFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCore = {
+   __typename?: 'SitePageContextPostsCore',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCoreFrontmatter>,
+};
+
+export type SitePageContextPostsCoreFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCoreFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCoreFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCoreFilterInput>,
+};
+
+export type SitePageContextPostsCoreFrontmatter = {
+   __typename?: 'SitePageContextPostsCoreFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCoreFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCoreFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCoreFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCourse = {
+   __typename?: 'SitePageContextPostsCourse',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCourseFrontmatter>,
+};
+
+export type SitePageContextPostsCourseFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCourseFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCourseFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCourseFilterInput>,
+};
+
+export type SitePageContextPostsCourseFrontmatter = {
+   __typename?: 'SitePageContextPostsCourseFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCourseFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCourseFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCourseFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsCourses = {
+   __typename?: 'SitePageContextPostsCourses',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsCoursesFrontmatter>,
+};
+
+export type SitePageContextPostsCoursesFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsCoursesFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsCoursesFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsCoursesFilterInput>,
+};
+
+export type SitePageContextPostsCoursesFrontmatter = {
+   __typename?: 'SitePageContextPostsCoursesFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsCoursesFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsCoursesFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsCoursesFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsEnterprise = {
+   __typename?: 'SitePageContextPostsEnterprise',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsEnterpriseFrontmatter>,
+};
+
+export type SitePageContextPostsEnterpriseFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsEnterpriseFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsEnterpriseFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsEnterpriseFilterInput>,
+};
+
+export type SitePageContextPostsEnterpriseFrontmatter = {
+   __typename?: 'SitePageContextPostsEnterpriseFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsEnterpriseFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsEnterpriseFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsEnterpriseFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsFab = {
+   __typename?: 'SitePageContextPostsFAB',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsFabFrontmatter>,
+};
+
+export type SitePageContextPostsFabFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsFabFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsFabFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsFabFilterInput>,
+};
+
+export type SitePageContextPostsFabFrontmatter = {
+   __typename?: 'SitePageContextPostsFABFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsFabFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsFabFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsFabFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsFacebook = {
+   __typename?: 'SitePageContextPostsFacebook',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsFacebookFrontmatter>,
+};
+
+export type SitePageContextPostsFacebookFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsFacebookFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsFacebookFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsFacebookFilterInput>,
+};
+
+export type SitePageContextPostsFacebookFrontmatter = {
+   __typename?: 'SitePageContextPostsFacebookFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsFacebookFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsFacebookFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsFacebookFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsFastlane = {
+   __typename?: 'SitePageContextPostsFastlane',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsFastlaneFrontmatter>,
+};
+
+export type SitePageContextPostsFastlaneFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsFastlaneFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsFastlaneFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsFastlaneFilterInput>,
+};
+
+export type SitePageContextPostsFastlaneFrontmatter = {
+   __typename?: 'SitePageContextPostsFastlaneFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsFastlaneFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsFastlaneFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsFastlaneFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SitePageContextPostsFilterInput = {
-  iOS?: Maybe<SitePageContextPostsIosFilterListInput>,
+  Azure?: Maybe<SitePageContextPostsAzureFilterListInput>,
   Mobile?: Maybe<SitePageContextPostsMobileFilterListInput>,
   NativeScript?: Maybe<SitePageContextPostsNativeScriptFilterListInput>,
+  iOS?: Maybe<SitePageContextPostsIosFilterListInput>,
+  JavaScript?: Maybe<SitePageContextPostsJavaScriptFilterListInput>,
+  Simulator?: Maybe<SitePageContextPostsSimulatorFilterListInput>,
+  TypeScript?: Maybe<SitePageContextPostsTypeScriptFilterListInput>,
+  Visual_Studio_Code?: Maybe<SitePageContextPostsVisual_Studio_CodeFilterListInput>,
+  Organization?: Maybe<SitePageContextPostsOrganizationFilterListInput>,
+  Tips_and_Tricks?: Maybe<SitePageContextPostsTips_And_TricksFilterListInput>,
+  Pluralsight?: Maybe<SitePageContextPostsPluralsightFilterListInput>,
+  tutorial?: Maybe<SitePageContextPostsTutorialFilterListInput>,
+  video?: Maybe<SitePageContextPostsVideoFilterListInput>,
+  Office365?: Maybe<SitePageContextPostsOffice365FilterListInput>,
+  CLI?: Maybe<SitePageContextPostsCliFilterListInput>,
+  GitHub?: Maybe<SitePageContextPostsGitHubFilterListInput>,
+  OAuth?: Maybe<SitePageContextPostsOAuthFilterListInput>,
+  Plugins?: Maybe<SitePageContextPostsPluginsFilterListInput>,
+  Facebook?: Maybe<SitePageContextPostsFacebookFilterListInput>,
+  Android?: Maybe<SitePageContextPostsAndroidFilterListInput>,
+  Angular?: Maybe<SitePageContextPostsAngularFilterListInput>,
+  Animation?: Maybe<SitePageContextPostsAnimationFilterListInput>,
+  Training?: Maybe<SitePageContextPostsTrainingFilterListInput>,
+  NativeScripting?: Maybe<SitePageContextPostsNativeScriptingFilterListInput>,
+  Tutorial?: Maybe<SitePageContextPostsTutorialFilterListInput>,
+  Video?: Maybe<SitePageContextPostsVideoFilterListInput>,
+  Courses?: Maybe<SitePageContextPostsCoursesFilterListInput>,
+  Styling?: Maybe<SitePageContextPostsStylingFilterListInput>,
+  Core?: Maybe<SitePageContextPostsCoreFilterListInput>,
+  Authentication?: Maybe<SitePageContextPostsAuthenticationFilterListInput>,
+  Authorization?: Maybe<SitePageContextPostsAuthorizationFilterListInput>,
+  Enterprise?: Maybe<SitePageContextPostsEnterpriseFilterListInput>,
+  UI?: Maybe<SitePageContextPostsUiFilterListInput>,
+  Cordova?: Maybe<SitePageContextPostsCordovaFilterListInput>,
+  Tip?: Maybe<SitePageContextPostsTipFilterListInput>,
+  Vue?: Maybe<SitePageContextPostsVueFilterListInput>,
+  I_Script_Native?: Maybe<SitePageContextPostsI_Script_NativeFilterListInput>,
+  Course?: Maybe<SitePageContextPostsCourseFilterListInput>,
+  FAB?: Maybe<SitePageContextPostsFabFilterListInput>,
+  Floating_Action_Button?: Maybe<SitePageContextPostsFloating_Action_ButtonFilterListInput>,
+  Security?: Maybe<SitePageContextPostsSecurityFilterListInput>,
+  Architecture?: Maybe<SitePageContextPostsArchitectureFilterListInput>,
+  Maps?: Maybe<SitePageContextPostsMapsFilterListInput>,
+  Testing?: Maybe<SitePageContextPostsTestingFilterListInput>,
+  CI?: Maybe<SitePageContextPostsCiFilterListInput>,
+  npx?: Maybe<SitePageContextPostsNpxFilterListInput>,
+  Fastlane?: Maybe<SitePageContextPostsFastlaneFilterListInput>,
+  GitHub_Actions?: Maybe<SitePageContextPostsGitHub_ActionsFilterListInput>,
+  Azure_Pipeline?: Maybe<SitePageContextPostsAzure_PipelineFilterListInput>,
+};
+
+export type SitePageContextPostsFloating_Action_Button = {
+   __typename?: 'SitePageContextPostsFloating_Action_Button',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsFloating_Action_ButtonFrontmatter>,
+};
+
+export type SitePageContextPostsFloating_Action_ButtonFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsFloating_Action_ButtonFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsFloating_Action_ButtonFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsFloating_Action_ButtonFilterInput>,
+};
+
+export type SitePageContextPostsFloating_Action_ButtonFrontmatter = {
+   __typename?: 'SitePageContextPostsFloating_Action_ButtonFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsFloating_Action_ButtonFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsFloating_Action_ButtonFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsFloating_Action_ButtonFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsGitHub = {
+   __typename?: 'SitePageContextPostsGitHub',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsGitHubFrontmatter>,
+};
+
+export type SitePageContextPostsGitHub_Actions = {
+   __typename?: 'SitePageContextPostsGitHub_Actions',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsGitHub_ActionsFrontmatter>,
+};
+
+export type SitePageContextPostsGitHub_ActionsFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsGitHub_ActionsFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsGitHub_ActionsFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsGitHub_ActionsFilterInput>,
+};
+
+export type SitePageContextPostsGitHub_ActionsFrontmatter = {
+   __typename?: 'SitePageContextPostsGitHub_ActionsFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsGitHub_ActionsFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsGitHub_ActionsFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsGitHub_ActionsFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsGitHubFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsGitHubFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsGitHubFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsGitHubFilterInput>,
+};
+
+export type SitePageContextPostsGitHubFrontmatter = {
+   __typename?: 'SitePageContextPostsGitHubFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsGitHubFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsGitHubFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsGitHubFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsI_Script_Native = {
+   __typename?: 'SitePageContextPostsI_Script_Native',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsI_Script_NativeFrontmatter>,
+};
+
+export type SitePageContextPostsI_Script_NativeFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsI_Script_NativeFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsI_Script_NativeFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsI_Script_NativeFilterInput>,
+};
+
+export type SitePageContextPostsI_Script_NativeFrontmatter = {
+   __typename?: 'SitePageContextPostsI_Script_NativeFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsI_Script_NativeFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsI_Script_NativeFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsI_Script_NativeFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SitePageContextPostsIos = {
@@ -3880,6 +5172,114 @@ export type SitePageContextPostsIosFrontmatterUpdatedDateArgs = {
 };
 
 export type SitePageContextPostsIosFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsJavaScript = {
+   __typename?: 'SitePageContextPostsJavaScript',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsJavaScriptFrontmatter>,
+};
+
+export type SitePageContextPostsJavaScriptFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsJavaScriptFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsJavaScriptFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsJavaScriptFilterInput>,
+};
+
+export type SitePageContextPostsJavaScriptFrontmatter = {
+   __typename?: 'SitePageContextPostsJavaScriptFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsJavaScriptFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsJavaScriptFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsJavaScriptFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsMaps = {
+   __typename?: 'SitePageContextPostsMaps',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsMapsFrontmatter>,
+};
+
+export type SitePageContextPostsMapsFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsMapsFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsMapsFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsMapsFilterInput>,
+};
+
+export type SitePageContextPostsMapsFrontmatter = {
+   __typename?: 'SitePageContextPostsMapsFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsMapsFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsMapsFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsMapsFrontmatterFilterInput = {
   createdDate?: Maybe<DateQueryOperatorInput>,
   updatedDate?: Maybe<DateQueryOperatorInput>,
   tags?: Maybe<StringQueryOperatorInput>,
@@ -3995,6 +5395,1086 @@ export type SitePageContextPostsNativeScriptFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
 };
 
+export type SitePageContextPostsNativeScripting = {
+   __typename?: 'SitePageContextPostsNativeScripting',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsNativeScriptingFrontmatter>,
+};
+
+export type SitePageContextPostsNativeScriptingFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsNativeScriptingFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsNativeScriptingFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsNativeScriptingFilterInput>,
+};
+
+export type SitePageContextPostsNativeScriptingFrontmatter = {
+   __typename?: 'SitePageContextPostsNativeScriptingFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsNativeScriptingFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsNativeScriptingFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsNativeScriptingFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsNpx = {
+   __typename?: 'SitePageContextPostsNpx',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsNpxFrontmatter>,
+};
+
+export type SitePageContextPostsNpxFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsNpxFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsNpxFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsNpxFilterInput>,
+};
+
+export type SitePageContextPostsNpxFrontmatter = {
+   __typename?: 'SitePageContextPostsNpxFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsNpxFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsNpxFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsNpxFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsOAuth = {
+   __typename?: 'SitePageContextPostsOAuth',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsOAuthFrontmatter>,
+};
+
+export type SitePageContextPostsOAuthFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsOAuthFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsOAuthFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsOAuthFilterInput>,
+};
+
+export type SitePageContextPostsOAuthFrontmatter = {
+   __typename?: 'SitePageContextPostsOAuthFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsOAuthFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsOAuthFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsOAuthFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsOffice365 = {
+   __typename?: 'SitePageContextPostsOffice365',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsOffice365Frontmatter>,
+};
+
+export type SitePageContextPostsOffice365FilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsOffice365FrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsOffice365FilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsOffice365FilterInput>,
+};
+
+export type SitePageContextPostsOffice365Frontmatter = {
+   __typename?: 'SitePageContextPostsOffice365Frontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsOffice365FrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsOffice365FrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsOffice365FrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsOrganization = {
+   __typename?: 'SitePageContextPostsOrganization',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsOrganizationFrontmatter>,
+};
+
+export type SitePageContextPostsOrganizationFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsOrganizationFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsOrganizationFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsOrganizationFilterInput>,
+};
+
+export type SitePageContextPostsOrganizationFrontmatter = {
+   __typename?: 'SitePageContextPostsOrganizationFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsOrganizationFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsOrganizationFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsOrganizationFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsPlugins = {
+   __typename?: 'SitePageContextPostsPlugins',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsPluginsFrontmatter>,
+};
+
+export type SitePageContextPostsPluginsFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsPluginsFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsPluginsFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsPluginsFilterInput>,
+};
+
+export type SitePageContextPostsPluginsFrontmatter = {
+   __typename?: 'SitePageContextPostsPluginsFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsPluginsFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsPluginsFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsPluginsFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsPluralsight = {
+   __typename?: 'SitePageContextPostsPluralsight',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsPluralsightFrontmatter>,
+};
+
+export type SitePageContextPostsPluralsightFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsPluralsightFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsPluralsightFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsPluralsightFilterInput>,
+};
+
+export type SitePageContextPostsPluralsightFrontmatter = {
+   __typename?: 'SitePageContextPostsPluralsightFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsPluralsightFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsPluralsightFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsPluralsightFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsSecurity = {
+   __typename?: 'SitePageContextPostsSecurity',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsSecurityFrontmatter>,
+};
+
+export type SitePageContextPostsSecurityFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsSecurityFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsSecurityFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsSecurityFilterInput>,
+};
+
+export type SitePageContextPostsSecurityFrontmatter = {
+   __typename?: 'SitePageContextPostsSecurityFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsSecurityFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsSecurityFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsSecurityFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsSimulator = {
+   __typename?: 'SitePageContextPostsSimulator',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsSimulatorFrontmatter>,
+};
+
+export type SitePageContextPostsSimulatorFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsSimulatorFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsSimulatorFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsSimulatorFilterInput>,
+};
+
+export type SitePageContextPostsSimulatorFrontmatter = {
+   __typename?: 'SitePageContextPostsSimulatorFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsSimulatorFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsSimulatorFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsSimulatorFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsStyling = {
+   __typename?: 'SitePageContextPostsStyling',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsStylingFrontmatter>,
+};
+
+export type SitePageContextPostsStylingFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsStylingFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsStylingFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsStylingFilterInput>,
+};
+
+export type SitePageContextPostsStylingFrontmatter = {
+   __typename?: 'SitePageContextPostsStylingFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsStylingFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsStylingFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsStylingFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTesting = {
+   __typename?: 'SitePageContextPostsTesting',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTestingFrontmatter>,
+};
+
+export type SitePageContextPostsTestingFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTestingFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTestingFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTestingFilterInput>,
+};
+
+export type SitePageContextPostsTestingFrontmatter = {
+   __typename?: 'SitePageContextPostsTestingFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTestingFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTestingFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTestingFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTip = {
+   __typename?: 'SitePageContextPostsTip',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTipFrontmatter>,
+};
+
+export type SitePageContextPostsTipFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTipFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTipFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTipFilterInput>,
+};
+
+export type SitePageContextPostsTipFrontmatter = {
+   __typename?: 'SitePageContextPostsTipFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTipFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTipFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTipFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTips_And_Tricks = {
+   __typename?: 'SitePageContextPostsTips_and_Tricks',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTips_And_TricksFrontmatter>,
+};
+
+export type SitePageContextPostsTips_And_TricksFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTips_And_TricksFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTips_And_TricksFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTips_And_TricksFilterInput>,
+};
+
+export type SitePageContextPostsTips_And_TricksFrontmatter = {
+   __typename?: 'SitePageContextPostsTips_and_TricksFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTips_And_TricksFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTips_And_TricksFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTips_And_TricksFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTraining = {
+   __typename?: 'SitePageContextPostsTraining',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTrainingFrontmatter>,
+};
+
+export type SitePageContextPostsTrainingFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTrainingFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTrainingFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTrainingFilterInput>,
+};
+
+export type SitePageContextPostsTrainingFrontmatter = {
+   __typename?: 'SitePageContextPostsTrainingFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTrainingFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTrainingFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTrainingFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTutorial = {
+   __typename?: 'SitePageContextPostsTutorial',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTutorialFrontmatter>,
+};
+
+export type SitePageContextPostsTutorialFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTutorialFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTutorialFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTutorialFilterInput>,
+};
+
+export type SitePageContextPostsTutorialFrontmatter = {
+   __typename?: 'SitePageContextPostsTutorialFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTutorialFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTutorialFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTutorialFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsTypeScript = {
+   __typename?: 'SitePageContextPostsTypeScript',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsTypeScriptFrontmatter>,
+};
+
+export type SitePageContextPostsTypeScriptFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsTypeScriptFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsTypeScriptFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsTypeScriptFilterInput>,
+};
+
+export type SitePageContextPostsTypeScriptFrontmatter = {
+   __typename?: 'SitePageContextPostsTypeScriptFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsTypeScriptFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsTypeScriptFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsTypeScriptFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsUi = {
+   __typename?: 'SitePageContextPostsUI',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsUiFrontmatter>,
+};
+
+export type SitePageContextPostsUiFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsUiFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsUiFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsUiFilterInput>,
+};
+
+export type SitePageContextPostsUiFrontmatter = {
+   __typename?: 'SitePageContextPostsUIFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsUiFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsUiFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsUiFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsVideo = {
+   __typename?: 'SitePageContextPostsVideo',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsVideoFrontmatter>,
+};
+
+export type SitePageContextPostsVideoFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsVideoFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsVideoFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsVideoFilterInput>,
+};
+
+export type SitePageContextPostsVideoFrontmatter = {
+   __typename?: 'SitePageContextPostsVideoFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsVideoFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsVideoFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsVideoFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsVisual_Studio_Code = {
+   __typename?: 'SitePageContextPostsVisual_Studio_Code',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsVisual_Studio_CodeFrontmatter>,
+};
+
+export type SitePageContextPostsVisual_Studio_CodeFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsVisual_Studio_CodeFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsVisual_Studio_CodeFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsVisual_Studio_CodeFilterInput>,
+};
+
+export type SitePageContextPostsVisual_Studio_CodeFrontmatter = {
+   __typename?: 'SitePageContextPostsVisual_Studio_CodeFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsVisual_Studio_CodeFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsVisual_Studio_CodeFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsVisual_Studio_CodeFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SitePageContextPostsVue = {
+   __typename?: 'SitePageContextPostsVue',
+  excerpt?: Maybe<Scalars['String']>,
+  html?: Maybe<Scalars['String']>,
+  id?: Maybe<Scalars['String']>,
+  timeToRead?: Maybe<Scalars['Int']>,
+  frontmatter?: Maybe<SitePageContextPostsVueFrontmatter>,
+};
+
+export type SitePageContextPostsVueFilterInput = {
+  excerpt?: Maybe<StringQueryOperatorInput>,
+  html?: Maybe<StringQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  timeToRead?: Maybe<IntQueryOperatorInput>,
+  frontmatter?: Maybe<SitePageContextPostsVueFrontmatterFilterInput>,
+};
+
+export type SitePageContextPostsVueFilterListInput = {
+  elemMatch?: Maybe<SitePageContextPostsVueFilterInput>,
+};
+
+export type SitePageContextPostsVueFrontmatter = {
+   __typename?: 'SitePageContextPostsVueFrontmatter',
+  createdDate?: Maybe<Scalars['Date']>,
+  updatedDate?: Maybe<Scalars['Date']>,
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+  path?: Maybe<Scalars['String']>,
+  title?: Maybe<Scalars['String']>,
+};
+
+
+export type SitePageContextPostsVueFrontmatterCreatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+
+export type SitePageContextPostsVueFrontmatterUpdatedDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
+};
+
+export type SitePageContextPostsVueFrontmatterFilterInput = {
+  createdDate?: Maybe<DateQueryOperatorInput>,
+  updatedDate?: Maybe<DateQueryOperatorInput>,
+  tags?: Maybe<StringQueryOperatorInput>,
+  path?: Maybe<StringQueryOperatorInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+};
+
 export type SitePageEdge = {
    __typename?: 'SitePageEdge',
   next?: Maybe<SitePage>,
@@ -4103,11 +6583,11 @@ export enum SitePageFieldsEnum {
   context___slug = 'context___slug',
   context___prevPostPath = 'context___prevPostPath',
   context___nextPostPath = 'context___nextPostPath',
-  context___posts___iOS = 'context___posts___iOS',
-  context___posts___iOS___excerpt = 'context___posts___iOS___excerpt',
-  context___posts___iOS___html = 'context___posts___iOS___html',
-  context___posts___iOS___id = 'context___posts___iOS___id',
-  context___posts___iOS___timeToRead = 'context___posts___iOS___timeToRead',
+  context___posts___Azure = 'context___posts___Azure',
+  context___posts___Azure___excerpt = 'context___posts___Azure___excerpt',
+  context___posts___Azure___html = 'context___posts___Azure___html',
+  context___posts___Azure___id = 'context___posts___Azure___id',
+  context___posts___Azure___timeToRead = 'context___posts___Azure___timeToRead',
   context___posts___Mobile = 'context___posts___Mobile',
   context___posts___Mobile___excerpt = 'context___posts___Mobile___excerpt',
   context___posts___Mobile___html = 'context___posts___Mobile___html',
@@ -4118,6 +6598,236 @@ export enum SitePageFieldsEnum {
   context___posts___NativeScript___html = 'context___posts___NativeScript___html',
   context___posts___NativeScript___id = 'context___posts___NativeScript___id',
   context___posts___NativeScript___timeToRead = 'context___posts___NativeScript___timeToRead',
+  context___posts___iOS = 'context___posts___iOS',
+  context___posts___iOS___excerpt = 'context___posts___iOS___excerpt',
+  context___posts___iOS___html = 'context___posts___iOS___html',
+  context___posts___iOS___id = 'context___posts___iOS___id',
+  context___posts___iOS___timeToRead = 'context___posts___iOS___timeToRead',
+  context___posts___JavaScript = 'context___posts___JavaScript',
+  context___posts___JavaScript___excerpt = 'context___posts___JavaScript___excerpt',
+  context___posts___JavaScript___html = 'context___posts___JavaScript___html',
+  context___posts___JavaScript___id = 'context___posts___JavaScript___id',
+  context___posts___JavaScript___timeToRead = 'context___posts___JavaScript___timeToRead',
+  context___posts___Simulator = 'context___posts___Simulator',
+  context___posts___Simulator___excerpt = 'context___posts___Simulator___excerpt',
+  context___posts___Simulator___html = 'context___posts___Simulator___html',
+  context___posts___Simulator___id = 'context___posts___Simulator___id',
+  context___posts___Simulator___timeToRead = 'context___posts___Simulator___timeToRead',
+  context___posts___TypeScript = 'context___posts___TypeScript',
+  context___posts___TypeScript___excerpt = 'context___posts___TypeScript___excerpt',
+  context___posts___TypeScript___html = 'context___posts___TypeScript___html',
+  context___posts___TypeScript___id = 'context___posts___TypeScript___id',
+  context___posts___TypeScript___timeToRead = 'context___posts___TypeScript___timeToRead',
+  context___posts___Visual_Studio_Code = 'context___posts___Visual_Studio_Code',
+  context___posts___Visual_Studio_Code___excerpt = 'context___posts___Visual_Studio_Code___excerpt',
+  context___posts___Visual_Studio_Code___html = 'context___posts___Visual_Studio_Code___html',
+  context___posts___Visual_Studio_Code___id = 'context___posts___Visual_Studio_Code___id',
+  context___posts___Visual_Studio_Code___timeToRead = 'context___posts___Visual_Studio_Code___timeToRead',
+  context___posts___Organization = 'context___posts___Organization',
+  context___posts___Organization___excerpt = 'context___posts___Organization___excerpt',
+  context___posts___Organization___html = 'context___posts___Organization___html',
+  context___posts___Organization___id = 'context___posts___Organization___id',
+  context___posts___Organization___timeToRead = 'context___posts___Organization___timeToRead',
+  context___posts___Tips_and_Tricks = 'context___posts___Tips_and_Tricks',
+  context___posts___Tips_and_Tricks___excerpt = 'context___posts___Tips_and_Tricks___excerpt',
+  context___posts___Tips_and_Tricks___html = 'context___posts___Tips_and_Tricks___html',
+  context___posts___Tips_and_Tricks___id = 'context___posts___Tips_and_Tricks___id',
+  context___posts___Tips_and_Tricks___timeToRead = 'context___posts___Tips_and_Tricks___timeToRead',
+  context___posts___Pluralsight = 'context___posts___Pluralsight',
+  context___posts___Pluralsight___excerpt = 'context___posts___Pluralsight___excerpt',
+  context___posts___Pluralsight___html = 'context___posts___Pluralsight___html',
+  context___posts___Pluralsight___id = 'context___posts___Pluralsight___id',
+  context___posts___Pluralsight___timeToRead = 'context___posts___Pluralsight___timeToRead',
+  context___posts___tutorial = 'context___posts___tutorial',
+  context___posts___tutorial___excerpt = 'context___posts___tutorial___excerpt',
+  context___posts___tutorial___html = 'context___posts___tutorial___html',
+  context___posts___tutorial___id = 'context___posts___tutorial___id',
+  context___posts___tutorial___timeToRead = 'context___posts___tutorial___timeToRead',
+  context___posts___video = 'context___posts___video',
+  context___posts___video___excerpt = 'context___posts___video___excerpt',
+  context___posts___video___html = 'context___posts___video___html',
+  context___posts___video___id = 'context___posts___video___id',
+  context___posts___video___timeToRead = 'context___posts___video___timeToRead',
+  context___posts___Office365 = 'context___posts___Office365',
+  context___posts___Office365___excerpt = 'context___posts___Office365___excerpt',
+  context___posts___Office365___html = 'context___posts___Office365___html',
+  context___posts___Office365___id = 'context___posts___Office365___id',
+  context___posts___Office365___timeToRead = 'context___posts___Office365___timeToRead',
+  context___posts___CLI = 'context___posts___CLI',
+  context___posts___CLI___excerpt = 'context___posts___CLI___excerpt',
+  context___posts___CLI___html = 'context___posts___CLI___html',
+  context___posts___CLI___id = 'context___posts___CLI___id',
+  context___posts___CLI___timeToRead = 'context___posts___CLI___timeToRead',
+  context___posts___GitHub = 'context___posts___GitHub',
+  context___posts___GitHub___excerpt = 'context___posts___GitHub___excerpt',
+  context___posts___GitHub___html = 'context___posts___GitHub___html',
+  context___posts___GitHub___id = 'context___posts___GitHub___id',
+  context___posts___GitHub___timeToRead = 'context___posts___GitHub___timeToRead',
+  context___posts___OAuth = 'context___posts___OAuth',
+  context___posts___OAuth___excerpt = 'context___posts___OAuth___excerpt',
+  context___posts___OAuth___html = 'context___posts___OAuth___html',
+  context___posts___OAuth___id = 'context___posts___OAuth___id',
+  context___posts___OAuth___timeToRead = 'context___posts___OAuth___timeToRead',
+  context___posts___Plugins = 'context___posts___Plugins',
+  context___posts___Plugins___excerpt = 'context___posts___Plugins___excerpt',
+  context___posts___Plugins___html = 'context___posts___Plugins___html',
+  context___posts___Plugins___id = 'context___posts___Plugins___id',
+  context___posts___Plugins___timeToRead = 'context___posts___Plugins___timeToRead',
+  context___posts___Facebook = 'context___posts___Facebook',
+  context___posts___Facebook___excerpt = 'context___posts___Facebook___excerpt',
+  context___posts___Facebook___html = 'context___posts___Facebook___html',
+  context___posts___Facebook___id = 'context___posts___Facebook___id',
+  context___posts___Facebook___timeToRead = 'context___posts___Facebook___timeToRead',
+  context___posts___Android = 'context___posts___Android',
+  context___posts___Android___excerpt = 'context___posts___Android___excerpt',
+  context___posts___Android___html = 'context___posts___Android___html',
+  context___posts___Android___id = 'context___posts___Android___id',
+  context___posts___Android___timeToRead = 'context___posts___Android___timeToRead',
+  context___posts___Angular = 'context___posts___Angular',
+  context___posts___Angular___excerpt = 'context___posts___Angular___excerpt',
+  context___posts___Angular___html = 'context___posts___Angular___html',
+  context___posts___Angular___id = 'context___posts___Angular___id',
+  context___posts___Angular___timeToRead = 'context___posts___Angular___timeToRead',
+  context___posts___Animation = 'context___posts___Animation',
+  context___posts___Animation___excerpt = 'context___posts___Animation___excerpt',
+  context___posts___Animation___html = 'context___posts___Animation___html',
+  context___posts___Animation___id = 'context___posts___Animation___id',
+  context___posts___Animation___timeToRead = 'context___posts___Animation___timeToRead',
+  context___posts___Training = 'context___posts___Training',
+  context___posts___Training___excerpt = 'context___posts___Training___excerpt',
+  context___posts___Training___html = 'context___posts___Training___html',
+  context___posts___Training___id = 'context___posts___Training___id',
+  context___posts___Training___timeToRead = 'context___posts___Training___timeToRead',
+  context___posts___NativeScripting = 'context___posts___NativeScripting',
+  context___posts___NativeScripting___excerpt = 'context___posts___NativeScripting___excerpt',
+  context___posts___NativeScripting___html = 'context___posts___NativeScripting___html',
+  context___posts___NativeScripting___id = 'context___posts___NativeScripting___id',
+  context___posts___NativeScripting___timeToRead = 'context___posts___NativeScripting___timeToRead',
+  context___posts___Tutorial = 'context___posts___Tutorial',
+  context___posts___Tutorial___excerpt = 'context___posts___Tutorial___excerpt',
+  context___posts___Tutorial___html = 'context___posts___Tutorial___html',
+  context___posts___Tutorial___id = 'context___posts___Tutorial___id',
+  context___posts___Tutorial___timeToRead = 'context___posts___Tutorial___timeToRead',
+  context___posts___Video = 'context___posts___Video',
+  context___posts___Video___excerpt = 'context___posts___Video___excerpt',
+  context___posts___Video___html = 'context___posts___Video___html',
+  context___posts___Video___id = 'context___posts___Video___id',
+  context___posts___Video___timeToRead = 'context___posts___Video___timeToRead',
+  context___posts___Courses = 'context___posts___Courses',
+  context___posts___Courses___excerpt = 'context___posts___Courses___excerpt',
+  context___posts___Courses___html = 'context___posts___Courses___html',
+  context___posts___Courses___id = 'context___posts___Courses___id',
+  context___posts___Courses___timeToRead = 'context___posts___Courses___timeToRead',
+  context___posts___Styling = 'context___posts___Styling',
+  context___posts___Styling___excerpt = 'context___posts___Styling___excerpt',
+  context___posts___Styling___html = 'context___posts___Styling___html',
+  context___posts___Styling___id = 'context___posts___Styling___id',
+  context___posts___Styling___timeToRead = 'context___posts___Styling___timeToRead',
+  context___posts___Core = 'context___posts___Core',
+  context___posts___Core___excerpt = 'context___posts___Core___excerpt',
+  context___posts___Core___html = 'context___posts___Core___html',
+  context___posts___Core___id = 'context___posts___Core___id',
+  context___posts___Core___timeToRead = 'context___posts___Core___timeToRead',
+  context___posts___Authentication = 'context___posts___Authentication',
+  context___posts___Authentication___excerpt = 'context___posts___Authentication___excerpt',
+  context___posts___Authentication___html = 'context___posts___Authentication___html',
+  context___posts___Authentication___id = 'context___posts___Authentication___id',
+  context___posts___Authentication___timeToRead = 'context___posts___Authentication___timeToRead',
+  context___posts___Authorization = 'context___posts___Authorization',
+  context___posts___Authorization___excerpt = 'context___posts___Authorization___excerpt',
+  context___posts___Authorization___html = 'context___posts___Authorization___html',
+  context___posts___Authorization___id = 'context___posts___Authorization___id',
+  context___posts___Authorization___timeToRead = 'context___posts___Authorization___timeToRead',
+  context___posts___Enterprise = 'context___posts___Enterprise',
+  context___posts___Enterprise___excerpt = 'context___posts___Enterprise___excerpt',
+  context___posts___Enterprise___html = 'context___posts___Enterprise___html',
+  context___posts___Enterprise___id = 'context___posts___Enterprise___id',
+  context___posts___Enterprise___timeToRead = 'context___posts___Enterprise___timeToRead',
+  context___posts___UI = 'context___posts___UI',
+  context___posts___UI___excerpt = 'context___posts___UI___excerpt',
+  context___posts___UI___html = 'context___posts___UI___html',
+  context___posts___UI___id = 'context___posts___UI___id',
+  context___posts___UI___timeToRead = 'context___posts___UI___timeToRead',
+  context___posts___Cordova = 'context___posts___Cordova',
+  context___posts___Cordova___excerpt = 'context___posts___Cordova___excerpt',
+  context___posts___Cordova___html = 'context___posts___Cordova___html',
+  context___posts___Cordova___id = 'context___posts___Cordova___id',
+  context___posts___Cordova___timeToRead = 'context___posts___Cordova___timeToRead',
+  context___posts___Tip = 'context___posts___Tip',
+  context___posts___Tip___excerpt = 'context___posts___Tip___excerpt',
+  context___posts___Tip___html = 'context___posts___Tip___html',
+  context___posts___Tip___id = 'context___posts___Tip___id',
+  context___posts___Tip___timeToRead = 'context___posts___Tip___timeToRead',
+  context___posts___Vue = 'context___posts___Vue',
+  context___posts___Vue___excerpt = 'context___posts___Vue___excerpt',
+  context___posts___Vue___html = 'context___posts___Vue___html',
+  context___posts___Vue___id = 'context___posts___Vue___id',
+  context___posts___Vue___timeToRead = 'context___posts___Vue___timeToRead',
+  context___posts___I_Script_Native = 'context___posts___I_Script_Native',
+  context___posts___I_Script_Native___excerpt = 'context___posts___I_Script_Native___excerpt',
+  context___posts___I_Script_Native___html = 'context___posts___I_Script_Native___html',
+  context___posts___I_Script_Native___id = 'context___posts___I_Script_Native___id',
+  context___posts___I_Script_Native___timeToRead = 'context___posts___I_Script_Native___timeToRead',
+  context___posts___Course = 'context___posts___Course',
+  context___posts___Course___excerpt = 'context___posts___Course___excerpt',
+  context___posts___Course___html = 'context___posts___Course___html',
+  context___posts___Course___id = 'context___posts___Course___id',
+  context___posts___Course___timeToRead = 'context___posts___Course___timeToRead',
+  context___posts___FAB = 'context___posts___FAB',
+  context___posts___FAB___excerpt = 'context___posts___FAB___excerpt',
+  context___posts___FAB___html = 'context___posts___FAB___html',
+  context___posts___FAB___id = 'context___posts___FAB___id',
+  context___posts___FAB___timeToRead = 'context___posts___FAB___timeToRead',
+  context___posts___Floating_Action_Button = 'context___posts___Floating_Action_Button',
+  context___posts___Floating_Action_Button___excerpt = 'context___posts___Floating_Action_Button___excerpt',
+  context___posts___Floating_Action_Button___html = 'context___posts___Floating_Action_Button___html',
+  context___posts___Floating_Action_Button___id = 'context___posts___Floating_Action_Button___id',
+  context___posts___Floating_Action_Button___timeToRead = 'context___posts___Floating_Action_Button___timeToRead',
+  context___posts___Security = 'context___posts___Security',
+  context___posts___Security___excerpt = 'context___posts___Security___excerpt',
+  context___posts___Security___html = 'context___posts___Security___html',
+  context___posts___Security___id = 'context___posts___Security___id',
+  context___posts___Security___timeToRead = 'context___posts___Security___timeToRead',
+  context___posts___Architecture = 'context___posts___Architecture',
+  context___posts___Architecture___excerpt = 'context___posts___Architecture___excerpt',
+  context___posts___Architecture___html = 'context___posts___Architecture___html',
+  context___posts___Architecture___id = 'context___posts___Architecture___id',
+  context___posts___Architecture___timeToRead = 'context___posts___Architecture___timeToRead',
+  context___posts___Maps = 'context___posts___Maps',
+  context___posts___Maps___excerpt = 'context___posts___Maps___excerpt',
+  context___posts___Maps___html = 'context___posts___Maps___html',
+  context___posts___Maps___id = 'context___posts___Maps___id',
+  context___posts___Maps___timeToRead = 'context___posts___Maps___timeToRead',
+  context___posts___Testing = 'context___posts___Testing',
+  context___posts___Testing___excerpt = 'context___posts___Testing___excerpt',
+  context___posts___Testing___html = 'context___posts___Testing___html',
+  context___posts___Testing___id = 'context___posts___Testing___id',
+  context___posts___Testing___timeToRead = 'context___posts___Testing___timeToRead',
+  context___posts___CI = 'context___posts___CI',
+  context___posts___CI___excerpt = 'context___posts___CI___excerpt',
+  context___posts___CI___html = 'context___posts___CI___html',
+  context___posts___CI___id = 'context___posts___CI___id',
+  context___posts___CI___timeToRead = 'context___posts___CI___timeToRead',
+  context___posts___npx = 'context___posts___npx',
+  context___posts___npx___excerpt = 'context___posts___npx___excerpt',
+  context___posts___npx___html = 'context___posts___npx___html',
+  context___posts___npx___id = 'context___posts___npx___id',
+  context___posts___npx___timeToRead = 'context___posts___npx___timeToRead',
+  context___posts___Fastlane = 'context___posts___Fastlane',
+  context___posts___Fastlane___excerpt = 'context___posts___Fastlane___excerpt',
+  context___posts___Fastlane___html = 'context___posts___Fastlane___html',
+  context___posts___Fastlane___id = 'context___posts___Fastlane___id',
+  context___posts___Fastlane___timeToRead = 'context___posts___Fastlane___timeToRead',
+  context___posts___GitHub_Actions = 'context___posts___GitHub_Actions',
+  context___posts___GitHub_Actions___excerpt = 'context___posts___GitHub_Actions___excerpt',
+  context___posts___GitHub_Actions___html = 'context___posts___GitHub_Actions___html',
+  context___posts___GitHub_Actions___id = 'context___posts___GitHub_Actions___id',
+  context___posts___GitHub_Actions___timeToRead = 'context___posts___GitHub_Actions___timeToRead',
+  context___posts___Azure_Pipeline = 'context___posts___Azure_Pipeline',
+  context___posts___Azure_Pipeline___excerpt = 'context___posts___Azure_Pipeline___excerpt',
+  context___posts___Azure_Pipeline___html = 'context___posts___Azure_Pipeline___html',
+  context___posts___Azure_Pipeline___id = 'context___posts___Azure_Pipeline___id',
+  context___posts___Azure_Pipeline___timeToRead = 'context___posts___Azure_Pipeline___timeToRead',
   context___post = 'context___post',
   context___post___excerpt = 'context___post___excerpt',
   context___post___html = 'context___post___html',
@@ -4182,6 +6892,18 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name = 'pluginCreator___pluginOptions___name',
   pluginCreator___pluginOptions___path = 'pluginCreator___pluginOptions___path',
   pluginCreator___pluginOptions___linkImagesToOriginal = 'pluginCreator___pluginOptions___linkImagesToOriginal',
+  pluginCreator___pluginOptions___pathPrefix = 'pluginCreator___pluginOptions___pathPrefix',
+  pluginCreator___pluginOptions___maxWidth = 'pluginCreator___pluginOptions___maxWidth',
+  pluginCreator___pluginOptions___wrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
+  pluginCreator___pluginOptions___backgroundColor = 'pluginCreator___pluginOptions___backgroundColor',
+  pluginCreator___pluginOptions___showCaptions = 'pluginCreator___pluginOptions___showCaptions',
+  pluginCreator___pluginOptions___markdownCaptions = 'pluginCreator___pluginOptions___markdownCaptions',
+  pluginCreator___pluginOptions___withWebp = 'pluginCreator___pluginOptions___withWebp',
+  pluginCreator___pluginOptions___tracedSVG = 'pluginCreator___pluginOptions___tracedSVG',
+  pluginCreator___pluginOptions___loading = 'pluginCreator___pluginOptions___loading',
+  pluginCreator___pluginOptions___disableBgImageOnAlpha = 'pluginCreator___pluginOptions___disableBgImageOnAlpha',
+  pluginCreator___pluginOptions___disableBgImage = 'pluginCreator___pluginOptions___disableBgImage',
+  pluginCreator___pluginOptions___ignoreFileExtensions = 'pluginCreator___pluginOptions___ignoreFileExtensions',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
   pluginCreator___nodeAPIs = 'pluginCreator___nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator___browserAPIs',
@@ -4379,6 +7101,18 @@ export enum SitePluginFieldsEnum {
   pluginOptions___plugins___name = 'pluginOptions___plugins___name',
   pluginOptions___plugins___version = 'pluginOptions___plugins___version',
   pluginOptions___plugins___pluginOptions___linkImagesToOriginal = 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal',
+  pluginOptions___plugins___pluginOptions___pathPrefix = 'pluginOptions___plugins___pluginOptions___pathPrefix',
+  pluginOptions___plugins___pluginOptions___maxWidth = 'pluginOptions___plugins___pluginOptions___maxWidth',
+  pluginOptions___plugins___pluginOptions___wrapperStyle = 'pluginOptions___plugins___pluginOptions___wrapperStyle',
+  pluginOptions___plugins___pluginOptions___backgroundColor = 'pluginOptions___plugins___pluginOptions___backgroundColor',
+  pluginOptions___plugins___pluginOptions___showCaptions = 'pluginOptions___plugins___pluginOptions___showCaptions',
+  pluginOptions___plugins___pluginOptions___markdownCaptions = 'pluginOptions___plugins___pluginOptions___markdownCaptions',
+  pluginOptions___plugins___pluginOptions___withWebp = 'pluginOptions___plugins___pluginOptions___withWebp',
+  pluginOptions___plugins___pluginOptions___tracedSVG = 'pluginOptions___plugins___pluginOptions___tracedSVG',
+  pluginOptions___plugins___pluginOptions___loading = 'pluginOptions___plugins___pluginOptions___loading',
+  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha',
+  pluginOptions___plugins___pluginOptions___disableBgImage = 'pluginOptions___plugins___pluginOptions___disableBgImage',
+  pluginOptions___plugins___pluginOptions___ignoreFileExtensions = 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions',
   pluginOptions___plugins___browserAPIs = 'pluginOptions___plugins___browserAPIs',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions___plugins___pluginFilepath',
   pluginOptions___output = 'pluginOptions___output',
@@ -4386,6 +7120,18 @@ export enum SitePluginFieldsEnum {
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___markdownCaptions = 'pluginOptions___markdownCaptions',
+  pluginOptions___withWebp = 'pluginOptions___withWebp',
+  pluginOptions___tracedSVG = 'pluginOptions___tracedSVG',
+  pluginOptions___loading = 'pluginOptions___loading',
+  pluginOptions___disableBgImageOnAlpha = 'pluginOptions___disableBgImageOnAlpha',
+  pluginOptions___disableBgImage = 'pluginOptions___disableBgImage',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
@@ -4512,6 +7258,18 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>,
   path?: Maybe<Scalars['String']>,
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>,
+  pathPrefix?: Maybe<Scalars['String']>,
+  maxWidth?: Maybe<Scalars['Int']>,
+  wrapperStyle?: Maybe<Scalars['String']>,
+  backgroundColor?: Maybe<Scalars['String']>,
+  showCaptions?: Maybe<Scalars['Boolean']>,
+  markdownCaptions?: Maybe<Scalars['Boolean']>,
+  withWebp?: Maybe<Scalars['Boolean']>,
+  tracedSVG?: Maybe<Scalars['Boolean']>,
+  loading?: Maybe<Scalars['String']>,
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>,
+  disableBgImage?: Maybe<Scalars['Boolean']>,
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>,
   pathCheck?: Maybe<Scalars['Boolean']>,
 };
 
@@ -4522,6 +7280,18 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>,
+  pathPrefix?: Maybe<StringQueryOperatorInput>,
+  maxWidth?: Maybe<IntQueryOperatorInput>,
+  wrapperStyle?: Maybe<StringQueryOperatorInput>,
+  backgroundColor?: Maybe<StringQueryOperatorInput>,
+  showCaptions?: Maybe<BooleanQueryOperatorInput>,
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>,
+  withWebp?: Maybe<BooleanQueryOperatorInput>,
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>,
+  loading?: Maybe<StringQueryOperatorInput>,
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>,
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>,
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
 };
 
@@ -4553,10 +7323,34 @@ export type SitePluginPluginOptionsPluginsFilterListInput = {
 export type SitePluginPluginOptionsPluginsPluginOptions = {
    __typename?: 'SitePluginPluginOptionsPluginsPluginOptions',
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>,
+  pathPrefix?: Maybe<Scalars['String']>,
+  maxWidth?: Maybe<Scalars['Int']>,
+  wrapperStyle?: Maybe<Scalars['String']>,
+  backgroundColor?: Maybe<Scalars['String']>,
+  showCaptions?: Maybe<Scalars['Boolean']>,
+  markdownCaptions?: Maybe<Scalars['Boolean']>,
+  withWebp?: Maybe<Scalars['Boolean']>,
+  tracedSVG?: Maybe<Scalars['Boolean']>,
+  loading?: Maybe<Scalars['String']>,
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>,
+  disableBgImage?: Maybe<Scalars['Boolean']>,
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>,
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>,
+  pathPrefix?: Maybe<StringQueryOperatorInput>,
+  maxWidth?: Maybe<IntQueryOperatorInput>,
+  wrapperStyle?: Maybe<StringQueryOperatorInput>,
+  backgroundColor?: Maybe<StringQueryOperatorInput>,
+  showCaptions?: Maybe<BooleanQueryOperatorInput>,
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>,
+  withWebp?: Maybe<BooleanQueryOperatorInput>,
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>,
+  loading?: Maybe<StringQueryOperatorInput>,
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>,
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>,
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SitePluginSortInput = {

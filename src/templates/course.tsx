@@ -337,6 +337,9 @@ export const coursePageQuery = graphql`
         licensesMax
         pricereg
         pricesale
+        prodType
+        numPayments
+        recurring
       }
 
       chapters {
