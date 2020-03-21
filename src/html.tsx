@@ -108,6 +108,14 @@ export default class extends React.Component<HtmlProps, void> {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4KR6VX" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+        `
+            }}
+          />
         </body>
       </html>
     );
