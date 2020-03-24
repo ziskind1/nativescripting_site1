@@ -5,13 +5,25 @@ import './CourseCoverage.css';
 import LevelIcon from '../../LevelIcon/LevelIcon';
 
 const iconCore = (
-  <img alt="NativeScript Core logo" key={'nativescript_white.svg'} src="/img/nativescript_white.svg" />
+  <img
+    alt="NativeScript Core logo"
+    key={'nativescript_white.svg'}
+    src="/img/nativescript_white.svg"
+  />
 );
 const iconNg = (
-  <img alt="NativeScript Angular logo" key={'nativescript_angular.svg'} src="/img/nativescript_angular.svg" />
+  <img
+    alt="NativeScript Angular logo"
+    key={'nativescript_angular.svg'}
+    src="/img/nativescript_angular.svg"
+  />
 );
 const iconVue = (
-  <img alt="NativeScript Vue logo" key={'nativescript_vue.svg'} src="/img/nativescript_vue.svg" />
+  <img
+    alt="NativeScript Vue logo"
+    key={'nativescript_vue.svg'}
+    src="/img/nativescript_vue.svg"
+  />
 );
 
 export interface CourseCoverageProps {
@@ -54,7 +66,11 @@ export const CourseCoverage: React.StatelessComponent<CourseCoverageProps> = (
   let lessonCount = 0;
   course.chapters.forEach(c => (lessonCount += c.lessons.length));
   const lessonsStr =
-    lessonCount === 0 ? 'Curriculum coming soon' : `${lessonCount} lessons`;
+    lessonCount === 0
+      ? 'Curriculum coming soon'
+      : course.publishingScheduleItems.length > course.publishedChapters.length
+      ? `${lessonCount} lessons released, with more on the way`
+      : `${lessonCount} lessons`;
 
   const iconsDataHtml = iconsData.map((d, idx) => {
     return (
