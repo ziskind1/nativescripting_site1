@@ -308,7 +308,7 @@
         "recurring": true
       }
     ],
-    "publishedChapters": [10, 20],
+    "publishedChapters": [10, 20, 30],
     "publishingSchedule": [
       {
         "id": 10,
