@@ -1,5 +1,4 @@
-[
-  {
+[{
     "id": "684659",
     "title": "Styling NativeScript Vue Applications",
     "subtitle": "Everything about CSS in NativeScript Vue",
@@ -11,8 +10,7 @@
     "label": "PRESALE",
     "launchdate": "02/01/2020",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "1421530",
         "name": "1 user",
         "description": "\n",
@@ -134,28 +132,23 @@
       }
     ],
     "publishedChapters": [10],
-    "chapters": [
-      {
-        "id": 10,
+    "chapters": [{
+      "id": 10,
+      "name": "Coming soon",
+      "lessons": [{
+        "chapterId": 10,
+        "id": "12215300",
         "name": "Coming soon",
-        "lessons": [
-          {
-            "chapterId": 10,
-            "id": "12215300",
-            "name": "Coming soon",
-            "isPreview": false
-          }
-        ]
-      }
-    ]
+        "isPreview": false
+      }]
+    }]
   },
   {
     "id": "684644",
     "title": "NativeScript Vue Pro",
     "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android using VueJS.",
     "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is a NativeScript-Vue course so we're using Webpack with a compilation step, transpiling TypeScript and SASS.\n\n\n",
-    "descriptionHtmlSections": [
-      {
+    "descriptionHtmlSections": [{
         "title": "Summary",
         "descriptionHtml": "<p>This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is a NativeScript-Vue course so we're using Webpack with a compilation step, transpiling TypeScript and SASS.</p>"
       },
@@ -174,8 +167,7 @@
     "label": "PRESALE",
     "launchdate": "01/01/2020",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "1421470",
         "name": "1 user",
         "description": "",
@@ -309,8 +301,7 @@
       }
     ],
     "publishedChapters": [10, 20, 30],
-    "publishingSchedule": [
-      {
+    "publishingSchedule": [{
         "id": 10,
         "date": "10/2/2018"
       },
@@ -324,27 +315,29 @@
       },
       {
         "id": 40,
-        "date": "3/31/2020"
+        "date": "4/08/2020"
       },
       {
         "id": 50,
-        "date": "10/23/2018"
+        "date": "4/10/2020"
       },
       {
         "id": 60,
-        "date": "10/30/2018"
+        "date": "4/15/2020"
       },
       {
         "id": 70,
-        "date": "10/30/2018"
+        "date": "4/17/2020"
+      },
+      {
+        "id": 80,
+        "date": "4/20/2020"
       }
     ],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Welcome",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "13727730",
             "name": "Welcome Notes",
@@ -391,8 +384,7 @@
       {
         "id": 20,
         "name": "Getting Your Tools Ready",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "14697366",
             "name": "Overview (0:55)",
@@ -469,8 +461,7 @@
       {
         "id": 30,
         "name": "The Backend",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "14997725",
             "name": "Overview (1:29)",
@@ -499,14 +490,52 @@
       {
         "id": 40,
         "name": "NativeScript-Vue Review",
-        "lessons": [
-          {
-            "chapterId": 40,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 40,
+          "id": "14997726",
+          "name": "Chapter coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 50,
+        "name": "Components and Mixins with TypeScript",
+        "lessons": [{
+          "chapterId": 50,
+          "id": "14997726",
+          "name": "Chapter coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 60,
+        "name": "Platform Specificity",
+        "lessons": [{
+          "chapterId": 60,
+          "id": "14997726",
+          "name": "Chapter coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 70,
+        "name": "Application Management",
+        "lessons": [{
+          "chapterId": 70,
+          "id": "14997726",
+          "name": "Chapter coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 80,
+        "name": "Application Architecture",
+        "lessons": [{
+          "chapterId": 80,
+          "id": "14997726",
+          "name": "Chapter coming soon",
+          "isPreview": false
+        }]
       }
     ]
   },
@@ -515,8 +544,7 @@
     "title": "NativeScript Vue and Vuex",
     "subtitle": "Start using Vuex for state management in your NativeScript-Vue apps",
     "description": "This course offers an introduction to Vuex with the context of NativeScript Vue. You'll learn about everything from local component state, to namespaced modules, actions, getters, mutations and much more!",
-    "descriptionHtmlSections": [
-      {
+    "descriptionHtmlSections": [{
         "title": "Summary",
         "descriptionHtml": "<p>This course offers an introduction to Vuex with the context of NativeScript Vue. You'll learn about everything from local component state, to namespaced modules, actions, getters, mutations and much more!</p>"
       },
@@ -532,8 +560,7 @@
     "label": "NEW",
     "launchdate": "02/28/2019",
     "authors": ["paul_halliday"],
-    "products": [
-      {
+    "products": [{
         "id": "1025477",
         "name": "Single user regular price",
         "description": "License for a single user.\n",
@@ -595,140 +622,137 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
-        "id": 10,
-        "name": "Vuex",
-        "lessons": [
-          {
-            "chapterId": 10,
-            "id": "9085839",
-            "name": "Introduction",
-            "isPreview": true
-          },
-          {
-            "chapterId": 10,
-            "id": "9085840",
-            "name": "Creating a Project",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085842",
-            "name": "Managing State",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085846",
-            "name": "Creating a Vuex Store",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085847",
-            "name": "Vuex Mutations",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085850",
-            "name": "Mutation Types",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085851",
-            "name": "Challenge: Creating a new Mutation",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085852",
-            "name": "Solution: Creating a new Mutation",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085853",
-            "name": "Actions",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085854",
-            "name": "Http Actions with json-server",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085857",
-            "name": "Modules",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085858",
-            "name": "Vuex Helpers",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085859",
-            "name": "Challenge: Create a new Module",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085862",
-            "name": "Solution: Create a new Module",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9162392",
-            "name": "Project Module",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085864",
-            "name": "MapState",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085865",
-            "name": "Navigation and Props",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085863",
-            "name": "Todo Module",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085866",
-            "name": "MapGetters",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085867",
-            "name": "Wrap Up",
-            "isPreview": false
-          },
-          {
-            "chapterId": 10,
-            "id": "9085868",
-            "name": "Conclusion",
-            "isPreview": false
-          }
-        ]
-      }
-    ]
+    "chapters": [{
+      "id": 10,
+      "name": "Vuex",
+      "lessons": [{
+          "chapterId": 10,
+          "id": "9085839",
+          "name": "Introduction",
+          "isPreview": true
+        },
+        {
+          "chapterId": 10,
+          "id": "9085840",
+          "name": "Creating a Project",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085842",
+          "name": "Managing State",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085846",
+          "name": "Creating a Vuex Store",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085847",
+          "name": "Vuex Mutations",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085850",
+          "name": "Mutation Types",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085851",
+          "name": "Challenge: Creating a new Mutation",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085852",
+          "name": "Solution: Creating a new Mutation",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085853",
+          "name": "Actions",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085854",
+          "name": "Http Actions with json-server",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085857",
+          "name": "Modules",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085858",
+          "name": "Vuex Helpers",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085859",
+          "name": "Challenge: Create a new Module",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085862",
+          "name": "Solution: Create a new Module",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9162392",
+          "name": "Project Module",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085864",
+          "name": "MapState",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085865",
+          "name": "Navigation and Props",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085863",
+          "name": "Todo Module",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085866",
+          "name": "MapGetters",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085867",
+          "name": "Wrap Up",
+          "isPreview": false
+        },
+        {
+          "chapterId": 10,
+          "id": "9085868",
+          "name": "Conclusion",
+          "isPreview": false
+        }
+      ]
+    }]
   },
   {
     "id": "418792",
@@ -742,8 +766,7 @@
     "label": "POPULAR",
     "launchdate": "10/20/2018",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "816407",
         "name": "Single user regular price",
         "description": "License for a single user.",
@@ -805,8 +828,7 @@
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70],
-    "publishingSchedule": [
-      {
+    "publishingSchedule": [{
         "id": 10,
         "date": "10/2/2018"
       },
@@ -835,12 +857,10 @@
         "date": "10/30/2018"
       }
     ],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Getting Started",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "6410378",
             "name": "Course Introduction (1:48)",
@@ -881,8 +901,7 @@
       {
         "id": 20,
         "name": "Working with UI",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "6410387",
             "name": "Overview (1:11)",
@@ -941,8 +960,7 @@
       {
         "id": 30,
         "name": "Watchers and Computeds",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "6411975",
             "name": "Overview (0:59)",
@@ -977,8 +995,7 @@
       {
         "id": 40,
         "name": "Component Basics",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "6484340",
             "name": "Overview (0:50)",
@@ -1013,8 +1030,7 @@
       {
         "id": 50,
         "name": "Scaling Components",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "6575719",
             "name": "Overview (1:17)",
@@ -1055,8 +1071,7 @@
       {
         "id": 60,
         "name": "Navigation",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "6692076",
             "name": "Overview (1:09)",
@@ -1103,8 +1118,7 @@
       {
         "id": 70,
         "name": "Styling",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "6692078",
             "name": "Overview (0:56)",
@@ -1169,14 +1183,12 @@
       {
         "id": 80,
         "name": "Your Chapter",
-        "lessons": [
-          {
-            "chapterId": 80,
-            "id": "6412082",
-            "name": "Your lesson",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 80,
+          "id": "6412082",
+          "name": "Your lesson",
+          "isPreview": false
+        }]
       }
     ]
   },
@@ -1192,8 +1204,7 @@
     "label": "FREE",
     "launchdate": "07/01/2018",
     "authors": ["eddy_verbruggen", "alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "707408",
         "name": "Single user regular price",
         "description": "License for a single user.",
@@ -1219,12 +1230,10 @@
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "5547452",
             "name": "Introduction (1:46)",
@@ -1271,8 +1280,7 @@
       {
         "id": 20,
         "name": "Tooling",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "5547092",
             "name": "Overview (1:08)",
@@ -1313,8 +1321,7 @@
       {
         "id": 30,
         "name": "Framework Features",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "5547109",
             "name": "Overview (0:42)",
@@ -1343,8 +1350,7 @@
       {
         "id": 40,
         "name": "Project Structure",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "5547118",
             "name": "Overview (0:42)",
@@ -1373,8 +1379,7 @@
       {
         "id": 50,
         "name": "UI Conversion",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "5547134",
             "name": "Overview (1:13)",
@@ -1427,8 +1432,7 @@
       {
         "id": 60,
         "name": "Navigating to the Details",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "5547148",
             "name": "Overview (0:46)",
@@ -1463,8 +1467,7 @@
       {
         "id": 70,
         "name": "Common Module Conversion",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "5547161",
             "name": "Overview (0:50)",
@@ -1487,8 +1490,7 @@
       {
         "id": 80,
         "name": "Plugin Conversion",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "5547172",
             "name": "Overview (0:56)",
@@ -1511,8 +1513,7 @@
       {
         "id": 90,
         "name": "Final Words",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 90,
             "id": "5547232",
             "name": "Comparing Cordova and NativeScript Projects (2:54)",
@@ -1540,8 +1541,7 @@
     "label": "",
     "launchdate": "05/11/2018",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "644441",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -1603,12 +1603,10 @@
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Welcome",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "5044880",
             "name": "Introduction (1:17)",
@@ -1625,8 +1623,7 @@
       {
         "id": 20,
         "name": "Essential Widgets",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "5050593",
             "name": "Overview (0:34)",
@@ -1679,8 +1676,7 @@
       {
         "id": 30,
         "name": "ListView",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "5050591",
             "name": "Overview (0:21)",
@@ -1715,8 +1711,7 @@
       {
         "id": 40,
         "name": "Data Entry Widgets",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "5050602",
             "name": "Overview (0:31)",
@@ -1769,8 +1764,7 @@
       {
         "id": 50,
         "name": "Web Widgets",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "5050601",
             "name": "Overview (0:23)",
@@ -1793,8 +1787,7 @@
       {
         "id": 60,
         "name": "Bar Widgets",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "5050606",
             "name": "Overview (0:28)",
@@ -1823,8 +1816,7 @@
       {
         "id": 70,
         "name": "ActionBar",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "5050605",
             "name": "Overview (0:32)",
@@ -1871,8 +1863,7 @@
       {
         "id": 80,
         "name": "Container Widgets",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "5050604",
             "name": "Overview (0:23)",
@@ -1925,8 +1916,7 @@
     "label": "",
     "launchdate": "10/30/2017",
     "authors": ["paul_halliday"],
-    "products": [
-      {
+    "products": [{
         "id": "787018",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -1988,12 +1978,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "3649506",
             "name": "Introduction (2:37)",
@@ -2024,8 +2012,7 @@
       {
         "id": 20,
         "name": "Project",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "3649503",
             "name": "Project Setup (2:09)"
@@ -2097,8 +2084,7 @@
       {
         "id": 30,
         "name": "Build",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "3649505",
             "name": "Building for Production (2:18)"
@@ -2130,8 +2116,7 @@
     "label": "",
     "launchdate": "07/10/2017",
     "authors": ["paul_halliday"],
-    "products": [
-      {
+    "products": [{
         "id": "354983",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -2193,24 +2178,20 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction",
-        "lessons": [
-          {
-            "chapterId": 10,
-            "id": "4025688",
-            "name": "Course Introduction (1:19)",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 10,
+          "id": "4025688",
+          "name": "Course Introduction (1:19)",
+          "isPreview": false
+        }]
       },
       {
         "id": 20,
         "name": "Project Setup",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "4012627",
             "name": "Introduction (1:32)",
@@ -2233,8 +2214,7 @@
       {
         "id": 30,
         "name": "@ngrx/store",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "4016790",
             "name": "Install and Set up @ngrx (1:18)",
@@ -2257,8 +2237,7 @@
       {
         "id": 40,
         "name": "@ngrx/effects",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "4024357",
             "name": "Using Ngrx Effects (6:50)",
@@ -2287,8 +2266,7 @@
       {
         "id": 50,
         "name": "Selectors and Displaying State",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "4024595",
             "name": "Creating Selectors (3:38)",
@@ -2305,8 +2283,7 @@
       {
         "id": 60,
         "name": "Smart and Presentational Components",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "4024594",
             "name": "Presentational Components (3:00)",
@@ -2347,8 +2324,7 @@
     "label": "",
     "launchdate": "07/13/2017",
     "authors": ["nathan_walker"],
-    "products": [
-      {
+    "products": [{
         "id": "359694",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -2410,12 +2386,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction to creating plugins for NativeScript",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "2953344",
             "name": "Overview",
@@ -2438,8 +2412,7 @@
       {
         "id": 20,
         "name": "Developing a Custom iOS View Component Plugin",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "2976326",
             "name": "Installing a CocoaPod",
@@ -2465,8 +2438,7 @@
       {
         "id": 30,
         "name": "Developing a Custom Android View Component Plugin",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "2976335",
             "name": "Working with Gradle"
@@ -2481,8 +2453,7 @@
       {
         "id": 40,
         "name": "Preparing for Release",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "2976342",
             "name": "Consistent iOS and Android APIs"
@@ -2509,8 +2480,7 @@
     "label": "FREE",
     "launchdate": "05/29/2017",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "303801",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -2536,12 +2506,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Building Apps with NativeScript and Angular",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "2692194",
             "name": "Welcome (0:51)",
@@ -2558,8 +2526,7 @@
       {
         "id": 20,
         "name": "Learning the NativeScript Basics",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "2543904",
             "name": "Overview (0:23)",
@@ -2594,8 +2561,7 @@
       {
         "id": 30,
         "name": "Creating User Interfaces",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "2573640",
             "name": "Overview (0:42)",
@@ -2654,8 +2620,7 @@
       {
         "id": 40,
         "name": "Application Logic",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "2573651",
             "name": "Overview (0:26)",
@@ -2696,8 +2661,7 @@
       {
         "id": 50,
         "name": "NativeScript Modules",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "2573661",
             "name": "Overview (2:24)",
@@ -2738,8 +2702,7 @@
       {
         "id": 60,
         "name": "Plugins and npm Modules",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "2573669",
             "name": "Overview (0:54)",
@@ -2762,8 +2725,7 @@
       {
         "id": 70,
         "name": "Accessing Native APIs",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "6887513",
             "name": "Overview (1:09)",
@@ -2792,8 +2754,7 @@
       {
         "id": 80,
         "name": "Next Steps",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "2573681",
             "name": "Community (1:16)",
@@ -2810,14 +2771,12 @@
       {
         "id": 90,
         "name": "Finished",
-        "lessons": [
-          {
-            "chapterId": 90,
-            "id": "6887750",
-            "name": "Congratulations!",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 90,
+          "id": "6887750",
+          "name": "Congratulations!",
+          "isPreview": false
+        }]
       }
     ]
   },
@@ -2834,8 +2793,7 @@
     "label": "FREE",
     "launchdate": "07/17/2017",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "306840",
         "name": "Single user regular price",
         "description": "License for a single user.",
@@ -2861,12 +2819,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "NativeScript Getting Started Guide",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "2564664",
             "name": "Welcome (1:15)",
@@ -2883,8 +2839,7 @@
       {
         "id": 20,
         "name": "Learning the NativeScript Basics",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "2564659",
             "name": "Overview (0:24)",
@@ -2919,8 +2874,7 @@
       {
         "id": 30,
         "name": "Creating User Interfaces",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "2573578",
             "name": "Overview (0:41)"
@@ -2960,8 +2914,7 @@
       {
         "id": 40,
         "name": "Application Logic",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "2573590",
             "name": "Overview (1:29)"
@@ -2991,8 +2944,7 @@
       {
         "id": 50,
         "name": "NativeScript Modules",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "2573600",
             "name": "Overview (1:49)"
@@ -3037,8 +2989,7 @@
       {
         "id": 60,
         "name": "Plugins and npm Modules",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "2573612",
             "name": "Overview (0:53)"
@@ -3058,8 +3009,7 @@
       {
         "id": 70,
         "name": "Accessing Native APIs",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "2573616",
             "name": "Overview (0:50)"
@@ -3084,8 +3034,7 @@
       {
         "id": 80,
         "name": "Next Steps",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "2573626",
             "name": "Community (1:49)"
@@ -3107,8 +3056,7 @@
     "notes": [
       "This course is live with evergreen content being added all the time. When you purchase the course, you get unlimited free updates - forever."
     ],
-    "descriptionHtmlSections": [
-      {
+    "descriptionHtmlSections": [{
         "title": "Summary",
         "descriptionHtml": "<p>This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications, using the NativeScript framework with Angular.</p>"
       },
@@ -3124,8 +3072,7 @@
     "label": "POPULAR",
     "launchdate": "09/30/2017",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "308145",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -3187,12 +3134,10 @@
       }
     ],
     "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Welcome",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "3766444",
             "name": "Message from the Author (1:22)",
@@ -3221,8 +3166,7 @@
       {
         "id": 20,
         "name": "Getting Started",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "3766433",
             "name": "Overview (1:22)",
@@ -3269,8 +3213,7 @@
       {
         "id": 30,
         "name": "Application Management",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "2544462",
             "name": "Overview (1:50)",
@@ -3341,8 +3284,7 @@
       {
         "id": 40,
         "name": "Application State",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "3939799",
             "name": "Overview (1:37)",
@@ -3401,8 +3343,7 @@
       {
         "id": 50,
         "name": "Routing and Navigation",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "4101018",
             "name": "Overview (2:33)",
@@ -3497,8 +3438,7 @@
       {
         "id": 60,
         "name": "Consuming UI Plugins and Native Code",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "4285617",
             "name": "Overview (1:56)",
@@ -3581,8 +3521,7 @@
       {
         "id": 70,
         "name": "Modal Patterns and Other Dialogs",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "4522722",
             "name": "Overview (2:21)",
@@ -3653,8 +3592,7 @@
       {
         "id": 80,
         "name": "Testing",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "2573780",
             "name": "Overview (2:51)",
@@ -3701,8 +3639,7 @@
       {
         "id": 90,
         "name": "Webpack",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 90,
             "id": "4958696",
             "name": "Overview (1:39)",
@@ -3767,8 +3704,7 @@
       {
         "id": 100,
         "name": "Preparing for Deployment",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 100,
             "id": "6113898",
             "name": "Overview",
@@ -3845,20 +3781,17 @@
       {
         "id": 110,
         "name": "More UI Widgets",
-        "lessons": [
-          {
-            "chapterId": 110,
-            "id": "4964702",
-            "name": "Note About UI Chapters",
-            "isPreview": true
-          }
-        ]
+        "lessons": [{
+          "chapterId": 110,
+          "id": "4964702",
+          "name": "Note About UI Chapters",
+          "isPreview": true
+        }]
       },
       {
         "id": 120,
         "name": "Appendix A: Tracing and Debugging",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 120,
             "id": "2573769",
             "name": "Overview",
@@ -3899,8 +3832,7 @@
       {
         "id": 130,
         "name": "Appendix B: More modules",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 130,
             "id": "2573747",
             "name": "Overview",
@@ -3953,8 +3885,7 @@
       {
         "id": 140,
         "name": "Appendix C: Events",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 140,
             "id": "2573757",
             "name": "Overview",
@@ -3995,8 +3926,7 @@
       {
         "id": 150,
         "name": "Appendix D: Hardware Access",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 150,
             "id": "2573765",
             "name": "Overview",
@@ -4019,8 +3949,7 @@
       {
         "id": 160,
         "name": "Appendix E: Multithreaded Programming",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 160,
             "id": "2573776",
             "name": "Overview",
@@ -4053,8 +3982,7 @@
     "title": "NativeScript Core Pro",
     "subtitle": "The complete course for developing NativeScript mobile applications for iOS and Android.",
     "description": "This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.\n\n\n",
-    "descriptionHtmlSections": [
-      {
+    "descriptionHtmlSections": [{
         "title": "Summary",
         "descriptionHtml": "<p>This course is an advanced course that covers everything from iOS and Android application lifecycle control to testing, transpiling, and deploying your applications. This is the NativeScript Core course so we're using TypeScript and CSS in this course.</p>"
       },
@@ -4070,8 +3998,7 @@
     "label": "POPULAR",
     "launchdate": "09/30/2019",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "308149",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -4151,12 +4078,10 @@
       160,
       170
     ],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Welcome",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "5275440",
             "name": "Welcome (1:17)",
@@ -4191,8 +4116,7 @@
       {
         "id": 20,
         "name": "Tooling",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "5275492",
             "name": "Overview (0:41)",
@@ -4239,8 +4163,7 @@
       {
         "id": 30,
         "name": "Backend Server",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "5275591",
             "name": "Overview (1:16)",
@@ -4269,8 +4192,7 @@
       {
         "id": 40,
         "name": "Application Management",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "2573816",
             "name": "Overview (1:01)",
@@ -4317,8 +4239,7 @@
       {
         "id": 50,
         "name": "Application Architecture",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "5276010",
             "name": "Overview (1:55)",
@@ -4389,8 +4310,7 @@
       {
         "id": 60,
         "name": "State Management",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "6239504",
             "name": "Overview (1:51)",
@@ -4461,8 +4381,7 @@
       {
         "id": 70,
         "name": "Navigation",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "6469678",
             "name": "Overview (1:09)",
@@ -4527,8 +4446,7 @@
       {
         "id": 80,
         "name": "Components",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "7011098",
             "name": "Overview (0:54)",
@@ -4587,8 +4505,7 @@
       {
         "id": 90,
         "name": "Scalable Modal Dialog Architecture",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 90,
             "id": "11298441",
             "name": "Overview (1:16)",
@@ -4635,8 +4552,7 @@
       {
         "id": 100,
         "name": "DataForm and Native Editor Modifications",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 100,
             "id": "11454604",
             "name": "Overview (1:39)",
@@ -4695,8 +4611,7 @@
       {
         "id": 110,
         "name": "Native UI Control of Status Bar and ListView",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 110,
             "id": "11454626",
             "name": "Overview (1:31)",
@@ -4749,8 +4664,7 @@
       {
         "id": 120,
         "name": "Part II : Updates",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 120,
             "id": "11882823",
             "name": "Overview of Project Updates (7:24)",
@@ -4767,8 +4681,7 @@
       {
         "id": 130,
         "name": "Leveraging the New UI Architecture - Global Popover",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 130,
             "id": "11883007",
             "name": "Overview (1:10)",
@@ -4815,8 +4728,7 @@
       {
         "id": 140,
         "name": "NativeScript Chart",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 140,
             "id": "11948200",
             "name": "Overview (1:17)",
@@ -4857,8 +4769,7 @@
       {
         "id": 150,
         "name": "Internationalization",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 150,
             "id": "11982955",
             "name": "Overview (0:47)",
@@ -4893,8 +4804,7 @@
       {
         "id": 160,
         "name": "Tracing and Error Reporting",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 160,
             "id": "12095530",
             "name": "Overview (1:12)",
@@ -4941,8 +4851,7 @@
       {
         "id": 170,
         "name": "Exception Handling and Crash Reporting",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 170,
             "id": "12103303",
             "name": "Overview",
@@ -4989,62 +4898,52 @@
       {
         "id": 180,
         "name": "Testing",
-        "lessons": [
-          {
-            "chapterId": 180,
-            "id": "2573902",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 180,
+          "id": "2573902",
+          "name": "Lessons TBD",
+          "isPreview": false
+        }]
       },
       {
         "id": 190,
         "name": "Preparing for Deployment",
-        "lessons": [
-          {
-            "chapterId": 190,
-            "id": "2573913",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 190,
+          "id": "2573913",
+          "name": "Lessons TBD",
+          "isPreview": false
+        }]
       },
       {
         "id": 200,
         "name": "Hardware Access",
-        "lessons": [
-          {
-            "chapterId": 200,
-            "id": "2573889",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 200,
+          "id": "2573889",
+          "name": "Lessons TBD",
+          "isPreview": false
+        }]
       },
       {
         "id": 210,
         "name": "Multithreaded Programming",
-        "lessons": [
-          {
-            "chapterId": 210,
-            "id": "2573898",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 210,
+          "id": "2573898",
+          "name": "Lessons TBD",
+          "isPreview": false
+        }]
       },
       {
         "id": 220,
         "name": "More Modules",
-        "lessons": [
-          {
-            "chapterId": 220,
-            "id": "2573862",
-            "name": "Lessons TBD",
-            "isPreview": false
-          }
-        ]
+        "lessons": [{
+          "chapterId": 220,
+          "id": "2573862",
+          "name": "Lessons TBD",
+          "isPreview": false
+        }]
       }
     ]
   },
@@ -5060,8 +4959,7 @@
     "label": "",
     "launchdate": "05/01/2018",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "308158",
         "name": "Single user regular price",
         "description": "License for a single user.",
@@ -5123,12 +5021,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Course Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "5020525",
             "name": "Course Introduction",
@@ -5151,8 +5047,7 @@
       {
         "id": 20,
         "name": "NativeScript Sidekick",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "5020545",
             "name": "Overview",
@@ -5181,8 +5076,7 @@
       {
         "id": 30,
         "name": "Azure Setup",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "5020551",
             "name": "Overview",
@@ -5205,8 +5099,7 @@
       {
         "id": 40,
         "name": "OAuth2 Enterprise Auth",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "5020556",
             "name": "Overview",
@@ -5235,8 +5128,7 @@
       {
         "id": 50,
         "name": "OpenID Connect Enterprise Auth",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "5020561",
             "name": "Overview",
@@ -5265,8 +5157,7 @@
       {
         "id": 60,
         "name": "SAML-Redirect Enterprise Auth",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "5020565",
             "name": "Overview",
@@ -5301,8 +5192,7 @@
       {
         "id": 70,
         "name": "Kinvey Console",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "5020570",
             "name": "Overview",
@@ -5348,8 +5238,7 @@
     "label": "",
     "launchdate": "01/10/2018",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "922991",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -5411,12 +5300,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "8771479",
             "name": "Course Introduction (2:35)",
@@ -5457,8 +5344,7 @@
       {
         "id": 20,
         "name": "Basic Login and Registration",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "8771488",
             "name": "Overview (2:17)",
@@ -5487,8 +5373,7 @@
       {
         "id": 30,
         "name": "Backend Setup",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "8771494",
             "name": "Overview (1:26)",
@@ -5529,8 +5414,7 @@
       {
         "id": 40,
         "name": "Resource Protection with JWT",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "8771504",
             "name": "Overview (2:06)",
@@ -5571,8 +5455,7 @@
       {
         "id": 50,
         "name": "HTTPS with SSL Pinning",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "8801124",
             "name": "Overview",
@@ -5601,8 +5484,7 @@
       {
         "id": 60,
         "name": "Auth with External Providers",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "8801131",
             "name": "Overview",
@@ -5661,8 +5543,7 @@
       {
         "id": 70,
         "name": "Securing with Auth0",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "8801159",
             "name": "Overview",
@@ -5709,8 +5590,7 @@
       {
         "id": 80,
         "name": "Client Data Protection",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "8801180",
             "name": "Overview",
@@ -5769,8 +5649,7 @@
       {
         "id": 90,
         "name": "Code Protection",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 90,
             "id": "8801191",
             "name": "Overview",
@@ -5811,8 +5690,7 @@
       {
         "id": 100,
         "name": "Other Security Considerations",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 100,
             "id": "8801286",
             "name": "NPM Package Vulnerabilities",
@@ -5853,8 +5731,7 @@
     "label": "",
     "launchdate": "04/07/2019",
     "authors": ["alex_ziskind"],
-    "products": [
-      {
+    "products": [{
         "id": "308163",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -5916,12 +5793,10 @@
       }
     ],
     "publishedChapters": [0],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "9801037",
             "name": "Welcome (1:26)",
@@ -5956,8 +5831,7 @@
       {
         "id": 20,
         "name": "How Styles Work in NativeScript",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "9801050",
             "name": "Overview (1:19)",
@@ -6016,8 +5890,7 @@
       {
         "id": 30,
         "name": "Working with Selectors",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "9801067",
             "name": "Overview (0:42)",
@@ -6052,8 +5925,7 @@
       {
         "id": 40,
         "name": "Properties and Keyframes",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "9801076",
             "name": "Overview (0:57)",
@@ -6112,8 +5984,7 @@
       {
         "id": 50,
         "name": "Fonts",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 50,
             "id": "9801092",
             "name": "Overview (0:33)",
@@ -6148,8 +6019,7 @@
       {
         "id": 60,
         "name": "Platform Specific Stying",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 60,
             "id": "9801105",
             "name": "Overview (1:04)",
@@ -6190,8 +6060,7 @@
       {
         "id": 70,
         "name": "Using Qualifiers",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 70,
             "id": "9801115",
             "name": "Overview (0:36)",
@@ -6220,8 +6089,7 @@
       {
         "id": 80,
         "name": "Styling the Status Bar",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 80,
             "id": "9801121",
             "name": "Overview (0:33)",
@@ -6256,8 +6124,7 @@
       {
         "id": 90,
         "name": "Custom Component Styling",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 90,
             "id": "9801131",
             "name": "Overview (0:33)",
@@ -6286,8 +6153,7 @@
       {
         "id": 100,
         "name": "SASS and Themes",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 100,
             "id": "9801136",
             "name": "Ovierview (0:42)",
@@ -6328,8 +6194,7 @@
     "label": "",
     "launchdate": "03/08/2018",
     "authors": ["sean_perkins"],
-    "products": [
-      {
+    "products": [{
         "id": "308167",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
@@ -6391,12 +6256,10 @@
       }
     ],
     "publishedChapters": [10, 20, 30, 40],
-    "chapters": [
-      {
+    "chapters": [{
         "id": 10,
         "name": "Course Introduction",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 10,
             "id": "4610408",
             "name": "Course Introduction (0:43)",
@@ -6413,8 +6276,7 @@
       {
         "id": 20,
         "name": "Styling Concepts and Tactics",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 20,
             "id": "4610410",
             "name": "Overview",
@@ -6455,8 +6317,7 @@
       {
         "id": 30,
         "name": "Advanced Styling Topics",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 30,
             "id": "4610420",
             "name": "Overview (0:23)",
@@ -6479,8 +6340,7 @@
       {
         "id": 40,
         "name": "Building Real-World UI",
-        "lessons": [
-          {
+        "lessons": [{
             "chapterId": 40,
             "id": "4610426",
             "name": "Overview (0:26)",
