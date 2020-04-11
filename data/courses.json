@@ -308,7 +308,7 @@
         "recurring": true
       }
     ],
-    "publishedChapters": [10, 20, 30, 40],
+    "publishedChapters": [10, 20, 30, 40, 50],
     "publishingSchedule": [
       {
         "id": 10,
@@ -562,12 +562,36 @@
       },
       {
         "id": 50,
-        "name": "Components and Mixins with TypeScript",
+        "name": "Typing Components and Mixins",
         "lessons": [
           {
             "chapterId": 50,
-            "id": "14997726",
-            "name": "Chapter coming soon",
+            "id": "15652048",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 50,
+            "id": "15652049",
+            "name": "The Extend Function",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "15652046",
+            "name": "Component Members with Generics",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "15652050",
+            "name": "Extending a Mixin",
+            "isPreview": false
+          },
+          {
+            "chapterId": 50,
+            "id": "15652047",
+            "name": "Component and Mixin Compatibility",
             "isPreview": false
           }
         ]
