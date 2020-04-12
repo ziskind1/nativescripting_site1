@@ -35,7 +35,10 @@ export default class extends React.Component<JoinAuthorsPageProps, any> {
           <PageSection>
             <Wrapper>
               <PageHeadingMain center>Join Us</PageHeadingMain>
-              <ContactComponent location={this.props.location} />
+              <ContactComponent
+                location={this.props.location}
+                contactType="authors"
+              />
             </Wrapper>
           </PageSection>
         </ContentPageWrapper>

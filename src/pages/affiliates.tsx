@@ -38,7 +38,10 @@ export default class extends React.Component<ContactPageProps, any> {
               <PageHeadingMain center>
                 Boost your earnings with our affiliate program
               </PageHeadingMain>
-              <ContactComponent location={this.props.location} />
+              <ContactComponent
+                location={this.props.location}
+                contactType="affiliates"
+              />
             </Wrapper>
           </PageSection>
         </ContentPageWrapper>

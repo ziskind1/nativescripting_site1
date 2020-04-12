@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import * as querystring from 'query-string';
+
 import { ContactPageForm } from './contact-page-form';
 import { colors } from '../../global/colors';
 import { PageHeading2 } from '../shared/PageHeaders';
@@ -24,11 +26,26 @@ const ContactInfoList = styled.div`
 
 interface ContactComponentProps {
   location: Location;
+  contactType?: ContactType;
 }
+
+export type ContactType =
+  | 'enterprise'
+  | 'team'
+  | 'school'
+  | 'contact'
+  | 'authors'
+  | 'affiliates'
+  | undefined;
 
 export const ContactComponent: React.StatelessComponent<
   ContactComponentProps
 > = (props: ContactComponentProps) => {
+  const qs = querystring.parse(props.location.search);
+  const contactType = props.contactType
+    ? props.contactType
+    : (qs['type'] as ContactType);
+
   return (
     <>
       <GridRow>
@@ -41,7 +58,7 @@ export const ContactComponent: React.StatelessComponent<
       <GridRow>
         <GridColumn xs={12} sm={6} md={6}>
           <FormWrapper>
-            <ContactPageForm location={props.location} />
+            <ContactPageForm contactType={contactType} />
           </FormWrapper>
         </GridColumn>
 

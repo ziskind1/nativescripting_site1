@@ -1,13 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import * as querystring from 'query-string';
-
 import { handleFormSubmit } from '../../utils/form-utils';
 import { colors } from '../../global/colors';
+import { ContactType } from './contact.component';
 
 interface ContactPageFormProps {
-  location: Location;
+  contactType: ContactType;
 }
 
 interface ContactPageFormState {
@@ -103,15 +102,13 @@ export class ContactPageForm extends React.Component<
   constructor(props: ContactPageFormProps) {
     super(props);
 
-    const qs = querystring.parse(this.props.location.search);
-    const contactType = qs['type'];
+    console.log('CONTACT TYpE:', this.props.contactType);
 
     this.state = {
       submitted: false,
       name: '',
       email: '',
-      message: '',
-      contactType: contactType
+      message: ''
     };
   }
 
@@ -195,7 +192,7 @@ export class ContactPageForm extends React.Component<
             <IInvisible
               name="form-type"
               readOnly
-              value={this.state.contactType}
+              value={this.props.contactType}
             />
 
             <IInvisible name="bot-field" onChange={e => this.handleChange(e)} />

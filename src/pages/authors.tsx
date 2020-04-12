@@ -47,12 +47,8 @@ export default class extends React.Component<AboutPageProps, {}> {
           <title>{pageTitle}</title>
         </Helmet>
 
-
-
         <div className="wrapper">
           <div className="about-page-container">
-
-
             <div className="about-team">
               <h2>Meet the awesome team</h2>
               <h3>behind the most comprehensive NativeScript training</h3>
@@ -69,12 +65,11 @@ export default class extends React.Component<AboutPageProps, {}> {
               <h3>Write about NativeScript!</h3>
 
               <div style={{ textAlign: 'center' }}>
-                <a href="/join-authors" style={{ color: colors.actionGreen1 }}>Inquire here</a>
+                <a href="/join-authors" style={{ color: colors.actionGreen1 }}>
+                  Inquire here
+                </a>
               </div>
-
-
             </div>
-
 
             <SignUpSection />
           </div>
