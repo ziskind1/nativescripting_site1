@@ -42,13 +42,9 @@ export const FooterCatLinks: React.StatelessComponent<FooterCatLinksProps> = (
           <FooterLink href="https://nativescript.training">
             On-site Training
           </FooterLink>
-          <FooterLink href="/contact?type=team">Team (contact us)</FooterLink>
-          <FooterLink href="/contact?type=enterprise">
-            Enterprise (contact us)
-          </FooterLink>
-          <FooterLink href="/contact?type=school">
-            Schools (contact us)
-          </FooterLink>
+          <FooterLink href="/teams">Teams</FooterLink>
+          <FooterLink href="/enterprise">Enterprise</FooterLink>
+          <FooterLink href="/schools">Schools</FooterLink>
         </div>
       </GridColumn>
       <GridColumn xs={6} sm={3} md={3}>
@@ -57,7 +53,7 @@ export const FooterCatLinks: React.StatelessComponent<FooterCatLinksProps> = (
           <FooterLink href="/about">About</FooterLink>
           <FooterLink href="/authors">Authors</FooterLink>
           <FooterLink href="/affiliates">Affiliate Program</FooterLink>
-          <FooterLink href="/contact?type=contact">Contact</FooterLink>
+          <FooterLink href="/contact">Contact</FooterLink>
         </div>
       </GridColumn>
 
