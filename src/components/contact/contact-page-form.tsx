@@ -1,10 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import * as querystring from 'query-string';
+
 import { handleFormSubmit } from '../../utils/form-utils';
 import { colors } from '../../global/colors';
 
-interface ContactPageFormProps {}
+interface ContactPageFormProps {
+  location: Location;
+}
 
 interface ContactPageFormState {
   submitted: boolean;
@@ -99,9 +103,6 @@ export class ContactPageForm extends React.Component<
   constructor(props: ContactPageFormProps) {
     super(props);
 
-    //const q = (this.props as any)
-    console.log('QUERY: ', this.props);
-
     this.state = {
       submitted: false,
       name: '',
@@ -121,6 +122,9 @@ export class ContactPageForm extends React.Component<
   }
 
   public render() {
+    const qs = querystring.parse(this.props.location.search);
+    const contactType = qs['type'];
+
     return (
       <div>
         {this.state.submitted && (
@@ -186,6 +190,8 @@ export class ContactPageForm extends React.Component<
             <SingleInputWrapper style={{ textAlign: 'center' }}>
               <ISubmit type="submit" value="Send" />
             </SingleInputWrapper>
+
+            <IInvisible name="form-type" value={contactType} />
 
             <IInvisible name="bot-field" onChange={e => this.handleChange(e)} />
           </form>

@@ -16,7 +16,9 @@
   "resolutions": {
     "**/fsevents": "^1.2.9"
   },
-  "dependencies": {},
+  "dependencies": {
+    "query-string": "^6.12.1"
+  },
   "devDependencies": {
     "@tweenjs/tween.js": "18.5.0",
     "@types/node": "12.12.17",
