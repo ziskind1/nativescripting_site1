@@ -125,7 +125,7 @@ export class ContactPageForm extends React.Component<
   public render() {
     let formName = 'contact-page-form';
 
-    if (this.props.contactType !== 'contact') {
+    if (this.props.contactType && this.props.contactType !== 'contact') {
       formName = `${this.props.contactType}-page-form`;
     }
 
