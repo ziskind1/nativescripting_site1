@@ -123,6 +123,12 @@ export class ContactPageForm extends React.Component<
   }
 
   public render() {
+    let formName = 'contact-page-form';
+
+    if (this.props.contactType !== 'contact') {
+      formName = `${this.props.contactType}-page-form`;
+    }
+
     return (
       <div>
         {this.state.submitted && (
@@ -131,13 +137,13 @@ export class ContactPageForm extends React.Component<
 
         {!this.state.submitted && (
           <form
-            name="contact-page-form"
+            name={formName}
             method="post"
             onSubmit={e => this.handleSubmit(e)}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="contact-page-form" />
+            <input type="hidden" name="form-name" value={formName} />
 
             <SingleInputWrapper>
               <ILabel>
