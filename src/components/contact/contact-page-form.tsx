@@ -103,11 +103,15 @@ export class ContactPageForm extends React.Component<
   constructor(props: ContactPageFormProps) {
     super(props);
 
+    const qs = querystring.parse(this.props.location.search);
+    const contactType = qs['type'];
+
     this.state = {
       submitted: false,
       name: '',
       email: '',
-      message: ''
+      message: '',
+      contactType: contactType
     };
   }
 
@@ -122,9 +126,6 @@ export class ContactPageForm extends React.Component<
   }
 
   public render() {
-    const qs = querystring.parse(this.props.location.search);
-    const contactType = qs['type'];
-
     return (
       <div>
         {this.state.submitted && (
@@ -191,7 +192,11 @@ export class ContactPageForm extends React.Component<
               <ISubmit type="submit" value="Send" />
             </SingleInputWrapper>
 
-            <IInvisible name="form-type" value={contactType} />
+            <IInvisible
+              name="form-type"
+              readOnly
+              value={this.state.contactType}
+            />
 
             <IInvisible name="bot-field" onChange={e => this.handleChange(e)} />
           </form>

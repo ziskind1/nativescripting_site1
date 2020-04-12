@@ -12,34 +12,34 @@ import { GridRow } from '../layouts/grid2/grid-row';
 import { GridColumn } from '../layouts/grid2/grid-column';
 import { ContactComponent } from '../components/contact/contact.component';
 
-
-interface JoinAuthorsPageProps { }
+interface JoinAuthorsPageProps {
+  location: Location;
+}
 
 export default class extends React.Component<JoinAuthorsPageProps, any> {
-    constructor(props: JoinAuthorsPageProps) {
-        super(props);
-    }
+  constructor(props: JoinAuthorsPageProps) {
+    super(props);
+  }
 
-    public render() {
-        const pageTitle = `Join Us | NativeScript Courses`;
+  public render() {
+    const pageTitle = `Join Us | NativeScript Courses`;
 
-        return (
-            <MainLayout>
-                <Seo path="/join-authors" />
-                <Helmet>
-                    <title>{pageTitle}</title>
-                </Helmet>
+    return (
+      <MainLayout>
+        <Seo path="/join-authors" />
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
 
-                <ContentPageWrapper>
-                    <PageSection>
-                        <Wrapper>
-                            <PageHeadingMain center>Join Us</PageHeadingMain>
-                            <ContactComponent />
-                        </Wrapper>
-                    </PageSection>
-                </ContentPageWrapper>
-
-            </MainLayout>
-        );
-    }
+        <ContentPageWrapper>
+          <PageSection>
+            <Wrapper>
+              <PageHeadingMain center>Join Us</PageHeadingMain>
+              <ContactComponent location={this.props.location} />
+            </Wrapper>
+          </PageSection>
+        </ContentPageWrapper>
+      </MainLayout>
+    );
+  }
 }
