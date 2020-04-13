@@ -14,29 +14,25 @@ import { AnnouncementBanner } from '../components/shared/AnnouncementBanner/Anno
 export const MainLayout: React.SFC = ({ children }) => (
   <StaticQuery
     query={graphql`
-          query MainLayoutQuery {
-            site {
-              siteMetadata {
-                siteName
-              }
-            }
+      query MainLayoutQuery {
+        site {
+          siteMetadata {
+            siteName
           }
-        `}
+        }
+      }
+    `}
     render={data => (
-      <div id="ns-outer">
+      <>
+        <Header siteName={'NativeScript Courses'} />
+        <CountdownTimer />
 
-        <div id="ns-inner">
-          <Header siteName={'NativeScript Courses'} />
-          <CountdownTimer />
+        <AnnouncementBanner />
 
-          <AnnouncementBanner />
+        <main role="main">{children}</main>
 
-          <main role="main">{children}</main>
-
-          <Footer2 />
-
-        </div>
-      </div>
+        <Footer2 />
+      </>
     )}
   />
 );
