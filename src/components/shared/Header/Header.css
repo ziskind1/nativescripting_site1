@@ -11,7 +11,7 @@
   padding-right: 15px;
 }
 
-.css-fiyo81,
+.mobile-nav .css-fiyo81,
 .css-fiyo81:hover:not(.touch),
 .css-fiyo81:focus {
   background: transparent;
@@ -167,7 +167,15 @@
   line-height: 80px;
 }
 
-@media (max-width: 950px) {
+@media (min-width: 955px) {
+  .desktop-nav {
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 955px) {
   .desktop-nav {
     display: none;
   }
@@ -183,7 +191,7 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 955px) {
   .site-header .header-nav-container a.secondary-link {
     display: none;
   }
