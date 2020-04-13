@@ -152,7 +152,8 @@
   transition: all 0.3s ease;
 }
 
-.site-header img {
+.site-header img.site-logo-img,
+.site-header img.site-logo-icon-img {
   height: 60.3px;
   position: relative;
   top: 11px;
