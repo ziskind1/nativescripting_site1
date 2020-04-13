@@ -212,7 +212,9 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
         <AddThisBlock />
 
-        <TrainingLink />
+        <div className="benefits" style={{ marginTop: '30px' }}>
+          <TrainingLink />
+        </div>
       </MainLayout>
     );
   }
