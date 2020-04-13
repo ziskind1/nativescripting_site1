@@ -3,22 +3,27 @@
   visibility: hidden;
 
   font-size: 16px;
-    line-height: 1.25;
+  line-height: 1.25;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
-    padding-right: 15px;
+  align-items: center;
+  padding-right: 15px;
 }
 
-.css-fiyo81,  .css-fiyo81:hover:not(.touch), .css-fiyo81:focus {
+.css-fiyo81,
+.css-fiyo81:hover:not(.touch),
+.css-fiyo81:focus {
   background: transparent;
   border: none;
   outline: none;
   z-index: 30;
-  top: -5px;
+  top: 5px;
   position: relative;
   touch-action: manipulation;
+  width: 50px;
+  height: 60px;
+  margin-right: -20px;
 }
 
 /* hamburger bars START */
@@ -29,7 +34,7 @@
   position: absolute;
   /*left: 0;*/
   top: 30px;
-  transition: all 250ms cubic-bezier(0.86,0,0.07,1);
+  transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 .css-1sr19yy::before {
   content: '';
@@ -40,7 +45,7 @@
   position: absolute;
   left: 0;
   transform: rotate(0);
-  transition: all 250ms cubic-bezier(0.86,0,0.07,1);
+  transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 .css-1sr19yy::after {
   top: 8px;
@@ -51,7 +56,7 @@
   position: absolute;
   left: 0;
   transform: rotate(0);
-  transition: all 250ms cubic-bezier(0.86,0,0.07,1);
+  transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .css-yn08z9 {
@@ -64,7 +69,7 @@
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
 }
 .css-yn08z9::before {
-  content: "";
+  content: '';
   width: 24px;
   height: 2px;
   position: absolute;
@@ -75,7 +80,7 @@
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
 }
 .css-yn08z9::after {
-  content: "";
+  content: '';
   width: 24px;
   height: 2px;
   position: absolute;
@@ -86,7 +91,6 @@
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
 }
 /* hamburger bars END */
-
 
 .css-182auyu {
   position: absolute;
@@ -106,8 +110,14 @@
 }
 
 @keyframes fadeSlide {
-  0% { opacity: 0; transform: translate(0px, -1000px); }
-  100% { opacity: 1; transform: translate(0px, 0px); }
+  0% {
+    opacity: 0;
+    transform: translate(0px, -1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 .css-15v91y0 {
@@ -156,7 +166,6 @@
   color: #12ffcd;
   line-height: 80px;
 }
-
 
 @media (max-width: 950px) {
   .desktop-nav {
