@@ -11,6 +11,10 @@ const Container = styled.div`
   a {
     color: white;
   }
+
+  @media screen and (max-width: 600px) {
+    height: 40px;
+  }
 `;
 
 const LinkWrapper = styled.div`

@@ -71,6 +71,11 @@ const DropdownContentColumn = styled.div`
     font-weight: 400;
     color: #12ffcd;
   }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const SelectorImageWrapper = styled.div`

@@ -33,6 +33,7 @@ const LogoImgIcon = styled.img`
 
   @media only screen and (max-width: 624px) {
     display: inline;
+    height: 80px;
   }
 `;
 

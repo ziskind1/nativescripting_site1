@@ -193,7 +193,7 @@ export class HeaderMenu extends React.Component<
       <Container className="navbar">
         <Link
           to="/"
-          className="navbar-link"
+          className="navbar-link navbar-link-collapse"
           onClick={() => this.onNonDropdownClick()}
         >
           Home
