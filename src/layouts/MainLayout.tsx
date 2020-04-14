@@ -20,11 +20,39 @@ export const MainLayout: React.SFC = ({ children }) => (
             siteName
           }
         }
+
+        #get courses
+        coursesConnection: allCoursesJson(
+          sort: { order: ASC, fields: [order] }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              title
+              flavors
+              url
+              label
+              authors
+              level
+              order
+              products {
+                id
+                name
+                description
+                licensesMin
+                licensesMax
+                pricereg
+                pricesale
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
       <>
-        <Header siteName={'NativeScript Courses'} />
+        <Header siteName={'NativeScript Courses'} data={data} />
         <CountdownTimer />
 
         <AnnouncementBanner />

@@ -57,8 +57,7 @@ export class HeaderMenuMobile extends React.Component<
               <Link to="/posts">Articles</Link>
               <Link to="/authors">Authors</Link>
               <Link to="/pro-webinar">Free Webinar</Link>
-
-              <a href="/live-training">Live training</a>
+              <Link to="/live-training">Live training</Link>
             </div>
           </div>
         ) : null}

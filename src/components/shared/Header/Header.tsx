@@ -5,41 +5,36 @@ import SiteLogo from '../SiteLogo';
 import { HeaderMenuMobile } from '../HeaderMenu/HeaderMenuMobile';
 
 import './Header.css';
+import { HeaderMenu } from '../HeaderMenu/HeaderMenu';
+import SiteHeaderLinks from './SiteHeaderLinks';
+import { GridRow } from '../../../layouts/grid2/grid-row';
+import { GridColumn } from '../../../layouts/grid2/grid-column';
 
 interface HeaderProps {
+  data: any;
   siteName: string;
 }
 
 function Header(props: HeaderProps) {
   return (
     <header className="site-header">
-      <div className="header-logo-container">
-        <SiteLogo siteName={props.siteName} />
-      </div>
-
-      <nav className="header-nav-container">
-        <HeaderMenuMobile></HeaderMenuMobile>
-
-        <div className="desktop-nav">
-          <Link to="/posts">Articles</Link>
-          <Link to="/authors" className="secondary-link">
-            Authors
-          </Link>
-          <Link to="/pro-webinar">Free Webinar</Link>
-
-          <a href="/live-training" className="secondary-link">
-            Live Training
-          </a>
-          <a
-            href={
-              'https://sso.teachable.com/secure/89912/users/sign_in?reset_purchase_session=1'
-            }
-            className="sign"
-          >
-            Login
-          </a>
-        </div>
-      </nav>
+      <GridRow>
+        <GridColumn xs={3} sm={6} md={6}>
+          <SiteLogo siteName={props.siteName} />
+        </GridColumn>
+        <GridColumn xs={9} sm={6} md={6}>
+          <GridRow>
+            <GridColumn xs={12}>
+              <SiteHeaderLinks />
+            </GridColumn>
+          </GridRow>
+          <GridRow>
+            <GridColumn xs={12}>
+              <HeaderMenu data={props.data} />
+            </GridColumn>
+          </GridRow>
+        </GridColumn>
+      </GridRow>
     </header>
   );
 }

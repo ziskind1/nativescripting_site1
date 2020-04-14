@@ -138,14 +138,6 @@ img {
   letter-spacing: -3px;
 }
 
-.site-logo-img {
-  display: inline;
-}
-
-.site-logo-icon-img {
-  display: none;
-}
-
 .breadcrumb-wrapper {
   display: flex;
   height: 40px;
@@ -187,14 +179,7 @@ samp {
     font-size: 48px;
   }
 }
-@media only screen and (max-width: 624px) {
-  .site-logo-img {
-    display: none;
-  }
-  .site-logo-icon-img {
-    display: inline;
-  }
-}
+
 @media only screen and (max-width: 560px) {
   .heading__title {
     font-size: 38px;
