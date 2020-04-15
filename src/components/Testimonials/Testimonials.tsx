@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
-import "./Testimonials.css";
+import './Testimonials.css';
 
-import TestimonialComponent from "./Testimonial";
-import { Testimonial } from "../../domain/models";
+import TestimonialComponent from './Testimonial';
+import { Testimonial } from '../../domain/models';
 
 export interface TestimonialsProps {
   testimonials: Testimonial[];

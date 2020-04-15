@@ -37,7 +37,7 @@
 
 .course-description-wrapper {
   font-family: OpenSansLight;
-  width: 60%;
+  width: 80%;
 }
 
 .course-description-wrapper p {
@@ -53,5 +53,9 @@
   }
   .course-description-wrapper {
     width: 100%;
+  }
+
+  .tc-more3 {
+    display: none;
   }
 }

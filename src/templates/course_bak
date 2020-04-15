@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
 import { Helmet } from 'react-helmet';
 
@@ -38,19 +37,9 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
 import AddThisBlock from '../components/shared/AddThisBlock/AddThisBlock';
-import { GridRow } from '../layouts/grid2/grid-row';
-import { GridColumn } from '../layouts/grid2/grid-column';
-import TestimonialComponent from '../components/Testimonials/Testimonial';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
-
-const TestimonialContainer = styled.div`
-  margin-bottom: 50px;
-
-  @media only screen and (max-width: 560px) {
-  }
-`;
 
 interface CourseTemplateProps {
   data: {
@@ -144,7 +133,7 @@ class CourseTemplate extends React.Component<
       testimonialFromTestimonialJsonEdge
     );
 
-    const pageTitle = `${course.title} | NativeScript Video Course`;
+    const pageTitle = `${course.title} | NativeScripting`;
 
     let descHtml = (
       <div>
@@ -168,14 +157,6 @@ class CourseTemplate extends React.Component<
       descHtml = <div>{descSections}</div>;
     }
 
-    const testimonialsHtml = testimonials.slice(0, 12).map((t, i) => {
-      return (
-        <TestimonialContainer className={i > 2 ? 'tc-more3' : ''}>
-          <TestimonialComponent key={i} testimonial={t} />
-        </TestimonialContainer>
-      );
-    });
-
     return (
       <MainLayout>
         <Seo course={course} courseSeo />
@@ -184,29 +165,30 @@ class CourseTemplate extends React.Component<
         </Helmet>
 
         <div className="wrapper">
-          <GridRow>
-            <GridColumn>
-              <CourseBanner course={course} />
-            </GridColumn>
-          </GridRow>
-
-          <GridRow style={{ marginTop: 40, flexDirection: 'row-reverse' }}>
-            <GridColumn xs={12} sm={4}>
-              <CoursePurchaseArea course={course} />
-              {testimonialsHtml}
-            </GridColumn>
-            <GridColumn xs={12} sm={8}>
-              <CourseMetaCard course={course} />
-              <div className="course-description-wrapper">
-                {descHtml}
-                {notesHeader}
-                {notesHtml}
-              </div>
-              <CourseCurriculum course={course} />
-            </GridColumn>
-          </GridRow>
-
           <div className="course-details-container">
+            <CourseBanner course={course} />
+
+            <div className="course-details-wrapper">
+              <div className="course-details-pane">
+                <CourseMetaCard course={course} />
+              </div>
+
+              <div className="course-details-pane">
+                <CoursePurchaseArea course={course} />
+              </div>
+            </div>
+
+            <div className="course-description-wrapper">
+              {descHtml}
+
+              {notesHeader}
+              {notesHtml}
+            </div>
+
+            <CourseCurriculum course={course} />
+
+            <Testimonials testimonials={testimonials} />
+
             <BundleSection
               bundles={this.state.bundles}
               bundlesTitle="Or pick up a complete bundle..."

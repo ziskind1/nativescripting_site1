@@ -181,6 +181,10 @@ samp {
 }
 
 @media only screen and (max-width: 560px) {
+  .wrapper {
+    padding: 0 10px;
+    margin: 0 10px 0 10px;
+  }
   .heading__title {
     font-size: 38px;
     line-height: 46px;

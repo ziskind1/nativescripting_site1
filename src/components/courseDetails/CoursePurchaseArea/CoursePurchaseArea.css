@@ -1,7 +1,7 @@
-.course-purchase-area-container {
-
+.course-purchase-area-container h2 {
+  font-family: OpenSansLight;
 }
 
 .course-purchase-area-options {
-    background-color: #073D95;
+  background-color: #073d95;
 }

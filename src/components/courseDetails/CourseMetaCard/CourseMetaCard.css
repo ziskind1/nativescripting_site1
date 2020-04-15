@@ -1,10 +1,13 @@
 .course-meta-card-container {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
+.course-meta-card-container h2 {
+  font-family: OpenSansLight;
+}
 
 @media only screen and (max-width: 760px) {
-    .course-meta-card-container {
-        padding-right: 0px;
-    }
+  .course-meta-card-container {
+    padding-right: 0px;
+  }
 }
