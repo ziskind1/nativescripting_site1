@@ -39,9 +39,8 @@ export const FooterCatLinks: React.StatelessComponent<FooterCatLinksProps> = (
         <FooterCatHeader>Solutions</FooterCatHeader>
         <div className="ftr-cat-links">
           <FooterLink href="/">Personal</FooterLink>
-          <FooterLink href="https://nativescript.training">
-            On-site Training
-          </FooterLink>
+          <FooterLink href="/live-training">On-site Training</FooterLink>
+          <FooterLink href="/live-training">Remote Training</FooterLink>
           <FooterLink href="/teams">Teams</FooterLink>
           <FooterLink href="/enterprise">Enterprise</FooterLink>
           <FooterLink href="/schools">Schools</FooterLink>

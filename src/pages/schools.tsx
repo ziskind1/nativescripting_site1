@@ -12,6 +12,7 @@ import {
   PageHeading3
 } from '../components/shared/PageHeaders';
 import { PageSection } from '../layouts/page-layouts/page-section';
+import { InstantBooking } from '../components/shared/InstantBooking/InstantBooking';
 
 interface ContactPageProps {
   location: Location;
@@ -38,6 +39,9 @@ export default class extends React.Component<ContactPageProps, any> {
               <PageHeadingMain center>
                 NativeScript Courses for Schools
               </PageHeadingMain>
+
+              <InstantBooking />
+
               <ContactComponent
                 location={this.props.location}
                 contactType="school"

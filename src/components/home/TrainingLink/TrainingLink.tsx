@@ -4,7 +4,7 @@ import '../Benefits/Benefits.css';
 
 function TrainingLink() {
   return (
-    <div className="wrapper">
+    <div className="">
       <div className="heading">
         <a id="live-training" />
         <h2 className="heading__title">Live and Classroom Training</h2>

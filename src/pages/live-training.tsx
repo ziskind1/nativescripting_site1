@@ -5,6 +5,7 @@ import '../css/faq.css';
 import { MainLayout } from '../layouts/MainLayout';
 import { Seo } from '../components/shared/Seo/Seo';
 import TrainingLink from '../components/home/TrainingLink/TrainingLink';
+import { InstantBooking } from '../components/shared/InstantBooking/InstantBooking';
 
 function FaqPage() {
   const pageTitle = `NativeScript Training and Workshops`;
@@ -19,6 +20,7 @@ function FaqPage() {
 
         <div style={{ marginTop: '30px', marginBottom: '30px' }}>
           <TrainingLink />
+          <InstantBooking />
         </div>
       </div>
     </MainLayout>
