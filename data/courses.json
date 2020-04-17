@@ -308,7 +308,7 @@
         "recurring": true
       }
     ],
-    "publishedChapters": [10, 20, 30, 40, 50],
+    "publishedChapters": [10, 20, 30, 40, 50, 60],
     "publishingSchedule": [
       {
         "id": 10,
@@ -602,8 +602,32 @@
         "lessons": [
           {
             "chapterId": 60,
-            "id": "14997726",
-            "name": "Chapter coming soon",
+            "id": "15889759",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 60,
+            "id": "15889758",
+            "name": "Code Components",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "15889762",
+            "name": "Single File Components",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "15889760",
+            "name": "Styles",
+            "isPreview": false
+          },
+          {
+            "chapterId": 60,
+            "id": "15889761",
+            "name": "Code Files",
             "isPreview": false
           }
         ]
