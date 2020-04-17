@@ -8,8 +8,44 @@ import CountdownTimer from '../components/shared/CountdownTimer/CountdownTimer';
 
 import '../../node_modules/normalize.css/normalize.css';
 import { AnnouncementBanner } from '../components/shared/AnnouncementBanner/AnnouncementBanner';
+import Snackbar, { showSnackbar } from '../components/shared/Snackbar/Snackbar';
 
 //import '../css/styles.css';
+
+let signUpsData: SignUpsDataItem[] = [];
+
+function getRandomIntInclusive(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+}
+
+export interface SignUpsDataItem {
+  studentName: string;
+  courseName: string;
+}
+
+fetch('/data/signups.json')
+  .then(resp => resp.json())
+  .then((data: SignUpsDataItem[]) => {
+    signUpsData = data;
+
+    signUpsData.sort(() => Math.random() - 0.5);
+
+    let currentIndex = 0;
+
+    (function loop() {
+      let timeOutMs = getRandomIntInclusive(8000, 40000);
+      setTimeout(() => {
+        // console.log(timeOutMs);
+        if (signUpsData.length > currentIndex) {
+          showSnackbar(signUpsData[currentIndex]);
+          currentIndex++;
+          loop();
+        }
+      }, timeOutMs);
+    })();
+  });
 
 export const MainLayout: React.SFC = ({ children }) => (
   <StaticQuery
@@ -60,6 +96,7 @@ export const MainLayout: React.SFC = ({ children }) => (
         <main role="main">{children}</main>
 
         <Footer2 />
+        <Snackbar />
       </>
     )}
   />
