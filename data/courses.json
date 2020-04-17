@@ -170,8 +170,8 @@
     "url": "nativescript-vue-pro",
     "flavors": ["Vue"],
     "level": 3,
-    "order": 999,
-    "label": "PRESALE",
+    "order": 37,
+    "label": "POPULAR",
     "launchdate": "01/01/2020",
     "authors": ["alex_ziskind"],
     "products": [
@@ -677,7 +677,7 @@
     "flavors": ["Vue"],
     "level": 2,
     "order": 40,
-    "label": "NEW",
+    "label": "",
     "launchdate": "02/28/2019",
     "authors": ["paul_halliday"],
     "products": [
