@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -24,28 +25,6 @@ export interface SignUpsDataItem {
   studentName: string;
   courseName: string;
 }
-
-fetch('/data/signups.json')
-  .then(resp => resp.json())
-  .then((data: SignUpsDataItem[]) => {
-    signUpsData = data;
-
-    signUpsData.sort(() => Math.random() - 0.5);
-
-    let currentIndex = 0;
-
-    (function loop() {
-      let timeOutMs = getRandomIntInclusive(8000, 40000);
-      setTimeout(() => {
-        // console.log(timeOutMs);
-        if (signUpsData.length > currentIndex) {
-          showSnackbar(signUpsData[currentIndex]);
-          currentIndex++;
-          loop();
-        }
-      }, timeOutMs);
-    })();
-  });
 
 export const MainLayout: React.SFC = ({ children }) => (
   <StaticQuery
@@ -86,19 +65,45 @@ export const MainLayout: React.SFC = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
-        <Header siteName={'NativeScript Courses'} data={data} />
-        <CountdownTimer />
+    render={data => {
+      useEffect(() => {
+        fetch('/data/signups.json')
+          .then(resp => resp.json())
+          .then((data: SignUpsDataItem[]) => {
+            signUpsData = data;
 
-        <AnnouncementBanner />
+            signUpsData.sort(() => Math.random() - 0.5);
 
-        <main role="main">{children}</main>
+            let currentIndex = 0;
 
-        <Footer2 />
-        <Snackbar />
-      </>
-    )}
+            (function loop() {
+              let timeOutMs = getRandomIntInclusive(8000, 40000);
+              setTimeout(() => {
+                // console.log(timeOutMs);
+                if (signUpsData.length > currentIndex) {
+                  showSnackbar(signUpsData[currentIndex]);
+                  currentIndex++;
+                  loop();
+                }
+              }, timeOutMs);
+            })();
+          });
+      }, []);
+
+      return (
+        <>
+          <Header siteName={'NativeScript Courses'} data={data} />
+          <CountdownTimer />
+
+          <AnnouncementBanner />
+
+          <main role="main">{children}</main>
+
+          <Footer2 />
+          <Snackbar />
+        </>
+      );
+    }}
   />
 );
 
