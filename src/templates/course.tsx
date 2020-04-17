@@ -170,7 +170,7 @@ class CourseTemplate extends React.Component<
 
     const testimonialsHtml = testimonials.slice(0, 12).map((t, i) => {
       return (
-        <TestimonialContainer className={i > 2 ? 'tc-more3' : ''}>
+        <TestimonialContainer className={i > 2 ? 'tc-more3' : ''} key={i}>
           <TestimonialComponent key={i} testimonial={t} />
         </TestimonialContainer>
       );
