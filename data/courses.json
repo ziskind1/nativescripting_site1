@@ -557,6 +557,30 @@
             "id": "15551605",
             "name": "Mixins",
             "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "15909793",
+            "name": "v-if vs v-show",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "15909794",
+            "name": "Loops vs ListView",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "15909792",
+            "name": "Exercise 1: Animation Directive",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "id": "15909791",
+            "name": "Exercise 2: Shadow Directive",
+            "isPreview": false
           }
         ]
       },
