@@ -134,9 +134,19 @@ export class HeaderMenu extends React.Component<
         categoryName: 'Private Classes',
         categoryLinks: [
           {
-            title: 'Traing Your Team',
+            title: 'Train Your Team',
             link: 'https://nativescript.training/training/private/',
             external: true
+          },
+          {
+            title: 'Remote Training',
+            link: 'https://nativescript.training/training/remote/',
+            external: true
+          },
+          {
+            title: 'View all training >',
+            link: '/live-training',
+            className: 'view-all-link'
           }
         ]
       },
