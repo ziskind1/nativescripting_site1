@@ -83,6 +83,7 @@ export default class extends React.Component<
                     Online training webinar begins in{' '}
                     <WebinarCountdownTimer style={{ color: '#e43145' }} />
                   </PageHeadingMain>
+                  <h2>Reserve your spot below</h2>
 
                   <VidWrapper className="video-wrapper sm">
                     <iframe
