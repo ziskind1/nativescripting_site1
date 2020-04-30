@@ -308,7 +308,7 @@
         "recurring": true
       }
     ],
-    "publishedChapters": [10, 20, 30, 40, 50, 60, 70],
+    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90],
     "publishingSchedule": [
       {
         "id": 10,
@@ -736,8 +736,56 @@
         "lessons": [
           {
             "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
+            "id": "16561225",
+            "name": "Overview",
+            "isPreview": true
+          },
+          {
+            "chapterId": 80,
+            "id": "16561227",
+            "name": "MVVM Pattern Components (3:36)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561228",
+            "name": "Applying MVVM in NativeScript-Vue",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561232",
+            "name": "Login Page View and ViewModel",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561222",
+            "name": "Clean Architecture Intro (4:50)",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561226",
+            "name": "Clean Core",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561224",
+            "name": "Clean Infrastructure",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561221",
+            "name": "Adding Storage Dependencies",
+            "isPreview": false
+          },
+          {
+            "chapterId": 80,
+            "id": "16561223",
+            "name": "Adding Logging Dependencies",
             "isPreview": false
           }
         ]
@@ -747,9 +795,39 @@
         "name": "State Management",
         "lessons": [
           {
-            "chapterId": 80,
+            "chapterId": 90,
             "id": "14997726",
-            "name": "Chapter coming soon",
+            "name": "Overview",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "14997726",
+            "name": "Methodology",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "14997726",
+            "name": "App State",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "14997726",
+            "name": "App State Service",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "14997726",
+            "name": "Backlog State",
+            "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "14997726",
+            "name": "Expanding the State Object",
             "isPreview": false
           }
         ]
