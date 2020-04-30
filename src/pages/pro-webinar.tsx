@@ -97,25 +97,18 @@ export default class extends React.Component<
                 </div>
               </div>
 
-              <CTAWrapper>
-                <CTA
-                  type="button"
-                  className=""
-                  title="regpopbox_819005285141055972_623cfc39cd"
-                >
-                  <span>Yes, I want to join the free training webinar</span>
-                </CTA>
-              </CTAWrapper>
-
-              <img
-                src="//events.genndi.com/tracker?action=registration-evergreen&webicode=623cfc39cd&version=&memberid=819005285141055972"
-                style={{
-                  visibility: 'hidden',
-                  height: '0px',
-                  width: '0px',
-                  border: 'none'
-                }}
-              ></img>
+              <div style={{ textAlign: 'center' }}>
+                <CTAWrapper>
+                  <CTA
+                    type="button"
+                    data-webinarHash="ml3nqs7"
+                    title="regpopbox_819005285141055972_623cfc39cd"
+                  >
+                    Yes, I want to join the free training webinar
+                  </CTA>
+                  <script src="https://event.webinarjam.com/register/ml3nqs7/embed-button"></script>
+                </CTAWrapper>
+              </div>
             </Wrapper>
           </PageSection>
         </ContentPageWrapper>
