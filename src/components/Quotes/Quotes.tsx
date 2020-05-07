@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import "./Quotes.css";
+import './Quotes.css';
 
 function Quotes() {
   return (
@@ -12,10 +12,10 @@ function Quotes() {
             do a great job of getting you up to speed with NativeScript.
           </h3>
           <div className="quotes__author">
-            <img alt="Raymond Camden"
+            <img
+              alt="Raymond Camden"
               className="quotes__author-img"
               src="/img/people/raymond_camden.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/raymondcamden">
@@ -34,10 +34,10 @@ function Quotes() {
             knowledge.
           </h3>
           <div className="quotes__author">
-            <img alt="Tracy Lee"
+            <img
+              alt="Tracy Lee"
               className="quotes__author-img"
               src="/img/people/tracy_lee.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/ladyleet">
@@ -55,10 +55,10 @@ function Quotes() {
             NativeScript. Highly recommended.
           </h3>
           <div className="quotes__author">
-            <img alt="TJ VanToll"
+            <img
+              alt="TJ VanToll"
               className="quotes__author-img"
               src="/img/people/tj_vantoll.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/tjvantoll">
@@ -77,16 +77,16 @@ function Quotes() {
             beginner to expert.
           </h3>
           <div className="quotes__author">
-            <img alt="Nic Raboy"
+            <img
+              alt="Nic Raboy"
               className="quotes__author-img"
               src="/img/people/nic_raboy.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/nraboy">
                 Nic Raboy
               </a>
-              <p>The Ployglot Developer</p>
+              <p>The Polyglot Developer</p>
             </div>
           </div>
         </div>
@@ -101,20 +101,20 @@ function Quotes() {
             in the wild.
           </h3>
           <div className="quotes__author">
-            <img alt="Todd Motto"
+            <img
+              alt="Todd Motto"
               className="quotes__author-img"
               src="/img/people/todd_motto.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/toddmotto">
                 Todd Motto
               </a>
               <p>
-                Creator{" "}
+                Creator{' '}
                 <a href="https://ultimateangular.com" target="_blank">
                   @UltimateAngular
-                </a>{" "}
+                </a>{' '}
                 and Google Developer Expert for Angular
               </p>
             </div>
@@ -130,10 +130,10 @@ function Quotes() {
             beautiful apps.
           </h3>
           <div className="quotes__author">
-            <img alt="Jen Looper"
+            <img
+              alt="Jen Looper"
               className="quotes__author-img"
               src="/img/people/jen_looper.jpg"
-
             />
             <div>
               <a target="_blank" href="https://twitter.com/jenlooper">
