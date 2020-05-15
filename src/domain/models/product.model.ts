@@ -11,4 +11,5 @@ export interface Product {
   prodType: ProdType;
   numPayments: number;
   recurring: boolean;
+  code: string;
 }

@@ -262,6 +262,7 @@ export const coursePageQuery = graphql`
             licensesMax
             pricereg
             pricesale
+            code
           }
         }
       }
@@ -358,6 +359,7 @@ export const coursePageQuery = graphql`
         prodType
         numPayments
         recurring
+        code
       }
 
       chapters {

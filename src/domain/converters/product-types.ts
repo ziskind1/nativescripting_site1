@@ -27,7 +27,8 @@ export function productFromCoursesJsonProducts(
     pricesale: p.pricesale,
     numPayments: p.numPayments,
     recurring: p.recurring,
-    prodType: p.prodType as ProdType
+    prodType: p.prodType as ProdType,
+    code: p.code
   };
 }
 
@@ -44,6 +45,7 @@ export function productFromBundlesJsonProducts(
     pricesale: p.pricesale,
     numPayments: 0,
     recurring: false,
-    prodType: 'once'
+    prodType: 'once',
+    code: ''
   };
 }

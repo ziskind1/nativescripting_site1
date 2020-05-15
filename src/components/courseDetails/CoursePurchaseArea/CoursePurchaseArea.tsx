@@ -52,12 +52,11 @@ function getPriceBlockHtml(selectedProduct: Product) {
 }
 
 function getCourseActionUrl(course: Course, product: Product) {
-  return (
-    'https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=' +
-    product.id +
-    '&course_id=' +
-    course.id
-  );
+  if (product.licensesMin === 1) {
+    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}&coupon=${product.code}`;
+  } else {
+    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}`;
+  }
 }
 
 export class CoursePurchaseArea extends React.Component<
