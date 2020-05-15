@@ -46,7 +46,8 @@ interface ProductInfo {
 }
 
 function getCourseInfo(): CourseInfo {
-  const products = getProducts();
+  const courseId = $('#fedora-data').attr('data-course-id');
+  const products = getProducts(courseId);
   const chapters = getChapters();
 
   const ci: CourseInfo = {
@@ -133,10 +134,10 @@ function getLessonInfo(
   return ret;
 }
 
-function getProducts(): ProductInfo[] {
+function getProducts(courseId: string): ProductInfo[] {
   const ret: ProductInfo[] = [];
   $('.checkout-button-group').each((i: number, group: HTMLElement) => {
-    const prodInfo = getProductInfo(i, group);
+    const prodInfo = getProductInfo(i, courseId, group);
     ret.push(prodInfo);
   });
   return ret;
@@ -144,7 +145,11 @@ function getProducts(): ProductInfo[] {
 
 let singleRegPrice2 = 0;
 
-function getProductInfo(index: number, group: HTMLElement): ProductInfo {
+function getProductInfo(
+  index: number,
+  courseId: string,
+  group: HTMLElement
+): ProductInfo {
   const prodId = ($(group).find('input[type="radio"]')[0] as HTMLInputElement)
     .value;
 
@@ -183,7 +188,7 @@ function getProductInfo(index: number, group: HTMLElement): ProductInfo {
   const licensesMin = liccountOne ? 1 : parseInt(matches[0]);
   const licensesMax = liccountOne ? 1 : parseInt(matches[1]);
 
-  const groupDiscountPercent = getGroupDiscountPercent(licensesMin);
+  const groupDiscountData = getGroupDiscountData(courseId, licensesMin);
 
   if (licensesMin === 1) {
     singleRegPrice2 = price;
@@ -191,9 +196,9 @@ function getProductInfo(index: number, group: HTMLElement): ProductInfo {
 
   const regPrice = licensesMin * singleRegPrice2;
   const salePrice =
-    groupDiscountPercent === 0
+    groupDiscountData.percent === 0
       ? regPrice
-      : Math.round(regPrice - (regPrice * groupDiscountPercent) / 100);
+      : Math.round(regPrice - (regPrice * groupDiscountData.percent) / 100);
 
   const productInfo: ProductInfo = {
     id: prodId,
@@ -207,44 +212,65 @@ function getProductInfo(index: number, group: HTMLElement): ProductInfo {
     prodType: priceRecurring ? 'plan' : 'once',
     numPayments: planNumPayments,
     recurring: priceRecurring,
-    code: ''
+    code: groupDiscountData.code
   };
   return productInfo;
 }
 
-function getGroupDiscountPercent(numlicenses: number): number {
+function getGroupDiscountData(
+  courseId: string,
+  numlicenses: number
+): { percent: number; code: string } {
   let groupDiscountPercent = 0;
+  let code = '';
   switch (numlicenses) {
     case 1:
       groupDiscountPercent = 0;
       break;
     case 2:
+      groupDiscountPercent = 15;
+      code = `${courseId}TEAM2`;
+      break;
     case 3:
       groupDiscountPercent = 15;
+      code = `${courseId}TEAM3`;
       break;
     case 4:
+      groupDiscountPercent = 20;
+      code = `${courseId}TEAM4`;
+      break;
     case 5:
       groupDiscountPercent = 20;
+      code = `${courseId}TEAM5`;
       break;
     case 6:
+      groupDiscountPercent = 25;
+      code = `${courseId}TEAM6`;
+      break;
     case 7:
       groupDiscountPercent = 25;
+      code = `${courseId}TEAM7`;
       break;
     case 8:
+      groupDiscountPercent = 30;
+      code = `${courseId}TEAM8`;
+      break;
     case 9:
       groupDiscountPercent = 30;
+      code = `${courseId}TEAM9`;
       break;
     case 10:
       groupDiscountPercent = 35;
+      code = `${courseId}TEAM10`;
       break;
     default:
       groupDiscountPercent = 0;
   }
-  return groupDiscountPercent;
+  return { percent: groupDiscountPercent, code: code };
 }
 
 const courseInfo = getCourseInfo();
-const productInfos = getProducts();
+const productInfos = getProducts('-----');
 //console.log(courseInfo);
 //console.log(productInfos);
 console.log(JSON.stringify(courseInfo, null, 2));

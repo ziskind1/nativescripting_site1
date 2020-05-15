@@ -1,5 +1,6 @@
 function getCourseInfo() {
-    var products = getProducts();
+    var courseId = $('#fedora-data').attr('data-course-id');
+    var products = getProducts(courseId);
     var chapters = getChapters();
     var ci = {
         id: $('#fedora-data').attr('data-course-id'),
@@ -70,16 +71,16 @@ function getLessonInfo(chapId, lessonIndex, secItem) {
     };
     return ret;
 }
-function getProducts() {
+function getProducts(courseId) {
     var ret = [];
     $('.checkout-button-group').each(function (i, group) {
-        var prodInfo = getProductInfo(i, group);
+        var prodInfo = getProductInfo(i, courseId, group);
         ret.push(prodInfo);
     });
     return ret;
 }
 var singleRegPrice2 = 0;
-function getProductInfo(index, group) {
+function getProductInfo(index, courseId, group) {
     var prodId = $(group).find('input[type="radio"]')[0]
         .value;
     var priceObj = $(group).find('.default-product-price')[0];
@@ -111,14 +112,14 @@ function getProductInfo(index, group) {
     var liccountOne = prodName.toLowerCase().indexOf('single') > -1;
     var licensesMin = liccountOne ? 1 : parseInt(matches[0]);
     var licensesMax = liccountOne ? 1 : parseInt(matches[1]);
-    var groupDiscountPercent = getGroupDiscountPercent(licensesMin);
+    var groupDiscountData = getGroupDiscountData(courseId, licensesMin);
     if (licensesMin === 1) {
         singleRegPrice2 = price;
     }
     var regPrice = licensesMin * singleRegPrice2;
-    var salePrice = groupDiscountPercent === 0
+    var salePrice = groupDiscountData.percent === 0
         ? regPrice
-        : Math.round(regPrice - (regPrice * groupDiscountPercent) / 100);
+        : Math.round(regPrice - (regPrice * groupDiscountData.percent) / 100);
     var productInfo = {
         id: prodId,
         name: prodName,
@@ -130,42 +131,60 @@ function getProductInfo(index, group) {
         prodType: priceRecurring ? 'plan' : 'once',
         numPayments: planNumPayments,
         recurring: priceRecurring,
-        code: ''
+        code: groupDiscountData.code
     };
     return productInfo;
 }
-function getGroupDiscountPercent(numlicenses) {
+function getGroupDiscountData(courseId, numlicenses) {
     var groupDiscountPercent = 0;
+    var code = '';
     switch (numlicenses) {
         case 1:
             groupDiscountPercent = 0;
             break;
         case 2:
+            groupDiscountPercent = 15;
+            code = courseId + "TEAM2";
+            break;
         case 3:
             groupDiscountPercent = 15;
+            code = courseId + "TEAM3";
             break;
         case 4:
+            groupDiscountPercent = 20;
+            code = courseId + "TEAM4";
+            break;
         case 5:
             groupDiscountPercent = 20;
+            code = courseId + "TEAM5";
             break;
         case 6:
+            groupDiscountPercent = 25;
+            code = courseId + "TEAM6";
+            break;
         case 7:
             groupDiscountPercent = 25;
+            code = courseId + "TEAM7";
             break;
         case 8:
+            groupDiscountPercent = 30;
+            code = courseId + "TEAM8";
+            break;
         case 9:
             groupDiscountPercent = 30;
+            code = courseId + "TEAM9";
             break;
         case 10:
             groupDiscountPercent = 35;
+            code = courseId + "TEAM10";
             break;
         default:
             groupDiscountPercent = 0;
     }
-    return groupDiscountPercent;
+    return { percent: groupDiscountPercent, code: code };
 }
 var courseInfo = getCourseInfo();
-var productInfos = getProducts();
+var productInfos = getProducts('-----');
 //console.log(courseInfo);
 //console.log(productInfos);
 console.log(JSON.stringify(courseInfo, null, 2));
