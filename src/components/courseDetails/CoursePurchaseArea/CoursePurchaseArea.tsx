@@ -52,7 +52,7 @@ function getPriceBlockHtml(selectedProduct: Product) {
 }
 
 function getCourseActionUrl(course: Course, product: Product) {
-  if (product.licensesMin === 1) {
+  if (product.licensesMin === 1 && product.code) {
     return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}&coupon=${product.code}`;
   } else {
     return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}`;
