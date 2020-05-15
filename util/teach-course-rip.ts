@@ -226,6 +226,7 @@ function getGroupDiscountData(
   switch (numlicenses) {
     case 1:
       groupDiscountPercent = 0;
+      code = `${courseId}ONE`;
       break;
     case 2:
       groupDiscountPercent = 15;
