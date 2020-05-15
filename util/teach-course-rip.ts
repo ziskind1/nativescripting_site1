@@ -6,6 +6,7 @@ interface CourseInfo {
   url: string;
   chapters: ChapterInfo[];
   products: ProductInfo[];
+  publishedChapters: number[];
 
   flavors: ['Vue'];
   level: 3;
@@ -45,6 +46,9 @@ interface ProductInfo {
 }
 
 function getCourseInfo(): CourseInfo {
+  const products = getProducts();
+  const chapters = getChapters();
+
   const ci: CourseInfo = {
     id: $('#fedora-data').attr('data-course-id'),
     title: $('.course-title')[0].innerText,
@@ -57,8 +61,9 @@ function getCourseInfo(): CourseInfo {
     label: 'POPULAR',
     launchdate: '01/01/2020',
     authors: ['alex_ziskind'],
-    products: getProducts(),
-    chapters: getChapters()
+    products: products,
+    publishedChapters: chapters.map(c => c.id),
+    chapters: chapters
   };
   ci.url = ci.title
     .toLocaleLowerCase()
@@ -241,4 +246,5 @@ function getGroupDiscountPercent(numlicenses: number): number {
 const courseInfo = getCourseInfo();
 const productInfos = getProducts();
 //console.log(courseInfo);
-console.log(productInfos);
+//console.log(productInfos);
+console.log(JSON.stringify(courseInfo, null, 2));
