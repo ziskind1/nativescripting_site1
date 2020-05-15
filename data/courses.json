@@ -548,7 +548,7 @@
         "recurring": true
       }
     ],
-    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110],
     "publishingSchedule": [
       {
         "id": 10,
@@ -1147,19 +1147,73 @@
             "id": "16763578",
             "name": "Navigation Frame",
             "isPreview": false
+          },
+          {
+            "chapterId": 100,
+            "id": "16930425",
+            "isPreview": true,
+            "name": "Routing Using the Navigator - with Igor Randjelovic (26:55)"
           }
         ]
       },
 
       {
         "id": 110,
-        "name": "Native and Custom Dialogs",
+        "name": "Drawer Navigation",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 110,
+            "id": "17050822",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050824",
+            "isPreview": false,
+            "name": "Installing the Side Drawer"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050828",
+            "isPreview": false,
+            "name": "Implementation Plan and Drawer Anatomy"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050823",
+            "isPreview": false,
+            "name": "Encapsulating the Drawer Parts"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050821",
+            "isPreview": false,
+            "name": "Dynamic Slot Content"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050827",
+            "isPreview": false,
+            "name": "Exposing the Drawer to Pages"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050826",
+            "isPreview": false,
+            "name": "Drawer Content"
+          },
+          {
+            "chapterId": 110,
+            "id": "17050825",
+            "isPreview": false,
+            "name": "Sidedrawer Mixin"
+          },
+          {
+            "chapterId": 110,
+            "id": "17051041",
+            "isPreview": false,
+            "name": "Prevent Drawer Edge Swipe"
           }
         ]
       },
