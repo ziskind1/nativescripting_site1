@@ -559,7 +559,21 @@
         "code": ""
       }
     ],
-    "publishedChapters": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110],
+    "publishedChapters": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130
+    ],
     "publishingSchedule": [
       {
         "id": 10,
@@ -615,15 +629,27 @@
       },
       {
         "id": 140,
-        "date": "5/10/2020"
+        "date": "5/17/2020"
       },
       {
         "id": 150,
-        "date": "5/13/2020"
+        "date": "5/20/2020"
       },
       {
         "id": 160,
-        "date": "5/15/2020"
+        "date": "5/22/2020"
+      },
+      {
+        "id": 170,
+        "date": "5/26/2020"
+      },
+      {
+        "id": 180,
+        "date": "5/29/2020"
+      },
+      {
+        "id": 190,
+        "date": "5/31/2020"
       }
     ],
     "chapters": [
@@ -1049,7 +1075,7 @@
             "chapterId": 90,
             "id": "14997726",
             "name": "Overview",
-            "isPreview": false
+            "isPreview": true
           },
           {
             "chapterId": 90,
@@ -1080,6 +1106,24 @@
             "id": "14997726",
             "name": "Expanding the State Object",
             "isPreview": false
+          },
+          {
+            "chapterId": 90,
+            "id": "17116635",
+            "isPreview": false,
+            "name": "Bonus Lesson: Adding a Reactive Property"
+          },
+          {
+            "chapterId": 90,
+            "id": "17116633",
+            "isPreview": false,
+            "name": "Bonus Lesson: Reactive App State from Scratch"
+          },
+          {
+            "chapterId": 90,
+            "id": "17116634",
+            "isPreview": false,
+            "name": "Bonus Lesson: Reactive App State with RxJS"
           }
         ]
       },
@@ -1230,31 +1274,103 @@
       },
       {
         "id": 120,
-        "name": "Forms and Charts",
+        "name": "Building Custom UI",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 120,
+            "id": "17123905",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 120,
+            "id": "17081598",
+            "isPreview": false,
+            "name": "Custom Floating Action Button (5:51)"
+          },
+          {
+            "chapterId": 120,
+            "id": "17081596",
+            "isPreview": false,
+            "name": "Custom Tabbed Interface (13:52)"
+          },
+          {
+            "chapterId": 120,
+            "id": "17081595",
+            "isPreview": false,
+            "name": "Lazy Custom Tab Content (8:49)"
           }
         ]
       },
       {
         "id": 130,
-        "name": "Internationalization",
+        "name": "Using the Dataform",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 130,
+            "id": "17123913",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105041",
+            "isPreview": false,
+            "name": "Dataform Basics (6:15)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105042",
+            "isPreview": false,
+            "name": "Managing Form State (5:46)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105037",
+            "isPreview": false,
+            "name": "Commit Mode and Property Change Event (5:30)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105040",
+            "isPreview": false,
+            "name": "Property Editor Attributes (5:20)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105044",
+            "isPreview": false,
+            "name": "Editor Declaration (3:01)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105045",
+            "isPreview": false,
+            "name": "Values Provider (4:33)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105038",
+            "isPreview": false,
+            "name": "Editor Styling (2:31)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105039",
+            "isPreview": false,
+            "name": "Property Validation (1:33)"
+          },
+          {
+            "chapterId": 130,
+            "id": "17105043",
+            "isPreview": false,
+            "name": "Encapsulating the Data Form (3:04)"
           }
         ]
       },
       {
         "id": 140,
-        "name": "Exception Handling and Error Reporting",
+        "name": "Native Modal Dialogs",
         "lessons": [
           {
             "chapterId": 80,
@@ -1266,7 +1382,7 @@
       },
       {
         "id": 150,
-        "name": "Testing",
+        "name": "Charts",
         "lessons": [
           {
             "chapterId": 80,
@@ -1278,6 +1394,42 @@
       },
       {
         "id": 160,
+        "name": "Internationalization",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "14997726",
+            "name": "Chapter coming soon",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 170,
+        "name": "Exception Handling and Error Reporting",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "14997726",
+            "name": "Chapter coming soon",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 180,
+        "name": "Testing",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "14997726",
+            "name": "Chapter coming soon",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "id": 190,
         "name": "Preparing for Deployment",
         "lessons": [
           {
