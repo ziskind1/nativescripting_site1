@@ -45,8 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               levels {
-                levelId,
-                title,
+                levelId
+                title
                 description
               }
             }
@@ -88,6 +88,16 @@ exports.createPages = ({ graphql, actions }) => {
 
       const tracks = result.data.allTracksJson.edges;
       createTrackPages(createPage, tracks);
+
+      const types = [
+        { name: 'All' },
+        { name: 'Free' },
+        { name: 'Core' },
+        { name: 'Angular' },
+        { name: 'Vue' }
+      ];
+
+      createCourseTypePages(createPage, types);
 
       const posts = result.data.allMarkdownRemark.edges;
       const postsPerPage = config.POSTS_PER_PAGE;
@@ -143,6 +153,20 @@ const createTrackPages = (createPage, tracks) => {
   });
 };
 
+const createCourseTypePages = (createPage, types) => {
+  const template = path.resolve(`src/templates/courses.tsx`);
+
+  types.forEach(cType => {
+    createPage({
+      path: `/courses/${cType.name.toLowerCase()}`,
+      component: template,
+      context: {
+        coursesType: cType.name
+      }
+    });
+  });
+};
+
 const isZero = a => a === 0;
 const inc = a => a + 1;
 const dec = a => a - 1;
@@ -167,21 +191,18 @@ const nextPost = (posts, curIdx) =>
 const createPostPages = (createPage, posts, postsPerPage, numPages) => {
   const postTemplate = path.resolve(`src/templates/post.tsx`);
 
-
-  Array.from({ length: numPages })
-    .forEach((_, i) => {
-      createPage({
-        path: i === 0 ? `/posts` : `/posts/${i + 1}`,
-        component: path.resolve(`src/templates/posts.tsx`),
-        context: {
-          limit: postsPerPage,
-          skip: i * postsPerPage,
-          totalPages: numPages,
-          currentPage: i + 1
-        },
-      });
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/posts` : `/posts/${i + 1}`,
+      component: path.resolve(`src/templates/posts.tsx`),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        totalPages: numPages,
+        currentPage: i + 1
+      }
     });
-
+  });
 
   posts.forEach(({ node }, postIdx) => {
     const prev = prevPost(posts, postIdx);

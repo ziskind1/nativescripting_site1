@@ -45,7 +45,7 @@ import SubHeroSection3 from '../components/home/SubHeroSection/SubHeroSection3';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
-interface IndexPageProps {
+interface CoursesTypePageProps {
   data: {
     authorsConnection: AuthorsJsonConnection;
     coursesConnection: CoursesJsonConnection;
@@ -53,15 +53,19 @@ interface IndexPageProps {
     tracksConnection: TracksJsonConnection;
     testimonialsConnection: TestimonialsJsonConnection;
   };
+  pageContext: { coursesType: CourseFilterType };
 }
 
-interface IndexPageState {
+interface CoursesTypePageState {
   courses: Course[];
   selectedFilterType: CourseFilterType;
 }
 
-export default class extends React.Component<IndexPageProps, IndexPageState> {
-  constructor(props: IndexPageProps) {
+export default class extends React.Component<
+  CoursesTypePageProps,
+  CoursesTypePageState
+> {
+  constructor(props: CoursesTypePageProps) {
     super(props);
 
     const authors = this.props.data.authorsConnection.edges.map(
@@ -74,7 +78,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
     this.state = {
       courses: courses,
-      selectedFilterType: 'All'
+      selectedFilterType: this.props.pageContext.coursesType
     };
   }
 
@@ -99,6 +103,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 
   private filterByFilterType(filterType: CourseFilterType) {
     this.setState({ selectedFilterType: filterType });
+    // window.location.href = `/courses/${filterType.toLowerCase()}`;
   }
 
   private getFilteredCourses(filterType: CourseFilterType): Course[] {
@@ -145,7 +150,19 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
       testimonialFromTestimonialJsonEdge
     );
 
-    const pageTitle = `NativeScript Courses on NativeScripting`;
+    let pageTitle = `NativeScript Courses`;
+    switch (this.props.pageContext.coursesType) {
+      case 'All':
+        pageTitle = `All NativeScript Courses`;
+        break;
+      case 'Free':
+        pageTitle = `Free NativeScript Courses`;
+        break;
+      case 'Angular':
+      case 'Vue':
+        pageTitle = `NativeScript ${this.props.pageContext.coursesType} Courses`;
+        break;
+    }
 
     return (
       <MainLayout>
@@ -155,7 +172,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
         </Helmet>
 
         <CoursesSection
-          pageTitle="All available courses"
+          pageTitle={pageTitle}
           courses={filteredCourses}
           selectedFilterType={this.state.selectedFilterType}
           onSelectFilterType={filterType => this.filterByFilterType(filterType)}
@@ -201,8 +218,8 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
   }
 }
 
-export const coursesPageQuery = graphql`
-  query CoursesPageQuery {
+export const coursesTypesPageQuery = graphql`
+  query CoursesTypesPageQuery {
     #get authors
     authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
       totalCount

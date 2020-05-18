@@ -7,6 +7,7 @@ import { CourseFilter, CourseFilterType } from '../CourseFilter/CourseFilter';
 import CourseFilterDescription from '../CourseFilter/CourseFilterDescription';
 
 export interface CoursesSectionProps {
+  pageTitle: string;
   courses: Course[];
   selectedFilterType: CourseFilterType;
   onSelectFilterType: (filterType: CourseFilterType) => void;
@@ -19,7 +20,7 @@ const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (
     <section className="section">
       <div className="wrapper">
         <div className="heading">
-          <h2 className="heading__title">All available courses</h2>
+          <h2 className="heading__title">{props.pageTitle}</h2>
         </div>
 
         <CourseFilter

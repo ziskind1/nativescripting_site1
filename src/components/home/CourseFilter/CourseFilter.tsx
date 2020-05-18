@@ -2,6 +2,7 @@ import * as React from 'react';
 //import { CourseFlavorType } from "../../../domain/models";
 
 import './CourseFilter.css';
+import { Link } from 'gatsby';
 
 export type CourseFilterType = 'All' | 'Free' | 'Core' | 'Angular' | 'Vue';
 
@@ -27,17 +28,13 @@ function getFilterOptionsHtml(
     const optionClassName =
       o === selectedFilterType ? 'active noselect' : 'noselect';
 
+    const linkTo = `/courses/${o.toLowerCase()}`;
+
     return (
       <li key={idx}>
-        <a
-          className={optionClassName}
-          onClick={e => {
-            e.preventDefault();
-            selectFilterOption(o);
-          }}
-        >
+        <Link to={linkTo} className={optionClassName}>
           {o}
-        </a>
+        </Link>
       </li>
     );
   });
