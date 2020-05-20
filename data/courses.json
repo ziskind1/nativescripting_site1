@@ -572,7 +572,8 @@
       100,
       110,
       120,
-      130
+      130,
+      140
     ],
     "publishingSchedule": [
       {
@@ -1373,10 +1374,58 @@
         "name": "Native Modal Dialogs",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 140,
+            "id": "17123904",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206087",
+            "isPreview": false,
+            "name": "Native Modal Dialog Basics"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206084",
+            "isPreview": false,
+            "name": "Returning Data from a Modal"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206081",
+            "isPreview": false,
+            "name": "Modal Dialog Options"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206082",
+            "isPreview": false,
+            "name": "Modal Navigation Hierarchy"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206083",
+            "isPreview": false,
+            "name": "Add New Item Modal UI"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206086",
+            "isPreview": false,
+            "name": "Saving Modal Data"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206085",
+            "isPreview": false,
+            "name": "Open Generic List Modal From Modal"
+          },
+          {
+            "chapterId": 140,
+            "id": "17206080",
+            "isPreview": false,
+            "name": "Reusing Generic List Modal Component"
           }
         ]
       },
