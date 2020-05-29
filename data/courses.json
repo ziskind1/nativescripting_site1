@@ -573,7 +573,9 @@
       110,
       120,
       130,
-      140
+      140,
+      150,
+      160
     ],
     "publishingSchedule": [
       {
@@ -1434,10 +1436,52 @@
         "name": "Charts",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 150,
+            "id": "17456663",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420805",
+            "isPreview": false,
+            "name": "Dashboard Updates"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420806",
+            "isPreview": false,
+            "name": "Getting Started with Chart"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420803",
+            "isPreview": false,
+            "name": "Chart Series"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420807",
+            "isPreview": false,
+            "name": "Categorical Axis"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420808",
+            "isPreview": false,
+            "name": "Vertical Axis"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420804",
+            "isPreview": false,
+            "name": "Chart Styling"
+          },
+          {
+            "chapterId": 150,
+            "id": "17420809",
+            "isPreview": false,
+            "name": "Chart Interaction"
           }
         ]
       },
@@ -1446,10 +1490,34 @@
         "name": "Internationalization",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 160,
+            "id": "17512151",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 160,
+            "id": "17512154",
+            "isPreview": false,
+            "name": "Setting up i18n"
+          },
+          {
+            "chapterId": 160,
+            "id": "17512153",
+            "isPreview": false,
+            "name": "Translation Workflow"
+          },
+          {
+            "chapterId": 160,
+            "id": "17512150",
+            "isPreview": false,
+            "name": "Device Language"
+          },
+          {
+            "chapterId": 160,
+            "id": "17512152",
+            "isPreview": false,
+            "name": "Handling Locales"
           }
         ]
       },
