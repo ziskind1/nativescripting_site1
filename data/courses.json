@@ -546,11 +546,11 @@
         "code": "684644TEAM10"
       },
       {
-        "id": "1958534",
+        "id": "2025782",
         "name": "Single user payment plan",
         "description": "\n",
-        "pricereg": 66,
-        "pricesale": 66,
+        "pricereg": 73,
+        "pricesale": 73,
         "licensesMin": 1,
         "licensesMax": 1,
         "prodType": "plan",
@@ -575,7 +575,9 @@
       130,
       140,
       150,
-      160
+      160,
+      170,
+      180
     ],
     "publishingSchedule": [
       {
@@ -1523,22 +1525,94 @@
       },
       {
         "id": 170,
-        "name": "Exception Handling and Error Reporting",
+        "name": "Tracing and Error Reporting",
         "lessons": [
           {
-            "chapterId": 80,
-            "id": "14997726",
-            "name": "Chapter coming soon",
-            "isPreview": false
+            "chapterId": 170,
+            "id": "17630680",
+            "isPreview": false,
+            "name": "Trace Basics"
+          },
+          {
+            "chapterId": 170,
+            "id": "17630676",
+            "isPreview": false,
+            "name": "Trace Custom Categories"
+          },
+          {
+            "chapterId": 170,
+            "id": "17630679",
+            "isPreview": false,
+            "name": "Custom TraceWriter"
+          },
+          {
+            "chapterId": 170,
+            "id": "17630681",
+            "isPreview": false,
+            "name": "Trace Message Types"
+          },
+          {
+            "chapterId": 170,
+            "id": "17630677",
+            "isPreview": false,
+            "name": "Error Reporting Infrastructure"
+          },
+          {
+            "chapterId": 170,
+            "id": "17630678",
+            "isPreview": false,
+            "name": "Reporting Trace Errors"
           }
         ]
       },
       {
         "id": 180,
+        "name": "Exception Handling and Crash Reporting",
+        "lessons": [
+          {
+            "chapterId": 180,
+            "id": "17683320",
+            "isPreview": false,
+            "name": "Custom Error Handler"
+          },
+          {
+            "chapterId": 180,
+            "id": "17683318",
+            "isPreview": false,
+            "name": "Handling Exceptions in Production"
+          },
+          {
+            "chapterId": 180,
+            "id": "17683316",
+            "isPreview": false,
+            "name": "Lazy Service Locator Pattern for Error Services"
+          },
+          {
+            "chapterId": 180,
+            "id": "17683319",
+            "isPreview": false,
+            "name": "Handled and Unhandled Exceptions"
+          },
+          {
+            "chapterId": 180,
+            "id": "17683317",
+            "isPreview": false,
+            "name": "Disable Native Exception Propagation"
+          },
+          {
+            "chapterId": 180,
+            "id": "17683321",
+            "isPreview": false,
+            "name": "Third Party Crash Reporting and Analytics"
+          }
+        ]
+      },
+      {
+        "id": 190,
         "name": "Testing",
         "lessons": [
           {
-            "chapterId": 80,
+            "chapterId": 190,
             "id": "14997726",
             "name": "Chapter coming soon",
             "isPreview": false
@@ -1546,11 +1620,11 @@
         ]
       },
       {
-        "id": 190,
+        "id": 200,
         "name": "Preparing for Deployment",
         "lessons": [
           {
-            "chapterId": 80,
+            "chapterId": 200,
             "id": "14997726",
             "name": "Chapter coming soon",
             "isPreview": false
