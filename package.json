@@ -45,7 +45,7 @@
     "typography-theme-kirkham": "0.16.3"
   },
   "devDependencies": {
-    "graphql-code-generator": "0.8.21",
+    "graphql-code-generator": "0.18.2",
     "typescript": "2.8.1"
   }
 }
