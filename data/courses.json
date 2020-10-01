@@ -1,4 +1,259 @@
 [{
+    "id": "1152797",
+    "title": "NativeScript with Nx Workspaces and Xplat",
+    "subtitle": "Enable Maximum Code Reuse for NativeScript and Web Angular Apps",
+    "description": "",
+    "descriptionHtmlSections": [{
+      "title": "Summary",
+      "descriptionHtml": "<div><p></p><p>In this course students will learn how to build native Android and iOS mobile applications using a single code set composed of common web technologies such as JavaScript and CSS on an Angular base.</p><p>The applications built in this course are native and not web view dependent hybrid applications that are common when using web technologies. In turn, the mobile development skills learned from this course will help you to build fast and attractive cross platform applications using the incredibly popular Angular and NativeScript frameworks, both of which are open source.</p><p>Some of the topics and skills that will be taught in this course include, but are not limited to:</p><ul><li>Building a UX with native UI components.</li><li>Making HTTP requests to a remote web service and rendering the results within the mobile applications.</li><li>Navigating between pages of an application while transferring data between them.</li><li>Interacting with native platform APIs through plugins, packages, and direct API bindings.</li></ul><p>By the end of the course, students should have the skills to take what they've learned and apply it towards whatever their own imagination presents them with.</p><p></p><br></div>"
+    }],
+    "url": "nativescript-with-nx-workspaces-and-xplat",
+    "flavors": ["Angular"],
+    "level": 2,
+    "order": 30,
+    "label": "NEW",
+    "launchdate": "10/02/2020",
+    "authors": ["alex_ziskind"],
+    "products": [{
+        "id": "2469979",
+        "name": "1 user",
+        "description": "\n",
+        "pricereg": 219,
+        "pricesale": 219,
+        "licensesMin": 1,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": ""
+      },
+      {
+        "id": "2469980",
+        "name": "2 users",
+        "description": "\n",
+        "pricereg": 438,
+        "pricesale": 372,
+        "licensesMin": 2,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM2"
+      },
+      {
+        "id": "2469981",
+        "name": "3 users",
+        "description": "\n",
+        "pricereg": 657,
+        "pricesale": 558,
+        "licensesMin": 3,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM3"
+      },
+      {
+        "id": "2469982",
+        "name": "4 users",
+        "description": "\n",
+        "pricereg": 876,
+        "pricesale": 701,
+        "licensesMin": 4,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM4"
+      },
+      {
+        "id": "2469983",
+        "name": "5 users",
+        "description": "\n",
+        "pricereg": 1095,
+        "pricesale": 876,
+        "licensesMin": 5,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM5"
+      },
+      {
+        "id": "2469984",
+        "name": "6 users",
+        "description": "\n",
+        "pricereg": 1314,
+        "pricesale": 986,
+        "licensesMin": 6,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM6"
+      },
+      {
+        "id": "2469986",
+        "name": "7 users",
+        "description": "\n",
+        "pricereg": 1533,
+        "pricesale": 1150,
+        "licensesMin": 7,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM7"
+      },
+      {
+        "id": "2469988",
+        "name": "8 users",
+        "description": "\n",
+        "pricereg": 1752,
+        "pricesale": 1226,
+        "licensesMin": 8,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM8"
+      },
+      {
+        "id": "2469989",
+        "name": "9 users",
+        "description": "\n",
+        "pricereg": 1971,
+        "pricesale": 1380,
+        "licensesMin": 9,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM9"
+      },
+      {
+        "id": "2469991",
+        "name": "10 users",
+        "description": "\n",
+        "pricereg": 2190,
+        "pricesale": 1424,
+        "licensesMin": 10,
+        "licensesMax": null,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false,
+        "code": "1152797TEAM10"
+      }
+    ],
+    "publishedChapters": [],
+    "publishingSchedule": [{
+        "id": 10,
+        "date": "10/6/2020"
+      },
+      {
+        "id": 20,
+        "date": "10/6/2020"
+      },
+      {
+        "id": 30,
+        "date": "10/7/2020"
+      },
+      {
+        "id": 40,
+        "date": "10/8/2020"
+      },
+      {
+        "id": 50,
+        "date": "10/9/2020"
+      },
+      {
+        "id": 60,
+        "date": "10/11/2020"
+      },
+      {
+        "id": 70,
+        "date": "10/11/2020"
+      }
+    ],
+    "chapters": [{
+        "id": 10,
+        "name": "Introduction and Methodology",
+        "lessons": [{
+          "chapterId": 10,
+          "id": "16754789",
+          "name": "Coming soon",
+          "isPreview": true
+        }]
+      },
+      {
+        "id": 20,
+        "name": "Nx Workspaces with Xplat Setup",
+        "lessons": [{
+          "chapterId": 20,
+          "id": "16754850",
+          "name": "Coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 30,
+        "name": "Xplat in Action",
+        "lessons": [{
+          "chapterId": 30,
+          "id": "16754976",
+          "name": "Coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 40,
+        "name": "Using the Xplat Architecture",
+        "lessons": [{
+            "chapterId": 40,
+            "id": "16755376",
+            "name": "Coming soon",
+            "isPreview": false
+          }
+
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Workspace Tooling",
+        "lessons": [{
+            "chapterId": 50,
+            "id": "16755482",
+            "name": "Coming soon",
+            "isPreview": false
+          }
+
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Feature Implementation Example",
+        "lessons": [{
+          "chapterId": 60,
+          "id": "16755615",
+          "name": "Coming soon",
+          "isPreview": false
+        }]
+      },
+      {
+        "id": 70,
+        "name": "More chapters on the way",
+        "lessons": [{
+            "chapterId": 70,
+            "id": "16755745",
+            "name": "Coming soon",
+            "isPreview": false
+          }
+
+        ]
+      }
+    ]
+  },
+  {
     "id": "910117",
     "title": "NativeScript for the Angular Developer",
     "subtitle": "Native Android and iOS Development with Angular",
