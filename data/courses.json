@@ -149,7 +149,7 @@
         "code": "1152797TEAM10"
       }
     ],
-    "publishedChapters": [],
+    "publishedChapters": [10,20,30,40,50],
     "publishingSchedule": [
       {
         "id": 10,
@@ -173,11 +173,11 @@
       },
       {
         "id": 60,
-        "date": "10/11/2020"
+        "date": "10/30/2020"
       },
       {
         "id": 70,
-        "date": "10/11/2020"
+        "date": "10/31/2020"
       }
     ],
     "chapters": [
@@ -187,9 +187,27 @@
         "lessons": [
           {
             "chapterId": 10,
-            "id": "16754789",
-            "name": "Coming soon",
-            "isPreview": true
+            "id": "25021523",
+            "isPreview": true,
+            "name": "Introduction (2:25)"
+          },
+          {
+            "chapterId": 10,
+            "id": "25178487",
+            "isPreview": false,
+            "name": "Welcome Notes"
+          },
+          {
+            "chapterId": 10,
+            "id": "25178544",
+            "isPreview": false,
+            "name": "Reference Source Code"
+          },
+          {
+            "chapterId": 10,
+            "id": "25178623",
+            "isPreview": false,
+            "name": "How to Join the Private FB Group"
           }
         ]
       },
@@ -199,9 +217,21 @@
         "lessons": [
           {
             "chapterId": 20,
-            "id": "16754850",
-            "name": "Coming soon",
-            "isPreview": false
+            "id": "25050071",
+            "isPreview": false,
+            "name": "Creating a Workspace (4:42)"
+          },
+          {
+            "chapterId": 20,
+            "id": "25050075",
+            "isPreview": false,
+            "name": "Setting Up Xplat (1:09)"
+          },
+          {
+            "chapterId": 20,
+            "id": "25050070",
+            "isPreview": false,
+            "name": "Nx CLI (1:43)"
           }
         ]
       },
@@ -211,9 +241,27 @@
         "lessons": [
           {
             "chapterId": 30,
-            "id": "16754976",
-            "name": "Coming soon",
-            "isPreview": false
+            "id": "25050078",
+            "isPreview": false,
+            "name": "Generating a Web App (3:57)"
+          },
+          {
+            "chapterId": 30,
+            "id": "25050069",
+            "isPreview": false,
+            "name": "Folder Structure Review (6:33)"
+          },
+          {
+            "chapterId": 30,
+            "id": "25050074",
+            "isPreview": false,
+            "name": "Generating a NativeScript App and Folder Structure Changes (5:29)"
+          },
+          {
+            "chapterId": 30,
+            "id": "25050077",
+            "isPreview": false,
+            "name": "Running and Updating Apps (4:24)"
           }
         ]
       },
@@ -223,9 +271,21 @@
         "lessons": [
           {
             "chapterId": 40,
-            "id": "16755376",
-            "name": "Coming soon",
-            "isPreview": false
+            "id": "25050076",
+            "isPreview": false,
+            "name": "Platform Specific Code (6:53)"
+          },
+          {
+            "chapterId": 40,
+            "id": "25050073",
+            "isPreview": false,
+            "name": "Platform Agnostic Code (4:55)"
+          },
+          {
+            "chapterId": 40,
+            "id": "25050072",
+            "isPreview": false,
+            "name": "3rd Party Libraries (4:08)"
           }
         ]
       },
@@ -235,15 +295,27 @@
         "lessons": [
           {
             "chapterId": 50,
-            "id": "16755482",
-            "name": "Coming soon",
-            "isPreview": false
+            "id": "25347267",
+            "isPreview": false,
+            "name": "Monorepo Focus Mode"
+          },
+          {
+            "chapterId": 50,
+            "id": "25347269",
+            "isPreview": false,
+            "name": "NX Console and Dep Graph"
+          },
+          {
+            "chapterId": 50,
+            "id": "25347268",
+            "isPreview": false,
+            "name": "Workspace Imports"
           }
         ]
       },
       {
         "id": 60,
-        "name": "Feature Implementation Example",
+        "name": "Shared Services Example",
         "lessons": [
           {
             "chapterId": 60,
@@ -255,7 +327,7 @@
       },
       {
         "id": 70,
-        "name": "More chapters on the way",
+        "name": "Environmental Configuration",
         "lessons": [
           {
             "chapterId": 70,
