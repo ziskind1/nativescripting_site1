@@ -110,17 +110,15 @@ export const PostEntry: React.StatelessComponent<PostEntryProps> = (
           <AnnounceWrapper>
                 <GridRow>
                   <GridColumn xs={12} sm={2}>
-                    <img src="/img/logos/ng-atlanta.svg" alt="ng atlanta" />
+                    <img src="/img/illustrations/black_friday.svg" alt="black friday" />
                   </GridColumn>
                   <GridColumn xs={12} sm={10}>
                     <AnnouncementText>
                     
-                        Catch Dave Coffin, Nathan Walker, and Alex Ziskind at ngAtlanta in February 2020 for an advanced NativeScript with Angular workshop called 
-                        <code className="language-text">&nbsp;
-                          Breathe life into mobile UX with solid architecture lessons
-                        </code>. You can register now and take your NativeScript skills up a notch.
+                    &nbsp;
+                        <h2>Get 50% off any NativeScript course or bundle on this site. Just enter <span style={{ color: '#3CFA50' }}>BLACKFRIDAY20</span> at checkout.</h2>
                         &nbsp;
-                        <a href="https://ti.to/ngatlconf/ngatlanta-nodeatlanta/with/wzdhimfwuoi,lt7-artwm3i" style={{color: '#11F5FF'}}>Register here</a>.
+                     
                     </AnnouncementText>
                   </GridColumn>
                 </GridRow>

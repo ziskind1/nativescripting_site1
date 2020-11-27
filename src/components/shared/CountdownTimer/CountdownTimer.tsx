@@ -8,10 +8,10 @@ import {
 } from '../../ActionButton/ActionButton';
 import { ENABLE_COUNTDOWN_TIMER } from '../../../global/switches';
 
-const expirationDateStr = 'Dec 31, 2019 23:59:59';
-const ctaUrl = '/course/nativescript-with-angular-pro';
-const couponCode = 'BYE2019';
-const discountPercentage = 20;
+const expirationDateStr = 'Nov 30, 2020 23:59:59';
+const ctaUrl = '/course/nativescript-with-angular-pro'; 
+const couponCode = 'BLACKFRIDAY20';
+const discountPercentage = 50;
 
 interface CountdownTimerProps {
   expirationDateStr?: string;
