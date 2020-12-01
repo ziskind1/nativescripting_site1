@@ -83,6 +83,58 @@
     ]
   },
   {
+    "id": "tyler_blake",
+    "name": "Tyler Blake",
+    "picture": "tyler_blake",
+    "bio": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
+    "biolong": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
+    "title": "Full Stack Developer",
+    "twitter": "TylerBlakeLOU",
+    "github": "tylerablake",
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "william_tjondrosuharto",
+    "name": "William TjondroSuharto",
+    "picture": "william_tjondrosuharto",
+    "bio": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "biolong": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
+    "title": "Nativescript Ambassador",
+    "twitter": "williamjuan27",
+    "github": "williamjuan027",
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "sergey_melashych",
+    "name": "Sergey Melashych",
+    "picture": "sergey_melashych",
+    "bio": "Sergey is a full stack developer, speaker, and teacher who has been focusing on NativeScript over the past several years.",
+    "biolong": "Sergey Melashych aka Mell is a full stack developer from Ukraine experienced with development in JavaScript and Ruby. Being someone who used to build stable and performant web solutions, he has been focusing on NativeScript over the past several years. Sergey has experience teaching and mentoring in higher education and IT schools, as well as speaking at conferences. In addition, he has a Ph.D. degree in Fluid Mechanics.",
+    "title": "Developer, Speaker, and Teacher",
+    "twitter": "SergeyMell",
+    "github": "SergeyMell",
+    "types": [
+      "post"
+    ]
+  },
+  {
+    "id": "tiago_alves",
+    "name": "Tiago Alves",
+    "picture": "tiago_alves",
+    "bio": "Tiago is a NativeScript-Vue contributer and enthusiastic developer. He's also a speaker and community leader.",
+    "biolong": "Over the last 15 years in the development business, Tiago did a bit of everything until finally landing in the soft arms of Vue.js. He is very excited with the possibility of using Vue with NativeScript and so he has been helping with the nativescript-vue community effort for some time.",
+    "title": "NativeScript Vue Guru",
+    "twitter": "tiagoreisalves",
+    "github": "tralves",
+    "types": [
+      "post"
+    ]
+  },
+  {
     "id": "shiva_prasad",
     "name": "Shiva Prasad",
     "picture": "shiva_prasad",
@@ -104,45 +156,6 @@
     "title": "Nativescript Expert",
     "twitter": "davecoffin",
     "github": "davecoffin",
-    "types": [
-      "post"
-    ]
-  },
-  {
-    "id": "william_tjondrosuharto",
-    "name": "William TjondroSuharto",
-    "picture": "william_tjondrosuharto",
-    "bio": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
-    "biolong": "William is a Nativescript Ambassador based in Chicago, IL. He is a front end enthusiast with a love for all things web.",
-    "title": "Nativescript Ambassador",
-    "twitter": "williamjuan27",
-    "github": "williamjuan027",
-    "types": [
-      "post"
-    ]
-  },
-  {
-    "id": "tiago_alves",
-    "name": "Tiago Alves",
-    "picture": "tiago_alves",
-    "bio": "Tiago is a NativeScript-Vue contributer and enthusiastic developer. He's also a speaker and community leader.",
-    "biolong": "Over the last 15 years in the development business, Tiago did a bit of everything until finally landing in the soft arms of Vue.js. He is very excited with the possibility of using Vue with NativeScript and so he has been helping with the nativescript-vue community effort for some time.",
-    "title": "NativeScript Vue Guru",
-    "twitter": "tiagoreisalves",
-    "github": "tralves",
-    "types": [
-      "post"
-    ]
-  },
-  {
-    "id": "tyler_blake",
-    "name": "Tyler Blake",
-    "picture": "tyler_blake",
-    "bio": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
-    "biolong": "Tyler is a full stack developer who has been focusing on NativeScript over the past few years. He enjoys helping others out by teaching and mentoring, as well as speaking at conferences.",
-    "title": "Full Stack Developer",
-    "twitter": "TylerBlakeLOU",
-    "github": "tylerablake",
     "types": [
       "post"
     ]
