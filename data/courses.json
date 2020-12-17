@@ -149,7 +149,7 @@
         "code": "1152797TEAM10"
       }
     ],
-    "publishedChapters": [10,20,30,40,50, 60, 70],
+    "publishedChapters": [10,20,30,40,50, 60, 70, 80],
     "publishingSchedule": [
       {
         "id": 10,
@@ -217,6 +217,12 @@
         "lessons": [
           {
             "chapterId": 20,
+            "id": "27836195",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 20,
             "id": "25050071",
             "isPreview": false,
             "name": "Creating a Workspace"
@@ -239,6 +245,12 @@
         "id": 30,
         "name": "Xplat in Action",
         "lessons": [
+          {
+            "chapterId": 30,
+            "id": "27836192",
+            "isPreview": true,
+            "name": "Overview"
+          },
           {
             "chapterId": 30,
             "id": "25050078",
@@ -271,6 +283,12 @@
         "lessons": [
           {
             "chapterId": 40,
+            "id": "27836194",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 40,
             "id": "25050076",
             "isPreview": false,
             "name": "Platform Specific Code"
@@ -295,6 +313,12 @@
         "lessons": [
           {
             "chapterId": 50,
+            "id": "27836196",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 50,
             "id": "25347267",
             "isPreview": false,
             "name": "Monorepo Focus Mode"
@@ -317,6 +341,12 @@
         "id": 60,
         "name": "Shared Service Implementation Example",
         "lessons": [
+          {
+            "chapterId": 60,
+            "id": "27836190",
+            "isPreview": true,
+            "name": "Overview"
+          },
           {
             "chapterId": 60,
             "id": "25376189",
@@ -353,6 +383,12 @@
         "id": 70,
         "name": "Environmental Configuration",
         "lessons": [
+          {
+            "chapterId": 70,
+            "id": "27836191",
+            "isPreview": true,
+            "name": "Overview"
+          },
           {
             "chapterId": 70,
             "id": "25847734",
@@ -394,6 +430,102 @@
             "id": "25847737",
             "isPreview": false,
             "name": "Targeting Environment at Build Time: NativeScript"
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Project: Adding Shared Authentication to Apps",
+        "lessons": [
+          {
+            "chapterId": 80,
+            "id": "27836193",
+            "isPreview": true,
+            "name": "Overview"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790694",
+            "isPreview": false,
+            "name": "Auth0 Installation"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790682",
+            "isPreview": false,
+            "name": "Auth0 Environment Configuration"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790680",
+            "isPreview": false,
+            "name": "Generating an Authentication Feature Module"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790681",
+            "isPreview": false,
+            "name": "Shared Auth Service and Injection Token"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790690",
+            "isPreview": false,
+            "name": "NativeScript Authentication Module"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790687",
+            "isPreview": false,
+            "name": "Web Authentication Module"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790693",
+            "isPreview": false,
+            "name": "Importing Platform Auth Modules into Apps"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790684",
+            "isPreview": false,
+            "name": "Generating Login Page Feature for Routing"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790696",
+            "isPreview": false,
+            "name": "Generating Login Components"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790685",
+            "isPreview": false,
+            "name": "Authentication Service Implementation"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790691",
+            "isPreview": false,
+            "name": "Login Component Implementation"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790688",
+            "isPreview": false,
+            "name": "Callback Redirect Setup"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790686",
+            "isPreview": false,
+            "name": "Mobile Redirect Setup for iOS and Android"
+          },
+          {
+            "chapterId": 80,
+            "id": "27790683",
+            "isPreview": false,
+            "name": "Testing Auth Functionality"
           }
         ]
       }
