@@ -12,8 +12,7 @@ image: rtl-layouts-in-nativescript-poster.png
 RTL (right-to-left) and LTR (left-to-right) layout support is pretty common for apps catering to an international audience that supports multiple languages. However, building layouts that supports both orientation can be a challenge without the right tools. This is where I believe Nativescript's `FlexboxLayout` true power lies.
 
 
-![LTR Example](./rtl-layouts-ltr-small.png)
-![RTL Example](./rtl-layouts-rtl-small.png)
+![LTR/RTL Toggling Example](./rtl-mini-layouts.gif)
 
 
 We can use a combination of 3 properties to get a basic layout to flip between LTR and RTL. These includes:
@@ -35,7 +34,7 @@ For the purpose of this tutorial, lets create the above layout using `GridLayout
 ```
 
 
-![RTL Example](./rtl-layouts-rtl-small.png)
+![RTL Example](./rtl-layouts-ltr-small.png)
 
 
 ## With FlexboxLayout
@@ -51,7 +50,7 @@ For the purpose of this tutorial, lets create the above layout using `GridLayout
 </FlexboxLayout>
 ```
 
-![RTL Example](./rtl-layouts-rtl-small.png)
+![RTL Example](./rtl-layouts-ltr-small.png)
 
 ## With FlexboxLayout with RTL/LTR support
 
