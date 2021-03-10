@@ -80,10 +80,12 @@ export default class extends React.Component<
               <div className="video-container">
                 <div className="about-top-block">
                   <PageHeadingMain center>
-                    Online training webinar begins in{' '}
-                    <WebinarCountdownTimer style={{ color: '#e43145' }} />
+                    {/*Online training webinar begins in{' '}
+                    <WebinarCountdownTimer style={{ color: '#e43145' }} />*/}
+                    No webinar scheduled
                   </PageHeadingMain>
-                  <h2>Reserve your spot below</h2>
+                  {/*<h2>Reserve your spot below</h2>*/}
+                  <h2>Check back soon</h2>
 
                   <VidWrapper className="video-wrapper sm">
                     <iframe
@@ -97,6 +99,7 @@ export default class extends React.Component<
                 </div>
               </div>
 
+            {/*
               <div style={{ textAlign: 'center' }}>
                 <CTAWrapper>
                   <CTA
@@ -109,6 +112,7 @@ export default class extends React.Component<
                   <script src="https://event.webinarjam.com/register/ml3nqs7/embed-button"></script>
                 </CTAWrapper>
               </div>
+            */}
             </Wrapper>
           </PageSection>
         </ContentPageWrapper>
