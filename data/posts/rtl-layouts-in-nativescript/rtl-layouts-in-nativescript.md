@@ -14,6 +14,16 @@ RTL (right-to-left) and LTR (left-to-right) layout support is pretty common for 
 
 ![LTR/RTL Toggling Example](./rtl-mini-layouts.gif)
 
+Here's a video version of this post if you prefer learning via video.
+
+<br/><br/>
+
+<div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QzqI7PKp42o" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br/><br/>
+
 
 We can use a combination of 3 properties to get a basic layout to flip between LTR and RTL. These includes:
 - `flexDirection` - setting this to `row` will stack it from left to right, whereas setting this to `row-reverse` will stack it from right to left
