@@ -692,3 +692,50 @@ color: #032e74;
     font-weight: bold;
 }
 
+/* revampled lecture player */
+.revamped_lecture_player .course-sidebar {
+    background-color: inherit;
+}
+.revamped_lecture_player .course-sidebar .course-progress {
+    color: inherit;
+}
+.revamped_lecture_player .course-sidebar ul.sidebar-nav li.selected a {
+    background: inherit;
+    color: inherit;
+}
+.revamped_lecture_player .course-sidebar ul.sidebar-nav li a,
+.revamped_lecture_player .course-sidebar ul.sidebar-nav li a:hover {
+      background: inherit;
+    color: inherit;
+}
+.revamped_lecture_player .course-mainbar {
+    background: inherit;
+}
+.revamped_lecture_player .course-section .section-title {
+    background: inherit;
+}
+.revamped_lecture_player .course-section ul.section-list .section-item .item {
+    color: inherit;
+    background: inherit;
+}
+.revamped_lecture_player .course-section ul.section-list .section-item.incomplete .item:hover {
+    color: inherit;
+    background: #052D6F;
+    padding: 11px 16px;
+}
+.revamped_lecture_player .lecture-content.course-mainbar {
+        color: inherit;
+    background: inherit;
+}
+.revamped_lecture_player .course-sidebar-head {
+            color: inherit;
+    background: #052D6F;
+}
+.revamped_lecture_player .course-sidebar .course-progress.lecture-page.sticky {
+            color: inherit;
+    background: inherit !important;
+}
+.revamped_lecture_player .course-sidebar .row.lecture-sidebar .course-section .section-title {
+                color: inherit;
+    background: inherit !important;
+}
