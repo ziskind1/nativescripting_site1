@@ -4,7 +4,7 @@ title: 'Helpful Angular Directives for NativeScript #1'
 author: 'sergey_melashych'
 createdDate: '2021-04-04'
 updatedDate: '2021-04-04'
-draft: true
+draft: false
 tags: ['NativeScript', 'Tutorial', 'Angular', 'Directives']
 image: helpful-angular-directives-poster.png
 ---
