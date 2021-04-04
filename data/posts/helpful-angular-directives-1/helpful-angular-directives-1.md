@@ -4,15 +4,15 @@ title: 'Helpful Angular Directives for NativeScript #1'
 author: 'sergey_melashych'
 createdDate: '2021-04-04'
 updatedDate: '2021-04-04'
-draft: false
+draft: true
 tags: ['NativeScript', 'Tutorial', 'Angular', 'Directives']
 image: helpful-angular-directives-poster.png
 ---
 
-A while go I've finished one more project with NativeScript. During the period of work with this framework I've
-accumulated some amount of solutions which are quite steadily used in almost every project I had worked on and allow to
-quickly solve different typical tasks. In this article, I would like to share some Angular directives that I use in my
-NativeScript projects.
+A while ago I finished one more project with NativeScript. During the period of work with this framework I've
+accumulated some amount of solutions which are quite steadily used in almost every project I had worked on. 
+Each of them allows to quickly solve some typical task. In this article, I would like to share some Angular 
+directives that I use in my NativeScript projects.
 
 ## Centered Text label
 
@@ -24,7 +24,7 @@ promising
 |:---:|:---:|
 |iOS default text alignment in Labels|Android default text alignment in Labels|
 
-This can be easily changed by setting a ["gravity"][Android Gravity Docs] on the label which determines the object
+This can be easily changed by setting a ["gravity"][Android Gravity Docs] on the label. Gravity determines the object
 placement within a potentially larger container. So it could look something like this
 
 ```typescript
@@ -69,10 +69,10 @@ export class VerticalAlignDirective {
 Reading the `textAlignment` property of the label we define the horizontal text position also using "gravity".
 
 Actually, the initial idea was to create this directive even more general with the ability to fully control the vertical
-positioning of the text, however it is not possible for iOS unless we change label's frame. You can read more about
-it [here][iOS UILabel Vertical Alignment] but since it's not the flow we expect to get and setting vertical alignment
-different from the central positioning is a very rare case I've left the implementation of the directive as it is shown
-above.
+positioning of the text. Unfortunately it appeared that this is not possible for iOS unless we change label's frame. 
+You can read more about this topic [here][iOS UILabel Vertical Alignment]. Since it's not the flow we expect to get and 
+taking into account that setting vertical alignment different from the central positioning is a very rare case 
+I've left the implementation of the directive as it is shown above.
 
 ## Touch responsive
 
@@ -131,23 +131,24 @@ export class TouchResponsiveDirective {
     }
 }
 ```
+
 As you can see, it handles touch action and animates opacity of each child of the container it is applied to.
 Here you can find how it looks in action
 
 ![touchable ios](touchable-directive-ios.gif)
 
-Actually I use it for Android also since in most of my projects ripple effect was removed by design.
+Actually I use it for Android applications also since in most of my projects ripple effect is removed by design.
 However, if you need it - take a look at Alexander Ziskind's [example][Ripple Effect] of setting a
 Material Design Ripple Effect to your Views.
 
 ### Tappable icon
 
-Do you often use images as tappable elements? Pretty often, I think. So do I. Despite, images can be of different size
+Do you often use images as tappable elements? Pretty often, I think. So do I. Despite images can be of different size,
 we have to stick to the Touch target guidelines. They state that target size should be 
 at least [48x48dp for Android][Android Touch Area Guideline] and [44x44dp for iOS][iOS Touch Area Guideline].
 
-So for such cases I've created a simple component
-(yeah, yeah, I know, we've talked about directives. I hope you'll forgive me this small deviation) which allows me to use images as
+So for such cases I've created a simple component (yeah, yeah, I know, we've talked about directives. 
+I hope you'll forgive me this small deviation) which allows using images as
 clickable elements and guarantee the touchable area size
 
 ```typescript
@@ -185,10 +186,10 @@ export class TappableIconComponent {
 ```
 I prefer using svg icons for images so here I've used `SVGImage` component from 
 the [`nativescript-svg` plugin][NativeScript SVG Plugin], however 
-you can slightly change the code to use simple `Image`s.
+you can slightly modify the code to use simple `Image`s.
 
-Please note the `iosOverflowSafeAreaEnabled="false"` property which is required to not break the icon layout if it
-is used close to the screen edges. Otherwise, it can be stretched which is not the behavior we expect.
+Please note the `iosOverflowSafeAreaEnabled="false"` property. It is required to not break the icon layout if it
+is used close to the screen edges. Otherwise, the icon container can be stretched what is not the behavior we expect.
 
 After you have such component you can simply use it wherever you need like
 
@@ -203,12 +204,12 @@ that allow you to manage your touch area size directly.
 
 ## Searchbar without autofocus
 
-`SearchBar` is a big headache for me and usually I prefer to use some custom-composed element instead of a native `SearchBar`
+`SearchBar` is a big headache for me and usually I prefer using some custom-composed element instead of a native `SearchBar`
 since it is difficult to stylize. However, it has an interesting feature which can be useful in some cases and useless in the others.
 What feature am I talking about? If your page contains `SearchBar` on Android it will automatically
 be focused and keyboard will be triggered. In some of my projects such behavior provided not so good user experience, so I had to find the way
 to disable it. Actually, it can be disabled very easily by calling `clearFocus` on the android `SearchView` after it was loaded. Thus, I implemented 
-a directive, so this logic could be effectively applied in places where it is required.
+a directive and this logic could be effectively applied in places where it is required.
 
 ```typescript
 import {Directive, HostListener} from '@angular/core';
@@ -228,15 +229,17 @@ export class SearchbarClearFocusDirective {
 ```
 ## Afterwords
 
-In this article I've shared several examples of solutions that I move from one NativeScript project to another since
+In this article I've shared several examples of solutions that I take from one NativeScript project to another since
 they solve some commonly arising tasks. I want to emphasize that each of them was based on the Angular techniques,
 so they are not straightforwardly applicable i.e. for the NativeScript Vue project. However, the general ideas shared between
 frameworks are usually very similar, so I think the information from the article was helpful for you in any case.
 
-I've optimistically added #1 to the article title since I think I have more similar solutions to share and new ones
-will appear, so I'm going to continue this series. I appreciate if you share your feedback and suggestions in comments under the article.
+I've optimistically added #1 to the article title since I think I have other similar solutions to share and more
+will appear in the future, so I'm going to continue this series. 
+I appreciate if you share your feedback and suggestions in comments under the article.
 
-In addition, I'd kindly ask you to vote which topic from the listed below would be the most interesting for you, so I could share it first.
+In addition, I'd kindly ask you to vote which topic from the listed below could be the most interesting for you, 
+and I will share it first.
 
 <iframe src="https://linkto.run/p/Q7M5NWBI" width="100%"></iframe>
 
