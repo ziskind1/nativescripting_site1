@@ -23,6 +23,7 @@ promising
 |![iOS Default](center-text-ios-default.png)|![Android Default](center-text-android-default.png)|
 |:---:|:---:|
 |_iOS text alignment_|_Android text alignment_|
+<br>
 
 This can be easily changed by setting a ["gravity"][Android Gravity Docs] on the label. Gravity determines the object
 placement within a potentially larger container. So it could look something like this
