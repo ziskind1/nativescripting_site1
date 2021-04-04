@@ -17,12 +17,14 @@ directives that I use in my NativeScript projects.
 ## Centered Text label
 
 Sometimes when you have a `Label` of specific size with some text on it, you expect
-this text to be vertically centered. And it really works this way on iOS. Unfortunately, on Android the result looks not so
+this text to be vertically centered. And it really works this way on iOS. 
+
+![iOS Default](center-text-ios-default.png)
+
+Unfortunately, on Android the result looks not so
 promising
 
-|![iOS Default](center-text-ios-default.png)|![Android Default](center-text-android-default.png)|
-|:---:|:---:|
-|iOS default text alignment in Labels|Android default text alignment in Labels|
+![Android Default](center-text-android-default.png)
 
 This can be easily changed by setting a ["gravity"][Android Gravity Docs] on the label. Gravity determines the object
 placement within a potentially larger container. So it could look something like this
