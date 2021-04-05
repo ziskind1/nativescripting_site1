@@ -32,6 +32,7 @@ export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
     title = postMeta.title;
     description = postNode.excerpt;
     image = postNode.frontmatter.image.childImageSharp.fluid.src;
+    //image = postMeta.image.publicURL;
     pageUrl = SiteConfig.siteUrl + realPrefix + postPath;
     creator = post.author.twitter
       ? `@${post.author.twitter}`
@@ -120,6 +121,10 @@ export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
         {
           content: title,
           property: 'og:title'
+        },
+        {
+          content: image,
+          property: 'og:image'
         },
         {
           content: description,
