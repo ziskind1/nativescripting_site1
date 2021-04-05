@@ -2,8 +2,8 @@
 path: "/posts/nativescript-custom-push-notification-sounds"
 title: "Add Custom Sounds to your Push Notifications"
 author: "william_tjondrosuharto"
-createdDate: "2021-03-13"
-updatedDate: "2021-03-13"
+createdDate: "2021-04-06"
+updatedDate: "2021-04-06"
 draft: false
 tags: ["NativeScript", "Tutorial", "Notifications", "Android", "iOS"]
 image: nativescript-custom-push-notification-sounds-poster.png
