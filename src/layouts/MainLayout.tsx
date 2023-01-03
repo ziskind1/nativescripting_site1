@@ -11,7 +11,7 @@ import '../../node_modules/normalize.css/normalize.css';
 import { AnnouncementBanner } from '../components/shared/AnnouncementBanner/AnnouncementBanner';
 import Snackbar, { showSnackbar } from '../components/shared/Snackbar/Snackbar';
 
-//import '../css/styles.css';
+import '../css/styles.css';
 
 let signUpsData: SignUpsDataItem[] = [];
 

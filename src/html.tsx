@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === `production`) {
 }
 */
 
-styles = require('!raw-loader!./css/styles.css');
+styles = require('!!raw-loader!./css/styles.css');
 
 interface HtmlProps {
   body: any;

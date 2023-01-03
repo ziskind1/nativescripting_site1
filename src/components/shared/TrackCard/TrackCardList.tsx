@@ -28,9 +28,9 @@ export const TrackCardList: React.StatelessComponent<TrackCardListProps> = (
     const numCoursesAngular = props.courses.filter(c => c.flavors.includes('Angular')).length;
     const numCoursesVue = props.courses.filter(c => c.flavors.includes('Vue')).length;
 
-    const numBundlesCore = props.tracks.find(t => t.id === 'core').bundles.length;
-    const numBundlesAngular = props.tracks.find(t => t.id === 'angular').bundles.length;
-    const numBundlesVue = props.tracks.find(t => t.id === 'vue').bundles.length;
+    const numBundlesCore = props.tracks.find(t => t.title.toLowerCase().includes('core')).bundles.length;
+    const numBundlesAngular = props.tracks.find(t => t.title.toLowerCase().includes('angular')).bundles.length;
+    const numBundlesVue = props.tracks.find(t => t.title.toLowerCase().includes('vue')).bundles.length;
 
 
     return (

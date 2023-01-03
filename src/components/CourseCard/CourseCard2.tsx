@@ -89,7 +89,7 @@ export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
       courseLabelClassName = 'course-tag';
   }
 
-  const authorImgSrc = getAuthorImgSrc(firstAuthor.picture);
+  //const authorImgSrc = getAuthorImgSrc(firstAuthor.picture);
 
   const courseIconHtml = getCourseIconHtml(props.course);
 
