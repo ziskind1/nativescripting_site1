@@ -6,8 +6,6 @@ import { Author, asContentType } from '../models';
 export function authorFromAuthorsJsonEdge(edge: Queries.AuthorsJsonEdge): Author {
     const n = edge.node;
 
-    console.log('HHH');
-    console.dir(n);
     return {
         authorId: n.authorId,
         name: n.name,
