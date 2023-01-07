@@ -7,17 +7,13 @@ import { CourseCoverage } from '../CourseCoverage/CourseCoverage';
 
 import './CourseMeta.css';
 
-
-
-
 interface CourseMetaProps {
     course: Course;
 }
 
-export const CourseMeta: React.StatelessComponent<CourseMetaProps> = (props: CourseMetaProps) => {
+export const CourseMeta = (props: CourseMetaProps) => {
 
     const course = props.course;
-
 
     return (
         <div className="course-meta-container">

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import * as querystring from 'query-string';
+import querystring from 'query-string';
 
 import { ContactPageForm } from './contact-page-form';
 import { colors } from '../../global/colors';
@@ -38,9 +38,7 @@ export type ContactType =
   | 'affiliates'
   | undefined;
 
-export const ContactComponent: React.StatelessComponent<
-  ContactComponentProps
-> = (props: ContactComponentProps) => {
+export const ContactComponent = (props: ContactComponentProps) => {
   const qs = querystring.parse(props.location.search);
   const contactType = props.contactType
     ? props.contactType

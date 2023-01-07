@@ -1,7 +1,7 @@
 import { Lesson } from './lesson.model';
 
 export interface Chapter {
-    id: number;
+    chapterId: number;
     name: string;
     lessons: Lesson[];
 }

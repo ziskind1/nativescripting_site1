@@ -1,5 +1,5 @@
 import { Author } from "../author.model";
-import { File as ImageFile } from "../../graphql-types";
+
 
 export interface Post {
     title: string;
@@ -9,5 +9,5 @@ export interface Post {
     updatedDate: string;
     timeLength: string;
     author: Author;
-    image: ImageFile;
+    image:  Queries.File;
 }

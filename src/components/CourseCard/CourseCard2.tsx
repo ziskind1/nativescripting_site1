@@ -56,7 +56,7 @@ function getCourseLevelHtml(course: Course): JSX.Element {
   );
 }
 
-export const CourseCard2: React.StatelessComponent<CourseCard2Props> = (
+export const CourseCard2 = (
   props: CourseCard2Props
 ) => {
   const course = props.course;

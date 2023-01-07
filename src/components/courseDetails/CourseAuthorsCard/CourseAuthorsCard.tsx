@@ -9,9 +9,7 @@ interface CourseAuthorsCardProps {
   authors: Author[];
 }
 
-export const CourseAuthorsCard: React.StatelessComponent<
-  CourseAuthorsCardProps
-> = (props: CourseAuthorsCardProps) => {
+export const CourseAuthorsCard = (props: CourseAuthorsCardProps) => {
   const authors = props.authors;
 
   const authorCardTitle = authors.length > 1 ? 'Authors' : 'Author';
@@ -21,7 +19,7 @@ export const CourseAuthorsCard: React.StatelessComponent<
     const authorImgSrc = getAuthorImgSrc(a.picture, 100);
 
     return (
-      <div key={a.id} className="course-author-block">
+      <div key={a.authorId} className="course-author-block">
         <div className="course-author-name-block">
           <div>
             <h3>{a.name}</h3>

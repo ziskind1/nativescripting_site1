@@ -12,7 +12,7 @@ interface CourseDetailsBodyProps {
 }
 
 
-export const CourseDetailsBody: React.StatelessComponent<CourseDetailsBodyProps> = (props: CourseDetailsBodyProps) => {
+export const CourseDetailsBody = (props: CourseDetailsBodyProps) => {
     return (
         <div className="course-details-body-container">
             <CourseCurriculum course={props.course} />

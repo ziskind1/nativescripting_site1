@@ -53,9 +53,9 @@ function getPriceBlockHtml(selectedProduct: Product) {
 
 function getCourseActionUrl(course: Course, product: Product) {
   if (product.licensesMin === 1 && product.code) {
-    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}&coupon=${product.code}`;
+    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.productId}&course_id=${course.courseId}&coupon=${product.code}`;
   } else {
-    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.id}&course_id=${course.id}`;
+    return `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${product.productId}&course_id=${course.courseId}`;
   }
 }
 
@@ -67,7 +67,7 @@ export class CoursePurchaseArea extends React.Component<
     super(props);
 
     const selectedProduct = props.course.products.find(
-      p => p.licensesMax === 1
+      p => p.licensesMin === 1
     );
 
     this.state = {
@@ -89,7 +89,7 @@ export class CoursePurchaseArea extends React.Component<
 
     const paymentPlanHtml =
       paymentPlans.length > 0 ? (
-        <PaymentPlanOption courseId={course.id} paymentPlans={paymentPlans} />
+        <PaymentPlanOption courseId={course.courseId} paymentPlans={paymentPlans} />
       ) : null;
 
     return (

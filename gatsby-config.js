@@ -14,6 +14,7 @@ module.exports = {
     siteName: `NativeScript Courses`,
     siteUrl: config.siteUrl + pathPrefix,
   },
+  graphqlTypegen: true,
   plugins: [
     // Add typescript stack into webpack
     'gatsby-plugin-styled-components',

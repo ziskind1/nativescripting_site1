@@ -1,6 +1,6 @@
 export interface Lesson {
     chapterId: number;
-    id: string;
+    lessonId: string;
     name: string;
     lessonNumber: number;
     isPreview: boolean;

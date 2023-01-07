@@ -20,7 +20,7 @@ margin-top: 40px;
 `;
 
 
-export const TrackCardList: React.StatelessComponent<TrackCardListProps> = (
+export const TrackCardList = (
     props: TrackCardListProps
 ) => {
 

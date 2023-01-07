@@ -1,24 +1,26 @@
-import { CoursesJsonProducts, BundlesJsonProducts } from '../graphql-types';
+
 import { Product, ProdType } from '../models';
 
-function descriptionLegible(p: CoursesJsonProducts | BundlesJsonProducts) {
-  if (!p.licensesMax) {
-    p.licensesMax = p.licensesMin;
+function descriptionLegible(p: Queries.CoursesJsonProducts | Queries.BundlesJsonProducts) {
+  let licMin = p.licensesMin;
+  let licMax = p.licensesMax;
+  if (!licMax) {
+    licMax = licMin;
   }
-  if (p.licensesMax === 1) {
+  if (licMax === 1) {
     return `1 user`;
-  } else if (p.licensesMin === p.licensesMax) {
-    return `${p.licensesMin} users`;
+  } else if (licMin === licMax) {
+    return `${licMin} users`;
   } else {
-    return `${p.licensesMin}-${p.licensesMax} users`;
+    return `${licMin}-${licMax} users`;
   }
 }
 
 export function productFromCoursesJsonProducts(
-  p: CoursesJsonProducts
+  p: Queries.CoursesJsonProducts
 ): Product {
   return {
-    id: p.id,
+    productId: p.productId,
     name: p.name,
     description: descriptionLegible(p),
     licensesMin: p.licensesMin,
@@ -33,10 +35,10 @@ export function productFromCoursesJsonProducts(
 }
 
 export function productFromBundlesJsonProducts(
-  p: BundlesJsonProducts
+  p: Queries.BundlesJsonProducts
 ): Product {
   return {
-    id: p.id,
+    productId: p.productId,
     name: p.name,
     description: descriptionLegible(p),
     licensesMin: p.licensesMin,

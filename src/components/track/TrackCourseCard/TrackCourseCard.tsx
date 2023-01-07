@@ -183,7 +183,7 @@ const Badge = styled.div`
     }
     `;
 
-export const TrackCourseCard: React.FunctionComponent<TrackCourseCardProps> = (
+export const TrackCourseCard = (
     props: TrackCourseCardProps
 ) => {
     const course = props.course;

@@ -9,7 +9,7 @@ export interface BundleCourseProps {
     course: Course;
 }
 
-const BundleCourse: React.StatelessComponent<BundleCourseProps> = (props: BundleCourseProps) => {
+const BundleCourse = (props: BundleCourseProps) => {
     const course = props.course;
 
     return (

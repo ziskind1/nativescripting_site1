@@ -4,9 +4,7 @@ import { Link } from 'gatsby';
 import './Snackbar.css';
 import { SignUpsDataItem } from '../../../layouts/MainLayout';
 
-const Snackbar: React.StatelessComponent<{
-  children?: any;
-}> = ({ children }) => {
+const Snackbar = () => {
   return (
     <div id="snackbar">
       <h4>Ben Johnsonson</h4>

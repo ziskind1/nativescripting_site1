@@ -35,11 +35,7 @@ outline: none;
 line-height: 28px;
 `;
 
-export const FormTextInput: React.StatelessComponent<
-    FormTextInputProps
-> = (props: FormTextInputProps) => {
-
-
+export const FormTextInput = (props: FormTextInputProps) => {
 
     return (
         <ILabel>

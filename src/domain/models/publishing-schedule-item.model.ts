@@ -1,4 +1,4 @@
 export interface PublishingScheduleItem {
-  id: number;
+  publishingScheduleItemId: number;
   date: Date;
 }

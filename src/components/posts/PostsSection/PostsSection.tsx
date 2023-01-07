@@ -7,7 +7,7 @@ interface PostsSectionProps {
     posts: Post[]
 }
 
-export const PostsSection: React.StatelessComponent<PostsSectionProps> = (props: PostsSectionProps) => {
+export const PostsSection = (props: PostsSectionProps) => {
 
     const postsHtml = props.posts.map((post, idx) => {
         return (

@@ -1,18 +1,17 @@
 import { defaultArray } from '../core';
-import { BundlesJsonEdge } from '../graphql-types';
 import { productFromBundlesJsonProducts } from './product-types';
 import { Course, asCourseLevel, asCourseFlavorType, Bundle } from '../models';
 
 export function bundleFromBundlesJsonEdge(
-  edge: BundlesJsonEdge,
-  allCourses: Course[]
+  edge: Queries.BundlesJsonEdge,
+  allCourses: Course[],
 ): Bundle {
   const n = edge.node;
 
-  const courses = n.courseIds.map(id => allCourses.find(c => c.id === id));
+  const courses = n.courseIds.map(id => allCourses.find(c => c.courseId === id));
 
   return {
-    id: n.id,
+    bundleId: n.bundleId,
     title: n.title,
     url: n.url,
     bundleLevel: n.bundleLevel,
@@ -24,3 +23,4 @@ export function bundleFromBundlesJsonEdge(
     products: defaultArray(n.products).map(productFromBundlesJsonProducts)
   };
 }
+

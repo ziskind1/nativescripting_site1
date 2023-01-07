@@ -1,12 +1,12 @@
-import { CoursesJsonChaptersLessons, PreviewsJsonLessonPreviews } from '../graphql-types';
+
 import { Lesson } from '../models';
 
-export function lessonFromLesson_2(l: CoursesJsonChaptersLessons, index: number, lessonPreviews: PreviewsJsonLessonPreviews[]): Lesson {
+export function lessonFromLesson_2(l: Queries.CoursesJsonChaptersLessons, index: number, lessonPreviews: readonly Queries.PreviewsJsonLessonPreviews[]): Lesson {
 
-  const prev = lessonPreviews.find(p => p.lessonId === l.id);
+  const prev = lessonPreviews.find(p => p.lessonId === l.lessonId);
 
   return {
-    id: l.id,
+    lessonId: l.lessonId,
     chapterId: l.chapterId,
     name: l.name,
     lessonNumber: index,

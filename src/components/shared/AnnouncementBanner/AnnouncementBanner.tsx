@@ -29,9 +29,7 @@ const AnnounceText = styled.span`
     font-weight: bold;
 `;
 
-export const AnnouncementBanner: React.StatelessComponent<
-AnnouncementBannerProps
-> = (props: AnnouncementBannerProps) => {
+export const AnnouncementBanner = (props: AnnouncementBannerProps) => {
 
     // This combines the incoming style with the debug border
     const style = { ...(props.style ? props.style : {}), ...(DEBUG_LAYOUT ? debugBorderRed : {}) };

@@ -11,7 +11,7 @@ export interface DescriptionHtmlSection {
 }
 
 export interface Course {
-  id: string;
+  courseId: string;
   title: string;
   subtitle: string;
   description: string;

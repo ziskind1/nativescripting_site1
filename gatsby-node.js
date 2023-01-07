@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
           totalCount
           edges {
             node {
-              id
+              courseId
               title
               flavors
               url
@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
           totalCount
           edges {
             node {
-              id
+              trackId
               levels {
                 levelId
                 title
@@ -144,10 +144,10 @@ const createTrackPages = (createPage, tracks) => {
   tracks.forEach(o => {
     const track = o.node;
     createPage({
-      path: `/track/${track.id}`,
+      path: `/track/${track.trackId}`,
       component: template,
       context: {
-        trackId: track.id
+        trackId: track.trackId
       }
     });
   });
@@ -211,9 +211,9 @@ const createPostPages = (createPage, posts, postsPerPage, numPages) => {
     const prevPath = prev && prev.node && prev.node.frontmatter.path;
     const nextPath = next && next.node && next.node.frontmatter.path;
 
-    console.log(
-      'creating post: ' + node.frontmatter.path + ' , next path: ' + nextPath
-    );
+    //console.log(
+    //  'creating post: ' + node.frontmatter.path + ' , next path: ' + nextPath
+    //);
 
     createPage({
       path: node.frontmatter.path,

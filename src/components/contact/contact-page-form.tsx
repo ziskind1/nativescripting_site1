@@ -102,7 +102,7 @@ export class ContactPageForm extends React.Component<
   constructor(props: ContactPageFormProps) {
     super(props);
 
-    console.log('CONTACT TYpE:', this.props.contactType);
+    //console.log('CONTACT TYpE:', this.props.contactType);
 
     this.state = {
       submitted: false,

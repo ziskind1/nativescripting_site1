@@ -3,7 +3,7 @@ import { Product } from './product.model';
 
 
 export interface Bundle {
-    id: string;
+    bundleId: string;
     title: string;
     subtitle: string;
     description: string;

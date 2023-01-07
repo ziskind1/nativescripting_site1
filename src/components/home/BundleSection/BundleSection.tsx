@@ -70,7 +70,7 @@ export interface BundleSectionProps {
   bg?: string;
 }
 
-const BundleSection: React.StatelessComponent<BundleSectionProps> = (
+const BundleSection = (
   props: BundleSectionProps
 ) => {
 

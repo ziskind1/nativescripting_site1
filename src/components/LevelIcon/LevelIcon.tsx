@@ -16,7 +16,7 @@ function getLevelIconImgSrc(level: CourseLevel): string {
   }
 }
 
-const LevelIcon: React.StatelessComponent<LevelIconProps> = (
+const LevelIcon = (
   props: LevelIconProps
 ) => {
   const imgSrc = getLevelIconImgSrc(props.level);

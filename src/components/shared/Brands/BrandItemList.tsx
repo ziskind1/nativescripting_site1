@@ -19,7 +19,7 @@ font: inherit;
 vertical-align: baseline;
 `;
 
-export const BrandItemList: React.StatelessComponent<BrandItemListProps> = (
+export const BrandItemList = (
     props: BrandItemListProps
 ) => {
     return (

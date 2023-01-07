@@ -18,8 +18,8 @@ interface BundleCardState {
 function getBundleActionUrl(bundle: Bundle, product: Product) {
   //const url = `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=` + product.id + `&course_id=` + bundle.id;
   const url = `https://sso.teachable.com/secure/89912/checkout/confirmation?product_id=${
-    product.id
-  }&course_id=${bundle.id}`;
+    product.productId
+  }&course_id=${bundle.bundleId}`;
   return url;
 }
 
@@ -63,7 +63,7 @@ export default class BundleCard extends React.Component<
     super(props);
 
     const selectedProduct = props.bundle.products.find(
-      p => p.licensesMax === 1
+      p => p.licensesMin === 1
     );
 
     this.state = {

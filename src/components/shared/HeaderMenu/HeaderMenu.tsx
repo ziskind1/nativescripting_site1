@@ -10,7 +10,7 @@ import {
   MenuDowndownDataCat,
   MenuDowndownDataCatItem
 } from './MenuDropdownItem';
-import { CoursesJsonConnection } from '../../../domain/graphql-types';
+
 import { courseFromCoursesJsonEdge } from '../../../domain/converters';
 
 const Container = styled.div`
@@ -25,7 +25,7 @@ const Container = styled.div`
 
 interface HeaderMenuProps {
   data: {
-    coursesConnection: CoursesJsonConnection;
+    coursesConnection: Queries.CoursesJsonConnection;
   };
 }
 interface HeaderMenuState {
@@ -236,7 +236,7 @@ export const headerMenuQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          courseId
           title
           flavors
           url
@@ -245,7 +245,7 @@ export const headerMenuQuery = graphql`
           level
           order
           products {
-            id
+            productId
             name
             description
             licensesMin

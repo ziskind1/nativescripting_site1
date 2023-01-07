@@ -28,9 +28,7 @@ export const PageHeadingMainInternal = styled.h1`
 `;
 
 
-export const PageHeadingMain: React.StatelessComponent<
-    PageHeadingMainProps
-> = (props: PageHeadingMainProps) => {
+export const PageHeadingMain = (props: PageHeadingMainProps) => {
 
     const style: React.CSSProperties = { textAlign: props.center ? 'center' : 'left' };
 

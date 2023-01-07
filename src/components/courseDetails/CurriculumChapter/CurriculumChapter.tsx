@@ -12,9 +12,7 @@ interface CurriculumChapterProps {
   courseSlug: string;
 }
 
-export const CurriculumChapter: React.StatelessComponent<
-  CurriculumChapterProps
-> = (props: CurriculumChapterProps) => {
+export const CurriculumChapter = (props: CurriculumChapterProps) => {
   const lessonsHtml = props.chapter.lessons.map((lesson, idx) => {
     return (
       <li key={idx}>

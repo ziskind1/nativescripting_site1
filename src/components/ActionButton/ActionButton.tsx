@@ -29,7 +29,7 @@ function getBtnClassName(type: ActionBtnType, clear: boolean) {
   }
 }
 
-const ActionButton: React.StatelessComponent<ActionButtonProps> = (
+const ActionButton = (
   props: ActionButtonProps
 ) => {
   const className = getBtnClassName(props.type, props.clear);

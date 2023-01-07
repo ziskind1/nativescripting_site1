@@ -9,7 +9,7 @@ export interface TestimonialsProps {
   testimonials: Testimonial[];
 }
 
-const Testimonials: React.StatelessComponent<TestimonialsProps> = (
+const Testimonials = (
   props: TestimonialsProps
 ) => {
   const testimonialsHtml = props.testimonials.map((t, i) => {

@@ -13,9 +13,7 @@ background-repeat: no-repeat;
 background-attachment: initial;
 `;
 
-export const ContentPageWrapper: React.StatelessComponent<
-    ContentPageProps
-> = (props: ContentPageProps) => {
+export const ContentPageWrapper = (props: ContentPageProps) => {
 
 
     return (

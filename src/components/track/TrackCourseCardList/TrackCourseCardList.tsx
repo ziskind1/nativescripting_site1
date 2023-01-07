@@ -18,7 +18,7 @@ flex-direction: row;
 flex-wrap: wrap;
 `;
 
-export const TrackCourseCardList: React.StatelessComponent<TrackCourseCardListProps> = (
+export const TrackCourseCardList = (
     props: TrackCourseCardListProps
 ) => {
 

@@ -15,16 +15,15 @@ function getLessonActionUrl(courseSlug: string, lessonId: string) {
   return `http://nativescripting.teachable.com/courses/${courseSlug}/lectures/${lessonId}`;
 }
 
-export const CurriculumLesson: React.StatelessComponent<
-  CurriculumLessonProps
-> = (props: CurriculumLessonProps) => {
+export const CurriculumLesson = (props: CurriculumLessonProps) => {
   const actionText = props.lesson.isPreview ? 'Preview' : 'Start';
   const actionLinkClassName = props.lesson.isPreview
     ? 'lesson-preview-link'
     : 'lesson-start-link';
 
-  const lessonActionUrl = getLessonActionUrl(props.courseSlug, props.lesson.id);
-  const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+  const lessonActionUrl = getLessonActionUrl(props.courseSlug, props.lesson.lessonId);
+  const dateOptions: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+  
   const lessonDate = props.chapterPublishScheduleItem
     ? 'Coming ' +
       props.chapterPublishScheduleItem.date.toLocaleDateString(

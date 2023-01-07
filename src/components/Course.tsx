@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-const Course: React.StatelessComponent<{
+type CourseProps = {
   children: any;
   courseName: string;
   to: string;
-}> = ({ children, courseName, to }) => {
+};
+
+const Course = ({ children, courseName, to }: CourseProps ) => {
   return (
     <div>
       <h2>{courseName}</h2>

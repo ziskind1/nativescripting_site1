@@ -1,11 +1,11 @@
-export type AuthorType = 'post' | 'course';
+export type ContentType = 'post' | 'course';
 
-export function asAuthorType(stStr: AuthorType): AuthorType {
+export function asContentType(stStr: ContentType): ContentType {
     return stStr;
 }
 
 export interface Author {
-    id: string;
+    authorId: string;
     name: string;
     picture: string;
     bio: string;
@@ -13,11 +13,11 @@ export interface Author {
     title: string;
     twitter: string;
     github: string;
-    types: AuthorType[];
+    contentTypes: ContentType[];
 }
 
 export function toAuthor(
-    id: string,
+    authorId: string,
     name: string,
     picture: string,
     bio: string,
@@ -25,10 +25,10 @@ export function toAuthor(
     title: string,
     twitter: string,
     github: string,
-    types: AuthorType[],
+    contentTypes: ContentType[],
 ): Author {
     return {
-        id,
+        authorId,
         name,
         picture,
         bio,
@@ -36,6 +36,6 @@ export function toAuthor(
         title,
         twitter,
         github,
-        types,
+        contentTypes,
     }
 }

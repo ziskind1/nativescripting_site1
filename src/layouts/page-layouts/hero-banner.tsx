@@ -14,9 +14,7 @@ text-align: center;
 padding: 30px;
 `;
 
-export const HeroBanner: React.StatelessComponent<
-    HeroBannerProps
-> = (props: HeroBannerProps) => {
+export const HeroBanner = (props: HeroBannerProps) => {
 
 
     return (

@@ -22,9 +22,7 @@ const Footer = styled.footer`
 
 
 
-export const Footer2: React.StatelessComponent<
-    Footer2Props
-> = (props: Footer2Props) => {
+export const Footer2 = (props: Footer2Props) => {
 
 
     // This combines the incoming style with the debug border

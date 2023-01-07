@@ -9,7 +9,7 @@ export interface BundleCardListProps {
     bundles: Bundle[];
 }
 
-const BundleCardList: React.StatelessComponent<BundleCardListProps> = (props: BundleCardListProps) => {
+const BundleCardList = (props: BundleCardListProps) => {
 
     const html = props.bundles.map((bundle, idx) => {
         return (

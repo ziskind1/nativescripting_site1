@@ -8,7 +8,7 @@ interface PostsListEntryProps {
   post: Post;
 }
 
-export const PostsListEntry: React.StatelessComponent<PostsListEntryProps> = (
+export const PostsListEntry  = (
   props: PostsListEntryProps
 ) => {
   const post = props.post;

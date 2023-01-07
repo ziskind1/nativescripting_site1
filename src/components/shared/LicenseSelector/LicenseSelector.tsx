@@ -35,7 +35,7 @@ export default class LicenseSelector extends React.Component<
     return products.map((p, idx) => {
       //const prodClassName = p.id === selectedProduct.id ? 'license selected' : 'license';
       const licenseClassName =
-        p.id === selectedProduct.id ? 'active noselect' : 'noselect';
+        p.productId === selectedProduct.productId ? 'active noselect' : 'noselect';
 
       return (
         <li key={idx}>
@@ -88,7 +88,7 @@ export default class LicenseSelector extends React.Component<
     return new Promise<T>((resolve, reject) =>
       this.setState({ selectedProduct: product }, () => {
         this.props.onLicenseSelect(product);
-        resolve();
+        resolve(undefined);
       })
     );
   }

@@ -40,13 +40,13 @@ function getFilterOptionsHtml(
   });
 }
 
-export const CourseFilter: React.StatelessComponent<CourseFilterProps> = (
+export const CourseFilter = (
   props: CourseFilterProps
 ) => {
   function selectFilterOption<T>(option: CourseFilterType): Promise<T> {
     return new Promise<T>((resolve, reject) => {
       props.onSelectFilterType(option);
-      resolve();
+      resolve(undefined);
     });
   }
 

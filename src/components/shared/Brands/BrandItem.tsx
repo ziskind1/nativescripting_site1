@@ -34,7 +34,7 @@ color: white;
 fill: #ffffff;
 `;
 
-export const BrandItem: React.StatelessComponent<BrandItemProps> = (
+export const BrandItem = (
     props: BrandItemProps
 ) => {
 

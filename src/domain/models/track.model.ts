@@ -13,7 +13,7 @@ export interface TrackBundle {
 }
 
 export interface Track {
-    id: string;
+    trackId: string;
     title: string;
     description: string;
     imgSrc: string;

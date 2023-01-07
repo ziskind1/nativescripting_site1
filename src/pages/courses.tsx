@@ -4,14 +4,6 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import {
-  AuthorsJsonConnection,
-  CoursesJsonConnection,
-  BundlesJsonConnection,
-  TestimonialsJsonConnection,
-  TracksJsonConnection
-} from '../domain/graphql-types';
-
-import {
   authorFromAuthorsJsonEdge,
   courseFromCoursesJsonEdge,
   testimonialFromTestimonialJsonEdge,
@@ -47,11 +39,11 @@ import SubHeroSection3 from '../components/home/SubHeroSection/SubHeroSection3';
 // to generate all types from graphQL schema
 interface IndexPageProps {
   data: {
-    authorsConnection: AuthorsJsonConnection;
-    coursesConnection: CoursesJsonConnection;
-    bundlesConnection: BundlesJsonConnection;
-    tracksConnection: TracksJsonConnection;
-    testimonialsConnection: TestimonialsJsonConnection;
+    authorsConnection: Queries.AuthorsJsonConnection;
+    coursesConnection: Queries.CoursesJsonConnection;
+    bundlesConnection: Queries.BundlesJsonConnection;
+    tracksConnection: Queries.TracksJsonConnection;
+    testimonialsConnection: Queries.TestimonialsJsonConnection;
   };
 }
 
@@ -158,7 +150,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
           pageTitle="All available courses"
           courses={filteredCourses}
           selectedFilterType={this.state.selectedFilterType}
-          onSelectFilterType={filterType => this.filterByFilterType(filterType)}
+          onSelectFilterType={(filterType: any) => this.filterByFilterType(filterType)}
         />
 
         <Logos />
@@ -204,11 +196,11 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 export const coursesPageQuery = graphql`
   query CoursesPageQuery {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
+    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "course" } }) {
       totalCount
       edges {
         node {
-          id
+          authorId
           title
           name
           picture
@@ -216,6 +208,7 @@ export const coursesPageQuery = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }
@@ -225,7 +218,7 @@ export const coursesPageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          courseId
           title
           flavors
           url
@@ -234,7 +227,7 @@ export const coursesPageQuery = graphql`
           level
           order
           products {
-            id
+            productId
             name
             description
             licensesMin
@@ -250,7 +243,7 @@ export const coursesPageQuery = graphql`
     bundlesConnection: allBundlesJson {
       edges {
         node {
-          id
+          bundleId
           title
           subtitle
           description
@@ -260,7 +253,7 @@ export const coursesPageQuery = graphql`
           courseIds
           bundleLevel
           products {
-            id
+            productId
             name
             description
             pricesale
@@ -277,11 +270,11 @@ export const coursesPageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          trackId
           title
           description
           bundles {
-            id
+            bundleId
             order
             description
           }
@@ -301,7 +294,7 @@ export const coursesPageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          testimonialId
           name
           img
           twitter

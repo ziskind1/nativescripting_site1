@@ -8,14 +8,14 @@ export interface CourseBundleAreaProps {
   bundles: Bundle[];
 }
 
-export const CourseBundleArea: React.StatelessComponent<
-  CourseBundleAreaProps
-> = (props: CourseBundleAreaProps) => {
+export const CourseBundleArea = (props: CourseBundleAreaProps) => {
   return (
     <div className="course-bundle-area-container">
       <h2>All available bundles</h2>
 
+{ /*
       <BundleCardList bundles={props.bundles} />
+  */}
     </div>
   );
 };

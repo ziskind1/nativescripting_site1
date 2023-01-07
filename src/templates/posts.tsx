@@ -3,10 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
-import {
-  AuthorsJsonConnection,
-  MarkdownRemarkConnection
-} from '../domain/graphql-types';
+
 import { Author } from '../domain/models';
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 import { postFromMarkdownRemark } from '../domain/converters/post-types';
@@ -23,8 +20,8 @@ import { Seo } from '../components/shared/Seo/Seo';
 
 interface PostsIndexPageProps {
   data: {
-    authorsConnection: AuthorsJsonConnection;
-    markdownConnection: MarkdownRemarkConnection;
+    authorsConnection: Queries.AuthorsJsonConnection;
+    markdownConnection: Queries.MarkdownRemarkConnection;
   };
   pageContext: {
     currentPage: number;
@@ -88,11 +85,11 @@ export default class PostsPage extends React.Component<PostsIndexPageProps> {
 export const PostsQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "post" } }) {
+    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "post" } }) {
       totalCount
       edges {
         node {
-          id
+          authorId
           title
           name
           picture
@@ -100,6 +97,7 @@ export const PostsQuery = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }

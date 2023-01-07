@@ -1,6 +1,6 @@
 [
   {
-    "id": "100",
+    "testimonialId": "100",
     "name": "Raymond Camden",
     "img": "raymond_camden",
     "twitter": "raymondcamden",
@@ -9,7 +9,7 @@
     "titleHtml": "DevRel for Auth0 Extend"
   },
   {
-    "id": "200",
+    "testimonialId": "200",
     "name": "Tracy Lee | ladyleet",
     "img": "tracy_lee",
     "twitter": "ladyleet",
@@ -18,7 +18,7 @@
     "titleHtml": "RxJS Core Team member and Google Developer Expert"
   },
   {
-    "id": "300",
+    "testimonialId": "300",
     "name": "TJ VanToll",
     "img": "tj_vantoll",
     "twitter": "tjvantoll",
@@ -27,7 +27,7 @@
     "titleHtml": "Principal Developer Advocate @ProgressSW"
   },
   {
-    "id": "400",
+    "testimonialId": "400",
     "name": "Nic Raboy",
     "img": "nic_raboy",
     "twitter": "nraboy",
@@ -36,7 +36,7 @@
     "titleHtml": "The Polyglot Developer"
   },
   {
-    "id": "500",
+    "testimonialId": "500",
     "name": "Todd Motto",
     "img": "todd_motto",
     "twitter": "toddmotto",
@@ -45,7 +45,7 @@
     "titleHtml": "Creator @ UltimateAngular and Google Developer Expert for Angular"
   },
   {
-    "id": "600",
+    "testimonialId": "600",
     "name": "Jen Looper",
     "img": "jen_looper",
     "twitter": "jenlooper",
@@ -54,7 +54,7 @@
     "titleHtml": "Lead Dev Advocate @Microsoft, Founder and CEO of Vue Vixens"
   },
   {
-    "id": "700",
+    "testimonialId": "700",
     "name": "Burke Holland",
     "img": "burke_holland",
     "twitter": "burkeholland",
@@ -63,7 +63,7 @@
     "titleHtml": "DevRel at Microsoft"
   },
   {
-    "id": "750",
+    "testimonialId": "750",
     "name": "Sebastian Witalec",
     "img": "sebastian_witalec",
     "twitter": "sebawita",
@@ -72,7 +72,7 @@
     "titleHtml": "Sr. Developer Advocate at Progress"
   },
   {
-    "id": "760",
+    "testimonialId": "760",
     "name": "David Wison",
     "img": "david_wilson",
     "twitter": "DavidWilsonHome",
@@ -81,7 +81,7 @@
     "titleHtml": "Mobile Developer"
   },
   {
-    "id": "800",
+    "testimonialId": "800",
     "name": "Hernán Piña",
     "img": "hernan_pina",
     "twitter": "canelacho",
@@ -90,7 +90,7 @@
     "titleHtml": "JavaScript Developer"
   },
   {
-    "id": "900",
+    "testimonialId": "900",
     "name": "Devlin Duldulao",
     "img": "devlin_duldulao",
     "twitter": "DevlinDuldulao",
@@ -99,7 +99,7 @@
     "titleHtml": "Microsoft MVP"
   },
   {
-    "id": "1000",
+    "testimonialId": "1000",
     "name": "Chase Putnam",
     "img": "chase_putnam",
     "twitter": "cdputnam",
@@ -108,7 +108,7 @@
     "titleHtml": "Backend and Frontend Developer"
   },
   {
-    "id": "1100",
+    "testimonialId": "1100",
     "name": "Eisson Alipio",
     "img": "eisson_alipio",
     "twitter": "eisson_alipio",
@@ -117,7 +117,7 @@
     "titleHtml": "Developer"
   },
   {
-    "id": "1200",
+    "testimonialId": "1200",
     "name": "Ramazan Ayvaz",
     "img": "ramazan_ayvaz",
     "twitter": "ramazanayvaz",
@@ -126,7 +126,7 @@
     "titleHtml": "Entrepreneur and Software Engineer"
   },
   {
-    "id": "1300",
+    "testimonialId": "1300",
     "name": "Emmanuel Oduro",
     "img": "emmanuel_oduro",
     "twitter": "pedmindset",
@@ -135,7 +135,7 @@
     "titleHtml": "Entrepreneur and Laravel Developer"
   },
   {
-    "id": "1400",
+    "testimonialId": "1400",
     "name": "Thiago Glauco",
     "img": "thiago_glauco",
     "twitter": "thiago_glauco",
@@ -144,7 +144,7 @@
     "titleHtml": "JavaScript and Angular Developer"
   },
   {
-    "id": "1500",
+    "testimonialId": "1500",
     "name": "Vahid Najafi",
     "img": "vahid_najafi",
     "twitter": "vahidvdn",
@@ -153,7 +153,7 @@
     "titleHtml": "Co-founder @ Sazmand, Backend and Frontend Developer"
   },
   {
-    "id": "1600",
+    "testimonialId": "1600",
     "name": "Kelvin O. Omereshone",
     "img": "kelvin_omereshone",
     "twitter": "dominus_kelvin",
@@ -162,7 +162,7 @@
     "titleHtml": "Software developer 🥑. Modern Mobile Web Developer."
   },
   {
-    "id": "1700",
+    "testimonialId": "1700",
     "name": "Ruggiero Marco Paolillo",
     "img": "ruggiero_marco_paolillo",
     "twitter": "",
@@ -171,7 +171,7 @@
     "titleHtml": "IT Consultant"
   },
   {
-    "id": "1800",
+    "testimonialId": "1800",
     "name": "Sushan Baskota",
     "img": "sushan_baskota",
     "twitter": "baskota_sushan",
@@ -180,7 +180,7 @@
     "titleHtml": "Full Stack Java and Angular Developer."
   },
   {
-    "id": "1900",
+    "testimonialId": "1900",
     "name": "Helio Silva",
     "img": "helio_silva",
     "twitter": "muktharrox",
@@ -189,7 +189,7 @@
     "titleHtml": "Software Developer"
   },
   {
-    "id": "2000",
+    "testimonialId": "2000",
     "name": "Chris Custer",
     "img": "chris_custer",
     "twitter": "",
@@ -198,7 +198,7 @@
     "titleHtml": "Software Architect/Developer by day. RC Helicopter enthusiast by nights and weekend."
   },
   {
-    "id": "2200",
+    "testimonialId": "2200",
     "name": "Paul Grimes",
     "img": "paul_grimes",
     "twitter": "paulgrimes_",
@@ -207,7 +207,7 @@
     "titleHtml": "CTO of OK200"
   },
   {
-    "id": "2240",
+    "testimonialId": "2240",
     "name": "Ekpoto Liberty",
     "img": "ekpoto_liberty",
     "twitter": "am_delino",
@@ -216,7 +216,7 @@
     "titleHtml": "Software Developer & Sound Engineer"
   },
   {
-    "id": "2250",
+    "testimonialId": "2250",
     "name": "Brian Dillingham",
     "img": "brian_dillingham",
     "twitter": "dillinghammm",
@@ -225,7 +225,7 @@
     "titleHtml": "Laravel, Vue, React, Tailwind developer."
   },
   {
-    "id": "2300",
+    "testimonialId": "2300",
     "name": "Mohammed Alarayshi",
     "img": "mohammed_alarayshi",
     "twitter": "MArayshi",
@@ -234,7 +234,7 @@
     "titleHtml": "Full-stack web and mobile developer"
   },
   {
-    "id": "2350",
+    "testimonialId": "2350",
     "name": "Dima Liubko",
     "img": "dima_liubko",
     "twitter": "",
@@ -243,7 +243,7 @@
     "titleHtml": "Front-end Developer from Kiev, Ukraine."
   },
   {
-    "id": "6400",
+    "testimonialId": "6400",
     "name": "Sohil Mansuri",
     "img": "sohil_mansuri",
     "twitter": "sohil0784",

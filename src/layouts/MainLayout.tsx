@@ -26,7 +26,7 @@ export interface SignUpsDataItem {
   courseName: string;
 }
 
-export const MainLayout: React.SFC = ({ children }) => (
+export const MainLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query MainLayoutQuery {
@@ -43,7 +43,7 @@ export const MainLayout: React.SFC = ({ children }) => (
           totalCount
           edges {
             node {
-              id
+              courseId
               title
               flavors
               url
@@ -52,7 +52,7 @@ export const MainLayout: React.SFC = ({ children }) => (
               level
               order
               products {
-                id
+                productId
                 name
                 description
                 licensesMin

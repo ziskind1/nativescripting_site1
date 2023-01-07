@@ -58,7 +58,7 @@ function getCourseIconData(course: Course): CourseIconData[] {
   return ret;
 }
 
-export const CourseCoverage: React.StatelessComponent<CourseCoverageProps> = (
+export const CourseCoverage = (
   props: CourseCoverageProps
 ) => {
   const course = props.course;

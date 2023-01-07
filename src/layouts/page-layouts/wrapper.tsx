@@ -13,9 +13,7 @@ position: relative;
 `;
 
 
-export const Wrapper: React.StatelessComponent<
-    WrapperProps
-> = (props: WrapperProps) => {
+export const Wrapper = (props: WrapperProps) => {
 
 
     return (

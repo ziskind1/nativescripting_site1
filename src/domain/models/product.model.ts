@@ -1,7 +1,7 @@
 export type ProdType = 'once' | 'plan';
 
 export interface Product {
-  id: string;
+  productId: string;
   name: string;
   description: string;
   pricesale: number;

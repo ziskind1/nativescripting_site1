@@ -36,7 +36,7 @@ const AnnouncementText = styled.p`
   font-size: 18px;
 `;
 
-export const PostEntry: React.StatelessComponent<PostEntryProps> = (
+export const PostEntry = (
   props: PostEntryProps
 ) => {
   const post = props.post;

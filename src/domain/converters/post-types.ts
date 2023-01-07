@@ -1,10 +1,10 @@
-import { MarkdownRemark } from '../graphql-types';
+
 import { Post } from '../models/posts/post.model';
 import { Author } from '../models';
 import { notDeepEqual } from 'assert';
 
 export function postFromMarkdownRemark(
-  node: MarkdownRemark,
+  node: Queries.MarkdownRemark,
   authors: Author[]
 ): Post {
   if (node) {
@@ -33,6 +33,6 @@ function timeToReadToTimeLength(timeToRead: number): string {
   }
 }
 
-function getAuthorByAuthorId(authors: Author[], id: string): Author {
-  return authors.find(a => a.id === id);
+function getAuthorByAuthorId(authors: Author[], nsid: string): Author {
+  return authors.find(a => a.authorId === nsid);
 }

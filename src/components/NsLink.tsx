@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-const NsLink: React.StatelessComponent<{
+type NsLink = {
   children: any;
   className: string;
   to: string;
-}> = ({ children, className, to }) => {
+};
+
+const NsLink = ({ children, className, to }: NsLink) => {
   return <Link to={to}>{children}</Link>;
 };
 

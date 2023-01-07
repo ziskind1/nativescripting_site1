@@ -2,12 +2,13 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import SiteConfig from '../../../../config/SiteConfig';
 
-import { MarkdownRemark } from '../../../domain/graphql-types';
 import { Post } from '../../../domain/models/posts/post.model';
 import { Course } from '../../../domain/models';
 
+
+
 interface SeoProps {
-  postNode?: MarkdownRemark;
+  postNode?: Queries.MarkdownRemark;
   post?: Post;
   postSeo?: boolean;
   course?: Course;
@@ -15,7 +16,9 @@ interface SeoProps {
   path?: string;
 }
 
-export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
+
+
+export const Seo = (props: SeoProps): JSX.Element => {
   const { postNode, post, postSeo, course, courseSeo, path } = props;
 
   let title;
@@ -160,5 +163,7 @@ export const Seo: React.SFC<SeoProps> = (props: SeoProps): JSX.Element => {
         }
       ]}
     />
+    
+    
   );
 };

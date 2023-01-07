@@ -50,7 +50,7 @@ line-height: 24px;
 `;
 
 
-export const BrandsSection: React.StatelessComponent<BrandsSectionProps> = (
+export const BrandsSection = (
     props: BrandsSectionProps
 ) => {
 

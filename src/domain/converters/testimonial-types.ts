@@ -1,12 +1,12 @@
 import { Testimonial } from "../models";
-import { TestimonialsJsonEdge } from "../graphql-types";
+
 
 export function testimonialFromTestimonialJsonEdge(
-  edge: TestimonialsJsonEdge
+  edge: Queries.TestimonialsJsonEdge
 ): Testimonial {
   const n = edge.node;
   return {
-    id: n.id,
+    testimonialId: n.testimonialId,
     name: n.name,
     img: n.img,
     twitter: n.twitter,

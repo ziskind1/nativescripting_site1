@@ -13,7 +13,7 @@ export interface CoursesSectionProps {
   onSelectFilterType: (filterType: CourseFilterType) => void;
 }
 
-const CoursesSection: React.StatelessComponent<CoursesSectionProps> = (
+const CoursesSection = (
   props: CoursesSectionProps
 ) => {
   return (

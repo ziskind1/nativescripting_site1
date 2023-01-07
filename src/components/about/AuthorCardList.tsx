@@ -6,7 +6,7 @@ interface AuthorCardListProps {
   authors: Author[];
 }
 
-export const AuthorCardList: React.StatelessComponent<AuthorCardListProps> = (
+export const AuthorCardList = (
   props: AuthorCardListProps
 ) => {
   const html = props.authors.map((author, idx) => {

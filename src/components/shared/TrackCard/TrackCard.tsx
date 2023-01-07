@@ -62,7 +62,7 @@ color: #0ec3db;
 
 
 
-export const TrackCard: React.StatelessComponent<TrackCardProps> = (
+export const TrackCard = (
     props: TrackCardProps
 ) => {
 

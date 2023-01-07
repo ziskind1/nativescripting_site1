@@ -4,15 +4,6 @@ import styled from 'styled-components';
 
 import { Helmet } from 'react-helmet';
 
-import {
-  CoursesJson,
-  AuthorsJsonConnection,
-  CoursesJsonConnection,
-  BundlesJsonConnection,
-  TestimonialsJsonConnection,
-  PreviewsJsonConnection
-} from '../domain/graphql-types';
-
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 import { Course, Bundle } from '../domain/models';
 import {
@@ -54,12 +45,12 @@ const TestimonialContainer = styled.div`
 
 interface CourseTemplateProps {
   data: {
-    authorsConnection: AuthorsJsonConnection;
-    coursesConnection: CoursesJsonConnection;
-    bundlesConnection: BundlesJsonConnection;
-    testimonialsConnection: TestimonialsJsonConnection;
-    courseConnection: CoursesJson;
-    previewsConnection: PreviewsJsonConnection;
+    authorsConnection: Queries.AuthorsJsonConnection;
+    coursesConnection: Queries.CoursesJsonConnection;
+    bundlesConnection: Queries.BundlesJsonConnection;
+    testimonialsConnection: Queries.TestimonialsJsonConnection;
+    courseConnection: Queries.CoursesJson;
+    previewsConnection: Queries.PreviewsJsonConnection;
   };
 }
 
@@ -88,13 +79,15 @@ class CourseTemplate extends React.Component<
     const lessonPreviews = this.props.data.previewsConnection.nodes[0]
       .lessonPreviews;
 
+    const theCourse = coursefromCoursesJson(
+      this.props.data.courseConnection,
+      authors,
+      coursePreviews,
+      lessonPreviews
+    );
+
     this.state = {
-      course: coursefromCoursesJson(
-        this.props.data.courseConnection,
-        authors,
-        coursePreviews,
-        lessonPreviews
-      ),
+      course: theCourse,
       bundles: this.props.data.bundlesConnection.edges.map(b =>
         bundleFromBundlesJsonEdge(b, courses)
       )
@@ -178,10 +171,14 @@ class CourseTemplate extends React.Component<
 
     return (
       <MainLayout>
+          
         <Seo course={course} courseSeo />
+      {/*
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
+    */}
+
 
         <div className="wrapper">
           <GridRow>
@@ -226,11 +223,11 @@ class CourseTemplate extends React.Component<
 export const coursePageQuery = graphql`
   query CoursePageQuery($courseUrl: String) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
+    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "course" } }) {
       totalCount
       edges {
         node {
-          id
+          authorId
           title
           name
           picture
@@ -238,6 +235,7 @@ export const coursePageQuery = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }
@@ -247,7 +245,7 @@ export const coursePageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          courseId
           title
           flavors
           url
@@ -255,7 +253,7 @@ export const coursePageQuery = graphql`
           authors
           level
           products {
-            id
+            productId
             name
             description
             licensesMin
@@ -272,7 +270,7 @@ export const coursePageQuery = graphql`
     bundlesConnection: allBundlesJson {
       edges {
         node {
-          id
+          bundleId
           title
           subtitle
           description
@@ -282,7 +280,7 @@ export const coursePageQuery = graphql`
           courseIds
           bundleLevel
           products {
-            id
+            productId
             name
             description
             pricesale
@@ -301,7 +299,7 @@ export const coursePageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          testimonialId
           name
           img
           twitter
@@ -328,7 +326,7 @@ export const coursePageQuery = graphql`
 
     #get current course
     courseConnection: coursesJson(url: { eq: $courseUrl }) {
-      id
+      courseId
       title
       subtitle
       description
@@ -345,11 +343,11 @@ export const coursePageQuery = graphql`
       authors
       publishedChapters
       publishingSchedule {
-        id
+        publishingScheduleItemId
         date
       }
       products {
-        id
+        productId
         name
         description
         licensesMin
@@ -363,11 +361,11 @@ export const coursePageQuery = graphql`
       }
 
       chapters {
-        id
+        chapterId
         name
         lessons {
           chapterId
-          id
+          lessonId
           name
           isPreview
         }

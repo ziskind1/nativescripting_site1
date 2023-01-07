@@ -16,12 +16,13 @@ const VideoPlayerContainer = styled.div`
   margin: 20px 0 20px 0;
 `;
 
-export const CourseMetaCard: React.StatelessComponent<CourseMetaCardProps> = (
+export const CourseMetaCard = (
   props: CourseMetaCardProps
 ) => {
   const course = props.course;
 
   let vidSection = null;
+  debugger;
   if (course.previewVideoId) {
     vidSection = (
       <VideoPlayerContainer>

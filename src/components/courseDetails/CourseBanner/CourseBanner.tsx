@@ -7,7 +7,7 @@ interface CourseBannerProps {
   course: Course;
 }
 
-export const CourseBanner: React.StatelessComponent<CourseBannerProps> = (
+export const CourseBanner = (
   props: CourseBannerProps
 ) => {
   const course = props.course;

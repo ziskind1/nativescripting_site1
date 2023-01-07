@@ -27,7 +27,7 @@ const FooterLink = styled.a`
   color: ${colors.titleBlue};
 `;
 
-export const FooterCatLinks: React.StatelessComponent<FooterCatLinksProps> = (
+export const FooterCatLinks = (
   props: FooterCatLinksProps
 ) => {
   // This combines the incoming style with the debug border

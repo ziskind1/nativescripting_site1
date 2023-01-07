@@ -4,15 +4,6 @@ import styled from 'styled-components';
 
 import { Helmet } from 'react-helmet';
 
-import {
-    TracksJson,
-    AuthorsJsonConnection,
-    TracksJsonConnection,
-    BundlesJsonConnection,
-    TestimonialsJsonConnection,
-    CoursesJson,
-    CoursesJsonConnection
-} from '../domain/graphql-types';
 
 import { BreadCrumbs } from '../components/shared/BreadCrumbs/BreadCrumbs';
 import { Track, Bundle, Course, CourseLevelType, TrackLevel } from '../domain/models';
@@ -51,12 +42,12 @@ import SubHeroSection3 from '../components/home/SubHeroSection/SubHeroSection3';
 
 interface TrackTemplateProps {
     data: {
-        authorsConnection: AuthorsJsonConnection;
-        coursesConnection: CoursesJsonConnection;
-        tracksConnection: TracksJsonConnection;
-        bundlesConnection: BundlesJsonConnection;
-        testimonialsConnection: TestimonialsJsonConnection;
-        trackConnection: TracksJson;
+        authorsConnection: Queries.AuthorsJsonConnection;
+        coursesConnection: Queries.CoursesJsonConnection;
+        tracksConnection: Queries.TracksJsonConnection;
+        bundlesConnection: Queries.BundlesJsonConnection;
+        testimonialsConnection: Queries.TestimonialsJsonConnection;
+        trackConnection: Queries.TracksJson;
     };
 }
 
@@ -159,7 +150,7 @@ class TrackTemplate extends React.Component<
 
         const html = levels.map((level, idx) => {
 
-            const courses = this.getFilteredCourses(track.id, level.levelId);
+            const courses = this.getFilteredCourses(track.trackId, level.levelId);
 
             return (
                 <Collapsible title={level.levelName} key={idx}>
@@ -199,7 +190,7 @@ class TrackTemplate extends React.Component<
 
         const trackBundleIds = track.bundles.map(b => b.bundleId);
 
-        const trackBundles = allBundles.filter(b => trackBundleIds.includes(b.id));
+        const trackBundles = allBundles.filter(b => trackBundleIds.includes(b.bundleId));
 
         const pageTitle = `${track.title} Track | NativeScripting`;
         const levels = this.getLevelsHtml(track);
@@ -250,11 +241,11 @@ class TrackTemplate extends React.Component<
 export const trackPageQuery = graphql`
   query TrackPageQuery($trackId: String) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "course" } }) {
+    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "course" } }) {
       totalCount
       edges {
         node {
-          id
+          authorId
           title
           name
           picture
@@ -262,6 +253,7 @@ export const trackPageQuery = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }
@@ -271,7 +263,7 @@ export const trackPageQuery = graphql`
         totalCount
         edges {
             node {
-                id
+                courseId
                 title
                 flavors
                 url
@@ -280,7 +272,7 @@ export const trackPageQuery = graphql`
                 level
                 order
                 products {
-                    id
+                    productId
                     name
                     description
                     licensesMin
@@ -296,7 +288,7 @@ export const trackPageQuery = graphql`
     bundlesConnection: allBundlesJson {
       edges {
         node {
-          id
+          bundleId
           title
           subtitle
           description
@@ -306,7 +298,7 @@ export const trackPageQuery = graphql`
           courseIds
           bundleLevel
           products {
-            id
+            productId
             name
             description
             pricesale
@@ -323,7 +315,7 @@ export const trackPageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          testimonialId
           name
           img
           twitter
@@ -339,7 +331,7 @@ export const trackPageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          trackId
           levels {
             levelId
             title
@@ -350,8 +342,8 @@ export const trackPageQuery = graphql`
     }
 
     #get current track
-    trackConnection: tracksJson(id: { eq: $trackId }) {
-        id
+    trackConnection: tracksJson(trackId: { eq: $trackId }) {
+        trackId
         title
         description
         imageSrc
@@ -361,7 +353,7 @@ export const trackPageQuery = graphql`
           description
         }
         bundles {
-            id
+            bundleId
             order
             description
         }

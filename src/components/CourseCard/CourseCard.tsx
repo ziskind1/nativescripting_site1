@@ -34,7 +34,7 @@ function getCourseIconHtml(course: Course): JSX.Element[] {
   return ret;
 }
 
-export const CourseCard: React.StatelessComponent<CourseCardProps> = (
+export const CourseCard = (
   props: CourseCardProps
 ) => {
   const course = props.course;

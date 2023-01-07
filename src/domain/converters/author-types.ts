@@ -1,12 +1,15 @@
 import { defaultArray } from '../core';
-import { AuthorsJsonEdge } from '../graphql-types';
-import { Author, asAuthorType } from '../models';
+
+import { Author, asContentType } from '../models';
 
 
-export function authorFromAuthorsJsonEdge(edge: AuthorsJsonEdge): Author {
+export function authorFromAuthorsJsonEdge(edge: Queries.AuthorsJsonEdge): Author {
     const n = edge.node;
+
+    console.log('HHH');
+    console.dir(n);
     return {
-        id: n.id,
+        authorId: n.authorId,
         name: n.name,
         title: n.title,
         bio: n.bio,
@@ -14,6 +17,6 @@ export function authorFromAuthorsJsonEdge(edge: AuthorsJsonEdge): Author {
         picture: n.picture,
         twitter: n.twitter,
         github: n.github,
-        types: defaultArray(n.types).map(asAuthorType)
+        contentTypes: defaultArray(n.contentTypes).map(asContentType)
     };
 }

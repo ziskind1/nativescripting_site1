@@ -13,6 +13,8 @@
         ]
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./src/gatsby-types.d.ts",
+        "./util/**/*"
     ]
 }

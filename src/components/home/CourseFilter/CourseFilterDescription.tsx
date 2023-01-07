@@ -36,9 +36,7 @@ function getDescriptionFromFilterType(ft: CourseFilterType) {
   }
 }
 
-const CourseFilterDescription: React.StatelessComponent<
-  CourseFilterDescriptionProps
-> = (props: CourseFilterDescriptionProps) => {
+const CourseFilterDescription = (props: CourseFilterDescriptionProps) => {
   const desc = getDescriptionFromFilterType(props.selectedFilterType);
 
   return (

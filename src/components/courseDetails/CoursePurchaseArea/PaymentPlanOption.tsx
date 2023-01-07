@@ -28,7 +28,7 @@ function getCourseActionUrl(courseId: string, productId: string) {
   );
 }
 
-export const PaymentPlanOption: React.StatelessComponent<PaymentPlanOptionProps> = (
+export const PaymentPlanOption = (
   props: PaymentPlanOptionProps
 ) => {
   // For now, assume only one payment plan option
@@ -48,7 +48,7 @@ export const PaymentPlanOption: React.StatelessComponent<PaymentPlanOptionProps>
 
       <ActionButton
         text={`Start Payment Plan`}
-        url={getCourseActionUrl(props.courseId, plan.id)}
+        url={getCourseActionUrl(props.courseId, plan.productId)}
         type="secondary"
         newWindow={true}
       />

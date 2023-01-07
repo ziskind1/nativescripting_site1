@@ -47,9 +47,7 @@ color: #fff!important;
     height: 24px;
 `;
 
-export const FooterCopyrightLinks: React.StatelessComponent<
-    FooterCopyrightLinksProps
-> = (props: FooterCopyrightLinksProps) => {
+export const FooterCopyrightLinks = (props: FooterCopyrightLinksProps) => {
 
     // This combines the incoming style with the debug border
     const style = { ...(props.style ? props.style : {}) };

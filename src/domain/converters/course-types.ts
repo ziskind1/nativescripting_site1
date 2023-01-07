@@ -1,11 +1,4 @@
 import { defaultArray } from '../core';
-import {
-  CoursesJsonEdge,
-  CoursesJson,
-  CoursesJsonDescriptionHtmlSections,
-  PreviewsJsonLessonPreviews,
-  PreviewsJsonCoursePreviews
-} from '../graphql-types';
 
 import { productFromCoursesJsonProducts } from './product-types';
 import { chapterFromChapter_2 } from './chapter-types';
@@ -19,7 +12,7 @@ import {
 import { publishingScheduleItemFromPublishingSchdule_2 } from './publishing-schedule-types';
 
 export function courseFromCoursesJsonEdge(
-  edge: CoursesJsonEdge,
+  edge: Queries.CoursesJsonEdge,
   authors: Author[]
 ): Course {
   const c = edge.node;
@@ -27,31 +20,32 @@ export function courseFromCoursesJsonEdge(
 }
 
 export function coursefromCoursesJson(
-  c: CoursesJson,
+  c: Queries.CoursesJson,
   authors: Author[],
-  coursePreviews?: PreviewsJsonCoursePreviews[],
-  lessonPreviews?: PreviewsJsonLessonPreviews[]
+  coursePreviews?: readonly Queries.PreviewsJsonCoursePreviews[],
+  lessonPreviews?: readonly Queries.PreviewsJsonLessonPreviews[]
 ): Course {
   let prev = undefined;
+  
   if (coursePreviews) {
     prev = coursePreviews.find(p => p.courseId === c.id);
   }
 
   const course: Course = {
-    id: c.id,
+    courseId: c.courseId,
     title: c.title,
     subtitle: c.subtitle,
     description: c.description,
     descriptionHtmlSections: defaultArray(c.descriptionHtmlSections).map(
       descriptionHtmlSectionFromDescriptionHtmlSection_2
     ),
-    notes: c.notes,
+    notes: defaultArray(c.notes),
     level: asCourseLevel(c.level),
     url: c.url,
     label: c.label,
     launchdate: new Date(c.launchdate),
-    authors: getAuthorsByAuthorIds(authors, c.authors),
-    publishedChapters: c.publishedChapters,
+    authors: getAuthorsByAuthorIds(authors, c.authors.map(a=>a)),
+    publishedChapters: defaultArray(c.publishedChapters),
     publishingScheduleItems: defaultArray(c.publishingSchedule).map((si, idx) =>
       publishingScheduleItemFromPublishingSchdule_2(si)
     ),
@@ -69,7 +63,7 @@ export function coursefromCoursesJson(
 }
 
 function getAuthorsByAuthorIds(authors: Author[], ids: string[]) {
-  return authors.filter(a => ids.includes(a.id));
+  return authors.filter(a => ids.includes(a.authorId));
 }
 
 function numberCourseLessons(course: Course): void {
@@ -83,7 +77,7 @@ function numberCourseLessons(course: Course): void {
 }
 
 export function descriptionHtmlSectionFromDescriptionHtmlSection_2(
-  s: CoursesJsonDescriptionHtmlSections
+  s: Queries.CoursesJsonDescriptionHtmlSections
 ): DescriptionHtmlSection {
   return {
     title: s.title,

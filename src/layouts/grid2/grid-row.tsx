@@ -9,9 +9,7 @@ interface GridRowProps {
     style?: React.CSSProperties;
 }
 
-export const GridRow: React.StatelessComponent<
-    GridRowProps
-> = (props: GridRowProps) => {
+export const GridRow = (props: GridRowProps) => {
 
     // This combines the incoming style with the debug border
     const style = { ...(props.style ? props.style : {}), ...(DEBUG_LAYOUT ? debugBorderRed : {}) };

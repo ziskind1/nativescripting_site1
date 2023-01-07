@@ -177,7 +177,7 @@ function getBtnClassName(type: ActionBtnType, clear: boolean) {
   }
 }
 
-const CountdownTimerCTA: React.StatelessComponent<ActionButtonProps> = (
+const CountdownTimerCTA = (
   props: ActionButtonProps
 ) => {
   const className = getBtnClassName('primary', false);

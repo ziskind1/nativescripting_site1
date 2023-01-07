@@ -6,7 +6,7 @@ export interface TestimonialProps {
   testimonial: Testimonial;
 }
 
-const TestimonialComponent: React.StatelessComponent<TestimonialProps> = (
+const TestimonialComponent = (
   props: TestimonialProps
 ) => {
   //const imgUrl = `/img/people/${props.testimonial.img}`;

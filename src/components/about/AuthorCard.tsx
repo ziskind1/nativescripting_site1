@@ -7,7 +7,7 @@ interface AuthorCardProps {
   author: Author;
 }
 
-export const AuthorCard: React.StatelessComponent<AuthorCardProps> = (
+export const AuthorCard = (
   props: AuthorCardProps
 ) => {
   const author = props.author;

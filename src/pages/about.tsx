@@ -2,7 +2,6 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { AuthorsJsonConnection } from '../domain/graphql-types';
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 
 
@@ -18,7 +17,7 @@ import { PageHeadingMain } from '../components/shared/PageHeaders';
 // to generate all types from graphQL schema
 interface AboutPageProps {
   data: {
-    authorsConnection: AuthorsJsonConnection;
+    authorsConnection: Queries.AuthorsJsonConnection;
   };
 }
 
@@ -103,6 +102,7 @@ export const aboutPageQuery = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }

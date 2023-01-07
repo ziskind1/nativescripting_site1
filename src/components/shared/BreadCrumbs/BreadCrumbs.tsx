@@ -12,7 +12,7 @@ export interface BreadCrumbsProps {
   breadcrumbs: BreadCrumb[];
 }
 
-export const BreadCrumbs: React.StatelessComponent<BreadCrumbsProps> = (
+export const BreadCrumbs = (
   props: BreadCrumbsProps
 ) => {
   const listHtml = props.breadcrumbs.map((bc, idx) => {

@@ -22,9 +22,7 @@ interface PaymentTypesProps {
     style?: React.CSSProperties;
 }
 
-export const PaymentTypes: React.StatelessComponent<
-PaymentTypesProps
-> = (props: PaymentTypesProps) => {
+export const PaymentTypes = (props: PaymentTypesProps) => {
 
     // This combines the incoming style with the debug border
     const style = { ...(props.style ? props.style : {}), ...(DEBUG_LAYOUT ? debugBorderRed : {}) };

@@ -9,7 +9,7 @@ interface PostNavToPostProps {
   post: Post;
 }
 
-export const PostNavToPost: React.StatelessComponent<PostNavToPostProps> = (
+export const PostNavToPost = (
   props: PostNavToPostProps
 ) => {
   const post = props.post;

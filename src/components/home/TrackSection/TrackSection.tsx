@@ -49,7 +49,7 @@ line-height: 24px;
 `;
 
 
-export const TrackSection: React.StatelessComponent<TrackSectionProps> = (
+export const TrackSection = (
     props: TrackSectionProps
 ) => {
 

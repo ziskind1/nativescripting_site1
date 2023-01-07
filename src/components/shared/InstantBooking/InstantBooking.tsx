@@ -49,7 +49,7 @@ interface InstantBookingProps {
   style?: React.CSSProperties;
 }
 
-export const InstantBooking: React.StatelessComponent<InstantBookingProps> = (
+export const InstantBooking = (
   props: InstantBookingProps
 ) => {
   // This combines the incoming style with the debug border

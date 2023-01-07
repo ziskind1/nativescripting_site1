@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql } from "gatsby";
 
 import { Helmet } from 'react-helmet';
-import { MarkdownRemark, AuthorsJsonConnection } from '../domain/graphql-types';
+
 import { postFromMarkdownRemark } from '../domain/converters/post-types';
 import { authorFromAuthorsJsonEdge } from '../domain/converters';
 import { PostEntry } from '../components/posts/PostEntry/PostEntry';
@@ -19,10 +19,10 @@ import { Seo } from '../components/shared/Seo/Seo';
 
 interface PostPageProps {
   data: {
-    authorsConnection: AuthorsJsonConnection;
-    mdRemark: MarkdownRemark;
-    mdRemarkPrev: MarkdownRemark;
-    mdRemarkNext: MarkdownRemark;
+    authorsConnection: Queries.AuthorsJsonConnection;
+    mdRemark: Queries.MarkdownRemark;
+    mdRemarkPrev: Queries.MarkdownRemark;
+    mdRemarkNext: Queries.MarkdownRemark;
   };
 }
 
@@ -103,11 +103,11 @@ export const query = graphql`
     $nextPostPath: String!
   ) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { types: { in: "post" } }) {
+    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "post" } }) {
       totalCount
       edges {
         node {
-          id
+          authorId
           title
           name
           picture
@@ -115,6 +115,7 @@ export const query = graphql`
           biolong
           twitter
           github
+          contentTypes
         }
       }
     }

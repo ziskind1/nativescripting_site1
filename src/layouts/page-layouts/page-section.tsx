@@ -8,9 +8,7 @@ interface PageSectionProps {
     secondary?: boolean;
 }
 
-export const PageSection: React.StatelessComponent<
-    PageSectionProps
-> = (props: PageSectionProps) => {
+export const PageSection = (props: PageSectionProps) => {
 
     const PSInternal = styled.section`
         padding: ${props.isTop ? '0' : '50px'} 0 50px 0;

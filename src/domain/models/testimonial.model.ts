@@ -1,5 +1,5 @@
 export interface Testimonial {
-  id: string;
+  testimonialId: string;
   name: string;
   img: string;
   twitter: string;
