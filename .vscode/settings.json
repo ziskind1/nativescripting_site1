@@ -6,6 +6,5 @@
     "**/bower_components": true,
     "**/.cache": true,
     "**/public": true
-  },
-  "debug.javascript.autoAttachFilter": "always"
+  }
 }
