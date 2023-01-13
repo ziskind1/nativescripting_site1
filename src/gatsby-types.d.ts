@@ -4240,11 +4240,6 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type HeaderMenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type HeaderMenuQueryQuery = { readonly coursesConnection: { readonly totalCount: number, readonly edges: ReadonlyArray<{ readonly node: { readonly courseId: string | null, readonly title: string | null, readonly flavors: ReadonlyArray<string | null> | null, readonly url: string | null, readonly label: string | null, readonly authors: ReadonlyArray<string | null> | null, readonly level: number | null, readonly order: number | null, readonly products: ReadonlyArray<{ readonly productId: string | null, readonly name: string | null, readonly description: string | null, readonly licensesMin: number | null, readonly licensesMax: number | null, readonly pricereg: number | null, readonly pricesale: number | null } | null> | null } }> } };
-
 type IndexPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -4254,6 +4249,14 @@ type MainLayoutQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type MainLayoutQueryQuery = { readonly site: { readonly siteMetadata: { readonly siteName: string | null } | null } | null, readonly coursesConnection: { readonly totalCount: number, readonly edges: ReadonlyArray<{ readonly node: { readonly courseId: string | null, readonly title: string | null, readonly flavors: ReadonlyArray<string | null> | null, readonly url: string | null, readonly label: string | null, readonly authors: ReadonlyArray<string | null> | null, readonly level: number | null, readonly order: number | null, readonly products: ReadonlyArray<{ readonly productId: string | null, readonly name: string | null, readonly description: string | null, readonly licensesMin: number | null, readonly licensesMax: number | null, readonly pricereg: number | null, readonly pricesale: number | null } | null> | null } }> } };
+
+type PostsPageQueryQueryVariables = Exact<{
+  skip: Scalars['Int'];
+  limit: Scalars['Int'];
+}>;
+
+
+type PostsPageQueryQuery = { readonly authorsConnection: { readonly totalCount: number, readonly edges: ReadonlyArray<{ readonly node: { readonly authorId: string | null, readonly title: string | null, readonly name: string | null, readonly picture: string | null, readonly bio: string | null, readonly biolong: string | null, readonly twitter: string | null, readonly github: string | null, readonly contentTypes: ReadonlyArray<string | null> | null } }> }, readonly markdownConnection: { readonly totalCount: number, readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly timeToRead: number | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly path: string | null, readonly author: string | null, readonly updatedDate: string | null, readonly image: { readonly childImageSharp: { readonly fluid: { readonly base64: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly sizes: string } | null } | null } | null } | null } }> } };
 
 type TrackPageQueryQueryVariables = Exact<{
   trackId: InputMaybe<Scalars['String']>;

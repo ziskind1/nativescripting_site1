@@ -196,7 +196,7 @@ export default class extends React.Component<IndexPageProps, IndexPageState> {
 export const coursesPageQuery = graphql`
   query CoursesPageQuery {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "course" } }) {
+    authorsConnection: allAuthorsJson(filter: {contentTypes: {in: "course"}}) {
       totalCount
       edges {
         node {
@@ -214,7 +214,7 @@ export const coursesPageQuery = graphql`
     }
 
     #get courses
-    coursesConnection: allCoursesJson(sort: { order: ASC, fields: [order] }) {
+    coursesConnection: allCoursesJson(sort: {order: ASC}) {
       totalCount
       edges {
         node {
@@ -288,9 +288,7 @@ export const coursesPageQuery = graphql`
     }
 
     #get testimonials
-    testimonialsConnection: allTestimonialsJson(
-      filter: { order: { lte: 6000 } }
-    ) {
+    testimonialsConnection: allTestimonialsJson(filter: {order: {lte: 6000}}) {
       totalCount
       edges {
         node {

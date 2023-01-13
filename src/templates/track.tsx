@@ -241,108 +241,108 @@ class TrackTemplate extends React.Component<
 export const trackPageQuery = graphql`
   query TrackPageQuery($trackId: String) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "course" } }) {
-      totalCount
-      edges {
-        node {
-          authorId
-          title
-          name
-          picture
-          bio
-          biolong
-          twitter
-          github
-          contentTypes
-        }
-      }
-    }
-
-    #get courses
-    coursesConnection: allCoursesJson(sort: {order: ASC, fields: [order] }) {
+    authorsConnection: allAuthorsJson(filter: {contentTypes: {in: "course"}}) {
         totalCount
         edges {
-            node {
-                courseId
-                title
-                flavors
-                url
-                label
-                authors
-                level
-                order
-                products {
-                    productId
-                    name
-                    description
-                    licensesMin
-                    licensesMax
-                    pricereg
-                    pricesale
-                }
-            }
+          node {
+            authorId
+            title
+            name
+            picture
+            bio
+            biolong
+            twitter
+            github
+            contentTypes
+          }
         }
-    }
+      }
+
+    #get courses
+    coursesConnection: allCoursesJson(sort: {order: ASC}) {
+        totalCount
+        edges {
+          node {
+            courseId
+            title
+            flavors
+            url
+            label
+            authors
+            level
+            order
+            products {
+              productId
+              name
+              description
+              licensesMin
+              licensesMax
+              pricereg
+              pricesale
+            }
+          }
+        }
+      }
 
     #get bundles
     bundlesConnection: allBundlesJson {
-      edges {
-        node {
-          bundleId
-          title
-          subtitle
-          description
-          url
-          promototal
-          promoremaining
-          courseIds
-          bundleLevel
-          products {
-            productId
-            name
+        edges {
+          node {
+            bundleId
+            title
+            subtitle
             description
-            pricesale
-            pricereg
-            licensesMin
-            licensesMax
+            url
+            promototal
+            promoremaining
+            courseIds
+            bundleLevel
+            products {
+              productId
+              name
+              description
+              pricesale
+              pricereg
+              licensesMin
+              licensesMax
+            }
           }
         }
       }
-    }
 
     #get testimonials
     testimonialsConnection: allTestimonialsJson(filter: {order: {lte: 6000}}) {
-      totalCount
-      edges {
-        node {
-          testimonialId
-          name
-          img
-          twitter
-          order
-          quoteHtml
-          titleHtml
-        }
-      }
-    }
-
-    #get tracks
-    tracksConnection: allTracksJson {
-      totalCount
-      edges {
-        node {
-          trackId
-          levels {
-            levelId
-            title
-            description
+        totalCount
+        edges {
+          node {
+            testimonialId
+            name
+            img
+            twitter
+            order
+            quoteHtml
+            titleHtml
           }
         }
       }
-    }
+
+    #get tracks
+    tracksConnection: allTracksJson {
+        totalCount
+        edges {
+          node {
+            trackId
+            levels {
+              levelId
+              title
+              description
+            }
+          }
+        }
+      }
 
     #get current track
-    trackConnection: tracksJson(trackId: { eq: $trackId }) {
+    trackConnection: tracksJson(trackId: {eq: $trackId}) {
         trackId
         title
         description
@@ -353,11 +353,11 @@ export const trackPageQuery = graphql`
           description
         }
         bundles {
-            bundleId
-            order
-            description
+          bundleId
+          order
+          description
         }
-    }
+      }
   }
 `;
 

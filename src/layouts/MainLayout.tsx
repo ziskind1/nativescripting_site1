@@ -37,9 +37,7 @@ export const MainLayout = ({ children }) => (
         }
 
         #get courses
-        coursesConnection: allCoursesJson(
-          sort: { order: ASC, fields: [order] }
-        ) {
+        coursesConnection: allCoursesJson(sort: {order: ASC}) {
           totalCount
           edges {
             node {

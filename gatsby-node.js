@@ -25,58 +25,58 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
-      {
-        allCoursesJson {
-          totalCount
-          edges {
-            node {
-              courseId
+    {
+      allCoursesJson {
+        totalCount
+        edges {
+          node {
+            courseId
+            title
+            flavors
+            url
+            authors
+          }
+        }
+      }
+      allTracksJson {
+        totalCount
+        edges {
+          node {
+            trackId
+            levels {
+              levelId
               title
-              flavors
-              url
-              authors
-            }
-          }
-        }
-
-        allTracksJson {
-          totalCount
-          edges {
-            node {
-              trackId
-              levels {
-                levelId
-                title
-                description
-              }
-            }
-          }
-        }
-
-        allMarkdownRemark(
-          filter: { frontmatter: { draft: { ne: true } } }
-          sort: { order: ASC, fields: [frontmatter___updatedDate] }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              excerpt(pruneLength: 250)
-              html
-              id
-              timeToRead
-              frontmatter {
-                createdDate
-                updatedDate
-                tags
-                path
-                title
-              }
+              description
             }
           }
         }
       }
+      allMarkdownRemark(
+        filter: {frontmatter: {draft: {ne: true}}}
+        sort: {frontmatter: {updatedDate: ASC}}
+        limit: 1000
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            html
+            id
+            timeToRead
+            frontmatter {
+              createdDate
+              updatedDate
+              tags
+              path
+              title
+            }
+          }
+        }
+      }
+    }
     `).then(result => {
       if (result.errors) {
+        console.log('Errors occurred during gatsby-node.js creation');
+        console.log(result.errors);
         return Promise.reject(result.errors);
       }
 

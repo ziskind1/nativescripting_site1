@@ -83,9 +83,9 @@ export default class PostsPage extends React.Component<PostsIndexPageProps> {
   }
 }
 export const PostsQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query PostsPageQuery($skip: Int!, $limit: Int!) {
     #get authors
-    authorsConnection: allAuthorsJson(filter: { contentTypes: { in: "post" } }) {
+    authorsConnection: allAuthorsJson(filter: {contentTypes: {in: "post"}}) {
       totalCount
       edges {
         node {
@@ -104,8 +104,8 @@ export const PostsQuery = graphql`
 
     #get posts
     markdownConnection: allMarkdownRemark(
-      filter: { frontmatter: { draft: { ne: true } } }
-      sort: { order: DESC, fields: [frontmatter___updatedDate] }
+      filter: {frontmatter: {draft: {ne: true}}}
+      sort: {frontmatter: {updatedDate: DESC}}
       limit: $limit
       skip: $skip
     ) {
@@ -121,8 +121,6 @@ export const PostsQuery = graphql`
             updatedDate(formatString: "DD MMMM, YYYY")
             image {
               childImageSharp {
-                # Specify the image processing specifications right in the query.
-                # Makes it trivial to update as your page's design changes.
                 fluid(maxWidth: 1000) {
                   base64
                   aspectRatio
