@@ -17,7 +17,6 @@ module.exports = {
   graphqlTypegen: true,
   plugins: [
     // Add typescript stack into webpack
-    'gatsby-plugin-netlify',
     'gatsby-plugin-styled-components',
     `gatsby-plugin-typescript`,
     `gatsby-transformer-json`,
