@@ -1,5 +1,5 @@
 #! /bin/zsh -
-filelist=$(find data/posts -name '*.jpg')
+filelist=$(find data/posts -name '*.gif')
 for image_file in $filelist
 do
     echo $image_file
