@@ -43,9 +43,11 @@ export class HeaderMenu extends React.Component<
   constructor(props: HeaderMenuProps) {
     super(props);
 
+    /*
     const courses = this.props.data.coursesConnection.edges.map(c =>
       courseFromCoursesJsonEdge(c, [])
     );
+    */
 
     const coreCat: MenuDowndownDataCat = {
       categoryName: 'NativeScript Core Courses',
@@ -60,6 +62,7 @@ export class HeaderMenu extends React.Component<
       categoryLinks: []
     };
 
+    /*
     courses.map(c => {
       const item: MenuDowndownDataCatItem = {
         title: c.title,
@@ -75,6 +78,7 @@ export class HeaderMenu extends React.Component<
         vueCat.categoryLinks.push(item);
       }
     });
+    */
 
     // this.menuData = [coreCat, angularCat, vueCat];
 
@@ -229,10 +233,11 @@ export class HeaderMenu extends React.Component<
   }
 }
 
+/*
 export const headerMenuQuery = graphql`
   query HeaderMenuQuery {
     #get courses
-    coursesConnection: allCoursesJson(sort: { order: ASC, fields: [order] }) {
+    coursesConnection: allCoursesJson(sort: {order: ASC}) {
       totalCount
       edges {
         node {
@@ -258,3 +263,4 @@ export const headerMenuQuery = graphql`
     }
   }
 `;
+*/
