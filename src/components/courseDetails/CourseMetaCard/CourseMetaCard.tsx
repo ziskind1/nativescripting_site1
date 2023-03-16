@@ -22,7 +22,6 @@ export const CourseMetaCard = (
   const course = props.course;
 
   let vidSection = null;
-  debugger;
   if (course.previewVideoId) {
     vidSection = (
       <VideoPlayerContainer>

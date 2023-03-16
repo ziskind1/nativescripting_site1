@@ -1,5 +1,90 @@
 [
   {
+    "courseId": "9999111",
+    "title": "NativeScript with Angular from Scratch",
+    "subtitle": "A mini tutorial for NativeScript and Angular beginners",
+    "description": "Welcome to NativeScript and Angular from Scratch. In this mini course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This mini course is the video version of the NativeScript with Angular tutorial that is found on the NativeScript.org docs site.",
+    "notes": [],
+    "url": "nativescript-with-angular-from-scratch",
+    "flavors": [
+      "Angular"
+    ],
+    "level": 1,
+    "order": 29,
+    "label": "FREE",
+    "launchdate": "03/30/2023",
+    "authors": [
+      "alex_ziskind"
+    ],
+    "products": [
+      {
+        "productId": "3038010",
+        "name": "Single user regular price",
+        "description": "License for a single user. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 1,
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      },
+      {
+        "productId": "3057810",
+        "name": "Team of 2 - 10 regular price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 2,
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      }
+    ],
+    "publishedChapters": [
+      0
+    ],
+    "chapters": [
+      {
+        "chapterId": 10,
+        "name": "Chapter 1",
+        "lessons": [
+          {
+            "lessonId": "2692194",
+            "chapterId": 10,
+            "name": "TBD",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 20,
+        "name": "Chapter 2",
+        "lessons": [
+          {
+            "lessonId": "2543904",
+            "chapterId": 20,
+            "name": "TBD",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 30,
+        "name": "Chapter 3",
+        "lessons": [
+          {
+            "lessonId": "2573640",
+            "chapterId": 30,
+            "name": "TBD",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "courseId": "1152797",
     "title": "NativeScript with Nx Workspaces and Xplat",
     "subtitle": "Enable Maximum Code Reuse for NativeScript and Web Angular Apps",
