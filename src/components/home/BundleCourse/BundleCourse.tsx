@@ -12,6 +12,10 @@ export interface BundleCourseProps {
 const BundleCourse = (props: BundleCourseProps) => {
     const course = props.course;
 
+    if (!course) {
+        return null;
+    }
+
     return (
         <div className="bundle-course">
             <div className="bundle-course-info">
