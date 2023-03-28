@@ -1,6 +1,6 @@
 [
   {
-    "courseId": "9999111",
+    "courseId": "2055301",
     "title": "NativeScript with Angular from Scratch",
     "subtitle": "A mini tutorial for NativeScript and Angular beginners",
     "description": "Welcome to NativeScript and Angular from Scratch. In this mini course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This mini course is the video version of the NativeScript with Angular tutorial that is found on the NativeScript.org docs site.",
@@ -18,7 +18,7 @@
     ],
     "products": [
       {
-        "productId": "3038010",
+        "productId": "4688976",
         "name": "Single user regular price",
         "description": "License for a single user. \n",
         "pricesale": 0,
@@ -30,7 +30,7 @@
         "recurring": false
       },
       {
-        "productId": "3057810",
+        "productId": "4688977",
         "name": "Team of 2 - 10 regular price",
         "description": "License for a team of 2 - 10 users. \n",
         "pricesale": 0,
@@ -48,36 +48,120 @@
     "chapters": [
       {
         "chapterId": 10,
-        "name": "Chapter 1",
+        "name": "Welcome and Getting Started",
         "lessons": [
           {
-            "lessonId": "2692194",
             "chapterId": 10,
-            "name": "TBD",
+            "lessonId": "46254828",
+            "name": "Welcome",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46254829",
+            "name": "About this Course",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46255161",
+            "name": "What We're Building",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46254830",
+            "name": "Course Code",
             "isPreview": false
           }
         ]
       },
       {
         "chapterId": 20,
-        "name": "Chapter 2",
+        "name": "Learning the Basics",
         "lessons": [
           {
-            "lessonId": "2543904",
             "chapterId": 20,
-            "name": "TBD",
-            "isPreview": false
+            "lessonId": "46254831",
+            "name": "Create and Run the App",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46254832",
+            "name": "First Feature Module",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46254833",
+            "name": "Routing Setup",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46254834",
+            "name": "Assets",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46254835",
+            "name": "List UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46255198",
+            "name": "Card UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46255199",
+            "name": "Styling",
+            "isPreview": true
           }
         ]
       },
       {
         "chapterId": 30,
-        "name": "Chapter 3",
+        "name": "Navigation and Details",
         "lessons": [
           {
-            "lessonId": "2573640",
             "chapterId": 30,
-            "name": "TBD",
+            "lessonId": "46254810",
+            "name": "Details Module",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46254811",
+            "name": "Navigation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46254812",
+            "name": "Accessing Navigation Parameters",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46254813",
+            "name": "Details UI",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 40,
+        "name": "Finished",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "lessonId": "46254836",
+            "name": "Congratulations!",
             "isPreview": false
           }
         ]
