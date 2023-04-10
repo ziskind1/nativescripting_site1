@@ -169,6 +169,374 @@
     ]
   },
   {
+    "courseId": "2067106",
+    "title": "NativeScript with Vue from Scratch",
+    "subtitle": "A mini tutorial for NativeScript with Vue beginners",
+    "description": "Welcome to NativeScript with Vue from Scratch. In this mini course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This mini course is the video version of the NativeScript with Vue tutorial that is found on the NativeScript.org docs site.",
+    "notes": [],
+    "url": "nativescript-with-vue-from-scratch",
+    "flavors": [
+      "Vue"
+    ],
+    "level": 1,
+    "order": 29,
+    "label": "FREE",
+    "launchdate": "04/15/2023",
+    "authors": [
+      "alex_ziskind"
+    ],
+    "products": [
+      {
+        "productId": "4713730",
+        "name": "Single user regular price",
+        "description": "License for a single user. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 1,
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      },
+      {
+        "productId": "4713731",
+        "name": "Team of 2 - 10 regular price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 2,
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      }
+    ],
+    "publishedChapters": [
+      0
+    ],
+    "chapters": [
+      {
+        "chapterId": 10,
+        "name": "Welcome and Getting Started",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "lessonId": "46516665",
+            "name": "Welcome",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46516666",
+            "name": "About this Course",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46516667",
+            "name": "What We're Building",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46516668",
+            "name": "Course Code",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 20,
+        "name": "Learning the Basics",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "lessonId": "46529994",
+            "name": "Create and Run the App",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530002",
+            "name": "First Component",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530000",
+            "name": "Routing Setup",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530001",
+            "name": "Extra Assets",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46529996",
+            "name": "List UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530004",
+            "name": "Card UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46529999",
+            "name": "Styling",
+            "isPreview": true
+          }
+        ]
+      },
+      {
+        "chapterId": 30,
+        "name": "Navigation and Details",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "lessonId": "46529993",
+            "name": "Details Component",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46529997",
+            "name": "Navigation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46530003",
+            "name": "Navigation Parameters",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46529995",
+            "name": "Details UI",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 40,
+        "name": "Navigation and Details",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "lessonId": "46516661",
+            "name": "Details Module",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "lessonId": "46516662",
+            "name": "Navigation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "lessonId": "46516663",
+            "name": "Accessing Navigation Parameters",
+            "isPreview": false
+          },
+          {
+            "chapterId": 40,
+            "lessonId": "46516664",
+            "name": "Details UI",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 50,
+        "name": "Finished",
+        "lessons": [
+          {
+            "chapterId": 50,
+            "lessonId": "46529998",
+            "name": "Congratulations!",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "2067105",
+    "title": "NativeScript with TypeScript from Scratch",
+    "subtitle": "A mini tutorial for NativeScript with TypeScript beginners",
+    "description": "Welcome to NativeScript with TypeScript from Scratch. In this mini course you'll use NativeScript, a cross-platform JavaScript framework for building native mobile apps, to build an iOS and Android app from scratch. This mini course is the video version of the NativeScript with TypeScript tutorial that is found on the NativeScript.org docs site.",
+    "notes": [],
+    "url": "nativescript-with-typescript-from-scratch",
+    "flavors": [
+      "Core"
+    ],
+    "level": 1,
+    "order": 29,
+    "label": "FREE",
+    "launchdate": "04/15/2023",
+    "authors": [
+      "alex_ziskind"
+    ],
+    "products": [
+      {
+        "productId": "4713733",
+        "name": "Single user regular price",
+        "description": "License for a single user. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 1,
+        "licensesMax": 1,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      },
+      {
+        "productId": "4713734",
+        "name": "Team of 2 - 10 regular price",
+        "description": "License for a team of 2 - 10 users. \n",
+        "pricesale": 0,
+        "pricereg": 0,
+        "licensesMin": 2,
+        "licensesMax": 10,
+        "prodType": "once",
+        "numPayments": 0,
+        "recurring": false
+      }
+    ],
+    "publishedChapters": [
+      0
+    ],
+    "chapters": [
+      {
+        "chapterId": 10,
+        "name": "Welcome and Getting Started",
+        "lessons": [
+          {
+            "chapterId": 10,
+            "lessonId": "46530120",
+            "name": "Welcome",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46530118",
+            "name": "About this Course",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46530119",
+            "name": "What We're Building",
+            "isPreview": true
+          },
+          {
+            "chapterId": 10,
+            "lessonId": "46516651",
+            "name": "Course Code",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 20,
+        "name": "Learning the Basics",
+        "lessons": [
+          {
+            "chapterId": 20,
+            "lessonId": "46530134",
+            "name": "Create and Run the App",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530138",
+            "name": "First Feature Page",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530137",
+            "name": "Routing Setup",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530136",
+            "name": "Extra Assets",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530140",
+            "name": "List UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530135",
+            "name": "Card UI",
+            "isPreview": true
+          },
+          {
+            "chapterId": 20,
+            "lessonId": "46530139",
+            "name": "Styling",
+            "isPreview": true
+          }
+        ]
+      },
+      {
+        "chapterId": 30,
+        "name": "Navigation and Details",
+        "lessons": [
+          {
+            "chapterId": 30,
+            "lessonId": "46530148",
+            "name": "Navigation",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46530151",
+            "name": "Details Module",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46530149",
+            "name": "Navigation Parameters",
+            "isPreview": false
+          },
+          {
+            "chapterId": 30,
+            "lessonId": "46530150",
+            "name": "Details UI",
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "chapterId": 40,
+        "name": "Finished",
+        "lessons": [
+          {
+            "chapterId": 40,
+            "lessonId": "46516652",
+            "name": "Congratulations!",
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "courseId": "1152797",
     "title": "NativeScript with Nx Workspaces and Xplat",
     "subtitle": "Enable Maximum Code Reuse for NativeScript and Web Angular Apps",

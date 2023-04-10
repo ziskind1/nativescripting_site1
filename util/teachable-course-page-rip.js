@@ -32,12 +32,12 @@ $('.course-section').each((i, section) => {
       var id = href.substring(href.lastIndexOf('/') + 1);
       lessons.push({
         chapterId: chapCounter,
-        id: id,
+        lessonId: id,
         name: secItemTitle,
         isPreview: isPreview
       });
     });
-  chapters.push({ id: chapCounter, name: sectitle, lessons: lessons });
+  chapters.push({ chapterId: chapCounter, name: sectitle, lessons: lessons });
 });
 var productsTemp = [];
 $('.checkout-button-group').each((i, group) => {
