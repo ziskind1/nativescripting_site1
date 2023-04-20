@@ -325,40 +325,10 @@
       },
       {
         "chapterId": 40,
-        "name": "Navigation and Details",
-        "lessons": [
-          {
-            "chapterId": 40,
-            "lessonId": "46516661",
-            "name": "Details Module",
-            "isPreview": false
-          },
-          {
-            "chapterId": 40,
-            "lessonId": "46516662",
-            "name": "Navigation",
-            "isPreview": false
-          },
-          {
-            "chapterId": 40,
-            "lessonId": "46516663",
-            "name": "Accessing Navigation Parameters",
-            "isPreview": false
-          },
-          {
-            "chapterId": 40,
-            "lessonId": "46516664",
-            "name": "Details UI",
-            "isPreview": false
-          }
-        ]
-      },
-      {
-        "chapterId": 50,
         "name": "Finished",
         "lessons": [
           {
-            "chapterId": 50,
+            "chapterId": 40,
             "lessonId": "46529998",
             "name": "Congratulations!",
             "isPreview": false
